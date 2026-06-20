@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "channel": "stable",
+  "generatedAt": "2026-06-20T05:43:04Z",
+  "publishedAt": "2026-06-20T05:43:04Z",
+  "packages": [
+    {
+      "family": "seasonalRecommendationCandidates",
+      "packageVersion": "north-mid-30-60n-priority-ranked-monthly-v1-guarded-v2-2026-06-20",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "64cb4c11b97c1a7795711eb1a0fce22e93ca21e6e885b11eb0b71a6aedbdc68e"
+      },
+      "byteSize": 967758,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 86400,
+      "fallbackNotes": "Use the bundled seasonal recommendation snapshot if this package is unavailable, incompatible, expired, or fails validation."
+    }
+  ]
+}
