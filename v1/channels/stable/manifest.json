@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-06-21T02:02:52Z",
-  "publishedAt": "2026-06-21T02:02:52Z",
+  "generatedAt": "2026-06-21T03:00:56Z",
+  "publishedAt": "2026-06-21T03:00:56Z",
   "packages": [
     {
       "family": "seasonalRecommendationCandidates",
@@ -16,8 +16,8 @@
       "byteSize": 943394,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
-      "cacheTTLSeconds": 300,
-      "fallbackNotes": "Use the bundled seasonal recommendation snapshot if this package is unavailable, incompatible, expired, or fails validation. June rebalance v1 is intended as a short-TTL dynamic metadata calibration pass."
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Use the bundled seasonal recommendation snapshot only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
     }
   ]
 }
