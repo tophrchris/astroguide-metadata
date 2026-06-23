@@ -1,9 +1,39 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-06-21T03:00:56Z",
-  "publishedAt": "2026-06-21T03:00:56Z",
+  "generatedAt": "2026-06-23T15:08:16Z",
+  "publishedAt": "2026-06-23T15:08:16Z",
   "packages": [
+    {
+      "family": "targetMetadataOverlay",
+      "packageVersion": "target-metadata-overlay-v1-2026-06-23",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/target-metadata/target_metadata_overlay_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "6184d6cf38c3f5321023974c466a68d8af9fd7b7b6b354917c924b3e41ef3929"
+      },
+      "byteSize": 445629,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Use the bundled target metadata snapshot only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "targetNeighborhoodDefinitions",
+      "packageVersion": "target-neighborhood-definitions-v1-2026-06-23",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/target-neighborhoods/target_neighborhood_definitions_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "315fedd32583d5ee3ef5b6faf620c43af7d7987b6519fea1f63877d34ef79a6e"
+      },
+      "byteSize": 11688,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Use the bundled target metadata snapshot only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
+    },
     {
       "family": "seasonalRecommendationCandidates",
       "packageVersion": "north-mid-30-60n-priority-ranked-monthly-v1-guarded-v2-june-rebalance-v1-2026-06-21",

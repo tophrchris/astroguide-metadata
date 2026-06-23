@@ -11,6 +11,8 @@ Large or asset-heavy payloads do not belong in this repository. In particular, t
 ```text
 CNAME
 v1/channels/stable/manifest.json
+v1/packages/target-metadata/target_metadata_overlay_v1.json
+v1/packages/target-neighborhoods/target_neighborhood_definitions_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 ```
 
@@ -21,6 +23,16 @@ https://metadata.astroguide.space/v1/channels/stable/manifest.json
 ```
 
 Package entries include schema, family, package version, checksum, byte size, app compatibility, cache TTL, and fallback notes. The app validates package descriptors and payload envelopes before caching remote data.
+
+## Rebuilding Target Metadata Packages
+
+Target metadata overlay and neighborhood packages are generated from the app's bundled target metadata resources:
+
+```bash
+scripts/build_target_metadata_packages.py --app-repo ../DSOPlanneriOS
+```
+
+The builder writes the package envelopes, refreshes the stable manifest, and recalculates byte sizes and SHA-256 checksums.
 
 ## Operational Notes
 
