@@ -26,6 +26,7 @@ TARGET_PACKAGE_PATHS = {
     "targetNeighborhoodDefinitions": Path(
         "v1/packages/target-neighborhoods/target_neighborhood_definitions_v1.json"
     ),
+    "equipmentCatalog": Path("v1/packages/equipment/equipment_catalog_v1.json"),
 }
 SEASONAL_PACKAGE_DIR = Path("v1/packages/seasonal-recommendations")
 
@@ -1072,6 +1073,12 @@ def fallback_notes(family: str) -> str:
             "for a fresher package; an expired cached package remains usable until replaced by a "
             "validated refresh."
         )
+    if family == "equipmentCatalog":
+        return (
+            "Use the bundled equipment catalog only if no validated cached package is available. "
+            "Cache TTL indicates when the app should check for a fresher package; an expired cached "
+            "package remains usable until replaced by a validated refresh."
+        )
     return (
         "Use the bundled target metadata snapshot only if no validated cached package is available. "
         "Cache TTL indicates when the app should check for a fresher package; an expired cached "
@@ -1095,7 +1102,8 @@ def sort_packages(packages: list[dict[str, Any]]) -> list[dict[str, Any]]:
     family_order = {
         "targetMetadataOverlay": 0,
         "targetNeighborhoodDefinitions": 1,
-        PACKAGE_FAMILY: 2,
+        "equipmentCatalog": 2,
+        PACKAGE_FAMILY: 3,
     }
     band_order = {band: index for index, band in enumerate(BANDS)}
 

@@ -13,6 +13,7 @@ CNAME
 v1/channels/stable/manifest.json
 v1/packages/target-metadata/target_metadata_overlay_v1.json
 v1/packages/target-neighborhoods/target_neighborhood_definitions_v1.json
+v1/packages/equipment/equipment_catalog_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 ```
 
@@ -33,6 +34,16 @@ scripts/build_target_metadata_packages.py --app-repo ../DSOPlanneriOS
 ```
 
 The builder writes the package envelopes, refreshes the stable manifest, and recalculates byte sizes and SHA-256 checksums.
+
+## Rebuilding Equipment Catalog Packages
+
+The equipment catalog package is generated from the app's bundled smart telescope and filter catalog:
+
+```bash
+scripts/build_equipment_catalog_package.py --app-repo ../DSOPlanneriOS
+```
+
+The builder writes the equipment package envelope, refreshes the stable manifest, and recalculates byte size and SHA-256 checksum.
 
 ## Operational Notes
 

@@ -21,6 +21,7 @@ PACKAGE_PATHS = {
 FAMILY_ORDER = [
     "targetMetadataOverlay",
     "targetNeighborhoodDefinitions",
+    "equipmentCatalog",
     "seasonalRecommendationCandidates",
 ]
 
