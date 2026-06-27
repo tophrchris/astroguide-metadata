@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-06-27T04:23:35Z",
-  "publishedAt": "2026-06-27T04:23:35Z",
+  "generatedAt": "2026-06-27T22:40:07Z",
+  "publishedAt": "2026-06-27T22:40:07Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -33,6 +33,21 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled target metadata snapshot only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "equipmentCatalog",
+      "packageVersion": "equipment-catalog-v1-2026-06-27",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/equipment/equipment_catalog_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "d3e54e48baff0ef240d8baa3b7e0f3260cda13d0ba2d9d85e433dc09604e0a78"
+      },
+      "byteSize": 232388,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Use the bundled equipment catalog only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
     },
     {
       "family": "seasonalRecommendationCandidates",
