@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
   "packageFamily": "targetMetadataOverlay",
-  "packageVersion": "target-metadata-overlay-v1-2026-06-23",
-  "generatedAt": "2026-06-23T15:08:16Z",
+  "packageVersion": "target-metadata-overlay-v1-2026-06-26",
+  "generatedAt": "2026-06-26T00:00:00Z",
   "source": {
-    "name": "AstroGuide bundled target metadata overlay",
-    "generatedBy": "astroguide-metadata target package builder",
-    "sourceURL": "https://github.com/tophrchris/DSOPlanneriOS/tree/main/App/Resources/TargetMetadata",
-    "notes": "Combines curated nebula target metadata, curated galaxy target metadata, and curated media overrides into the dynamic metadata overlay package."
+    "name": "Bundled AstroGuide target metadata overlay",
+    "generatedBy": "App/Resources/TargetMetadata curated target metadata snapshot",
+    "notes": "Combines curated nebula target metadata, curated galaxy target metadata, and target media correction overrides."
   },
   "targets": [
     {
@@ -1261,7 +1260,10 @@
       "canonicalID": "LDN153",
       "preferredName": "Coalsack Nebula",
       "aliases": [
+        "C99",
+        "C099",
         "Caldwell 99",
+        "Caldwell 099",
         "Coalsack Dark Nebula",
         "LDN 153",
         "Coalsack Nebula"

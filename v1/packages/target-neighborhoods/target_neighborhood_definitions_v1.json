@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
   "packageFamily": "targetNeighborhoodDefinitions",
-  "packageVersion": "target-neighborhood-definitions-v1-2026-06-23",
-  "generatedAt": "2026-06-23T15:08:16Z",
+  "packageVersion": "target-neighborhood-definitions-v1-2026-06-26",
+  "generatedAt": "2026-06-26T00:00:00Z",
   "source": {
-    "name": "AstroGuide curated target neighborhoods",
-    "generatedBy": "astroguide-metadata target package builder",
-    "sourceURL": "https://github.com/tophrchris/DSOPlanneriOS/tree/main/App/Resources/TargetMetadata",
-    "notes": "Wraps the curated target neighborhood definitions in the dynamic metadata package envelope."
+    "name": "Bundled AstroGuide target neighborhood definitions",
+    "generatedBy": "App/Resources/TargetMetadata/curated_target_neighborhoods.json",
+    "notes": "Seed target neighborhoods used by sky map and recommendation metadata surfaces."
   },
   "neighborhoods": [
     {
