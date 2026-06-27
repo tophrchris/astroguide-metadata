@@ -1,0 +1,730 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "targetNeighborhoodDefinitions",
+  "packageVersion": "target-neighborhood-definitions-v1-2026-06-26",
+  "generatedAt": "2026-06-26T00:00:00Z",
+  "source": {
+    "name": "Bundled AstroGuide target neighborhood definitions",
+    "generatedBy": "App/Resources/TargetMetadata/curated_target_neighborhoods.json",
+    "notes": "Seed target neighborhoods used by sky map and recommendation metadata surfaces."
+  },
+  "neighborhoods": [
+    {
+      "name": "Wolf-Lundmark-Melotte",
+      "catalogIDs": [
+        "Wolf-Lundmark-Melotte"
+      ]
+    },
+    {
+      "name": "N002",
+      "catalogIDs": [
+        "NGC55",
+        "NGC300",
+        "NGC7793"
+      ]
+    },
+    {
+      "name": "N003",
+      "catalogIDs": [
+        "C106",
+        "NGC292"
+      ]
+    },
+    {
+      "name": "Andromeda Frame",
+      "catalogIDs": [
+        "NGC147",
+        "NGC185",
+        "M110",
+        "M32",
+        "M31"
+      ]
+    },
+    {
+      "name": "Skull Nebula",
+      "catalogIDs": [
+        "NGC 246"
+      ]
+    },
+    {
+      "name": "N006",
+      "catalogIDs": [
+        "NGC247",
+        "NGC253"
+      ]
+    },
+    {
+      "name": "IC1613",
+      "catalogIDs": [
+        "IC1613"
+      ]
+    },
+    {
+      "name": "Triangulum Galaxy",
+      "catalogIDs": [
+        "M33"
+      ]
+    },
+    {
+      "name": "Little Dumbbell Nebula",
+      "catalogIDs": [
+        "M76"
+      ]
+    },
+    {
+      "name": "N010",
+      "catalogIDs": [
+        "NGC891",
+        "M34"
+      ]
+    },
+    {
+      "name": "Cepheus Region",
+      "catalogIDs": [
+        "NGC7822",
+        "NGC7635",
+        "M52",
+        "IC10",
+        "NGC7380",
+        "SH2-155",
+        "SH2-157",
+        "SH2-132",
+        "IC1396",
+        "SH2-129",
+        "NGC6946",
+        "NGC 40",
+        "NGC 7008"
+      ]
+    },
+    {
+      "name": "Pacman Nebula",
+      "catalogIDs": [
+        "NGC281"
+      ]
+    },
+    {
+      "name": "Heart and Soul",
+      "catalogIDs": [
+        "M103",
+        "IC1805",
+        "SH2-191",
+        "SH2-197",
+        "IC1848"
+      ]
+    },
+    {
+      "name": "NGC1097",
+      "catalogIDs": [
+        "NGC1097"
+      ]
+    },
+    {
+      "name": "Topsy Turvy Galaxy",
+      "catalogIDs": [
+        "NGC1313"
+      ]
+    },
+    {
+      "name": "N014",
+      "catalogIDs": [
+        "NGC1269",
+        "NGC1316",
+        "NGC1365",
+        "NGC1399",
+        "NGC1532"
+      ]
+    },
+    {
+      "name": "N015",
+      "catalogIDs": [
+        "NGC1395",
+        "NGC1407"
+      ]
+    },
+    {
+      "name": "Hidden Galaxy",
+      "catalogIDs": [
+        "IC342"
+      ]
+    },
+    {
+      "name": "Pleiades",
+      "catalogIDs": [
+        "M45"
+      ]
+    },
+    {
+      "name": "N018",
+      "catalogIDs": [
+        "NGC1549",
+        "NGC1553"
+      ]
+    },
+    {
+      "name": "N019",
+      "catalogIDs": [
+        "NGC1499",
+        "NGC1579"
+      ]
+    },
+    {
+      "name": "N020",
+      "catalogIDs": [
+        "PGC17223",
+        "NGC2070"
+      ]
+    },
+    {
+      "name": "Orion Complex",
+      "catalogIDs": [
+        "LBN959",
+        "NGC1973",
+        "M42",
+        "M43",
+        "NGC1999",
+        "IC434",
+        "M78",
+        "LDN1622"
+      ]
+    },
+    {
+      "name": "Gemini/Auriga Region",
+      "catalogIDs": [
+        "IC405",
+        "NGC1893",
+        "M38",
+        "M36",
+        "M37",
+        "SH2-240",
+        "M1",
+        "M35",
+        "NGC2174",
+        "IC443",
+        "SH2-261",
+        "IC446",
+        "NGC2237",
+        "NGC2264"
+      ]
+    },
+    {
+      "name": "N023",
+      "catalogIDs": [
+        "M41",
+        "SH2-308"
+      ]
+    },
+    {
+      "name": "N024",
+      "catalogIDs": [
+        "M50",
+        "IC2177",
+        "NGC2359",
+        "M47",
+        "M46"
+      ]
+    },
+    {
+      "name": "N025",
+      "catalogIDs": [
+        "SH2-274",
+        "NGC 2392"
+      ]
+    },
+    {
+      "name": "Caldwell 7",
+      "catalogIDs": [
+        "NGC2403"
+      ]
+    },
+    {
+      "name": "Headphone Nebula",
+      "catalogIDs": [
+        "JnEr1"
+      ]
+    },
+    {
+      "name": "N028",
+      "catalogIDs": [
+        "Gum12",
+        "Vela-Supernova-Remnant",
+        "NGC2736"
+      ]
+    },
+    {
+      "name": "UFO Galaxy",
+      "catalogIDs": [
+        "NGC2683"
+      ]
+    },
+    {
+      "name": "NGC2768",
+      "catalogIDs": [
+        "NGC2768"
+      ]
+    },
+    {
+      "name": "Tiger's Eye Galaxy",
+      "catalogIDs": [
+        "NGC2841"
+      ]
+    },
+    {
+      "name": "NGC2903",
+      "catalogIDs": [
+        "NGC2903"
+      ]
+    },
+    {
+      "name": "N033",
+      "catalogIDs": [
+        "NGC2997",
+        "NGC3109"
+      ]
+    },
+    {
+      "name": "Bode's Region",
+      "catalogIDs": [
+        "M81",
+        "M82"
+      ]
+    },
+    {
+      "name": "Spindle Galaxy",
+      "catalogIDs": [
+        "NGC3115"
+      ]
+    },
+    {
+      "name": "Southern Ring Nebula",
+      "catalogIDs": [
+        "NGC 3132"
+      ]
+    },
+    {
+      "name": "Ghost of Jupiter Nebula",
+      "catalogIDs": [
+        "NGC 3242"
+      ]
+    },
+    {
+      "name": "Leo Triplet",
+      "catalogIDs": [
+        "M95",
+        "M96",
+        "M105",
+        "M65",
+        "M66",
+        "NGC3628"
+      ]
+    },
+    {
+      "name": "Bubble Galaxy",
+      "catalogIDs": [
+        "NGC3521"
+      ]
+    },
+    {
+      "name": "N040",
+      "catalogIDs": [
+        "NGC3585",
+        "NGC3621"
+      ]
+    },
+    {
+      "name": "Carina Complex",
+      "catalogIDs": [
+        "IC2602",
+        "NGC3372",
+        "NGC3532",
+        "NGC3576",
+        "IC2944",
+        "NGC 3918",
+        "C99",
+        "NGC4755",
+        "NGC 5189",
+        "He2-95",
+        "He2-70"
+      ]
+    },
+    {
+      "name": "N042",
+      "catalogIDs": [
+        "M108",
+        "M97",
+        "M109",
+        "M106",
+        "M40"
+      ]
+    },
+    {
+      "name": "NGC3923",
+      "catalogIDs": [
+        "NGC3923"
+      ]
+    },
+    {
+      "name": "Caldwell 3",
+      "catalogIDs": [
+        "NGC4236"
+      ]
+    },
+    {
+      "name": "Markarian's Chain",
+      "catalogIDs": [
+        "M98",
+        "M99",
+        "M100",
+        "M84",
+        "M85",
+        "M86",
+        "NGC4438",
+        "M49",
+        "M87",
+        "M88",
+        "M91",
+        "M89",
+        "NGC4567",
+        "NGC4568",
+        "M90",
+        "M58",
+        "M59",
+        "M60",
+        "NGC4365",
+        "NGC4762",
+        "M61",
+        "NGC4517",
+        "NGC4636",
+        "NGC4697",
+        "M104"
+      ]
+    },
+    {
+      "name": "N046",
+      "catalogIDs": [
+        "NGC4244",
+        "NGC4395",
+        "NGC4631",
+        "M94",
+        "NGC4565",
+        "NGC4725",
+        "NGC5033",
+        "M63",
+        "M64",
+        "M51",
+        "NGC5195",
+        "M53"
+      ]
+    },
+    {
+      "name": "N047",
+      "catalogIDs": [
+        "NGC4945",
+        "NGC5128",
+        "C80",
+        "ESO270-G017"
+      ]
+    },
+    {
+      "name": "N048",
+      "catalogIDs": [
+        "NGC5078",
+        "NGC5084",
+        "M83"
+      ]
+    },
+    {
+      "name": "Pinwheel Galaxy",
+      "catalogIDs": [
+        "M101"
+      ]
+    },
+    {
+      "name": "Circinus Galaxy",
+      "catalogIDs": [
+        "CircinusGalaxy"
+      ]
+    },
+    {
+      "name": "N051",
+      "catalogIDs": [
+        "NGC5846",
+        "M5"
+      ]
+    },
+    {
+      "name": "N052",
+      "catalogIDs": [
+        "M102",
+        "NGC5907"
+      ]
+    },
+    {
+      "name": "Rho Ophiuchi Complex",
+      "catalogIDs": [
+        "IC4592",
+        "M80",
+        "M4",
+        "IC4603"
+      ]
+    },
+    {
+      "name": "Fighting Dragons of Ara",
+      "catalogIDs": [
+        "NGC6188"
+      ]
+    },
+    {
+      "name": "N055",
+      "catalogIDs": [
+        "IC4628",
+        "NGC 6302",
+        "NGC6334",
+        "M62",
+        "NGC6357",
+        "M6",
+        "M7",
+        "M19",
+        "LDN1773",
+        "LDN66",
+        "M9",
+        "NGC 6369",
+        "NGC 6309",
+        "NGC 6337"
+      ]
+    },
+    {
+      "name": "Cat's Eye Nebula",
+      "catalogIDs": [
+        "NGC 6543"
+      ]
+    },
+    {
+      "name": "Sagittarius/Serpens Border",
+      "catalogIDs": [
+        "M23",
+        "M20",
+        "M8",
+        "M21",
+        "NGC 6537",
+        "M24",
+        "M16",
+        "M18",
+        "M17",
+        "M28",
+        "M25",
+        "M22",
+        "NGC6604",
+        "M26",
+        "M69",
+        "M54",
+        "M11",
+        "M70",
+        "NGC 6445",
+        "IC 1295",
+        "NGC 6629",
+        "NGC 6741",
+        "M1-42",
+        "M1-63"
+      ]
+    },
+    {
+      "name": "Blue Racquetball Nebula",
+      "catalogIDs": [
+        "NGC 6572"
+      ]
+    },
+    {
+      "name": "N059",
+      "catalogIDs": [
+        "M57",
+        "M56"
+      ]
+    },
+    {
+      "name": "N060",
+      "catalogIDs": [
+        "NGC6744",
+        "MEL218"
+      ]
+    },
+    {
+      "name": "N061",
+      "catalogIDs": [
+        "NGC 6818",
+        "NGC6822"
+      ]
+    },
+    {
+      "name": "N062",
+      "catalogIDs": [
+        "M71",
+        "M27"
+      ]
+    },
+    {
+      "name": "Broader Sadr Region",
+      "catalogIDs": [
+        "SH2-101",
+        "NGC6888",
+        "IC 1318",
+        "M29",
+        "IC5067",
+        "NGC7000",
+        "M39",
+        "IC5146",
+        "PN-G75.5+1.7",
+        "NGC 6881",
+        "NGC 7027"
+      ]
+    },
+    {
+      "name": "Veil Nebula / Cygnus Loop",
+      "catalogIDs": [
+        "NGC6960",
+        "NGC6992"
+      ]
+    },
+    {
+      "name": "Cepheus Reflection",
+      "catalogIDs": [
+        "NGC7023",
+        "LDN1235"
+      ]
+    },
+    {
+      "name": "Helix Nebula",
+      "catalogIDs": [
+        "NGC 7293"
+      ]
+    },
+    {
+      "name": "Blue Snowball Nebula",
+      "catalogIDs": [
+        "NGC 7662"
+      ]
+    },
+    {
+      "name": "Phantom Galaxy",
+      "catalogIDs": [
+        "M74"
+      ]
+    },
+    {
+      "name": "Squid Galaxy",
+      "catalogIDs": [
+        "M77"
+      ]
+    },
+    {
+      "name": "Messier 79 (M79)",
+      "catalogIDs": [
+        "M79"
+      ]
+    },
+    {
+      "name": "Butterfly Cluster",
+      "catalogIDs": [
+        "M93"
+      ]
+    },
+    {
+      "name": "Messier 48 (M48)",
+      "catalogIDs": [
+        "M48"
+      ]
+    },
+    {
+      "name": "Beehive Cluster",
+      "catalogIDs": [
+        "M44"
+      ]
+    },
+    {
+      "name": "Messier 67",
+      "catalogIDs": [
+        "M67"
+      ]
+    },
+    {
+      "name": "Messier 68 (M68)",
+      "catalogIDs": [
+        "M68"
+      ]
+    },
+    {
+      "name": "Messier 3 (M3)",
+      "catalogIDs": [
+        "M3"
+      ]
+    },
+    {
+      "name": "Messier 107 (M107)",
+      "catalogIDs": [
+        "M107"
+      ]
+    },
+    {
+      "name": "Hercules Globular Cluster",
+      "catalogIDs": [
+        "M13"
+      ]
+    },
+    {
+      "name": "N081",
+      "catalogIDs": [
+        "M12",
+        "M10"
+      ]
+    },
+    {
+      "name": "Messier 92 (M92)",
+      "catalogIDs": [
+        "M92"
+      ]
+    },
+    {
+      "name": "Messier 14 (M14)",
+      "catalogIDs": [
+        "M14"
+      ]
+    },
+    {
+      "name": "Messier 55 (M55)",
+      "catalogIDs": [
+        "M55"
+      ]
+    },
+    {
+      "name": "Messier 75 (M75)",
+      "catalogIDs": [
+        "M75"
+      ]
+    },
+    {
+      "name": "N086",
+      "catalogIDs": [
+        "M72",
+        "M73",
+        "NGC 7009"
+      ]
+    },
+    {
+      "name": "Messier 15 (M15)",
+      "catalogIDs": [
+        "M15"
+      ]
+    },
+    {
+      "name": "Messier 2 (M2)",
+      "catalogIDs": [
+        "M2"
+      ]
+    },
+    {
+      "name": "Messier 30 (M30)",
+      "catalogIDs": [
+        "M30"
+      ]
+    }
+  ]
+}
