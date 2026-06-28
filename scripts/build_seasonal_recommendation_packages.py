@@ -438,18 +438,15 @@ def center_fit_score(offset_hours: float) -> float:
 
 def challenge_rating(subject: Subject) -> str:
     magnitude = subject.magnitude
-    size = subject.angular_size_arcmin
-    if magnitude is None and size is None:
-        return "unresolved"
-    if magnitude is not None and magnitude <= 7.5:
+
+    if magnitude is None:
+        return "challenging"
+
+    if magnitude <= 7.5:
         return "easy"
-    if size is not None and size >= 45 and (magnitude is None or magnitude <= 10.5):
-        return "easy"
-    if magnitude is not None and magnitude <= 10.5:
+    elif magnitude <= 10.5:
         return "moderate"
-    if size is not None and size >= 20:
-        return "moderate"
-    if magnitude is not None and magnitude <= 13.5:
+    elif magnitude <= 13.5:
         return "challenging"
     return "demanding"
 
