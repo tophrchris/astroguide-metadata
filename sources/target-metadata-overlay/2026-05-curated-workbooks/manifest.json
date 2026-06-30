@@ -1,0 +1,22 @@
+{
+  "sourceSet": "target-metadata-overlay-2026-05-curated-workbooks",
+  "createdAt": "2026-06-30",
+  "purpose": "Canonical human-curated workbook inputs cited by target_metadata_overlay_v1.json.",
+  "runtimeUsage": "Source-only. AstroGuide clients consume generated JSON packages under v1/packages, not these workbooks.",
+  "files": [
+    {
+      "path": "galaxy_halpha_consolidated_index_v2.xlsx",
+      "byteSize": 29567,
+      "sha256": "220024862abe7f5e6a08f95a576c8e6bbe58af56d4afa801e4e8e4708b5f6aa8",
+      "citedBy": "v1/packages/target-metadata/target_metadata_overlay_v1.json",
+      "citationWorkbook": "galaxy_halpha_consolidated_index_v2.xlsx"
+    },
+    {
+      "path": "seasonal_nebula_targets_southern_hemisphere_expanded.xlsx",
+      "byteSize": 34315,
+      "sha256": "1febd4f37a0a19b17c063dd7b121f6ffe234153bb28c2f67988e8eac6deb8b3a",
+      "citedBy": "v1/packages/target-metadata/target_metadata_overlay_v1.json",
+      "citationWorkbook": "seasonal_nebula_targets_southern_hemisphere_expanded.xlsx"
+    }
+  ]
+}

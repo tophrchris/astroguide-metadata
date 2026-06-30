@@ -6,6 +6,10 @@ The app always ships with bundled metadata snapshots as its offline and release-
 
 Large or asset-heavy payloads do not belong in this repository. In particular, this origin should not host `catalog.sqlite`, sky-brightness grid binaries, survey atlas images, or payloads that require resumable downloads or user-visible storage management.
 
+Human-curated source inputs for generated metadata packages may live under
+`sources/` when they are small enough for normal Git review. AstroGuide clients
+consume only the validated runtime packages under `v1/packages`.
+
 ## Layout
 
 ```text
@@ -15,6 +19,7 @@ v1/packages/target-metadata/target_metadata_overlay_v1.json
 v1/packages/target-neighborhoods/target_neighborhood_definitions_v1.json
 v1/packages/equipment/equipment_catalog_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
+sources/target-metadata-overlay/2026-05-curated-workbooks/
 ```
 
 The stable manifest is served at:
