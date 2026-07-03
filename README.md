@@ -18,6 +18,7 @@ v1/channels/stable/manifest.json
 v1/packages/target-metadata/target_metadata_overlay_v1.json
 v1/packages/target-neighborhoods/target_neighborhood_definitions_v1.json
 v1/packages/equipment/equipment_catalog_v1.json
+v1/packages/dark-sky-places/dark_sky_places_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 sources/target-metadata-overlay/2026-05-curated-workbooks/
 ```
