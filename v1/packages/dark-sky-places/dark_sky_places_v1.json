@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "packageFamily": "darkSkyPlaces",
   "packageVersion": "dark-sky-us-places-poc-20260703",
-  "generatedAt": "2026-07-03T18:26:33Z",
+  "generatedAt": "2026-07-03T21:03:26Z",
   "source": {
     "name": "DarkSky International Dark Sky Places",
     "directoryURL": "https://darksky.org/what-we-do/international-dark-sky-places/all-places/",
     "restBaseURL": "https://darksky.org/wp-json/wp/v2",
-    "retrievedAt": "2026-07-03T18:26:35Z",
+    "retrievedAt": "2026-07-03T21:03:27Z",
     "sourceKind": "public-wordpress-rest-api-evaluation",
     "sourceTotalRecordsSeen": 288,
     "filter": {
@@ -31,6 +31,15 @@
       "failedRequests": 0,
       "updatedRecords": 0
     },
+    "regionLookup": {
+      "enabled": true,
+      "sourceKind": "dev-time-us-admin1-coordinate-lookup",
+      "sourceURL": "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json",
+      "candidateRecords": 123,
+      "updatedRecords": 118,
+      "missingRegionRecords": 5,
+      "failed": false
+    },
     "skyBrightnessLookup": {
       "enabled": true,
       "sourceKind": "astroguide-offline-sky-brightness-dev-time-lookup",
@@ -39,7 +48,7 @@
       "candidateRecords": 123,
       "updatedRecords": 123,
       "missingLookupRecords": 0,
-      "resolvedAt": "2026-07-03T18:27:28Z"
+      "resolvedAt": "2026-07-03T21:04:19Z"
     }
   },
   "license": {
@@ -62,7 +71,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16739",
         "url": "https://darksky.org/places/amc-maine-woods-dark-sky-park/",
         "modifiedAt": "2026-03-24T21:09:19Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "AMC Maine Woods",
@@ -105,7 +114,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Maine"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/amc-maine-woods-dark-sky-park/"
@@ -128,7 +138,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -139,7 +149,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/36887",
         "url": "https://darksky.org/places/antelope-basecamp/",
         "modifiedAt": "2026-03-26T16:42:18Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Antelope Basecamp",
@@ -196,7 +206,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/7080",
         "url": "https://darksky.org/places/antelope-island-dark-sky-park/",
         "modifiedAt": "2025-03-06T20:05:16Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Antelope Island State Park",
@@ -239,7 +249,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/antelope-island-dark-sky-park/"
@@ -262,7 +273,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -273,7 +284,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/32162",
         "url": "https://darksky.org/places/antelope-oregon/",
         "modifiedAt": "2026-02-18T22:35:57Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Antelope, Oregon",
@@ -330,7 +341,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/9094",
         "url": "https://darksky.org/places/anza-borrego-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:31:56Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Anza-Borrego Desert State Park",
@@ -387,7 +398,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/37259",
         "url": "https://darksky.org/places/apache-junction-municipal-complex/",
         "modifiedAt": "2026-05-12T13:54:16Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Apache Junction Municipal Complex",
@@ -444,7 +455,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/12241",
         "url": "https://darksky.org/places/arches-national-park-dark-sky-park/",
         "modifiedAt": "2026-03-11T20:28:13Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Arches National Park",
@@ -487,7 +498,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/arches-national-park-dark-sky-park/"
@@ -510,7 +522,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -521,7 +533,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/30599",
         "url": "https://darksky.org/places/beaver-island-state-wildlife-research-area/",
         "modifiedAt": "2026-02-25T18:24:55Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Beaver Island State Wildlife Research Area",
@@ -564,7 +576,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Michigan"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/beaver-island-state-wildlife-research-area/"
@@ -587,7 +600,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -598,7 +611,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/24587",
         "url": "https://darksky.org/places/bee-cave-dark-sky-community/",
         "modifiedAt": "2026-01-13T18:05:10Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Bee Cave",
@@ -641,7 +654,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/bee-cave-dark-sky-community/"
@@ -664,7 +678,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 2000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -675,7 +689,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/628",
         "url": "https://darksky.org/places/beverly-shores-indiana-dark-sky-community/",
         "modifiedAt": "2025-03-06T19:54:27Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Beverly Shores, Indiana",
@@ -732,7 +746,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/541",
         "url": "https://darksky.org/places/big-bend-national-park-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:23:56Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Big Bend National Park",
@@ -775,7 +789,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/big-bend-national-park-dark-sky-park/"
@@ -798,7 +813,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -809,7 +824,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/8524",
         "url": "https://darksky.org/places/big-bend-ranch-dark-sky-park/",
         "modifiedAt": "2025-05-30T21:11:31Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Big Bend Ranch State Park",
@@ -852,7 +867,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/big-bend-ranch-dark-sky-park/"
@@ -875,7 +891,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -886,7 +902,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/6021",
         "url": "https://darksky.org/places/big-cypress-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:10:12Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Big Cypress National Preserve",
@@ -929,7 +945,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Florida"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/big-cypress-dark-sky-park/"
@@ -952,7 +969,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -963,7 +980,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/4963",
         "url": "https://darksky.org/places/big-park-village-of-oak-creek-dark-sky-community/",
         "modifiedAt": "2025-01-19T20:38:13Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Big Park / Village of Oak Creek, Arizona",
@@ -1006,7 +1023,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/big-park-village-of-oak-creek-dark-sky-community/"
@@ -1029,7 +1047,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1040,7 +1058,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/31985",
         "url": "https://darksky.org/places/bisbee-arizona/",
         "modifiedAt": "2026-01-27T22:28:51Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Bisbee, Arizona",
@@ -1083,7 +1101,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/bisbee-arizona/"
@@ -1106,7 +1125,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1117,7 +1136,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/3613",
         "url": "https://darksky.org/places/black-canyon-of-the-gunnison-national-park-dark-sky-park/",
         "modifiedAt": "2025-01-30T18:36:41Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Black Canyon of the Gunnison National Park",
@@ -1160,7 +1179,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/black-canyon-of-the-gunnison-national-park-dark-sky-park/"
@@ -1183,7 +1203,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1194,7 +1214,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/17312",
         "url": "https://darksky.org/places/black-gap-dark-sky-sanctuary/",
         "modifiedAt": "2025-04-21T21:53:19Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Black Gap Wildlife Management Area",
@@ -1251,7 +1271,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/35830",
         "url": "https://darksky.org/places/black-mesa-state-park/",
         "modifiedAt": "2025-12-19T21:30:58Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Black Mesa State Park",
@@ -1294,7 +1314,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Oklahoma"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/black-mesa-state-park/"
@@ -1317,7 +1338,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1328,7 +1349,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/18662",
         "url": "https://darksky.org/places/city-of-blanco-texas-dark-sky-community/",
         "modifiedAt": "2025-01-28T16:03:29Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Blanco, Texas",
@@ -1371,7 +1392,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/city-of-blanco-texas-dark-sky-community/"
@@ -1394,7 +1416,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1405,7 +1427,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/33920",
         "url": "https://darksky.org/places/bluff-utah/",
         "modifiedAt": "2025-06-24T15:19:12Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Bluff, Utah",
@@ -1448,7 +1470,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/bluff-utah/"
@@ -1471,7 +1494,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1482,7 +1505,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/627",
         "url": "https://darksky.org/places/borrego-springs-dark-sky-community/",
         "modifiedAt": "2025-03-05T15:38:16Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Borrego Springs, California",
@@ -1525,7 +1548,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "California"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/borrego-springs-dark-sky-community/"
@@ -1548,7 +1572,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 8000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1559,7 +1583,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/14601",
         "url": "https://darksky.org/places/boundary-waters-canoe-area-dark-sky-sanctuary/",
         "modifiedAt": "2025-01-30T21:15:39Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Boundary Waters Canoe Area Wilderness",
@@ -1616,7 +1640,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/32191",
         "url": "https://darksky.org/places/browns-canyon-national-monument/",
         "modifiedAt": "2026-01-06T21:04:18Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Browns Canyon National Monument",
@@ -1673,7 +1697,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/30862",
         "url": "https://darksky.org/places/bruneau-dunes-state-park/",
         "modifiedAt": "2026-01-13T18:35:38Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Bruneau Dunes State Park",
@@ -1716,7 +1740,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Idaho"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/bruneau-dunes-state-park/"
@@ -1739,7 +1764,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1750,7 +1775,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/12297",
         "url": "https://darksky.org/places/bryce-canyon-national-park-dark-sky-park/",
         "modifiedAt": "2025-02-23T23:38:34Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Bryce Canyon National Park",
@@ -1793,7 +1818,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/bryce-canyon-national-park-dark-sky-park/"
@@ -1816,7 +1842,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1827,7 +1853,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/11866",
         "url": "https://darksky.org/places/buffalo-national-river-dark-sky-park/",
         "modifiedAt": "2025-01-28T19:00:48Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Buffalo National River",
@@ -1870,7 +1896,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arkansas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/buffalo-national-river-dark-sky-park/"
@@ -1893,7 +1920,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1904,7 +1931,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/9937",
         "url": "https://darksky.org/places/camp-verde-dark-sky-park/",
         "modifiedAt": "2025-01-14T05:26:26Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Camp Verde, Arizona",
@@ -1947,7 +1974,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/camp-verde-dark-sky-park/"
@@ -1970,7 +1998,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -1981,7 +2009,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/3471",
         "url": "https://darksky.org/places/canyonlands-national-park-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:37:18Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Canyonlands National Park",
@@ -2024,7 +2052,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/canyonlands-national-park-dark-sky-park/"
@@ -2047,7 +2076,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2058,7 +2087,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/18147",
         "url": "https://darksky.org/places/cape-lookout-national-seashore-dark-sky-park/",
         "modifiedAt": "2025-01-30T21:05:10Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Cape Lookout National Seashore",
@@ -2109,7 +2138,8 @@
       "quality": {
         "requiresManualReview": true,
         "flags": [
-          "coordinate-needs-review"
+          "coordinate-needs-review",
+          "missing-us-admin1-region"
         ]
       },
       "skyBrightness": {
@@ -2124,7 +2154,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2135,7 +2165,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1042",
         "url": "https://darksky.org/places/capitol-reef-national-park-dark-sky-park/",
         "modifiedAt": "2026-01-16T17:27:43Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Capitol Reef National Park",
@@ -2178,7 +2208,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/capitol-reef-national-park-dark-sky-park/"
@@ -2201,7 +2232,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2212,7 +2243,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/35587",
         "url": "https://darksky.org/places/caprock-canyons-state-park-texas/",
         "modifiedAt": "2025-12-23T16:16:03Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Caprock Canyons State Park, Texas",
@@ -2255,7 +2286,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/caprock-canyons-state-park-texas/"
@@ -2278,7 +2310,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2289,7 +2321,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/5696",
         "url": "https://darksky.org/places/capulin-volcano-national-monument-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:35:17Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Capulin Volcano National Monument",
@@ -2332,7 +2364,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "New Mexico"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/capulin-volcano-national-monument-dark-sky-park/"
@@ -2355,7 +2388,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2366,7 +2399,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/34941",
         "url": "https://darksky.org/places/cataloochee-ranch/",
         "modifiedAt": "2025-09-25T13:11:22Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Cataloochee Ranch",
@@ -2423,7 +2456,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/6853",
         "url": "https://darksky.org/places/cedar-breaks-national-monument-dark-sky-park/",
         "modifiedAt": "2026-01-14T20:22:18Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Cedar Breaks National Monument",
@@ -2466,7 +2499,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/cedar-breaks-national-monument-dark-sky-park/"
@@ -2489,7 +2523,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2500,7 +2534,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/8942",
         "url": "https://darksky.org/places/central-idaho-dark-sky-reserve/",
         "modifiedAt": "2026-02-04T13:50:08Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Central Idaho",
@@ -2557,7 +2591,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1073",
         "url": "https://darksky.org/places/chaco-culture-national-historic-park-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:22:30Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Chaco Culture National Historical Park",
@@ -2600,7 +2634,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "New Mexico"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/chaco-culture-national-historic-park-dark-sky-park/"
@@ -2623,7 +2658,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2634,7 +2669,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1084",
         "url": "https://darksky.org/places/cherry-springs-state-park-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:05:22Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Cherry Springs State Park",
@@ -2677,7 +2712,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Pennsylvania"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/cherry-springs-state-park-dark-sky-park/"
@@ -2700,7 +2736,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2711,7 +2747,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/35898",
         "url": "https://darksky.org/places/chimney-rock-national-monument/",
         "modifiedAt": "2025-12-23T17:02:56Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Chimney Rock National Monument",
@@ -2754,7 +2790,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/chimney-rock-national-monument/"
@@ -2777,7 +2814,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2788,7 +2825,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16327",
         "url": "https://darksky.org/places/chiricahua-national-monument-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:24:43Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Chiricahua National Monument",
@@ -2831,7 +2868,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/chiricahua-national-monument-dark-sky-park/"
@@ -2854,7 +2892,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2865,7 +2903,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/24578",
         "url": "https://darksky.org/places/city-of-rocks-dark-sky-park/",
         "modifiedAt": "2025-01-06T22:58:06Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "City of Rocks National Reserve",
@@ -2908,7 +2946,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Idaho"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/city-of-rocks-dark-sky-park/"
@@ -2931,7 +2970,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -2942,7 +2981,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1093",
         "url": "https://darksky.org/places/clayton-lake-state-park-dark-sky-park/",
         "modifiedAt": "2025-03-06T18:36:09Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Clayton Lake State Park",
@@ -2985,7 +3024,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "New Mexico"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/clayton-lake-state-park-dark-sky-park/"
@@ -3008,7 +3048,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -3019,7 +3059,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1097",
         "url": "https://darksky.org/places/copper-breaks-state-park-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:38:07Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Copper Breaks State Park",
@@ -3062,7 +3102,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/copper-breaks-state-park-dark-sky-park/"
@@ -3085,7 +3126,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -3096,7 +3137,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/4791",
         "url": "https://darksky.org/places/cosmic-campground-dark-sky-place/",
         "modifiedAt": "2025-01-16T22:41:43Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Cosmic Campground",
@@ -3153,7 +3194,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/32202",
         "url": "https://darksky.org/places/cottonwood-canyon-state-park/",
         "modifiedAt": "2026-01-12T15:45:20Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Cottonwood Canyon State Park",
@@ -3210,7 +3251,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/13026",
         "url": "https://darksky.org/places/cottonwood-arizona-dark-sky-community/",
         "modifiedAt": "2025-09-16T22:45:28Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Cottonwood, Arizona",
@@ -3253,7 +3294,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/cottonwood-arizona-dark-sky-community/"
@@ -3276,7 +3318,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -3287,7 +3329,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/7639",
         "url": "https://darksky.org/places/craters-of-the-moon-national-monument-dark-sky-park/",
         "modifiedAt": "2024-10-28T15:31:50Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Craters Of The Moon National Monument",
@@ -3330,7 +3372,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Idaho"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/craters-of-the-moon-national-monument-dark-sky-park/"
@@ -3353,7 +3396,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -3364,7 +3407,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16436",
         "url": "https://darksky.org/places/crestone-colorado-dark-sky-community/",
         "modifiedAt": "2026-02-10T19:58:40Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Crestone, Colorado",
@@ -3407,7 +3450,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/crestone-colorado-dark-sky-community/"
@@ -3430,7 +3474,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -3441,7 +3485,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/17239",
         "url": "https://darksky.org/places/curecanti-national-recreation-area-dark-sky-park/",
         "modifiedAt": "2025-01-30T19:10:44Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Curecanti National Recreation Area",
@@ -3484,7 +3528,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/curecanti-national-recreation-area-dark-sky-park/"
@@ -3507,7 +3552,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -3518,7 +3563,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/5465",
         "url": "https://darksky.org/places/dead-horse-point-state-park-dark-sky-park/",
         "modifiedAt": "2026-01-08T22:32:46Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Dead Horse Point State Park",
@@ -3561,7 +3606,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/dead-horse-point-state-park-dark-sky-park/"
@@ -3584,7 +3630,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -3595,7 +3641,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/507",
         "url": "https://darksky.org/places/death-valley-national-park-dark-sky-park/",
         "modifiedAt": "2024-12-29T21:03:44Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Death Valley National Park",
@@ -3638,7 +3684,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "California"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/death-valley-national-park-dark-sky-park/"
@@ -3661,7 +3708,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -3672,11 +3719,11 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/11284",
         "url": "https://darksky.org/places/devils-river-state-natural-area-dark-sky-sanctuary/",
         "modifiedAt": "2025-01-27T17:59:30Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
-        "official": "Devils River State Natural Area \u2014 Del Norte Unit",
-        "display": "Devils River State Natural Area \u2014 Del Norte Unit",
+        "official": "Devils River State Natural Area — Del Norte Unit",
+        "display": "Devils River State Natural Area — Del Norte Unit",
         "aliases": []
       },
       "designation": {
@@ -3729,7 +3776,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/33248",
         "url": "https://darksky.org/places/diamond-mountain-retreat-center/",
         "modifiedAt": "2026-01-30T04:31:19Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Diamond Mountain Retreat Center",
@@ -3786,7 +3833,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/11921",
         "url": "https://darksky.org/places/dinosaur-national-monument-dark-sky-park/",
         "modifiedAt": "2025-02-20T21:59:49Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Dinosaur National Monument",
@@ -3829,7 +3876,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/dinosaur-national-monument-dark-sky-park/"
@@ -3852,7 +3900,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -3863,7 +3911,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/13153",
         "url": "https://darksky.org/places/dr-lawless-dark-sky-park/",
         "modifiedAt": "2025-12-08T21:04:49Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Dr. T.K. Lawless County Park",
@@ -3906,7 +3954,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Michigan"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/dr-lawless-dark-sky-park/"
@@ -3929,7 +3978,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -3940,7 +3989,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/626",
         "url": "https://darksky.org/places/dripping-springs-dark-sky-community/",
         "modifiedAt": "2026-02-25T18:59:37Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Dripping Springs, Texas",
@@ -3983,7 +4032,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/dripping-springs-dark-sky-community/"
@@ -4006,7 +4056,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4017,7 +4067,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/14558",
         "url": "https://darksky.org/places/east-canyon-state-park-dark-sky-park/",
         "modifiedAt": "2026-01-09T00:50:13Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "East Canyon State Park",
@@ -4060,7 +4110,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/east-canyon-state-park-dark-sky-park/"
@@ -4083,7 +4134,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 8000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4094,7 +4145,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/12959",
         "url": "https://darksky.org/places/el-morro-national-monument-dark-sky-park/",
         "modifiedAt": "2025-01-30T16:55:39Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "El Morro National Monument",
@@ -4137,7 +4188,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "New Mexico"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/el-morro-national-monument-dark-sky-park/"
@@ -4160,7 +4212,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4171,7 +4223,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1106",
         "url": "https://darksky.org/places/enchanted-rock-state-natural-area-dark-sky-park/",
         "modifiedAt": "2025-01-03T17:40:20Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Enchanted Rock State Natural Area",
@@ -4214,7 +4266,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/enchanted-rock-state-natural-area-dark-sky-park/"
@@ -4237,7 +4290,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4248,7 +4301,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/5347",
         "url": "https://darksky.org/places/flagstaff-area-national-monuments-dark-sky-park/",
         "modifiedAt": "2025-05-02T17:05:48Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Flagstaff Area National Monuments",
@@ -4291,7 +4344,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/flagstaff-area-national-monuments-dark-sky-park/"
@@ -4314,7 +4368,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4325,7 +4379,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/625",
         "url": "https://darksky.org/places/flagstaff-arizona-dark-sky-community/",
         "modifiedAt": "2025-02-23T23:33:44Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Flagstaff, Arizona",
@@ -4368,7 +4422,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/flagstaff-arizona-dark-sky-community/"
@@ -4391,7 +4446,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4402,7 +4457,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16899",
         "url": "https://darksky.org/places/florissant-fossil-beds-national-monument-dark-sky-park/",
         "modifiedAt": "2025-01-30T23:31:58Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Florissant Fossil Beds National Monument",
@@ -4445,7 +4500,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/florissant-fossil-beds-national-monument-dark-sky-park/"
@@ -4468,7 +4524,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4479,7 +4535,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/12442",
         "url": "https://darksky.org/places/fort-union-national-monument-dark-sky-park/",
         "modifiedAt": "2025-01-06T16:44:20Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Fort Union National Monument",
@@ -4522,7 +4578,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "New Mexico"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/fort-union-national-monument-dark-sky-park/"
@@ -4545,7 +4602,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4556,7 +4613,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/9024",
         "url": "https://darksky.org/places/fountain-hills-arizona-dark-sky-community/",
         "modifiedAt": "2025-01-23T22:46:42Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Fountain Hills, Arizona",
@@ -4599,7 +4656,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/fountain-hills-arizona-dark-sky-community/"
@@ -4622,7 +4680,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4633,7 +4691,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/13458",
         "url": "https://darksky.org/places/fredericksburg-texas-dark-sky-community/",
         "modifiedAt": "2026-01-20T18:10:01Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Fredericksburg, Texas",
@@ -4676,7 +4734,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/fredericksburg-texas-dark-sky-community/"
@@ -4699,7 +4758,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 2000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4710,7 +4769,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16002",
         "url": "https://darksky.org/places/fremont-indian-state-park-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:25:12Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Fremont Indian State Park",
@@ -4753,7 +4812,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/fremont-indian-state-park-dark-sky-park/"
@@ -4776,7 +4836,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4787,7 +4847,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/17795",
         "url": "https://darksky.org/places/fry-family-park-urban-night-sky-place/",
         "modifiedAt": "2024-09-25T22:58:25Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Fry Family Park",
@@ -4844,7 +4904,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1360",
         "url": "https://darksky.org/places/geauga-observatory-park-dark-sky-park/",
         "modifiedAt": "2025-02-21T20:41:33Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Geauga Observatory Park",
@@ -4887,7 +4947,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Ohio"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/geauga-observatory-park-dark-sky-park/"
@@ -4910,7 +4971,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4921,7 +4982,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/5603",
         "url": "https://darksky.org/places/goblin-valley-state-park-dark-sky-park/",
         "modifiedAt": "2026-01-13T20:30:31Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Goblin Valley State Park",
@@ -4964,7 +5025,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/goblin-valley-state-park-dark-sky-park/"
@@ -4987,7 +5049,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -4998,7 +5060,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16007",
         "url": "https://darksky.org/places/goosenecks-state-park-dark-sky-park/",
         "modifiedAt": "2025-01-07T19:41:17Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Goosenecks State Park",
@@ -5041,7 +5103,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/goosenecks-state-park-dark-sky-park/"
@@ -5064,7 +5127,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5075,7 +5138,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/5427",
         "url": "https://darksky.org/places/grand-canyon-national-park-dark-sky-park/",
         "modifiedAt": "2025-01-14T05:40:40Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Grand Canyon National Park",
@@ -5118,7 +5181,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/grand-canyon-national-park-dark-sky-park/"
@@ -5141,7 +5205,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5152,7 +5216,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1186",
         "url": "https://darksky.org/places/grand-canyon-parashant-national-monument-dark-sky-park/",
         "modifiedAt": "2025-01-30T21:21:27Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Grand Canyon-Parashant National Monument",
@@ -5195,7 +5259,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/grand-canyon-parashant-national-monument-dark-sky-park/"
@@ -5218,7 +5283,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5229,7 +5294,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/5360",
         "url": "https://darksky.org/places/great-basin-national-park-dark-sky-park/",
         "modifiedAt": "2025-02-10T18:45:01Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Great Basin National Park",
@@ -5272,7 +5337,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Nevada"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/great-basin-national-park-dark-sky-park/"
@@ -5295,7 +5361,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5306,7 +5372,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/11963",
         "url": "https://darksky.org/places/great-sand-dunes-national-park-dark-sky-park/",
         "modifiedAt": "2025-01-08T21:34:25Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Great Sand Dunes National Park and Preserve",
@@ -5349,7 +5415,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/great-sand-dunes-national-park-dark-sky-park/"
@@ -5372,7 +5439,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5383,7 +5450,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/18491",
         "url": "https://darksky.org/places/greater-big-bend-international-dark-sky-reserve/",
         "modifiedAt": "2025-01-27T18:05:12Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Greater Big Bend International Dark Sky Reserve",
@@ -5446,7 +5513,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/26328",
         "url": "https://darksky.org/places/groveland-florida-dark-sky-community/",
         "modifiedAt": "2024-12-19T21:49:29Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Groveland, Florida",
@@ -5489,7 +5556,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Florida"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/groveland-florida-dark-sky-community/"
@@ -5512,7 +5580,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 2000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5523,7 +5591,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/31334",
         "url": "https://darksky.org/places/gunnison-gorge-national-conservation-area/",
         "modifiedAt": "2026-02-12T20:58:14Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Gunnison Gorge National Conservation Area",
@@ -5566,7 +5634,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/gunnison-gorge-national-conservation-area/"
@@ -5589,7 +5658,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 2000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5600,7 +5669,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/14495",
         "url": "https://darksky.org/places/hawthorn-woods-illinois-dark-sky-community/",
         "modifiedAt": "2025-01-29T19:04:52Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Hawthorn Woods, Illinois",
@@ -5643,7 +5712,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Illinois"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/hawthorn-woods-illinois-dark-sky-community/"
@@ -5666,7 +5736,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 8000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5677,7 +5747,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1124",
         "url": "https://darksky.org/places/headlands-dark-sky-park/",
         "modifiedAt": "2025-01-06T16:08:36Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Headlands",
@@ -5728,7 +5798,8 @@
       "quality": {
         "requiresManualReview": true,
         "flags": [
-          "coordinate-needs-review"
+          "coordinate-needs-review",
+          "missing-us-admin1-region"
         ]
       },
       "skyBrightness": {
@@ -5743,7 +5814,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5754,7 +5825,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/13446",
         "url": "https://darksky.org/places/helper-utah-dark-sky-community/",
         "modifiedAt": "2024-09-25T23:28:00Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Helper, Utah",
@@ -5797,7 +5868,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/helper-utah-dark-sky-community/"
@@ -5820,7 +5892,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5831,7 +5903,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/624",
         "url": "https://darksky.org/places/homer-glen-illinois-dark-sky-community/",
         "modifiedAt": "2025-01-29T20:20:14Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Homer Glen, Illinois",
@@ -5874,7 +5946,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Illinois"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/homer-glen-illinois-dark-sky-community/"
@@ -5897,7 +5970,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5908,7 +5981,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/4363",
         "url": "https://darksky.org/places/horseshoe-bay-texas-dark-sky-community/",
         "modifiedAt": "2025-01-27T18:44:49Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Horseshoe Bay, Texas",
@@ -5951,7 +6024,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/horseshoe-bay-texas-dark-sky-community/"
@@ -5974,7 +6048,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -5985,7 +6059,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1134",
         "url": "https://darksky.org/places/hovenweep-national-monument-dark-sky-park/",
         "modifiedAt": "2025-01-27T16:29:20Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Hovenweep National Monument",
@@ -6028,7 +6102,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/hovenweep-national-monument-dark-sky-park/"
@@ -6051,7 +6126,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6062,7 +6137,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/33484",
         "url": "https://darksky.org/places/jackson-hole-airport/",
         "modifiedAt": "2025-05-05T22:31:50Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Jackson Hole Airport",
@@ -6105,7 +6180,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Wyoming"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/jackson-hole-airport/"
@@ -6128,7 +6204,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6139,7 +6215,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/14609",
         "url": "https://darksky.org/places/jackson-lake-state-park-dark-sky-park/",
         "modifiedAt": "2026-02-18T20:47:32Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Jackson Lake State Park",
@@ -6182,7 +6258,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/jackson-lake-state-park-dark-sky-park/"
@@ -6205,7 +6282,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 14000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6216,7 +6293,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/11170",
         "url": "https://darksky.org/places/james-river-state-park-dark-sky-park/",
         "modifiedAt": "2026-03-04T23:33:58Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "James River State Park",
@@ -6259,7 +6336,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Virginia"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/james-river-state-park-dark-sky-park/"
@@ -6282,7 +6360,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6293,7 +6371,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/30064",
         "url": "https://darksky.org/places/jonestown-texas/",
         "modifiedAt": "2026-02-25T20:13:08Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Jonestown, Texas",
@@ -6336,7 +6414,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/jonestown-texas/"
@@ -6359,7 +6438,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6370,7 +6449,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/15734",
         "url": "https://darksky.org/places/jordanelle-state-park-dark-sky-park/",
         "modifiedAt": "2025-04-15T15:39:25Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Jordanelle State Park",
@@ -6413,7 +6492,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/jordanelle-state-park-dark-sky-park/"
@@ -6436,7 +6516,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6447,7 +6527,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/7128",
         "url": "https://darksky.org/places/joshua-tree-national-park-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:32:41Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Joshua Tree National Park",
@@ -6490,7 +6570,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "California"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/joshua-tree-national-park-dark-sky-park/"
@@ -6513,7 +6594,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6524,7 +6605,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16381",
         "url": "https://darksky.org/places/julian-dark-sky-community/",
         "modifiedAt": "2026-01-27T21:21:08Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Julian, California",
@@ -6567,7 +6648,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "California"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/julian-dark-sky-community/"
@@ -6590,7 +6672,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6601,7 +6683,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/7675",
         "url": "https://darksky.org/places/kartchner-caverns-state-park-dark-sky-park/",
         "modifiedAt": "2025-01-29T17:02:59Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Kartchner Caverns State Park",
@@ -6644,7 +6726,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/kartchner-caverns-state-park-dark-sky-park/"
@@ -6667,7 +6750,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6678,7 +6761,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/13891",
         "url": "https://darksky.org/places/katahdin-woods-and-waters-dark-sky-sanctuary/",
         "modifiedAt": "2026-02-18T20:09:29Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Katahdin Woods and Waters National Monument",
@@ -6729,7 +6812,8 @@
       "quality": {
         "requiresManualReview": true,
         "flags": [
-          "coordinate-needs-review"
+          "coordinate-needs-review",
+          "missing-us-admin1-region"
         ]
       },
       "skyBrightness": {
@@ -6744,7 +6828,7 @@
         "datasetVersion": "viirs2024-wa2015-global-adaptive-10km-v1",
         "targetCellSizeMeters": 160000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6755,7 +6839,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/8459",
         "url": "https://darksky.org/places/ketchum-dark-sky-community/",
         "modifiedAt": "2026-04-28T20:01:45Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Ketchum, Idaho",
@@ -6798,7 +6882,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Idaho"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/ketchum-dark-sky-community/"
@@ -6821,7 +6906,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6832,7 +6917,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/19033",
         "url": "https://darksky.org/places/keweenaw-michigan-dark-sky-park/",
         "modifiedAt": "2026-02-04T13:48:04Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Keweenaw Dark Sky Park",
@@ -6883,7 +6968,8 @@
       "quality": {
         "requiresManualReview": true,
         "flags": [
-          "coordinate-needs-review"
+          "coordinate-needs-review",
+          "missing-us-admin1-region"
         ]
       },
       "skyBrightness": {
@@ -6898,7 +6984,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6909,7 +6995,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/4758",
         "url": "https://darksky.org/places/kissimmee-prairie-preserve-dark-sky-park/",
         "modifiedAt": "2026-02-12T20:47:26Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Kissimmee Prairie Preserve State Park",
@@ -6952,7 +7038,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Florida"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/kissimmee-prairie-preserve-dark-sky-park/"
@@ -6975,7 +7062,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -6986,7 +7073,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/37322",
         "url": "https://darksky.org/places/kosmos-stargazing-resort-spa/",
         "modifiedAt": "2026-05-15T22:44:37Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Kosmos Stargazing Resort & Spa",
@@ -7043,7 +7130,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/14706",
         "url": "https://darksky.org/places/lake-fork-earth-and-sky-center-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:26:38Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Lake Fork Earth and Sky Center",
@@ -7100,7 +7187,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/12543",
         "url": "https://darksky.org/places/lakewood-village-texas-dark-sky-community/",
         "modifiedAt": "2025-01-21T15:05:03Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Lakewood Village, Texas",
@@ -7143,7 +7230,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/lakewood-village-texas-dark-sky-community/"
@@ -7166,7 +7254,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -7177,7 +7265,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/34125",
         "url": "https://darksky.org/places/liberty-hill-texas/",
         "modifiedAt": "2026-01-06T18:51:54Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Liberty Hill, Texas",
@@ -7220,7 +7308,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/liberty-hill-texas/"
@@ -7243,7 +7332,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -7254,7 +7343,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/20239",
         "url": "https://darksky.org/places/lost-trail-national-wildlife-refuge-dark-sky-sanctuary/",
         "modifiedAt": "2024-09-25T23:30:28Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Lost Trail National Wildlife Refuge",
@@ -7297,7 +7386,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Montana"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/lost-trail-national-wildlife-refuge-dark-sky-sanctuary/"
@@ -7320,7 +7410,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -7331,7 +7421,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/17923",
         "url": "https://darksky.org/places/lyndon-b-johnson-national-historical-park-dark-sky-park/",
         "modifiedAt": "2025-01-30T16:47:09Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Lyndon B. Johnson National Historical Park",
@@ -7374,7 +7464,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/lyndon-b-johnson-national-historical-park-dark-sky-park/"
@@ -7397,7 +7488,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -7408,7 +7499,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/17811",
         "url": "https://darksky.org/places/mammoth-cave-national-park-dark-sky-park/",
         "modifiedAt": "2025-02-21T19:52:07Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Mammoth Cave National Park",
@@ -7451,7 +7542,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Kentucky"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/mammoth-cave-national-park-dark-sky-park/"
@@ -7474,7 +7566,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -7485,7 +7577,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/11681",
         "url": "https://darksky.org/places/massacre-rim-wilderness-study-area-dark-sky-sanctuary/",
         "modifiedAt": "2025-01-30T23:18:31Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Massacre Rim Wilderness Study Area",
@@ -7542,7 +7634,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1003",
         "url": "https://darksky.org/places/mayland-earth-to-sky-park-dark-sky-park/",
         "modifiedAt": "2025-11-12T16:35:19Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Mayland Earth to Sky Park & Bare Dark Sky Observatory",
@@ -7585,7 +7677,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "North Carolina"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/mayland-earth-to-sky-park-dark-sky-park/"
@@ -7608,7 +7701,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -7619,7 +7712,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/15546",
         "url": "https://darksky.org/places/medicine-rocks-state-park-dark-sky-sanctuary/",
         "modifiedAt": "2025-01-30T18:56:38Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Medicine Rocks State Park",
@@ -7676,7 +7769,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/19580",
         "url": "https://darksky.org/places/merritt-reservoir-dark-sky-park/",
         "modifiedAt": "2026-02-13T19:01:42Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Merritt Reservoir State Recreation Area",
@@ -7719,7 +7812,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Nebraska"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/merritt-reservoir-dark-sky-park/"
@@ -7742,7 +7836,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -7753,7 +7847,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16065",
         "url": "https://darksky.org/places/mesa-verde-national-park-dark-sky-park/",
         "modifiedAt": "2026-01-28T20:49:26Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Mesa Verde National Park",
@@ -7796,7 +7890,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/mesa-verde-national-park-dark-sky-park/"
@@ -7819,7 +7914,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -7830,7 +7925,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/10946",
         "url": "https://darksky.org/places/middle-fork-river-forest-preserve-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:00:27Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Middle Fork River Forest Preserve",
@@ -7873,7 +7968,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Illinois"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/middle-fork-river-forest-preserve-dark-sky-park/"
@@ -7896,7 +7992,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -7907,7 +8003,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/18009",
         "url": "https://darksky.org/places/milton-reimers-ranch-park-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:14:38Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Milton Reimers Ranch Park",
@@ -7950,7 +8046,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/milton-reimers-ranch-park-dark-sky-park/"
@@ -7973,7 +8070,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -7984,7 +8081,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16231",
         "url": "https://darksky.org/places/natural-bridge-state-park-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:08:29Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Natural Bridge State Park",
@@ -8027,7 +8124,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Virginia"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/natural-bridge-state-park-dark-sky-park/"
@@ -8050,7 +8148,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -8061,7 +8159,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/996",
         "url": "https://darksky.org/places/natural-bridges-national-monument-dark-sky-park/",
         "modifiedAt": "2025-12-30T16:16:17Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Natural Bridges National Monument",
@@ -8104,7 +8202,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/natural-bridges-national-monument-dark-sky-park/"
@@ -8127,7 +8226,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -8138,7 +8237,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/7203",
         "url": "https://darksky.org/places/newport-state-park-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:00:37Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Newport State Park",
@@ -8189,7 +8288,8 @@
       "quality": {
         "requiresManualReview": true,
         "flags": [
-          "coordinate-needs-review"
+          "coordinate-needs-review",
+          "missing-us-admin1-region"
         ]
       },
       "skyBrightness": {
@@ -8204,7 +8304,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 14000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -8215,7 +8315,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1162",
         "url": "https://darksky.org/places/north-fork-park-dark-sky-park/",
         "modifiedAt": "2026-02-20T18:16:33Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "North Fork Park",
@@ -8258,7 +8358,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/north-fork-park-dark-sky-park/"
@@ -8281,7 +8382,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -8292,7 +8393,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/11603",
         "url": "https://darksky.org/places/norwood-colorado-dark-sky-community/",
         "modifiedAt": "2026-02-19T16:59:42Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Norwood, Colorado",
@@ -8335,7 +8436,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/norwood-colorado-dark-sky-community/"
@@ -8358,7 +8460,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -8369,7 +8471,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16878",
         "url": "https://darksky.org/places/nucla-and-naturita-colorado-dark-sky-community/",
         "modifiedAt": "2025-02-19T16:49:47Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Nucla and Naturita, Colorado",
@@ -8412,7 +8514,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/nucla-and-naturita-colorado-dark-sky-community/"
@@ -8435,7 +8538,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -8446,7 +8549,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/8498",
         "url": "https://darksky.org/places/obed-wild-and-scenic-river-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:09:54Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Obed Wild and Scenic River",
@@ -8489,7 +8592,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Tennessee"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/obed-wild-and-scenic-river-dark-sky-park/"
@@ -8512,7 +8616,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 14000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -8523,7 +8627,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/36305",
         "url": "https://darksky.org/places/observatory-park-at-turner-farm/",
         "modifiedAt": "2026-01-14T20:32:24Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Observatory Park at Turner Farm",
@@ -8580,7 +8684,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/36449",
         "url": "https://darksky.org/places/old-snowmass-colorado/",
         "modifiedAt": "2026-02-12T18:05:41Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Old Snowmass, Colorado",
@@ -8637,7 +8741,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1177",
         "url": "https://darksky.org/places/oracle-state-park-dark-sky-park/",
         "modifiedAt": "2026-02-19T23:04:38Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Oracle State Park",
@@ -8680,7 +8784,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/oracle-state-park-dark-sky-park/"
@@ -8703,7 +8808,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 14000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -8714,7 +8819,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/31952",
         "url": "https://darksky.org/places/oregon-caves-national-monument-and-preserve/",
         "modifiedAt": "2026-02-12T21:10:07Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Oregon Caves National Monument and Preserve",
@@ -8757,7 +8862,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Oregon"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/oregon-caves-national-monument-and-preserve/"
@@ -8780,7 +8886,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -8791,7 +8897,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/30486",
         "url": "https://darksky.org/places/oregon-outback-international-dark-sky-sanctuary-oregon/",
         "modifiedAt": "2026-02-26T17:55:16Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Oregon Outback",
@@ -8834,7 +8940,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Oregon"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/oregon-outback-international-dark-sky-sanctuary-oregon/"
@@ -8857,7 +8964,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -8868,7 +8975,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/37288",
         "url": "https://darksky.org/places/organ-pipe-cactus-national-monument/",
         "modifiedAt": "2026-05-15T15:09:42Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Organ Pipe Cactus National Monument",
@@ -8925,7 +9032,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/17368",
         "url": "https://darksky.org/places/palos-preserves-urban-night-sky-place/",
         "modifiedAt": "2026-02-24T21:29:05Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Palos Preserves",
@@ -8982,7 +9089,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/9944",
         "url": "https://darksky.org/places/petrified-forest-national-park-dark-sky-park/",
         "modifiedAt": "2026-03-23T15:45:04Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Petrified Forest National Park",
@@ -9025,7 +9132,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/petrified-forest-national-park-dark-sky-park/"
@@ -9048,7 +9156,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -9059,7 +9167,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/1182",
         "url": "https://darksky.org/places/pickett-memorial-and-pogue-creek-canyon-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:10:46Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Pickett CCC Memorial State Park & Pogue Creek Canyon State Natural Area",
@@ -9102,7 +9210,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Tennessee"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/pickett-memorial-and-pogue-creek-canyon-dark-sky-park/"
@@ -9125,7 +9234,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 14000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -9136,7 +9245,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16139",
         "url": "https://darksky.org/places/pipe-spring-national-monument-dark-sky-park/",
         "modifiedAt": "2025-04-29T15:36:27Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Pipe Spring National Monument",
@@ -9193,7 +9302,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/14691",
         "url": "https://darksky.org/places/pisgah-astronomical-research-institute-dark-sky-park/",
         "modifiedAt": "2025-04-17T21:57:34Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Pisgah Astronomical Research Institute",
@@ -9250,7 +9359,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16408",
         "url": "https://darksky.org/places/prineville-reservoir-state-park-dark-sky-park/",
         "modifiedAt": "2025-01-10T21:19:56Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Prineville Reservoir State Park",
@@ -9307,7 +9416,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/9538",
         "url": "https://darksky.org/places/rainbow-bridge-national-monument-dark-sky-sanctuary/",
         "modifiedAt": "2026-03-23T15:16:06Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Rainbow Bridge National Monument",
@@ -9364,7 +9473,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/11415",
         "url": "https://darksky.org/places/rappahannock-county-park-dark-sky-park/",
         "modifiedAt": "2026-01-13T20:38:04Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Rappahannock County Park",
@@ -9421,7 +9530,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/14264",
         "url": "https://darksky.org/places/ridgway-colorado-dark-sky-community/",
         "modifiedAt": "2025-01-21T20:26:57Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Ridgway, Colorado",
@@ -9464,7 +9573,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/ridgway-colorado-dark-sky-community/"
@@ -9487,7 +9597,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -9498,7 +9608,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/15751",
         "url": "https://darksky.org/places/rockport-state-park-dark-sky-park/",
         "modifiedAt": "2026-02-18T21:10:53Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Rockport State Park",
@@ -9555,7 +9665,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/29740",
         "url": "https://darksky.org/places/saguaro-national-park/",
         "modifiedAt": "2025-05-19T20:39:05Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Saguaro National Park",
@@ -9598,7 +9708,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/saguaro-national-park/"
@@ -9621,7 +9732,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -9632,7 +9743,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/5788",
         "url": "https://darksky.org/places/salinas-pueblo-missions-national-monument-dark-sky-park/",
         "modifiedAt": "2026-06-08T20:07:29Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Salinas Pueblo Missions National Monument",
@@ -9675,7 +9786,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "New Mexico"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/salinas-pueblo-missions-national-monument-dark-sky-park/"
@@ -9698,7 +9810,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -9709,7 +9821,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/623",
         "url": "https://darksky.org/places/sedona-arizona-dark-sky-community/",
         "modifiedAt": "2025-01-10T22:39:40Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Sedona, Arizona",
@@ -9752,7 +9864,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/sedona-arizona-dark-sky-community/"
@@ -9775,7 +9888,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -9786,7 +9899,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/31075",
         "url": "https://darksky.org/places/shield-ranch-barton-creek/",
         "modifiedAt": "2024-09-17T21:20:59Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Shield Ranch Barton Creek",
@@ -9829,7 +9942,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/shield-ranch-barton-creek/"
@@ -9852,7 +9966,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -9863,7 +9977,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/29757",
         "url": "https://darksky.org/places/sinks-canyon-state-park/",
         "modifiedAt": "2026-01-23T21:32:29Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Sinks Canyon State Park",
@@ -9906,7 +10020,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Wyoming"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/sinks-canyon-state-park/"
@@ -9929,7 +10044,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -9940,7 +10055,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/32395",
         "url": "https://darksky.org/places/sisters-oregon/",
         "modifiedAt": "2025-01-21T19:27:41Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Sisters, Oregon",
@@ -9983,7 +10098,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Oregon"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/sisters-oregon/"
@@ -10006,7 +10122,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -10017,7 +10133,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16238",
         "url": "https://darksky.org/places/sky-meadows-state-park-dark-sky-park/",
         "modifiedAt": "2025-01-30T18:14:37Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Sky Meadows State Park",
@@ -10074,7 +10190,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/35817",
         "url": "https://darksky.org/places/snow-canyon-state-park/",
         "modifiedAt": "2025-12-19T20:45:03Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Snow Canyon State Park",
@@ -10117,7 +10233,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/snow-canyon-state-park/"
@@ -10140,7 +10257,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 8000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -10151,7 +10268,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/6760",
         "url": "https://darksky.org/places/south-llano-river-state-park-dark-sky-park/",
         "modifiedAt": "2025-07-03T16:24:20Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "South Llano River State Park",
@@ -10208,7 +10325,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/27239",
         "url": "https://darksky.org/places/springdale-utah-dark-sky-community/",
         "modifiedAt": "2025-01-08T00:05:24Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Springdale, Utah",
@@ -10251,7 +10368,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/springdale-utah-dark-sky-community/"
@@ -10274,7 +10392,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -10285,7 +10403,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/17645",
         "url": "https://darksky.org/places/stacy-park-urban-night-sky-place/",
         "modifiedAt": "2025-02-21T21:37:04Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Stacy Park",
@@ -10342,7 +10460,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/2893",
         "url": "https://darksky.org/places/staunton-river-state-park-dark-sky-park/",
         "modifiedAt": "2026-01-13T17:54:34Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Staunton River State Park",
@@ -10385,7 +10503,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Virginia"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/staunton-river-state-park-dark-sky-park/"
@@ -10408,7 +10527,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 14000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -10419,7 +10538,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/9163",
         "url": "https://darksky.org/places/steinaker-state-park-dark-sky-park/",
         "modifiedAt": "2025-04-17T17:27:59Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Steinaker State Park",
@@ -10476,7 +10595,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/6075",
         "url": "https://darksky.org/places/stephen-c-foster-state-park-dark-sky-park/",
         "modifiedAt": "2025-08-05T20:18:08Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Stephen C. Foster State Park",
@@ -10533,7 +10652,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/33285",
         "url": "https://darksky.org/places/teton-county/",
         "modifiedAt": "2026-03-12T17:29:15Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Teton County",
@@ -10576,7 +10695,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Wyoming"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/teton-county/"
@@ -10599,7 +10719,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -10610,7 +10730,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/30802",
         "url": "https://darksky.org/places/the-city-of-moab/",
         "modifiedAt": "2025-12-30T15:57:20Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "The City of Moab, Utah",
@@ -10653,7 +10773,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/the-city-of-moab/"
@@ -10676,7 +10797,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 2000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -10687,7 +10808,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/34940",
         "url": "https://darksky.org/places/the-swag/",
         "modifiedAt": "2025-09-25T13:09:59Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "The Swag",
@@ -10744,7 +10865,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/32131",
         "url": "https://darksky.org/places/thousand-hills-state-park/",
         "modifiedAt": "2026-01-02T20:18:23Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Thousand Hills State Park",
@@ -10787,7 +10908,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Missouri"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/thousand-hills-state-park/"
@@ -10810,7 +10932,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 14000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -10821,7 +10943,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/870",
         "url": "https://darksky.org/places/kaibab-paiute-indian-reservation-dark-sky-community/",
         "modifiedAt": "2025-02-21T23:28:31Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Thunder Mountain Pootsee Nightsky",
@@ -10864,7 +10986,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/kaibab-paiute-indian-reservation-dark-sky-community/"
@@ -10887,7 +11010,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -10898,7 +11021,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/14666",
         "url": "https://darksky.org/places/timpanogos-cave-national-monument-urban-night-sky-place/",
         "modifiedAt": "2025-02-25T20:25:23Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Timpanogos Cave National Monument",
@@ -10955,7 +11078,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/11987",
         "url": "https://darksky.org/places/tonto-national-monument-dark-sky-park/",
         "modifiedAt": "2024-09-25T23:17:54Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Tonto National Monument",
@@ -11012,7 +11135,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/18061",
         "url": "https://darksky.org/places/top-of-the-pines-dark-sky-park/",
         "modifiedAt": "2024-09-19T21:53:14Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Top of the Pines",
@@ -11069,7 +11192,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/9031",
         "url": "https://darksky.org/places/torrey-utah-dark-sky-community/",
         "modifiedAt": "2025-01-15T21:15:45Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Torrey, Utah",
@@ -11112,7 +11235,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/torrey-utah-dark-sky-community/"
@@ -11135,7 +11259,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -11146,7 +11270,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/34865",
         "url": "https://darksky.org/places/town-of-breckenridge-colorado/",
         "modifiedAt": "2025-08-24T02:06:01Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Town of Breckenridge, Colorado",
@@ -11189,7 +11313,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/town-of-breckenridge-colorado/"
@@ -11212,7 +11337,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 6000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -11223,7 +11348,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/30170",
         "url": "https://darksky.org/places/castle_valley/",
         "modifiedAt": "2025-01-14T18:45:41Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Town of Castle Valley, Utah",
@@ -11266,7 +11391,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/castle_valley/"
@@ -11289,7 +11415,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 24000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -11300,7 +11426,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/31366",
         "url": "https://darksky.org/places/paonia-colorado/",
         "modifiedAt": "2026-01-27T21:00:36Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Town of Paonia, Colorado",
@@ -11343,7 +11469,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/paonia-colorado/"
@@ -11366,7 +11493,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 12000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -11377,7 +11504,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/34405",
         "url": "https://darksky.org/places/trinchera-ranch/",
         "modifiedAt": "2025-08-19T16:25:34Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Trinchera Ranch",
@@ -11420,7 +11547,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/trinchera-ranch/"
@@ -11443,7 +11571,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -11454,7 +11582,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/31354",
         "url": "https://darksky.org/places/tubac/",
         "modifiedAt": "2026-01-05T16:17:44Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Tubac, Arizona",
@@ -11497,7 +11625,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Arizona"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/tubac/"
@@ -11520,7 +11649,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -11531,11 +11660,11 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/9701",
         "url": "https://darksky.org/places/tumacacori-national-historical-park-dark-sky-park/",
         "modifiedAt": "2025-01-08T15:17:32Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
-        "official": "Tumac\u00e1cori National Historical Park",
-        "display": "Tumac\u00e1cori National Historical Park",
+        "official": "Tumacácori National Historical Park",
+        "display": "Tumacácori National Historical Park",
         "aliases": []
       },
       "designation": {
@@ -11588,7 +11717,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/4233",
         "url": "https://darksky.org/places/ubaru-camp-and-retreat-center-dark-sky-park/",
         "modifiedAt": "2025-02-21T19:31:03Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "UBarU Camp and Retreat Center",
@@ -11645,7 +11774,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/30869",
         "url": "https://darksky.org/places/under-canvas-bryce-canyon/",
         "modifiedAt": "2024-09-25T23:12:09Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Under Canvas Bryce Canyon",
@@ -11702,7 +11831,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/31017",
         "url": "https://darksky.org/places/under-canvas-grand-canyon/",
         "modifiedAt": "2024-09-25T23:11:59Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Under Canvas Grand Canyon",
@@ -11759,11 +11888,11 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/29592",
         "url": "https://darksky.org/places/under-canvas-lake-powell-grand-staircase/",
         "modifiedAt": "2024-09-25T23:13:28Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
-        "official": "Under Canvas Lake Powell \u2013 Grand Staircase",
-        "display": "Under Canvas Lake Powell \u2013 Grand Staircase",
+        "official": "Under Canvas Lake Powell – Grand Staircase",
+        "display": "Under Canvas Lake Powell – Grand Staircase",
         "aliases": []
       },
       "designation": {
@@ -11816,7 +11945,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/29594",
         "url": "https://darksky.org/places/under-canvas-moab/",
         "modifiedAt": "2024-09-19T21:50:49Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Under Canvas Moab",
@@ -11859,7 +11988,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Utah"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/under-canvas-moab/"
@@ -11882,7 +12012,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -11893,7 +12023,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/33164",
         "url": "https://darksky.org/places/under-canvas-ulum-moab/",
         "modifiedAt": "2025-12-02T19:37:18Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Under Canvas ULUM Moab",
@@ -11950,7 +12080,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/36967",
         "url": "https://darksky.org/places/under-canvas-yosemite/",
         "modifiedAt": "2026-04-16T15:23:09Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Under Canvas Yosemite",
@@ -12007,7 +12137,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/31019",
         "url": "https://darksky.org/places/under-canvas-zion/",
         "modifiedAt": "2025-03-10T18:27:51Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Under Canvas Zion",
@@ -12064,7 +12194,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/12784",
         "url": "https://darksky.org/places/valle-de-oro-national-wildlife-refuge-urban-night-sky-place/",
         "modifiedAt": "2025-02-21T20:59:08Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Valle de Oro National Wildlife Refuge",
@@ -12121,7 +12251,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/15822",
         "url": "https://darksky.org/places/valles-caldera-national-preserve-dark-sky-park/",
         "modifiedAt": "2026-04-15T22:48:27Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Valles Caldera National Preserve",
@@ -12178,7 +12308,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/15350",
         "url": "https://darksky.org/places/voyageurs-national-park-dark-sky-park/",
         "modifiedAt": "2025-02-21T22:10:25Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Voyageurs National Park",
@@ -12235,7 +12365,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/7090",
         "url": "https://darksky.org/places/waterton-glacier-international-peace-park-dark-sky-park/",
         "modifiedAt": "2025-01-30T23:11:11Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Waterton-Glacier International Peace Park",
@@ -12298,7 +12428,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/17818",
         "url": "https://darksky.org/places/watoga-state-park-dark-sky-park/",
         "modifiedAt": "2025-01-30T20:56:50Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Watoga State Park",
@@ -12355,7 +12485,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/872",
         "url": "https://darksky.org/places/westcliffe-and-silver-cliff-dark-sky-community/",
         "modifiedAt": "2025-12-12T18:53:09Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Westcliffe and Silver Cliff, Colorado",
@@ -12398,7 +12528,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Colorado"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/westcliffe-and-silver-cliff-dark-sky-community/"
@@ -12421,7 +12552,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 26000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -12432,7 +12563,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/9896",
         "url": "https://darksky.org/places/wimberley-valley-texas-dark-sky-community/",
         "modifiedAt": "2025-01-14T04:37:59Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Wimberley Valley, Texas",
@@ -12475,7 +12606,8 @@
             "name": "U.S.A.",
             "parent": 0
           }
-        ]
+        ],
+        "region": "Texas"
       },
       "links": {
         "darkSkyPlace": "https://darksky.org/places/wimberley-valley-texas-dark-sky-community/"
@@ -12498,7 +12630,7 @@
         "datasetVersion": "viirs2024-wa2015-us-lower48-adaptive-v2",
         "targetCellSizeMeters": 4000.0,
         "bundleVersion": "viirs2024-wa2015-layered-v3",
-        "resolvedAt": "2026-07-03T18:27:28Z"
+        "resolvedAt": "2026-07-03T21:04:19Z"
       }
     },
     {
@@ -12509,7 +12641,7 @@
         "apiURL": "https://darksky.org/wp-json/wp/v2/darksky_place/16833",
         "url": "https://darksky.org/places/zion-national-park-dark-sky-park/",
         "modifiedAt": "2025-04-15T19:47:32Z",
-        "retrievedAt": "2026-07-03T18:26:35Z"
+        "retrievedAt": "2026-07-03T21:03:27Z"
       },
       "name": {
         "official": "Zion National Park",

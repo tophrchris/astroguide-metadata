@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-07-03T20:18:16Z",
-  "publishedAt": "2026-07-03T20:18:16Z",
+  "generatedAt": "2026-07-03T21:05:11Z",
+  "publishedAt": "2026-07-03T21:05:11Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -56,9 +56,9 @@
       "packageURL": "https://metadata.astroguide.space/v1/packages/dark-sky-places/dark_sky_places_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "a22d9b10a97c00432a8142f70404fa654eaeafd871a3a0998c3471d297a455a2"
+        "value": "64e0b43501250ffc364ab3a866c1014939e03365e2744a476234b46ec7f05812"
       },
-      "byteSize": 365985,
+      "byteSize": 369871,
       "minSupportedAppVersion": "1.3.3",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -82,6 +82,22 @@
     },
     {
       "family": "seasonalRecommendationCandidates",
+      "packageVersion": "north_low_0_30n-catalog-targetmetadata-seasonal-v1-2026-06-28",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_low_0_30n_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "722f3ca5e6dc95c35ea8ee6b0acfbd16a57fdfc5c8f0b8b7b6f0f6430b78f7ff"
+      },
+      "byteSize": 883714,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Use the bundled seasonal recommendation snapshot for this latitude band only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh.",
+      "latitudeBand": "north_low_0_30n"
+    },
+    {
+      "family": "seasonalRecommendationCandidates",
       "packageVersion": "north_mid_30_60n-catalog-targetmetadata-seasonal-v1-2026-06-28",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json",
@@ -98,19 +114,19 @@
     },
     {
       "family": "seasonalRecommendationCandidates",
-      "packageVersion": "north_low_0_30n-catalog-targetmetadata-seasonal-v1-2026-06-28",
+      "packageVersion": "south_high_60_90s-catalog-targetmetadata-seasonal-v1-2026-06-28",
       "payloadSchemaVersion": 1,
-      "packageURL": "https://metadata.astroguide.space/v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_low_0_30n_v1.json",
+      "packageURL": "https://metadata.astroguide.space/v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_south_high_60_90s_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "722f3ca5e6dc95c35ea8ee6b0acfbd16a57fdfc5c8f0b8b7b6f0f6430b78f7ff"
+        "value": "31b978480d07682989dbb699b28bfd8abfae69597d254b92e33b22ef60cd703a"
       },
-      "byteSize": 883714,
+      "byteSize": 789357,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled seasonal recommendation snapshot for this latitude band only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh.",
-      "latitudeBand": "north_low_0_30n"
+      "latitudeBand": "south_high_60_90s"
     },
     {
       "family": "seasonalRecommendationCandidates",
@@ -143,22 +159,6 @@
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled seasonal recommendation snapshot for this latitude band only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh.",
       "latitudeBand": "south_mid_30_60s"
-    },
-    {
-      "family": "seasonalRecommendationCandidates",
-      "packageVersion": "south_high_60_90s-catalog-targetmetadata-seasonal-v1-2026-06-28",
-      "payloadSchemaVersion": 1,
-      "packageURL": "https://metadata.astroguide.space/v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_south_high_60_90s_v1.json",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "31b978480d07682989dbb699b28bfd8abfae69597d254b92e33b22ef60cd703a"
-      },
-      "byteSize": 789357,
-      "minSupportedAppVersion": "0.1.2",
-      "minSupportedBuild": "1",
-      "cacheTTLSeconds": 604800,
-      "fallbackNotes": "Use the bundled seasonal recommendation snapshot for this latitude band only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh.",
-      "latitudeBand": "south_high_60_90s"
     }
   ]
 }
