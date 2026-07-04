@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-07-03T21:05:11Z",
-  "publishedAt": "2026-07-03T21:05:11Z",
+  "generatedAt": "2026-07-04T17:30:05Z",
+  "publishedAt": "2026-07-04T17:30:05Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -51,12 +51,12 @@
     },
     {
       "family": "darkSkyPlaces",
-      "packageVersion": "dark-sky-us-places-poc-20260704",
+      "packageVersion": "dark-sky-us-places-v1-20260704",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/dark-sky-places/dark_sky_places_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "b08345df637a030ded1845586bc78171be93262e8e288258f06ac40cec09644d"
+        "value": "fb4710d52d1cc106417da0f25ba82957ba56e27cc38bfc6990e985fd3d3ff4dd"
       },
       "byteSize": 465759,
       "minSupportedAppVersion": "1.3.3",
