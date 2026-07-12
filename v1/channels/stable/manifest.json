@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-07-05T22:29:16Z",
-  "publishedAt": "2026-07-05T22:29:16Z",
+  "generatedAt": "2026-07-12T15:11:35Z",
+  "publishedAt": "2026-07-12T15:11:35Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -36,14 +36,14 @@
     },
     {
       "family": "equipmentCatalog",
-      "packageVersion": "equipment-catalog-v1-2026-07-05",
+      "packageVersion": "equipment-catalog-v1-2026-07-12",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/equipment/equipment_catalog_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "a5905040664d9176675adfd81c4dd61cf0dcc00952819fc96aef6179c6ce8103"
+        "value": "0971b2466e28c02306c28604fd3fb13cced3e35ee27292126e5c52fb3fd5f355"
       },
-      "byteSize": 236367,
+      "byteSize": 237593,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
