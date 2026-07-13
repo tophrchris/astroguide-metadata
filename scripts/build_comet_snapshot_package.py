@@ -40,6 +40,11 @@ def parse_args() -> argparse.Namespace:
         description="Build the hosted AstroGuide comet snapshot package and refresh the stable manifest."
     )
     parser.add_argument("--app-repo", type=Path, default=DEFAULT_APP_REPO)
+    parser.add_argument(
+        "--source-package",
+        type=Path,
+        help="Use an already generated cometSnapshot package instead of wrapping app resources.",
+    )
     parser.add_argument("--generated-at")
     parser.add_argument("--min-supported-app-version", default="0.1.2")
     parser.add_argument("--min-supported-build", default="1")
@@ -92,6 +97,22 @@ def build_package(app_repo: Path, generated_at: str) -> dict[str, Any]:
         "seeds": seeds,
         "ephemeris": ephemeris,
     }
+
+
+def build_package_from_source(source_package: Path, generated_at: str | None) -> dict[str, Any]:
+    package = read_json(source_package)
+    if package.get("schemaVersion") != 1:
+        raise RuntimeError("Source comet package must use schemaVersion 1.")
+    if package.get("packageFamily") != PACKAGE_FAMILY:
+        raise RuntimeError(f"Source comet package must be a {PACKAGE_FAMILY} package.")
+    if generated_at is not None:
+        package["generatedAt"] = generated_at
+    if not package.get("generatedAt"):
+        raise RuntimeError("Source comet package is missing generatedAt.")
+    if not package.get("packageVersion"):
+        package["packageVersion"] = f"comet-snapshot-v1-{date_token(package['generatedAt'])}"
+    validate_sources(package.get("seeds") or {}, package.get("ephemeris") or {})
+    return package
 
 
 def validate_sources(seeds: dict[str, Any], ephemeris: dict[str, Any]) -> None:
@@ -191,7 +212,12 @@ def main() -> int:
     app_repo = args.app_repo.resolve()
     generated_at = args.generated_at or utc_now()
 
-    package = build_package(app_repo, generated_at)
+    package = (
+        build_package_from_source(args.source_package.resolve(), args.generated_at)
+        if args.source_package is not None
+        else build_package(app_repo, generated_at)
+    )
+    generated_at = package["generatedAt"]
     data = write_json(REPO_ROOT / PACKAGE_PATH, package)
     descriptor = package_descriptor(
         package=package,
