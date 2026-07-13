@@ -54,10 +54,17 @@ The builder writes the equipment package envelope, refreshes the stable manifest
 
 ## Rebuilding Comet Snapshot Packages
 
-The comet snapshot package is generated from the app's bundled comet seed and ephemeris resources:
+The comet snapshot package can be generated from the app's bundled comet seed and ephemeris resources:
 
 ```bash
 scripts/build_comet_snapshot_package.py --app-repo ../DSOPlanneriOS
+```
+
+It can also publish a generated `cometSnapshot` package from the AstroActive comet/lunar close-pass experiment:
+
+```bash
+scripts/build_comet_snapshot_package.py \
+  --source-package /Volumes/AstroActive/nsns_experiments/comet_lunar_close_passes_2026/outputs/comet_snapshot_next365_cobs_horizons_20_package.json
 ```
 
 The builder writes the comet package envelope, refreshes the stable manifest, and recalculates byte size and SHA-256 checksum while preserving the other manifest packages.
