@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "packageFamily": "seasonalRecommendationCandidates",
-  "packageVersion": "north_mid_30_60n-catalog-targetmetadata-seasonal-v1-2026-06-28",
+  "packageVersion": "north_mid_30_60n-catalog-targetmetadata-seasonal-v1-2026-07-18",
   "latitudeBand": "north_mid_30_60n",
   "representativeLatitudeDegrees": 45.0,
-  "generatedAt": "2026-06-28T03:09:56Z",
+  "generatedAt": "2026-07-18T04:26:14Z",
   "source": {
     "name": "AstroGuide catalog and target metadata seasonal recommendations",
     "generatedBy": "scripts/build_seasonal_recommendation_packages.py",
@@ -18285,7 +18285,8 @@
       "displayName": "IC5068",
       "aliases": [
         "IC IC5068",
-        "LBN 328"
+        "LBN 328",
+        "Forsaken Nebula"
       ],
       "spectrum": "narrowband",
       "seasonStatus": "peak",
@@ -18314,7 +18315,8 @@
       "displayName": "Lynds Bright Nebula 328 (LBN328)",
       "aliases": [
         "IC 5068",
-        "LBN LBN328"
+        "LBN LBN328",
+        "Forsaken Nebula"
       ],
       "spectrum": "narrowband",
       "seasonStatus": "peak",
