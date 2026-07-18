@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-07-12T21:25:04Z",
-  "publishedAt": "2026-07-12T21:25:04Z",
+  "generatedAt": "2026-07-18T04:26:14Z",
+  "publishedAt": "2026-07-18T04:26:14Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
-      "packageVersion": "target-metadata-overlay-v1-2026-06-26",
+      "packageVersion": "target-metadata-overlay-v1-2026-07-18",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/target-metadata/target_metadata_overlay_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "650d362dd509e106daa55a87f7ed541b3e4d3151bf6005b9f6c019ec3079d144"
+        "value": "f29e61a8cb06f631d37f3fb5ee415dd22848f16c61a191d5fa1ce30330b57344"
       },
-      "byteSize": 445568,
+      "byteSize": 446325,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -81,14 +81,14 @@
     },
     {
       "family": "seasonalRecommendationCandidates",
-      "packageVersion": "north_high_60_90n-catalog-targetmetadata-seasonal-v1-2026-06-28",
+      "packageVersion": "north_high_60_90n-catalog-targetmetadata-seasonal-v1-2026-07-18",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_high_60_90n_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "ad80775d1126f2e86ffee7a4c825a74a6eae9384f995e7d30f22ead088349be2"
+        "value": "2cf511ecccd5585b74a6e90f98d3701ebd5d5064995f8641c5f1888131594fad"
       },
-      "byteSize": 832945,
+      "byteSize": 832999,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -97,14 +97,14 @@
     },
     {
       "family": "seasonalRecommendationCandidates",
-      "packageVersion": "north_mid_30_60n-catalog-targetmetadata-seasonal-v1-2026-06-28",
+      "packageVersion": "north_mid_30_60n-catalog-targetmetadata-seasonal-v1-2026-07-18",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "f9516165601c11c58977dd0fbb50713994b63a3bd0244fd0202687c46f56df32"
+        "value": "24d15f3af4ae87845ec1f378681e7300d225d52f23140c43a50c68073d2b134e"
       },
-      "byteSize": 861932,
+      "byteSize": 861986,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -113,14 +113,14 @@
     },
     {
       "family": "seasonalRecommendationCandidates",
-      "packageVersion": "north_low_0_30n-catalog-targetmetadata-seasonal-v1-2026-06-28",
+      "packageVersion": "north_low_0_30n-catalog-targetmetadata-seasonal-v1-2026-07-18",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_low_0_30n_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "722f3ca5e6dc95c35ea8ee6b0acfbd16a57fdfc5c8f0b8b7b6f0f6430b78f7ff"
+        "value": "d443150afbd211c8c41e93ab4115b5f5f8aafdce198ca6675da8a9655391031f"
       },
-      "byteSize": 883714,
+      "byteSize": 883768,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -129,14 +129,14 @@
     },
     {
       "family": "seasonalRecommendationCandidates",
-      "packageVersion": "south_low_0_30s-catalog-targetmetadata-seasonal-v1-2026-06-28",
+      "packageVersion": "south_low_0_30s-catalog-targetmetadata-seasonal-v1-2026-07-18",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_south_low_0_30s_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "a947bfa544045db1a2ff9c9801229aac99729be8ca2095568a65c6b1a16e032b"
+        "value": "8eeb65d3f0439ddfd80cf8f12eb7d7c554b62e24127c917e5efb3a4ce8459675"
       },
-      "byteSize": 864489,
+      "byteSize": 864543,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,

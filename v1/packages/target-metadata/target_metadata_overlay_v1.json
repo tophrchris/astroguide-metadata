@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "targetMetadataOverlay",
-  "packageVersion": "target-metadata-overlay-v1-2026-06-26",
-  "generatedAt": "2026-06-26T00:00:00Z",
+  "packageVersion": "target-metadata-overlay-v1-2026-07-18",
+  "generatedAt": "2026-07-18T04:26:14Z",
   "source": {
     "name": "Bundled AstroGuide target metadata overlay",
     "generatedBy": "App/Resources/TargetMetadata curated target metadata snapshot",
@@ -13804,6 +13804,31 @@
       "projectContext": "Next 50 largest apparent-size galaxies from WXSC, excluding the project-discussed list",
       "hAlphaPriority": 2,
       "wxscRank": 73
+    },
+    {
+      "canonicalID": "IC5068",
+      "preferredName": "Forsaken Nebula",
+      "aliases": [
+        "IC5068",
+        "IC 5068",
+        "IC IC5068",
+        "LBN328",
+        "LBN 328",
+        "Forsaken Nebula"
+      ],
+      "resolution": {
+        "status": "matched",
+        "catalogObjectID": "IC5068",
+        "matchMethod": "curatedAlias",
+        "notes": "Adds common-name alias for dynamic metadata lookup."
+      },
+      "curatedObjectTypeRaw": "HII",
+      "curatedObjectTypeDisplayName": "Emission Nebula",
+      "curatedVisualFamily": "emissionNebula",
+      "objectTypeProvenance": "catalog",
+      "signals": {},
+      "sourceCitations": [],
+      "planningNotes": "Common-name alias curated manually for IC 5068 / LBN 328."
     }
   ],
   "mediaOverrides": [
