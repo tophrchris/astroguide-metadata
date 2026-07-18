@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "equipmentCatalog",
-  "packageVersion": "equipment-catalog-v1-2026-07-12",
-  "generatedAt": "2026-07-12T15:11:35Z",
+  "packageVersion": "equipment-catalog-v1-2026-07-18",
+  "generatedAt": "2026-07-18T16:12:05Z",
   "source": {
     "name": "AstroGuide bundled equipment catalog",
     "generatedBy": "astroguide-metadata equipment package builder",
@@ -962,6 +962,40 @@
               "planning_power_class": "medium_session_unlimited_with_external",
               "confidence": "medium",
               "notes": "Modeled like Seestar S50/S30-class devices; verify exact S30 Pro spec before treating as published."
+            }
+          },
+          {
+            "id": "zwo-seestar-s30-pro-wide",
+            "name": "Seestar S30 Pro Wide",
+            "manufacturer": "ZWO",
+            "abbreviation": "S30ProW",
+            "focal_length_mm": 6,
+            "aperture_mm": 3.4,
+            "sensor_model": "IMX586",
+            "default_orientation": "portrait",
+            "sensor_orientation": "portrait",
+            "native_resolution_width_px": 2160,
+            "native_resolution_height_px": 3840,
+            "fov_maj_deg": 56.21,
+            "fov_min_deg": 33.44,
+            "max_mag": 8,
+            "estimated_max_magnitude": 8,
+            "max_mag_basis": "wide-angle heuristic",
+            "built_in_filters": [],
+            "notes": "Wide-angle camera POV for Milky Way, star trail, constellation, and landscape-style framing. Modeled separately until smart telescope imaging modes can be represented under one device. Official wide camera spec lists a 63-degree diagonal field of view, IMX586 sensor, and 6mm f/1.75 lens; tele-path built-in filters are not modeled for this wide profile.",
+            "supported_sub_exposure_lengths": [],
+            "power": {
+              "type": "internal_battery",
+              "battery_capacity": "estimated 6000 mAh class",
+              "manufacturer_claim_hours": 6,
+              "realistic_hours_min": 4,
+              "realistic_hours_max": 6,
+              "can_charge_while_running": true,
+              "charging_while_running": "supported",
+              "external_power_supported": true,
+              "planning_power_class": "medium_session_unlimited_with_external",
+              "confidence": "medium",
+              "notes": "Uses the same S30 Pro body and battery model as the tele profile; exact wide-mode runtime varies by capture mode."
             }
           },
           {
