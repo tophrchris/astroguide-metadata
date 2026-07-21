@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "targetMetadataOverlay",
-  "packageVersion": "target-metadata-overlay-v1-2026-07-18",
-  "generatedAt": "2026-07-18T04:26:14Z",
+  "packageVersion": "target-metadata-overlay-v1-2026-07-21",
+  "generatedAt": "2026-07-21T04:01:21Z",
   "source": {
     "name": "Bundled AstroGuide target metadata overlay",
     "generatedBy": "App/Resources/TargetMetadata curated target metadata snapshot",
@@ -13829,6 +13829,32 @@
       "signals": {},
       "sourceCitations": [],
       "planningNotes": "Common-name alias curated manually for IC 5068 / LBN 328."
+    },
+    {
+      "canonicalID": "IC63",
+      "preferredName": "Ghost of Cassiopeia",
+      "aliases": [
+        "IC63",
+        "IC 63",
+        "LBN622",
+        "LBN 622",
+        "Sh2-185",
+        "Sh 2-185",
+        "Ghost of Cassiopeia"
+      ],
+      "resolution": {
+        "status": "matched",
+        "catalogObjectID": "IC63",
+        "matchMethod": "curatedAlias",
+        "notes": "Adds Sharpless and common-name aliases for dynamic metadata lookup."
+      },
+      "curatedObjectTypeRaw": "HII",
+      "curatedObjectTypeDisplayName": "Emission Nebula",
+      "curatedVisualFamily": "emissionNebula",
+      "objectTypeProvenance": "catalog",
+      "signals": {},
+      "sourceCitations": [],
+      "planningNotes": "Common-name and catalog aliases curated manually for IC 63 / Sh2-185 / LBN 622."
     }
   ],
   "mediaOverrides": [
