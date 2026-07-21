@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "packageFamily": "seasonalRecommendationCandidates",
-  "packageVersion": "north_low_0_30n-catalog-targetmetadata-seasonal-v1-2026-07-18",
+  "packageVersion": "north_low_0_30n-catalog-targetmetadata-seasonal-v1-2026-07-21",
   "latitudeBand": "north_low_0_30n",
   "representativeLatitudeDegrees": 15.0,
-  "generatedAt": "2026-07-18T04:26:14Z",
+  "generatedAt": "2026-07-21T04:01:21Z",
   "source": {
     "name": "AstroGuide catalog and target metadata seasonal recommendations",
     "generatedBy": "scripts/build_seasonal_recommendation_packages.py",
@@ -23603,7 +23603,8 @@
       "aliases": [
         "IC IC63",
         "LBN 622",
-        "Sh 2-185"
+        "Sh 2-185",
+        "Ghost of Cassiopeia"
       ],
       "spectrum": "narrowband",
       "seasonStatus": "peak",
@@ -23632,7 +23633,8 @@
       "aliases": [
         "IC 63",
         "LBN LBN622",
-        "Sh 2-185"
+        "Sh 2-185",
+        "Ghost of Cassiopeia"
       ],
       "spectrum": "narrowband",
       "seasonStatus": "peak",
