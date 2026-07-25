@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "planetCatalog",
+  "packageVersion": "planet-catalog-v1-20260725",
+  "generatedAt": "2026-07-25T22:43:28Z",
+  "attribution": {
+    "displayName": "NASA/JPL/Wikipedia",
+    "displayText": "Planet physical data sourced from NASA/JPL references; imagery uses Wikipedia/Wikimedia page images for stable app thumbnails.",
+    "url": "https://en.wikipedia.org/wiki/Planet"
+  },
+  "planets": [
+    {
+      "planet": "mercury",
+      "displayName": "Mercury",
+      "summary": "Smallest major planet and closest to the Sun.",
+      "description": "Mercury is a small, cratered inner planet with a fast orbit and a tight apparent separation from the Sun. In observing views it is usually a twilight object rather than a deep-night target.",
+      "diameterKilometers": 4879,
+      "meanDistanceFromSunMillionKilometers": 57.9,
+      "meanDistanceFromSunAU": 0.387,
+      "perihelionMillionKilometers": 46.0,
+      "aphelionMillionKilometers": 69.8,
+      "siderealOrbitalPeriodDays": 88.0,
+      "moonCount": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg",
+      "heroImageCredit": "Wikimedia Commons / NASA/JHUAPL/Carnegie Institution of Washington",
+      "sourceURLs": [
+        "https://en.wikipedia.org/wiki/Mercury_(planet)",
+        "https://science.nasa.gov/solar-system/planets/",
+        "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "https://spaceplace.nasa.gov/how-many-moons/en/"
+      ]
+    },
+    {
+      "planet": "venus",
+      "displayName": "Venus",
+      "summary": "Bright inner planet with a Sun-hugging observing rhythm.",
+      "description": "Venus is similar to Earth in size but wrapped in reflective clouds. From Earth it appears very bright, usually as a morning or evening object near the Sun.",
+      "diameterKilometers": 12104,
+      "meanDistanceFromSunMillionKilometers": 108.2,
+      "meanDistanceFromSunAU": 0.723,
+      "perihelionMillionKilometers": 107.5,
+      "aphelionMillionKilometers": 108.9,
+      "siderealOrbitalPeriodDays": 224.7,
+      "moonCount": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Venus_2_Approach_Image.jpg",
+      "heroImageCredit": "Wikimedia Commons / NASA/JPL",
+      "sourceURLs": [
+        "https://en.wikipedia.org/wiki/Venus",
+        "https://science.nasa.gov/solar-system/planets/",
+        "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "https://spaceplace.nasa.gov/how-many-moons/en/"
+      ]
+    },
+    {
+      "planet": "mars",
+      "displayName": "Mars",
+      "summary": "Rocky red planet outside Earth orbit.",
+      "description": "Mars is the outer terrestrial planet most familiar to observers, with a changing apparent size and brightness as Earth catches up to it around opposition.",
+      "diameterKilometers": 6792,
+      "meanDistanceFromSunMillionKilometers": 227.9,
+      "meanDistanceFromSunAU": 1.524,
+      "perihelionMillionKilometers": 206.6,
+      "aphelionMillionKilometers": 249.2,
+      "siderealOrbitalPeriodDays": 687.0,
+      "moonCount": 2,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png/1280px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png",
+      "heroImageCredit": "Wikimedia Commons / Kevin M. Gill",
+      "sourceURLs": [
+        "https://en.wikipedia.org/wiki/Mars",
+        "https://science.nasa.gov/solar-system/planets/",
+        "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "https://spaceplace.nasa.gov/how-many-moons/en/"
+      ]
+    },
+    {
+      "planet": "jupiter",
+      "displayName": "Jupiter",
+      "summary": "Largest planet and a bright gas giant.",
+      "description": "Jupiter is the solar system's largest planet, a banded gas giant whose long observing windows often make it one of the easiest planets to track when well placed.",
+      "diameterKilometers": 142984,
+      "meanDistanceFromSunMillionKilometers": 778.6,
+      "meanDistanceFromSunAU": 5.204,
+      "perihelionMillionKilometers": 740.5,
+      "aphelionMillionKilometers": 816.6,
+      "siderealOrbitalPeriodDays": 4331,
+      "moonCount": 95,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Jupiter_OPAL_2024.png/1280px-Jupiter_OPAL_2024.png",
+      "heroImageCredit": "Wikimedia Commons / NASA/ESA/STSci/OPAL",
+      "sourceURLs": [
+        "https://en.wikipedia.org/wiki/Jupiter",
+        "https://science.nasa.gov/solar-system/planets/",
+        "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "https://spaceplace.nasa.gov/how-many-moons/en/"
+      ]
+    },
+    {
+      "planet": "saturn",
+      "displayName": "Saturn",
+      "summary": "Ringed gas giant and second-largest planet.",
+      "description": "Saturn is the ringed gas giant beyond Jupiter. Its slow motion makes its observing season broad when it is on the night side of Earth.",
+      "diameterKilometers": 120536,
+      "meanDistanceFromSunMillionKilometers": 1433.5,
+      "meanDistanceFromSunAU": 9.582,
+      "perihelionMillionKilometers": 1352.6,
+      "aphelionMillionKilometers": 1514.5,
+      "siderealOrbitalPeriodDays": 10747,
+      "moonCount": 274,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Saturn_global_view_from_Cassini%2C_rings_open_Better_Colour.png/1280px-Saturn_global_view_from_Cassini%2C_rings_open_Better_Colour.png",
+      "heroImageCredit": "Wikimedia Commons / NASA/JPL-Caltech/SSI",
+      "sourceURLs": [
+        "https://en.wikipedia.org/wiki/Saturn",
+        "https://science.nasa.gov/solar-system/planets/",
+        "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "https://spaceplace.nasa.gov/how-many-moons/en/"
+      ]
+    },
+    {
+      "planet": "uranus",
+      "displayName": "Uranus",
+      "summary": "Distant ice giant with a subtle blue-green disk.",
+      "description": "Uranus is an ice giant far beyond Saturn. It is much fainter than the classical naked-eye planets, so placement and altitude matter for finding it.",
+      "diameterKilometers": 51118,
+      "meanDistanceFromSunMillionKilometers": 2872.5,
+      "meanDistanceFromSunAU": 19.201,
+      "perihelionMillionKilometers": 2741.3,
+      "aphelionMillionKilometers": 3003.6,
+      "siderealOrbitalPeriodDays": 30589,
+      "moonCount": 28,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/6/69/Uranus_Voyager2_color_calibrated.png",
+      "heroImageCredit": "Wikimedia Commons / NASA/JPL-Caltech",
+      "sourceURLs": [
+        "https://en.wikipedia.org/wiki/Uranus",
+        "https://science.nasa.gov/solar-system/planets/",
+        "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "https://spaceplace.nasa.gov/how-many-moons/en/"
+      ]
+    },
+    {
+      "planet": "neptune",
+      "displayName": "Neptune",
+      "summary": "Most distant major planet and an ice giant.",
+      "description": "Neptune is the outermost major planet, a blue ice giant whose small apparent size and faintness make horizon clearance and timing especially important.",
+      "diameterKilometers": 49528,
+      "meanDistanceFromSunMillionKilometers": 4495.1,
+      "meanDistanceFromSunAU": 30.047,
+      "perihelionMillionKilometers": 4444.5,
+      "aphelionMillionKilometers": 4545.7,
+      "siderealOrbitalPeriodDays": 59800,
+      "moonCount": 16,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Neptune_Voyager2_color_calibrated.png",
+      "heroImageCredit": "Wikimedia Commons / NASA/JPL",
+      "sourceURLs": [
+        "https://en.wikipedia.org/wiki/Neptune",
+        "https://science.nasa.gov/solar-system/planets/",
+        "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "https://spaceplace.nasa.gov/how-many-moons/en/"
+      ]
+    }
+  ]
+}

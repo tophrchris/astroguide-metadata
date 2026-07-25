@@ -20,6 +20,7 @@ v1/packages/target-neighborhoods/target_neighborhood_definitions_v1.json
 v1/packages/equipment/equipment_catalog_v1.json
 v1/packages/dark-sky-places/dark_sky_places_v1.json
 v1/packages/comets/comet_snapshot_v1.json
+v1/packages/planet-catalog/planet_catalog_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 sources/target-metadata-overlay/2026-05-curated-workbooks/
 ```
@@ -51,6 +52,16 @@ scripts/build_equipment_catalog_package.py --app-repo ../DSOPlanneriOS
 ```
 
 The builder writes the equipment package envelope, refreshes the stable manifest, and recalculates byte size and SHA-256 checksum.
+
+## Rebuilding Planet Catalog Packages
+
+The planet catalog package is generated from the app's bundled dynamic metadata snapshot:
+
+```bash
+scripts/build_planet_catalog_package.py --app-repo ../DSOPlanneriOS
+```
+
+The builder writes the planet catalog package envelope, refreshes the stable manifest, and recalculates byte size and SHA-256 checksum.
 
 ## Rebuilding Comet Snapshot Packages
 
