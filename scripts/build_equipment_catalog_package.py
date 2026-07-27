@@ -10,13 +10,19 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_APP_REPO = REPO_ROOT.parent / "DSOPlanneriOS"
 METADATA_ORIGIN = "https://metadata.astroguide.space"
 CACHE_TTL_SECONDS = 604800
-PACKAGE_FAMILY = "equipmentCatalog"
-PACKAGE_PATH = Path("v1/packages/equipment/equipment_catalog_v1.json")
+EQUIPMENT_PACKAGE_FAMILY = "equipmentCatalog"
+EQUIPMENT_PACKAGE_PATH = Path("v1/packages/equipment/equipment_catalog_v1.json")
+ASTROPHOTOGRAPHY_PACKAGE_FAMILY = "astrophotographyEquipmentCatalog"
+ASTROPHOTOGRAPHY_PACKAGE_PATH = Path("v1/packages/equipment/astrophotography_equipment_catalog_v1.json")
 
 FAMILY_ORDER = [
     "targetMetadataOverlay",
     "targetNeighborhoodDefinitions",
     "equipmentCatalog",
+    "astrophotographyEquipmentCatalog",
+    "darkSkyPlaces",
+    "cometSnapshot",
+    "planetCatalog",
     "seasonalRecommendationCandidates",
 ]
 LATITUDE_BAND_ORDER = [
@@ -31,12 +37,21 @@ LATITUDE_BAND_ORDER = [
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Build the hosted AstroGuide equipment catalog package and refresh the stable manifest."
+        description="Build hosted AstroGuide equipment catalog packages and refresh the stable manifest."
     )
     parser.add_argument("--app-repo", type=Path, default=DEFAULT_APP_REPO)
     parser.add_argument("--generated-at")
     parser.add_argument("--min-supported-app-version", default="0.1.2")
     parser.add_argument("--min-supported-build", default="1")
+    parser.add_argument(
+        "--package",
+        choices=["equipment", "astrophotography", "all"],
+        default="equipment",
+        help=(
+            "Package family to rebuild. Defaults to the legacy smart-scope equipment package; "
+            "use 'astrophotography' for Telescope Workshop optics/cameras or 'all' for both."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -60,7 +75,7 @@ def date_token(generated_at: str) -> str:
     return generated_at.split("T", maxsplit=1)[0]
 
 
-def build_package(app_repo: Path, generated_at: str) -> dict:
+def build_equipment_package(app_repo: Path, generated_at: str) -> dict:
     catalog_path = app_repo / "App/Resources/Equipment/equipment_catalog.json"
     catalog = read_json(catalog_path)
     categories = catalog.get("categories") or []
@@ -69,7 +84,7 @@ def build_package(app_repo: Path, generated_at: str) -> dict:
 
     return {
         "schemaVersion": 1,
-        "packageFamily": PACKAGE_FAMILY,
+        "packageFamily": EQUIPMENT_PACKAGE_FAMILY,
         "packageVersion": f"equipment-catalog-v1-{date_token(generated_at)}",
         "generatedAt": generated_at,
         "source": {
@@ -85,18 +100,62 @@ def build_package(app_repo: Path, generated_at: str) -> dict:
     }
 
 
+def build_astrophotography_package(app_repo: Path, generated_at: str) -> dict:
+    catalog_path = app_repo / "App/Resources/Equipment/astrophotography_equipment.json"
+    curation_path = app_repo / "App/Resources/Equipment/astrophotography_equipment_curation.json"
+    catalog = read_json(catalog_path)
+    curation = read_json(curation_path) if curation_path.exists() else None
+    optical_components = catalog.get("opticalComponents") or []
+    camera_components = catalog.get("cameraComponents") or []
+    if not optical_components and not camera_components:
+        raise RuntimeError("Astrophotography equipment catalog package would be empty.")
+
+    return {
+        "schemaVersion": 1,
+        "packageFamily": ASTROPHOTOGRAPHY_PACKAGE_FAMILY,
+        "packageVersion": f"astrophotography-equipment-catalog-v1-{date_token(generated_at)}",
+        "generatedAt": generated_at,
+        "source": {
+            "name": "AstroGuide bundled astrophotography equipment catalog",
+            "generatedBy": "astroguide-metadata equipment package builder",
+            "sourceURL": (
+                "https://github.com/tophrchris/DSOPlanneriOS/tree/main/"
+                "App/Resources/Equipment/astrophotography_equipment.json"
+            ),
+            "notes": "Wraps the bundled Telescope Workshop optics and imaging component catalog in the dynamic metadata package envelope.",
+        },
+        "catalog": catalog,
+        "curation": curation,
+    }
+
+
 def package_descriptor(
     *,
+    family: str,
+    package_path: Path,
     package: dict,
     data: bytes,
     min_supported_app_version: str,
     min_supported_build: str,
 ) -> dict:
+    if family == ASTROPHOTOGRAPHY_PACKAGE_FAMILY:
+        fallback_notes = (
+            "Use the bundled Telescope Workshop equipment catalog only if no validated cached package is available. "
+            "Cache TTL indicates when the app should check for a fresher package; an expired cached package "
+            "remains usable until replaced by a validated refresh."
+        )
+    else:
+        fallback_notes = (
+            "Use the bundled equipment catalog only if no validated cached package is available. "
+            "Cache TTL indicates when the app should check for a fresher package; an expired cached "
+            "package remains usable until replaced by a validated refresh."
+        )
+
     return {
-        "family": PACKAGE_FAMILY,
+        "family": family,
         "packageVersion": package["packageVersion"],
         "payloadSchemaVersion": package["schemaVersion"],
-        "packageURL": f"{METADATA_ORIGIN}/{PACKAGE_PATH.as_posix()}",
+        "packageURL": f"{METADATA_ORIGIN}/{package_path.as_posix()}",
         "checksum": {
             "algorithm": "sha256",
             "value": hashlib.sha256(data).hexdigest(),
@@ -105,11 +164,7 @@ def package_descriptor(
         "minSupportedAppVersion": min_supported_app_version,
         "minSupportedBuild": min_supported_build,
         "cacheTTLSeconds": CACHE_TTL_SECONDS,
-        "fallbackNotes": (
-            "Use the bundled equipment catalog only if no validated cached package is available. "
-            "Cache TTL indicates when the app should check for a fresher package; an expired cached "
-            "package remains usable until replaced by a validated refresh."
-        ),
+        "fallbackNotes": fallback_notes,
     }
 
 
@@ -134,31 +189,54 @@ def main() -> int:
     manifest_path = REPO_ROOT / "v1/channels/stable/manifest.json"
     manifest = read_json(manifest_path)
 
-    package = build_package(app_repo, generated_at)
-    data = write_json(REPO_ROOT / PACKAGE_PATH, package)
-    descriptor = package_descriptor(
-        package=package,
-        data=data,
-        min_supported_app_version=args.min_supported_app_version,
-        min_supported_build=args.min_supported_build,
-    )
+    package_specs = []
+    if args.package in {"equipment", "all"}:
+        package_specs.append(
+            (
+                EQUIPMENT_PACKAGE_FAMILY,
+                EQUIPMENT_PACKAGE_PATH,
+                build_equipment_package(app_repo, generated_at),
+            )
+        )
+    if args.package in {"astrophotography", "all"}:
+        package_specs.append(
+            (
+                ASTROPHOTOGRAPHY_PACKAGE_FAMILY,
+                ASTROPHOTOGRAPHY_PACKAGE_PATH,
+                build_astrophotography_package(app_repo, generated_at),
+            )
+        )
+    descriptors = []
+    for family, package_path, package in package_specs:
+        data = write_json(REPO_ROOT / package_path, package)
+        descriptors.append(
+            package_descriptor(
+                family=family,
+                package_path=package_path,
+                package=package,
+                data=data,
+                min_supported_app_version=args.min_supported_app_version,
+                min_supported_build=args.min_supported_build,
+            )
+        )
 
     packages = [
         entry
         for entry in manifest.get("packages", [])
-        if entry.get("family") != PACKAGE_FAMILY
+        if entry.get("family") not in {descriptor["family"] for descriptor in descriptors}
     ]
-    packages.append(descriptor)
+    packages.extend(descriptors)
 
     manifest["generatedAt"] = generated_at
     manifest["publishedAt"] = generated_at
     manifest["packages"] = sort_packages(packages)
     write_json(manifest_path, manifest)
 
-    print(
-        f"{PACKAGE_FAMILY}: {descriptor['packageVersion']} "
-        f"{descriptor['byteSize']} bytes {descriptor['checksum']['value']}"
-    )
+    for descriptor in descriptors:
+        print(
+            f"{descriptor['family']}: {descriptor['packageVersion']} "
+            f"{descriptor['byteSize']} bytes {descriptor['checksum']['value']}"
+        )
     return 0
 
 
