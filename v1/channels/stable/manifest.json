@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-07-27T12:00:00Z",
-  "publishedAt": "2026-07-27T12:00:00Z",
+  "generatedAt": "2026-07-27T22:02:05Z",
+  "publishedAt": "2026-07-27T22:02:05Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -48,6 +48,21 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled equipment catalog only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "astrophotographyEquipmentCatalog",
+      "packageVersion": "astrophotography-equipment-catalog-v1-2026-07-27",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/equipment/astrophotography_equipment_catalog_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "be7b5ef7253111b7e0bdf42c2a58080f4ddd8dc4c9665f0b75356e0985ea3f7f"
+      },
+      "byteSize": 1273238,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Use the bundled Telescope Workshop equipment catalog only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
     },
     {
       "family": "darkSkyPlaces",
