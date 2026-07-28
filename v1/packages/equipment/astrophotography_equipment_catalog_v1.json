@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "astrophotographyEquipmentCatalog",
-  "packageVersion": "astrophotography-equipment-catalog-v1-2026-07-27",
-  "generatedAt": "2026-07-27T22:02:05Z",
+  "packageVersion": "astrophotography-equipment-catalog-v1-2026-07-28",
+  "generatedAt": "2026-07-28T09:59:48Z",
   "source": {
     "name": "AstroGuide bundled astrophotography equipment catalog",
     "generatedBy": "astroguide-metadata equipment package builder",
@@ -19,10 +19,10 @@
       "permissionNote": "Permission reported in AstroGuide issue #678; include Astronomy.Tools link in credits and acknowledgments."
     },
     "counts": {
-      "optical_tubes": 804,
+      "optical_tubes": 809,
       "lenses": 133,
       "cameras": 381,
-      "total": 1318
+      "total": 1323
     },
     "normalizationNotes": [
       "Manufacturer names are whitespace/case normalized and selected variants are merged for curation convenience.",
@@ -17153,6 +17153,106 @@
         "curator_notes": ""
       },
       {
+        "curation_status": "reviewed",
+        "include_in_app": true,
+        "component_type": "optical_tube",
+        "component_id": "optical-tube-william-optics-ultra-cat-56",
+        "manufacturer": "William Optics",
+        "manufacturer_raw": "William Optics",
+        "model": "Ultra-Cat 56",
+        "aperture_mm": 56.0,
+        "native_focal_length_mm": 269.0,
+        "native_focal_ratio": 4.8,
+        "optical_design": "5-Element Advanced Petzval",
+        "source_id": "official-ultra-cat-56",
+        "source_label": "William Optics - Ultra-Cat 56",
+        "source_value": "William Optics|Ultra-Cat 56|56.00|269.00|f/4.8|50mm image circle",
+        "source_url": "https://williamoptics.com/products/ultra-cat-56",
+        "source_attribution": "William Optics official product specification table.",
+        "source_confidence": "manufacturer_spec",
+        "curator_notes": "Ultra Cat line backfill; official table lists 50mm image circle, WIFD R&P focuser, EAF compatibility, no flattener required."
+      },
+      {
+        "curation_status": "reviewed",
+        "include_in_app": true,
+        "component_type": "optical_tube",
+        "component_id": "optical-tube-william-optics-ultra-cat-76",
+        "manufacturer": "William Optics",
+        "manufacturer_raw": "William Optics",
+        "model": "Ultra-Cat 76",
+        "aperture_mm": 76.0,
+        "native_focal_length_mm": 365.0,
+        "native_focal_ratio": 4.8,
+        "optical_design": "5-Element Advanced Petzval",
+        "source_id": "official-ultra-cat-76",
+        "source_label": "William Optics - Ultra-Cat 76",
+        "source_value": "William Optics|Ultra-Cat 76|76.00|365.00|f/4.8|50mm image circle",
+        "source_url": "https://williamoptics.com/products/ultra-cat-76",
+        "source_attribution": "William Optics official product specification table.",
+        "source_confidence": "manufacturer_spec",
+        "curator_notes": "Ultra Cat line backfill; official table lists 50mm image circle, WIFD R&P focuser, EAF compatibility, no flattener required."
+      },
+      {
+        "curation_status": "reviewed",
+        "include_in_app": true,
+        "component_type": "optical_tube",
+        "component_id": "optical-tube-william-optics-cat-91-wifd",
+        "manufacturer": "William Optics",
+        "manufacturer_raw": "William Optics",
+        "model": "Cat 91 WIFD",
+        "aperture_mm": 91.0,
+        "native_focal_length_mm": 448.0,
+        "native_focal_ratio": 4.9,
+        "optical_design": "5-Element Advanced Petzval",
+        "source_id": "official-cat-91-wifd",
+        "source_label": "William Optics - Cat 91 WIFD",
+        "source_value": "William Optics|Cat 91 WIFD|91.00|448.00|f/4.9|55mm image circle",
+        "source_url": "https://williamoptics.com/products/cat-91-wifd",
+        "source_attribution": "William Optics official product specification table.",
+        "source_confidence": "manufacturer_spec",
+        "curator_notes": "Ultra Cat line backfill; official table lists 55mm image circle, WIFD R&P focuser, EAF compatibility, no flattener required, and maximum back spacing of M48 60.8mm / M54 65.8mm."
+      },
+      {
+        "curation_status": "reviewed",
+        "include_in_app": true,
+        "component_type": "optical_tube",
+        "component_id": "optical-tube-william-optics-ultra-cat-108",
+        "manufacturer": "William Optics",
+        "manufacturer_raw": "William Optics",
+        "model": "Ultra-Cat 108",
+        "aperture_mm": 108.0,
+        "native_focal_length_mm": 518.0,
+        "native_focal_ratio": 4.8,
+        "optical_design": "5-Element Advanced Petzval",
+        "source_id": "official-ultra-cat-108",
+        "source_label": "William Optics - Ultra-Cat 108",
+        "source_value": "William Optics|Ultra-Cat 108|108.00|518.00|f/4.8|60mm image circle",
+        "source_url": "https://williamoptics.com/products/ultra-cat-108-wifd",
+        "source_attribution": "William Optics official product specification table.",
+        "source_confidence": "manufacturer_spec",
+        "curator_notes": "Ultra Cat line backfill; official table lists 60mm image circle, WIFD R&P focuser, EAF compatibility, no flattener required."
+      },
+      {
+        "curation_status": "reviewed",
+        "include_in_app": true,
+        "component_type": "optical_tube",
+        "component_id": "optical-tube-william-optics-ultra-cat-131",
+        "manufacturer": "William Optics",
+        "manufacturer_raw": "William Optics",
+        "model": "Ultra-Cat 131",
+        "aperture_mm": 131.0,
+        "native_focal_length_mm": 648.0,
+        "native_focal_ratio": 4.9,
+        "optical_design": "5-Element Advanced Petzval",
+        "source_id": "official-ultra-cat-131",
+        "source_label": "William Optics - Ultra-Cat 131",
+        "source_value": "William Optics|Ultra-Cat 131|131.00|648.00|f/4.9|60mm image circle",
+        "source_url": "https://williamoptics.com/products/ultra-cat-131",
+        "source_attribution": "William Optics official product specification table.",
+        "source_confidence": "manufacturer_spec",
+        "curator_notes": "Ultra Cat line backfill; official table lists 60mm image circle, WIFD R&P focuser, EAF compatibility, no flattener required."
+      },
+      {
         "curation_status": "needs_review",
         "include_in_app": "",
         "component_type": "lens",
@@ -28616,6 +28716,10 @@
       {
         "manufacturer": "William Optics",
         "productLine": "RedCat"
+      },
+      {
+        "manufacturer": "William Optics",
+        "productLine": "Ultra Cat"
       },
       {
         "manufacturer": "William Optics",
