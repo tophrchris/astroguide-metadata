@@ -22,6 +22,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_APP_REPO = REPO_ROOT.parent / "DSOPlanneriOS"
 DEFAULT_CATALOG_PATH = Path("App/Resources/Catalog/catalog.sqlite")
 DEFAULT_PACKAGE_PATH = Path("v1/packages/lunar-events/lunar_event_metadata_v1.json")
+DEFAULT_SEASONAL_RECOMMENDATION_DIR = Path("v1/packages/seasonal-recommendations")
+DEFAULT_TARGET_METADATA_PATH = Path("v1/packages/target-metadata/target_metadata_overlay_v1.json")
+DEFAULT_TARGET_NEIGHBORHOOD_PATH = Path("v1/packages/target-neighborhoods/target_neighborhood_definitions_v1.json")
 DEFAULT_EPHEMERIS_CACHE = Path.home() / "Library/Caches/com.tophrchris.AstroGuide/lunar-events"
 DEFAULT_EPHEMERIS = "de421.bsp"
 METADATA_ORIGIN = "https://metadata.astroguide.space"
@@ -30,6 +33,7 @@ PACKAGE_FAMILY = "lunarEvents"
 PACKAGE_BASENAME = "lunar-events"
 MOON_RADIUS_KM = 1737.4
 SUPERSEDED_PACKAGE_FAMILIES = {"lunarClosePasses"}
+DEFAULT_BRIGHT_NGC_IC_MAG_LIMIT = 10.0
 
 FAMILY_ORDER = [
     "targetMetadataOverlay",
@@ -142,6 +146,14 @@ class EclipseGeometry:
     penumbral_magnitude: float
 
 
+@dataclass(frozen=True)
+class ShardBuild:
+    path: Path
+    payload: dict[str, Any]
+    data: bytes
+    descriptor: dict[str, Any]
+
+
 class UnionFind:
     def __init__(self, count: int) -> None:
         self.parent = list(range(count))
@@ -185,6 +197,9 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--output", type=Path, default=DEFAULT_PACKAGE_PATH)
     parser.add_argument("--manifest", type=Path, default=Path("v1/channels/stable/manifest.json"))
+    parser.add_argument("--seasonal-recommendation-dir", type=Path, default=DEFAULT_SEASONAL_RECOMMENDATION_DIR)
+    parser.add_argument("--target-metadata", type=Path, default=DEFAULT_TARGET_METADATA_PATH)
+    parser.add_argument("--target-neighborhoods", type=Path, default=DEFAULT_TARGET_NEIGHBORHOOD_PATH)
     parser.add_argument("--start-date", default=isoformat_z(today))
     parser.add_argument("--end-date", default=isoformat_z(default_end))
     parser.add_argument("--generated-at")
@@ -192,6 +207,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--min-supported-app-version", default="1.3.7")
     parser.add_argument("--min-supported-build", default="1")
     parser.add_argument("--max-separation-degrees", type=float, default=5.0)
+    parser.add_argument("--bright-ngc-ic-mag-limit", type=float, default=DEFAULT_BRIGHT_NGC_IC_MAG_LIMIT)
     parser.add_argument("--sample-step-minutes", type=int, default=60)
     parser.add_argument("--refine-step-minutes", type=int, default=5)
     parser.add_argument("--scan-padding-hours", type=int, default=72)
@@ -207,6 +223,8 @@ def parse_args() -> argparse.Namespace:
     args = parser.parse_args()
     if args.max_separation_degrees <= 0:
         raise SystemExit("--max-separation-degrees must be positive")
+    if args.bright_ngc_ic_mag_limit <= 0:
+        raise SystemExit("--bright-ngc-ic-mag-limit must be positive")
     if args.sample_step_minutes <= 0:
         raise SystemExit("--sample-step-minutes must be positive")
     if args.refine_step_minutes <= 0:
@@ -256,7 +274,7 @@ def main() -> int:
 
     if args.validate_only:
         package = read_json(output_path)
-        validate_package(package)
+        validate_package(package, output_path)
         if manifest_path.exists():
             data = output_path.read_bytes()
             descriptor = descriptor_for_package(package, data, args, output_path)
@@ -278,10 +296,25 @@ def main() -> int:
     targets = load_targets(catalog_path)
     if not targets:
         raise SystemExit(f"No catalog targets with coordinates found in {catalog_path}")
-    target_groups = build_target_groups(targets, args.dedupe_coordinate_arcmin)
+    all_target_groups = build_target_groups(targets, args.dedupe_coordinate_arcmin)
+    curated_tokens = set()
+    curated_tokens.update(load_curated_recommendation_tokens(repo_path(args.seasonal_recommendation_dir)))
+    curated_tokens.update(load_target_metadata_tokens(repo_path(args.target_metadata)))
+    named_showcase_tokens = load_target_neighborhood_tokens(repo_path(args.target_neighborhoods))
+    target_groups, selection_reasons = select_dso_target_groups(
+        all_target_groups,
+        curated_tokens=curated_tokens,
+        named_showcase_tokens=named_showcase_tokens,
+        bright_ngc_ic_mag_limit=args.bright_ngc_ic_mag_limit,
+    )
     print(
         f"Loaded {len(targets)} coordinate targets, grouped into "
-        f"{len(target_groups)} lunar event target groups.",
+        f"{len(all_target_groups)} lunar event target groups.",
+        flush=True,
+    )
+    print(
+        f"Selected {len(target_groups)} presentation DSO target groups "
+        f"({selection_reason_summary(selection_reasons)}).",
         flush=True,
     )
 
@@ -351,6 +384,15 @@ def main() -> int:
         key=lambda event: (str(event["eventTimeUTC"]), str(event["id"])),
     )
     metadata = load_catalog_metadata(catalog_path)
+    clean_shard_directory(output_path)
+    shard_builds = build_shards(
+        events=all_events,
+        package_version=package_version,
+        generated_at=generated_at,
+        package_start=start,
+        package_end=end,
+        index_path=output_path,
+    )
     package = build_package(
         package_version=package_version,
         generated_at=generated_at,
@@ -359,16 +401,23 @@ def main() -> int:
         catalog_path=catalog_path,
         app_repo=app_repo,
         catalog_metadata=metadata,
+        source_target_group_count=len(all_target_groups),
         target_groups=target_groups,
         event_target_groups=event_target_groups,
+        selection_reasons=selection_reasons,
         planet_subjects=planet_subjects,
         events=all_events,
+        shard_descriptors=[shard.descriptor for shard in shard_builds],
+        shard_event_rows=sum(int(shard.descriptor["eventCount"]) for shard in shard_builds),
         args=args,
         sky_versions=sky.versions,
         ephemeris=eph,
     )
-    validate_package(package)
+    for shard in shard_builds:
+        shard.path.parent.mkdir(parents=True, exist_ok=True)
+        shard.path.write_bytes(shard.data)
     data = write_json(output_path, package, compact=True)
+    validate_package(package, output_path)
     descriptor = descriptor_for_package(package, data, args, output_path)
     if not args.skip_manifest:
         update_manifest(manifest_path, package["generatedAt"], descriptor)
@@ -385,7 +434,8 @@ def main() -> int:
         f"{counts['dsoCloseEncounters']} DSO close encounters, "
         f"{counts['planetCloseEncounters']} planet close encounters, "
         f"{counts['lunarEclipses']} lunar eclipses, "
-        f"{counts['phaseMarkers']} phase markers.",
+        f"{counts['phaseMarkers']} phase markers, "
+        f"{counts['shards']} monthly shards.",
         flush=True,
     )
     return 0
@@ -397,14 +447,18 @@ def read_json(path: Path) -> Any:
 
 
 def write_json(path: Path, payload: dict[str, Any], *, compact: bool = False) -> bytes:
+    data = json_bytes(payload, compact=compact)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(data)
+    return data
+
+
+def json_bytes(payload: dict[str, Any], *, compact: bool = False) -> bytes:
     if compact:
         serialized = json.dumps(payload, separators=(",", ":"), ensure_ascii=True)
     else:
         serialized = json.dumps(payload, indent=2, ensure_ascii=True)
-    data = (serialized + "\n").encode("utf-8")
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(data)
-    return data
+    return (serialized + "\n").encode("utf-8")
 
 
 def utc_now() -> str:
@@ -530,6 +584,158 @@ def build_target_groups(targets: list[TargetRecord], dedupe_coordinate_arcmin: f
         group_id = unique_group_id(canonical.object_id, used_ids)
         groups.append(TargetGroup(group_id=group_id, canonical=canonical, members=members))
     return sorted(groups, key=lambda group: target_sort_key(group.canonical))
+
+
+def load_curated_recommendation_tokens(package_dir: Path) -> set[str]:
+    tokens: set[str] = set()
+    if not package_dir.exists():
+        return tokens
+    for package_path in sorted(package_dir.glob("*.json")):
+        package = read_json(package_path)
+        if package.get("packageFamily") != "seasonalRecommendationCandidates":
+            continue
+        for row in package.get("rows") or []:
+            priority_tier = str(row.get("priorityTier") or "").strip()
+            if priority_tier and not priority_tier.startswith("1 "):
+                continue
+            values = [
+                row.get("subjectKey"),
+                row.get("canonicalID"),
+                row.get("displayName"),
+                *catalog_identifier_values(row.get("aliases") or []),
+            ]
+            for value in values:
+                token = normalize_identity(str(value or ""))
+                if token:
+                    tokens.add(token)
+    return tokens
+
+
+def load_target_metadata_tokens(package_path: Path) -> set[str]:
+    tokens: set[str] = set()
+    if not package_path.exists():
+        return tokens
+    package = read_json(package_path)
+    if package.get("packageFamily") != "targetMetadataOverlay":
+        return tokens
+    for row in package.get("targets") or []:
+        values = [
+            row.get("canonicalID"),
+            row.get("preferredName"),
+            *catalog_identifier_values(row.get("aliases") or []),
+        ]
+        for value in values:
+            token = normalize_identity(str(value or ""))
+            if token:
+                tokens.add(token)
+    return tokens
+
+
+def load_target_neighborhood_tokens(package_path: Path) -> set[str]:
+    tokens: set[str] = set()
+    if not package_path.exists():
+        return tokens
+    package = read_json(package_path)
+    if package.get("packageFamily") != "targetNeighborhoodDefinitions":
+        return tokens
+    for neighborhood in package.get("neighborhoods") or []:
+        for value in neighborhood.get("catalogIDs") or []:
+            token = normalize_identity(str(value or ""))
+            if token:
+                tokens.add(token)
+    return tokens
+
+
+def select_dso_target_groups(
+    target_groups: list[TargetGroup],
+    *,
+    curated_tokens: set[str],
+    named_showcase_tokens: set[str],
+    bright_ngc_ic_mag_limit: float,
+) -> tuple[list[TargetGroup], dict[str, list[str]]]:
+    selected: list[TargetGroup] = []
+    reasons_by_group: dict[str, list[str]] = {}
+    for group in target_groups:
+        reasons: list[str] = []
+        group_tokens = target_group_exact_identity_tokens(group)
+        if curated_tokens and not group_tokens.isdisjoint(curated_tokens):
+            reasons.append("curatedRecommendation")
+        if is_messier_group(group):
+            reasons.append("messier")
+        if is_bright_ngc_ic_group(group, bright_ngc_ic_mag_limit):
+            reasons.append("brightNGCIC")
+        if named_showcase_tokens and not group_tokens.isdisjoint(named_showcase_tokens):
+            reasons.append("namedShowcase")
+
+        if reasons:
+            selected.append(group)
+            reasons_by_group[group.group_id] = reasons
+    return selected, reasons_by_group
+
+
+def selection_reason_summary(selection_reasons: dict[str, list[str]]) -> str:
+    counts: dict[str, int] = defaultdict(int)
+    for reasons in selection_reasons.values():
+        for reason in reasons:
+            counts[reason] += 1
+    return ", ".join(f"{reason}={counts[reason]}" for reason in sorted(counts))
+
+
+def target_group_identity_tokens(group: TargetGroup) -> set[str]:
+    tokens: set[str] = set()
+    for member in group.members:
+        tokens.update(identity_tokens(member))
+    return tokens
+
+
+def target_group_exact_identity_tokens(group: TargetGroup) -> set[str]:
+    tokens: set[str] = set()
+    for value in target_group_identifiers(group):
+        token = normalize_identity(value)
+        if token:
+            tokens.add(token)
+    return tokens
+
+
+def target_group_identifiers(group: TargetGroup) -> set[str]:
+    identifiers: set[str] = set()
+    for member in group.members:
+        values = [member.object_id, member.primary_name, member.catalog_name, *member.aliases]
+        for value in values:
+            text = str(value or "").strip()
+            if text:
+                identifiers.add(text)
+    return identifiers
+
+
+def is_messier_group(group: TargetGroup) -> bool:
+    return any(re.fullmatch(r"M\s*\d+[A-Za-z]?", value.strip(), flags=re.IGNORECASE) for value in target_group_identifiers(group))
+
+
+def is_bright_ngc_ic_group(group: TargetGroup, magnitude_limit: float) -> bool:
+    has_ngc_ic = any(
+        re.fullmatch(r"(NGC|IC)\s*\d+[A-Za-z]?", value.strip(), flags=re.IGNORECASE)
+        for value in target_group_identifiers(group)
+    )
+    if not has_ngc_ic:
+        return False
+    magnitudes = [member.magnitude for member in group.members if member.magnitude is not None]
+    return bool(magnitudes) and min(magnitudes) <= magnitude_limit
+
+
+def catalog_identifier_values(values: Iterable[Any]) -> list[str]:
+    return [str(value).strip() for value in values if is_catalog_identifier(str(value or ""))]
+
+
+def is_catalog_identifier(value: str) -> bool:
+    text = value.strip()
+    return bool(
+        re.fullmatch(
+            r"(M|Messier|NGC|IC|SH2|Sh2|LBN|LDN|B|Barnard|CR|Collinder|Mel|Ced|VdB|Abell|Caldwell)\s*[- ]?[A-Za-z0-9]+",
+            text,
+            flags=re.IGNORECASE,
+        )
+    )
 
 
 def compute_dso_close_encounters(
@@ -858,6 +1064,149 @@ def compute_lunar_eclipses(
     return events
 
 
+def clean_shard_directory(index_path: Path) -> None:
+    shard_dir = index_path.parent / "shards"
+    if not shard_dir.exists():
+        return
+    for shard_path in shard_dir.glob("lunar_events_*_v1.json"):
+        if shard_path.is_file():
+            shard_path.unlink()
+
+
+def build_shards(
+    *,
+    events: list[dict[str, Any]],
+    package_version: str,
+    generated_at: str,
+    package_start: dt.datetime,
+    package_end: dt.datetime,
+    index_path: Path,
+) -> list[ShardBuild]:
+    shards: list[ShardBuild] = []
+    for shard_start, shard_end in month_windows(package_start, package_end):
+        shard_events = [
+            event
+            for event in events
+            if event_intersects_window(event, shard_start, shard_end)
+        ]
+        if not shard_events:
+            continue
+        shard_id = shard_start.strftime("%Y-%m")
+        shard_path = index_path.parent / "shards" / f"lunar_events_{shard_start:%Y_%m}_v1.json"
+        payload = build_shard_payload(
+            shard_id=shard_id,
+            package_version=package_version,
+            generated_at=generated_at,
+            shard_start=shard_start,
+            shard_end=shard_end,
+            events=sorted(shard_events, key=lambda event: (str(event["eventTimeUTC"]), str(event["id"]))),
+        )
+        data = json_bytes(payload, compact=True)
+        descriptor = {
+            "id": shard_id,
+            "kind": "month",
+            "startUTC": isoformat_z(shard_start),
+            "endUTC": isoformat_z(shard_end),
+            "url": f"{METADATA_ORIGIN}/{repo_relative_path(shard_path).as_posix()}",
+            "path": repo_relative(shard_path),
+            "checksum": {
+                "algorithm": "sha256",
+                "value": hashlib.sha256(data).hexdigest(),
+            },
+            "byteSize": len(data),
+            "eventCount": len(payload["events"]),
+            "uniqueEventCount": len({str(event["id"]) for event in payload["events"]}),
+            "counts": payload["counts"],
+        }
+        shards.append(ShardBuild(path=shard_path, payload=payload, data=data, descriptor=descriptor))
+    return shards
+
+
+def build_shard_payload(
+    *,
+    shard_id: str,
+    package_version: str,
+    generated_at: str,
+    shard_start: dt.datetime,
+    shard_end: dt.datetime,
+    events: list[dict[str, Any]],
+) -> dict[str, Any]:
+    counts = event_counts(events)
+    return {
+        "schemaVersion": 1,
+        "packageFamily": PACKAGE_FAMILY,
+        "packageVersion": package_version,
+        "packageRole": "shard",
+        "shardID": shard_id,
+        "shardKind": "month",
+        "generatedAt": generated_at,
+        "window": {
+            "startUTC": isoformat_z(shard_start),
+            "endUTC": isoformat_z(shard_end),
+        },
+        "counts": counts,
+        "events": events,
+    }
+
+
+def month_windows(start: dt.datetime, end: dt.datetime) -> Iterable[tuple[dt.datetime, dt.datetime]]:
+    cursor = dt.datetime(start.year, start.month, 1, tzinfo=dt.UTC)
+    while cursor < end:
+        next_month = add_month(cursor)
+        yield cursor, next_month
+        cursor = next_month
+
+
+def add_month(value: dt.datetime) -> dt.datetime:
+    if value.month == 12:
+        return value.replace(year=value.year + 1, month=1)
+    return value.replace(month=value.month + 1)
+
+
+def event_intersects_window(event: dict[str, Any], start: dt.datetime, end: dt.datetime) -> bool:
+    event_start, event_end = event_relevant_interval(event)
+    return event_start < end and event_end >= start
+
+
+def event_relevant_interval(event: dict[str, Any]) -> tuple[dt.datetime, dt.datetime]:
+    event_time = parse_utc_datetime(str(event["eventTimeUTC"]))
+    if event.get("type") == "lunarCloseEncounter":
+        start = parse_optional_utc(event.get("windowStartUTC")) or event_time
+        end = parse_optional_utc(event.get("windowEndUTC")) or event_time
+        return min(start, event_time), max(end, event_time)
+    if event.get("type") == "lunarEclipse":
+        contact_times = [
+            parse_utc_datetime(value)
+            for value in (event.get("contactsUTC") or {}).values()
+            if value
+        ]
+        if contact_times:
+            return min(contact_times + [event_time]), max(contact_times + [event_time])
+    return event_time, event_time
+
+
+def parse_optional_utc(value: Any) -> dt.datetime | None:
+    text = str(value or "").strip()
+    return parse_utc_datetime(text) if text else None
+
+
+def event_counts(events: list[dict[str, Any]]) -> dict[str, int]:
+    counts_by_type = defaultdict(int)
+    counts_by_subject_kind = defaultdict(int)
+    for event in events:
+        counts_by_type[str(event["type"])] += 1
+        subject = event.get("subject")
+        if isinstance(subject, dict):
+            counts_by_subject_kind[str(subject.get("kind") or "unknown")] += 1
+    return {
+        "dsoCloseEncounters": counts_by_subject_kind["deepSkyObject"],
+        "planetCloseEncounters": counts_by_subject_kind["majorPlanet"],
+        "lunarEclipses": counts_by_type["lunarEclipse"],
+        "phaseMarkers": counts_by_type["lunarPhaseMarker"],
+        "events": len(events),
+    }
+
+
 def moon_radec_arrays(
     sky: SkyfieldModules,
     earth: Any,
@@ -1129,26 +1478,29 @@ def build_package(
     catalog_path: Path,
     app_repo: Path,
     catalog_metadata: dict[str, str],
+    source_target_group_count: int,
     target_groups: list[TargetGroup],
     event_target_groups: list[TargetGroup],
+    selection_reasons: dict[str, list[str]],
     planet_subjects: list[PlanetSubject],
     events: list[dict[str, Any]],
+    shard_descriptors: list[dict[str, Any]],
+    shard_event_rows: int,
     args: argparse.Namespace,
     sky_versions: dict[str, str],
     ephemeris: Any,
 ) -> dict[str, Any]:
-    counts_by_type = defaultdict(int)
-    counts_by_subject_kind = defaultdict(int)
-    for event in events:
-        counts_by_type[str(event["type"])] += 1
-        subject = event.get("subject")
-        if isinstance(subject, dict):
-            counts_by_subject_kind[str(subject.get("kind") or "unknown")] += 1
+    counts = event_counts(events)
+    selection_counts: dict[str, int] = defaultdict(int)
+    for reasons in selection_reasons.values():
+        for reason in reasons:
+            selection_counts[reason] += 1
 
     return {
         "schemaVersion": 1,
         "packageFamily": PACKAGE_FAMILY,
         "packageVersion": package_version,
+        "packageRole": "index",
         "generatedAt": generated_at,
         "eventTypes": [
             "lunarCloseEncounter",
@@ -1169,6 +1521,9 @@ def build_package(
             "catalogVersion": catalog_metadata.get("catalog_version"),
             "catalogFingerprint": catalog_metadata.get("catalog_fingerprint"),
             "catalogSHA256": sha256_file(catalog_path),
+            "targetMetadataPath": repo_relative(repo_path(args.target_metadata)),
+            "targetNeighborhoodPath": repo_relative(repo_path(args.target_neighborhoods)),
+            "seasonalRecommendationDirectory": repo_relative(repo_path(args.seasonal_recommendation_dir)),
             "ephemeris": args.ephemeris,
             "ephemerisPath": str(getattr(ephemeris, "filename", args.ephemeris)),
             "ephemerisSource": "JPL Development Ephemeris loaded through Skyfield",
@@ -1181,6 +1536,13 @@ def build_package(
         },
         "parameters": {
             "maxSeparationDegrees": args.max_separation_degrees,
+            "dsoCandidateFilter": {
+                "curatedRecommendationUnion": "seasonal recommendation priorityTier=1 plus target metadata overlay",
+                "includeMessier": True,
+                "brightNGCICMagnitudeLimit": args.bright_ngc_ic_mag_limit,
+                "includeNamedShowcaseTargets": "target neighborhood catalog IDs",
+                "excludeUnknownMagnitudeBackCatalogTargets": True,
+            },
             "sampleStepMinutes": args.sample_step_minutes,
             "refineStepMinutes": args.refine_step_minutes,
             "scanPaddingHours": args.scan_padding_hours,
@@ -1188,13 +1550,17 @@ def build_package(
             "planetSubjects": [planet.planet_id for planet in planet_subjects],
         },
         "counts": {
+            "sourceTargetGroups": source_target_group_count,
             "candidateTargetGroups": len(target_groups),
             "eventTargetGroups": len(event_target_groups),
-            "dsoCloseEncounters": counts_by_subject_kind["deepSkyObject"],
-            "planetCloseEncounters": counts_by_subject_kind["majorPlanet"],
-            "lunarEclipses": counts_by_type["lunarEclipse"],
-            "phaseMarkers": counts_by_type["lunarPhaseMarker"],
-            "events": len(events),
+            "candidateSelectionReasons": dict(sorted(selection_counts.items())),
+            "dsoCloseEncounters": counts["dsoCloseEncounters"],
+            "planetCloseEncounters": counts["planetCloseEncounters"],
+            "lunarEclipses": counts["lunarEclipses"],
+            "phaseMarkers": counts["phaseMarkers"],
+            "events": counts["events"],
+            "shardEventRows": shard_event_rows,
+            "shards": len(shard_descriptors),
         },
         "subjects": {
             "majorPlanets": [
@@ -1205,11 +1571,27 @@ def build_package(
                 }
                 for planet in planet_subjects
             ],
-            "targetGroups": [target_group_payload(group) for group in event_target_groups],
+            "targetGroups": [
+                target_group_payload(group, selection_reasons.get(group.group_id, []))
+                for group in event_target_groups
+            ],
         },
-        "events": events,
+        "payloadFormat": {
+            "index": "compact-json",
+            "shards": "compact-json",
+            "shardStrategy": "monthly",
+            "notes": (
+                "Compact JSON was selected over CSV because lunar event rows contain nested "
+                "subject, Moon, eclipse, and timing structures that map cleanly to Codable-style "
+                "clients and support schema evolution. CSV would be thinner, but would require "
+                "nested JSON columns or multiple linked files; the monthly compact JSON shards "
+                "remain lightweight enough for dynamic fetch and decode."
+            ),
+        },
+        "shards": shard_descriptors,
         "notes": [
             "Close encounters are global/geocentric baseline events; app-side filtering is responsible for site, selected time period, nighttime, altitude, observability, and equipment field of view.",
+            "The manifest points at this index only. Clients should fetch only the monthly shards needed for the visible timeline range and dedupe event IDs when adjacent monthly windows overlap.",
             "This package intentionally does not generate or store lunar distance category labels or booleans. App clients can derive display-only distance categories from full-moon distance or apparent diameter for visible rows.",
             "Lunar eclipses only are included; solar eclipses are intentionally out of scope for this package.",
         ],
@@ -1260,24 +1642,116 @@ def update_manifest(manifest_path: Path, generated_at: str, descriptor: dict[str
     write_json(manifest_path, manifest)
 
 
-def validate_package(package: dict[str, Any]) -> None:
+def validate_package(package: dict[str, Any], index_path: Path) -> None:
     if package.get("schemaVersion") != 1:
-        raise RuntimeError("Lunar event package schemaVersion must be 1.")
+        raise RuntimeError("Lunar event index schemaVersion must be 1.")
     if package.get("packageFamily") != PACKAGE_FAMILY:
-        raise RuntimeError(f"Lunar event package family must be {PACKAGE_FAMILY}.")
+        raise RuntimeError(f"Lunar event index family must be {PACKAGE_FAMILY}.")
     if not package.get("packageVersion"):
-        raise RuntimeError("Lunar event package is missing packageVersion.")
+        raise RuntimeError("Lunar event index is missing packageVersion.")
+    if package.get("packageRole") != "index":
+        raise RuntimeError("Lunar event package must be an index package.")
     if not package.get("generatedAt"):
-        raise RuntimeError("Lunar event package is missing generatedAt.")
+        raise RuntimeError("Lunar event index is missing generatedAt.")
     window = package.get("window") or {}
     parse_utc_datetime(str(window.get("startUTC") or ""))
     parse_utc_datetime(str(window.get("endUTC") or ""))
-    events = package.get("events")
-    if not isinstance(events, list) or not events:
-        raise RuntimeError("Lunar event package contains no events.")
 
+    shards = package.get("shards")
+    if not isinstance(shards, list) or not shards:
+        raise RuntimeError("Lunar event index contains no shards.")
+    unique_events: dict[str, dict[str, Any]] = {}
+    shard_event_rows = 0
+    for shard_descriptor in shards:
+        validate_shard_descriptor(shard_descriptor)
+        shard_path = shard_path_from_descriptor(shard_descriptor, index_path)
+        data = shard_path.read_bytes()
+        if len(data) != int(shard_descriptor["byteSize"]):
+            raise RuntimeError(f"Shard byteSize mismatch for {shard_descriptor['id']}.")
+        checksum = shard_descriptor.get("checksum") or {}
+        if checksum.get("algorithm") != "sha256":
+            raise RuntimeError(f"Shard checksum algorithm must be sha256 for {shard_descriptor['id']}.")
+        if hashlib.sha256(data).hexdigest() != checksum.get("value"):
+            raise RuntimeError(f"Shard checksum mismatch for {shard_descriptor['id']}.")
+        shard_payload = json.loads(data)
+        shard_counts = validate_shard_payload(shard_payload, shard_descriptor, package)
+        shard_event_rows += shard_counts["events"]
+        for event in shard_payload["events"]:
+            event_id = str(event["id"])
+            previous = unique_events.get(event_id)
+            if previous is not None and previous != event:
+                raise RuntimeError(f"Shard duplicate event {event_id} has conflicting payloads.")
+            unique_events[event_id] = event
+
+    counts = event_counts(list(unique_events.values()))
+    package_counts = package.get("counts") or {}
+    expected_total = int(package_counts.get("events") or 0)
+    if expected_total != len(unique_events):
+        raise RuntimeError(f"Index counts.events mismatch: expected {expected_total}, got {len(unique_events)}.")
+    if int(package_counts.get("shardEventRows") or 0) != shard_event_rows:
+        raise RuntimeError("Index shardEventRows count mismatch.")
+    for key in ("dsoCloseEncounters", "planetCloseEncounters", "lunarEclipses", "phaseMarkers"):
+        if int(package_counts.get(key) or 0) != counts[key]:
+            raise RuntimeError(f"Index {key} count mismatch.")
+    assert_no_forbidden_lunar_labels(package)
+
+
+def validate_shard_descriptor(descriptor: dict[str, Any]) -> None:
+    for key in ("id", "startUTC", "endUTC", "path", "checksum", "byteSize", "eventCount", "counts"):
+        if key not in descriptor:
+            raise RuntimeError(f"Shard descriptor is missing {key}.")
+    parse_utc_datetime(str(descriptor["startUTC"]))
+    parse_utc_datetime(str(descriptor["endUTC"]))
+
+
+def shard_path_from_descriptor(descriptor: dict[str, Any], index_path: Path) -> Path:
+    raw_path = str(descriptor.get("path") or "").strip()
+    if raw_path:
+        path = Path(raw_path)
+        return path if path.is_absolute() else REPO_ROOT / path
+    raw_url = str(descriptor.get("url") or "")
+    if raw_url.startswith(METADATA_ORIGIN):
+        return REPO_ROOT / raw_url.removeprefix(METADATA_ORIGIN).lstrip("/")
+    return index_path.parent / "shards" / f"lunar_events_{descriptor['id'].replace('-', '_')}_v1.json"
+
+
+def validate_shard_payload(
+    payload: dict[str, Any],
+    descriptor: dict[str, Any],
+    index_package: dict[str, Any],
+) -> dict[str, int]:
+    if payload.get("schemaVersion") != 1:
+        raise RuntimeError(f"Shard {descriptor['id']} schemaVersion must be 1.")
+    if payload.get("packageFamily") != PACKAGE_FAMILY:
+        raise RuntimeError(f"Shard {descriptor['id']} family must be {PACKAGE_FAMILY}.")
+    if payload.get("packageVersion") != index_package.get("packageVersion"):
+        raise RuntimeError(f"Shard {descriptor['id']} packageVersion mismatch.")
+    if payload.get("packageRole") != "shard":
+        raise RuntimeError(f"Shard {descriptor['id']} packageRole must be shard.")
+    if payload.get("shardID") != descriptor.get("id"):
+        raise RuntimeError(f"Shard {descriptor['id']} shardID mismatch.")
+    window = payload.get("window") or {}
+    shard_start = parse_utc_datetime(str(window.get("startUTC") or ""))
+    shard_end = parse_utc_datetime(str(window.get("endUTC") or ""))
+    if isoformat_z(shard_start) != descriptor["startUTC"] or isoformat_z(shard_end) != descriptor["endUTC"]:
+        raise RuntimeError(f"Shard {descriptor['id']} window mismatch.")
+    events = payload.get("events")
+    if not isinstance(events, list) or not events:
+        raise RuntimeError(f"Shard {descriptor['id']} contains no events.")
+    counts = validate_events(events)
+    if counts["events"] != int(descriptor["eventCount"]):
+        raise RuntimeError(f"Shard {descriptor['id']} eventCount mismatch.")
+    if counts != descriptor["counts"]:
+        raise RuntimeError(f"Shard {descriptor['id']} counts mismatch.")
+    for event in events:
+        if not event_intersects_window(event, shard_start, shard_end):
+            raise RuntimeError(f"Event {event['id']} does not intersect shard {descriptor['id']}.")
+    assert_no_forbidden_lunar_labels(payload)
+    return counts
+
+
+def validate_events(events: list[dict[str, Any]]) -> dict[str, int]:
     previous_time = ""
-    counts = defaultdict(int)
     for event in events:
         if not isinstance(event, dict):
             raise RuntimeError("Lunar event rows must be objects.")
@@ -1292,7 +1766,6 @@ def validate_package(package: dict[str, Any]) -> None:
         if event_time < previous_time:
             raise RuntimeError("Lunar events must be sorted by eventTimeUTC.")
         previous_time = event_time
-        counts[event_type] += 1
         if event_type == "lunarCloseEncounter":
             subject = event.get("subject") or {}
             if subject.get("kind") not in {"deepSkyObject", "majorPlanet"}:
@@ -1305,16 +1778,7 @@ def validate_package(package: dict[str, Any]) -> None:
         elif event_type == "lunarPhaseMarker":
             if event.get("phase") not in {"newMoon", "firstQuarter", "fullMoon", "lastQuarter"}:
                 raise RuntimeError(f"Phase marker {event_id} has invalid phase.")
-
-    package_counts = package.get("counts") or {}
-    expected_total = int(package_counts.get("events") or 0)
-    if expected_total != len(events):
-        raise RuntimeError(f"Package counts.events mismatch: expected {expected_total}, got {len(events)}.")
-    if int(package_counts.get("lunarEclipses") or 0) != counts["lunarEclipse"]:
-        raise RuntimeError("Package lunar eclipse count mismatch.")
-    if int(package_counts.get("phaseMarkers") or 0) != counts["lunarPhaseMarker"]:
-        raise RuntimeError("Package phase marker count mismatch.")
-    assert_no_forbidden_lunar_labels(package)
+    return event_counts(events)
 
 
 def validate_manifest_descriptor(manifest_path: Path, descriptor: dict[str, Any], data: bytes) -> None:
@@ -1472,7 +1936,7 @@ def date_grid(start: dt.datetime, end: dt.datetime, step: dt.timedelta) -> list[
     return values
 
 
-def target_group_payload(group: TargetGroup) -> dict[str, Any]:
+def target_group_payload(group: TargetGroup, selection_reasons: list[str]) -> dict[str, Any]:
     canonical = group.canonical
     aliases = sorted(
         {
@@ -1495,6 +1959,7 @@ def target_group_payload(group: TargetGroup) -> dict[str, Any]:
         "angularSizeMinorArcmin": round_optional(canonical.angular_size_minor_arcmin, 3),
         "rightAscensionHours": round(canonical.ra_hours, 8),
         "declinationDegrees": round(canonical.dec_degrees, 8),
+        "selectionReasons": selection_reasons,
         "targetIDs": [member.object_id for member in group.members],
         "aliases": aliases,
     }

@@ -23,6 +23,7 @@ v1/packages/dark-sky-places/dark_sky_places_v1.json
 v1/packages/comets/comet_snapshot_v1.json
 v1/packages/planet-catalog/planet_catalog_v1.json
 v1/packages/lunar-events/lunar_event_metadata_v1.json
+v1/packages/lunar-events/shards/lunar_events_YYYY_MM_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 sources/target-metadata-overlay/2026-05-curated-workbooks/
 ```
@@ -87,7 +88,29 @@ python3 -m venv /tmp/astroguide-lunar-events-venv
   --end-date 2028-08-05T00:00:00Z
 ```
 
-The payload uses the `lunarEvents` dynamic metadata family. It includes Moon close encounters with catalog DSOs and major planets, lunar eclipses, and lunar phase markers. It intentionally does not publish supermoon or micromoon labels or booleans; app clients should derive those dynamically from full-moon distance or apparent diameter only for rows they display.
+The payload uses the `lunarEvents` dynamic metadata family. The manifest points
+at a compact JSON index, and the index points at monthly compact JSON event
+shards so clients can fetch only the visible timeline range. This is optimized
+for the Lunar Mode default of the next 30 days rather than forcing a two-year
+decode up front.
+
+The DSO close-encounter candidate set is intentionally presentation-focused:
+curated target metadata and curated seasonal recommendation rows, named target
+neighborhood showcase IDs, Messier targets, and NGC/IC targets with known
+magnitude at or brighter than 10.0. Unknown-magnitude back-catalog targets are
+excluded unless they are explicitly covered by those curated/showcase sources.
+
+Event shards remain compact JSON instead of CSV. CSV is thinner for a flattened
+export, but these lunar events carry nested subject, Moon, eclipse, and timing
+details that map cleanly to Codable-style app models and leave room for schema
+evolution without parallel sidecar files or embedded JSON columns. The monthly
+compact JSON shards are small enough for lightweight dynamic fetch and decode.
+
+The package includes Moon close encounters with filtered catalog DSOs and major
+planets, lunar eclipses, and lunar phase markers. It intentionally does not
+publish supermoon or micromoon labels or booleans; app clients should derive
+those dynamically from full-moon distance or apparent diameter only for rows
+they display.
 
 ## Rebuilding Comet Snapshot Packages
 
