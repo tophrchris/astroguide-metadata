@@ -2,7 +2,7 @@
 
 This repository is the lightweight hosted metadata origin for AstroGuide.
 
-The app always ships with bundled metadata snapshots as its offline and release-safety baseline. Files published here are optional validated override packages for small JSON metadata families such as seasonal recommendation candidates, target metadata overlays, equipment catalog metadata, comet snapshots, transient event feeds, and lunar close-pass data.
+The app always ships with bundled metadata snapshots as its offline and release-safety baseline. Files published here are optional validated override packages for small JSON metadata families such as seasonal recommendation candidates, target metadata overlays, equipment catalog metadata, comet snapshots, transient event feeds, and lunar event data.
 
 Large or asset-heavy payloads do not belong in this repository. In particular, this origin should not host `catalog.sqlite`, sky-brightness grid binaries, survey atlas images, or payloads that require resumable downloads or user-visible storage management.
 
@@ -22,6 +22,7 @@ v1/packages/equipment/astrophotography_equipment_catalog_v1.json
 v1/packages/dark-sky-places/dark_sky_places_v1.json
 v1/packages/comets/comet_snapshot_v1.json
 v1/packages/planet-catalog/planet_catalog_v1.json
+v1/packages/lunar-events/lunar_event_metadata_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 sources/target-metadata-overlay/2026-05-curated-workbooks/
 ```
@@ -72,6 +73,21 @@ scripts/build_planet_catalog_package.py --app-repo ../DSOPlanneriOS
 ```
 
 The builder writes the planet catalog package envelope, refreshes the stable manifest, and recalculates byte size and SHA-256 checksum.
+
+## Rebuilding Lunar Event Packages
+
+The lunar event metadata package is generated from the app's bundled catalog SQLite database plus Skyfield/JPL ephemerides:
+
+```bash
+python3 -m venv /tmp/astroguide-lunar-events-venv
+/tmp/astroguide-lunar-events-venv/bin/python -m pip install -r scripts/requirements-lunar-events.txt
+/tmp/astroguide-lunar-events-venv/bin/python scripts/build_lunar_event_package.py \
+  --app-repo ../DSOPlanneriOS \
+  --start-date 2026-08-05T00:00:00Z \
+  --end-date 2028-08-05T00:00:00Z
+```
+
+The payload uses the `lunarEvents` dynamic metadata family. It includes Moon close encounters with catalog DSOs and major planets, lunar eclipses, and lunar phase markers. It intentionally does not publish supermoon or micromoon labels or booleans; app clients should derive those dynamically from full-moon distance or apparent diameter only for rows they display.
 
 ## Rebuilding Comet Snapshot Packages
 
