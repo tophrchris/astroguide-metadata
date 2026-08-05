@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-07-28T10:18:00Z",
-  "publishedAt": "2026-07-28T10:18:00Z",
+  "generatedAt": "2026-08-05T18:55:56Z",
+  "publishedAt": "2026-08-05T18:55:56Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -108,6 +108,21 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled planet catalog only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "lunarEvents",
+      "packageVersion": "lunar-events-v1-20260805",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/lunar-events/lunar_event_metadata_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "6902cde983ce6291b9df86345f2282372740e3be7ca614b0e4b0b0f55be2c491"
+      },
+      "byteSize": 64565,
+      "minSupportedAppVersion": "1.3.7",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Use cached validated lunar event metadata when available. Timeline consumers should degrade gracefully if no validated cached lunar event package is available."
     },
     {
       "family": "seasonalRecommendationCandidates",
