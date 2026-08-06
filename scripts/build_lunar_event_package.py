@@ -34,6 +34,46 @@ PACKAGE_BASENAME = "lunar-events"
 MOON_RADIUS_KM = 1737.4
 SUPERSEDED_PACKAGE_FAMILIES = {"lunarClosePasses"}
 DEFAULT_BRIGHT_NGC_IC_MAG_LIMIT = 10.0
+CATALOG_PREFIX_RANK = {
+    "M": 0,
+    "NGC": 1,
+    "IC": 2,
+    "C": 3,
+    "SH2": 4,
+    "LBN": 5,
+    "LDN": 6,
+    "B": 7,
+    "CR": 8,
+    "MEL": 9,
+    "CED": 10,
+    "VDB": 11,
+    "ABELL": 12,
+}
+CATALOG_PREFIX_ALIASES = {
+    "M": "M",
+    "MESSIER": "M",
+    "NGC": "NGC",
+    "IC": "IC",
+    "C": "C",
+    "CALDWELL": "C",
+    "SH": "SH2",
+    "SH2": "SH2",
+    "LBN": "LBN",
+    "LDN": "LDN",
+    "B": "B",
+    "BARNARD": "B",
+    "CR": "CR",
+    "COLLINDER": "CR",
+    "MEL": "MEL",
+    "CED": "CED",
+    "VDB": "VDB",
+    "ABELL": "ABELL",
+}
+CATALOG_DESIGNATION_RE = re.compile(
+    r"\b(Messier|Caldwell|Barnard|Collinder|Sh2|SH2|SH|NGC|IC|LBN|LDN|Mel|Ced|VdB|Abell|CR|M|C|B)"
+    r"\s*[- ]?\s*(\d+(?:\s*[A-Za-z])?)\b",
+    flags=re.IGNORECASE,
+)
 
 FAMILY_ORDER = [
     "targetMetadataOverlay",
@@ -109,6 +149,36 @@ class TargetGroup:
     group_id: str
     canonical: TargetRecord
     members: list[TargetRecord]
+
+
+@dataclass(frozen=True)
+class SelectionReference:
+    reason: str
+    source: str
+    label: str
+    primary_exact_tokens: tuple[str, ...]
+    alternate_exact_tokens: tuple[str, ...]
+    common_name_tokens: tuple[str, ...]
+    ra_degrees: float | None = None
+    dec_degrees: float | None = None
+    allow_coordinate_common_name: bool = False
+    owns_common_names: bool = False
+
+
+@dataclass
+class TargetIdentityContext:
+    coordinate_tolerance_arcmin: float
+    exact_token_groups: dict[str, frozenset[str]]
+    ambiguous_exact_tokens: frozenset[str]
+    common_name_candidate_groups: dict[str, frozenset[str]]
+    coordinate_consistent_common_groups: dict[str, frozenset[str]]
+    ambiguous_common_tokens: frozenset[str]
+    common_name_owner_groups: dict[str, frozenset[str]]
+    group_by_id: dict[str, TargetGroup]
+
+    @property
+    def coordinate_tolerance_degrees(self) -> float:
+        return self.coordinate_tolerance_arcmin / 60.0
 
 
 @dataclass(frozen=True)
@@ -297,14 +367,18 @@ def main() -> int:
     if not targets:
         raise SystemExit(f"No catalog targets with coordinates found in {catalog_path}")
     all_target_groups = build_target_groups(targets, args.dedupe_coordinate_arcmin)
-    curated_tokens = set()
-    curated_tokens.update(load_curated_recommendation_tokens(repo_path(args.seasonal_recommendation_dir)))
-    curated_tokens.update(load_target_metadata_tokens(repo_path(args.target_metadata)))
-    named_showcase_tokens = load_target_neighborhood_tokens(repo_path(args.target_neighborhoods))
+    identity_context = build_target_identity_context(all_target_groups, args.dedupe_coordinate_arcmin)
+    curated_references = [
+        *load_curated_recommendation_references(repo_path(args.seasonal_recommendation_dir)),
+        *load_target_metadata_references(repo_path(args.target_metadata)),
+    ]
+    named_showcase_references = load_target_neighborhood_references(repo_path(args.target_neighborhoods))
+    populate_common_name_owners(identity_context, curated_references)
     target_groups, selection_reasons = select_dso_target_groups(
         all_target_groups,
-        curated_tokens=curated_tokens,
-        named_showcase_tokens=named_showcase_tokens,
+        identity_context=identity_context,
+        curated_references=curated_references,
+        named_showcase_references=named_showcase_references,
         bright_ngc_ic_mag_limit=args.bright_ngc_ic_mag_limit,
     )
     print(
@@ -338,6 +412,7 @@ def main() -> int:
     close_encounters, event_target_groups = compute_dso_close_encounters(
         sky=sky,
         target_groups=target_groups,
+        identity_context=identity_context,
         sample_times=sample_times,
         start=start,
         end=end,
@@ -404,6 +479,7 @@ def main() -> int:
         source_target_group_count=len(all_target_groups),
         target_groups=target_groups,
         event_target_groups=event_target_groups,
+        identity_context=identity_context,
         selection_reasons=selection_reasons,
         planet_subjects=planet_subjects,
         events=all_events,
@@ -586,10 +662,72 @@ def build_target_groups(targets: list[TargetRecord], dedupe_coordinate_arcmin: f
     return sorted(groups, key=lambda group: target_sort_key(group.canonical))
 
 
-def load_curated_recommendation_tokens(package_dir: Path) -> set[str]:
-    tokens: set[str] = set()
+def build_target_identity_context(
+    target_groups: list[TargetGroup],
+    coordinate_tolerance_arcmin: float,
+) -> TargetIdentityContext:
+    # Reuse the target-group dedupe radius as the identity-agreement tolerance:
+    # six arcminutes covers catalog rounding and proper cross-designations, while
+    # cleanly rejecting the degree-scale common-name contamination from issue #22.
+    group_by_id = {group.group_id: group for group in target_groups}
+    direct_token_groups: dict[str, set[str]] = defaultdict(set)
+    exact_candidate_groups: dict[str, set[str]] = defaultdict(set)
+    common_name_candidate_groups: dict[str, set[str]] = defaultdict(set)
+
+    for group in target_groups:
+        for member in group.members:
+            direct_token = exact_identifier_token(member.object_id)
+            if direct_token:
+                direct_token_groups[direct_token].add(group.group_id)
+                exact_candidate_groups[direct_token].add(group.group_id)
+            for value in (member.primary_name, member.catalog_name, *member.aliases):
+                catalog_token = catalog_designation_token(value)
+                if catalog_token:
+                    exact_candidate_groups[catalog_token].add(group.group_id)
+                    continue
+                common_token = common_name_token(value)
+                if common_token:
+                    common_name_candidate_groups[common_token].add(group.group_id)
+
+    tolerance_degrees = coordinate_tolerance_arcmin / 60.0
+    exact_token_groups: dict[str, frozenset[str]] = {}
+    ambiguous_exact_tokens: set[str] = set()
+    for token, candidate_groups in exact_candidate_groups.items():
+        direct_groups = direct_token_groups.get(token)
+        if direct_groups:
+            exact_token_groups[token] = frozenset(direct_groups)
+        elif groups_coordinate_consistent(candidate_groups, group_by_id, tolerance_degrees):
+            exact_token_groups[token] = frozenset(candidate_groups)
+        else:
+            ambiguous_exact_tokens.add(token)
+
+    coordinate_consistent_common_groups: dict[str, frozenset[str]] = {}
+    ambiguous_common_tokens: set[str] = set()
+    for token, candidate_groups in common_name_candidate_groups.items():
+        if groups_coordinate_consistent(candidate_groups, group_by_id, tolerance_degrees):
+            coordinate_consistent_common_groups[token] = frozenset(candidate_groups)
+        else:
+            ambiguous_common_tokens.add(token)
+
+    return TargetIdentityContext(
+        coordinate_tolerance_arcmin=coordinate_tolerance_arcmin,
+        exact_token_groups=exact_token_groups,
+        ambiguous_exact_tokens=frozenset(ambiguous_exact_tokens),
+        common_name_candidate_groups={
+            token: frozenset(groups)
+            for token, groups in common_name_candidate_groups.items()
+        },
+        coordinate_consistent_common_groups=coordinate_consistent_common_groups,
+        ambiguous_common_tokens=frozenset(ambiguous_common_tokens),
+        common_name_owner_groups={},
+        group_by_id=group_by_id,
+    )
+
+
+def load_curated_recommendation_references(package_dir: Path) -> list[SelectionReference]:
+    references: list[SelectionReference] = []
     if not package_dir.exists():
-        return tokens
+        return references
     for package_path in sorted(package_dir.glob("*.json")):
         package = read_json(package_path)
         if package.get("packageFamily") != "seasonalRecommendationCandidates":
@@ -598,79 +736,340 @@ def load_curated_recommendation_tokens(package_dir: Path) -> set[str]:
             priority_tier = str(row.get("priorityTier") or "").strip()
             if priority_tier and not priority_tier.startswith("1 "):
                 continue
-            values = [
-                row.get("subjectKey"),
-                row.get("canonicalID"),
-                row.get("displayName"),
-                *catalog_identifier_values(row.get("aliases") or []),
-            ]
-            for value in values:
-                token = normalize_identity(str(value or ""))
-                if token:
-                    tokens.add(token)
-    return tokens
+            references.append(
+                SelectionReference(
+                    reason="curatedRecommendation",
+                    source="seasonalRecommendationCandidates",
+                    label=f"{package_path.name}:{row.get('subjectKey') or row.get('canonicalID') or row.get('displayName')}",
+                    primary_exact_tokens=exact_tokens_from_values(
+                        [row.get("subjectKey"), row.get("canonicalID")],
+                        allow_non_catalog=True,
+                    ),
+                    alternate_exact_tokens=exact_tokens_from_values(row.get("aliases") or []),
+                    common_name_tokens=common_name_tokens_from_values(
+                        [row.get("displayName"), *(row.get("aliases") or [])]
+                    ),
+                    ra_degrees=ra_degrees_from_hours(row.get("rightAscensionHours")),
+                    dec_degrees=finite_float(row.get("declinationDegrees")),
+                    allow_coordinate_common_name=False,
+                    owns_common_names=False,
+                )
+            )
+    return references
 
 
-def load_target_metadata_tokens(package_path: Path) -> set[str]:
-    tokens: set[str] = set()
+def load_target_metadata_references(package_path: Path) -> list[SelectionReference]:
+    references: list[SelectionReference] = []
     if not package_path.exists():
-        return tokens
+        return references
     package = read_json(package_path)
     if package.get("packageFamily") != "targetMetadataOverlay":
-        return tokens
+        return references
     for row in package.get("targets") or []:
-        values = [
-            row.get("canonicalID"),
-            row.get("preferredName"),
-            *catalog_identifier_values(row.get("aliases") or []),
-        ]
-        for value in values:
-            token = normalize_identity(str(value or ""))
-            if token:
-                tokens.add(token)
-    return tokens
+        resolution = row.get("resolution") or {}
+        ra_degrees, dec_degrees = target_metadata_coordinates(row)
+        references.append(
+            SelectionReference(
+                reason="curatedRecommendation",
+                source="targetMetadataOverlay",
+                label=str(row.get("canonicalID") or row.get("preferredName") or ""),
+                primary_exact_tokens=exact_tokens_from_values(
+                    [resolution.get("catalogObjectID"), row.get("canonicalID")],
+                    allow_non_catalog=True,
+                ),
+                alternate_exact_tokens=exact_tokens_from_values(row.get("aliases") or []),
+                common_name_tokens=common_name_tokens_from_values(
+                    [row.get("preferredName"), *(row.get("aliases") or [])]
+                ),
+                ra_degrees=ra_degrees,
+                dec_degrees=dec_degrees,
+                allow_coordinate_common_name=True,
+                owns_common_names=True,
+            )
+        )
+    return references
 
 
-def load_target_neighborhood_tokens(package_path: Path) -> set[str]:
-    tokens: set[str] = set()
+def load_target_neighborhood_references(package_path: Path) -> list[SelectionReference]:
+    references: list[SelectionReference] = []
     if not package_path.exists():
-        return tokens
+        return references
     package = read_json(package_path)
     if package.get("packageFamily") != "targetNeighborhoodDefinitions":
-        return tokens
+        return references
     for neighborhood in package.get("neighborhoods") or []:
-        for value in neighborhood.get("catalogIDs") or []:
-            token = normalize_identity(str(value or ""))
-            if token:
-                tokens.add(token)
-    return tokens
+        catalog_ids = list(neighborhood.get("catalogIDs") or [])
+        references.append(
+            SelectionReference(
+                reason="namedShowcase",
+                source="targetNeighborhoodDefinitions",
+                label=str(neighborhood.get("name") or ""),
+                primary_exact_tokens=exact_tokens_from_values(catalog_ids, allow_non_catalog=True),
+                alternate_exact_tokens=(),
+                common_name_tokens=(),
+            )
+        )
+    return references
 
 
 def select_dso_target_groups(
     target_groups: list[TargetGroup],
     *,
-    curated_tokens: set[str],
-    named_showcase_tokens: set[str],
+    identity_context: TargetIdentityContext,
+    curated_references: list[SelectionReference],
+    named_showcase_references: list[SelectionReference],
     bright_ngc_ic_mag_limit: float,
 ) -> tuple[list[TargetGroup], dict[str, list[str]]]:
-    selected: list[TargetGroup] = []
-    reasons_by_group: dict[str, list[str]] = {}
-    for group in target_groups:
-        reasons: list[str] = []
-        group_tokens = target_group_exact_identity_tokens(group)
-        if curated_tokens and not group_tokens.isdisjoint(curated_tokens):
-            reasons.append("curatedRecommendation")
-        if is_messier_group(group):
-            reasons.append("messier")
-        if is_bright_ngc_ic_group(group, bright_ngc_ic_mag_limit):
-            reasons.append("brightNGCIC")
-        if named_showcase_tokens and not group_tokens.isdisjoint(named_showcase_tokens):
-            reasons.append("namedShowcase")
+    reasons_by_group: dict[str, list[str]] = defaultdict(list)
+    for reference in curated_references:
+        for group_id in resolve_selection_reference(reference, identity_context):
+            append_reason(reasons_by_group[group_id], reference.reason)
+    for reference in named_showcase_references:
+        for group_id in resolve_selection_reference(reference, identity_context):
+            append_reason(reasons_by_group[group_id], reference.reason)
 
-        if reasons:
-            selected.append(group)
-            reasons_by_group[group.group_id] = reasons
-    return selected, reasons_by_group
+    for group in target_groups:
+        if is_messier_group(group):
+            append_reason(reasons_by_group[group.group_id], "messier")
+        if is_bright_ngc_ic_group(group, bright_ngc_ic_mag_limit):
+            append_reason(reasons_by_group[group.group_id], "brightNGCIC")
+
+    selected = [group for group in target_groups if reasons_by_group.get(group.group_id)]
+    return selected, {group_id: reasons for group_id, reasons in reasons_by_group.items()}
+
+
+def populate_common_name_owners(
+    identity_context: TargetIdentityContext,
+    references: list[SelectionReference],
+) -> None:
+    owners: dict[str, set[str]] = defaultdict(set)
+    for reference in references:
+        if not reference.owns_common_names:
+            continue
+        group_ids = resolve_selection_reference(reference, identity_context)
+        if not group_ids:
+            continue
+        if not groups_coordinate_consistent(
+            group_ids,
+            identity_context.group_by_id,
+            identity_context.coordinate_tolerance_degrees,
+        ):
+            continue
+        for token in reference.common_name_tokens:
+            owners[token].update(group_ids)
+    identity_context.common_name_owner_groups = {
+        token: frozenset(group_ids)
+        for token, group_ids in owners.items()
+    }
+
+
+def resolve_selection_reference(
+    reference: SelectionReference,
+    identity_context: TargetIdentityContext,
+) -> set[str]:
+    for tokens in (reference.primary_exact_tokens, reference.alternate_exact_tokens):
+        group_ids = group_ids_for_exact_tokens(tokens, identity_context)
+        if group_ids:
+            return group_ids
+    return group_ids_for_common_name_reference(reference, identity_context)
+
+
+def group_ids_for_exact_tokens(
+    tokens: Iterable[str],
+    identity_context: TargetIdentityContext,
+) -> set[str]:
+    group_ids: set[str] = set()
+    for token in tokens:
+        group_ids.update(identity_context.exact_token_groups.get(token, ()))
+    return group_ids
+
+
+def group_ids_for_common_name_reference(
+    reference: SelectionReference,
+    identity_context: TargetIdentityContext,
+) -> set[str]:
+    group_ids: set[str] = set()
+    for token in reference.common_name_tokens:
+        if (
+            reference.allow_coordinate_common_name
+            and reference.ra_degrees is not None
+            and reference.dec_degrees is not None
+        ):
+            nearby_groups = {
+                group_id
+                for group_id in identity_context.common_name_candidate_groups.get(token, ())
+                if coordinate_agrees_with_group(
+                    identity_context.group_by_id[group_id],
+                    reference.ra_degrees,
+                    reference.dec_degrees,
+                    identity_context.coordinate_tolerance_degrees,
+                )
+            }
+            if groups_coordinate_consistent(
+                nearby_groups,
+                identity_context.group_by_id,
+                identity_context.coordinate_tolerance_degrees,
+            ):
+                group_ids.update(nearby_groups)
+            continue
+        group_ids.update(identity_context.coordinate_consistent_common_groups.get(token, ()))
+    return group_ids
+
+
+def append_reason(reasons: list[str], reason: str) -> None:
+    if reason not in reasons:
+        reasons.append(reason)
+
+
+def exact_tokens_from_values(
+    values: Iterable[Any],
+    *,
+    allow_non_catalog: bool = False,
+) -> tuple[str, ...]:
+    tokens: list[str] = []
+    for value in values:
+        token = catalog_designation_token(str(value or ""))
+        if not token and allow_non_catalog:
+            token = normalize_identity(str(value or ""))
+        if token and token not in tokens:
+            tokens.append(token)
+    return tuple(tokens)
+
+
+def common_name_tokens_from_values(values: Iterable[Any]) -> tuple[str, ...]:
+    tokens: list[str] = []
+    for value in values:
+        token = common_name_token(value)
+        if token and token not in tokens:
+            tokens.append(token)
+    return tuple(tokens)
+
+
+def exact_identifier_token(value: Any) -> str:
+    text = str(value or "").strip()
+    return catalog_designation_token(text) or normalize_identity(text)
+
+
+def common_name_token(value: Any) -> str:
+    text = str(value or "").strip()
+    if not text or catalog_designation_token(text):
+        return ""
+    token = normalize_identity(text)
+    return token if len(token) >= 3 else ""
+
+
+def catalog_designation_token(value: str) -> str:
+    parts = catalog_designation_parts(value)
+    if parts is None:
+        return ""
+    prefix, suffix = parts
+    return normalize_identity(f"{prefix}{suffix}")
+
+
+def catalog_designation_prefix(value: str) -> str | None:
+    parts = catalog_designation_parts(value)
+    return parts[0] if parts else None
+
+
+def catalog_designation_parts(value: str) -> tuple[str, str] | None:
+    text = str(value or "").strip()
+    if not text:
+        return None
+    for match in CATALOG_DESIGNATION_RE.finditer(text):
+        raw_prefix = match.group(1).upper()
+        prefix = CATALOG_PREFIX_ALIASES.get(raw_prefix)
+        if not prefix:
+            continue
+        suffix = re.sub(r"\s+", "", match.group(2).upper())
+        suffix_match = re.fullmatch(r"0*(\d+)([A-Z]?)", suffix)
+        if not suffix_match:
+            continue
+        number = str(int(suffix_match.group(1)))
+        letter = suffix_match.group(2)
+        return prefix, f"{number}{letter}"
+    return None
+
+
+def target_metadata_coordinates(row: dict[str, Any]) -> tuple[float | None, float | None]:
+    ra_degrees = parse_ra_degrees(row.get("rightAscensionJ2000"))
+    dec_degrees = parse_dec_degrees(row.get("declinationJ2000"))
+    if ra_degrees is None:
+        ra_degrees = ra_degrees_from_hours(row.get("rightAscensionHours"))
+    if dec_degrees is None:
+        dec_degrees = finite_float(row.get("declinationDegrees"))
+    return ra_degrees, dec_degrees
+
+
+def ra_degrees_from_hours(value: Any) -> float | None:
+    hours = finite_float(value)
+    if hours is None:
+        return None
+    return normalize_degrees(hours * 15.0)
+
+
+def parse_ra_degrees(value: Any) -> float | None:
+    hours = parse_sexagesimal(value)
+    if hours is not None:
+        return normalize_degrees(hours * 15.0)
+    return ra_degrees_from_hours(value)
+
+
+def parse_dec_degrees(value: Any) -> float | None:
+    degrees = parse_sexagesimal(value)
+    if degrees is not None:
+        return degrees
+    return finite_float(value)
+
+
+def parse_sexagesimal(value: Any) -> float | None:
+    text = str(value or "").strip()
+    if not text or ":" not in text:
+        return None
+    parts = text.split(":")
+    if len(parts) < 2:
+        return None
+    sign = -1.0 if parts[0].strip().startswith("-") else 1.0
+    try:
+        first = abs(float(parts[0]))
+        second = float(parts[1])
+        third = float(parts[2]) if len(parts) > 2 else 0.0
+    except ValueError:
+        return None
+    return sign * (first + (second / 60.0) + (third / 3600.0))
+
+
+def coordinate_agrees_with_group(
+    group: TargetGroup,
+    ra_degrees: float,
+    dec_degrees: float,
+    tolerance_degrees: float,
+) -> bool:
+    separation = angular_separation_degrees(
+        group.canonical.ra_degrees,
+        group.canonical.dec_degrees,
+        ra_degrees,
+        dec_degrees,
+    )
+    return separation <= tolerance_degrees
+
+
+def groups_coordinate_consistent(
+    group_ids: Iterable[str],
+    group_by_id: dict[str, TargetGroup],
+    tolerance_degrees: float,
+) -> bool:
+    groups = [group_by_id[group_id] for group_id in group_ids if group_id in group_by_id]
+    for lhs_index, lhs in enumerate(groups):
+        for rhs in groups[lhs_index + 1 :]:
+            separation = angular_separation_degrees(
+                lhs.canonical.ra_degrees,
+                lhs.canonical.dec_degrees,
+                rhs.canonical.ra_degrees,
+                rhs.canonical.dec_degrees,
+            )
+            if separation > tolerance_degrees:
+                return False
+    return True
 
 
 def selection_reason_summary(selection_reasons: dict[str, list[str]]) -> str:
@@ -709,18 +1108,24 @@ def target_group_identifiers(group: TargetGroup) -> set[str]:
 
 
 def is_messier_group(group: TargetGroup) -> bool:
-    return any(re.fullmatch(r"M\s*\d+[A-Za-z]?", value.strip(), flags=re.IGNORECASE) for value in target_group_identifiers(group))
+    return "M" in target_group_direct_catalog_prefixes(group)
 
 
 def is_bright_ngc_ic_group(group: TargetGroup, magnitude_limit: float) -> bool:
-    has_ngc_ic = any(
-        re.fullmatch(r"(NGC|IC)\s*\d+[A-Za-z]?", value.strip(), flags=re.IGNORECASE)
-        for value in target_group_identifiers(group)
-    )
+    has_ngc_ic = bool(target_group_direct_catalog_prefixes(group).intersection({"NGC", "IC"}))
     if not has_ngc_ic:
         return False
     magnitudes = [member.magnitude for member in group.members if member.magnitude is not None]
     return bool(magnitudes) and min(magnitudes) <= magnitude_limit
+
+
+def target_group_direct_catalog_prefixes(group: TargetGroup) -> set[str]:
+    return {
+        prefix
+        for member in group.members
+        for prefix in [catalog_designation_prefix(member.object_id)]
+        if prefix
+    }
 
 
 def catalog_identifier_values(values: Iterable[Any]) -> list[str]:
@@ -728,20 +1133,14 @@ def catalog_identifier_values(values: Iterable[Any]) -> list[str]:
 
 
 def is_catalog_identifier(value: str) -> bool:
-    text = value.strip()
-    return bool(
-        re.fullmatch(
-            r"(M|Messier|NGC|IC|SH2|Sh2|LBN|LDN|B|Barnard|CR|Collinder|Mel|Ced|VdB|Abell|Caldwell)\s*[- ]?[A-Za-z0-9]+",
-            text,
-            flags=re.IGNORECASE,
-        )
-    )
+    return bool(catalog_designation_token(value))
 
 
 def compute_dso_close_encounters(
     *,
     sky: SkyfieldModules,
     target_groups: list[TargetGroup],
+    identity_context: TargetIdentityContext,
     sample_times: list[dt.datetime],
     start: dt.datetime,
     end: dt.datetime,
@@ -784,6 +1183,7 @@ def compute_dso_close_encounters(
             event = refine_dso_close_encounter(
                 sky=sky,
                 target_group=target_group,
+                identity_context=identity_context,
                 group_hits=group_hits,
                 sample_times=sample_times,
                 start=start,
@@ -813,6 +1213,7 @@ def refine_dso_close_encounter(
     *,
     sky: SkyfieldModules,
     target_group: TargetGroup,
+    identity_context: TargetIdentityContext,
     group_hits: list[tuple[int, float]],
     sample_times: list[dt.datetime],
     start: dt.datetime,
@@ -850,12 +1251,8 @@ def refine_dso_close_encounter(
     window = threshold_window(fine_times, separations, min_index, max_separation_degrees)
     moon_payload = moon_snapshot(sky, closest_time, earth, moon, eph, ts, closest_moon_ra, closest_moon_dec)
     magnitude_delta = magnitude_delta_vs_moon(target.magnitude, moon_payload.get("approximateVisualMagnitude"))
-    subject = {
-        "kind": "deepSkyObject",
-        "id": target_group.group_id,
-        "targetID": target.object_id,
-        "magnitudeDeltaVsMoon": magnitude_delta,
-    }
+    subject = target_group_subject_payload(target_group, identity_context)
+    subject["magnitudeDeltaVsMoon"] = magnitude_delta
 
     return prune_none(
         {
@@ -1481,6 +1878,7 @@ def build_package(
     source_target_group_count: int,
     target_groups: list[TargetGroup],
     event_target_groups: list[TargetGroup],
+    identity_context: TargetIdentityContext,
     selection_reasons: dict[str, list[str]],
     planet_subjects: list[PlanetSubject],
     events: list[dict[str, Any]],
@@ -1547,6 +1945,12 @@ def build_package(
             "refineStepMinutes": args.refine_step_minutes,
             "scanPaddingHours": args.scan_padding_hours,
             "dedupeCoordinateArcmin": args.dedupe_coordinate_arcmin,
+            "identityResolution": {
+                "coordinateToleranceArcmin": identity_context.coordinate_tolerance_arcmin,
+                "catalogPreferenceOrder": ["Messier", "NGC", "IC", "Caldwell", "supportedCatalogs"],
+                "quarantinedCommonNameTokens": len(identity_context.ambiguous_common_tokens),
+                "quarantinedAliasTokens": len(identity_context.ambiguous_exact_tokens),
+            },
             "planetSubjects": [planet.planet_id for planet in planet_subjects],
         },
         "counts": {
@@ -1572,7 +1976,7 @@ def build_package(
                 for planet in planet_subjects
             ],
             "targetGroups": [
-                target_group_payload(group, selection_reasons.get(group.group_id, []))
+                target_group_payload(group, identity_context, selection_reasons.get(group.group_id, []))
                 for group in event_target_groups
             ],
         },
@@ -1694,6 +2098,7 @@ def validate_package(package: dict[str, Any], index_path: Path) -> None:
         if int(package_counts.get(key) or 0) != counts[key]:
             raise RuntimeError(f"Index {key} count mismatch.")
     assert_no_forbidden_lunar_labels(package)
+    validate_emitted_target_identity(package, list(unique_events.values()))
 
 
 def validate_shard_descriptor(descriptor: dict[str, Any]) -> None:
@@ -1779,6 +2184,121 @@ def validate_events(events: list[dict[str, Any]]) -> dict[str, int]:
             if event.get("phase") not in {"newMoon", "firstQuarter", "fullMoon", "lastQuarter"}:
                 raise RuntimeError(f"Phase marker {event_id} has invalid phase.")
     return event_counts(events)
+
+
+def validate_emitted_target_identity(
+    package: dict[str, Any],
+    events: list[dict[str, Any]],
+) -> None:
+    target_groups = (package.get("subjects") or {}).get("targetGroups") or []
+    if not isinstance(target_groups, list):
+        raise RuntimeError("Index subjects.targetGroups must be a list.")
+    targets_by_id: dict[str, dict[str, Any]] = {}
+    for target in target_groups:
+        if not isinstance(target, dict):
+            raise RuntimeError("Index targetGroups rows must be objects.")
+        target_id = str(target.get("id") or "")
+        if not target_id:
+            raise RuntimeError("Index target group is missing id.")
+        targets_by_id[target_id] = target
+        validate_target_group_identity_payload(target)
+
+    tolerance_degrees = emitted_identity_tolerance_degrees(package)
+    validate_emitted_common_name_consistency(target_groups, tolerance_degrees)
+
+    for event in events:
+        if event.get("type") != "lunarCloseEncounter":
+            continue
+        subject = event.get("subject") or {}
+        if subject.get("kind") != "deepSkyObject":
+            continue
+        subject_id = str(subject.get("id") or "")
+        target = targets_by_id.get(subject_id)
+        if target is None:
+            raise RuntimeError(f"DSO close encounter {event['id']} references unknown target group {subject_id}.")
+        for key in ("targetID", "displayName", "catalogName"):
+            if subject.get(key) != canonical_subject_value(target, key):
+                raise RuntimeError(f"DSO close encounter {event['id']} subject {key} disagrees with index target {subject_id}.")
+        if subject.get("aliases") != target.get("aliases"):
+            raise RuntimeError(f"DSO close encounter {event['id']} aliases disagree with index target {subject_id}.")
+        subject_ra = finite_float(subject.get("rightAscensionHours"))
+        subject_dec = finite_float(subject.get("declinationDegrees"))
+        target_ra = finite_float(target.get("rightAscensionHours"))
+        target_dec = finite_float(target.get("declinationDegrees"))
+        if None in (subject_ra, subject_dec, target_ra, target_dec):
+            raise RuntimeError(f"DSO close encounter {event['id']} is missing canonical subject coordinates.")
+        separation = angular_separation_degrees(
+            normalize_degrees(float(subject_ra) * 15.0),
+            float(subject_dec),
+            normalize_degrees(float(target_ra) * 15.0),
+            float(target_dec),
+        )
+        if separation > 1.0e-6:
+            raise RuntimeError(f"DSO close encounter {event['id']} subject coordinates disagree with index target {subject_id}.")
+
+
+def validate_target_group_identity_payload(target: dict[str, Any]) -> None:
+    for key in ("displayName", "catalogName", "rightAscensionHours", "declinationDegrees", "aliases"):
+        if key not in target:
+            raise RuntimeError(f"Index target group {target.get('id')} is missing {key}.")
+    if not isinstance(target.get("aliases"), list):
+        raise RuntimeError(f"Index target group {target.get('id')} aliases must be a list.")
+    if finite_float(target.get("rightAscensionHours")) is None or finite_float(target.get("declinationDegrees")) is None:
+        raise RuntimeError(f"Index target group {target.get('id')} is missing canonical coordinates.")
+
+
+def validate_emitted_common_name_consistency(
+    target_groups: list[dict[str, Any]],
+    tolerance_degrees: float,
+) -> None:
+    groups_by_common_name: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for target in target_groups:
+        values = [target.get("displayName"), *(target.get("aliases") or [])]
+        seen_tokens: set[str] = set()
+        for value in values:
+            token = common_name_token(value)
+            if token and token not in seen_tokens:
+                groups_by_common_name[token].append(target)
+                seen_tokens.add(token)
+
+    for token, targets in groups_by_common_name.items():
+        for lhs_index, lhs in enumerate(targets):
+            for rhs in targets[lhs_index + 1 :]:
+                lhs_ra = finite_float(lhs.get("rightAscensionHours"))
+                lhs_dec = finite_float(lhs.get("declinationDegrees"))
+                rhs_ra = finite_float(rhs.get("rightAscensionHours"))
+                rhs_dec = finite_float(rhs.get("declinationDegrees"))
+                if None in (lhs_ra, lhs_dec, rhs_ra, rhs_dec):
+                    raise RuntimeError(f"Common-name token {token} is missing target coordinates.")
+                separation = angular_separation_degrees(
+                    normalize_degrees(float(lhs_ra) * 15.0),
+                    float(lhs_dec),
+                    normalize_degrees(float(rhs_ra) * 15.0),
+                    float(rhs_dec),
+                )
+                if separation > tolerance_degrees:
+                    raise RuntimeError(
+                        f"Common-name token {token} maps to widely separated emitted targets "
+                        f"{lhs.get('id')} and {rhs.get('id')}."
+                    )
+
+
+def emitted_identity_tolerance_degrees(package: dict[str, Any]) -> float:
+    parameters = package.get("parameters") or {}
+    identity_resolution = parameters.get("identityResolution") or {}
+    tolerance_arcmin = finite_float(identity_resolution.get("coordinateToleranceArcmin"))
+    if tolerance_arcmin is None:
+        tolerance_arcmin = finite_float(parameters.get("dedupeCoordinateArcmin"))
+    if tolerance_arcmin is None:
+        tolerance_arcmin = 6.0
+    return tolerance_arcmin / 60.0
+
+
+def canonical_subject_value(target: dict[str, Any], key: str) -> Any:
+    if key == "targetID":
+        target_ids = target.get("targetIDs") or []
+        return target_ids[0] if target_ids else target.get("id")
+    return target.get(key)
 
 
 def validate_manifest_descriptor(manifest_path: Path, descriptor: dict[str, Any], data: bytes) -> None:
@@ -1936,33 +2456,100 @@ def date_grid(start: dt.datetime, end: dt.datetime, step: dt.timedelta) -> list[
     return values
 
 
-def target_group_payload(group: TargetGroup, selection_reasons: list[str]) -> dict[str, Any]:
+def target_group_subject_payload(
+    group: TargetGroup,
+    identity_context: TargetIdentityContext,
+) -> dict[str, Any]:
     canonical = group.canonical
-    aliases = sorted(
+    return prune_none(
         {
-            alias
-            for member in group.members
-            for alias in (member.object_id, member.primary_name, member.catalog_name, *member.aliases)
-            if alias.strip()
-        },
-        key=lambda value: value.lower(),
+            "kind": "deepSkyObject",
+            "id": group.group_id,
+            "targetID": canonical.object_id,
+            "displayName": target_group_display_name(group, identity_context),
+            "catalogName": canonical.catalog_name,
+            "rightAscensionHours": round(canonical.ra_hours, 8),
+            "declinationDegrees": round(canonical.dec_degrees, 8),
+            "aliases": target_group_aliases(group, identity_context),
+        }
     )
-    return {
+
+
+def target_group_payload(
+    group: TargetGroup,
+    identity_context: TargetIdentityContext,
+    selection_reasons: list[str],
+) -> dict[str, Any]:
+    canonical = group.canonical
+    subject = target_group_subject_payload(group, identity_context)
+    return prune_none({
         "id": group.group_id,
-        "displayName": canonical.display_name,
-        "catalogName": canonical.catalog_name,
+        "displayName": subject["displayName"],
+        "catalogName": subject["catalogName"],
         "objectType": canonical.object_type,
         "constellation": canonical.constellation,
         "magnitude": round_optional(canonical.magnitude, 2),
         "angularSizeArcmin": round_optional(canonical.angular_size_arcmin, 3),
         "angularSizeMajorArcmin": round_optional(canonical.angular_size_major_arcmin, 3),
         "angularSizeMinorArcmin": round_optional(canonical.angular_size_minor_arcmin, 3),
-        "rightAscensionHours": round(canonical.ra_hours, 8),
-        "declinationDegrees": round(canonical.dec_degrees, 8),
+        "rightAscensionHours": subject["rightAscensionHours"],
+        "declinationDegrees": subject["declinationDegrees"],
         "selectionReasons": selection_reasons,
         "targetIDs": [member.object_id for member in group.members],
-        "aliases": aliases,
+        "aliases": subject["aliases"],
+    })
+
+
+def target_group_display_name(
+    group: TargetGroup,
+    identity_context: TargetIdentityContext,
+) -> str:
+    display_name = group.canonical.display_name
+    if identity_value_allowed_for_group(display_name, group, identity_context):
+        return display_name
+    return group.canonical.object_id or group.canonical.catalog_name or group.group_id
+
+
+def target_group_aliases(
+    group: TargetGroup,
+    identity_context: TargetIdentityContext,
+) -> list[str]:
+    aliases = {
+        alias.strip()
+        for member in group.members
+        for alias in (member.object_id, member.primary_name, member.catalog_name, *member.aliases)
+        if alias.strip() and identity_value_allowed_for_group(alias, group, identity_context)
     }
+    return sorted(aliases, key=lambda value: value.lower())
+
+
+def identity_value_allowed_for_group(
+    value: Any,
+    group: TargetGroup,
+    identity_context: TargetIdentityContext,
+) -> bool:
+    text = str(value or "").strip()
+    if not text:
+        return False
+    catalog_token = catalog_designation_token(text)
+    if catalog_token:
+        owner_groups = identity_context.exact_token_groups.get(catalog_token)
+        if owner_groups and group.group_id not in owner_groups:
+            return False
+        if catalog_token in identity_context.ambiguous_exact_tokens:
+            return False
+        return True
+
+    common_token = common_name_token(text)
+    if not common_token:
+        return True
+    owner_groups = identity_context.common_name_owner_groups.get(common_token)
+    if owner_groups:
+        return group.group_id in owner_groups
+    coordinate_consistent_groups = identity_context.coordinate_consistent_common_groups.get(common_token)
+    if coordinate_consistent_groups:
+        return group.group_id in coordinate_consistent_groups
+    return common_token not in identity_context.ambiguous_common_tokens
 
 
 def event_identifier(prefix: str, subject_id: str, timestamp: dt.datetime) -> str:
@@ -2005,7 +2592,15 @@ def magnitude_delta_vs_moon(subject_magnitude: Any, moon_magnitude: Any) -> floa
 
 def identity_tokens(target: TargetRecord) -> set[str]:
     values = [target.object_id, target.primary_name, target.catalog_name, *target.aliases]
-    return {token for value in values for token in normalized_identity_tokens(value)}
+    tokens: set[str] = set()
+    for value in values:
+        normalized = normalize_identity(str(value or ""))
+        if normalized:
+            tokens.add(normalized)
+        catalog_token = catalog_designation_token(str(value or ""))
+        if catalog_token:
+            tokens.add(catalog_token)
+    return tokens
 
 
 def normalized_identity_tokens(value: str | None) -> set[str]:
@@ -2025,19 +2620,12 @@ def normalize_identity(value: str) -> str:
 
 
 def target_sort_key(target: TargetRecord) -> tuple[int, float, int, str]:
-    object_id = target.object_id.upper()
-    if re.fullmatch(r"M\d+[A-Z]?", object_id):
-        rank = 0
-    elif re.fullmatch(r"NGC\d+[A-Z]?", object_id):
-        rank = 1
-    elif re.fullmatch(r"IC\d+[A-Z]?", object_id):
-        rank = 2
-    elif re.fullmatch(r"SH2-\d+[A-Z]?", object_id):
-        rank = 3
-    else:
-        rank = 4
+    object_id = target.object_id.strip()
+    prefix = catalog_designation_prefix(object_id)
+    rank = CATALOG_PREFIX_RANK.get(prefix or "", len(CATALOG_PREFIX_RANK))
+    sortable_id = catalog_designation_token(object_id) or normalize_identity(object_id)
     magnitude = target.magnitude if target.magnitude is not None else 99.0
-    return rank, magnitude, len(object_id), object_id
+    return rank, magnitude, len(sortable_id), sortable_id
 
 
 def unique_group_id(candidate: str, used_ids: set[str]) -> str:
