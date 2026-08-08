@@ -70,6 +70,24 @@ def reference(
 
 
 class LunarEventIdentityTests(unittest.TestCase):
+    def test_alias_sorting_is_deterministic_for_case_variants(self):
+        groups, context = identity_context(
+            [
+                target(
+                    "M104",
+                    "Sombrero Galaxy",
+                    "M M104",
+                    12.6667,
+                    -11.6231,
+                    aliases=["Sombrero galaxy"],
+                )
+            ]
+        )
+
+        aliases = lunar.target_group_aliases(groups[0], context)
+
+        self.assertLess(aliases.index("Sombrero Galaxy"), aliases.index("Sombrero galaxy"))
+
     def test_exact_designation_precedes_contaminated_alias_and_coordinates(self):
         groups, context = identity_context(
             [
