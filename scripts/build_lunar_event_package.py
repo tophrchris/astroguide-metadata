@@ -84,6 +84,7 @@ FAMILY_ORDER = [
     "cometSnapshot",
     "planetCatalog",
     "lunarEvents",
+    "planetTargetCloseEncounters",
     "seasonalRecommendationCandidates",
     "transientEventFeed",
 ]
@@ -2520,7 +2521,7 @@ def target_group_aliases(
         for alias in (member.object_id, member.primary_name, member.catalog_name, *member.aliases)
         if alias.strip() and identity_value_allowed_for_group(alias, group, identity_context)
     }
-    return sorted(aliases, key=lambda value: value.lower())
+    return sorted(aliases, key=lambda value: (value.lower(), value))
 
 
 def identity_value_allowed_for_group(

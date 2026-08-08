@@ -24,6 +24,8 @@ v1/packages/comets/comet_snapshot_v1.json
 v1/packages/planet-catalog/planet_catalog_v1.json
 v1/packages/lunar-events/lunar_event_metadata_v1.json
 v1/packages/lunar-events/shards/lunar_events_YYYY_MM_v1.json
+v1/packages/planet-target-close-encounters/planet_target_close_encounter_metadata_v1.json
+v1/packages/planet-target-close-encounters/shards/planet_target_close_encounters_YYYY_MM_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 sources/target-metadata-overlay/2026-05-curated-workbooks/
 ```
@@ -111,6 +113,27 @@ planets, lunar eclipses, and lunar phase markers. It intentionally does not
 publish supermoon or micromoon labels or booleans; app clients should derive
 those dynamically from full-moon distance or apparent diameter only for rows
 they display.
+
+## Rebuilding Planet/Target Close-Encounter Packages
+
+The `planetTargetCloseEncounters` package is generated from the same catalog,
+target canonicalization, presentation-focused candidate filter, Skyfield/JPL
+ephemeris dependency, and monthly shard philosophy as `lunarEvents`:
+
+```bash
+/tmp/astroguide-lunar-events-venv/bin/python \
+  scripts/build_planet_target_close_encounter_package.py \
+  --app-repo ../DSOPlanneriOS
+```
+
+By default the generator publishes the next 24 months of global/geocentric
+closest approaches for Mercury through Neptune at a maximum separation of 5
+degrees. It does not include comets or meteor showers. Site, nighttime,
+altitude, horizon/obstruction, and observability filtering remain app-side.
+
+The index and shard schema, event-ID convention, candidate-filter rationale,
+and DSOPlanneriOS integration boundary are documented in
+[`docs/planet-target-close-encounters-v1.md`](docs/planet-target-close-encounters-v1.md).
 
 ## Rebuilding Comet Snapshot Packages
 
