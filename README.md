@@ -24,6 +24,7 @@ v1/packages/comets/comet_snapshot_v1.json
 v1/packages/planet-catalog/planet_catalog_v1.json
 v1/packages/lunar-events/lunar_event_metadata_v1.json
 v1/packages/lunar-events/shards/lunar_events_YYYY_MM_v1.json
+v1/packages/full-moon-name-aliases/full_moon_name_alias_metadata_v1.json
 v1/packages/planet-target-close-encounters/planet_target_close_encounter_metadata_v1.json
 v1/packages/planet-target-close-encounters/shards/planet_target_close_encounters_YYYY_MM_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
@@ -113,6 +114,28 @@ planets, lunar eclipses, and lunar phase markers. It intentionally does not
 publish supermoon or micromoon labels or booleans; app clients should derive
 those dynamically from full-moon distance or apparent diameter only for rows
 they display.
+
+## Rebuilding Full Moon Name/Alias Packages
+
+The `fullMoonNameAliases` catalog is generated from a small, reviewed source
+file in this repository. It provides 12 UTC Gregorian-month entries, a fixed
+North American Popular primary name, and source-attributed aliases from the
+mixed-provenance popular alternatives, English / Medieval, and Modern Pagan
+libraries:
+
+```bash
+python3 scripts/build_full_moon_name_alias_package.py
+python3 scripts/build_full_moon_name_alias_package.py --validate-only
+```
+
+The package contains names and provenance only. Clients calculate the
+New-Moon-to-New-Moon cycle, contained Full Moon, phase events, seasonal labels,
+distance categories, eclipses, close encounters, and observer-specific
+circumstances at runtime. Duplicate alias text is collapsed for display while
+independent library/source claims remain attached.
+
+The package contract, source caveats, and app-consumer boundary are documented
+in [`docs/full-moon-name-aliases-v1.md`](docs/full-moon-name-aliases-v1.md).
 
 ## Rebuilding Planet/Target Close-Encounter Packages
 

@@ -49,6 +49,7 @@ FAMILY_ORDER = [
     "cometSnapshot",
     "planetCatalog",
     "lunarEvents",
+    "fullMoonNameAliases",
     PACKAGE_FAMILY,
     "seasonalRecommendationCandidates",
     "transientEventFeed",

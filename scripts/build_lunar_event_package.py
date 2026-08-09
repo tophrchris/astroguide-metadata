@@ -84,6 +84,7 @@ FAMILY_ORDER = [
     "cometSnapshot",
     "planetCatalog",
     "lunarEvents",
+    "fullMoonNameAliases",
     "planetTargetCloseEncounters",
     "seasonalRecommendationCandidates",
     "transientEventFeed",

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-08-08T04:30:45Z",
-  "publishedAt": "2026-08-08T04:30:45Z",
+  "generatedAt": "2026-08-09T00:00:00Z",
+  "publishedAt": "2026-08-09T00:00:00Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -123,6 +123,22 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use cached validated lunar event metadata when available. Timeline consumers should degrade gracefully if no validated cached lunar event package is available."
+    },
+    {
+      "family": "fullMoonNameAliases",
+      "packageVersion": "full-moon-name-aliases-v1-20260809",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/full-moon-name-aliases/full_moon_name_alias_metadata_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "adc2f68bc5e59216140c25fc27c1dfd2b00370d0ab3b15a147b504ce9be00ac1"
+      },
+      "byteSize": 19463,
+      "recordCount": 12,
+      "minSupportedAppVersion": "1.4.0",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Clients that support this family should retain a bundled or cached validated snapshot. Resolve by the package-declared contained-Full-Moon UTC month policy; keep astronomical, seasonal, and observer-specific calculations app-side."
     },
     {
       "family": "planetTargetCloseEncounters",
