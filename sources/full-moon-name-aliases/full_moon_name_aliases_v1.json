@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "fullMoonNameAliases",
+  "packageID": "full-moon-name-aliases-v1",
+  "packageVersion": "full-moon-name-aliases-v1-20260809",
+  "generatedAt": "2026-08-09T00:00:00Z",
+  "defaultLibraryID": "north-american-popular",
+  "resolver": {
+    "id": "gregorianMonthOfContainedFullMoon",
+    "version": 1,
+    "calendar": "gregorian",
+    "timeBasis": "utc",
+    "input": "containedFullMoonInstantUTC",
+    "notes": "Resolve the UTC Gregorian month of the exact Full Moon instant contained in the app-calculated New-Moon-to-New-Moon cycle. This fixed UTC policy keeps the selected name stable across observer timezones."
+  },
+  "namingConvention": {
+    "id": "namedAfterContainedFullMoon",
+    "displayScope": [
+      "astronomicalFullMoon",
+      "containingNewMoonToNewMoonCycle"
+    ],
+    "attribution": "AstroGuide product convention",
+    "notes": "Source names describe the Full Moon. AstroGuide also uses that Full Moon's primary name for its containing New-Moon-to-New-Moon cycle; the names do not historically rename every lunar phase."
+  },
+  "sources": [
+    {
+      "id": "old-farmers-almanac-full-moon-names-2026",
+      "title": "Full Moon Names for 2026",
+      "publisher": "The Old Farmer's Almanac",
+      "url": "https://www.almanac.com/full-moon-names?page=1",
+      "accessedDate": "2026-08-09",
+      "sourceType": "editorialCompilation",
+      "provenanceQuality": "editorialCompilation",
+      "licenseStatus": "permissionRequired",
+      "usageReviewNotes": "The package transcribes only short name claims and does not copy explanatory prose. The source directs licensing requests through its contact process; review reuse before consumer publication. The source describes the popular list as a mixed Native American, Colonial American, and other traditional North American compilation and cautions that community usage varies."
+    },
+    {
+      "id": "uni-names-for-the-full-moon",
+      "title": "Names for the Full Moon",
+      "publisher": "University of Northern Iowa",
+      "url": "https://sites.uni.edu/morgans/astro/course/Notes/section1/fullmoons.html",
+      "accessedDate": "2026-08-09",
+      "sourceType": "institutionalSecondary",
+      "provenanceQuality": "unresolvedCompilation",
+      "licenseStatus": "unknown",
+      "usageReviewNotes": "The page is the traceable transcription source for its Algonquin/Colonial, English/Medieval, and Neo-pagan columns, but it supplies no item-level historical citations or stated reuse license. The package preserves exact short source spellings and flags unresolved spellings instead of presenting the table as a verified historical canon."
+    }
+  ],
+  "libraries": [
+    {
+      "id": "north-american-popular",
+      "displayName": "North American Popular",
+      "displayOrder": 0,
+      "role": "primary",
+      "status": "active",
+      "sourceIDs": [
+        "old-farmers-almanac-full-moon-names-2026"
+      ],
+      "attribution": {
+        "culturalContext": [
+          "North American popular",
+          "colonial and traditional compilation"
+        ],
+        "regions": [
+          "North America"
+        ],
+        "hemispheres": [
+          "northern"
+        ],
+        "languageTags": [
+          "en"
+        ],
+        "communitySpecific": false,
+        "notes": "A familiar English-language popular list, not a single Indigenous tradition or a universal North American calendar."
+      },
+      "confidence": "mixed",
+      "provenanceQuality": "editorialCompilation",
+      "usageReviewStatus": "reviewRequired",
+      "licensingNotes": "Short names are transcribed without source descriptions. Review the source compilation's usage terms before consumer publication.",
+      "editorialNotes": "Corn Moon is the fixed September base name. Harvest Moon, Blue Moon, eclipses, and other calculated or seasonal context remain runtime concerns.",
+      "names": [
+        {
+          "month": 1,
+          "displayName": "Wolf Moon",
+          "sourceNameText": "Wolf Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026"
+        },
+        {
+          "month": 2,
+          "displayName": "Snow Moon",
+          "sourceNameText": "Snow Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026"
+        },
+        {
+          "month": 3,
+          "displayName": "Worm Moon",
+          "sourceNameText": "Worm Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026"
+        },
+        {
+          "month": 4,
+          "displayName": "Pink Moon",
+          "sourceNameText": "Pink Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026"
+        },
+        {
+          "month": 5,
+          "displayName": "Flower Moon",
+          "sourceNameText": "Flower Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026"
+        },
+        {
+          "month": 6,
+          "displayName": "Strawberry Moon",
+          "sourceNameText": "Strawberry Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026"
+        },
+        {
+          "month": 7,
+          "displayName": "Buck Moon",
+          "sourceNameText": "Buck Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026"
+        },
+        {
+          "month": 8,
+          "displayName": "Sturgeon Moon",
+          "sourceNameText": "Sturgeon Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026"
+        },
+        {
+          "month": 9,
+          "displayName": "Corn Moon",
+          "sourceNameText": "Corn Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026",
+          "editorialNotes": "The source separately treats Harvest Moon as the Full Moon closest to the September equinox; that contextual label is not the primary month resolver here."
+        },
+        {
+          "month": 10,
+          "displayName": "Hunter's Moon",
+          "sourceNameText": "Hunter's Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026",
+          "editorialNotes": "Retained because the named source library explicitly assigns it to October. Consumers must keep separately calculated Hunter's Moon context independent of this claim."
+        },
+        {
+          "month": 11,
+          "displayName": "Beaver Moon",
+          "sourceNameText": "Beaver Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026"
+        },
+        {
+          "month": 12,
+          "displayName": "Cold Moon",
+          "sourceNameText": "Cold Moon",
+          "sourceID": "old-farmers-almanac-full-moon-names-2026"
+        }
+      ]
+    },
+    {
+      "id": "mixed-provenance-popular-alternatives",
+      "displayName": "Mixed-Provenance Popular Alternatives",
+      "displayOrder": 1,
+      "role": "alias",
+      "status": "active",
+      "sourceIDs": [
+        "uni-names-for-the-full-moon"
+      ],
+      "attribution": {
+        "culturalContext": [
+          "mixed-provenance popular alternatives",
+          "colonial-era compilation"
+        ],
+        "regions": [
+          "North America"
+        ],
+        "hemispheres": [
+          "northern"
+        ],
+        "languageTags": [
+          "en"
+        ],
+        "communitySpecific": false,
+        "notes": "Renamed from the source table's broad Algonquin/Colonial heading because the page does not provide community-level or item-level provenance. Do not present this as a generic Indigenous library."
+      },
+      "confidence": "low",
+      "provenanceQuality": "unresolvedCompilation",
+      "usageReviewStatus": "reviewRequired",
+      "licensingNotes": "Short labels are transcribed from an institutional secondary table with no stated license; source and reuse review remain open.",
+      "editorialNotes": "Harvest Moon and Hunter's Moon appear only because this named source table assigns them. Runtime astronomical/seasonal determinations remain separate.",
+      "names": [
+        {
+          "month": 1,
+          "displayName": "Old Moon",
+          "sourceNameText": "Old",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 2,
+          "displayName": "Hunger Moon",
+          "sourceNameText": "Hunger",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 3,
+          "displayName": "Crust Moon",
+          "sourceNameText": "Crust",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 4,
+          "displayName": "Pink Moon",
+          "sourceNameText": "Pink",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 5,
+          "displayName": "Flower Moon",
+          "sourceNameText": "Flower",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 6,
+          "displayName": "Rose Moon",
+          "sourceNameText": "Rose",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 7,
+          "displayName": "Buck Moon",
+          "sourceNameText": "Buck",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 8,
+          "displayName": "Sturgeon Moon",
+          "sourceNameText": "Sturgeon",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 9,
+          "displayName": "Harvest Moon",
+          "sourceNameText": "Harvest",
+          "sourceID": "uni-names-for-the-full-moon",
+          "editorialNotes": "This is a source-table claim, not AstroGuide's runtime determination of the Full Moon closest to the September equinox."
+        },
+        {
+          "month": 10,
+          "displayName": "Hunter's Moon",
+          "sourceNameText": "Hunter's",
+          "sourceID": "uni-names-for-the-full-moon",
+          "editorialNotes": "This is a source-table claim, not AstroGuide's runtime seasonal determination."
+        },
+        {
+          "month": 11,
+          "displayName": "Beaver Moon",
+          "sourceNameText": "Beaver",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 12,
+          "displayName": "Cold Moon",
+          "sourceNameText": "Cold",
+          "sourceID": "uni-names-for-the-full-moon"
+        }
+      ]
+    },
+    {
+      "id": "english-medieval",
+      "displayName": "English / Medieval",
+      "displayOrder": 2,
+      "role": "alias",
+      "status": "active",
+      "sourceIDs": [
+        "uni-names-for-the-full-moon"
+      ],
+      "attribution": {
+        "culturalContext": [
+          "English / medieval secondary compilation"
+        ],
+        "regions": [
+          "England"
+        ],
+        "hemispheres": [
+          "northern"
+        ],
+        "languageTags": [
+          "en"
+        ],
+        "communitySpecific": false,
+        "notes": "The source provides no item-level historical references; this is a traceable secondary table, not a verified medieval canon."
+      },
+      "confidence": "low",
+      "provenanceQuality": "unresolvedCompilation",
+      "usageReviewStatus": "reviewRequired",
+      "licensingNotes": "Short labels are transcribed from an institutional secondary table with no stated license; historical and reuse review remain open.",
+      "editorialNotes": "Exact source spellings are preserved, including the unresolved June spelling Dyan.",
+      "names": [
+        {
+          "month": 1,
+          "displayName": "Wolf Moon",
+          "sourceNameText": "Wolf",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 2,
+          "displayName": "Storm Moon",
+          "sourceNameText": "Storm",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 3,
+          "displayName": "Chaste Moon",
+          "sourceNameText": "Chaste",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 4,
+          "displayName": "Seed Moon",
+          "sourceNameText": "Seed",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 5,
+          "displayName": "Hare Moon",
+          "sourceNameText": "Hare",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 6,
+          "displayName": "Dyan Moon",
+          "sourceNameText": "Dyan",
+          "sourceID": "uni-names-for-the-full-moon",
+          "editorialNotes": "Exact source spelling retained; origin and intended spelling are unresolved."
+        },
+        {
+          "month": 7,
+          "displayName": "Mead Moon",
+          "sourceNameText": "Mead",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 8,
+          "displayName": "Corn Moon",
+          "sourceNameText": "Corn",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 9,
+          "displayName": "Barley Moon",
+          "sourceNameText": "Barley",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 10,
+          "displayName": "Blood Moon",
+          "sourceNameText": "Blood",
+          "sourceID": "uni-names-for-the-full-moon",
+          "editorialNotes": "A source-table name claim only; it must not be inferred from eclipse status or Moon color."
+        },
+        {
+          "month": 11,
+          "displayName": "Snow Moon",
+          "sourceNameText": "Snow",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 12,
+          "displayName": "Oak Moon",
+          "sourceNameText": "Oak",
+          "sourceID": "uni-names-for-the-full-moon"
+        }
+      ]
+    },
+    {
+      "id": "modern-pagan",
+      "displayName": "Modern Pagan",
+      "displayOrder": 3,
+      "role": "alias",
+      "status": "active",
+      "sourceIDs": [
+        "uni-names-for-the-full-moon"
+      ],
+      "attribution": {
+        "culturalContext": [
+          "modern Pagan secondary compilation"
+        ],
+        "regions": [
+          "English-speaking communities"
+        ],
+        "hemispheres": [
+          "northern"
+        ],
+        "languageTags": [
+          "en"
+        ],
+        "communitySpecific": false,
+        "notes": "One secondary-source modern Pagan list; it is not universal across Pagan or Wiccan traditions."
+      },
+      "confidence": "low",
+      "provenanceQuality": "unresolvedCompilation",
+      "usageReviewStatus": "reviewRequired",
+      "licensingNotes": "Short labels are transcribed from an institutional secondary table with no stated license; tradition and reuse review remain open.",
+      "editorialNotes": "Exact source spellings are preserved, including Lightening rather than silently normalizing it to Lightning.",
+      "names": [
+        {
+          "month": 1,
+          "displayName": "Ice Moon",
+          "sourceNameText": "Ice",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 2,
+          "displayName": "Snow Moon",
+          "sourceNameText": "Snow",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 3,
+          "displayName": "Death Moon",
+          "sourceNameText": "Death",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 4,
+          "displayName": "Awakening Moon",
+          "sourceNameText": "Awakening",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 5,
+          "displayName": "Grass Moon",
+          "sourceNameText": "Grass",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 6,
+          "displayName": "Planting Moon",
+          "sourceNameText": "Planting",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 7,
+          "displayName": "Rose Moon",
+          "sourceNameText": "Rose",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 8,
+          "displayName": "Lightening Moon",
+          "sourceNameText": "Lightening",
+          "sourceID": "uni-names-for-the-full-moon",
+          "editorialNotes": "Exact source spelling retained; origin and intended spelling are unresolved."
+        },
+        {
+          "month": 9,
+          "displayName": "Harvest Moon",
+          "sourceNameText": "Harvest",
+          "sourceID": "uni-names-for-the-full-moon",
+          "editorialNotes": "This is a source-table name claim, not AstroGuide's runtime equinox-based Harvest Moon determination."
+        },
+        {
+          "month": 10,
+          "displayName": "Blood Moon",
+          "sourceNameText": "Blood",
+          "sourceID": "uni-names-for-the-full-moon",
+          "editorialNotes": "A source-table name claim only; it must not be inferred from eclipse status or Moon color."
+        },
+        {
+          "month": 11,
+          "displayName": "Tree Moon",
+          "sourceNameText": "Tree",
+          "sourceID": "uni-names-for-the-full-moon"
+        },
+        {
+          "month": 12,
+          "displayName": "Long Night Moon",
+          "sourceNameText": "Long Night",
+          "sourceID": "uni-names-for-the-full-moon"
+        }
+      ]
+    }
+  ]
+}
