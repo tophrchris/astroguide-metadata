@@ -181,9 +181,10 @@ The package contract is documented in
 
 ## Rebuilding Comet Close-Encounter Packages
 
-The `cometCloseEncounters` package publishes Comet to DSO close encounters using
-the systematic Dynamic to Static model: comet snapshot ephemeris streams against
-static AstroGuide catalog target groups.
+The `cometCloseEncounters` package publishes comet close encounters using the
+systematic Dynamic to Static and Dynamic to Dynamic models: comet snapshot
+ephemeris streams against static AstroGuide catalog target groups, plus
+Skyfield/JPL Moon and major-planet positions.
 
 ```bash
 /tmp/astroguide-comet-events-venv/bin/python \
@@ -194,10 +195,9 @@ static AstroGuide catalog target groups.
   scripts/build_comet_close_encounter_package.py --validate-only
 ```
 
-The generated `2026-08-11` package contains 247 true-UTC closest-approach events
-across 12 monthly shards. It intentionally does not generate DSO to DSO events.
-The Dynamic to Dynamic Comet to Moon/Planet generator shape is documented as a
-scaffolded follow-up.
+The generated `2026-08-11` package contains 298 true-UTC closest-approach events
+across 12 monthly shards: 247 Comet to DSO events and 51 Comet to Moon/major
+planet events. It intentionally does not generate DSO to DSO events.
 
 The package contract is documented in
 [`docs/comet-close-encounters-v1.md`](docs/comet-close-encounters-v1.md).

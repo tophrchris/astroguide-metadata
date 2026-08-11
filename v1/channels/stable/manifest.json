@@ -177,9 +177,9 @@
       "packageURL": "https://metadata.astroguide.space/v1/packages/comet-close-encounters/comet_close_encounter_metadata_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "f879d445b48dde8432eb099ec9b2caf53bf45b53d30f7e0bc3dc08604c97d1cb"
+        "value": "ee726de9bde27cbee5ec9fe7b645c224129c07480010f1ca8716957862aba30d"
       },
-      "byteSize": 109233,
+      "byteSize": 112748,
       "minSupportedAppVersion": "1.4.0",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,

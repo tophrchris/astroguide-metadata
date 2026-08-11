@@ -36,9 +36,14 @@ CACHE_TTL_SECONDS = 604800
 PACKAGE_FAMILY = "cometCloseEncounters"
 PACKAGE_BASENAME = "comet-close-encounters"
 EVENT_FAMILY = "closeEncounter"
-EVENT_TYPE = "cometTargetCloseEncounter"
+COMET_TARGET_EVENT_TYPE = "cometTargetCloseEncounter"
+COMET_DYNAMIC_EVENT_TYPE = "cometDynamicCloseEncounter"
+EVENT_TYPES = [COMET_TARGET_EVENT_TYPE, COMET_DYNAMIC_EVENT_TYPE]
+EVENT_TYPE = COMET_TARGET_EVENT_TYPE
 ALGORITHM_VERSION = "comet-close-encounters-v1"
 DEFAULT_BRIGHT_NGC_IC_MAG_LIMIT = lunar.DEFAULT_BRIGHT_NGC_IC_MAG_LIMIT
+DEFAULT_EPHEMERIS_CACHE = Path.home() / "Library/Caches/com.tophrchris.AstroGuide/lunar-events"
+DEFAULT_EPHEMERIS = "de421.bsp"
 FAMILY_ORDER = [
     "targetMetadataOverlay",
     "targetNeighborhoodDefinitions",
@@ -101,6 +106,14 @@ class InterpolatedCometState:
 
 
 @dataclass(frozen=True)
+class DynamicBodySubject:
+    kind: str
+    body_id: str
+    display_name: str
+    ephemeris_key: str
+
+
+@dataclass(frozen=True)
 class ShardBuild:
     path: Path
     payload: dict[str, Any]
@@ -140,6 +153,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--min-supported-app-version", default="1.4.0")
     parser.add_argument("--min-supported-build", default="1")
     parser.add_argument("--max-separation-degrees", type=float, default=5.0)
+    parser.add_argument(
+        "--dynamic-dynamic-max-separation-degrees",
+        type=float,
+        help="Maximum separation for comet-to-Moon/planet events. Defaults to --max-separation-degrees.",
+    )
     parser.add_argument("--max-comet-magnitude", type=float)
     parser.add_argument("--max-target-magnitude", type=float)
     parser.add_argument(
@@ -148,12 +166,20 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_BRIGHT_NGC_IC_MAG_LIMIT,
     )
     parser.add_argument("--refine-step-minutes", type=int, default=60)
+    parser.add_argument("--dynamic-sample-step-minutes", type=int, default=180)
+    parser.add_argument("--ephemeris-cache", type=Path, default=DEFAULT_EPHEMERIS_CACHE)
+    parser.add_argument("--ephemeris", default=DEFAULT_EPHEMERIS)
     parser.add_argument("--dedupe-coordinate-arcmin", type=float, default=6.0)
     parser.add_argument(
         "--max-events-per-comet",
         type=int,
         default=0,
         help="Optional ranking cap per comet after event generation. 0 means unlimited.",
+    )
+    parser.add_argument(
+        "--skip-dynamic-dynamic",
+        action="store_true",
+        help="Generate only Comet-to-DSO dynamic-static events.",
     )
     parser.add_argument("--skip-manifest", action="store_true")
     parser.add_argument(
@@ -164,10 +190,19 @@ def parse_args() -> argparse.Namespace:
     args = parser.parse_args()
     if args.max_separation_degrees <= 0:
         raise SystemExit("--max-separation-degrees must be positive")
+    if (
+        args.dynamic_dynamic_max_separation_degrees is not None
+        and args.dynamic_dynamic_max_separation_degrees <= 0
+    ):
+        raise SystemExit("--dynamic-dynamic-max-separation-degrees must be positive")
     if args.bright_ngc_ic_mag_limit <= 0:
         raise SystemExit("--bright-ngc-ic-mag-limit must be positive")
     if args.refine_step_minutes <= 0:
         raise SystemExit("--refine-step-minutes must be positive")
+    if args.dynamic_sample_step_minutes <= 0:
+        raise SystemExit("--dynamic-sample-step-minutes must be positive")
+    if args.refine_step_minutes > args.dynamic_sample_step_minutes:
+        raise SystemExit("--refine-step-minutes cannot exceed --dynamic-sample-step-minutes")
     if args.dedupe_coordinate_arcmin < 0:
         raise SystemExit("--dedupe-coordinate-arcmin cannot be negative")
     if args.max_events_per_comet < 0:
@@ -253,7 +288,7 @@ def main() -> int:
     print(f"Selected {len(comet_streams)} comet ephemeris streams.", flush=True)
 
     np = load_numpy()
-    events, event_target_group_ids = compute_close_encounters(
+    target_events, event_target_group_ids = compute_close_encounters(
         np=np,
         comet_streams=comet_streams,
         target_groups=target_groups,
@@ -264,6 +299,48 @@ def main() -> int:
         refine_step=dt.timedelta(minutes=args.refine_step_minutes),
         package_version=package_version,
     )
+    dynamic_body_subjects = supported_dynamic_body_subjects()
+    event_dynamic_body_ids: set[str] = set()
+    dynamic_events: list[dict[str, Any]] = []
+    sky_versions: dict[str, str] = {}
+    eph: Any = None
+    if not args.skip_dynamic_dynamic:
+        sky = lunar.load_skyfield_modules()
+        sky_versions = sky.versions
+        load = sky.Loader(str(args.ephemeris_cache.resolve()))
+        eph = load(args.ephemeris)
+        ts = load.timescale()
+        earth = eph["earth"]
+        dynamic_threshold = (
+            args.dynamic_dynamic_max_separation_degrees
+            if args.dynamic_dynamic_max_separation_degrees is not None
+            else args.max_separation_degrees
+        )
+        dynamic_sample_times = lunar.date_grid(
+            start,
+            end,
+            dt.timedelta(minutes=args.dynamic_sample_step_minutes),
+        )
+        print(
+            f"Scanning {len(dynamic_sample_times)} dynamic samples for comet-to-Moon/planet "
+            f"close encounters.",
+            flush=True,
+        )
+        dynamic_events, event_dynamic_body_ids = compute_dynamic_close_encounters(
+            sky=sky,
+            comet_streams=comet_streams,
+            dynamic_body_subjects=dynamic_body_subjects,
+            sample_times=dynamic_sample_times,
+            start=start,
+            end=end,
+            max_separation_degrees=dynamic_threshold,
+            refine_step=dt.timedelta(minutes=args.refine_step_minutes),
+            package_version=package_version,
+            earth=earth,
+            eph=eph,
+            ts=ts,
+        )
+    events = [*target_events, *dynamic_events]
     events = apply_event_limit(events, args.max_events_per_comet)
     events = sorted(events, key=lambda event: (str(event["eventTimeUTC"]), str(event["id"])))
     event_target_groups = [
@@ -296,10 +373,14 @@ def main() -> int:
         selection_reasons=selection_reasons,
         source_comet_streams=streams,
         comet_streams=comet_streams,
+        dynamic_body_subjects=dynamic_body_subjects,
+        event_dynamic_body_ids=event_dynamic_body_ids,
         events=events,
         shard_descriptors=[shard.descriptor for shard in shard_builds],
         shard_event_rows=sum(int(shard.descriptor["eventCount"]) for shard in shard_builds),
         args=args,
+        sky_versions=sky_versions,
+        skyfield_ephemeris=eph,
     )
     for shard in shard_builds:
         shard.path.parent.mkdir(parents=True, exist_ok=True)
@@ -319,6 +400,7 @@ def main() -> int:
         f"{total_bytes} total bytes.",
         flush=True,
     )
+    print(f"Events by type: {counts['eventsByType']}", flush=True)
     print(f"Events by comet: {counts['eventsByComet']}", flush=True)
     return 0
 
@@ -577,6 +659,193 @@ def refine_close_encounter(
     }
 
 
+def supported_dynamic_body_subjects() -> list[DynamicBodySubject]:
+    return [
+        DynamicBodySubject(
+            kind="moon",
+            body_id="moon",
+            display_name="Moon",
+            ephemeris_key="moon",
+        ),
+        *[
+            DynamicBodySubject(
+                kind="majorPlanet",
+                body_id=planet_id,
+                display_name=display_name,
+                ephemeris_key=ephemeris_key,
+            )
+            for planet_id, display_name, ephemeris_key in lunar.PLANET_SUBJECTS
+        ],
+    ]
+
+
+def compute_dynamic_close_encounters(
+    *,
+    sky: lunar.SkyfieldModules,
+    comet_streams: list[CometStream],
+    dynamic_body_subjects: list[DynamicBodySubject],
+    sample_times: list[dt.datetime],
+    start: dt.datetime,
+    end: dt.datetime,
+    max_separation_degrees: float,
+    refine_step: dt.timedelta,
+    package_version: str,
+    earth: Any,
+    eph: Any,
+    ts: Any,
+) -> tuple[list[dict[str, Any]], set[str]]:
+    events_by_id: dict[str, dict[str, Any]] = {}
+    event_dynamic_body_ids: set[str] = set()
+    comet_arrays_by_id = {
+        stream.stable_id: comet_state_arrays(sky.np, stream, sample_times)
+        for stream in comet_streams
+    }
+
+    for body_subject in dynamic_body_subjects:
+        body = eph[body_subject.ephemeris_key]
+        body_ra, body_dec = lunar.apparent_radec_arrays(sky, earth, body, ts, sample_times)
+        body_candidate_count = 0
+        for stream in comet_streams:
+            comet_ra, comet_dec = comet_arrays_by_id[stream.stable_id]
+            separations = lunar.separation_arrays(
+                sky,
+                comet_ra,
+                comet_dec,
+                body_ra,
+                body_dec,
+            )
+            for minimum_index in local_minimum_indices(
+                sky.np,
+                separations,
+                max_separation_degrees,
+            ):
+                if minimum_index <= 0 or minimum_index >= len(sample_times) - 1:
+                    continue
+                event = refine_dynamic_close_encounter(
+                    sky=sky,
+                    stream=stream,
+                    body_subject=body_subject,
+                    body=body,
+                    minimum_index=minimum_index,
+                    sample_times=sample_times,
+                    start=start,
+                    end=end,
+                    max_separation_degrees=max_separation_degrees,
+                    refine_step=refine_step,
+                    package_version=package_version,
+                    earth=earth,
+                    eph=eph,
+                    ts=ts,
+                )
+                if event is None:
+                    continue
+                body_candidate_count += 1
+                event_id = str(event["id"])
+                previous = events_by_id.get(event_id)
+                if previous is None or float(event["minimumSeparationDegrees"]) < float(
+                    previous["minimumSeparationDegrees"]
+                ):
+                    events_by_id[event_id] = event
+                event_dynamic_body_ids.add(body_subject.body_id)
+        print(
+            f"{body_subject.display_name}: refined {body_candidate_count} comet dynamic close encounters.",
+            flush=True,
+        )
+
+    return list(events_by_id.values()), event_dynamic_body_ids
+
+
+def refine_dynamic_close_encounter(
+    *,
+    sky: lunar.SkyfieldModules,
+    stream: CometStream,
+    body_subject: DynamicBodySubject,
+    body: Any,
+    minimum_index: int,
+    sample_times: list[dt.datetime],
+    start: dt.datetime,
+    end: dt.datetime,
+    max_separation_degrees: float,
+    refine_step: dt.timedelta,
+    package_version: str,
+    earth: Any,
+    eph: Any,
+    ts: Any,
+) -> dict[str, Any] | None:
+    bracket_start = sample_times[minimum_index - 1]
+    bracket_end = sample_times[minimum_index + 1]
+    fine_times = lunar.date_grid(bracket_start, bracket_end, refine_step)
+    comet_ra, comet_dec = comet_state_arrays(sky.np, stream, fine_times)
+    body_ra, body_dec = lunar.apparent_radec_arrays(sky, earth, body, ts, fine_times)
+    separations = lunar.separation_arrays(sky, comet_ra, comet_dec, body_ra, body_dec)
+    fine_minimum_index = int(sky.np.argmin(separations))
+    closest_time = lunar.refined_minimum_time(
+        fine_times,
+        separations,
+        fine_minimum_index,
+        refine_step,
+    )
+    closest_state = interpolate_comet_state(stream, closest_time)
+    companion = dynamic_body_participant(
+        sky=sky,
+        body_subject=body_subject,
+        body=body,
+        timestamp=closest_time,
+        earth=earth,
+        eph=eph,
+        ts=ts,
+    )
+    companion_coordinate = companion["coordinate"]
+    closest_separation = scalar_separation_degrees(
+        closest_state.right_ascension_hours * 15.0,
+        closest_state.declination_degrees,
+        float(companion_coordinate["rightAscensionHours"]) * 15.0,
+        float(companion_coordinate["declinationDegrees"]),
+    )
+    if closest_time < start or closest_time >= end:
+        return None
+    if closest_separation > max_separation_degrees + 0.000_001:
+        return None
+
+    participants = [
+        comet_participant(stream, closest_state),
+        companion,
+    ]
+    event_id = event_identifier(
+        stream.stable_id,
+        body_subject.body_id,
+        closest_time,
+        event_type=COMET_DYNAMIC_EVENT_TYPE,
+    )
+    return {
+        "id": event_id,
+        "eventFamily": EVENT_FAMILY,
+        "type": COMET_DYNAMIC_EVENT_TYPE,
+        "eventTimeUTC": lunar.isoformat_z(closest_time),
+        "closestApproachUTC": lunar.isoformat_z(closest_time),
+        "minimumSeparationDegrees": round(closest_separation, 4),
+        "participants": participants,
+        "source": {
+            "packageFamily": PACKAGE_FAMILY,
+            "packageVersion": package_version,
+            "recordID": event_id,
+            "sourceDescription": "Generated from cometSnapshot ephemeris and Skyfield/JPL Moon/planet ephemerides.",
+        },
+    }
+
+
+def comet_state_arrays(
+    np: Any,
+    stream: CometStream,
+    sample_times: list[dt.datetime],
+) -> tuple[Any, Any]:
+    states = [interpolate_comet_state(stream, timestamp) for timestamp in sample_times]
+    return (
+        np.radians([state.right_ascension_hours * 15.0 for state in states]),
+        np.radians([state.declination_degrees for state in states]),
+    )
+
+
 def interpolate_comet_state(
     stream: CometStream,
     timestamp: dt.datetime,
@@ -657,6 +926,57 @@ def target_participant(
             "objectType": canonical.object_type or "Unknown",
             "magnitude": lunar.round_optional(canonical.magnitude, 2),
             "coordinate": coordinate_payload(canonical.ra_hours, canonical.dec_degrees),
+        }
+    )
+
+
+def dynamic_body_participant(
+    *,
+    sky: lunar.SkyfieldModules,
+    body_subject: DynamicBodySubject,
+    body: Any,
+    timestamp: dt.datetime,
+    earth: Any,
+    eph: Any,
+    ts: Any,
+) -> dict[str, Any]:
+    if body_subject.kind == "moon":
+        moon_payload = lunar.moon_snapshot(sky, timestamp, earth, body, eph, ts)
+        return lunar.prune_none(
+            {
+                "kind": "moon",
+                "id": body_subject.body_id,
+                "displayName": body_subject.display_name,
+                "magnitude": moon_payload.get("approximateVisualMagnitude"),
+                "coordinate": coordinate_payload(
+                    float(moon_payload["rightAscensionHours"]),
+                    float(moon_payload["declinationDegrees"]),
+                ),
+                "distanceKm": moon_payload.get("distanceKm"),
+                "apparentDiameterArcmin": moon_payload.get("apparentDiameterArcmin"),
+                "illuminationFraction": moon_payload.get("illuminationFraction"),
+                "phaseAngleDegrees": moon_payload.get("phaseAngleDegrees"),
+                "phaseLabel": moon_payload.get("phaseLabel"),
+            }
+        )
+
+    planet = lunar.PlanetSubject(
+        planet_id=body_subject.body_id,
+        display_name=body_subject.display_name,
+        ephemeris_key=body_subject.ephemeris_key,
+    )
+    planet_payload = lunar.planet_snapshot(sky, planet, body, timestamp, earth, ts)
+    return lunar.prune_none(
+        {
+            "kind": "majorPlanet",
+            "id": planet_payload.get("id") or body_subject.body_id,
+            "displayName": planet_payload.get("displayName") or body_subject.display_name,
+            "magnitude": planet_payload.get("visualMagnitude"),
+            "coordinate": coordinate_payload(
+                float(planet_payload["rightAscensionHours"]),
+                float(planet_payload["declinationDegrees"]),
+            ),
+            "distanceAU": planet_payload.get("distanceAU"),
         }
     )
 
@@ -775,10 +1095,14 @@ def build_package(
     selection_reasons: dict[str, list[str]],
     source_comet_streams: list[CometStream],
     comet_streams: list[CometStream],
+    dynamic_body_subjects: list[DynamicBodySubject],
+    event_dynamic_body_ids: set[str],
     events: list[dict[str, Any]],
     shard_descriptors: list[dict[str, Any]],
     shard_event_rows: int,
     args: argparse.Namespace,
+    sky_versions: dict[str, str],
+    skyfield_ephemeris: Any,
 ) -> dict[str, Any]:
     counts = event_counts(events)
     selection_counts: dict[str, int] = defaultdict(int)
@@ -786,7 +1110,7 @@ def build_package(
         for reason in reasons:
             selection_counts[reason] += 1
 
-    ephemeris = comet_snapshot.get("ephemeris") or {}
+    comet_ephemeris = comet_snapshot.get("ephemeris") or {}
     return {
         "schemaVersion": 1,
         "packageFamily": PACKAGE_FAMILY,
@@ -794,14 +1118,14 @@ def build_package(
         "packageRole": "index",
         "generatedAt": generated_at,
         "eventFamilies": [EVENT_FAMILY],
-        "eventTypes": [EVENT_TYPE],
+        "eventTypes": EVENT_TYPES,
         "window": {
             "startUTC": lunar.isoformat_z(start),
             "endUTC": lunar.isoformat_z(end),
             "durationDays": round((end - start).total_seconds() / 86400.0, 3),
         },
         "source": {
-            "name": "AstroGuide comet/catalog-target close-encounter pipeline",
+            "name": "AstroGuide comet close-encounter pipeline",
             "generatedBy": "scripts/build_comet_close_encounter_package.py",
             "algorithmVersion": ALGORITHM_VERSION,
             "catalogSourceRepo": "tophrchris/DSOPlanneriOS",
@@ -815,7 +1139,7 @@ def build_package(
             "cometSnapshotPath": repo_relative(comet_snapshot_path),
             "cometSnapshotPackageVersion": comet_snapshot.get("packageVersion"),
             "cometSnapshotSHA256": lunar.sha256_file(comet_snapshot_path),
-            "cometEphemerisGeneratedAt": ephemeris.get("generatedAt"),
+            "cometEphemerisGeneratedAt": comet_ephemeris.get("generatedAt"),
             "cometFrame": (
                 "Geocentric apparent equatorial RA/Dec samples from the cometSnapshot "
                 "ephemeris, linearly interpolated between source sample timestamps."
@@ -824,6 +1148,7 @@ def build_package(
             "coordinateFrame": {
                 "comet": "geocentric-apparent-equatorial-of-date",
                 "target": "catalog-j2000-equatorial",
+                "dynamicBody": "geocentric-apparent-equatorial-of-date",
                 "units": {
                     "rightAscension": "hours",
                     "declination": "degrees",
@@ -831,37 +1156,72 @@ def build_package(
             },
             "timescale": "UTC",
             "closestApproachAlgorithm": (
-                "Detect local angular-separation minima on the cometSnapshot sample grid, "
-                "refine each bracket by interpolating comet RA/Dec on a finer grid, then "
-                "apply quadratic time interpolation."
+                "Detect local angular-separation minima on the cometSnapshot sample grid "
+                "for static targets and on the dynamic Moon/planet sample grid for dynamic "
+                "targets, refine each bracket on a finer grid, then apply quadratic time "
+                "interpolation."
             ),
             "eventIDAlgorithm": (
-                "Stable comet ID plus canonical target-group ID plus UTC closest-approach date."
+                "Stable comet ID plus companion ID plus UTC closest-approach date."
             ),
             "cometMagnitudeModel": (
                 "Interpolated apparent magnitude from the cometSnapshot sample row when finite."
             ),
+            "ephemeris": None if args.skip_dynamic_dynamic else args.ephemeris,
+            "ephemerisPath": None
+            if args.skip_dynamic_dynamic
+            else str(getattr(skyfield_ephemeris, "filename", args.ephemeris)),
+            "ephemerisSource": (
+                None
+                if args.skip_dynamic_dynamic
+                else "JPL Development Ephemeris loaded through Skyfield"
+            ),
+            "dynamicBodyFrame": (
+                None
+                if args.skip_dynamic_dynamic
+                else (
+                    "Geocentric apparent equatorial RA/Dec for Moon and planets from "
+                    "Skyfield earth.at(t).observe(body).apparent()."
+                )
+            ),
+            "planetMagnitudeModel": (
+                None
+                if args.skip_dynamic_dynamic
+                else "Skyfield magnitudelib planetary_magnitude where finite."
+            ),
+            "moonMagnitudeModel": (
+                None
+                if args.skip_dynamic_dynamic
+                else "Approximate visual magnitude from lunar phase angle; intended for context."
+            ),
+            "versions": sky_versions or None,
         },
         "generationModel": {
             "dynamicStatic": {
                 "status": "generated",
                 "dynamicParticipantKind": "comet",
                 "staticParticipantKind": "deepSkyObject",
-                "eventType": EVENT_TYPE,
+                "eventType": COMET_TARGET_EVENT_TYPE,
             },
-            "dynamicDynamic": {
-                "status": "scaffoldedNotGenerated",
-                "participantKinds": ["comet", "moon", "majorPlanet"],
-                "reason": (
-                    "This PR does not add a shared Moon/planet/comet ephemeris-stream adapter "
-                    "for dynamic-dynamic pairs. The output model and policy section are ready "
-                    "for a future generator that pairs two dynamic streams over a shared range."
-                ),
-            },
+            "dynamicDynamic": lunar.prune_none(
+                {
+                    "status": "skipped" if args.skip_dynamic_dynamic else "generated",
+                    "participantKinds": ["comet", "moon", "majorPlanet"],
+                    "eventType": COMET_DYNAMIC_EVENT_TYPE,
+                    "reason": None
+                    if not args.skip_dynamic_dynamic
+                    else "Dynamic-dynamic generation was explicitly skipped for this build.",
+                }
+            ),
             "excluded": ["deepSkyObject-deepSkyObject"],
         },
         "parameters": {
             "maxSeparationDegrees": args.max_separation_degrees,
+            "dynamicDynamicMaxSeparationDegrees": (
+                args.dynamic_dynamic_max_separation_degrees
+                if args.dynamic_dynamic_max_separation_degrees is not None
+                else args.max_separation_degrees
+            ),
             "cometCandidateFilter": {
                 "sourceCometCount": len(source_comet_streams),
                 "maxCometMagnitude": args.max_comet_magnitude,
@@ -881,8 +1241,9 @@ def build_package(
                 "includeNamedShowcaseTargets": "target neighborhood catalog IDs",
                 "excludeUnknownMagnitudeBackCatalogTargets": True,
             },
-            "sourceSampleStepHours": ephemeris.get("sampleStepHours"),
+            "sourceSampleStepHours": comet_ephemeris.get("sampleStepHours"),
             "refineStepMinutes": args.refine_step_minutes,
+            "dynamicSampleStepMinutes": args.dynamic_sample_step_minutes,
             "dedupeCoordinateArcmin": args.dedupe_coordinate_arcmin,
             "ranking": {
                 "maxEventsPerComet": args.max_events_per_comet,
@@ -897,6 +1258,14 @@ def build_package(
                 "horizonObstructionFilter": "app-side",
             },
             "shardStrategy": "monthly UTC by true closestApproachUTC",
+            "dynamicSubjects": {
+                "includeMoon": any(subject.kind == "moon" for subject in dynamic_body_subjects),
+                "majorPlanets": [
+                    subject.body_id
+                    for subject in dynamic_body_subjects
+                    if subject.kind == "majorPlanet"
+                ],
+            },
             "identityResolution": {
                 "coordinateToleranceArcmin": identity_context.coordinate_tolerance_arcmin,
                 "catalogPreferenceOrder": ["Messier", "NGC", "IC", "Caldwell", "supportedCatalogs"],
@@ -912,13 +1281,19 @@ def build_package(
             "candidateComets": len(comet_streams),
             "candidateSelectionReasons": dict(sorted(selection_counts.items())),
             "events": counts["events"],
+            "eventsByType": counts["eventsByType"],
             "eventsByComet": counts["eventsByComet"],
             "eventsByTarget": counts["eventsByTarget"],
+            "eventsBySolarSystemBody": counts["eventsBySolarSystemBody"],
             "shardEventRows": shard_event_rows,
             "shards": len(shard_descriptors),
         },
         "subjects": {
             "comets": [comet_subject_payload(stream) for stream in comet_streams],
+            "dynamicBodies": [
+                dynamic_body_subject_payload(subject, subject.body_id in event_dynamic_body_ids)
+                for subject in dynamic_body_subjects
+            ],
             "targetGroups": [
                 lunar.target_group_payload(
                     group,
@@ -932,7 +1307,10 @@ def build_package(
             "index": "compact-json",
             "shards": "compact-json",
             "shardStrategy": "monthly",
-            "participantModel": "Ordered generic participants: comet first, deep-sky target second.",
+            "participantModel": (
+                "Ordered generic participants: comet first, then deep-sky target, Moon, "
+                "or major planet."
+            ),
         },
         "shards": shard_descriptors,
         "notes": [
@@ -969,19 +1347,38 @@ def comet_subject_payload(stream: CometStream) -> dict[str, Any]:
     )
 
 
+def dynamic_body_subject_payload(subject: DynamicBodySubject, has_events: bool) -> dict[str, Any]:
+    return {
+        "kind": subject.kind,
+        "id": subject.body_id,
+        "displayName": subject.display_name,
+        "ephemerisKey": subject.ephemeris_key,
+        "hasEvents": has_events,
+    }
+
+
 def event_counts(events: list[dict[str, Any]]) -> dict[str, Any]:
+    by_type: dict[str, int] = defaultdict(int)
     by_comet: dict[str, int] = defaultdict(int)
     by_target: dict[str, int] = defaultdict(int)
+    by_solar_system_body: dict[str, int] = defaultdict(int)
     for event in events:
-        comet, target = event_participants(event)
+        by_type[str(event.get("type") or "unknown")] += 1
+        comet, companion = event_participants(event)
         if comet:
             by_comet[str(comet.get("id") or "unknown")] += 1
-        if target:
-            by_target[str(target.get("id") or "unknown")] += 1
+        if companion:
+            companion_id = str(companion.get("id") or "unknown")
+            if companion.get("kind") == "deepSkyObject":
+                by_target[companion_id] += 1
+            elif companion.get("kind") in {"moon", "majorPlanet"}:
+                by_solar_system_body[companion_id] += 1
     return {
         "events": len(events),
+        "eventsByType": dict(sorted(by_type.items())),
         "eventsByComet": dict(sorted(by_comet.items())),
         "eventsByTarget": dict(sorted(by_target.items())),
+        "eventsBySolarSystemBody": dict(sorted(by_solar_system_body.items())),
     }
 
 
@@ -1092,17 +1489,23 @@ def validate_package(package: dict[str, Any], index_path: Path) -> None:
     model = package.get("generationModel") or {}
     if (model.get("dynamicStatic") or {}).get("status") != "generated":
         raise RuntimeError("Package must describe generated dynamic-static output.")
-    if (model.get("dynamicDynamic") or {}).get("status") != "scaffoldedNotGenerated":
-        raise RuntimeError("Package must describe the dynamic-dynamic scaffold status.")
+    if (model.get("dynamicDynamic") or {}).get("status") not in {"generated", "skipped"}:
+        raise RuntimeError("Package must describe the dynamic-dynamic generation status.")
 
     window = package.get("window") or {}
     package_start = lunar.parse_utc_datetime(str(window.get("startUTC") or ""))
     package_end = lunar.parse_utc_datetime(str(window.get("endUTC") or ""))
     if package_end <= package_start:
         raise RuntimeError("Package window must be non-empty.")
-    threshold = lunar.finite_float((package.get("parameters") or {}).get("maxSeparationDegrees"))
+    parameters = package.get("parameters") or {}
+    threshold = lunar.finite_float(parameters.get("maxSeparationDegrees"))
+    dynamic_threshold = lunar.finite_float(parameters.get("dynamicDynamicMaxSeparationDegrees"))
     if threshold is None or threshold <= 0:
         raise RuntimeError("Package maxSeparationDegrees must be positive.")
+    if dynamic_threshold is None:
+        dynamic_threshold = threshold
+    if dynamic_threshold <= 0:
+        raise RuntimeError("Package dynamicDynamicMaxSeparationDegrees must be positive.")
 
     subjects = package.get("subjects") or {}
     comet_ids = {
@@ -1115,8 +1518,15 @@ def validate_package(package: dict[str, Any], index_path: Path) -> None:
         for row in subjects.get("targetGroups") or []
         if isinstance(row, dict)
     }
+    dynamic_body_ids = {
+        str(row.get("id") or "")
+        for row in subjects.get("dynamicBodies") or []
+        if isinstance(row, dict)
+    }
     if not comet_ids:
         raise RuntimeError("Index must contain comet subjects.")
+    if not dynamic_body_ids:
+        raise RuntimeError("Index must contain dynamic body subjects.")
 
     shards = package.get("shards")
     if not isinstance(shards, list) or not shards:
@@ -1145,10 +1555,12 @@ def validate_package(package: dict[str, Any], index_path: Path) -> None:
             descriptor,
             package,
             threshold=threshold,
+            dynamic_threshold=dynamic_threshold,
             package_start=package_start,
             package_end=package_end,
             comet_ids=comet_ids,
             target_groups=target_groups,
+            dynamic_body_ids=dynamic_body_ids,
         )
         shard_event_rows += counts["events"]
         for event in payload["events"]:
@@ -1165,6 +1577,10 @@ def validate_package(package: dict[str, Any], index_path: Path) -> None:
         raise RuntimeError("Index eventsByComet does not match shards.")
     if counts["eventsByTarget"] != package_counts.get("eventsByTarget"):
         raise RuntimeError("Index eventsByTarget does not match shards.")
+    if counts["eventsBySolarSystemBody"] != package_counts.get("eventsBySolarSystemBody"):
+        raise RuntimeError("Index eventsBySolarSystemBody does not match shards.")
+    if counts["eventsByType"] != package_counts.get("eventsByType"):
+        raise RuntimeError("Index eventsByType does not match shards.")
     if shard_event_rows != int(package_counts.get("shardEventRows") or 0):
         raise RuntimeError("Index shardEventRows does not match shards.")
     if len(shards) != int(package_counts.get("shards") or 0):
@@ -1204,10 +1620,12 @@ def validate_shard_payload(
     index_package: dict[str, Any],
     *,
     threshold: float,
+    dynamic_threshold: float,
     package_start: dt.datetime,
     package_end: dt.datetime,
     comet_ids: set[str],
     target_groups: dict[str, dict[str, Any]],
+    dynamic_body_ids: set[str],
 ) -> dict[str, Any]:
     shard_id = str(descriptor["id"])
     if payload.get("schemaVersion") != 1:
@@ -1233,12 +1651,14 @@ def validate_shard_payload(
     counts = validate_events(
         events,
         threshold=threshold,
+        dynamic_threshold=dynamic_threshold,
         package_start=package_start,
         package_end=package_end,
         shard_start=shard_start,
         shard_end=shard_end,
         comet_ids=comet_ids,
         target_groups=target_groups,
+        dynamic_body_ids=dynamic_body_ids,
     )
     if counts["events"] != int(descriptor["eventCount"]):
         raise RuntimeError(f"Shard {shard_id} eventCount mismatch.")
@@ -1251,12 +1671,14 @@ def validate_events(
     events: list[dict[str, Any]],
     *,
     threshold: float,
+    dynamic_threshold: float | None = None,
     package_start: dt.datetime,
     package_end: dt.datetime,
     shard_start: dt.datetime,
     shard_end: dt.datetime,
     comet_ids: set[str],
     target_groups: dict[str, dict[str, Any]],
+    dynamic_body_ids: set[str],
 ) -> dict[str, Any]:
     previous_key = ("", "")
     seen_ids: set[str] = set()
@@ -1271,7 +1693,8 @@ def validate_events(
         if event_id in seen_ids:
             raise RuntimeError(f"Duplicate event ID within shard: {event_id}.")
         seen_ids.add(event_id)
-        if event.get("eventFamily") != EVENT_FAMILY or event.get("type") != EVENT_TYPE:
+        event_type = str(event.get("type") or "")
+        if event.get("eventFamily") != EVENT_FAMILY or event_type not in EVENT_TYPES:
             raise RuntimeError(f"Event {event_id} has unsupported family or type.")
         event_time = lunar.parse_utc_datetime(event_time_text)
         closest_time = lunar.parse_utc_datetime(closest_text)
@@ -1286,35 +1709,61 @@ def validate_events(
             raise RuntimeError("Comet close-encounter events must be sorted by time and ID.")
         previous_key = key
 
+        event_threshold = (
+            dynamic_threshold
+            if event_type == COMET_DYNAMIC_EVENT_TYPE and dynamic_threshold is not None
+            else threshold
+        )
         separation = lunar.finite_float(event.get("minimumSeparationDegrees"))
-        if separation is None or separation < 0 or separation > threshold + 0.000_001:
+        if separation is None or separation < 0 or separation > event_threshold + 0.000_001:
             raise RuntimeError(f"Event {event_id} separation is outside the package threshold.")
-        comet, target = event_participants(event)
-        if comet is None or target is None:
-            raise RuntimeError(f"Event {event_id} must contain one comet and one DSO participant.")
+        comet, companion = event_participants(event)
+        if comet is None or companion is None:
+            raise RuntimeError(
+                f"Event {event_id} must contain one comet and one companion participant."
+            )
         comet_id = str(comet.get("id") or "")
-        target_id = str(target.get("id") or "")
+        companion_id = str(companion.get("id") or "")
         if comet_id not in comet_ids:
             raise RuntimeError(f"Event {event_id} references unknown comet {comet_id}.")
-        target_group = target_groups.get(target_id)
-        if target_group is None:
-            raise RuntimeError(f"Event {event_id} references unknown target group {target_id}.")
-        for participant in (comet, target):
+        for participant in (comet, companion):
             validate_participant_coordinate(participant, event_id)
             magnitude = participant.get("magnitude")
             if magnitude is not None and lunar.finite_float(magnitude) is None:
                 raise RuntimeError(f"Event {event_id} contains a non-finite magnitude.")
-        for key_name in ("catalogID", "displayName", "objectType"):
-            if not str(target.get(key_name) or "").strip():
-                raise RuntimeError(f"Event {event_id} target is missing {key_name}.")
-        target_ids = target_group.get("targetIDs") or []
-        if target.get("catalogID") not in target_ids:
-            raise RuntimeError(f"Event {event_id} target catalogID is not canonical for {target_id}.")
-        if target.get("displayName") != target_group.get("displayName"):
-            raise RuntimeError(f"Event {event_id} target displayName disagrees with index.")
-        if target.get("objectType") != (target_group.get("objectType") or "Unknown"):
-            raise RuntimeError(f"Event {event_id} target objectType disagrees with index.")
-        expected_id = event_identifier(comet_id, target_id, closest_time)
+        if event_type == COMET_TARGET_EVENT_TYPE:
+            if companion.get("kind") != "deepSkyObject":
+                raise RuntimeError(f"Event {event_id} must contain a DSO companion.")
+            target_group = target_groups.get(companion_id)
+            if target_group is None:
+                raise RuntimeError(f"Event {event_id} references unknown target group {companion_id}.")
+            for key_name in ("catalogID", "displayName", "objectType"):
+                if not str(companion.get(key_name) or "").strip():
+                    raise RuntimeError(f"Event {event_id} target is missing {key_name}.")
+            target_ids = target_group.get("targetIDs") or []
+            if companion.get("catalogID") not in target_ids:
+                raise RuntimeError(
+                    f"Event {event_id} target catalogID is not canonical for {companion_id}."
+                )
+            if companion.get("displayName") != target_group.get("displayName"):
+                raise RuntimeError(f"Event {event_id} target displayName disagrees with index.")
+            if companion.get("objectType") != (target_group.get("objectType") or "Unknown"):
+                raise RuntimeError(f"Event {event_id} target objectType disagrees with index.")
+        else:
+            if companion.get("kind") not in {"moon", "majorPlanet"}:
+                raise RuntimeError(f"Event {event_id} must contain a Moon or major planet companion.")
+            if companion_id not in dynamic_body_ids:
+                raise RuntimeError(
+                    f"Event {event_id} references unknown dynamic body {companion_id}."
+                )
+            if not str(companion.get("displayName") or "").strip():
+                raise RuntimeError(f"Event {event_id} dynamic body is missing displayName.")
+        expected_id = event_identifier(
+            comet_id,
+            companion_id,
+            closest_time,
+            event_type=event_type,
+        )
         if event_id != expected_id:
             raise RuntimeError(
                 f"Event {event_id} does not match stable ID convention {expected_id}."
@@ -1334,12 +1783,14 @@ def event_participants(
     comets = [
         row for row in participants if isinstance(row, dict) and row.get("kind") == "comet"
     ]
-    targets = [
-        row for row in participants if isinstance(row, dict) and row.get("kind") == "deepSkyObject"
+    companions = [
+        row
+        for row in participants
+        if isinstance(row, dict) and row.get("kind") in {"deepSkyObject", "moon", "majorPlanet"}
     ]
-    if len(comets) != 1 or len(targets) != 1:
+    if len(comets) != 1 or len(companions) != 1:
         return None, None
-    return comets[0], targets[0]
+    return comets[0], companions[0]
 
 
 def validate_participant_coordinate(participant: dict[str, Any], event_id: str) -> None:
@@ -1383,11 +1834,22 @@ def validate_manifest_descriptor(
         raise RuntimeError("Manifest checksum does not match index.")
 
 
-def event_identifier(comet_id: str, target_id: str, timestamp: dt.datetime) -> str:
+def event_identifier(
+    comet_id: str,
+    companion_id: str,
+    timestamp: dt.datetime,
+    *,
+    event_type: str = COMET_TARGET_EVENT_TYPE,
+) -> str:
     comet_component = identifier_component(comet_id)
-    target_component = identifier_component(target_id)
+    companion_component = identifier_component(companion_id)
+    prefix = (
+        "comet-dynamic-close-encounter"
+        if event_type == COMET_DYNAMIC_EVENT_TYPE
+        else "comet-target-close-encounter"
+    )
     return (
-        f"comet-target-close-encounter-{comet_component}-{target_component}-"
+        f"{prefix}-{comet_component}-{companion_component}-"
         f"{timestamp:%Y%m%d}"
     )
 
