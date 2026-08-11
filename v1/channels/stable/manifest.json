@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-08-09T00:00:00Z",
-  "publishedAt": "2026-08-09T00:00:00Z",
+  "generatedAt": "2026-08-11T00:00:00Z",
+  "publishedAt": "2026-08-11T00:00:00Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -95,6 +95,21 @@
       "fallbackNotes": "Use the bundled comet seed and ephemeris snapshot if no validated cached package is available, if the cached package is expired, or if package validation fails."
     },
     {
+      "family": "cometOrbitGeometry",
+      "packageVersion": "comet-orbit-geometry-v1-20260811",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/comet-orbit-geometry/comet_orbit_geometry_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "29f295fa8aad4aac1ecdd1562b53a79c29250f2e8d283aa416a5e350e89843fe"
+      },
+      "byteSize": 209773,
+      "minSupportedAppVersion": "1.4.0",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Clients that support this family should retain bundled comet orbit geometry or hide orbit-rendering affordances when no compatible package is available."
+    },
+    {
       "family": "planetCatalog",
       "packageVersion": "planet-catalog-v1-20260725",
       "payloadSchemaVersion": 1,
@@ -154,6 +169,21 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Clients that support this family should retain a bundled or cached validated snapshot and degrade gracefully when no compatible package is available."
+    },
+    {
+      "family": "cometCloseEncounters",
+      "packageVersion": "comet-close-encounters-v1-20260811",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/comet-close-encounters/comet_close_encounter_metadata_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "ee726de9bde27cbee5ec9fe7b645c224129c07480010f1ca8716957862aba30d"
+      },
+      "byteSize": 112748,
+      "minSupportedAppVersion": "1.4.0",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Clients that support this family should retain bundled or cached validated close-encounter shards and degrade gracefully when no compatible package exists."
     },
     {
       "family": "seasonalRecommendationCandidates",
