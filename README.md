@@ -21,12 +21,15 @@ v1/packages/equipment/equipment_catalog_v1.json
 v1/packages/equipment/astrophotography_equipment_catalog_v1.json
 v1/packages/dark-sky-places/dark_sky_places_v1.json
 v1/packages/comets/comet_snapshot_v1.json
+v1/packages/comet-orbit-geometry/comet_orbit_geometry_v1.json
 v1/packages/planet-catalog/planet_catalog_v1.json
 v1/packages/lunar-events/lunar_event_metadata_v1.json
 v1/packages/lunar-events/shards/lunar_events_YYYY_MM_v1.json
 v1/packages/full-moon-name-aliases/full_moon_name_alias_metadata_v1.json
 v1/packages/planet-target-close-encounters/planet_target_close_encounter_metadata_v1.json
 v1/packages/planet-target-close-encounters/shards/planet_target_close_encounters_YYYY_MM_v1.json
+v1/packages/comet-close-encounters/comet_close_encounter_metadata_v1.json
+v1/packages/comet-close-encounters/shards/comet_close_encounters_YYYY_MM_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 sources/target-metadata-overlay/2026-05-curated-workbooks/
 ```
@@ -157,6 +160,47 @@ altitude, horizon/obstruction, and observability filtering remain app-side.
 The index and shard schema, event-ID convention, candidate-filter rationale,
 and DSOPlanneriOS integration boundary are documented in
 [`docs/planet-target-close-encounters-v1.md`](docs/planet-target-close-encounters-v1.md).
+
+## Rebuilding Comet Orbit Geometry Packages
+
+The `cometOrbitGeometry` package wraps the bundled comet orbit/trajectory
+geometry contract in a hosted metadata envelope, separate from `cometSnapshot`:
+
+```bash
+scripts/build_comet_orbit_geometry_package.py --app-repo ../DSOPlanneriOS
+scripts/build_comet_orbit_geometry_package.py --validate-only
+```
+
+The package preserves the comet snapshot stable IDs, coordinate/sample frame
+metadata, rendering kind, heliocentric path samples, dated heliocentric samples,
+and anti-solar tail model metadata. Long-period, non-periodic, hyperbolic,
+parabolic, or poorly closed objects remain `trajectoryArc` records.
+
+The package contract is documented in
+[`docs/comet-orbit-geometry-v1.md`](docs/comet-orbit-geometry-v1.md).
+
+## Rebuilding Comet Close-Encounter Packages
+
+The `cometCloseEncounters` package publishes Comet to DSO close encounters using
+the systematic Dynamic to Static model: comet snapshot ephemeris streams against
+static AstroGuide catalog target groups.
+
+```bash
+/tmp/astroguide-comet-events-venv/bin/python \
+  scripts/build_comet_close_encounter_package.py \
+  --app-repo ../DSOPlanneriOS
+
+/tmp/astroguide-comet-events-venv/bin/python \
+  scripts/build_comet_close_encounter_package.py --validate-only
+```
+
+The generated `2026-08-11` package contains 247 true-UTC closest-approach events
+across 12 monthly shards. It intentionally does not generate DSO to DSO events.
+The Dynamic to Dynamic Comet to Moon/Planet generator shape is documented as a
+scaffolded follow-up.
+
+The package contract is documented in
+[`docs/comet-close-encounters-v1.md`](docs/comet-close-encounters-v1.md).
 
 ## Rebuilding Comet Snapshot Packages
 
