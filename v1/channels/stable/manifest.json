@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-08-11T00:00:00Z",
-  "publishedAt": "2026-08-11T00:00:00Z",
+  "generatedAt": "2026-08-12T12:47:58Z",
+  "publishedAt": "2026-08-12T12:47:58Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -51,14 +51,14 @@
     },
     {
       "family": "astrophotographyEquipmentCatalog",
-      "packageVersion": "astrophotography-equipment-catalog-v1-2026-07-28",
+      "packageVersion": "astrophotography-equipment-catalog-v1-2026-08-12",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/equipment/astrophotography_equipment_catalog_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "b5d64aa6cd73d3eaacf6c523cbea93eda11cb6a5cdd450e78c42188a144810d5"
+        "value": "4795265a901dbfbf64c49dabf8ec1bdc8a3417d5c64a4f87819616bbe3a06af8"
       },
-      "byteSize": 1278580,
+      "byteSize": 1281877,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
