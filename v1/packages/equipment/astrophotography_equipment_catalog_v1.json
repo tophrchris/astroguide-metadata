@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "astrophotographyEquipmentCatalog",
-  "packageVersion": "astrophotography-equipment-catalog-v1-2026-07-28",
-  "generatedAt": "2026-07-28T09:59:48Z",
+  "packageVersion": "astrophotography-equipment-catalog-v1-2026-08-12",
+  "generatedAt": "2026-08-12T12:47:58Z",
   "source": {
     "name": "AstroGuide bundled astrophotography equipment catalog",
     "generatedBy": "astroguide-metadata equipment package builder",
@@ -19,10 +19,10 @@
       "permissionNote": "Permission reported in AstroGuide issue #678; include Astronomy.Tools link in credits and acknowledgments."
     },
     "counts": {
-      "optical_tubes": 809,
-      "lenses": 133,
+      "optical_tubes": 811,
+      "lenses": 134,
       "cameras": 381,
-      "total": 1323
+      "total": 1326
     },
     "normalizationNotes": [
       "Manufacturer names are whitespace/case normalized and selected variants are merged for curation convenience.",
@@ -14130,6 +14130,66 @@
         "source_attribution": "Astronomy.Tools Field of View calculator equipment data; used with permission, credit required.",
         "source_confidence": "source_calculator_option",
         "curator_notes": ""
+      },
+      {
+        "curation_status": "needs_review",
+        "include_in_app": "",
+        "component_type": "lens_candidate",
+        "component_id": "lens-candidate-svbony-sv535-official",
+        "manufacturer": "SVBONY",
+        "manufacturer_raw": "SVBONY",
+        "model": "SV535",
+        "aperture_mm": 37.5,
+        "native_focal_length_mm": 105.0,
+        "native_focal_ratio": 2.8,
+        "optical_design": "APO astro camera lens",
+        "source_id": "sv535-portable-f28-35mm-apo-telescope-with-ed-glass",
+        "source_label": "SVBONY - SV535",
+        "source_value": "SVBONY|SV535|37.50|105.00|sv535-portable-f28-35mm-apo-telescope-with-ed-glass",
+        "source_url": "https://www.svbony.com/products/sv535-portable-f28-35mm-apo-telescope-with-ed-glass",
+        "source_attribution": "SVBONY official product page.",
+        "source_confidence": "official_product_page",
+        "curator_notes": "Official SVBONY page lists a 105mm f/2.8 APO astro camera lens with 7 elements in 5 groups; aperture is derived from focal length divided by focal ratio. SVBONY notes a 24mm back focal length and camera adapter limitations that are not represented in this schema."
+      },
+      {
+        "curation_status": "needs_review",
+        "include_in_app": "",
+        "component_type": "optical_tube",
+        "component_id": "optical-tube-svbony-sv545-official",
+        "manufacturer": "SVBONY",
+        "manufacturer_raw": "SVBONY",
+        "model": "SV545",
+        "aperture_mm": 45.0,
+        "native_focal_length_mm": 203.0,
+        "native_focal_ratio": 4.5,
+        "optical_design": "Petzval APO astrograph",
+        "source_id": "petzval-refractor-astrograph-lens-svbony-sv545",
+        "source_label": "SVBONY - SV545",
+        "source_value": "SVBONY|SV545|45.00|203.00|petzval-refractor-astrograph-lens-svbony-sv545",
+        "source_url": "https://www.svbony.com/products/petzval-refractor-astrograph-lens-svbony-sv545",
+        "source_attribution": "SVBONY official product page.",
+        "source_confidence": "official_product_page",
+        "curator_notes": "Official SVBONY page lists a 45mm f/4.5 Petzval Design astrograph with 203mm focal length and 5 elements in 3 groups."
+      },
+      {
+        "curation_status": "needs_review",
+        "include_in_app": "",
+        "component_type": "optical_tube",
+        "component_id": "optical-tube-svbony-sv555-official",
+        "manufacturer": "SVBONY",
+        "manufacturer_raw": "SVBONY",
+        "model": "SV555",
+        "aperture_mm": 54.0,
+        "native_focal_length_mm": 243.0,
+        "native_focal_ratio": 4.5,
+        "optical_design": "Petzval APO astrograph",
+        "source_id": "sv555-astrograph-lens",
+        "source_label": "SVBONY - SV555",
+        "source_value": "SVBONY|SV555|54.00|243.00|sv555-astrograph-lens",
+        "source_url": "https://www.svbony.com/products/sv555-astrograph-lens",
+        "source_attribution": "SVBONY official product page.",
+        "source_confidence": "official_product_page",
+        "curator_notes": "Official SVBONY page lists a 54mm f/4.5 Petzval Design astrograph with 243mm focal length, 44mm full-frame image circle, and 5 elements in 3 groups. Variable aperture range extends to f/22; Telescope Workshop models the native fastest ratio."
       },
       {
         "curation_status": "needs_review",
