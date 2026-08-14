@@ -1,14 +1,160 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometSnapshot",
-  "packageVersion": "comet-snapshot-v1-2026-07-12-cobs-horizons-20",
-  "generatedAt": "2026-07-12T21:25:04Z",
+  "packageVersion": "comet-snapshot-v1-2026-08-14-cobs-horizons-20-aerith",
+  "generatedAt": "2026-08-14T17:10:36Z",
   "source": {
     "name": "AstroGuide COBS/Horizons comet snapshot",
     "generatedBy": "build_comet_close_passes.py",
     "candidateSource": "https://cobs.si/api/comet_list.api",
     "ephemerisSource": "JPL Horizons via astroquery",
-    "notes": "Data-lab package candidate. Wraps the generated comet seed and ephemeris payloads in the dynamic metadata package envelope."
+    "notes": "Data-lab package candidate. Wraps the generated comet seed and ephemeris payloads in the dynamic metadata package envelope.",
+    "aerithWeeklySource": {
+      "name": "Aerith Weekly Information about Bright Comets",
+      "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+      "generatedAt": "2026-08-14T17:10:25Z",
+      "permissionStatus": "permission-requested",
+      "matchedCometCount": 15,
+      "imageUsage": "candidate-only",
+      "magnitudePatchCount": 15
+    },
+    "aerithMagnitudePatches": [
+      {
+        "stableID": "COMET:10P",
+        "aerithName": "10P/Tempel 2",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 8.0,
+        "endMagnitude": 8.1,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:220P",
+        "aerithName": "220P/McNaught",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 7.3,
+        "endMagnitude": 8.0,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:78P",
+        "aerithName": "78P/Gehrels 2",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 13.2,
+        "endMagnitude": 13.2,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:C_2023_R1",
+        "aerithName": "C/2023 R1 ( PanSTARRS )",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 14.0,
+        "endMagnitude": 14.1,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:C_2024_J3",
+        "aerithName": "C/2024 J3 ( ATLAS )",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 13.5,
+        "endMagnitude": 13.5,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:C_2025_R3",
+        "aerithName": "C/2025 R3 ( PanSTARRS )",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 13.6,
+        "endMagnitude": 13.9,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:169P",
+        "aerithName": "169P/NEAT",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 12.0,
+        "endMagnitude": 11.2,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:123P",
+        "aerithName": "123P/West-Hartley",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 15.2,
+        "endMagnitude": 15.1,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:161P",
+        "aerithName": "161P/Hartley-IRAS",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 15.3,
+        "endMagnitude": 14.8,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:65P",
+        "aerithName": "65P/Gunn",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 16.7,
+        "endMagnitude": 16.7,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:235P",
+        "aerithName": "235P/LINEAR",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 17.1,
+        "endMagnitude": 17.4,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:C_2024_T5",
+        "aerithName": "C/2024 T5 ( ATLAS )",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 13.0,
+        "endMagnitude": 12.9,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:260P",
+        "aerithName": "260P/McNaught",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 13.2,
+        "endMagnitude": 13.1,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:C_2021_G2",
+        "aerithName": "C/2021 G2 ( ATLAS )",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 15.8,
+        "endMagnitude": 15.8,
+        "sampleCount": 15
+      },
+      {
+        "stableID": "COMET:88P",
+        "aerithName": "88P/Howell",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-15",
+        "startMagnitude": 12.4,
+        "endMagnitude": 12.6,
+        "sampleCount": 15
+      }
+    ]
   },
   "seeds": {
     "generatedAt": "2026-07-12T21:25:04Z",
@@ -42,7 +188,95 @@
           "cobsCurrentMagnitude": 9.3,
           "cobsPeakMagnitude": 8.8,
           "cobsPeakMagnitudeDate": "2026-08-03",
-          "cobsPerihelionDate": "2026-08-02 02:44"
+          "cobsPerihelionDate": "2026-08-02 02:44",
+          "aerithWeekly": {
+            "aerithName": "10P/Tempel 2",
+            "normalizedDesignation": "10P",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 2,
+              "south": 2
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
+            "currentMagnitude": 8.0,
+            "nextWeekMagnitude": 8.1,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 21.97,
+                  "declinationDegrees": -27.20166667,
+                  "geocentricDistanceAU": 0.416,
+                  "heliocentricDistanceAU": 1.419,
+                  "elongationDegrees": 164.0,
+                  "magnitude": 8.0,
+                  "bestTimeLocal": "0:54",
+                  "bestAzimuthDegreesFromSouth": 0.0,
+                  "bestAltitudeDegrees": 28.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 22.09266667,
+                  "declinationDegrees": -29.94833333,
+                  "geocentricDistanceAU": 0.424,
+                  "heliocentricDistanceAU": 1.424,
+                  "elongationDegrees": 162.0,
+                  "magnitude": 8.1,
+                  "bestTimeLocal": "0:34",
+                  "bestAzimuthDegreesFromSouth": 0.0,
+                  "bestAltitudeDegrees": 25.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 21.97,
+                  "declinationDegrees": -27.20166667,
+                  "geocentricDistanceAU": 0.416,
+                  "heliocentricDistanceAU": 1.419,
+                  "elongationDegrees": 164.0,
+                  "magnitude": 8.0,
+                  "bestTimeLocal": "0:54",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 82.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 22.09266667,
+                  "declinationDegrees": -29.94833333,
+                  "geocentricDistanceAU": 0.424,
+                  "heliocentricDistanceAU": 1.424,
+                  "elongationDegrees": 162.0,
+                  "magnitude": 8.1,
+                  "bestTimeLocal": "0:34",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 85.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/jager/s/10P20260616UT0040sec18x180_2.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 7.4,
+                "reportedDateText": "Aug. 5",
+                "observer": "Chris Wyatt"
+              },
+              {
+                "magnitude": 7.4,
+                "reportedDateText": "Aug. 5",
+                "observer": "Chris Wyatt"
+              }
+            ]
+          }
         },
         "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Comet_Tempel_2_by_Lick_Observatory%2C_1946.jpg/330px-Comet_Tempel_2_by_Lick_Observatory%2C_1946.jpg"
       },
@@ -70,7 +304,105 @@
           "cobsCurrentMagnitude": 12.2,
           "cobsPeakMagnitude": 12.2,
           "cobsPeakMagnitudeDate": "2026-06-14",
-          "cobsPerihelionDate": "2026-06-14 02:51"
+          "cobsPerihelionDate": "2026-06-14 02:51",
+          "aerithWeekly": {
+            "aerithName": "220P/McNaught",
+            "normalizedDesignation": "220P",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 1,
+              "south": 1
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+            "currentMagnitude": 7.3,
+            "nextWeekMagnitude": 8.0,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 2.711,
+                  "declinationDegrees": 9.51666667,
+                  "geocentricDistanceAU": 1.231,
+                  "heliocentricDistanceAU": 1.647,
+                  "elongationDegrees": 93.0,
+                  "magnitude": 7.3,
+                  "bestTimeLocal": "3:39",
+                  "bestAzimuthDegreesFromSouth": 306.0,
+                  "bestAltitudeDegrees": 53.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 2.915,
+                  "declinationDegrees": 9.54833333,
+                  "geocentricDistanceAU": 1.199,
+                  "heliocentricDistanceAU": 1.669,
+                  "elongationDegrees": 97.0,
+                  "magnitude": 8.0,
+                  "bestTimeLocal": "3:47",
+                  "bestAzimuthDegreesFromSouth": 313.0,
+                  "bestAltitudeDegrees": 56.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 2.711,
+                  "declinationDegrees": 9.51666667,
+                  "geocentricDistanceAU": 1.231,
+                  "heliocentricDistanceAU": 1.647,
+                  "elongationDegrees": 93.0,
+                  "magnitude": 7.3,
+                  "bestTimeLocal": "5:22",
+                  "bestAzimuthDegreesFromSouth": 186.0,
+                  "bestAltitudeDegrees": 45.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 2.915,
+                  "declinationDegrees": 9.54833333,
+                  "geocentricDistanceAU": 1.199,
+                  "heliocentricDistanceAU": 1.669,
+                  "elongationDegrees": 97.0,
+                  "magnitude": 8.0,
+                  "bestTimeLocal": "5:15",
+                  "bestAzimuthDegreesFromSouth": 183.0,
+                  "bestAltitudeDegrees": 45.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/fichtl/s/220P_20260807_0140_20B_1min_MG_L_R_b2.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 8.3,
+                "reportedDateText": "June 3",
+                "observer": "Marco Goiato"
+              },
+              {
+                "magnitude": 7.0,
+                "reportedDateText": "Aug. 5",
+                "observer": "iuseppe Pappa"
+              },
+              {
+                "magnitude": 8.3,
+                "reportedDateText": "June 3",
+                "observer": "Marco Goiato"
+              },
+              {
+                "magnitude": 7.0,
+                "reportedDateText": "Aug. 5",
+                "observer": "iuseppe Pappa"
+              }
+            ]
+          }
         }
       },
       {
@@ -125,7 +457,95 @@
           "cobsCurrentMagnitude": 13.7,
           "cobsPeakMagnitude": 13.7,
           "cobsPeakMagnitudeDate": "2026-08-16",
-          "cobsPerihelionDate": "2026-06-25 02:42"
+          "cobsPerihelionDate": "2026-06-25 02:42",
+          "aerithWeekly": {
+            "aerithName": "78P/Gehrels 2",
+            "normalizedDesignation": "78P",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 7,
+              "south": 7
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+            "currentMagnitude": 13.2,
+            "nextWeekMagnitude": 13.2,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 5.58433333,
+                  "declinationDegrees": 20.705,
+                  "geocentricDistanceAU": 2.516,
+                  "heliocentricDistanceAU": 2.037,
+                  "elongationDegrees": 51.0,
+                  "magnitude": 13.2,
+                  "bestTimeLocal": "3:39",
+                  "bestAzimuthDegreesFromSouth": 262.0,
+                  "bestAltitudeDegrees": 25.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 5.84616667,
+                  "declinationDegrees": 20.53666667,
+                  "geocentricDistanceAU": 2.471,
+                  "heliocentricDistanceAU": 2.048,
+                  "elongationDegrees": 54.0,
+                  "magnitude": 13.2,
+                  "bestTimeLocal": "3:47",
+                  "bestAzimuthDegreesFromSouth": 264.0,
+                  "bestAltitudeDegrees": 29.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 5.58433333,
+                  "declinationDegrees": 20.705,
+                  "geocentricDistanceAU": 2.516,
+                  "heliocentricDistanceAU": 2.037,
+                  "elongationDegrees": 51.0,
+                  "magnitude": 13.2,
+                  "bestTimeLocal": "5:22",
+                  "bestAzimuthDegreesFromSouth": 226.0,
+                  "bestAltitudeDegrees": 19.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 5.84616667,
+                  "declinationDegrees": 20.53666667,
+                  "geocentricDistanceAU": 2.471,
+                  "heliocentricDistanceAU": 2.048,
+                  "elongationDegrees": 54.0,
+                  "magnitude": 13.2,
+                  "bestTimeLocal": "5:15",
+                  "bestAzimuthDegreesFromSouth": 225.0,
+                  "bestAltitudeDegrees": 19.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/prystavski/s/0078P-20250910-213623-L-BIN2-_-120-001+3_caption.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 13.6,
+                "reportedDateText": "July 24",
+                "observer": "Hiroshi Abe"
+              },
+              {
+                "magnitude": 13.6,
+                "reportedDateText": "July 24",
+                "observer": "Hiroshi Abe"
+              }
+            ]
+          }
         },
         "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/78P_2019-01-27_image_ZTF-sso-446-zr-fov-5.6arcmin.png/330px-78P_2019-01-27_image_ZTF-sso-446-zr-fov-5.6arcmin.png"
       },
@@ -154,7 +574,95 @@
           "cobsCurrentMagnitude": 13.9,
           "cobsPeakMagnitude": 13.7,
           "cobsPeakMagnitudeDate": "2026-06-09",
-          "cobsPerihelionDate": "2026-04-13 08:47"
+          "cobsPerihelionDate": "2026-04-13 08:47",
+          "aerithWeekly": {
+            "aerithName": "C/2023 R1 ( PanSTARRS )",
+            "normalizedDesignation": "C/2023R1",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 10,
+              "south": 10
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
+            "currentMagnitude": 14.0,
+            "nextWeekMagnitude": 14.1,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 15.80066667,
+                  "declinationDegrees": -12.91333333,
+                  "geocentricDistanceAU": 3.371,
+                  "heliocentricDistanceAU": 3.724,
+                  "elongationDegrees": 102.0,
+                  "magnitude": 14.0,
+                  "bestTimeLocal": "20:31",
+                  "bestAzimuthDegreesFromSouth": 33.0,
+                  "bestAltitudeDegrees": 35.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 15.69466667,
+                  "declinationDegrees": -13.56166667,
+                  "geocentricDistanceAU": 3.525,
+                  "heliocentricDistanceAU": 3.742,
+                  "elongationDegrees": 94.0,
+                  "magnitude": 14.1,
+                  "bestTimeLocal": "20:21",
+                  "bestAzimuthDegreesFromSouth": 39.0,
+                  "bestAltitudeDegrees": 32.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 15.80066667,
+                  "declinationDegrees": -12.91333333,
+                  "geocentricDistanceAU": 3.371,
+                  "heliocentricDistanceAU": 3.724,
+                  "elongationDegrees": 102.0,
+                  "magnitude": 14.0,
+                  "bestTimeLocal": "18:49",
+                  "bestAzimuthDegreesFromSouth": 175.0,
+                  "bestAltitudeDegrees": 68.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 15.69466667,
+                  "declinationDegrees": -13.56166667,
+                  "geocentricDistanceAU": 3.525,
+                  "heliocentricDistanceAU": 3.742,
+                  "elongationDegrees": 94.0,
+                  "magnitude": 14.1,
+                  "bestTimeLocal": "18:53",
+                  "bestAzimuthDegreesFromSouth": 151.0,
+                  "bestAltitudeDegrees": 66.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/fichtl/s/2023R1_20260607_2330_6B_3min_1600_R.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 13.2,
+                "reportedDateText": "Aug. 5",
+                "observer": "Osamu Miyazaki"
+              },
+              {
+                "magnitude": 13.2,
+                "reportedDateText": "Aug. 5",
+                "observer": "Osamu Miyazaki"
+              }
+            ]
+          }
         }
       },
       {
@@ -182,7 +690,95 @@
           "cobsCurrentMagnitude": 14.1,
           "cobsPeakMagnitude": 14.1,
           "cobsPeakMagnitudeDate": "2026-08-15",
-          "cobsPerihelionDate": "2026-11-25 10:08"
+          "cobsPerihelionDate": "2026-11-25 10:08",
+          "aerithWeekly": {
+            "aerithName": "C/2024 J3 ( ATLAS )",
+            "normalizedDesignation": "C/2024J3",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 8,
+              "south": 8
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
+            "currentMagnitude": 13.5,
+            "nextWeekMagnitude": 13.5,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 19.05683333,
+                  "declinationDegrees": 43.07833333,
+                  "geocentricDistanceAU": 3.462,
+                  "heliocentricDistanceAU": 3.982,
+                  "elongationDegrees": 113.0,
+                  "magnitude": 13.5,
+                  "bestTimeLocal": "21:55",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 82.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 18.91483333,
+                  "declinationDegrees": 43.385,
+                  "geocentricDistanceAU": 3.482,
+                  "heliocentricDistanceAU": 3.967,
+                  "elongationDegrees": 111.0,
+                  "magnitude": 13.5,
+                  "bestTimeLocal": "21:19",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 82.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 19.05683333,
+                  "declinationDegrees": 43.07833333,
+                  "geocentricDistanceAU": 3.462,
+                  "heliocentricDistanceAU": 3.982,
+                  "elongationDegrees": 113.0,
+                  "magnitude": 13.5,
+                  "bestTimeLocal": "21:55",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 12.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 18.91483333,
+                  "declinationDegrees": 43.385,
+                  "geocentricDistanceAU": 3.482,
+                  "heliocentricDistanceAU": 3.967,
+                  "elongationDegrees": 111.0,
+                  "magnitude": 13.5,
+                  "bestTimeLocal": "21:19",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 12.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/fichtl/s/2024J3_20260607_2240_10B_3min_1600_R.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 13.7,
+                "reportedDateText": "July 14",
+                "observer": "Kunihiro Shima"
+              },
+              {
+                "magnitude": 13.7,
+                "reportedDateText": "July 14",
+                "observer": "Kunihiro Shima"
+              }
+            ]
+          }
         }
       },
       {
@@ -210,7 +806,95 @@
           "cobsCurrentMagnitude": 14.3,
           "cobsPeakMagnitude": 2.9,
           "cobsPeakMagnitudeDate": "2026-04-19",
-          "cobsPerihelionDate": "2026-04-19 21:26"
+          "cobsPerihelionDate": "2026-04-19 21:26",
+          "aerithWeekly": {
+            "aerithName": "C/2025 R3 ( PanSTARRS )",
+            "normalizedDesignation": "C/2025R3",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 9,
+              "south": 9
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
+            "currentMagnitude": 13.6,
+            "nextWeekMagnitude": 13.9,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 7.512,
+                  "declinationDegrees": -16.10666667,
+                  "geocentricDistanceAU": 2.804,
+                  "heliocentricDistanceAU": 2.14,
+                  "elongationDegrees": 40.0,
+                  "magnitude": 13.6,
+                  "bestTimeLocal": "3:39",
+                  "bestAzimuthDegreesFromSouth": 277.0,
+                  "bestAltitudeDegrees": -19.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 7.55733333,
+                  "declinationDegrees": -17.11333333,
+                  "geocentricDistanceAU": 2.861,
+                  "heliocentricDistanceAU": 2.241,
+                  "elongationDegrees": 43.0,
+                  "magnitude": 13.9,
+                  "bestTimeLocal": "3:47",
+                  "bestAzimuthDegreesFromSouth": 282.0,
+                  "bestAltitudeDegrees": -13.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 7.512,
+                  "declinationDegrees": -16.10666667,
+                  "geocentricDistanceAU": 2.804,
+                  "heliocentricDistanceAU": 2.14,
+                  "elongationDegrees": 40.0,
+                  "magnitude": 13.6,
+                  "bestTimeLocal": "5:22",
+                  "bestAzimuthDegreesFromSouth": 276.0,
+                  "bestAltitudeDegrees": 20.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 7.55733333,
+                  "declinationDegrees": -17.11333333,
+                  "geocentricDistanceAU": 2.861,
+                  "heliocentricDistanceAU": 2.241,
+                  "elongationDegrees": 43.0,
+                  "magnitude": 13.9,
+                  "bestTimeLocal": "5:15",
+                  "bestAzimuthDegreesFromSouth": 274.0,
+                  "bestAltitudeDegrees": 25.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/jager/s/2025R320260413ut340sm.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 12.6,
+                "reportedDateText": "June 23",
+                "observer": "Andrew Pearce"
+              },
+              {
+                "magnitude": 12.6,
+                "reportedDateText": "June 23",
+                "observer": "Andrew Pearce"
+              }
+            ]
+          }
         },
         "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/C2025_R3_%28PanSTARRS%29_on_8_April_2026.jpg/330px-C2025_R3_%28PanSTARRS%29_on_8_April_2026.jpg"
       },
@@ -238,7 +922,95 @@
           "cobsCurrentMagnitude": 14.6,
           "cobsPeakMagnitude": 13.9,
           "cobsPeakMagnitudeDate": "2026-09-21",
-          "cobsPerihelionDate": "2026-09-21 09:18"
+          "cobsPerihelionDate": "2026-09-21 09:18",
+          "aerithWeekly": {
+            "aerithName": "169P/NEAT",
+            "normalizedDesignation": "169P",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 3,
+              "south": 3
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
+            "currentMagnitude": 12.0,
+            "nextWeekMagnitude": 11.2,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 15.29483333,
+                  "declinationDegrees": 40.82,
+                  "geocentricDistanceAU": 0.172,
+                  "heliocentricDistanceAU": 1.001,
+                  "elongationDegrees": 80.0,
+                  "magnitude": 12.0,
+                  "bestTimeLocal": "20:31",
+                  "bestAzimuthDegreesFromSouth": 113.0,
+                  "bestAltitudeDegrees": 60.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 12.91683333,
+                  "declinationDegrees": 39.57333333,
+                  "geocentricDistanceAU": 0.171,
+                  "heliocentricDistanceAU": 0.913,
+                  "elongationDegrees": 50.0,
+                  "magnitude": 11.2,
+                  "bestTimeLocal": "20:21",
+                  "bestAzimuthDegreesFromSouth": 119.0,
+                  "bestAltitudeDegrees": 30.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 15.29483333,
+                  "declinationDegrees": 40.82,
+                  "geocentricDistanceAU": 0.172,
+                  "heliocentricDistanceAU": 1.001,
+                  "elongationDegrees": 80.0,
+                  "magnitude": 12.0,
+                  "bestTimeLocal": "18:49",
+                  "bestAzimuthDegreesFromSouth": 171.0,
+                  "bestAltitudeDegrees": 13.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 12.91683333,
+                  "declinationDegrees": 39.57333333,
+                  "geocentricDistanceAU": 0.171,
+                  "heliocentricDistanceAU": 0.913,
+                  "elongationDegrees": 50.0,
+                  "magnitude": 11.2,
+                  "bestTimeLocal": "18:53",
+                  "bestAzimuthDegreesFromSouth": 140.0,
+                  "bestAltitudeDegrees": 0.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/jager/s/169P20260804UT2040web.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 12.7,
+                "reportedDateText": "Aug. 5",
+                "observer": "Jean-Gabriel Bosch"
+              },
+              {
+                "magnitude": 12.7,
+                "reportedDateText": "Aug. 5",
+                "observer": "Jean-Gabriel Bosch"
+              }
+            ]
+          }
         }
       },
       {
@@ -294,7 +1066,95 @@
           "cobsCurrentMagnitude": 15.2,
           "cobsPeakMagnitude": 14.8,
           "cobsPeakMagnitudeDate": "2026-10-09",
-          "cobsPerihelionDate": "2026-09-21 21:46"
+          "cobsPerihelionDate": "2026-09-21 21:46",
+          "aerithWeekly": {
+            "aerithName": "123P/West-Hartley",
+            "normalizedDesignation": "123P",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 16,
+              "south": 16
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
+            "currentMagnitude": 15.2,
+            "nextWeekMagnitude": 15.1,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 9.29933333,
+                  "declinationDegrees": 26.69166667,
+                  "geocentricDistanceAU": 3.176,
+                  "heliocentricDistanceAU": 2.187,
+                  "elongationDegrees": 10.0,
+                  "magnitude": 15.2,
+                  "bestTimeLocal": "20:31",
+                  "bestAzimuthDegreesFromSouth": 132.0,
+                  "bestAltitudeDegrees": -9.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 9.57483333,
+                  "declinationDegrees": 25.46833333,
+                  "geocentricDistanceAU": 3.163,
+                  "heliocentricDistanceAU": 2.179,
+                  "elongationDegrees": 11.0,
+                  "magnitude": 15.1,
+                  "bestTimeLocal": "3:47",
+                  "bestAzimuthDegreesFromSouth": 230.0,
+                  "bestAltitudeDegrees": -10.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 9.29933333,
+                  "declinationDegrees": 26.69166667,
+                  "geocentricDistanceAU": 3.176,
+                  "heliocentricDistanceAU": 2.187,
+                  "elongationDegrees": 10.0,
+                  "magnitude": 15.2,
+                  "bestTimeLocal": "18:49",
+                  "bestAzimuthDegreesFromSouth": 108.0,
+                  "bestAltitudeDegrees": -22.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 9.57483333,
+                  "declinationDegrees": 25.46833333,
+                  "geocentricDistanceAU": 3.163,
+                  "heliocentricDistanceAU": 2.179,
+                  "elongationDegrees": 11.0,
+                  "magnitude": 15.1,
+                  "bestTimeLocal": "5:15",
+                  "bestAzimuthDegreesFromSouth": 254.0,
+                  "bestAltitudeDegrees": -23.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/fichtl/s/123P_20260306_2040_6B_4min_MG_L_W_b2.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 16.9,
+                "reportedDateText": "May 17",
+                "observer": "Kunihiro Shima"
+              },
+              {
+                "magnitude": 16.9,
+                "reportedDateText": "May 17",
+                "observer": "Kunihiro Shima"
+              }
+            ]
+          }
         }
       },
       {
@@ -350,7 +1210,95 @@
           "cobsCurrentMagnitude": 15.4,
           "cobsPeakMagnitude": 9.5,
           "cobsPeakMagnitudeDate": "2026-10-08",
-          "cobsPerihelionDate": "2026-11-27 12:15"
+          "cobsPerihelionDate": "2026-11-27 12:15",
+          "aerithWeekly": {
+            "aerithName": "161P/Hartley-IRAS",
+            "normalizedDesignation": "161P",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 15,
+              "south": 15
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
+            "currentMagnitude": 15.3,
+            "nextWeekMagnitude": 14.8,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 3.34183333,
+                  "declinationDegrees": -19.315,
+                  "geocentricDistanceAU": 1.605,
+                  "heliocentricDistanceAU": 1.943,
+                  "elongationDegrees": 93.0,
+                  "magnitude": 15.3,
+                  "bestTimeLocal": "3:39",
+                  "bestAzimuthDegreesFromSouth": 319.0,
+                  "bestAltitudeDegrees": 24.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 3.2835,
+                  "declinationDegrees": -19.04333333,
+                  "geocentricDistanceAU": 1.43,
+                  "heliocentricDistanceAU": 1.88,
+                  "elongationDegrees": 99.0,
+                  "magnitude": 14.8,
+                  "bestTimeLocal": "3:47",
+                  "bestAzimuthDegreesFromSouth": 328.0,
+                  "bestAltitudeDegrees": 29.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 3.34183333,
+                  "declinationDegrees": -19.315,
+                  "geocentricDistanceAU": 1.605,
+                  "heliocentricDistanceAU": 1.943,
+                  "elongationDegrees": 93.0,
+                  "magnitude": 15.3,
+                  "bestTimeLocal": "5:22",
+                  "bestAzimuthDegreesFromSouth": 221.0,
+                  "bestAltitudeDegrees": 70.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 3.2835,
+                  "declinationDegrees": -19.04333333,
+                  "geocentricDistanceAU": 1.43,
+                  "heliocentricDistanceAU": 1.88,
+                  "elongationDegrees": 99.0,
+                  "magnitude": 14.8,
+                  "bestTimeLocal": "5:15",
+                  "bestAzimuthDegreesFromSouth": 204.0,
+                  "bestAltitudeDegrees": 73.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/jager/s/161P20260708UT310sec12x120.png",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 17.2,
+                "reportedDateText": "July 28",
+                "observer": "Ken-ichi Kadota"
+              },
+              {
+                "magnitude": 17.2,
+                "reportedDateText": "July 28",
+                "observer": "Ken-ichi Kadota"
+              }
+            ]
+          }
         }
       },
       {
@@ -379,7 +1327,95 @@
           "cobsCurrentMagnitude": 15.5,
           "cobsPeakMagnitude": 13.4,
           "cobsPeakMagnitudeDate": "2025-06-28",
-          "cobsPerihelionDate": "2025-06-16 03:53"
+          "cobsPerihelionDate": "2025-06-16 03:53",
+          "aerithWeekly": {
+            "aerithName": "65P/Gunn",
+            "normalizedDesignation": "65P",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 24,
+              "south": 24
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
+            "currentMagnitude": 16.7,
+            "nextWeekMagnitude": 16.7,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 0.904,
+                  "declinationDegrees": -5.43833333,
+                  "geocentricDistanceAU": 2.838,
+                  "heliocentricDistanceAU": 3.509,
+                  "elongationDegrees": 124.0,
+                  "magnitude": 16.7,
+                  "bestTimeLocal": "3:39",
+                  "bestAzimuthDegreesFromSouth": 356.0,
+                  "bestAltitudeDegrees": 50.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 0.89066667,
+                  "declinationDegrees": -5.72833333,
+                  "geocentricDistanceAU": 2.777,
+                  "heliocentricDistanceAU": 3.525,
+                  "elongationDegrees": 130.0,
+                  "magnitude": 16.7,
+                  "bestTimeLocal": "3:22",
+                  "bestAzimuthDegreesFromSouth": 0.0,
+                  "bestAltitudeDegrees": 49.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 0.904,
+                  "declinationDegrees": -5.43833333,
+                  "geocentricDistanceAU": 2.838,
+                  "heliocentricDistanceAU": 3.509,
+                  "elongationDegrees": 124.0,
+                  "magnitude": 16.7,
+                  "bestTimeLocal": "3:50",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 60.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 0.89066667,
+                  "declinationDegrees": -5.72833333,
+                  "geocentricDistanceAU": 2.777,
+                  "heliocentricDistanceAU": 3.525,
+                  "elongationDegrees": 130.0,
+                  "magnitude": 16.7,
+                  "bestTimeLocal": "3:22",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 61.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/soulier/s/65P20240307.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 18.4,
+                "reportedDateText": "July 10",
+                "observer": "W. Hasubick"
+              },
+              {
+                "magnitude": 18.4,
+                "reportedDateText": "July 10",
+                "observer": "W. Hasubick"
+              }
+            ]
+          }
         }
       },
       {
@@ -434,7 +1470,95 @@
           "cobsCurrentMagnitude": 15.7,
           "cobsPeakMagnitude": 12.3,
           "cobsPeakMagnitudeDate": "2025-12-22",
-          "cobsPerihelionDate": "2025-12-22 17:09"
+          "cobsPerihelionDate": "2025-12-22 17:09",
+          "aerithWeekly": {
+            "aerithName": "235P/LINEAR",
+            "normalizedDesignation": "235P",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 33,
+              "south": 33
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+            "currentMagnitude": 17.1,
+            "nextWeekMagnitude": 17.4,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 16.69083333,
+                  "declinationDegrees": -10.07,
+                  "geocentricDistanceAU": 2.019,
+                  "heliocentricDistanceAU": 2.609,
+                  "elongationDegrees": 114.0,
+                  "magnitude": 17.1,
+                  "bestTimeLocal": "20:31",
+                  "bestAzimuthDegreesFromSouth": 19.0,
+                  "bestAltitudeDegrees": 43.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 16.7585,
+                  "declinationDegrees": -10.58666667,
+                  "geocentricDistanceAU": 2.128,
+                  "heliocentricDistanceAU": 2.639,
+                  "elongationDegrees": 109.0,
+                  "magnitude": 17.4,
+                  "bestTimeLocal": "20:21",
+                  "bestAzimuthDegreesFromSouth": 23.0,
+                  "bestAltitudeDegrees": 41.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 16.69083333,
+                  "declinationDegrees": -10.07,
+                  "geocentricDistanceAU": 2.019,
+                  "heliocentricDistanceAU": 2.609,
+                  "elongationDegrees": 114.0,
+                  "magnitude": 17.1,
+                  "bestTimeLocal": "19:35",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 65.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 16.7585,
+                  "declinationDegrees": -10.58666667,
+                  "geocentricDistanceAU": 2.128,
+                  "heliocentricDistanceAU": 2.639,
+                  "elongationDegrees": 109.0,
+                  "magnitude": 17.4,
+                  "bestTimeLocal": "19:11",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 66.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/jager/s/235P20260510UT0050sec18x60webnew.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 17.4,
+                "reportedDateText": "July 28",
+                "observer": "ATLAS-MLO, Mauna Loa"
+              },
+              {
+                "magnitude": 17.4,
+                "reportedDateText": "July 28",
+                "observer": "ATLAS-MLO, Mauna Loa"
+              }
+            ]
+          }
         }
       },
       {
@@ -462,7 +1586,95 @@
           "cobsCurrentMagnitude": 15.7,
           "cobsPeakMagnitude": 14.0,
           "cobsPeakMagnitudeDate": "2027-01-06",
-          "cobsPerihelionDate": "2027-05-06 07:30"
+          "cobsPerihelionDate": "2027-05-06 07:30",
+          "aerithWeekly": {
+            "aerithName": "C/2024 T5 ( ATLAS )",
+            "normalizedDesignation": "C/2024T5",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 5,
+              "south": 5
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
+            "currentMagnitude": 13.0,
+            "nextWeekMagnitude": 12.9,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 5.24933333,
+                  "declinationDegrees": -12.97,
+                  "geocentricDistanceAU": 4.834,
+                  "heliocentricDistanceAU": 4.502,
+                  "elongationDegrees": 65.0,
+                  "magnitude": 13.0,
+                  "bestTimeLocal": "3:39",
+                  "bestAzimuthDegreesFromSouth": 294.0,
+                  "bestAltitudeDegrees": 10.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 5.34033333,
+                  "declinationDegrees": -12.91,
+                  "geocentricDistanceAU": 4.733,
+                  "heliocentricDistanceAU": 4.471,
+                  "elongationDegrees": 69.0,
+                  "magnitude": 12.9,
+                  "bestTimeLocal": "3:47",
+                  "bestAzimuthDegreesFromSouth": 298.0,
+                  "bestAltitudeDegrees": 15.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 5.24933333,
+                  "declinationDegrees": -12.97,
+                  "geocentricDistanceAU": 4.834,
+                  "heliocentricDistanceAU": 4.502,
+                  "elongationDegrees": 65.0,
+                  "magnitude": 13.0,
+                  "bestTimeLocal": "5:22",
+                  "bestAzimuthDegreesFromSouth": 251.0,
+                  "bestAltitudeDegrees": 46.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 5.34033333,
+                  "declinationDegrees": -12.91,
+                  "geocentricDistanceAU": 4.733,
+                  "heliocentricDistanceAU": 4.471,
+                  "elongationDegrees": 69.0,
+                  "magnitude": 12.9,
+                  "bestTimeLocal": "5:15",
+                  "bestAzimuthDegreesFromSouth": 247.0,
+                  "bestAltitudeDegrees": 49.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/jager/s/2024T520260118UT2003sec12x120.png",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 13.9,
+                "reportedDateText": "July 24",
+                "observer": "Andrew Pearce"
+              },
+              {
+                "magnitude": 13.9,
+                "reportedDateText": "July 24",
+                "observer": "Andrew Pearce"
+              }
+            ]
+          }
         }
       },
       {
@@ -518,7 +1730,95 @@
           "cobsCurrentMagnitude": 15.7,
           "cobsPeakMagnitude": 15.3,
           "cobsPeakMagnitudeDate": "2026-08-25",
-          "cobsPerihelionDate": "2026-08-05 00:12"
+          "cobsPerihelionDate": "2026-08-05 00:12",
+          "aerithWeekly": {
+            "aerithName": "260P/McNaught",
+            "normalizedDesignation": "260P",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 6,
+              "south": 6
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/0260P/2026.html",
+            "currentMagnitude": 13.2,
+            "nextWeekMagnitude": 13.1,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 3.3585,
+                  "declinationDegrees": 25.08166667,
+                  "geocentricDistanceAU": 1.169,
+                  "heliocentricDistanceAU": 1.418,
+                  "elongationDegrees": 80.0,
+                  "magnitude": 13.2,
+                  "bestTimeLocal": "3:39",
+                  "bestAzimuthDegreesFromSouth": 275.0,
+                  "bestAltitudeDegrees": 55.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 3.69933333,
+                  "declinationDegrees": 27.97333333,
+                  "geocentricDistanceAU": 1.144,
+                  "heliocentricDistanceAU": 1.422,
+                  "elongationDegrees": 82.0,
+                  "magnitude": 13.1,
+                  "bestTimeLocal": "3:47",
+                  "bestAzimuthDegreesFromSouth": 273.0,
+                  "bestAltitudeDegrees": 59.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 3.3585,
+                  "declinationDegrees": 25.08166667,
+                  "geocentricDistanceAU": 1.169,
+                  "heliocentricDistanceAU": 1.418,
+                  "elongationDegrees": 80.0,
+                  "magnitude": 13.2,
+                  "bestTimeLocal": "5:22",
+                  "bestAzimuthDegreesFromSouth": 194.0,
+                  "bestAltitudeDegrees": 28.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 3.69933333,
+                  "declinationDegrees": 27.97333333,
+                  "geocentricDistanceAU": 1.144,
+                  "heliocentricDistanceAU": 1.422,
+                  "elongationDegrees": 82.0,
+                  "magnitude": 13.1,
+                  "bestTimeLocal": "5:15",
+                  "bestAzimuthDegreesFromSouth": 193.0,
+                  "bestAltitudeDegrees": 26.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/soulier/s/260P20260704.png",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 13.5,
+                "reportedDateText": "July 13",
+                "observer": "Kunihiro Shima"
+              },
+              {
+                "magnitude": 13.5,
+                "reportedDateText": "July 13",
+                "observer": "Kunihiro Shima"
+              }
+            ]
+          }
         }
       },
       {
@@ -546,7 +1846,95 @@
           "cobsCurrentMagnitude": 15.9,
           "cobsPeakMagnitude": 13.6,
           "cobsPeakMagnitudeDate": "2024-05-18",
-          "cobsPerihelionDate": "2024-09-09 05:09"
+          "cobsPerihelionDate": "2024-09-09 05:09",
+          "aerithWeekly": {
+            "aerithName": "C/2021 G2 ( ATLAS )",
+            "normalizedDesignation": "C/2021G2",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 20,
+              "south": 20
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
+            "currentMagnitude": 15.8,
+            "nextWeekMagnitude": 15.8,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 16.968,
+                  "declinationDegrees": 15.38666667,
+                  "geocentricDistanceAU": 6.775,
+                  "heliocentricDistanceAU": 7.188,
+                  "elongationDegrees": 110.0,
+                  "magnitude": 15.8,
+                  "bestTimeLocal": "20:31",
+                  "bestAzimuthDegreesFromSouth": 27.0,
+                  "bestAltitudeDegrees": 68.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 16.96516667,
+                  "declinationDegrees": 15.10666667,
+                  "geocentricDistanceAU": 6.893,
+                  "heliocentricDistanceAU": 7.224,
+                  "elongationDegrees": 105.0,
+                  "magnitude": 15.8,
+                  "bestTimeLocal": "20:21",
+                  "bestAzimuthDegreesFromSouth": 37.0,
+                  "bestAltitudeDegrees": 66.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 16.968,
+                  "declinationDegrees": 15.38666667,
+                  "geocentricDistanceAU": 6.775,
+                  "heliocentricDistanceAU": 7.188,
+                  "elongationDegrees": 110.0,
+                  "magnitude": 15.8,
+                  "bestTimeLocal": "19:51",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 40.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 16.96516667,
+                  "declinationDegrees": 15.10666667,
+                  "geocentricDistanceAU": 6.893,
+                  "heliocentricDistanceAU": 7.224,
+                  "elongationDegrees": 105.0,
+                  "magnitude": 15.8,
+                  "bestTimeLocal": "19:23",
+                  "bestAzimuthDegreesFromSouth": 180.0,
+                  "bestAltitudeDegrees": 40.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/fichtl/s/2021G2_20250530_2320_10B_3min_MG_L_R_b2.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 15.5,
+                "reportedDateText": "July 13",
+                "observer": "Martin Masek"
+              },
+              {
+                "magnitude": 15.5,
+                "reportedDateText": "July 13",
+                "observer": "Martin Masek"
+              }
+            ]
+          }
         }
       },
       {
@@ -573,7 +1961,95 @@
           "cobsCurrentMagnitude": 16.2,
           "cobsPeakMagnitude": 14.5,
           "cobsPeakMagnitudeDate": "2026-03-23",
-          "cobsPerihelionDate": "2026-03-18 17:58"
+          "cobsPerihelionDate": "2026-03-18 17:58",
+          "aerithWeekly": {
+            "aerithName": "88P/Howell",
+            "normalizedDesignation": "88P",
+            "hemispheres": [
+              "north",
+              "south"
+            ],
+            "pageRanks": {
+              "north": 4,
+              "south": 4
+            },
+            "sourcePageURLs": {
+              "north": "http://www.aerith.net/comet/weekly/current.html",
+              "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+            },
+            "detailURL": "http://www.aerith.net/comet/catalog/0088P/2026.html",
+            "currentMagnitude": 12.4,
+            "nextWeekMagnitude": 12.6,
+            "weeklyRowsByHemisphere": {
+              "north": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 3.009,
+                  "declinationDegrees": 13.67833333,
+                  "geocentricDistanceAU": 1.744,
+                  "heliocentricDistanceAU": 1.994,
+                  "elongationDegrees": 88.0,
+                  "magnitude": 12.4,
+                  "bestTimeLocal": "3:39",
+                  "bestAzimuthDegreesFromSouth": 296.0,
+                  "bestAltitudeDegrees": 53.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 3.11433333,
+                  "declinationDegrees": 14.15166667,
+                  "geocentricDistanceAU": 1.709,
+                  "heliocentricDistanceAU": 2.041,
+                  "elongationDegrees": 93.0,
+                  "magnitude": 12.6,
+                  "bestTimeLocal": "3:47",
+                  "bestAzimuthDegreesFromSouth": 304.0,
+                  "bestAltitudeDegrees": 58.0
+                }
+              ],
+              "south": [
+                {
+                  "date": "2026-08-08",
+                  "rightAscensionHours": 3.009,
+                  "declinationDegrees": 13.67833333,
+                  "geocentricDistanceAU": 1.744,
+                  "heliocentricDistanceAU": 1.994,
+                  "elongationDegrees": 88.0,
+                  "magnitude": 12.4,
+                  "bestTimeLocal": "5:22",
+                  "bestAzimuthDegreesFromSouth": 191.0,
+                  "bestAltitudeDegrees": 41.0
+                },
+                {
+                  "date": "2026-08-15",
+                  "rightAscensionHours": 3.11433333,
+                  "declinationDegrees": 14.15166667,
+                  "geocentricDistanceAU": 1.709,
+                  "heliocentricDistanceAU": 2.041,
+                  "elongationDegrees": 93.0,
+                  "magnitude": 12.6,
+                  "bestTimeLocal": "5:15",
+                  "bestAzimuthDegreesFromSouth": 186.0,
+                  "bestAltitudeDegrees": 41.0
+                }
+              ]
+            },
+            "candidateHeroImageURL": "http://www.aerith.net/pictures/chamb/s/088P_20260423_web_jchambo.jpg",
+            "imagePermissionStatus": "permission-requested",
+            "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+            "reportedMagnitudes": [
+              {
+                "magnitude": 13.1,
+                "reportedDateText": "Aug. 1",
+                "observer": "Yoshimi Nagai"
+              },
+              {
+                "magnitude": 13.1,
+                "reportedDateText": "Aug. 1",
+                "observer": "Yoshimi Nagai"
+              }
+            ]
+          }
         },
         "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/88P_2020-06-09_NEOWISE_image_3-color.png/330px-88P_2020-06-09_NEOWISE_image_3-color.png"
       }
@@ -860,77 +2336,77 @@
         [
           21.968454,
           -27.20632,
-          13.131
+          8.0
         ],
         [
           21.9776847,
           -27.41516,
-          13.133
+          8.007
         ],
         [
           21.986838,
           -27.62234,
-          13.136
+          8.014
         ],
         [
           21.9959147,
           -27.82777,
-          13.139
+          8.021
         ],
         [
           22.0049153,
           -28.03138,
-          13.142
+          8.029
         ],
         [
           22.0138413,
           -28.23308,
-          13.145
+          8.036
         ],
         [
           22.0226927,
           -28.43281,
-          13.148
+          8.043
         ],
         [
           22.031472,
           -28.63049,
-          13.152
+          8.05
         ],
         [
           22.0401793,
           -28.82605,
-          13.156
+          8.057
         ],
         [
           22.048816,
           -29.01941,
-          13.16
+          8.064
         ],
         [
           22.0573847,
           -29.21051,
-          13.165
+          8.071
         ],
         [
           22.0658853,
           -29.39928,
-          13.169
+          8.079
         ],
         [
           22.07432,
           -29.58565,
-          13.174
+          8.086
         ],
         [
           22.08269,
           -29.76958,
-          13.179
+          8.093
         ],
         [
           22.0909967,
           -29.95098,
-          13.185
+          8.1
         ],
         [
           22.099242,
@@ -4517,77 +5993,77 @@
         [
           2.710248,
           9.51229,
-          16.525
+          7.3
         ],
         [
           2.7255533,
           9.5203,
-          16.532
+          7.35
         ],
         [
           2.74075,
           9.52743,
-          16.54
+          7.4
         ],
         [
           2.7558367,
           9.53367,
-          16.547
+          7.45
         ],
         [
           2.7708127,
           9.53903,
-          16.555
+          7.5
         ],
         [
           2.7856773,
           9.54351,
-          16.563
+          7.55
         ],
         [
           2.800428,
           9.5471,
-          16.57
+          7.6
         ],
         [
           2.8150647,
           9.54981,
-          16.578
+          7.65
         ],
         [
           2.8295867,
           9.55164,
-          16.586
+          7.7
         ],
         [
           2.843992,
           9.55259,
-          16.594
+          7.75
         ],
         [
           2.85828,
           9.55266,
-          16.602
+          7.8
         ],
         [
           2.8724507,
           9.55186,
-          16.61
+          7.85
         ],
         [
           2.8865013,
           9.55019,
-          16.618
+          7.9
         ],
         [
           2.9004327,
           9.54764,
-          16.627
+          7.95
         ],
         [
           2.9142427,
           9.54423,
-          16.635
+          8.0
         ],
         [
           2.9279307,
@@ -11831,77 +13307,77 @@
         [
           5.5841433,
           20.70509,
-          15.198
+          13.2
         ],
         [
           5.6030867,
           20.69669,
-          15.197
+          13.2
         ],
         [
           5.621996,
           20.68772,
-          15.196
+          13.2
         ],
         [
           5.6408713,
           20.67817,
-          15.196
+          13.2
         ],
         [
           5.659712,
           20.66805,
-          15.195
+          13.2
         ],
         [
           5.6785173,
           20.65736,
-          15.194
+          13.2
         ],
         [
           5.6972867,
           20.6461,
-          15.194
+          13.2
         ],
         [
           5.71602,
           20.63428,
-          15.193
+          13.2
         ],
         [
           5.734716,
           20.6219,
-          15.192
+          13.2
         ],
         [
           5.7533747,
           20.60895,
-          15.192
+          13.2
         ],
         [
           5.771996,
           20.59545,
-          15.191
+          13.2
         ],
         [
           5.7905787,
           20.58139,
-          15.191
+          13.2
         ],
         [
           5.8091227,
           20.56679,
-          15.19
+          13.2
         ],
         [
           5.827628,
           20.55163,
-          15.19
+          13.2
         ],
         [
           5.8460927,
           20.53592,
-          15.189
+          13.2
         ],
         [
           5.864518,
@@ -15488,77 +16964,77 @@
         [
           15.8009327,
           -12.91538,
-          14.992
+          14.0
         ],
         [
           15.7925493,
           -12.96215,
-          15.0
+          14.007
         ],
         [
           15.7842947,
           -13.00884,
-          15.009
+          14.014
         ],
         [
           15.7761667,
           -13.05547,
-          15.017
+          14.021
         ],
         [
           15.7681653,
           -13.10202,
-          15.025
+          14.029
         ],
         [
           15.76029,
           -13.1485,
-          15.033
+          14.036
         ],
         [
           15.7525393,
           -13.19492,
-          15.042
+          14.043
         ],
         [
           15.744912,
           -13.24126,
-          15.05
+          14.05
         ],
         [
           15.7374087,
           -13.28754,
-          15.058
+          14.057
         ],
         [
           15.7300267,
           -13.33376,
-          15.066
+          14.064
         ],
         [
           15.7227667,
           -13.37991,
-          15.075
+          14.071
         ],
         [
           15.7156267,
           -13.42599,
-          15.083
+          14.079
         ],
         [
           15.7086067,
           -13.47202,
-          15.091
+          14.086
         ],
         [
           15.7017047,
           -13.51798,
-          15.099
+          14.093
         ],
         [
           15.6949207,
           -13.56388,
-          15.107
+          14.1
         ],
         [
           15.6882533,
@@ -19145,77 +20621,77 @@
         [
           19.0567447,
           43.07372,
-          14.847
+          13.5
         ],
         [
           19.0462233,
           43.10263,
-          14.847
+          13.5
         ],
         [
           19.0357547,
           43.13041,
-          14.847
+          13.5
         ],
         [
           19.02534,
           43.15707,
-          14.848
+          13.5
         ],
         [
           19.0149807,
           43.18261,
-          14.848
+          13.5
         ],
         [
           19.0046793,
           43.20705,
-          14.848
+          13.5
         ],
         [
           18.9944367,
           43.2304,
-          14.849
+          13.5
         ],
         [
           18.9842553,
           43.25266,
-          14.849
+          13.5
         ],
         [
           18.974136,
           43.27385,
-          14.849
+          13.5
         ],
         [
           18.9640807,
           43.29397,
-          14.85
+          13.5
         ],
         [
           18.9540913,
           43.31304,
-          14.85
+          13.5
         ],
         [
           18.9441687,
           43.33106,
-          14.851
+          13.5
         ],
         [
           18.9343147,
           43.34805,
-          14.851
+          13.5
         ],
         [
           18.9245307,
           43.36402,
-          14.852
+          13.5
         ],
         [
           18.914818,
           43.37898,
-          14.852
+          13.5
         ],
         [
           18.905178,
@@ -22802,77 +24278,77 @@
         [
           7.512132,
           -16.10836,
-          17.656
+          13.6
         ],
         [
           7.515682,
           -16.17736,
-          17.676
+          13.621
         ],
         [
           7.5191867,
           -16.2468,
-          17.696
+          13.643
         ],
         [
           7.5226447,
           -16.31668,
-          17.715
+          13.664
         ],
         [
           7.526056,
           -16.38701,
-          17.735
+          13.686
         ],
         [
           7.5294207,
           -16.45777,
-          17.755
+          13.707
         ],
         [
           7.532738,
           -16.52898,
-          17.774
+          13.729
         ],
         [
           7.5360073,
           -16.60062,
-          17.793
+          13.75
         ],
         [
           7.5392287,
           -16.67271,
-          17.813
+          13.771
         ],
         [
           7.542402,
           -16.74524,
-          17.832
+          13.793
         ],
         [
           7.5455253,
           -16.8182,
-          17.85
+          13.814
         ],
         [
           7.5486,
           -16.8916,
-          17.869
+          13.836
         ],
         [
           7.5516247,
           -16.96543,
-          17.888
+          13.857
         ],
         [
           7.5545993,
           -17.03969,
-          17.907
+          13.879
         ],
         [
           7.5575233,
           -17.11439,
-          17.925
+          13.9
         ],
         [
           7.560396,
@@ -26459,77 +27935,77 @@
         [
           15.2951493,
           40.78468,
-          12.986
+          12.0
         ],
         [
           15.1341153,
           41.05415,
-          12.957
+          11.943
         ],
         [
           14.9694793,
           41.27562,
-          12.931
+          11.886
         ],
         [
           14.801688,
           41.44583,
-          12.906
+          11.829
         ],
         [
           14.6312527,
           41.56194,
-          12.884
+          11.771
         ],
         [
           14.4587427,
           41.62158,
-          12.863
+          11.714
         ],
         [
           14.2847727,
           41.62298,
-          12.845
+          11.657
         ],
         [
           14.109994,
           41.56499,
-          12.83
+          11.6
         ],
         [
           13.9350767,
           41.44715,
-          12.816
+          11.543
         ],
         [
           13.7606973,
           41.26972,
-          12.806
+          11.486
         ],
         [
           13.5875207,
           41.03365,
-          12.797
+          11.429
         ],
         [
           13.416186,
           40.74061,
-          12.791
+          11.371
         ],
         [
           13.247294,
           40.39288,
-          12.788
+          11.314
         ],
         [
           13.0813947,
           39.99333,
-          12.786
+          11.257
         ],
         [
           12.9189773,
           39.54532,
-          13.0
+          11.2
         ],
         [
           12.760468,
@@ -33773,77 +35249,77 @@
         [
           9.2995587,
           26.69005,
-          16.996
+          15.2
         ],
         [
           9.3193467,
           26.60552,
-          16.993
+          15.193
         ],
         [
           9.3391193,
           26.52053,
-          16.991
+          15.186
         ],
         [
           9.3588753,
           26.43509,
-          16.988
+          15.179
         ],
         [
           9.3786153,
           26.34921,
-          16.985
+          15.171
         ],
         [
           9.3983387,
           26.26289,
-          16.982
+          15.164
         ],
         [
           9.418046,
           26.17613,
-          16.979
+          15.157
         ],
         [
           9.437736,
           26.08894,
-          16.977
+          15.15
         ],
         [
           9.4574087,
           26.00131,
-          16.974
+          15.143
         ],
         [
           9.477064,
           25.91326,
-          16.971
+          15.136
         ],
         [
           9.4967027,
           25.82479,
-          16.969
+          15.129
         ],
         [
           9.5163227,
           25.73589,
-          16.966
+          15.121
         ],
         [
           9.5359253,
           25.64658,
-          16.963
+          15.114
         ],
         [
           9.55551,
           25.55685,
-          16.961
+          15.107
         ],
         [
           9.5750767,
           25.46672,
-          16.958
+          15.1
         ],
         [
           9.5946247,
@@ -41087,77 +42563,77 @@
         [
           3.34168,
           -19.31978,
-          15.846
+          15.3
         ],
         [
           3.3389113,
           -19.29885,
-          15.817
+          15.264
         ],
         [
           3.3359473,
           -19.2782,
-          15.788
+          15.229
         ],
         [
           3.3327833,
           -19.25782,
-          15.759
+          15.193
         ],
         [
           3.3294153,
           -19.23771,
-          15.73
+          15.157
         ],
         [
           3.3258367,
           -19.21787,
-          15.701
+          15.121
         ],
         [
           3.322044,
           -19.19827,
-          15.671
+          15.086
         ],
         [
           3.3180307,
           -19.17892,
-          15.641
+          15.05
         ],
         [
           3.313792,
           -19.15979,
-          15.611
+          15.014
         ],
         [
           3.3093213,
           -19.14089,
-          15.581
+          14.979
         ],
         [
           3.304614,
           -19.12219,
-          15.551
+          14.943
         ],
         [
           3.299664,
           -19.10369,
-          15.521
+          14.907
         ],
         [
           3.294464,
           -19.08537,
-          15.49
+          14.871
         ],
         [
           3.2890093,
           -19.06723,
-          15.459
+          14.836
         ],
         [
           3.283292,
           -19.04923,
-          15.428
+          14.8
         ],
         [
           3.2773067,
@@ -44744,77 +46220,77 @@
         [
           0.903848,
           -5.44049,
-          17.409
+          16.7
         ],
         [
           0.903392,
           -5.45875,
-          17.407
+          16.7
         ],
         [
           0.9028593,
           -5.47739,
-          17.404
+          16.7
         ],
         [
           0.9022487,
           -5.49641,
-          17.401
+          16.7
         ],
         [
           0.9015607,
           -5.51581,
-          17.399
+          16.7
         ],
         [
           0.9007953,
           -5.53558,
-          17.396
+          16.7
         ],
         [
           0.8999527,
           -5.55572,
-          17.394
+          16.7
         ],
         [
           0.899032,
           -5.57623,
-          17.391
+          16.7
         ],
         [
           0.8980347,
           -5.59711,
-          17.389
+          16.7
         ],
         [
           0.8969607,
           -5.61834,
-          17.386
+          16.7
         ],
         [
           0.8958087,
           -5.63992,
-          17.384
+          16.7
         ],
         [
           0.8945807,
           -5.66185,
-          17.381
+          16.7
         ],
         [
           0.8932753,
           -5.68413,
-          17.379
+          16.7
         ],
         [
           0.8918933,
           -5.70675,
-          17.377
+          16.7
         ],
         [
           0.8904353,
           -5.72971,
-          17.374
+          16.7
         ],
         [
           0.8889013,
@@ -52058,77 +53534,77 @@
         [
           16.691094,
           -10.07165,
-          17.732
+          17.1
         ],
         [
           16.6953893,
           -10.10796,
-          17.749
+          17.121
         ],
         [
           16.6997687,
           -10.14439,
-          17.766
+          17.143
         ],
         [
           16.7042307,
           -10.18092,
-          17.783
+          17.164
         ],
         [
           16.7087753,
           -10.21757,
-          17.8
+          17.186
         ],
         [
           16.7134027,
           -10.25432,
-          17.817
+          17.207
         ],
         [
           16.7181107,
           -10.29116,
-          17.834
+          17.229
         ],
         [
           16.7229007,
           -10.3281,
-          17.851
+          17.25
         ],
         [
           16.7277713,
           -10.36512,
-          17.868
+          17.271
         ],
         [
           16.732722,
           -10.40222,
-          17.885
+          17.293
         ],
         [
           16.7377527,
           -10.43939,
-          17.902
+          17.314
         ],
         [
           16.742862,
           -10.47663,
-          17.919
+          17.336
         ],
         [
           16.7480507,
           -10.51394,
-          17.936
+          17.357
         ],
         [
           16.7533173,
           -10.5513,
-          17.953
+          17.379
         ],
         [
           16.7586613,
           -10.58872,
-          17.97
+          17.4
         ],
         [
           16.764082,
@@ -55715,77 +57191,77 @@
         [
           5.2493673,
           -12.9707,
-          14.385
+          13.0
         ],
         [
           5.256064,
           -12.9647,
-          14.38
+          12.993
         ],
         [
           5.2627327,
           -12.95897,
-          14.375
+          12.986
         ],
         [
           5.2693733,
           -12.95351,
-          14.371
+          12.979
         ],
         [
           5.275984,
           -12.94831,
-          14.366
+          12.971
         ],
         [
           5.282566,
           -12.94338,
-          14.361
+          12.964
         ],
         [
           5.2891187,
           -12.93872,
-          14.356
+          12.957
         ],
         [
           5.2956413,
           -12.93431,
-          14.351
+          12.95
         ],
         [
           5.3021333,
           -12.93017,
-          14.346
+          12.943
         ],
         [
           5.3085953,
           -12.92629,
-          14.341
+          12.936
         ],
         [
           5.315026,
           -12.92266,
-          14.336
+          12.929
         ],
         [
           5.321426,
           -12.91929,
-          14.331
+          12.921
         ],
         [
           5.327794,
           -12.91617,
-          14.326
+          12.914
         ],
         [
           5.3341307,
           -12.9133,
-          14.321
+          12.907
         ],
         [
           5.3404353,
           -12.91069,
-          14.316
+          12.9
         ],
         [
           5.3467073,
@@ -63029,77 +64505,77 @@
         [
           3.3576993,
           25.07883,
-          15.011
+          13.2
         ],
         [
           3.382036,
           25.29053,
-          15.008
+          13.193
         ],
         [
           3.4063753,
           25.50147,
-          15.006
+          13.186
         ],
         [
           3.4307173,
           25.71166,
-          15.003
+          13.179
         ],
         [
           3.4550607,
           25.92108,
-          15.0
+          13.171
         ],
         [
           3.479404,
           26.12972,
-          14.998
+          13.164
         ],
         [
           3.5037467,
           26.33758,
-          14.996
+          13.157
         ],
         [
           3.5280873,
           26.54464,
-          14.993
+          13.15
         ],
         [
           3.5524253,
           26.75089,
-          14.991
+          13.143
         ],
         [
           3.57676,
           26.95633,
-          14.989
+          13.136
         ],
         [
           3.6010893,
           27.16095,
-          14.987
+          13.129
         ],
         [
           3.6254133,
           27.36473,
-          14.986
+          13.121
         ],
         [
           3.6497313,
           27.56768,
-          14.984
+          13.114
         ],
         [
           3.6740413,
           27.76978,
-          14.982
+          13.107
         ],
         [
           3.6983427,
           27.97102,
-          14.981
+          13.1
         ],
         [
           3.7226347,
@@ -66686,77 +68162,77 @@
         [
           16.9680073,
           15.38516,
-          16.695
+          15.8
         ],
         [
           16.9675653,
           15.36626,
-          16.698
+          15.8
         ],
         [
           16.96716,
           15.34716,
-          16.702
+          15.8
         ],
         [
           16.9667927,
           15.32788,
-          16.705
+          15.8
         ],
         [
           16.966462,
           15.30842,
-          16.709
+          15.8
         ],
         [
           16.9661693,
           15.28879,
-          16.712
+          15.8
         ],
         [
           16.9659133,
           15.26897,
-          16.716
+          15.8
         ],
         [
           16.9656953,
           15.24899,
-          16.72
+          15.8
         ],
         [
           16.9655147,
           15.22884,
-          16.723
+          15.8
         ],
         [
           16.965372,
           15.20853,
-          16.727
+          15.8
         ],
         [
           16.9652667,
           15.18806,
-          16.73
+          15.8
         ],
         [
           16.9651987,
           15.16744,
-          16.734
+          15.8
         ],
         [
           16.965168,
           15.14666,
-          16.738
+          15.8
         ],
         [
           16.9651753,
           15.12573,
-          16.741
+          15.8
         ],
         [
           16.9652207,
           15.10466,
-          16.745
+          15.8
         ],
         [
           16.9653027,
@@ -70343,77 +71819,77 @@
         [
           3.0089587,
           13.6771,
-          15.881
+          12.4
         ],
         [
           3.0172213,
           13.71441,
-          15.885
+          12.414
         ],
         [
           3.025374,
           13.75118,
-          15.889
+          12.429
         ],
         [
           3.033416,
           13.78741,
-          15.894
+          12.443
         ],
         [
           3.041346,
           13.8231,
-          15.898
+          12.457
         ],
         [
           3.0491633,
           13.85826,
-          15.902
+          12.471
         ],
         [
           3.056868,
           13.89287,
-          15.906
+          12.486
         ],
         [
           3.064458,
           13.92696,
-          15.91
+          12.5
         ],
         [
           3.071934,
           13.9605,
-          15.915
+          12.514
         ],
         [
           3.079294,
           13.99352,
-          15.919
+          12.529
         ],
         [
           3.0865387,
           14.026,
-          15.923
+          12.543
         ],
         [
           3.093666,
           14.05795,
-          15.927
+          12.557
         ],
         [
           3.1006767,
           14.08937,
-          15.931
+          12.571
         ],
         [
           3.1075687,
           14.12026,
-          15.935
+          12.586
         ],
         [
           3.1143427,
           14.15063,
-          15.939
+          12.6
         ],
         [
           3.1209973,

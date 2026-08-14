@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-08-12T12:47:58Z",
-  "publishedAt": "2026-08-12T12:47:58Z",
+  "generatedAt": "2026-08-14T17:10:36Z",
+  "publishedAt": "2026-08-14T17:10:36Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -81,14 +81,14 @@
     },
     {
       "family": "cometSnapshot",
-      "packageVersion": "comet-snapshot-v1-2026-07-12-cobs-horizons-20",
+      "packageVersion": "comet-snapshot-v1-2026-08-14-cobs-horizons-20-aerith",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/comets/comet_snapshot_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "3bc78d3f4358deba829fa3e4a0904af066aa4dc68c665183ba8cb1c014f41be9"
+        "value": "d6119537bc832a61a40c5de864a89f882e0c9501d82708bbd63323e49d022a54"
       },
-      "byteSize": 1180163,
+      "byteSize": 1237476,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
