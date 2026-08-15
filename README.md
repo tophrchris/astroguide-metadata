@@ -251,6 +251,26 @@ scripts/build_comet_detail_metadata_package.py \
 
 The builder writes the comet package envelope, refreshes the stable manifest, and recalculates byte size and SHA-256 checksum while preserving the other manifest packages.
 
+## Refreshing Aerith Comet Detail Metadata
+
+Aerith comet detail metadata is refreshed by a scheduled GitHub Actions workflow
+every Monday. The workflow can also be run manually from the Actions tab. It
+fetches Aerith's weekly bright-comet pages, compares the normalized source data
+against the checked-in snapshot, and opens or updates an `automation/aerith-comet-metadata`
+pull request only when the comet data materially changes.
+
+The local equivalent is:
+
+```bash
+scripts/update_aerith_comet_metadata.py
+python -m unittest tests/test_aerith_comet_source.py tests/test_comet_detail_metadata_package.py
+```
+
+The automation preserves the permission and attribution requirements documented
+for Aerith: cached image assets are served from AstroGuide metadata, not
+hotlinked, and the generated metadata retains Aerith / Seiichi Yoshida credit
+plus the relevant Aerith detail-page URLs.
+
 ## Operational Notes
 
 Metadata changes should be reviewed through pull requests against this repository. After GitHub Pages publishes the merged branch, AstroGuide clients can silently refresh compatible packages. If the origin is unavailable or validation fails, the app continues using the bundled snapshot.
