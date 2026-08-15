@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "cometDetailMetadata",
+  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageRole": "comet",
+  "shardID": "COMET_C_2025_R3",
+  "record": {
+    "stableID": "COMET:C_2025_R3",
+    "designation": "C/2025 R3",
+    "displayName": "C/2025 R3 (PANSTARRS)",
+    "aerithName": "C/2025 R3 ( PanSTARRS )",
+    "detailURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
+    "generatedAt": "2026-08-15T00:00:00Z",
+    "source": {
+      "name": "Aerith / Seiichi Yoshida",
+      "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+      "detailURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
+      "attribution": "Source: Aerith / Seiichi Yoshida",
+      "generatedAt": "2026-08-14T17:10:25Z",
+      "permissionReceived": "2026-08-15"
+    },
+    "media": {
+      "thumbnail": {
+        "kind": "thumbnail",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2025_r3_1de1303b3586.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 27012,
+        "checksum": "1de1303b358660dbb994060d98c363401c29833b388aa687ba400d8cdb73063f"
+      }
+    },
+    "brightness": [
+      {
+        "id": "C/2025R3-2026-06-23-report-1",
+        "date": "2026-06-23",
+        "magnitude": 12.6,
+        "qualifier": "reported",
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html"
+      },
+      {
+        "id": "C/2025R3-2026-08-08-north-weekly-1",
+        "date": "2026-08-08",
+        "magnitude": 13.6,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 1.0,
+        "isSignificant": true,
+        "significanceKind": "fade",
+        "interpretation": "Faded 1.0 mag between Aerith magnitude reports or estimates."
+      },
+      {
+        "id": "C/2025R3-2026-08-15-north-weekly-2",
+        "date": "2026-08-15",
+        "magnitude": 13.9,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.3
+      }
+    ]
+  }
+}

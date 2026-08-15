@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "cometDetailMetadata",
+  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageRole": "comet",
+  "shardID": "COMET_220P",
+  "record": {
+    "stableID": "COMET:220P",
+    "designation": "220P",
+    "displayName": "220P/McNaught",
+    "aerithName": "220P/McNaught",
+    "detailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+    "generatedAt": "2026-08-15T00:00:00Z",
+    "source": {
+      "name": "Aerith / Seiichi Yoshida",
+      "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+      "detailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+      "attribution": "Source: Aerith / Seiichi Yoshida",
+      "generatedAt": "2026-08-14T17:10:25Z",
+      "permissionReceived": "2026-08-15"
+    },
+    "media": {
+      "thumbnail": {
+        "kind": "thumbnail",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_220p_fd3b2c56531f.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 16364,
+        "checksum": "fd3b2c56531fd9fe5bc5f9f11833db428144d3e8036b57986384f6f654b69afd"
+      }
+    },
+    "brightness": [
+      {
+        "id": "220P-2026-06-03-report-1",
+        "date": "2026-06-03",
+        "magnitude": 8.3,
+        "qualifier": "reported",
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+        "commentary": "Another major outburst occurred on Aug. 5 and it brightened up to 7 mag.",
+        "isSignificant": true,
+        "significanceKind": "outburst"
+      },
+      {
+        "id": "220P-2026-08-05-report-2",
+        "date": "2026-08-05",
+        "magnitude": 7.0,
+        "qualifier": "reported",
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+        "commentary": "Another major outburst occurred on Aug. 5 and it brightened up to 7 mag.",
+        "magnitudeDelta": -1.3,
+        "isSignificant": true,
+        "significanceKind": "outburst",
+        "interpretation": "Brightened 1.3 mag between Aerith magnitude reports or estimates."
+      },
+      {
+        "id": "220P-2026-08-08-north-weekly-1",
+        "date": "2026-08-08",
+        "magnitude": 7.3,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.3
+      },
+      {
+        "id": "220P-2026-08-15-north-weekly-2",
+        "date": "2026-08-15",
+        "magnitude": 8.0,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.7
+      }
+    ]
+  }
+}

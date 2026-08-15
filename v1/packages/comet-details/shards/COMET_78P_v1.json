@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "cometDetailMetadata",
+  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageRole": "comet",
+  "shardID": "COMET_78P",
+  "record": {
+    "stableID": "COMET:78P",
+    "designation": "78P",
+    "displayName": "78P/Gehrels",
+    "aerithName": "78P/Gehrels 2",
+    "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+    "generatedAt": "2026-08-15T00:00:00Z",
+    "source": {
+      "name": "Aerith / Seiichi Yoshida",
+      "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+      "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+      "attribution": "Source: Aerith / Seiichi Yoshida",
+      "generatedAt": "2026-08-14T17:10:25Z",
+      "permissionReceived": "2026-08-15"
+    },
+    "media": {
+      "thumbnail": {
+        "kind": "thumbnail",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 7473,
+        "checksum": "47542025c7c687638e51f8cb57555386d21bb4e6e680332e822f2563cbfd533a"
+      }
+    },
+    "brightness": [
+      {
+        "id": "78P-2026-07-24-report-1",
+        "date": "2026-07-24",
+        "magnitude": 13.6,
+        "qualifier": "reported",
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html"
+      },
+      {
+        "id": "78P-2026-08-08-north-weekly-1",
+        "date": "2026-08-08",
+        "magnitude": 13.2,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": -0.4
+      },
+      {
+        "id": "78P-2026-08-15-north-weekly-2",
+        "date": "2026-08-15",
+        "magnitude": 13.2,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.0
+      }
+    ]
+  }
+}

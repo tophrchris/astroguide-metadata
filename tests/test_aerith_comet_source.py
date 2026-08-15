@@ -69,6 +69,7 @@ class AerithCometSourceTests(unittest.TestCase):
         )
         self.assertEqual(entries[0]["currentMagnitude"], 7.3)
         self.assertEqual(entries[0]["nextWeekMagnitude"], 8.0)
+        self.assertIn("major outburst", entries[0]["sourceCommentary"].lower())
         self.assertAlmostEqual(entries[0]["weeklyRows"][0]["rightAscensionHours"], 2.711)
         self.assertAlmostEqual(entries[1]["weeklyRows"][0]["declinationDegrees"], -12.97)
 
@@ -78,7 +79,7 @@ class AerithCometSourceTests(unittest.TestCase):
         self.assertEqual(aerith.normalize_comet_key("C/2024 T5 ( ATLAS )"), "C/2024T5")
         self.assertEqual(aerith.normalize_comet_key("P/2010 H2 (Vales)"), "P/2010H2")
 
-    def test_merge_entries_keeps_source_media_permission_as_candidate_only(self):
+    def test_merge_entries_records_granted_source_media_permission(self):
         _, entries = aerith.parse_entries(
             SAMPLE_PAGE,
             "http://www.aerith.net/comet/weekly/current.html",
@@ -87,8 +88,9 @@ class AerithCometSourceTests(unittest.TestCase):
         merged = aerith.merge_entries(entries)
 
         self.assertEqual(len(merged), 2)
-        self.assertEqual(merged[0]["imagePermissionStatus"], "permission-requested")
-        self.assertIn("candidate", merged[0]["imageAttribution"].lower())
+        self.assertEqual(merged[0]["imagePermissionStatus"], "permission-granted")
+        self.assertIn("Seiichi Yoshida", merged[0]["imageAttribution"])
+        self.assertIn("major outburst", merged[0]["sourceCommentaries"][0].lower())
         self.assertEqual(merged[0]["weeklyRowsByHemisphere"]["north"][0]["magnitude"], 7.3)
 
 

@@ -13,7 +13,8 @@ from urllib.parse import urljoin
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = REPO_ROOT / "sources/comets/aerith_current_comets_v1.json"
 DEFAULT_CURRENT_URL = "http://www.aerith.net/comet/weekly/current.html"
-USER_AGENT = "AstroGuide metadata audit/1.0 (permission request in progress)"
+USER_AGENT = "AstroGuide metadata comet source builder/1.0 (Aerith permission received 2026-08-15; https://astroguide.space)"
+PERMISSION_RECEIVED = "2026-08-15"
 
 MONTHS = {
     "Jan.": 1,
@@ -236,6 +237,7 @@ def parse_entries(document: str, page_url: str) -> tuple[dict[str, Any], list[di
                 "sourcePageURL": page_url,
                 "detailURL": detail_url,
                 "thumbnailImageURL": image_url,
+                "sourceCommentary": paragraphs or None,
                 "reportedMagnitudes": reports,
                 "weeklyRows": weekly_rows,
                 "currentMagnitude": weekly_rows[0]["magnitude"] if weekly_rows else None,
@@ -260,11 +262,11 @@ def merge_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "sourcePageURLs": {},
                 "detailURL": entry.get("detailURL"),
                 "thumbnailImageURL": entry.get("thumbnailImageURL"),
-                "imagePermissionStatus": "permission-requested",
+                "imagePermissionStatus": "permission-granted",
                 "imageAttribution": (
-                    "Candidate image from Aerith weekly comet page; do not publish "
-                    "or promote to app hero imagery until permission is granted."
+                    "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page."
                 ),
+                "sourceCommentaries": [],
                 "reportedMagnitudes": [],
                 "weeklyRowsByHemisphere": {},
                 "currentMagnitude": None,
@@ -277,7 +279,12 @@ def merge_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
         existing["pageRanks"][hemisphere] = entry["pageRank"]
         existing["sourcePageURLs"][hemisphere] = entry["sourcePageURL"]
         existing["weeklyRowsByHemisphere"][hemisphere] = entry["weeklyRows"]
-        existing["reportedMagnitudes"].extend(entry.get("reportedMagnitudes") or [])
+        for report in entry.get("reportedMagnitudes") or []:
+            if report not in existing["reportedMagnitudes"]:
+                existing["reportedMagnitudes"].append(report)
+        commentary = entry.get("sourceCommentary")
+        if commentary and commentary not in existing["sourceCommentaries"]:
+            existing["sourceCommentaries"].append(commentary)
         existing["detailURL"] = existing.get("detailURL") or entry.get("detailURL")
         existing["thumbnailImageURL"] = existing.get("thumbnailImageURL") or entry.get("thumbnailImageURL")
         if existing["currentMagnitude"] is None:
@@ -316,11 +323,12 @@ def build_source(current_url: str, *, fetched_at: str, single_page: bool = False
             "sourceURL": current_url,
             "owner": "Seiichi Yoshida",
             "contact": "comet@aerith.net",
-            "permissionStatus": "permission-requested",
+            "permissionStatus": "permission-granted",
+            "permissionReceived": PERMISSION_RECEIVED,
             "notes": (
                 "Normalized source snapshot for AstroGuide comet metadata review. "
                 "Brightness estimates may be used to patch hosted comet magnitudes. "
-                "Image URLs are retained as candidates only until publication permission is granted."
+                "Approved small image copies must be cached through AstroGuide metadata; app clients must not hotlink Aerith images."
             ),
         },
         "pages": pages,

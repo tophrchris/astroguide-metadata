@@ -1,4 +1,26 @@
-# Aerith Permission Request Draft
+# Aerith Permission and Attribution Record
+
+Permission for the AstroGuide use described below was received from Seiichi
+Yoshida on 2026-08-15. Keep this file sanitized: do not add private email
+headers or raw correspondence.
+
+Approved use:
+
+- comet designation/name and Aerith detail-page URL
+- current and next-week magnitude estimates from the weekly bright-comet table
+- small cached copies of selected weekly comet thumbnail/images as optional
+  in-app thumbnail or hero imagery
+
+Required treatment:
+
+- credit Aerith / Seiichi Yoshida wherever Aerith imagery, magnitude
+  interpretation, or source commentary is shown
+- link back to the relevant Aerith detail page when available
+- do not hotlink Aerith images from the app; cache approved copies through
+  AstroGuide metadata
+- keep source interpretation/commentary in metadata packages, not app code
+
+## Original Request Draft
 
 To: comet@aerith.net
 Subject: Permission request for AstroGuide comet planning metadata and images

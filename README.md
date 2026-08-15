@@ -232,11 +232,22 @@ scripts/build_comet_snapshot_package.py \
   --package-version comet-snapshot-v1-YYYY-MM-DD-cobs-horizons-20-aerith
 ```
 
-Aerith image URLs are retained as candidate media only. Do not pass
-`--promote-aerith-images` until publication permission is granted by the site
-owner. The source adapter records Aerith detail/image URLs and permission status
-so the app can later use them for comet thumbnails/hero images without changing
-the ingestion pipeline.
+Aerith permission was received from Seiichi Yoshida on 2026-08-15 for the
+requested AstroGuide use: comet designation/name, Aerith detail-page URL,
+current and next-week magnitude estimates, and small cached copies of selected
+weekly comet thumbnail/images. Aerith should be credited where shown, with links
+back to the relevant detail page.
+
+Do not hotlink Aerith images from app clients. The comet snapshot package keeps
+Aerith image URLs as source references only. Publish approved image copies and
+per-comet brightness/commentary payloads through the lazy comet detail package:
+
+```bash
+scripts/build_comet_detail_metadata_package.py \
+  --source-package v1/packages/comets/comet_snapshot_v1.json \
+  --aerith-source sources/comets/aerith_current_comets_v1.json \
+  --package-version comet-detail-metadata-v1-YYYYMMDD-aerith
+```
 
 The builder writes the comet package envelope, refreshes the stable manifest, and recalculates byte size and SHA-256 checksum while preserving the other manifest packages.
 

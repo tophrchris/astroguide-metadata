@@ -6,8 +6,9 @@
     "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
     "owner": "Seiichi Yoshida",
     "contact": "comet@aerith.net",
-    "permissionStatus": "permission-requested",
-    "notes": "Normalized source snapshot for AstroGuide comet metadata review. Brightness estimates may be used to patch hosted comet magnitudes. Image URLs are retained as candidates only until publication permission is granted."
+    "permissionStatus": "permission-granted",
+    "notes": "Normalized source snapshot for AstroGuide comet metadata review. Brightness estimates may be used to patch hosted comet magnitudes. Approved small image copies must be cached through AstroGuide metadata; app clients must not hotlink Aerith images.",
+    "permissionReceived": "2026-08-15"
   },
   "pages": [
     {
@@ -45,8 +46,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/220P_20260807_0140_20B_1min_MG_L_R_b2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 8.3,
@@ -124,7 +125,10 @@
         ]
       },
       "currentMagnitude": 7.3,
-      "nextWeekMagnitude": 8.0
+      "nextWeekMagnitude": 8.0,
+      "sourceCommentaries": [
+        "Another major outburst occurred on Aug. 5 and it brightened up to 7 mag."
+      ]
     },
     {
       "aerithName": "10P/Tempel 2",
@@ -143,8 +147,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/10P20260616UT0040sec18x180_2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 7.4,
@@ -231,8 +235,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/169P20260804UT2040web.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 12.7,
@@ -319,8 +323,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0088P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/chamb/s/088P_20260423_web_jchambo.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 13.1,
@@ -407,8 +411,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2024T520260118UT2003sec12x120.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 13.9,
@@ -495,8 +499,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0260P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/soulier/s/260P20260704.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 13.5,
@@ -583,8 +587,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/prystavski/s/0078P-20250910-213623-L-BIN2-_-120-001+3_caption.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 13.6,
@@ -671,8 +675,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2024J3_20260607_2240_10B_3min_1600_R.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 13.7,
@@ -759,8 +763,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2025R320260413ut340sm.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 12.6,
@@ -847,8 +851,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2023R1_20260607_2330_6B_3min_1600_R.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 13.2,
@@ -935,8 +939,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0029P/2019.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/29P20221217rgbweb_2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 14.1,
@@ -1023,8 +1027,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2014UN271/2014UN271.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/prystavski/s/CK14UR1N-20251208-002445-L-BIN2-_-120-001+3_caption.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 14.9,
@@ -1111,8 +1115,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0063P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/63P20260411UT2000RGBsecd15x180web2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 14.8,
@@ -1199,8 +1203,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2024R4/2024R4.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2024R4_20260618_2302_15B_2min_1600_R.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 14.9,
@@ -1287,8 +1291,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/161P20260708UT310sec12x120.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 17.2,
@@ -1375,8 +1379,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/123P_20260306_2040_6B_4min_MG_L_W_b2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 16.9,
@@ -1463,8 +1467,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2026A2/2026A2.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/soulier/s/A220260617.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 15.6,
@@ -1551,8 +1555,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/A03200/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/soulier/s/320020260303.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [],
       "weeklyRowsByHemisphere": {
         "north": [
@@ -1628,8 +1632,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2022QE78/2022QE78.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2022QE7820260507UT2052sec19x90_graxpert_denoised.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 15.5,
@@ -1716,8 +1720,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2021G2_20250530_2320_10B_3min_MG_L_R_b2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 15.5,
@@ -1804,8 +1808,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2022N2/2022N2.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2022N22051123UT1857sec25x70.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 15.8,
@@ -1892,8 +1896,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2025Y1/2025Y1.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2025Y1_20260312_2315_8B_5min_MG_L_R_b2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 16.0,
@@ -1980,8 +1984,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2025M2/2025M2.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/merlin/s/C2025M2T3020260708JCM.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 16.0,
@@ -2068,8 +2072,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/soulier/s/65P20240307.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 18.4,
@@ -2156,8 +2160,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0114P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/icon/pr_star.gif",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [],
       "weeklyRowsByHemisphere": {
         "north": [
@@ -2233,8 +2237,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2021N1/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/mattiazzo/s/2021n1_20260623_mmatti1.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 15.2,
@@ -2331,8 +2335,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2025J1/2025J1.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2025J1_20251226_1955_36B_3min_MG_L_R_b2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 16.6,
@@ -2419,8 +2423,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2026AZ17/2026AZ17.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2026AZ1720260422ut2359sec45x120.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 17.0,
@@ -2507,8 +2511,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2024G6/2024G6.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2024G6_20260522_2230_10B_3min_MG_L_R_b2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 16.8,
@@ -2595,8 +2599,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0112P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/icon/pr_star.gif",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 19.0,
@@ -2683,8 +2687,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2024G4/2024G4.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2024G420250614UT2101sec33x30.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 16.8,
@@ -2771,8 +2775,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2025E1/2025E1.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/merlin/s/C2025E1T3020260429JCM.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 17.2,
@@ -2859,8 +2863,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/235P20260510UT0050sec18x60webnew.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 17.4,
@@ -2947,8 +2951,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2023RS61/2023RS61.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2023RS6120250819UT0040sec18x75.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 17.0,
@@ -3045,8 +3049,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2019E3/2019E3.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/merlin/s/C2019E3T3120231009JCM.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [],
       "weeklyRowsByHemisphere": {
         "north": [
@@ -3122,8 +3126,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2022E2/2022E2.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2022E2_20240109_2255_7B_3min_1600_R.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 17.2,
@@ -3210,8 +3214,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2023X2/2023X2.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2023X2_20251226_1800_15B_4min_MG_L_R_b2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 17.8,
@@ -3298,8 +3302,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0188P/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/prystavski/s/0188P-20251009-225759-L-BIN2-_-120-001+3_caption.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 18.2,
@@ -3386,8 +3390,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2025B2/2025B2.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2025B2_20250818_2255_22B_3min_MG_L_R_b2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 17.2,
@@ -3474,8 +3478,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/0084P/2027.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/84P20260707UT2032sec12x120.png",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 17.4,
@@ -3562,8 +3566,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2023H5/2023H5.html",
       "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2023H5_20250222_0022_8B_3min_MG_L_R_b2.jpg",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 17.8,
@@ -3650,8 +3654,8 @@
       },
       "detailURL": "http://www.aerith.net/comet/catalog/2012K3/2026.html",
       "thumbnailImageURL": "http://www.aerith.net/icon/pr_star.gif",
-      "imagePermissionStatus": "permission-requested",
-      "imageAttribution": "Candidate image from Aerith weekly comet page; do not publish or promote to app hero imagery until permission is granted.",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
       "reportedMagnitudes": [
         {
           "magnitude": 19.7,

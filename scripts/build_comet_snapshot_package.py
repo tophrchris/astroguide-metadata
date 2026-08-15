@@ -23,6 +23,7 @@ FAMILY_ORDER = [
     "darkSkyPlaces",
     "cometSnapshot",
     "cometOrbitGeometry",
+    "cometDetailMetadata",
     "planetCatalog",
     "lunarEvents",
     "fullMoonNameAliases",
@@ -65,8 +66,7 @@ def parse_args() -> argparse.Namespace:
         "--promote-aerith-images",
         action="store_true",
         help=(
-            "Use Aerith image URLs as comet heroImageURL values. Only use this after publication "
-            "permission is granted."
+            "Deprecated safety guard. Aerith images must be cached through comet detail metadata, not hotlinked."
         ),
     )
     parser.add_argument("--package-version")
@@ -198,8 +198,11 @@ def compact_aerith_reference(entry: dict[str, Any]) -> dict[str, Any]:
     }
     if image_url:
         reference["candidateHeroImageURL"] = image_url
-        reference["imagePermissionStatus"] = entry.get("imagePermissionStatus") or "permission-requested"
+        reference["imagePermissionStatus"] = entry.get("imagePermissionStatus") or "permission-granted"
         reference["imageAttribution"] = entry.get("imageAttribution")
+    commentaries = entry.get("sourceCommentaries")
+    if commentaries:
+        reference["sourceCommentaries"] = commentaries
     reported = entry.get("reportedMagnitudes")
     if reported:
         reference["reportedMagnitudes"] = reported
@@ -277,6 +280,11 @@ def apply_aerith_source(
     apply_magnitudes: bool,
     promote_images: bool,
 ) -> dict[str, Any]:
+    if promote_images:
+        raise RuntimeError(
+            "Do not promote Aerith image URLs into cometSnapshot heroImageURL values. "
+            "Use build_comet_detail_metadata_package.py to publish cached AstroGuide metadata assets."
+        )
     if aerith_source.get("schemaVersion") != 1:
         raise RuntimeError("Aerith comet source must use schemaVersion 1.")
     aerith_entries = {
@@ -327,9 +335,10 @@ def apply_aerith_source(
         "name": aerith_source.get("source", {}).get("name") or "Aerith Weekly Information about Bright Comets",
         "sourceURL": aerith_source.get("source", {}).get("sourceURL"),
         "generatedAt": aerith_source.get("generatedAt"),
-        "permissionStatus": aerith_source.get("source", {}).get("permissionStatus") or "permission-requested",
+        "permissionStatus": aerith_source.get("source", {}).get("permissionStatus") or "permission-granted",
+        "permissionReceived": aerith_source.get("source", {}).get("permissionReceived"),
         "matchedCometCount": len(matched_rows),
-        "imageUsage": "candidate-only" if not promote_images else "promoted-to-heroImageURL",
+        "imageUsage": "reference-only; cached images are published through cometDetailMetadata",
         "magnitudePatchCount": len(magnitude_patches),
     }
     if magnitude_patches:

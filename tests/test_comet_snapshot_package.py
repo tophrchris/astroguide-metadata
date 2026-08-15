@@ -64,7 +64,8 @@ class CometSnapshotPackageTests(unittest.TestCase):
             "source": {
                 "name": "Aerith Weekly Information about Bright Comets",
                 "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-                "permissionStatus": "permission-requested",
+                "permissionStatus": "permission-granted",
+                "permissionReceived": "2026-08-15",
             },
             "comets": [
                 {
@@ -75,7 +76,8 @@ class CometSnapshotPackageTests(unittest.TestCase):
                     "sourcePageURLs": {"north": "http://www.aerith.net/comet/weekly/current.html"},
                     "detailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
                     "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/220P.jpg",
-                    "imagePermissionStatus": "permission-requested",
+                    "imagePermissionStatus": "permission-granted",
+                    "sourceCommentaries": ["Another major outburst occurred on Aug. 5."],
                     "weeklyRowsByHemisphere": {
                         "north": [
                             {"date": "2026-08-08", "magnitude": 7.3},
@@ -88,7 +90,7 @@ class CometSnapshotPackageTests(unittest.TestCase):
             ],
         }
 
-    def test_aerith_source_adds_candidate_media_without_promoting_images_by_default(self):
+    def test_aerith_source_adds_reference_media_without_promoting_images_by_default(self):
         package = snapshot.apply_aerith_source(
             self.make_package(),
             self.make_aerith_source(),
@@ -104,7 +106,7 @@ class CometSnapshotPackageTests(unittest.TestCase):
         )
         self.assertEqual(
             package["source"]["aerithWeeklySource"]["imageUsage"],
-            "candidate-only",
+            "reference-only; cached images are published through cometDetailMetadata",
         )
 
     def test_aerith_magnitudes_patch_ephemeris_samples_between_weekly_rows(self):
@@ -121,23 +123,14 @@ class CometSnapshotPackageTests(unittest.TestCase):
         self.assertAlmostEqual(samples[3][2], 7.6)
         self.assertEqual(package["source"]["aerithMagnitudePatches"][0]["sampleCount"], 8)
 
-    def test_aerith_images_can_be_promoted_after_permission(self):
-        package = snapshot.apply_aerith_source(
-            self.make_package(),
-            self.make_aerith_source(),
-            apply_magnitudes=False,
-            promote_images=True,
-        )
-
-        seed = package["seeds"]["comets"][0]
-        self.assertEqual(
-            seed["heroImageURL"],
-            "http://www.aerith.net/pictures/fichtl/s/220P.jpg",
-        )
-        self.assertEqual(
-            package["source"]["aerithWeeklySource"]["imageUsage"],
-            "promoted-to-heroImageURL",
-        )
+    def test_aerith_images_are_not_promoted_as_hotlinked_hero_urls(self):
+        with self.assertRaises(RuntimeError):
+            snapshot.apply_aerith_source(
+                self.make_package(),
+                self.make_aerith_source(),
+                apply_magnitudes=False,
+                promote_images=True,
+            )
 
 
 if __name__ == "__main__":
