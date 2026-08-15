@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "cometDetailMetadata",
+  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageRole": "comet",
+  "shardID": "COMET_65P",
+  "record": {
+    "stableID": "COMET:65P",
+    "designation": "65P",
+    "displayName": "65P/Gunn",
+    "aerithName": "65P/Gunn",
+    "detailURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
+    "generatedAt": "2026-08-15T00:00:00Z",
+    "source": {
+      "name": "Aerith / Seiichi Yoshida",
+      "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+      "detailURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
+      "attribution": "Source: Aerith / Seiichi Yoshida",
+      "generatedAt": "2026-08-14T17:10:25Z",
+      "permissionReceived": "2026-08-15"
+    },
+    "media": {
+      "thumbnail": {
+        "kind": "thumbnail",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_65p_255207508a59.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 5437,
+        "checksum": "255207508a591d374c06ab86c588e63e7572701aa5ef3962639f515854ff4b44"
+      }
+    },
+    "brightness": [
+      {
+        "id": "65P-2026-07-10-report-1",
+        "date": "2026-07-10",
+        "magnitude": 18.4,
+        "qualifier": "reported",
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0065P/2025.html"
+      },
+      {
+        "id": "65P-2026-08-08-north-weekly-1",
+        "date": "2026-08-08",
+        "magnitude": 16.7,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": -1.7,
+        "isSignificant": true,
+        "significanceKind": "outburst",
+        "interpretation": "Brightened 1.7 mag between Aerith magnitude reports or estimates."
+      },
+      {
+        "id": "65P-2026-08-15-north-weekly-2",
+        "date": "2026-08-15",
+        "magnitude": 16.7,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.0
+      }
+    ]
+  }
+}

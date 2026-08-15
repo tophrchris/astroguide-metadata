@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "cometDetailMetadata",
+  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageRole": "comet",
+  "shardID": "COMET_C_2024_J3",
+  "record": {
+    "stableID": "COMET:C_2024_J3",
+    "designation": "C/2024 J3",
+    "displayName": "C/2024 J3 (ATLAS)",
+    "aerithName": "C/2024 J3 ( ATLAS )",
+    "detailURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
+    "generatedAt": "2026-08-15T00:00:00Z",
+    "source": {
+      "name": "Aerith / Seiichi Yoshida",
+      "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+      "detailURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
+      "attribution": "Source: Aerith / Seiichi Yoshida",
+      "generatedAt": "2026-08-14T17:10:25Z",
+      "permissionReceived": "2026-08-15"
+    },
+    "media": {
+      "thumbnail": {
+        "kind": "thumbnail",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_j3_cf9eee4526c5.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 19468,
+        "checksum": "cf9eee4526c524e6e5df47c24ac53380e8337326c3c15298ce372cad27aad4ec"
+      }
+    },
+    "brightness": [
+      {
+        "id": "C/2024J3-2026-07-14-report-1",
+        "date": "2026-07-14",
+        "magnitude": 13.7,
+        "qualifier": "reported",
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html"
+      },
+      {
+        "id": "C/2024J3-2026-08-08-north-weekly-1",
+        "date": "2026-08-08",
+        "magnitude": 13.5,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": -0.2
+      },
+      {
+        "id": "C/2024J3-2026-08-15-north-weekly-2",
+        "date": "2026-08-15",
+        "magnitude": 13.5,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.0
+      }
+    ]
+  }
+}

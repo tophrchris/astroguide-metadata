@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "cometDetailMetadata",
+  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageRole": "comet",
+  "shardID": "COMET_123P",
+  "record": {
+    "stableID": "COMET:123P",
+    "designation": "123P",
+    "displayName": "123P/West-Hartley",
+    "aerithName": "123P/West-Hartley",
+    "detailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
+    "generatedAt": "2026-08-15T00:00:00Z",
+    "source": {
+      "name": "Aerith / Seiichi Yoshida",
+      "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+      "detailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
+      "attribution": "Source: Aerith / Seiichi Yoshida",
+      "generatedAt": "2026-08-14T17:10:25Z",
+      "permissionReceived": "2026-08-15"
+    },
+    "media": {
+      "thumbnail": {
+        "kind": "thumbnail",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_123p_fc79d899be64.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 8709,
+        "checksum": "fc79d899be64b856b9818bdf0e242016617388e108b6a3988419a525275282b3"
+      }
+    },
+    "brightness": [
+      {
+        "id": "123P-2026-05-17-report-1",
+        "date": "2026-05-17",
+        "magnitude": 16.9,
+        "qualifier": "reported",
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0123P/2026.html"
+      },
+      {
+        "id": "123P-2026-08-08-north-weekly-1",
+        "date": "2026-08-08",
+        "magnitude": 15.2,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": -1.7,
+        "isSignificant": true,
+        "significanceKind": "outburst",
+        "interpretation": "Brightened 1.7 mag between Aerith magnitude reports or estimates."
+      },
+      {
+        "id": "123P-2026-08-15-north-weekly-2",
+        "date": "2026-08-15",
+        "magnitude": 15.1,
+        "qualifier": "weekly-estimate",
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": -0.1
+      }
+    ]
+  }
+}

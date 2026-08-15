@@ -1,0 +1,3729 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-14T17:10:25Z",
+  "source": {
+    "name": "Aerith Weekly Information about Bright Comets",
+    "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+    "owner": "Seiichi Yoshida",
+    "contact": "comet@aerith.net",
+    "permissionStatus": "permission-granted",
+    "notes": "Normalized source snapshot for AstroGuide comet metadata review. Brightness estimates may be used to patch hosted comet magnitudes. Approved small image copies must be cached through AstroGuide metadata; app clients must not hotlink Aerith images.",
+    "permissionReceived": "2026-08-15"
+  },
+  "pages": [
+    {
+      "title": "Weekly Information about Bright Comets (2026 Aug. 8: North)",
+      "pageDate": "2026-08-08",
+      "hemisphere": "north",
+      "updatedText": "August 9, 2026",
+      "entryCount": 42,
+      "url": "http://www.aerith.net/comet/weekly/current.html"
+    },
+    {
+      "title": "Weekly Information about Bright Comets (2026 Aug. 8: South)",
+      "pageDate": "2026-08-08",
+      "hemisphere": "south",
+      "updatedText": "August 9, 2026",
+      "entryCount": 42,
+      "url": "http://www.aerith.net/comet/weekly/20260808s.html"
+    }
+  ],
+  "comets": [
+    {
+      "aerithName": "220P/McNaught",
+      "normalizedDesignation": "220P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 1,
+        "south": 1
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/220P_20260807_0140_20B_1min_MG_L_R_b2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 8.3,
+          "reportedDateText": "June 3",
+          "observer": "Marco Goiato"
+        },
+        {
+          "magnitude": 7.0,
+          "reportedDateText": "Aug. 5",
+          "observer": "iuseppe Pappa"
+        },
+        {
+          "magnitude": 8.3,
+          "reportedDateText": "June 3",
+          "observer": "Marco Goiato"
+        },
+        {
+          "magnitude": 7.0,
+          "reportedDateText": "Aug. 5",
+          "observer": "iuseppe Pappa"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 2.711,
+            "declinationDegrees": 9.51666667,
+            "geocentricDistanceAU": 1.231,
+            "heliocentricDistanceAU": 1.647,
+            "elongationDegrees": 93.0,
+            "magnitude": 7.3,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 306.0,
+            "bestAltitudeDegrees": 53.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 2.915,
+            "declinationDegrees": 9.54833333,
+            "geocentricDistanceAU": 1.199,
+            "heliocentricDistanceAU": 1.669,
+            "elongationDegrees": 97.0,
+            "magnitude": 8.0,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 313.0,
+            "bestAltitudeDegrees": 56.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 2.711,
+            "declinationDegrees": 9.51666667,
+            "geocentricDistanceAU": 1.231,
+            "heliocentricDistanceAU": 1.647,
+            "elongationDegrees": 93.0,
+            "magnitude": 7.3,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 186.0,
+            "bestAltitudeDegrees": 45.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 2.915,
+            "declinationDegrees": 9.54833333,
+            "geocentricDistanceAU": 1.199,
+            "heliocentricDistanceAU": 1.669,
+            "elongationDegrees": 97.0,
+            "magnitude": 8.0,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 183.0,
+            "bestAltitudeDegrees": 45.0
+          }
+        ]
+      },
+      "currentMagnitude": 7.3,
+      "nextWeekMagnitude": 8.0,
+      "sourceCommentaries": [
+        "Another major outburst occurred on Aug. 5 and it brightened up to 7 mag."
+      ]
+    },
+    {
+      "aerithName": "10P/Tempel 2",
+      "normalizedDesignation": "10P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 2,
+        "south": 2
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/10P20260616UT0040sec18x180_2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 7.4,
+          "reportedDateText": "Aug. 5",
+          "observer": "Chris Wyatt"
+        },
+        {
+          "magnitude": 7.4,
+          "reportedDateText": "Aug. 5",
+          "observer": "Chris Wyatt"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 21.97,
+            "declinationDegrees": -27.20166667,
+            "geocentricDistanceAU": 0.416,
+            "heliocentricDistanceAU": 1.419,
+            "elongationDegrees": 164.0,
+            "magnitude": 8.0,
+            "bestTimeLocal": "0:54",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 28.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 22.09266667,
+            "declinationDegrees": -29.94833333,
+            "geocentricDistanceAU": 0.424,
+            "heliocentricDistanceAU": 1.424,
+            "elongationDegrees": 162.0,
+            "magnitude": 8.1,
+            "bestTimeLocal": "0:34",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 25.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 21.97,
+            "declinationDegrees": -27.20166667,
+            "geocentricDistanceAU": 0.416,
+            "heliocentricDistanceAU": 1.419,
+            "elongationDegrees": 164.0,
+            "magnitude": 8.0,
+            "bestTimeLocal": "0:54",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 82.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 22.09266667,
+            "declinationDegrees": -29.94833333,
+            "geocentricDistanceAU": 0.424,
+            "heliocentricDistanceAU": 1.424,
+            "elongationDegrees": 162.0,
+            "magnitude": 8.1,
+            "bestTimeLocal": "0:34",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 85.0
+          }
+        ]
+      },
+      "currentMagnitude": 8.0,
+      "nextWeekMagnitude": 8.1
+    },
+    {
+      "aerithName": "169P/NEAT",
+      "normalizedDesignation": "169P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 3,
+        "south": 3
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/169P20260804UT2040web.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 12.7,
+          "reportedDateText": "Aug. 5",
+          "observer": "Jean-Gabriel Bosch"
+        },
+        {
+          "magnitude": 12.7,
+          "reportedDateText": "Aug. 5",
+          "observer": "Jean-Gabriel Bosch"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 15.29483333,
+            "declinationDegrees": 40.82,
+            "geocentricDistanceAU": 0.172,
+            "heliocentricDistanceAU": 1.001,
+            "elongationDegrees": 80.0,
+            "magnitude": 12.0,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 113.0,
+            "bestAltitudeDegrees": 60.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 12.91683333,
+            "declinationDegrees": 39.57333333,
+            "geocentricDistanceAU": 0.171,
+            "heliocentricDistanceAU": 0.913,
+            "elongationDegrees": 50.0,
+            "magnitude": 11.2,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 119.0,
+            "bestAltitudeDegrees": 30.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 15.29483333,
+            "declinationDegrees": 40.82,
+            "geocentricDistanceAU": 0.172,
+            "heliocentricDistanceAU": 1.001,
+            "elongationDegrees": 80.0,
+            "magnitude": 12.0,
+            "bestTimeLocal": "18:49",
+            "bestAzimuthDegreesFromSouth": 171.0,
+            "bestAltitudeDegrees": 13.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 12.91683333,
+            "declinationDegrees": 39.57333333,
+            "geocentricDistanceAU": 0.171,
+            "heliocentricDistanceAU": 0.913,
+            "elongationDegrees": 50.0,
+            "magnitude": 11.2,
+            "bestTimeLocal": "18:53",
+            "bestAzimuthDegreesFromSouth": 140.0,
+            "bestAltitudeDegrees": 0.0
+          }
+        ]
+      },
+      "currentMagnitude": 12.0,
+      "nextWeekMagnitude": 11.2
+    },
+    {
+      "aerithName": "88P/Howell",
+      "normalizedDesignation": "88P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 4,
+        "south": 4
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0088P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/chamb/s/088P_20260423_web_jchambo.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 13.1,
+          "reportedDateText": "Aug. 1",
+          "observer": "Yoshimi Nagai"
+        },
+        {
+          "magnitude": 13.1,
+          "reportedDateText": "Aug. 1",
+          "observer": "Yoshimi Nagai"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 3.009,
+            "declinationDegrees": 13.67833333,
+            "geocentricDistanceAU": 1.744,
+            "heliocentricDistanceAU": 1.994,
+            "elongationDegrees": 88.0,
+            "magnitude": 12.4,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 296.0,
+            "bestAltitudeDegrees": 53.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 3.11433333,
+            "declinationDegrees": 14.15166667,
+            "geocentricDistanceAU": 1.709,
+            "heliocentricDistanceAU": 2.041,
+            "elongationDegrees": 93.0,
+            "magnitude": 12.6,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 304.0,
+            "bestAltitudeDegrees": 58.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 3.009,
+            "declinationDegrees": 13.67833333,
+            "geocentricDistanceAU": 1.744,
+            "heliocentricDistanceAU": 1.994,
+            "elongationDegrees": 88.0,
+            "magnitude": 12.4,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 191.0,
+            "bestAltitudeDegrees": 41.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 3.11433333,
+            "declinationDegrees": 14.15166667,
+            "geocentricDistanceAU": 1.709,
+            "heliocentricDistanceAU": 2.041,
+            "elongationDegrees": 93.0,
+            "magnitude": 12.6,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 186.0,
+            "bestAltitudeDegrees": 41.0
+          }
+        ]
+      },
+      "currentMagnitude": 12.4,
+      "nextWeekMagnitude": 12.6
+    },
+    {
+      "aerithName": "C/2024 T5 ( ATLAS )",
+      "normalizedDesignation": "C/2024T5",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 5,
+        "south": 5
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2024T520260118UT2003sec12x120.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 13.9,
+          "reportedDateText": "July 24",
+          "observer": "Andrew Pearce"
+        },
+        {
+          "magnitude": 13.9,
+          "reportedDateText": "July 24",
+          "observer": "Andrew Pearce"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 5.24933333,
+            "declinationDegrees": -12.97,
+            "geocentricDistanceAU": 4.834,
+            "heliocentricDistanceAU": 4.502,
+            "elongationDegrees": 65.0,
+            "magnitude": 13.0,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 294.0,
+            "bestAltitudeDegrees": 10.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 5.34033333,
+            "declinationDegrees": -12.91,
+            "geocentricDistanceAU": 4.733,
+            "heliocentricDistanceAU": 4.471,
+            "elongationDegrees": 69.0,
+            "magnitude": 12.9,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 298.0,
+            "bestAltitudeDegrees": 15.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 5.24933333,
+            "declinationDegrees": -12.97,
+            "geocentricDistanceAU": 4.834,
+            "heliocentricDistanceAU": 4.502,
+            "elongationDegrees": 65.0,
+            "magnitude": 13.0,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 251.0,
+            "bestAltitudeDegrees": 46.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 5.34033333,
+            "declinationDegrees": -12.91,
+            "geocentricDistanceAU": 4.733,
+            "heliocentricDistanceAU": 4.471,
+            "elongationDegrees": 69.0,
+            "magnitude": 12.9,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 247.0,
+            "bestAltitudeDegrees": 49.0
+          }
+        ]
+      },
+      "currentMagnitude": 13.0,
+      "nextWeekMagnitude": 12.9
+    },
+    {
+      "aerithName": "260P/McNaught",
+      "normalizedDesignation": "260P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 6,
+        "south": 6
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0260P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/soulier/s/260P20260704.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 13.5,
+          "reportedDateText": "July 13",
+          "observer": "Kunihiro Shima"
+        },
+        {
+          "magnitude": 13.5,
+          "reportedDateText": "July 13",
+          "observer": "Kunihiro Shima"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 3.3585,
+            "declinationDegrees": 25.08166667,
+            "geocentricDistanceAU": 1.169,
+            "heliocentricDistanceAU": 1.418,
+            "elongationDegrees": 80.0,
+            "magnitude": 13.2,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 275.0,
+            "bestAltitudeDegrees": 55.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 3.69933333,
+            "declinationDegrees": 27.97333333,
+            "geocentricDistanceAU": 1.144,
+            "heliocentricDistanceAU": 1.422,
+            "elongationDegrees": 82.0,
+            "magnitude": 13.1,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 273.0,
+            "bestAltitudeDegrees": 59.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 3.3585,
+            "declinationDegrees": 25.08166667,
+            "geocentricDistanceAU": 1.169,
+            "heliocentricDistanceAU": 1.418,
+            "elongationDegrees": 80.0,
+            "magnitude": 13.2,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 194.0,
+            "bestAltitudeDegrees": 28.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 3.69933333,
+            "declinationDegrees": 27.97333333,
+            "geocentricDistanceAU": 1.144,
+            "heliocentricDistanceAU": 1.422,
+            "elongationDegrees": 82.0,
+            "magnitude": 13.1,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 193.0,
+            "bestAltitudeDegrees": 26.0
+          }
+        ]
+      },
+      "currentMagnitude": 13.2,
+      "nextWeekMagnitude": 13.1
+    },
+    {
+      "aerithName": "78P/Gehrels 2",
+      "normalizedDesignation": "78P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 7,
+        "south": 7
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/prystavski/s/0078P-20250910-213623-L-BIN2-_-120-001+3_caption.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 13.6,
+          "reportedDateText": "July 24",
+          "observer": "Hiroshi Abe"
+        },
+        {
+          "magnitude": 13.6,
+          "reportedDateText": "July 24",
+          "observer": "Hiroshi Abe"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 5.58433333,
+            "declinationDegrees": 20.705,
+            "geocentricDistanceAU": 2.516,
+            "heliocentricDistanceAU": 2.037,
+            "elongationDegrees": 51.0,
+            "magnitude": 13.2,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 262.0,
+            "bestAltitudeDegrees": 25.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 5.84616667,
+            "declinationDegrees": 20.53666667,
+            "geocentricDistanceAU": 2.471,
+            "heliocentricDistanceAU": 2.048,
+            "elongationDegrees": 54.0,
+            "magnitude": 13.2,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 264.0,
+            "bestAltitudeDegrees": 29.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 5.58433333,
+            "declinationDegrees": 20.705,
+            "geocentricDistanceAU": 2.516,
+            "heliocentricDistanceAU": 2.037,
+            "elongationDegrees": 51.0,
+            "magnitude": 13.2,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 226.0,
+            "bestAltitudeDegrees": 19.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 5.84616667,
+            "declinationDegrees": 20.53666667,
+            "geocentricDistanceAU": 2.471,
+            "heliocentricDistanceAU": 2.048,
+            "elongationDegrees": 54.0,
+            "magnitude": 13.2,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 225.0,
+            "bestAltitudeDegrees": 19.0
+          }
+        ]
+      },
+      "currentMagnitude": 13.2,
+      "nextWeekMagnitude": 13.2
+    },
+    {
+      "aerithName": "C/2024 J3 ( ATLAS )",
+      "normalizedDesignation": "C/2024J3",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 8,
+        "south": 8
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2024J3_20260607_2240_10B_3min_1600_R.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 13.7,
+          "reportedDateText": "July 14",
+          "observer": "Kunihiro Shima"
+        },
+        {
+          "magnitude": 13.7,
+          "reportedDateText": "July 14",
+          "observer": "Kunihiro Shima"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 19.05683333,
+            "declinationDegrees": 43.07833333,
+            "geocentricDistanceAU": 3.462,
+            "heliocentricDistanceAU": 3.982,
+            "elongationDegrees": 113.0,
+            "magnitude": 13.5,
+            "bestTimeLocal": "21:55",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 82.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 18.91483333,
+            "declinationDegrees": 43.385,
+            "geocentricDistanceAU": 3.482,
+            "heliocentricDistanceAU": 3.967,
+            "elongationDegrees": 111.0,
+            "magnitude": 13.5,
+            "bestTimeLocal": "21:19",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 82.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 19.05683333,
+            "declinationDegrees": 43.07833333,
+            "geocentricDistanceAU": 3.462,
+            "heliocentricDistanceAU": 3.982,
+            "elongationDegrees": 113.0,
+            "magnitude": 13.5,
+            "bestTimeLocal": "21:55",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 12.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 18.91483333,
+            "declinationDegrees": 43.385,
+            "geocentricDistanceAU": 3.482,
+            "heliocentricDistanceAU": 3.967,
+            "elongationDegrees": 111.0,
+            "magnitude": 13.5,
+            "bestTimeLocal": "21:19",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 12.0
+          }
+        ]
+      },
+      "currentMagnitude": 13.5,
+      "nextWeekMagnitude": 13.5
+    },
+    {
+      "aerithName": "C/2025 R3 ( PanSTARRS )",
+      "normalizedDesignation": "C/2025R3",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 9,
+        "south": 9
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2025R320260413ut340sm.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 12.6,
+          "reportedDateText": "June 23",
+          "observer": "Andrew Pearce"
+        },
+        {
+          "magnitude": 12.6,
+          "reportedDateText": "June 23",
+          "observer": "Andrew Pearce"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 7.512,
+            "declinationDegrees": -16.10666667,
+            "geocentricDistanceAU": 2.804,
+            "heliocentricDistanceAU": 2.14,
+            "elongationDegrees": 40.0,
+            "magnitude": 13.6,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 277.0,
+            "bestAltitudeDegrees": -19.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 7.55733333,
+            "declinationDegrees": -17.11333333,
+            "geocentricDistanceAU": 2.861,
+            "heliocentricDistanceAU": 2.241,
+            "elongationDegrees": 43.0,
+            "magnitude": 13.9,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 282.0,
+            "bestAltitudeDegrees": -13.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 7.512,
+            "declinationDegrees": -16.10666667,
+            "geocentricDistanceAU": 2.804,
+            "heliocentricDistanceAU": 2.14,
+            "elongationDegrees": 40.0,
+            "magnitude": 13.6,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 276.0,
+            "bestAltitudeDegrees": 20.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 7.55733333,
+            "declinationDegrees": -17.11333333,
+            "geocentricDistanceAU": 2.861,
+            "heliocentricDistanceAU": 2.241,
+            "elongationDegrees": 43.0,
+            "magnitude": 13.9,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 274.0,
+            "bestAltitudeDegrees": 25.0
+          }
+        ]
+      },
+      "currentMagnitude": 13.6,
+      "nextWeekMagnitude": 13.9
+    },
+    {
+      "aerithName": "C/2023 R1 ( PanSTARRS )",
+      "normalizedDesignation": "C/2023R1",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 10,
+        "south": 10
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2023R1_20260607_2330_6B_3min_1600_R.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 13.2,
+          "reportedDateText": "Aug. 5",
+          "observer": "Osamu Miyazaki"
+        },
+        {
+          "magnitude": 13.2,
+          "reportedDateText": "Aug. 5",
+          "observer": "Osamu Miyazaki"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 15.80066667,
+            "declinationDegrees": -12.91333333,
+            "geocentricDistanceAU": 3.371,
+            "heliocentricDistanceAU": 3.724,
+            "elongationDegrees": 102.0,
+            "magnitude": 14.0,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 33.0,
+            "bestAltitudeDegrees": 35.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 15.69466667,
+            "declinationDegrees": -13.56166667,
+            "geocentricDistanceAU": 3.525,
+            "heliocentricDistanceAU": 3.742,
+            "elongationDegrees": 94.0,
+            "magnitude": 14.1,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 39.0,
+            "bestAltitudeDegrees": 32.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 15.80066667,
+            "declinationDegrees": -12.91333333,
+            "geocentricDistanceAU": 3.371,
+            "heliocentricDistanceAU": 3.724,
+            "elongationDegrees": 102.0,
+            "magnitude": 14.0,
+            "bestTimeLocal": "18:49",
+            "bestAzimuthDegreesFromSouth": 175.0,
+            "bestAltitudeDegrees": 68.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 15.69466667,
+            "declinationDegrees": -13.56166667,
+            "geocentricDistanceAU": 3.525,
+            "heliocentricDistanceAU": 3.742,
+            "elongationDegrees": 94.0,
+            "magnitude": 14.1,
+            "bestTimeLocal": "18:53",
+            "bestAzimuthDegreesFromSouth": 151.0,
+            "bestAltitudeDegrees": 66.0
+          }
+        ]
+      },
+      "currentMagnitude": 14.0,
+      "nextWeekMagnitude": 14.1
+    },
+    {
+      "aerithName": "29P/Schwassmann-Wachmann 1",
+      "normalizedDesignation": "29P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 11,
+        "south": 11
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0029P/2019.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/29P20221217rgbweb_2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 14.1,
+          "reportedDateText": "July 27",
+          "observer": "Andrew Pearce"
+        },
+        {
+          "magnitude": 14.1,
+          "reportedDateText": "July 27",
+          "observer": "Andrew Pearce"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 11.48033333,
+            "declinationDegrees": -3.38333333,
+            "geocentricDistanceAU": 7.067,
+            "heliocentricDistanceAU": 6.317,
+            "elongationDegrees": 39.0,
+            "magnitude": 14.3,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 88.0,
+            "bestAltitudeDegrees": -4.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 11.55133333,
+            "declinationDegrees": -3.82666667,
+            "geocentricDistanceAU": 7.132,
+            "heliocentricDistanceAU": 6.318,
+            "elongationDegrees": 34.0,
+            "magnitude": 14.3,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 90.0,
+            "bestAltitudeDegrees": -7.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 11.48033333,
+            "declinationDegrees": -3.38333333,
+            "geocentricDistanceAU": 7.067,
+            "heliocentricDistanceAU": 6.317,
+            "elongationDegrees": 39.0,
+            "magnitude": 14.3,
+            "bestTimeLocal": "18:49",
+            "bestAzimuthDegreesFromSouth": 101.0,
+            "bestAltitudeDegrees": 21.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 11.55133333,
+            "declinationDegrees": -3.82666667,
+            "geocentricDistanceAU": 7.132,
+            "heliocentricDistanceAU": 6.318,
+            "elongationDegrees": 34.0,
+            "magnitude": 14.3,
+            "bestTimeLocal": "18:53",
+            "bestAzimuthDegreesFromSouth": 96.0,
+            "bestAltitudeDegrees": 16.0
+          }
+        ]
+      },
+      "currentMagnitude": 14.3,
+      "nextWeekMagnitude": 14.3
+    },
+    {
+      "aerithName": "C/2014 UN271 ( Bernardinelli-Bernstein )",
+      "normalizedDesignation": "C/2014",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 12,
+        "south": 12
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2014UN271/2014UN271.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/prystavski/s/CK14UR1N-20251208-002445-L-BIN2-_-120-001+3_caption.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 14.9,
+          "reportedDateText": "May 19",
+          "observer": "Andrew Pearce"
+        },
+        {
+          "magnitude": 14.9,
+          "reportedDateText": "May 19",
+          "observer": "Andrew Pearce"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 6.893,
+            "declinationDegrees": -68.89166667,
+            "geocentricDistanceAU": 13.717,
+            "heliocentricDistanceAU": 13.73,
+            "elongationDegrees": 88.0,
+            "magnitude": 14.6,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 335.0,
+            "bestAltitudeDegrees": -33.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 7.0,
+            "declinationDegrees": -69.16666667,
+            "geocentricDistanceAU": 13.71,
+            "heliocentricDistanceAU": 13.71,
+            "elongationDegrees": 87.0,
+            "magnitude": 14.6,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 336.0,
+            "bestAltitudeDegrees": -31.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 6.893,
+            "declinationDegrees": -68.89166667,
+            "geocentricDistanceAU": 13.717,
+            "heliocentricDistanceAU": 13.73,
+            "elongationDegrees": 88.0,
+            "magnitude": 14.6,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 334.0,
+            "bestAltitudeDegrees": 41.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 7.0,
+            "declinationDegrees": -69.16666667,
+            "geocentricDistanceAU": 13.71,
+            "heliocentricDistanceAU": 13.71,
+            "elongationDegrees": 87.0,
+            "magnitude": 14.6,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 335.0,
+            "bestAltitudeDegrees": 42.0
+          }
+        ]
+      },
+      "currentMagnitude": 14.6,
+      "nextWeekMagnitude": 14.6
+    },
+    {
+      "aerithName": "63P/Wild 1",
+      "normalizedDesignation": "63P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 13,
+        "south": 13
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0063P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/63P20260411UT2000RGBsecd15x180web2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 14.8,
+          "reportedDateText": "July 5",
+          "observer": "Martin Masek"
+        },
+        {
+          "magnitude": 14.8,
+          "reportedDateText": "July 5",
+          "observer": "Martin Masek"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 11.1205,
+            "declinationDegrees": 4.71666667,
+            "geocentricDistanceAU": 2.802,
+            "heliocentricDistanceAU": 2.001,
+            "elongationDegrees": 30.0,
+            "magnitude": 14.6,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 98.0,
+            "bestAltitudeDegrees": -3.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 11.358,
+            "declinationDegrees": 2.425,
+            "geocentricDistanceAU": 2.846,
+            "heliocentricDistanceAU": 2.014,
+            "elongationDegrees": 28.0,
+            "magnitude": 14.6,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 96.0,
+            "bestAltitudeDegrees": -6.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 11.1205,
+            "declinationDegrees": 4.71666667,
+            "geocentricDistanceAU": 2.802,
+            "heliocentricDistanceAU": 2.001,
+            "elongationDegrees": 30.0,
+            "magnitude": 14.6,
+            "bestTimeLocal": "18:49",
+            "bestAzimuthDegreesFromSouth": 104.0,
+            "bestAltitudeDegrees": 12.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 11.358,
+            "declinationDegrees": 2.425,
+            "geocentricDistanceAU": 2.846,
+            "heliocentricDistanceAU": 2.014,
+            "elongationDegrees": 28.0,
+            "magnitude": 14.6,
+            "bestTimeLocal": "18:53",
+            "bestAzimuthDegreesFromSouth": 100.0,
+            "bestAltitudeDegrees": 10.0
+          }
+        ]
+      },
+      "currentMagnitude": 14.6,
+      "nextWeekMagnitude": 14.6
+    },
+    {
+      "aerithName": "C/2024 R4 ( PanSTARRS )",
+      "normalizedDesignation": "C/2024R4",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 14,
+        "south": 14
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2024R4/2024R4.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2024R4_20260618_2302_15B_2min_1600_R.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 14.9,
+          "reportedDateText": "July 11",
+          "observer": "Alfons Diepvens"
+        },
+        {
+          "magnitude": 14.9,
+          "reportedDateText": "July 11",
+          "observer": "Alfons Diepvens"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 21.18466667,
+            "declinationDegrees": 49.19833333,
+            "geocentricDistanceAU": 5.171,
+            "heliocentricDistanceAU": 5.667,
+            "elongationDegrees": 114.0,
+            "magnitude": 14.8,
+            "bestTimeLocal": "0:07",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 76.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 21.01,
+            "declinationDegrees": 49.54166667,
+            "geocentricDistanceAU": 5.12,
+            "heliocentricDistanceAU": 5.634,
+            "elongationDegrees": 115.0,
+            "magnitude": 14.8,
+            "bestTimeLocal": "23:24",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 75.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 21.18466667,
+            "declinationDegrees": 49.19833333,
+            "geocentricDistanceAU": 5.171,
+            "heliocentricDistanceAU": 5.667,
+            "elongationDegrees": 114.0,
+            "magnitude": 14.8,
+            "bestTimeLocal": "0:07",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 6.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 21.01,
+            "declinationDegrees": 49.54166667,
+            "geocentricDistanceAU": 5.12,
+            "heliocentricDistanceAU": 5.634,
+            "elongationDegrees": 115.0,
+            "magnitude": 14.8,
+            "bestTimeLocal": "23:24",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 5.0
+          }
+        ]
+      },
+      "currentMagnitude": 14.8,
+      "nextWeekMagnitude": 14.8
+    },
+    {
+      "aerithName": "161P/Hartley-IRAS",
+      "normalizedDesignation": "161P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 15,
+        "south": 15
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/161P20260708UT310sec12x120.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 17.2,
+          "reportedDateText": "July 28",
+          "observer": "Ken-ichi Kadota"
+        },
+        {
+          "magnitude": 17.2,
+          "reportedDateText": "July 28",
+          "observer": "Ken-ichi Kadota"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 3.34183333,
+            "declinationDegrees": -19.315,
+            "geocentricDistanceAU": 1.605,
+            "heliocentricDistanceAU": 1.943,
+            "elongationDegrees": 93.0,
+            "magnitude": 15.3,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 319.0,
+            "bestAltitudeDegrees": 24.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 3.2835,
+            "declinationDegrees": -19.04333333,
+            "geocentricDistanceAU": 1.43,
+            "heliocentricDistanceAU": 1.88,
+            "elongationDegrees": 99.0,
+            "magnitude": 14.8,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 328.0,
+            "bestAltitudeDegrees": 29.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 3.34183333,
+            "declinationDegrees": -19.315,
+            "geocentricDistanceAU": 1.605,
+            "heliocentricDistanceAU": 1.943,
+            "elongationDegrees": 93.0,
+            "magnitude": 15.3,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 221.0,
+            "bestAltitudeDegrees": 70.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 3.2835,
+            "declinationDegrees": -19.04333333,
+            "geocentricDistanceAU": 1.43,
+            "heliocentricDistanceAU": 1.88,
+            "elongationDegrees": 99.0,
+            "magnitude": 14.8,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 204.0,
+            "bestAltitudeDegrees": 73.0
+          }
+        ]
+      },
+      "currentMagnitude": 15.3,
+      "nextWeekMagnitude": 14.8
+    },
+    {
+      "aerithName": "123P/West-Hartley",
+      "normalizedDesignation": "123P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 16,
+        "south": 16
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/123P_20260306_2040_6B_4min_MG_L_W_b2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 16.9,
+          "reportedDateText": "May 17",
+          "observer": "Kunihiro Shima"
+        },
+        {
+          "magnitude": 16.9,
+          "reportedDateText": "May 17",
+          "observer": "Kunihiro Shima"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 9.29933333,
+            "declinationDegrees": 26.69166667,
+            "geocentricDistanceAU": 3.176,
+            "heliocentricDistanceAU": 2.187,
+            "elongationDegrees": 10.0,
+            "magnitude": 15.2,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 132.0,
+            "bestAltitudeDegrees": -9.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 9.57483333,
+            "declinationDegrees": 25.46833333,
+            "geocentricDistanceAU": 3.163,
+            "heliocentricDistanceAU": 2.179,
+            "elongationDegrees": 11.0,
+            "magnitude": 15.1,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 230.0,
+            "bestAltitudeDegrees": -10.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 9.29933333,
+            "declinationDegrees": 26.69166667,
+            "geocentricDistanceAU": 3.176,
+            "heliocentricDistanceAU": 2.187,
+            "elongationDegrees": 10.0,
+            "magnitude": 15.2,
+            "bestTimeLocal": "18:49",
+            "bestAzimuthDegreesFromSouth": 108.0,
+            "bestAltitudeDegrees": -22.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 9.57483333,
+            "declinationDegrees": 25.46833333,
+            "geocentricDistanceAU": 3.163,
+            "heliocentricDistanceAU": 2.179,
+            "elongationDegrees": 11.0,
+            "magnitude": 15.1,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 254.0,
+            "bestAltitudeDegrees": -23.0
+          }
+        ]
+      },
+      "currentMagnitude": 15.2,
+      "nextWeekMagnitude": 15.1
+    },
+    {
+      "aerithName": "C/2026 A2 ( Bok )",
+      "normalizedDesignation": "C/2026A2",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 17,
+        "south": 17
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2026A2/2026A2.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/soulier/s/A220260617.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 15.6,
+          "reportedDateText": "July 20",
+          "observer": "Toru Yusa"
+        },
+        {
+          "magnitude": 15.6,
+          "reportedDateText": "July 20",
+          "observer": "Toru Yusa"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 16.052,
+            "declinationDegrees": 77.85833333,
+            "geocentricDistanceAU": 2.57,
+            "heliocentricDistanceAU": 2.538,
+            "elongationDegrees": 76.0,
+            "magnitude": 15.3,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 173.0,
+            "bestAltitudeDegrees": 46.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 16.06783333,
+            "declinationDegrees": 77.14666667,
+            "geocentricDistanceAU": 2.498,
+            "heliocentricDistanceAU": 2.487,
+            "elongationDegrees": 77.0,
+            "magnitude": 15.1,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 171.0,
+            "bestAltitudeDegrees": 46.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 16.052,
+            "declinationDegrees": 77.85833333,
+            "geocentricDistanceAU": 2.57,
+            "heliocentricDistanceAU": 2.538,
+            "elongationDegrees": 76.0,
+            "magnitude": 15.3,
+            "bestTimeLocal": "18:54",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": -23.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 16.06783333,
+            "declinationDegrees": 77.14666667,
+            "geocentricDistanceAU": 2.498,
+            "heliocentricDistanceAU": 2.487,
+            "elongationDegrees": 77.0,
+            "magnitude": 15.1,
+            "bestTimeLocal": "18:53",
+            "bestAzimuthDegreesFromSouth": 178.0,
+            "bestAltitudeDegrees": -22.0
+          }
+        ]
+      },
+      "currentMagnitude": 15.3,
+      "nextWeekMagnitude": 15.1
+    },
+    {
+      "aerithName": "(3200) Phaethon",
+      "normalizedDesignation": "3200",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 18,
+        "south": 18
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/A03200/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/soulier/s/320020260303.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 7.87483333,
+            "declinationDegrees": 19.90833333,
+            "geocentricDistanceAU": 1.633,
+            "heliocentricDistanceAU": 0.749,
+            "elongationDegrees": 18.0,
+            "magnitude": 15.9,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 244.0,
+            "bestAltitudeDegrees": -2.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 8.51116667,
+            "declinationDegrees": 16.83333333,
+            "geocentricDistanceAU": 1.499,
+            "heliocentricDistanceAU": 0.596,
+            "elongationDegrees": 16.0,
+            "magnitude": 15.3,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 246.0,
+            "bestAltitudeDegrees": -4.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 7.87483333,
+            "declinationDegrees": 19.90833333,
+            "geocentricDistanceAU": 1.633,
+            "heliocentricDistanceAU": 0.749,
+            "elongationDegrees": 18.0,
+            "magnitude": 15.9,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 249.0,
+            "bestAltitudeDegrees": -5.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 8.51116667,
+            "declinationDegrees": 16.83333333,
+            "geocentricDistanceAU": 1.499,
+            "heliocentricDistanceAU": 0.596,
+            "elongationDegrees": 16.0,
+            "magnitude": 15.3,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 254.0,
+            "bestAltitudeDegrees": -6.0
+          }
+        ]
+      },
+      "currentMagnitude": 15.9,
+      "nextWeekMagnitude": 15.3
+    },
+    {
+      "aerithName": "C/2022 QE78 ( ATLAS )",
+      "normalizedDesignation": "C/2022",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 19,
+        "south": 19
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2022QE78/2022QE78.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2022QE7820260507UT2052sec19x90_graxpert_denoised.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 15.5,
+          "reportedDateText": "June 14",
+          "observer": "Alfons Diepvens"
+        },
+        {
+          "magnitude": 15.5,
+          "reportedDateText": "June 14",
+          "observer": "Alfons Diepvens"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 10.35733333,
+            "declinationDegrees": 28.475,
+            "geocentricDistanceAU": 6.922,
+            "heliocentricDistanceAU": 5.982,
+            "elongationDegrees": 20.0,
+            "magnitude": 15.5,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 124.0,
+            "bestAltitudeDegrees": 2.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 10.4655,
+            "declinationDegrees": 28.16333333,
+            "geocentricDistanceAU": 6.956,
+            "heliocentricDistanceAU": 6.003,
+            "elongationDegrees": 18.0,
+            "magnitude": 15.5,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 125.0,
+            "bestAltitudeDegrees": 0.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 10.35733333,
+            "declinationDegrees": 28.475,
+            "geocentricDistanceAU": 6.922,
+            "heliocentricDistanceAU": 5.982,
+            "elongationDegrees": 20.0,
+            "magnitude": 15.5,
+            "bestTimeLocal": "18:49",
+            "bestAzimuthDegreesFromSouth": 117.0,
+            "bestAltitudeDegrees": -11.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 10.4655,
+            "declinationDegrees": 28.16333333,
+            "geocentricDistanceAU": 6.956,
+            "heliocentricDistanceAU": 6.003,
+            "elongationDegrees": 18.0,
+            "magnitude": 15.5,
+            "bestTimeLocal": "18:53",
+            "bestAzimuthDegreesFromSouth": 114.0,
+            "bestAltitudeDegrees": -15.0
+          }
+        ]
+      },
+      "currentMagnitude": 15.5,
+      "nextWeekMagnitude": 15.5
+    },
+    {
+      "aerithName": "C/2021 G2 ( ATLAS )",
+      "normalizedDesignation": "C/2021G2",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 20,
+        "south": 20
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2021G2_20250530_2320_10B_3min_MG_L_R_b2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 15.5,
+          "reportedDateText": "July 13",
+          "observer": "Martin Masek"
+        },
+        {
+          "magnitude": 15.5,
+          "reportedDateText": "July 13",
+          "observer": "Martin Masek"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 16.968,
+            "declinationDegrees": 15.38666667,
+            "geocentricDistanceAU": 6.775,
+            "heliocentricDistanceAU": 7.188,
+            "elongationDegrees": 110.0,
+            "magnitude": 15.8,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 27.0,
+            "bestAltitudeDegrees": 68.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 16.96516667,
+            "declinationDegrees": 15.10666667,
+            "geocentricDistanceAU": 6.893,
+            "heliocentricDistanceAU": 7.224,
+            "elongationDegrees": 105.0,
+            "magnitude": 15.8,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 37.0,
+            "bestAltitudeDegrees": 66.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 16.968,
+            "declinationDegrees": 15.38666667,
+            "geocentricDistanceAU": 6.775,
+            "heliocentricDistanceAU": 7.188,
+            "elongationDegrees": 110.0,
+            "magnitude": 15.8,
+            "bestTimeLocal": "19:51",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 40.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 16.96516667,
+            "declinationDegrees": 15.10666667,
+            "geocentricDistanceAU": 6.893,
+            "heliocentricDistanceAU": 7.224,
+            "elongationDegrees": 105.0,
+            "magnitude": 15.8,
+            "bestTimeLocal": "19:23",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 40.0
+          }
+        ]
+      },
+      "currentMagnitude": 15.8,
+      "nextWeekMagnitude": 15.8
+    },
+    {
+      "aerithName": "C/2022 N2 ( PanSTARRS )",
+      "normalizedDesignation": "C/2022N2",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 21,
+        "south": 21
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2022N2/2022N2.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2022N22051123UT1857sec25x70.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 15.8,
+          "reportedDateText": "May 7",
+          "observer": "Ken-ichi Kadota"
+        },
+        {
+          "magnitude": 15.8,
+          "reportedDateText": "May 7",
+          "observer": "Ken-ichi Kadota"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 6.72066667,
+            "declinationDegrees": 26.54666667,
+            "geocentricDistanceAU": 5.774,
+            "heliocentricDistanceAU": 4.984,
+            "elongationDegrees": 35.0,
+            "magnitude": 15.8,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 248.0,
+            "bestAltitudeDegrees": 15.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 6.8345,
+            "declinationDegrees": 26.42333333,
+            "geocentricDistanceAU": 5.745,
+            "heliocentricDistanceAU": 5.021,
+            "elongationDegrees": 40.0,
+            "magnitude": 15.8,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 251.0,
+            "bestAltitudeDegrees": 20.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 6.72066667,
+            "declinationDegrees": 26.54666667,
+            "geocentricDistanceAU": 5.774,
+            "heliocentricDistanceAU": 4.984,
+            "elongationDegrees": 35.0,
+            "magnitude": 15.8,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 234.0,
+            "bestAltitudeDegrees": 4.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 6.8345,
+            "declinationDegrees": 26.42333333,
+            "geocentricDistanceAU": 5.745,
+            "heliocentricDistanceAU": 5.021,
+            "elongationDegrees": 40.0,
+            "magnitude": 15.8,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 232.0,
+            "bestAltitudeDegrees": 6.0
+          }
+        ]
+      },
+      "currentMagnitude": 15.8,
+      "nextWeekMagnitude": 15.8
+    },
+    {
+      "aerithName": "C/2025 Y1 ( ATLAS )",
+      "normalizedDesignation": "C/2025Y1",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 22,
+        "south": 22
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2025Y1/2025Y1.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2025Y1_20260312_2315_8B_5min_MG_L_R_b2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 16.0,
+          "reportedDateText": "July 27",
+          "observer": "ATLAS South Africa"
+        },
+        {
+          "magnitude": 16.0,
+          "reportedDateText": "July 27",
+          "observer": "ATLAS South Africa"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 12.9665,
+            "declinationDegrees": 2.36666667,
+            "geocentricDistanceAU": 5.461,
+            "heliocentricDistanceAU": 4.993,
+            "elongationDegrees": 57.0,
+            "magnitude": 16.2,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 80.0,
+            "bestAltitudeDegrees": 18.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 13.0395,
+            "declinationDegrees": 1.88833333,
+            "geocentricDistanceAU": 5.495,
+            "heliocentricDistanceAU": 4.94,
+            "elongationDegrees": 52.0,
+            "magnitude": 16.1,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 82.0,
+            "bestAltitudeDegrees": 15.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 12.9665,
+            "declinationDegrees": 2.36666667,
+            "geocentricDistanceAU": 5.461,
+            "heliocentricDistanceAU": 4.993,
+            "elongationDegrees": 57.0,
+            "magnitude": 16.2,
+            "bestTimeLocal": "18:49",
+            "bestAzimuthDegreesFromSouth": 122.0,
+            "bestAltitudeDegrees": 34.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 13.0395,
+            "declinationDegrees": 1.88833333,
+            "geocentricDistanceAU": 5.495,
+            "heliocentricDistanceAU": 4.94,
+            "elongationDegrees": 52.0,
+            "magnitude": 16.1,
+            "bestTimeLocal": "18:53",
+            "bestAzimuthDegreesFromSouth": 116.0,
+            "bestAltitudeDegrees": 30.0
+          }
+        ]
+      },
+      "currentMagnitude": 16.2,
+      "nextWeekMagnitude": 16.1
+    },
+    {
+      "aerithName": "C/2025 M2 ( PanSTARRS )",
+      "normalizedDesignation": "C/2025M2",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 23,
+        "south": 23
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2025M2/2025M2.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/merlin/s/C2025M2T3020260708JCM.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 16.0,
+          "reportedDateText": "July 25",
+          "observer": "ATLAS-HKO, Haleakala"
+        },
+        {
+          "magnitude": 16.0,
+          "reportedDateText": "July 25",
+          "observer": "ATLAS-HKO, Haleakala"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 19.6535,
+            "declinationDegrees": -20.27166667,
+            "geocentricDistanceAU": 4.348,
+            "heliocentricDistanceAU": 5.302,
+            "elongationDegrees": 158.0,
+            "magnitude": 16.4,
+            "bestTimeLocal": "22:31",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 35.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 19.502,
+            "declinationDegrees": -20.54833333,
+            "geocentricDistanceAU": 4.355,
+            "heliocentricDistanceAU": 5.251,
+            "elongationDegrees": 149.0,
+            "magnitude": 16.4,
+            "bestTimeLocal": "21:55",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 34.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 19.6535,
+            "declinationDegrees": -20.27166667,
+            "geocentricDistanceAU": 4.348,
+            "heliocentricDistanceAU": 5.302,
+            "elongationDegrees": 158.0,
+            "magnitude": 16.4,
+            "bestTimeLocal": "22:31",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 75.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 19.502,
+            "declinationDegrees": -20.54833333,
+            "geocentricDistanceAU": 4.355,
+            "heliocentricDistanceAU": 5.251,
+            "elongationDegrees": 149.0,
+            "magnitude": 16.4,
+            "bestTimeLocal": "21:55",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 76.0
+          }
+        ]
+      },
+      "currentMagnitude": 16.4,
+      "nextWeekMagnitude": 16.4
+    },
+    {
+      "aerithName": "65P/Gunn",
+      "normalizedDesignation": "65P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 24,
+        "south": 24
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/soulier/s/65P20240307.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 18.4,
+          "reportedDateText": "July 10",
+          "observer": "W. Hasubick"
+        },
+        {
+          "magnitude": 18.4,
+          "reportedDateText": "July 10",
+          "observer": "W. Hasubick"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 0.904,
+            "declinationDegrees": -5.43833333,
+            "geocentricDistanceAU": 2.838,
+            "heliocentricDistanceAU": 3.509,
+            "elongationDegrees": 124.0,
+            "magnitude": 16.7,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 356.0,
+            "bestAltitudeDegrees": 50.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 0.89066667,
+            "declinationDegrees": -5.72833333,
+            "geocentricDistanceAU": 2.777,
+            "heliocentricDistanceAU": 3.525,
+            "elongationDegrees": 130.0,
+            "magnitude": 16.7,
+            "bestTimeLocal": "3:22",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 49.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 0.904,
+            "declinationDegrees": -5.43833333,
+            "geocentricDistanceAU": 2.838,
+            "heliocentricDistanceAU": 3.509,
+            "elongationDegrees": 124.0,
+            "magnitude": 16.7,
+            "bestTimeLocal": "3:50",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 60.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 0.89066667,
+            "declinationDegrees": -5.72833333,
+            "geocentricDistanceAU": 2.777,
+            "heliocentricDistanceAU": 3.525,
+            "elongationDegrees": 130.0,
+            "magnitude": 16.7,
+            "bestTimeLocal": "3:22",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 61.0
+          }
+        ]
+      },
+      "currentMagnitude": 16.7,
+      "nextWeekMagnitude": 16.7
+    },
+    {
+      "aerithName": "114P/Wiseman-Skiff",
+      "normalizedDesignation": "114P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 25,
+        "south": 25
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0114P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/icon/pr_star.gif",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 5.92783333,
+            "declinationDegrees": 30.345,
+            "geocentricDistanceAU": 2.14,
+            "heliocentricDistanceAU": 1.618,
+            "elongationDegrees": 46.0,
+            "magnitude": 16.8,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 250.0,
+            "bestAltitudeDegrees": 26.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 6.31183333,
+            "declinationDegrees": 29.48833333,
+            "geocentricDistanceAU": 2.092,
+            "heliocentricDistanceAU": 1.602,
+            "elongationDegrees": 48.0,
+            "magnitude": 16.7,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 252.0,
+            "bestAltitudeDegrees": 28.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 5.92783333,
+            "declinationDegrees": 30.345,
+            "geocentricDistanceAU": 2.14,
+            "heliocentricDistanceAU": 1.618,
+            "elongationDegrees": 46.0,
+            "magnitude": 16.8,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 224.0,
+            "bestAltitudeDegrees": 8.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 6.31183333,
+            "declinationDegrees": 29.48833333,
+            "geocentricDistanceAU": 2.092,
+            "heliocentricDistanceAU": 1.602,
+            "elongationDegrees": 48.0,
+            "magnitude": 16.7,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 225.0,
+            "bestAltitudeDegrees": 9.0
+          }
+        ]
+      },
+      "currentMagnitude": 16.8,
+      "nextWeekMagnitude": 16.7
+    },
+    {
+      "aerithName": "P/2026 M1 ( ZTF )",
+      "normalizedDesignation": "P/2026M1",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 26,
+        "south": 26
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2021N1/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/mattiazzo/s/2021n1_20260623_mmatti1.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 15.2,
+          "reportedDateText": "July 14",
+          "observer": "Andrew Pearce"
+        },
+        {
+          "magnitude": 16.2,
+          "reportedDateText": "July 28",
+          "observer": "Ken-ichi Kadota"
+        },
+        {
+          "magnitude": 15.2,
+          "reportedDateText": "July 14",
+          "observer": "Andrew Pearce"
+        },
+        {
+          "magnitude": 16.2,
+          "reportedDateText": "July 28",
+          "observer": "Ken-ichi Kadota"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 3.718,
+            "declinationDegrees": 37.56333333,
+            "geocentricDistanceAU": 0.376,
+            "heliocentricDistanceAU": 0.978,
+            "elongationDegrees": 73.0,
+            "magnitude": 16.8,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 252.0,
+            "bestAltitudeDegrees": 54.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 4.04683333,
+            "declinationDegrees": 40.27833333,
+            "geocentricDistanceAU": 0.422,
+            "heliocentricDistanceAU": 0.998,
+            "elongationDegrees": 75.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 248.0,
+            "bestAltitudeDegrees": 57.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 3.718,
+            "declinationDegrees": 37.56333333,
+            "geocentricDistanceAU": 0.376,
+            "heliocentricDistanceAU": 0.978,
+            "elongationDegrees": 73.0,
+            "magnitude": 16.8,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 196.0,
+            "bestAltitudeDegrees": 15.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 4.04683333,
+            "declinationDegrees": 40.27833333,
+            "geocentricDistanceAU": 0.422,
+            "heliocentricDistanceAU": 0.998,
+            "elongationDegrees": 75.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 195.0,
+            "bestAltitudeDegrees": 13.0
+          }
+        ]
+      },
+      "currentMagnitude": 16.8,
+      "nextWeekMagnitude": 17.1
+    },
+    {
+      "aerithName": "C/2025 J1 ( Borisov )",
+      "normalizedDesignation": "C/2025J1",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 27,
+        "south": 27
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2025J1/2025J1.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2025J1_20251226_1955_36B_3min_MG_L_R_b2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 16.6,
+          "reportedDateText": "Mar. 1",
+          "observer": "Ken-ichi Kadota"
+        },
+        {
+          "magnitude": 16.6,
+          "reportedDateText": "Mar. 1",
+          "observer": "Ken-ichi Kadota"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 6.9345,
+            "declinationDegrees": 24.20333333,
+            "geocentricDistanceAU": 4.433,
+            "heliocentricDistanceAU": 3.618,
+            "elongationDegrees": 32.0,
+            "magnitude": 16.8,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 248.0,
+            "bestAltitudeDegrees": 11.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 7.0075,
+            "declinationDegrees": 22.95833333,
+            "geocentricDistanceAU": 4.372,
+            "heliocentricDistanceAU": 3.627,
+            "elongationDegrees": 37.0,
+            "magnitude": 16.8,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 253.0,
+            "bestAltitudeDegrees": 16.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 6.9345,
+            "declinationDegrees": 24.20333333,
+            "geocentricDistanceAU": 4.433,
+            "heliocentricDistanceAU": 3.618,
+            "elongationDegrees": 32.0,
+            "magnitude": 16.8,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 238.0,
+            "bestAltitudeDegrees": 3.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 7.0075,
+            "declinationDegrees": 22.95833333,
+            "geocentricDistanceAU": 4.372,
+            "heliocentricDistanceAU": 3.627,
+            "elongationDegrees": 37.0,
+            "magnitude": 16.8,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 236.0,
+            "bestAltitudeDegrees": 7.0
+          }
+        ]
+      },
+      "currentMagnitude": 16.8,
+      "nextWeekMagnitude": 16.8
+    },
+    {
+      "aerithName": "C/2026 AZ17 ( Bok )",
+      "normalizedDesignation": "C/2026",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 28,
+        "south": 28
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2026AZ17/2026AZ17.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2026AZ1720260422ut2359sec45x120.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 17.0,
+          "reportedDateText": "July 28",
+          "observer": "ATLAS-HKO, Haleakala"
+        },
+        {
+          "magnitude": 17.0,
+          "reportedDateText": "July 28",
+          "observer": "ATLAS-HKO, Haleakala"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 16.41716667,
+            "declinationDegrees": 18.99666667,
+            "geocentricDistanceAU": 2.333,
+            "heliocentricDistanceAU": 2.723,
+            "elongationDegrees": 101.0,
+            "magnitude": 16.9,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 49.0,
+            "bestAltitudeDegrees": 67.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 16.48566667,
+            "declinationDegrees": 17.02333333,
+            "geocentricDistanceAU": 2.36,
+            "heliocentricDistanceAU": 2.693,
+            "elongationDegrees": 97.0,
+            "magnitude": 16.8,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 52.0,
+            "bestAltitudeDegrees": 64.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 16.41716667,
+            "declinationDegrees": 18.99666667,
+            "geocentricDistanceAU": 2.333,
+            "heliocentricDistanceAU": 2.723,
+            "elongationDegrees": 101.0,
+            "magnitude": 16.9,
+            "bestTimeLocal": "19:18",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 36.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 16.48566667,
+            "declinationDegrees": 17.02333333,
+            "geocentricDistanceAU": 2.36,
+            "heliocentricDistanceAU": 2.693,
+            "elongationDegrees": 97.0,
+            "magnitude": 16.8,
+            "bestTimeLocal": "18:55",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 38.0
+          }
+        ]
+      },
+      "currentMagnitude": 16.9,
+      "nextWeekMagnitude": 16.8
+    },
+    {
+      "aerithName": "C/2024 G6 ( ATLAS )",
+      "normalizedDesignation": "C/2024G6",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 29,
+        "south": 29
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2024G6/2024G6.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2024G6_20260522_2230_10B_3min_MG_L_R_b2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 16.8,
+          "reportedDateText": "July 24",
+          "observer": "ATLAS-HKO, Haleakala"
+        },
+        {
+          "magnitude": 16.8,
+          "reportedDateText": "July 24",
+          "observer": "ATLAS-HKO, Haleakala"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 15.11633333,
+            "declinationDegrees": 15.61333333,
+            "geocentricDistanceAU": 6.542,
+            "heliocentricDistanceAU": 6.531,
+            "elongationDegrees": 84.0,
+            "magnitude": 16.9,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 70.0,
+            "bestAltitudeDegrees": 51.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 15.1015,
+            "declinationDegrees": 15.57333333,
+            "geocentricDistanceAU": 6.656,
+            "heliocentricDistanceAU": 6.539,
+            "elongationDegrees": 79.0,
+            "magnitude": 16.9,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 74.0,
+            "bestAltitudeDegrees": 47.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 15.11633333,
+            "declinationDegrees": 15.61333333,
+            "geocentricDistanceAU": 6.542,
+            "heliocentricDistanceAU": 6.531,
+            "elongationDegrees": 84.0,
+            "magnitude": 16.9,
+            "bestTimeLocal": "18:49",
+            "bestAzimuthDegreesFromSouth": 165.0,
+            "bestAltitudeDegrees": 38.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 15.1015,
+            "declinationDegrees": 15.57333333,
+            "geocentricDistanceAU": 6.656,
+            "heliocentricDistanceAU": 6.539,
+            "elongationDegrees": 79.0,
+            "magnitude": 16.9,
+            "bestTimeLocal": "18:53",
+            "bestAzimuthDegreesFromSouth": 155.0,
+            "bestAltitudeDegrees": 36.0
+          }
+        ]
+      },
+      "currentMagnitude": 16.9,
+      "nextWeekMagnitude": 16.9
+    },
+    {
+      "aerithName": "112P/Urata-Niijima",
+      "normalizedDesignation": "112P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 30,
+        "south": 30
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0112P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/icon/pr_star.gif",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 19.0,
+          "reportedDateText": "July 29",
+          "observer": "Jean-Francois Soulier"
+        },
+        {
+          "magnitude": 19.0,
+          "reportedDateText": "July 29",
+          "observer": "Jean-Francois Soulier"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 4.09466667,
+            "declinationDegrees": 16.785,
+            "geocentricDistanceAU": 1.481,
+            "heliocentricDistanceAU": 1.522,
+            "elongationDegrees": 72.0,
+            "magnitude": 17.3,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 279.0,
+            "bestAltitudeDegrees": 42.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 4.42816667,
+            "declinationDegrees": 19.52,
+            "geocentricDistanceAU": 1.42,
+            "heliocentricDistanceAU": 1.5,
+            "elongationDegrees": 74.0,
+            "magnitude": 17.0,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 278.0,
+            "bestAltitudeDegrees": 46.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 4.09466667,
+            "declinationDegrees": 16.785,
+            "geocentricDistanceAU": 1.481,
+            "heliocentricDistanceAU": 1.522,
+            "elongationDegrees": 72.0,
+            "magnitude": 17.3,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 209.0,
+            "bestAltitudeDegrees": 33.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 4.42816667,
+            "declinationDegrees": 19.52,
+            "geocentricDistanceAU": 1.42,
+            "heliocentricDistanceAU": 1.5,
+            "elongationDegrees": 74.0,
+            "magnitude": 17.0,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 207.0,
+            "bestAltitudeDegrees": 31.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.3,
+      "nextWeekMagnitude": 17.0
+    },
+    {
+      "aerithName": "C/2024 G4 ( PanSTARRS )",
+      "normalizedDesignation": "C/2024G4",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 31,
+        "south": 31
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2024G4/2024G4.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2024G420250614UT2101sec33x30.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 16.8,
+          "reportedDateText": "July 10",
+          "observer": "Alfons Diepvens"
+        },
+        {
+          "magnitude": 16.8,
+          "reportedDateText": "July 10",
+          "observer": "Alfons Diepvens"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 20.10616667,
+            "declinationDegrees": 0.43333333,
+            "geocentricDistanceAU": 4.069,
+            "heliocentricDistanceAU": 5.018,
+            "elongationDegrees": 157.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "22:59",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 55.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 20.072,
+            "declinationDegrees": 0.355,
+            "geocentricDistanceAU": 4.105,
+            "heliocentricDistanceAU": 5.03,
+            "elongationDegrees": 153.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "22:29",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 55.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 20.10616667,
+            "declinationDegrees": 0.43333333,
+            "geocentricDistanceAU": 4.069,
+            "heliocentricDistanceAU": 5.018,
+            "elongationDegrees": 157.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "22:59",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 55.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 20.072,
+            "declinationDegrees": 0.355,
+            "geocentricDistanceAU": 4.105,
+            "heliocentricDistanceAU": 5.03,
+            "elongationDegrees": 153.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "22:29",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 55.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.1,
+      "nextWeekMagnitude": 17.1
+    },
+    {
+      "aerithName": "C/2025 E1 ( PanSTARRS )",
+      "normalizedDesignation": "C/2025E1",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 32,
+        "south": 32
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2025E1/2025E1.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/merlin/s/C2025E1T3020260429JCM.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 17.2,
+          "reportedDateText": "June 2",
+          "observer": "ATLAS Chile"
+        },
+        {
+          "magnitude": 17.2,
+          "reportedDateText": "June 2",
+          "observer": "ATLAS Chile"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 9.67166667,
+            "declinationDegrees": -65.875,
+            "geocentricDistanceAU": 4.025,
+            "heliocentricDistanceAU": 4.018,
+            "elongationDegrees": 82.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 29.0,
+            "bestAltitudeDegrees": -43.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 9.86966667,
+            "declinationDegrees": -66.90666667,
+            "geocentricDistanceAU": 4.041,
+            "heliocentricDistanceAU": 4.013,
+            "elongationDegrees": 81.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 28.0,
+            "bestAltitudeDegrees": -44.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 9.67166667,
+            "declinationDegrees": -65.875,
+            "geocentricDistanceAU": 4.025,
+            "heliocentricDistanceAU": 4.018,
+            "elongationDegrees": 82.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "18:49",
+            "bestAzimuthDegreesFromSouth": 28.0,
+            "bestAltitudeDegrees": 30.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 9.86966667,
+            "declinationDegrees": -66.90666667,
+            "geocentricDistanceAU": 4.041,
+            "heliocentricDistanceAU": 4.013,
+            "elongationDegrees": 81.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "18:53",
+            "bestAzimuthDegreesFromSouth": 26.0,
+            "bestAltitudeDegrees": 29.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.1,
+      "nextWeekMagnitude": 17.1
+    },
+    {
+      "aerithName": "235P/LINEAR",
+      "normalizedDesignation": "235P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 33,
+        "south": 33
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/235P20260510UT0050sec18x60webnew.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 17.4,
+          "reportedDateText": "July 28",
+          "observer": "ATLAS-MLO, Mauna Loa"
+        },
+        {
+          "magnitude": 17.4,
+          "reportedDateText": "July 28",
+          "observer": "ATLAS-MLO, Mauna Loa"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 16.69083333,
+            "declinationDegrees": -10.07,
+            "geocentricDistanceAU": 2.019,
+            "heliocentricDistanceAU": 2.609,
+            "elongationDegrees": 114.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 19.0,
+            "bestAltitudeDegrees": 43.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 16.7585,
+            "declinationDegrees": -10.58666667,
+            "geocentricDistanceAU": 2.128,
+            "heliocentricDistanceAU": 2.639,
+            "elongationDegrees": 109.0,
+            "magnitude": 17.4,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 23.0,
+            "bestAltitudeDegrees": 41.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 16.69083333,
+            "declinationDegrees": -10.07,
+            "geocentricDistanceAU": 2.019,
+            "heliocentricDistanceAU": 2.609,
+            "elongationDegrees": 114.0,
+            "magnitude": 17.1,
+            "bestTimeLocal": "19:35",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 65.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 16.7585,
+            "declinationDegrees": -10.58666667,
+            "geocentricDistanceAU": 2.128,
+            "heliocentricDistanceAU": 2.639,
+            "elongationDegrees": 109.0,
+            "magnitude": 17.4,
+            "bestTimeLocal": "19:11",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 66.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.1,
+      "nextWeekMagnitude": 17.4
+    },
+    {
+      "aerithName": "C/2023 RS61 ( PanSTARRS )",
+      "normalizedDesignation": "C/2023",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 34,
+        "south": 34
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2023RS61/2023RS61.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/2023RS6120250819UT0040sec18x75.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 17.0,
+          "reportedDateText": "Sept. 4",
+          "observer": "Taras Prystavski"
+        },
+        {
+          "magnitude": 17.3,
+          "reportedDateText": "Mar. 6",
+          "observer": "ATLAS-HKO, Haleakala"
+        },
+        {
+          "magnitude": 17.0,
+          "reportedDateText": "Sept. 4",
+          "observer": "Taras Prystavski"
+        },
+        {
+          "magnitude": 17.3,
+          "reportedDateText": "Mar. 6",
+          "observer": "ATLAS-HKO, Haleakala"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 4.44533333,
+            "declinationDegrees": 40.635,
+            "geocentricDistanceAU": 8.884,
+            "heliocentricDistanceAU": 8.507,
+            "elongationDegrees": 65.0,
+            "magnitude": 17.3,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 245.0,
+            "bestAltitudeDegrees": 46.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 4.49416667,
+            "declinationDegrees": 40.96833333,
+            "geocentricDistanceAU": 8.778,
+            "heliocentricDistanceAU": 8.499,
+            "elongationDegrees": 70.0,
+            "magnitude": 17.2,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 246.0,
+            "bestAltitudeDegrees": 52.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 4.44533333,
+            "declinationDegrees": 40.635,
+            "geocentricDistanceAU": 8.884,
+            "heliocentricDistanceAU": 8.507,
+            "elongationDegrees": 65.0,
+            "magnitude": 17.3,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 203.0,
+            "bestAltitudeDegrees": 9.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 4.49416667,
+            "declinationDegrees": 40.96833333,
+            "geocentricDistanceAU": 8.778,
+            "heliocentricDistanceAU": 8.499,
+            "elongationDegrees": 70.0,
+            "magnitude": 17.2,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 199.0,
+            "bestAltitudeDegrees": 10.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.3,
+      "nextWeekMagnitude": 17.2
+    },
+    {
+      "aerithName": "C/2019 E3 ( ATLAS )",
+      "normalizedDesignation": "C/2019E3",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 35,
+        "south": 35
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2019E3/2019E3.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/merlin/s/C2019E3T3120231009JCM.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 0.58183333,
+            "declinationDegrees": -44.52333333,
+            "geocentricDistanceAU": 10.923,
+            "heliocentricDistanceAU": 11.585,
+            "elongationDegrees": 128.0,
+            "magnitude": 17.3,
+            "bestTimeLocal": "3:31",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 11.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 0.53633333,
+            "declinationDegrees": -44.76333333,
+            "geocentricDistanceAU": 10.899,
+            "heliocentricDistanceAU": 11.601,
+            "elongationDegrees": 132.0,
+            "magnitude": 17.3,
+            "bestTimeLocal": "3:00",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 10.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 0.58183333,
+            "declinationDegrees": -44.52333333,
+            "geocentricDistanceAU": 10.923,
+            "heliocentricDistanceAU": 11.585,
+            "elongationDegrees": 128.0,
+            "magnitude": 17.3,
+            "bestTimeLocal": "3:31",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 81.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 0.53633333,
+            "declinationDegrees": -44.76333333,
+            "geocentricDistanceAU": 10.899,
+            "heliocentricDistanceAU": 11.601,
+            "elongationDegrees": 132.0,
+            "magnitude": 17.3,
+            "bestTimeLocal": "3:00",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 80.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.3,
+      "nextWeekMagnitude": 17.3
+    },
+    {
+      "aerithName": "C/2022 E2 ( ATLAS )",
+      "normalizedDesignation": "C/2022E2",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 36,
+        "south": 36
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2022E2/2022E2.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2022E2_20240109_2255_7B_3min_1600_R.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 17.2,
+          "reportedDateText": "July 10",
+          "observer": "Ken-ichi Kadota"
+        },
+        {
+          "magnitude": 17.2,
+          "reportedDateText": "July 10",
+          "observer": "Ken-ichi Kadota"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 22.64716667,
+            "declinationDegrees": 31.46666667,
+            "geocentricDistanceAU": 6.179,
+            "heliocentricDistanceAU": 6.847,
+            "elongationDegrees": 127.0,
+            "magnitude": 17.4,
+            "bestTimeLocal": "1:35",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 87.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 22.54983333,
+            "declinationDegrees": 30.995,
+            "geocentricDistanceAU": 6.162,
+            "heliocentricDistanceAU": 6.891,
+            "elongationDegrees": 132.0,
+            "magnitude": 17.5,
+            "bestTimeLocal": "1:02",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 86.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 22.64716667,
+            "declinationDegrees": 31.46666667,
+            "geocentricDistanceAU": 6.179,
+            "heliocentricDistanceAU": 6.847,
+            "elongationDegrees": 127.0,
+            "magnitude": 17.4,
+            "bestTimeLocal": "1:35",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 23.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 22.54983333,
+            "declinationDegrees": 30.995,
+            "geocentricDistanceAU": 6.162,
+            "heliocentricDistanceAU": 6.891,
+            "elongationDegrees": 132.0,
+            "magnitude": 17.5,
+            "bestTimeLocal": "1:02",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 24.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.4,
+      "nextWeekMagnitude": 17.5
+    },
+    {
+      "aerithName": "C/2023 X2 ( Lemmon )",
+      "normalizedDesignation": "C/2023X2",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 37,
+        "south": 37
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2023X2/2023X2.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2023X2_20251226_1800_15B_4min_MG_L_R_b2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 17.8,
+          "reportedDateText": "July 6",
+          "observer": "ATLAS-MLO, Mauna Loa"
+        },
+        {
+          "magnitude": 17.8,
+          "reportedDateText": "July 6",
+          "observer": "ATLAS-MLO, Mauna Loa"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 13.95766667,
+            "declinationDegrees": 67.86333333,
+            "geocentricDistanceAU": 5.657,
+            "heliocentricDistanceAU": 5.362,
+            "elongationDegrees": 68.0,
+            "magnitude": 17.5,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 154.0,
+            "bestAltitudeDegrees": 45.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 14.0815,
+            "declinationDegrees": 66.1,
+            "geocentricDistanceAU": 5.679,
+            "heliocentricDistanceAU": 5.378,
+            "elongationDegrees": 67.0,
+            "magnitude": 17.5,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 151.0,
+            "bestAltitudeDegrees": 45.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 13.95766667,
+            "declinationDegrees": 67.86333333,
+            "geocentricDistanceAU": 5.657,
+            "heliocentricDistanceAU": 5.362,
+            "elongationDegrees": 68.0,
+            "magnitude": 17.5,
+            "bestTimeLocal": "18:49",
+            "bestAzimuthDegreesFromSouth": 169.0,
+            "bestAltitudeDegrees": -15.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 14.0815,
+            "declinationDegrees": 66.1,
+            "geocentricDistanceAU": 5.679,
+            "heliocentricDistanceAU": 5.378,
+            "elongationDegrees": 67.0,
+            "magnitude": 17.5,
+            "bestTimeLocal": "18:53",
+            "bestAzimuthDegreesFromSouth": 166.0,
+            "bestAltitudeDegrees": -15.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.5,
+      "nextWeekMagnitude": 17.5
+    },
+    {
+      "aerithName": "188P/LINEAR-Mueller",
+      "normalizedDesignation": "188P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 38,
+        "south": 38
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0188P/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/prystavski/s/0188P-20251009-225759-L-BIN2-_-120-001+3_caption.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 18.2,
+          "reportedDateText": "Jan. 17",
+          "observer": "Kunihiro Shima"
+        },
+        {
+          "magnitude": 18.2,
+          "reportedDateText": "Jan. 17",
+          "observer": "Kunihiro Shima"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 4.99983333,
+            "declinationDegrees": 30.66333333,
+            "geocentricDistanceAU": 3.057,
+            "heliocentricDistanceAU": 2.67,
+            "elongationDegrees": 58.0,
+            "magnitude": 17.6,
+            "bestTimeLocal": "3:39",
+            "bestAzimuthDegreesFromSouth": 255.0,
+            "bestAltitudeDegrees": 37.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 5.1935,
+            "declinationDegrees": 31.255,
+            "geocentricDistanceAU": 2.996,
+            "heliocentricDistanceAU": 2.685,
+            "elongationDegrees": 62.0,
+            "magnitude": 17.6,
+            "bestTimeLocal": "3:47",
+            "bestAzimuthDegreesFromSouth": 257.0,
+            "bestAltitudeDegrees": 42.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 4.99983333,
+            "declinationDegrees": 30.66333333,
+            "geocentricDistanceAU": 3.057,
+            "heliocentricDistanceAU": 2.67,
+            "elongationDegrees": 58.0,
+            "magnitude": 17.6,
+            "bestTimeLocal": "5:22",
+            "bestAzimuthDegreesFromSouth": 214.0,
+            "bestAltitudeDegrees": 15.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 5.1935,
+            "declinationDegrees": 31.255,
+            "geocentricDistanceAU": 2.996,
+            "heliocentricDistanceAU": 2.685,
+            "elongationDegrees": 62.0,
+            "magnitude": 17.6,
+            "bestTimeLocal": "5:15",
+            "bestAzimuthDegreesFromSouth": 212.0,
+            "bestAltitudeDegrees": 16.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.6,
+      "nextWeekMagnitude": 17.6
+    },
+    {
+      "aerithName": "C/2025 B2 ( Borisov )",
+      "normalizedDesignation": "C/2025B2",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 39,
+        "south": 39
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2025B2/2025B2.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2025B2_20250818_2255_22B_3min_MG_L_R_b2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 17.2,
+          "reportedDateText": "July 20",
+          "observer": "ATLAS-MLO, Mauna Loa"
+        },
+        {
+          "magnitude": 17.2,
+          "reportedDateText": "July 20",
+          "observer": "ATLAS-MLO, Mauna Loa"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 16.655,
+            "declinationDegrees": 83.94,
+            "geocentricDistanceAU": 8.427,
+            "heliocentricDistanceAU": 8.241,
+            "elongationDegrees": 76.0,
+            "magnitude": 17.7,
+            "bestTimeLocal": "20:31",
+            "bestAzimuthDegreesFromSouth": 178.0,
+            "bestAltitudeDegrees": 41.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 16.54866667,
+            "declinationDegrees": 82.81666667,
+            "geocentricDistanceAU": 8.398,
+            "heliocentricDistanceAU": 8.241,
+            "elongationDegrees": 77.0,
+            "magnitude": 17.7,
+            "bestTimeLocal": "20:21",
+            "bestAzimuthDegreesFromSouth": 176.0,
+            "bestAltitudeDegrees": 42.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 16.655,
+            "declinationDegrees": 83.94,
+            "geocentricDistanceAU": 8.427,
+            "heliocentricDistanceAU": 8.241,
+            "elongationDegrees": 76.0,
+            "magnitude": 17.7,
+            "bestTimeLocal": "19:27",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": -29.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 16.54866667,
+            "declinationDegrees": 82.81666667,
+            "geocentricDistanceAU": 8.398,
+            "heliocentricDistanceAU": 8.241,
+            "elongationDegrees": 77.0,
+            "magnitude": 17.7,
+            "bestTimeLocal": "18:54",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": -28.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.7,
+      "nextWeekMagnitude": 17.7
+    },
+    {
+      "aerithName": "84P/Giclas",
+      "normalizedDesignation": "84P",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 40,
+        "south": 40
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/0084P/2027.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/jager/s/84P20260707UT2032sec12x120.png",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 17.4,
+          "reportedDateText": "July 26",
+          "observer": "ATLAS South Africa"
+        },
+        {
+          "magnitude": 17.4,
+          "reportedDateText": "July 26",
+          "observer": "ATLAS South Africa"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 20.63683333,
+            "declinationDegrees": -23.49666667,
+            "geocentricDistanceAU": 1.385,
+            "heliocentricDistanceAU": 2.39,
+            "elongationDegrees": 169.0,
+            "magnitude": 17.9,
+            "bestTimeLocal": "23:30",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 32.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 20.53233333,
+            "declinationDegrees": -24.27666667,
+            "geocentricDistanceAU": 1.368,
+            "heliocentricDistanceAU": 2.352,
+            "elongationDegrees": 161.0,
+            "magnitude": 17.7,
+            "bestTimeLocal": "22:57",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 31.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 20.63683333,
+            "declinationDegrees": -23.49666667,
+            "geocentricDistanceAU": 1.385,
+            "heliocentricDistanceAU": 2.39,
+            "elongationDegrees": 169.0,
+            "magnitude": 17.9,
+            "bestTimeLocal": "23:30",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 78.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 20.53233333,
+            "declinationDegrees": -24.27666667,
+            "geocentricDistanceAU": 1.368,
+            "heliocentricDistanceAU": 2.352,
+            "elongationDegrees": 161.0,
+            "magnitude": 17.7,
+            "bestTimeLocal": "22:57",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 79.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.9,
+      "nextWeekMagnitude": 17.7
+    },
+    {
+      "aerithName": "C/2023 H5 ( Lemmon )",
+      "normalizedDesignation": "C/2023H5",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 41,
+        "south": 41
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2023H5/2023H5.html",
+      "thumbnailImageURL": "http://www.aerith.net/pictures/fichtl/s/2023H5_20250222_0022_8B_3min_MG_L_R_b2.jpg",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 17.8,
+          "reportedDateText": "July 26",
+          "observer": "Ken-ichi Kadota"
+        },
+        {
+          "magnitude": 17.8,
+          "reportedDateText": "July 26",
+          "observer": "Ken-ichi Kadota"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 21.18416667,
+            "declinationDegrees": 66.04333333,
+            "geocentricDistanceAU": 5.184,
+            "heliocentricDistanceAU": 5.414,
+            "elongationDegrees": 97.0,
+            "magnitude": 17.9,
+            "bestTimeLocal": "0:07",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 59.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 21.034,
+            "declinationDegrees": 65.18,
+            "geocentricDistanceAU": 5.173,
+            "heliocentricDistanceAU": 5.447,
+            "elongationDegrees": 100.0,
+            "magnitude": 17.9,
+            "bestTimeLocal": "23:25",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 60.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 21.18416667,
+            "declinationDegrees": 66.04333333,
+            "geocentricDistanceAU": 5.184,
+            "heliocentricDistanceAU": 5.414,
+            "elongationDegrees": 97.0,
+            "magnitude": 17.9,
+            "bestTimeLocal": "0:07",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": -11.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 21.034,
+            "declinationDegrees": 65.18,
+            "geocentricDistanceAU": 5.173,
+            "heliocentricDistanceAU": 5.447,
+            "elongationDegrees": 100.0,
+            "magnitude": 17.9,
+            "bestTimeLocal": "23:25",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": -10.0
+          }
+        ]
+      },
+      "currentMagnitude": 17.9,
+      "nextWeekMagnitude": 17.9
+    },
+    {
+      "aerithName": "P/2026 L3 ( Gibbs )",
+      "normalizedDesignation": "P/2026L3",
+      "hemispheres": [
+        "north",
+        "south"
+      ],
+      "pageRanks": {
+        "north": 42,
+        "south": 42
+      },
+      "sourcePageURLs": {
+        "north": "http://www.aerith.net/comet/weekly/current.html",
+        "south": "http://www.aerith.net/comet/weekly/20260808s.html"
+      },
+      "detailURL": "http://www.aerith.net/comet/catalog/2012K3/2026.html",
+      "thumbnailImageURL": "http://www.aerith.net/icon/pr_star.gif",
+      "imagePermissionStatus": "permission-granted",
+      "imageAttribution": "Image courtesy Aerith / Seiichi Yoshida; link to the relevant Aerith detail page.",
+      "reportedMagnitudes": [
+        {
+          "magnitude": 19.7,
+          "reportedDateText": "July 14",
+          "observer": "Martin Masek"
+        },
+        {
+          "magnitude": 19.7,
+          "reportedDateText": "July 14",
+          "observer": "Martin Masek"
+        }
+      ],
+      "weeklyRowsByHemisphere": {
+        "north": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 20.096,
+            "declinationDegrees": -20.74166667,
+            "geocentricDistanceAU": 1.115,
+            "heliocentricDistanceAU": 2.109,
+            "elongationDegrees": 164.0,
+            "magnitude": 21.0,
+            "bestTimeLocal": "22:58",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 34.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 20.056,
+            "declinationDegrees": -21.99833333,
+            "geocentricDistanceAU": 1.146,
+            "heliocentricDistanceAU": 2.114,
+            "elongationDegrees": 156.0,
+            "magnitude": 21.0,
+            "bestTimeLocal": "22:28",
+            "bestAzimuthDegreesFromSouth": 0.0,
+            "bestAltitudeDegrees": 33.0
+          }
+        ],
+        "south": [
+          {
+            "date": "2026-08-08",
+            "rightAscensionHours": 20.096,
+            "declinationDegrees": -20.74166667,
+            "geocentricDistanceAU": 1.115,
+            "heliocentricDistanceAU": 2.109,
+            "elongationDegrees": 164.0,
+            "magnitude": 21.0,
+            "bestTimeLocal": "22:58",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 76.0
+          },
+          {
+            "date": "2026-08-15",
+            "rightAscensionHours": 20.056,
+            "declinationDegrees": -21.99833333,
+            "geocentricDistanceAU": 1.146,
+            "heliocentricDistanceAU": 2.114,
+            "elongationDegrees": 156.0,
+            "magnitude": 21.0,
+            "bestTimeLocal": "22:28",
+            "bestAzimuthDegreesFromSouth": 180.0,
+            "bestAltitudeDegrees": 77.0
+          }
+        ]
+      },
+      "currentMagnitude": 21.0,
+      "nextWeekMagnitude": 21.0
+    }
+  ]
+}

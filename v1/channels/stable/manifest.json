@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-08-12T12:47:58Z",
-  "publishedAt": "2026-08-12T12:47:58Z",
+  "generatedAt": "2026-08-15T00:00:00Z",
+  "publishedAt": "2026-08-15T00:00:00Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -81,14 +81,14 @@
     },
     {
       "family": "cometSnapshot",
-      "packageVersion": "comet-snapshot-v1-2026-07-12-cobs-horizons-20",
+      "packageVersion": "comet-snapshot-v1-2026-08-14-cobs-horizons-20-aerith",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/comets/comet_snapshot_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "3bc78d3f4358deba829fa3e4a0904af066aa4dc68c665183ba8cb1c014f41be9"
+        "value": "d6119537bc832a61a40c5de864a89f882e0c9501d82708bbd63323e49d022a54"
       },
-      "byteSize": 1180163,
+      "byteSize": 1237476,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -108,6 +108,22 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Clients that support this family should retain bundled comet orbit geometry or hide orbit-rendering affordances when no compatible package is available."
+    },
+    {
+      "family": "cometDetailMetadata",
+      "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/comet-details/comet_detail_metadata_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "dd3a501eda100e054ec0a3843780c76ff0f3c8ba5d89854b31d8a0a534ab5ba5"
+      },
+      "byteSize": 10457,
+      "recordCount": 15,
+      "minSupportedAppVersion": "1.4.1",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Clients that support this family should lazy-load a comet shard only for the opened detail target and hide Aerith brightness/media affordances when no compatible package exists."
     },
     {
       "family": "planetCatalog",
