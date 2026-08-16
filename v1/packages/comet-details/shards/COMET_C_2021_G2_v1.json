@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260816-aerith",
   "packageRole": "comet",
   "shardID": "COMET_C_2021_G2",
   "record": {
@@ -10,20 +10,88 @@
     "displayName": "C/2021 G2 (ATLAS)",
     "aerithName": "C/2021 G2 ( ATLAS )",
     "detailURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
-    "generatedAt": "2026-08-15T00:00:00Z",
+    "generatedAt": "2026-08-16T17:42:20Z",
+    "visibilitySummary": {
+      "state": "current",
+      "referenceDate": "2026-08-15",
+      "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
+      "usefulMagnitudeLimit": 16.0,
+      "aerithCurrentDate": "2026-08-15",
+      "aerithNextUsefulDate": "2026-08-22",
+      "aerithCurrentMagnitude": 15.8,
+      "aerithNextMagnitude": 15.9,
+      "currentBestAltitudeDegreesByHemisphere": {
+        "north": 66.0,
+        "south": 40.0
+      },
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 64.0,
+        "south": 40.0
+      },
+      "futureUsefulStartDate": "2026-08-15",
+      "futureUsefulEndDate": "2026-08-22",
+      "daysUntilFutureUsefulStart": 0,
+      "daysUntilFutureUsefulEnd": 7
+    },
+    "ephemerisSummary": {
+      "validStart": "2026-07-12T00:00:00Z",
+      "validEnd": "2027-07-12T00:00:00Z",
+      "sourcePackageVersion": "comet-snapshot-v1-2026-08-16-cobs-horizons-20-aerith",
+      "sourceGeneratedAt": "2026-07-12T21:25:04Z",
+      "sampleStepHours": 12,
+      "sampleCount": 731,
+      "referenceDate": "2026-08-15",
+      "usefulMagnitudeLimit": 16.0,
+      "currentMagnitudeEstimate": 15.8,
+      "currentSampleDate": "2026-08-15",
+      "currentSampleStatus": "useful",
+      "firstFutureUsefulDate": "2026-08-15",
+      "lastFutureUsefulDate": "2026-08-22",
+      "daysUntilUsefulStart": 0,
+      "daysUntilUsefulEnd": 7,
+      "brightestMagnitude": 15.8,
+      "brightestDate": "2026-08-08",
+      "faintestMagnitude": 17.707,
+      "faintestDate": "2027-07-12"
+    },
+    "classification": {
+      "orbitalFamily": "long_period",
+      "inclinationClass": "moderate_inclination",
+      "returnStatus": "non_periodic_or_uncertain",
+      "source": {
+        "orbitClass": "Long-period Comet",
+        "jplOrbitClassCode": "HYP"
+      }
+    },
     "source": {
       "name": "Aerith / Seiichi Yoshida",
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-14T17:10:25Z",
+      "generatedAt": "2026-08-16T17:42:20Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
         "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2021_g2_4a387489515f.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2021_g2_4a387489515f.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_c_2021_g2_4a387489515f.jpg",
+        "originalURL": "http://www.aerith.net/pictures/fichtl/s/2021G2_20250530_2320_10B_3min_MG_L_R_b2.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 18654,
+        "checksum": "4a387489515f3cda22d196289b9029d2292834fc9c86c79881947c66428a2e77"
+      },
+      "hero": {
+        "kind": "hero",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2021_g2_4a387489515f.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2021_g2_4a387489515f.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_c_2021_g2_4a387489515f.jpg",
+        "originalURL": "http://www.aerith.net/pictures/fichtl/s/2021G2_20250530_2320_10B_3min_MG_L_R_b2.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
         "byteSize": 18654,
         "checksum": "4a387489515f3cda22d196289b9029d2292834fc9c86c79881947c66428a2e77"
@@ -31,31 +99,96 @@
     },
     "brightness": [
       {
-        "id": "C/2021G2-2026-07-13-report-1",
-        "date": "2026-07-13",
-        "magnitude": 15.5,
+        "id": "C/2021G2-2026-08-02-report-1",
+        "date": "2026-08-02",
+        "magnitude": 15.7,
         "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
-        "sourceURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html"
+        "sourceURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
+        "commentary": "Now it is 15.7 mag (Aug. 2, Masayoshi Yoshimi). It stays 16 mag for a while. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be getting lower gradually after this, and it will be unobservable in November."
       },
       {
-        "id": "C/2021G2-2026-08-08-north-weekly-1",
-        "date": "2026-08-08",
-        "magnitude": 15.8,
-        "qualifier": "weekly-estimate",
-        "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.3
-      },
-      {
-        "id": "C/2021G2-2026-08-15-north-weekly-2",
+        "id": "C/2021G2-2026-08-15-north-weekly-1",
         "date": "2026-08-15",
         "magnitude": 15.8,
         "qualifier": "weekly-estimate",
+        "estimateKind": "current",
+        "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.0
+        "magnitudeDelta": 0.1
+      },
+      {
+        "id": "C/2021G2-2026-08-22-north-weekly-2",
+        "date": "2026-08-22",
+        "magnitude": 15.9,
+        "qualifier": "weekly-estimate",
+        "estimateKind": "projection",
+        "isProjection": true,
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.1
       }
-    ]
+    ],
+    "brightnessChart": {
+      "lookbackDays": 90,
+      "availableStartDate": "2026-08-02",
+      "availableEndDate": "2026-08-22",
+      "actualDaySpan": 20,
+      "pointCount": 3,
+      "containsProjection": true,
+      "containsReportedObservation": true,
+      "points": [
+        {
+          "id": "C/2021G2-2026-08-02-report-1",
+          "date": "2026-08-02",
+          "magnitude": 15.7,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
+          "commentary": "Now it is 15.7 mag (Aug. 2, Masayoshi Yoshimi). It stays 16 mag for a while. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be getting lower gradually after this, and it will be unobservable in November."
+        },
+        {
+          "id": "C/2021G2-2026-08-15-north-weekly-1",
+          "date": "2026-08-15",
+          "magnitude": 15.8,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "current",
+          "isProjection": false,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.1
+        },
+        {
+          "id": "C/2021G2-2026-08-22-north-weekly-2",
+          "date": "2026-08-22",
+          "magnitude": 15.9,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "projection",
+          "isProjection": true,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.1
+        }
+      ]
+    },
+    "brightnessTrend": {
+      "currentMagnitude": 15.9,
+      "currentDate": "2026-08-22",
+      "currentPointID": "C/2021G2-2026-08-22-north-weekly-2",
+      "comparisonMagnitude": 15.8,
+      "comparisonDate": "2026-08-15",
+      "comparisonPointID": "C/2021G2-2026-08-15-north-weekly-1",
+      "comparisonWindowDays": 7,
+      "deltaMagnitude": 0.1,
+      "direction": "stable",
+      "isNotable": false,
+      "notableChangeThresholdMagnitude": 1.0,
+      "notableObservationIDs": []
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260816-aerith",
   "packageRole": "comet",
   "shardID": "COMET_78P",
   "record": {
@@ -10,20 +10,88 @@
     "displayName": "78P/Gehrels",
     "aerithName": "78P/Gehrels 2",
     "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
-    "generatedAt": "2026-08-15T00:00:00Z",
+    "generatedAt": "2026-08-16T17:42:20Z",
+    "visibilitySummary": {
+      "state": "current",
+      "referenceDate": "2026-08-15",
+      "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
+      "usefulMagnitudeLimit": 16.0,
+      "aerithCurrentDate": "2026-08-15",
+      "aerithNextUsefulDate": "2026-08-22",
+      "aerithCurrentMagnitude": 13.2,
+      "aerithNextMagnitude": 13.2,
+      "currentBestAltitudeDegreesByHemisphere": {
+        "north": 29.0,
+        "south": 19.0
+      },
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 33.0,
+        "south": 20.0
+      },
+      "futureUsefulStartDate": "2026-08-15",
+      "futureUsefulEndDate": "2027-02-08",
+      "daysUntilFutureUsefulStart": 0,
+      "daysUntilFutureUsefulEnd": 177
+    },
+    "ephemerisSummary": {
+      "validStart": "2026-07-12T00:00:00Z",
+      "validEnd": "2027-07-12T00:00:00Z",
+      "sourcePackageVersion": "comet-snapshot-v1-2026-08-16-cobs-horizons-20-aerith",
+      "sourceGeneratedAt": "2026-07-12T21:25:04Z",
+      "sampleStepHours": 12,
+      "sampleCount": 731,
+      "referenceDate": "2026-08-15",
+      "usefulMagnitudeLimit": 16.0,
+      "currentMagnitudeEstimate": 13.2,
+      "currentSampleDate": "2026-08-15",
+      "currentSampleStatus": "useful",
+      "firstFutureUsefulDate": "2026-08-15",
+      "lastFutureUsefulDate": "2027-02-08",
+      "daysUntilUsefulStart": 0,
+      "daysUntilUsefulEnd": 177,
+      "brightestMagnitude": 13.2,
+      "brightestDate": "2026-08-08",
+      "faintestMagnitude": 19.22,
+      "faintestDate": "2027-07-12"
+    },
+    "classification": {
+      "orbitalFamily": "jupiter_family",
+      "inclinationClass": "low_inclination",
+      "returnStatus": "returning",
+      "source": {
+        "orbitClass": "Periodic Comet",
+        "jplOrbitClassCode": "JFc"
+      }
+    },
     "source": {
       "name": "Aerith / Seiichi Yoshida",
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-14T17:10:25Z",
+      "generatedAt": "2026-08-16T17:42:20Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
         "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
+        "originalURL": "http://www.aerith.net/pictures/prystavski/s/0078P-20250910-213623-L-BIN2-_-120-001+3_caption.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 7473,
+        "checksum": "47542025c7c687638e51f8cb57555386d21bb4e6e680332e822f2563cbfd533a"
+      },
+      "hero": {
+        "kind": "hero",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
+        "originalURL": "http://www.aerith.net/pictures/prystavski/s/0078P-20250910-213623-L-BIN2-_-120-001+3_caption.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
         "byteSize": 7473,
         "checksum": "47542025c7c687638e51f8cb57555386d21bb4e6e680332e822f2563cbfd533a"
@@ -35,27 +103,92 @@
         "date": "2026-07-24",
         "magnitude": 13.6,
         "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
-        "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html"
+        "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+        "commentary": "Now it is 13.6 mag (July 24, Hiroshi Abe). It stays 13 mag for a while. In the Northern Hemisphere, it stays observable in good condition. It locates somewhat low in the Southern Hemisphere. But it will become high in autumn."
       },
       {
-        "id": "78P-2026-08-08-north-weekly-1",
-        "date": "2026-08-08",
+        "id": "78P-2026-08-15-north-weekly-1",
+        "date": "2026-08-15",
         "magnitude": 13.2,
         "qualifier": "weekly-estimate",
+        "estimateKind": "current",
+        "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
         "magnitudeDelta": -0.4
       },
       {
-        "id": "78P-2026-08-15-north-weekly-2",
-        "date": "2026-08-15",
+        "id": "78P-2026-08-22-north-weekly-2",
+        "date": "2026-08-22",
         "magnitude": 13.2,
         "qualifier": "weekly-estimate",
+        "estimateKind": "projection",
+        "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
         "magnitudeDelta": 0.0
       }
-    ]
+    ],
+    "brightnessChart": {
+      "lookbackDays": 90,
+      "availableStartDate": "2026-07-24",
+      "availableEndDate": "2026-08-22",
+      "actualDaySpan": 29,
+      "pointCount": 3,
+      "containsProjection": true,
+      "containsReportedObservation": true,
+      "points": [
+        {
+          "id": "78P-2026-07-24-report-1",
+          "date": "2026-07-24",
+          "magnitude": 13.6,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+          "commentary": "Now it is 13.6 mag (July 24, Hiroshi Abe). It stays 13 mag for a while. In the Northern Hemisphere, it stays observable in good condition. It locates somewhat low in the Southern Hemisphere. But it will become high in autumn."
+        },
+        {
+          "id": "78P-2026-08-15-north-weekly-1",
+          "date": "2026-08-15",
+          "magnitude": 13.2,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "current",
+          "isProjection": false,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": -0.4
+        },
+        {
+          "id": "78P-2026-08-22-north-weekly-2",
+          "date": "2026-08-22",
+          "magnitude": 13.2,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "projection",
+          "isProjection": true,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.0
+        }
+      ]
+    },
+    "brightnessTrend": {
+      "currentMagnitude": 13.2,
+      "currentDate": "2026-08-22",
+      "currentPointID": "78P-2026-08-22-north-weekly-2",
+      "comparisonMagnitude": 13.2,
+      "comparisonDate": "2026-08-15",
+      "comparisonPointID": "78P-2026-08-15-north-weekly-1",
+      "comparisonWindowDays": 7,
+      "deltaMagnitude": 0.0,
+      "direction": "stable",
+      "isNotable": false,
+      "notableChangeThresholdMagnitude": 1.0,
+      "notableObservationIDs": []
+    }
   }
 }

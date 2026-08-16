@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260816-aerith",
   "packageRole": "comet",
   "shardID": "COMET_C_2024_T5",
   "record": {
@@ -10,20 +10,88 @@
     "displayName": "C/2024 T5 (ATLAS)",
     "aerithName": "C/2024 T5 ( ATLAS )",
     "detailURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
-    "generatedAt": "2026-08-15T00:00:00Z",
+    "generatedAt": "2026-08-16T17:42:20Z",
+    "visibilitySummary": {
+      "state": "current",
+      "referenceDate": "2026-08-15",
+      "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
+      "usefulMagnitudeLimit": 16.0,
+      "aerithCurrentDate": "2026-08-15",
+      "aerithNextUsefulDate": "2026-08-22",
+      "aerithCurrentMagnitude": 12.9,
+      "aerithNextMagnitude": 12.8,
+      "currentBestAltitudeDegreesByHemisphere": {
+        "north": 15.0,
+        "south": 49.0
+      },
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 21.0,
+        "south": 52.0
+      },
+      "futureUsefulStartDate": "2026-08-15",
+      "futureUsefulEndDate": "2027-07-12",
+      "daysUntilFutureUsefulStart": 0,
+      "daysUntilFutureUsefulEnd": 331
+    },
+    "ephemerisSummary": {
+      "validStart": "2026-07-12T00:00:00Z",
+      "validEnd": "2027-07-12T00:00:00Z",
+      "sourcePackageVersion": "comet-snapshot-v1-2026-08-16-cobs-horizons-20-aerith",
+      "sourceGeneratedAt": "2026-07-12T21:25:04Z",
+      "sampleStepHours": 12,
+      "sampleCount": 731,
+      "referenceDate": "2026-08-15",
+      "usefulMagnitudeLimit": 16.0,
+      "currentMagnitudeEstimate": 12.9,
+      "currentSampleDate": "2026-08-15",
+      "currentSampleStatus": "useful",
+      "firstFutureUsefulDate": "2026-08-15",
+      "lastFutureUsefulDate": "2027-07-12",
+      "daysUntilUsefulStart": 0,
+      "daysUntilUsefulEnd": 331,
+      "brightestMagnitude": 12.8,
+      "brightestDate": "2026-08-22",
+      "faintestMagnitude": 14.628,
+      "faintestDate": "2026-07-12"
+    },
+    "classification": {
+      "orbitalFamily": "long_period",
+      "inclinationClass": "moderate_inclination",
+      "returnStatus": "non_periodic_or_uncertain",
+      "source": {
+        "orbitClass": "Long-period Comet",
+        "jplOrbitClassCode": "HYP"
+      }
+    },
     "source": {
       "name": "Aerith / Seiichi Yoshida",
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-14T17:10:25Z",
+      "generatedAt": "2026-08-16T17:42:20Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
         "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_t5_39ad138c0d8b.png",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_t5_39ad138c0d8b.png",
+        "cachedPath": "v1/assets/comets/aerith/comet_c_2024_t5_39ad138c0d8b.png",
+        "originalURL": "http://www.aerith.net/pictures/jager/s/2024T520260118UT2003sec12x120.png",
         "sourceURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 25622,
+        "checksum": "39ad138c0d8bb188ffcdf527243c84af3cc7a3b52720bb65789ba18f34d9c454"
+      },
+      "hero": {
+        "kind": "hero",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_t5_39ad138c0d8b.png",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_t5_39ad138c0d8b.png",
+        "cachedPath": "v1/assets/comets/aerith/comet_c_2024_t5_39ad138c0d8b.png",
+        "originalURL": "http://www.aerith.net/pictures/jager/s/2024T520260118UT2003sec12x120.png",
+        "sourceURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
         "byteSize": 25622,
         "checksum": "39ad138c0d8bb188ffcdf527243c84af3cc7a3b52720bb65789ba18f34d9c454"
@@ -31,31 +99,102 @@
     },
     "brightness": [
       {
-        "id": "C/2024T5-2026-07-24-report-1",
-        "date": "2026-07-24",
-        "magnitude": 13.9,
+        "id": "C/2024T5-2026-08-06-report-1",
+        "date": "2026-08-06",
+        "magnitude": 13.5,
         "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
-        "sourceURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html"
+        "sourceURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
+        "commentary": "Now it is 13.5 mag (Aug. 6, Ken-ichi Kadota). Brightening slowly. In the Northern Hemisphere, it will be getting higher gradually. In the Southern Hemisphere, it stays observable in good condition. It is expected to brighten up to 11 mag in winter.",
+        "isSignificant": true,
+        "significanceKind": "outburst"
       },
       {
-        "id": "C/2024T5-2026-08-08-north-weekly-1",
-        "date": "2026-08-08",
-        "magnitude": 13.0,
-        "qualifier": "weekly-estimate",
-        "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -0.9
-      },
-      {
-        "id": "C/2024T5-2026-08-15-north-weekly-2",
+        "id": "C/2024T5-2026-08-15-north-weekly-1",
         "date": "2026-08-15",
         "magnitude": 12.9,
         "qualifier": "weekly-estimate",
+        "estimateKind": "current",
+        "isProjection": false,
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": -0.6
+      },
+      {
+        "id": "C/2024T5-2026-08-22-north-weekly-2",
+        "date": "2026-08-22",
+        "magnitude": 12.8,
+        "qualifier": "weekly-estimate",
+        "estimateKind": "projection",
+        "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
         "magnitudeDelta": -0.1
       }
-    ]
+    ],
+    "brightnessChart": {
+      "lookbackDays": 90,
+      "availableStartDate": "2026-08-06",
+      "availableEndDate": "2026-08-22",
+      "actualDaySpan": 16,
+      "pointCount": 3,
+      "containsProjection": true,
+      "containsReportedObservation": true,
+      "points": [
+        {
+          "id": "C/2024T5-2026-08-06-report-1",
+          "date": "2026-08-06",
+          "magnitude": 13.5,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
+          "commentary": "Now it is 13.5 mag (Aug. 6, Ken-ichi Kadota). Brightening slowly. In the Northern Hemisphere, it will be getting higher gradually. In the Southern Hemisphere, it stays observable in good condition. It is expected to brighten up to 11 mag in winter.",
+          "isSignificant": true,
+          "significanceKind": "outburst"
+        },
+        {
+          "id": "C/2024T5-2026-08-15-north-weekly-1",
+          "date": "2026-08-15",
+          "magnitude": 12.9,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "current",
+          "isProjection": false,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": -0.6
+        },
+        {
+          "id": "C/2024T5-2026-08-22-north-weekly-2",
+          "date": "2026-08-22",
+          "magnitude": 12.8,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "projection",
+          "isProjection": true,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": -0.1
+        }
+      ]
+    },
+    "brightnessTrend": {
+      "currentMagnitude": 12.8,
+      "currentDate": "2026-08-22",
+      "currentPointID": "C/2024T5-2026-08-22-north-weekly-2",
+      "comparisonMagnitude": 12.9,
+      "comparisonDate": "2026-08-15",
+      "comparisonPointID": "C/2024T5-2026-08-15-north-weekly-1",
+      "comparisonWindowDays": 7,
+      "deltaMagnitude": -0.1,
+      "direction": "stable",
+      "isNotable": false,
+      "notableChangeThresholdMagnitude": 1.0,
+      "notableObservationIDs": [
+        "C/2024T5-2026-08-06-report-1"
+      ]
+    }
   }
 }

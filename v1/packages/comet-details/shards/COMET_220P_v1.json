@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260816-aerith",
   "packageRole": "comet",
   "shardID": "COMET_220P",
   "record": {
@@ -10,20 +10,88 @@
     "displayName": "220P/McNaught",
     "aerithName": "220P/McNaught",
     "detailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
-    "generatedAt": "2026-08-15T00:00:00Z",
+    "generatedAt": "2026-08-16T17:42:20Z",
+    "visibilitySummary": {
+      "state": "current",
+      "referenceDate": "2026-08-15",
+      "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
+      "usefulMagnitudeLimit": 16.0,
+      "aerithCurrentDate": "2026-08-15",
+      "aerithNextUsefulDate": "2026-08-22",
+      "aerithCurrentMagnitude": 8.0,
+      "aerithNextMagnitude": 8.8,
+      "currentBestAltitudeDegreesByHemisphere": {
+        "north": 57.0,
+        "south": 45.0
+      },
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 60.0,
+        "south": 45.0
+      },
+      "futureUsefulStartDate": "2026-08-15",
+      "futureUsefulEndDate": "2026-08-22",
+      "daysUntilFutureUsefulStart": 0,
+      "daysUntilFutureUsefulEnd": 7
+    },
+    "ephemerisSummary": {
+      "validStart": "2026-07-12T00:00:00Z",
+      "validEnd": "2027-07-12T00:00:00Z",
+      "sourcePackageVersion": "comet-snapshot-v1-2026-08-16-cobs-horizons-20-aerith",
+      "sourceGeneratedAt": "2026-07-12T21:25:04Z",
+      "sampleStepHours": 12,
+      "sampleCount": 731,
+      "referenceDate": "2026-08-15",
+      "usefulMagnitudeLimit": 16.0,
+      "currentMagnitudeEstimate": 8.0,
+      "currentSampleDate": "2026-08-15",
+      "currentSampleStatus": "useful",
+      "firstFutureUsefulDate": "2026-08-15",
+      "lastFutureUsefulDate": "2026-08-22",
+      "daysUntilUsefulStart": 0,
+      "daysUntilUsefulEnd": 7,
+      "brightestMagnitude": 7.3,
+      "brightestDate": "2026-08-08",
+      "faintestMagnitude": 28.069,
+      "faintestDate": "2027-07-12"
+    },
+    "classification": {
+      "orbitalFamily": "jupiter_family",
+      "inclinationClass": "low_inclination",
+      "returnStatus": "returning",
+      "source": {
+        "orbitClass": "Periodic Comet",
+        "jplOrbitClassCode": "JFc"
+      }
+    },
     "source": {
       "name": "Aerith / Seiichi Yoshida",
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-14T17:10:25Z",
+      "generatedAt": "2026-08-16T17:42:20Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
         "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_220p_fd3b2c56531f.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_220p_fd3b2c56531f.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_220p_fd3b2c56531f.jpg",
+        "originalURL": "http://www.aerith.net/pictures/fichtl/s/220P_20260807_0140_20B_1min_MG_L_R_b2.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 16364,
+        "checksum": "fd3b2c56531fd9fe5bc5f9f11833db428144d3e8036b57986384f6f654b69afd"
+      },
+      "hero": {
+        "kind": "hero",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_220p_fd3b2c56531f.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_220p_fd3b2c56531f.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_220p_fd3b2c56531f.jpg",
+        "originalURL": "http://www.aerith.net/pictures/fichtl/s/220P_20260807_0140_20B_1min_MG_L_R_b2.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
         "byteSize": 16364,
         "checksum": "fd3b2c56531fd9fe5bc5f9f11833db428144d3e8036b57986384f6f654b69afd"
@@ -35,43 +103,158 @@
         "date": "2026-06-03",
         "magnitude": 8.3,
         "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
-        "commentary": "Another major outburst occurred on Aug. 5 and it brightened up to 7 mag.",
+        "commentary": "Major outburst of about 9 mag occured from May 31 to June 1, and it brightened up to 8.3 mag (June 3, Marco Goiato). Another major outburst occued on Aug. 5 and it brightened up to 6.4 mag (Aug. 6, Taras Prystavski). Now it is 7.2 mag (Aug. 9, Osamu Miyazaki). It will fade out rapidly after this. It will be fainter than 18 mag in November. It stays observable in good condition.",
         "isSignificant": true,
         "significanceKind": "outburst"
       },
       {
-        "id": "220P-2026-08-05-report-2",
-        "date": "2026-08-05",
-        "magnitude": 7.0,
+        "id": "220P-2026-08-06-report-2",
+        "date": "2026-08-06",
+        "magnitude": 6.4,
         "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
-        "commentary": "Another major outburst occurred on Aug. 5 and it brightened up to 7 mag.",
-        "magnitudeDelta": -1.3,
+        "commentary": "Major outburst of about 9 mag occured from May 31 to June 1, and it brightened up to 8.3 mag (June 3, Marco Goiato). Another major outburst occued on Aug. 5 and it brightened up to 6.4 mag (Aug. 6, Taras Prystavski). Now it is 7.2 mag (Aug. 9, Osamu Miyazaki). It will fade out rapidly after this. It will be fainter than 18 mag in November. It stays observable in good condition.",
+        "magnitudeDelta": -1.9,
         "isSignificant": true,
         "significanceKind": "outburst",
-        "interpretation": "Brightened 1.3 mag between Aerith magnitude reports or estimates."
+        "interpretation": "Brightened 1.9 mag between Aerith magnitude reports or estimates."
       },
       {
-        "id": "220P-2026-08-08-north-weekly-1",
-        "date": "2026-08-08",
-        "magnitude": 7.3,
-        "qualifier": "weekly-estimate",
-        "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.3
+        "id": "220P-2026-08-09-report-3",
+        "date": "2026-08-09",
+        "magnitude": 7.2,
+        "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+        "commentary": "Major outburst of about 9 mag occured from May 31 to June 1, and it brightened up to 8.3 mag (June 3, Marco Goiato). Another major outburst occued on Aug. 5 and it brightened up to 6.4 mag (Aug. 6, Taras Prystavski). Now it is 7.2 mag (Aug. 9, Osamu Miyazaki). It will fade out rapidly after this. It will be fainter than 18 mag in November. It stays observable in good condition.",
+        "magnitudeDelta": 0.8,
+        "isSignificant": true,
+        "significanceKind": "outburst"
       },
       {
-        "id": "220P-2026-08-15-north-weekly-2",
+        "id": "220P-2026-08-15-north-weekly-1",
         "date": "2026-08-15",
         "magnitude": 8.0,
         "qualifier": "weekly-estimate",
+        "estimateKind": "current",
+        "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.7
+        "magnitudeDelta": 0.8
+      },
+      {
+        "id": "220P-2026-08-22-north-weekly-2",
+        "date": "2026-08-22",
+        "magnitude": 8.8,
+        "qualifier": "weekly-estimate",
+        "estimateKind": "projection",
+        "isProjection": true,
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.8
       }
-    ]
+    ],
+    "brightnessChart": {
+      "lookbackDays": 90,
+      "availableStartDate": "2026-06-03",
+      "availableEndDate": "2026-08-22",
+      "actualDaySpan": 80,
+      "pointCount": 5,
+      "containsProjection": true,
+      "containsReportedObservation": true,
+      "points": [
+        {
+          "id": "220P-2026-06-03-report-1",
+          "date": "2026-06-03",
+          "magnitude": 8.3,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+          "commentary": "Major outburst of about 9 mag occured from May 31 to June 1, and it brightened up to 8.3 mag (June 3, Marco Goiato). Another major outburst occued on Aug. 5 and it brightened up to 6.4 mag (Aug. 6, Taras Prystavski). Now it is 7.2 mag (Aug. 9, Osamu Miyazaki). It will fade out rapidly after this. It will be fainter than 18 mag in November. It stays observable in good condition.",
+          "isSignificant": true,
+          "significanceKind": "outburst"
+        },
+        {
+          "id": "220P-2026-08-06-report-2",
+          "date": "2026-08-06",
+          "magnitude": 6.4,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+          "commentary": "Major outburst of about 9 mag occured from May 31 to June 1, and it brightened up to 8.3 mag (June 3, Marco Goiato). Another major outburst occued on Aug. 5 and it brightened up to 6.4 mag (Aug. 6, Taras Prystavski). Now it is 7.2 mag (Aug. 9, Osamu Miyazaki). It will fade out rapidly after this. It will be fainter than 18 mag in November. It stays observable in good condition.",
+          "magnitudeDelta": -1.9,
+          "isSignificant": true,
+          "significanceKind": "outburst",
+          "interpretation": "Brightened 1.9 mag between Aerith magnitude reports or estimates."
+        },
+        {
+          "id": "220P-2026-08-09-report-3",
+          "date": "2026-08-09",
+          "magnitude": 7.2,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
+          "commentary": "Major outburst of about 9 mag occured from May 31 to June 1, and it brightened up to 8.3 mag (June 3, Marco Goiato). Another major outburst occued on Aug. 5 and it brightened up to 6.4 mag (Aug. 6, Taras Prystavski). Now it is 7.2 mag (Aug. 9, Osamu Miyazaki). It will fade out rapidly after this. It will be fainter than 18 mag in November. It stays observable in good condition.",
+          "magnitudeDelta": 0.8,
+          "isSignificant": true,
+          "significanceKind": "outburst"
+        },
+        {
+          "id": "220P-2026-08-15-north-weekly-1",
+          "date": "2026-08-15",
+          "magnitude": 8.0,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "current",
+          "isProjection": false,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.8
+        },
+        {
+          "id": "220P-2026-08-22-north-weekly-2",
+          "date": "2026-08-22",
+          "magnitude": 8.8,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "projection",
+          "isProjection": true,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.8
+        }
+      ]
+    },
+    "brightnessTrend": {
+      "currentMagnitude": 8.8,
+      "currentDate": "2026-08-22",
+      "currentPointID": "220P-2026-08-22-north-weekly-2",
+      "comparisonMagnitude": 8.0,
+      "comparisonDate": "2026-08-15",
+      "comparisonPointID": "220P-2026-08-15-north-weekly-1",
+      "comparisonWindowDays": 7,
+      "deltaMagnitude": 0.8,
+      "direction": "fading",
+      "isNotable": false,
+      "notableChangeThresholdMagnitude": 1.0,
+      "notableObservationIDs": [
+        "220P-2026-06-03-report-1",
+        "220P-2026-08-06-report-2",
+        "220P-2026-08-09-report-3"
+      ]
+    }
   }
 }

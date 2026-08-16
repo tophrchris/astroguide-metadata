@@ -18,6 +18,7 @@ import build_comet_detail_metadata_package as details
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = REPO_ROOT / "sources/comets/aerith_current_comets_v1.json"
 DEFAULT_COMET_SNAPSHOT = REPO_ROOT / "v1/packages/comets/comet_snapshot_v1.json"
+DEFAULT_ORBIT_GEOMETRY = REPO_ROOT / "v1/packages/comet-orbit-geometry/comet_orbit_geometry_v1.json"
 DEFAULT_MANIFEST = REPO_ROOT / "v1/channels/stable/manifest.json"
 
 
@@ -31,11 +32,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--current-url", default=aerith.DEFAULT_CURRENT_URL)
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
     parser.add_argument("--comet-snapshot", type=Path, default=DEFAULT_COMET_SNAPSHOT)
+    parser.add_argument("--orbit-geometry", type=Path, default=DEFAULT_ORBIT_GEOMETRY)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--generated-at")
     parser.add_argument("--package-version")
     parser.add_argument("--min-supported-app-version", default="1.4.1")
     parser.add_argument("--min-supported-build", default="1")
+    parser.add_argument("--brightness-lookback-days", type=int, default=details.DEFAULT_BRIGHTNESS_LOOKBACK_DAYS)
+    parser.add_argument("--useful-magnitude-limit", type=float, default=details.DEFAULT_USEFUL_MAGNITUDE_LIMIT)
     parser.add_argument("--image-limit", type=int, default=50)
     parser.add_argument("--max-image-bytes", type=int, default=500_000)
     parser.add_argument("--fetch-delay-seconds", type=float, default=0.5)
@@ -78,6 +82,7 @@ def main() -> int:
     generated_at = args.generated_at or utc_now()
     source_path = args.source.resolve()
     comet_snapshot_path = args.comet_snapshot.resolve()
+    orbit_geometry_path = args.orbit_geometry.resolve()
     manifest_path = args.manifest.resolve()
 
     fetched = aerith.build_source(
@@ -108,10 +113,13 @@ def main() -> int:
     records = details.build_records(
         details.read_json(comet_snapshot_path),
         fetched,
+        orbit_geometry=details.read_json(orbit_geometry_path) if orbit_geometry_path.exists() else None,
         generated_at=generated_at,
         cache_images=not args.skip_images,
         image_limit=max(0, args.image_limit),
         max_image_bytes=args.max_image_bytes,
+        brightness_lookback_days=args.brightness_lookback_days,
+        useful_magnitude_limit=args.useful_magnitude_limit,
         fetch_delay_seconds=max(0, args.fetch_delay_seconds),
     )
     if not records:
@@ -125,6 +133,10 @@ def main() -> int:
         min_supported_build=args.min_supported_build,
         update_manifest_path=manifest_path,
     )
+    package_path = details.REPO_ROOT / details.PACKAGE_PATH
+    package = details.read_json(package_path)
+    details.validate_package(package, package_path)
+    details.validate_manifest_descriptor(manifest_path, package, package_path.read_bytes(), package_path)
     print(
         f"{details.PACKAGE_FAMILY}: {descriptor['packageVersion']} "
         f"{descriptor['recordCount']} comets {descriptor['byteSize']} bytes"
