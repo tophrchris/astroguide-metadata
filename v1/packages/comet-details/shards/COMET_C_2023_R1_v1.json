@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260816-aerith",
   "packageRole": "comet",
   "shardID": "COMET_C_2023_R1",
   "record": {
@@ -10,20 +10,88 @@
     "displayName": "C/2023 R1 (PANSTARRS)",
     "aerithName": "C/2023 R1 ( PanSTARRS )",
     "detailURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
-    "generatedAt": "2026-08-15T00:00:00Z",
+    "generatedAt": "2026-08-16T17:42:20Z",
+    "visibilitySummary": {
+      "state": "current",
+      "referenceDate": "2026-08-15",
+      "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
+      "usefulMagnitudeLimit": 16.0,
+      "aerithCurrentDate": "2026-08-15",
+      "aerithNextUsefulDate": "2026-08-22",
+      "aerithCurrentMagnitude": 14.1,
+      "aerithNextMagnitude": 14.2,
+      "currentBestAltitudeDegreesByHemisphere": {
+        "north": 32.0,
+        "south": 66.0
+      },
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 28.0,
+        "south": 62.0
+      },
+      "futureUsefulStartDate": "2026-08-15",
+      "futureUsefulEndDate": "2026-10-21",
+      "daysUntilFutureUsefulStart": 0,
+      "daysUntilFutureUsefulEnd": 67
+    },
+    "ephemerisSummary": {
+      "validStart": "2026-07-12T00:00:00Z",
+      "validEnd": "2027-07-12T00:00:00Z",
+      "sourcePackageVersion": "comet-snapshot-v1-2026-08-16-cobs-horizons-20-aerith",
+      "sourceGeneratedAt": "2026-07-12T21:25:04Z",
+      "sampleStepHours": 12,
+      "sampleCount": 731,
+      "referenceDate": "2026-08-15",
+      "usefulMagnitudeLimit": 16.0,
+      "currentMagnitudeEstimate": 14.1,
+      "currentSampleDate": "2026-08-15",
+      "currentSampleStatus": "useful",
+      "firstFutureUsefulDate": "2026-08-15",
+      "lastFutureUsefulDate": "2026-10-21",
+      "daysUntilUsefulStart": 0,
+      "daysUntilUsefulEnd": 67,
+      "brightestMagnitude": 14.0,
+      "brightestDate": "2026-08-08",
+      "faintestMagnitude": 17.273,
+      "faintestDate": "2027-07-12"
+    },
+    "classification": {
+      "orbitalFamily": "long_period",
+      "inclinationClass": "retrograde",
+      "returnStatus": "non_periodic_or_uncertain",
+      "source": {
+        "orbitClass": "Long-period Comet",
+        "jplOrbitClassCode": "HYP"
+      }
+    },
     "source": {
       "name": "Aerith / Seiichi Yoshida",
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-14T17:10:25Z",
+      "generatedAt": "2026-08-16T17:42:20Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
         "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2023_r1_b9fd43bcdf20.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2023_r1_b9fd43bcdf20.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_c_2023_r1_b9fd43bcdf20.jpg",
+        "originalURL": "http://www.aerith.net/pictures/fichtl/s/2023R1_20260607_2330_6B_3min_1600_R.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 6144,
+        "checksum": "b9fd43bcdf2026cb5b58ac7fea6c4706ee3de66d7ea559c9a375f9493cfd62f5"
+      },
+      "hero": {
+        "kind": "hero",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2023_r1_b9fd43bcdf20.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2023_r1_b9fd43bcdf20.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_c_2023_r1_b9fd43bcdf20.jpg",
+        "originalURL": "http://www.aerith.net/pictures/fichtl/s/2023R1_20260607_2330_6B_3min_1600_R.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
         "byteSize": 6144,
         "checksum": "b9fd43bcdf2026cb5b58ac7fea6c4706ee3de66d7ea559c9a375f9493cfd62f5"
@@ -35,27 +103,92 @@
         "date": "2026-08-05",
         "magnitude": 13.2,
         "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
-        "sourceURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html"
+        "sourceURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
+        "commentary": "Now it is 13.2 mag (Aug. 5, Osamu Miyazaki). Fading slowly. It will be getting lower gradually after this, and it will be unobservable in October in the Northern Hemisphere, or in November in the Southern Hemisphere."
       },
       {
-        "id": "C/2023R1-2026-08-08-north-weekly-1",
-        "date": "2026-08-08",
-        "magnitude": 14.0,
-        "qualifier": "weekly-estimate",
-        "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.8
-      },
-      {
-        "id": "C/2023R1-2026-08-15-north-weekly-2",
+        "id": "C/2023R1-2026-08-15-north-weekly-1",
         "date": "2026-08-15",
         "magnitude": 14.1,
         "qualifier": "weekly-estimate",
+        "estimateKind": "current",
+        "isProjection": false,
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.9
+      },
+      {
+        "id": "C/2023R1-2026-08-22-north-weekly-2",
+        "date": "2026-08-22",
+        "magnitude": 14.2,
+        "qualifier": "weekly-estimate",
+        "estimateKind": "projection",
+        "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
         "magnitudeDelta": 0.1
       }
-    ]
+    ],
+    "brightnessChart": {
+      "lookbackDays": 90,
+      "availableStartDate": "2026-08-05",
+      "availableEndDate": "2026-08-22",
+      "actualDaySpan": 17,
+      "pointCount": 3,
+      "containsProjection": true,
+      "containsReportedObservation": true,
+      "points": [
+        {
+          "id": "C/2023R1-2026-08-05-report-1",
+          "date": "2026-08-05",
+          "magnitude": 13.2,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
+          "commentary": "Now it is 13.2 mag (Aug. 5, Osamu Miyazaki). Fading slowly. It will be getting lower gradually after this, and it will be unobservable in October in the Northern Hemisphere, or in November in the Southern Hemisphere."
+        },
+        {
+          "id": "C/2023R1-2026-08-15-north-weekly-1",
+          "date": "2026-08-15",
+          "magnitude": 14.1,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "current",
+          "isProjection": false,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.9
+        },
+        {
+          "id": "C/2023R1-2026-08-22-north-weekly-2",
+          "date": "2026-08-22",
+          "magnitude": 14.2,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "projection",
+          "isProjection": true,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.1
+        }
+      ]
+    },
+    "brightnessTrend": {
+      "currentMagnitude": 14.2,
+      "currentDate": "2026-08-22",
+      "currentPointID": "C/2023R1-2026-08-22-north-weekly-2",
+      "comparisonMagnitude": 14.1,
+      "comparisonDate": "2026-08-15",
+      "comparisonPointID": "C/2023R1-2026-08-15-north-weekly-1",
+      "comparisonWindowDays": 7,
+      "deltaMagnitude": 0.1,
+      "direction": "stable",
+      "isNotable": false,
+      "notableChangeThresholdMagnitude": 1.0,
+      "notableObservationIDs": []
+    }
   }
 }

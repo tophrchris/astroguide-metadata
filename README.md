@@ -246,10 +246,18 @@ per-comet brightness/commentary payloads through the lazy comet detail package:
 scripts/build_comet_detail_metadata_package.py \
   --source-package v1/packages/comets/comet_snapshot_v1.json \
   --aerith-source sources/comets/aerith_current_comets_v1.json \
+  --orbit-geometry v1/packages/comet-orbit-geometry/comet_orbit_geometry_v1.json \
+  --image-limit 50 \
   --package-version comet-detail-metadata-v1-YYYYMMDD-aerith
+
+scripts/build_comet_detail_metadata_package.py --validate-only
 ```
 
-The builder writes the comet package envelope, refreshes the stable manifest, and recalculates byte size and SHA-256 checksum while preserving the other manifest packages.
+The builder writes the comet package envelope, per-comet shards, cached Aerith
+image assets, and stable-manifest descriptor while preserving other manifest
+packages. The detail index carries list-friendly summaries for visibility
+state, brightness trend/range, orbital classification, and ephemeris windows;
+full brightness/commentary/media payloads remain in lazy per-comet shards.
 
 ## Refreshing Aerith Comet Detail Metadata
 
@@ -263,6 +271,7 @@ The local equivalent is:
 
 ```bash
 scripts/update_aerith_comet_metadata.py
+scripts/build_comet_detail_metadata_package.py --validate-only
 python -m unittest tests/test_aerith_comet_source.py tests/test_comet_detail_metadata_package.py
 ```
 

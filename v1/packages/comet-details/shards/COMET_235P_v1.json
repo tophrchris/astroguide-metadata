@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260815-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260816-aerith",
   "packageRole": "comet",
   "shardID": "COMET_235P",
   "record": {
@@ -10,20 +10,88 @@
     "displayName": "235P/LINEAR",
     "aerithName": "235P/LINEAR",
     "detailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
-    "generatedAt": "2026-08-15T00:00:00Z",
+    "generatedAt": "2026-08-16T17:42:20Z",
+    "visibilitySummary": {
+      "state": "notCurrentlyUseful",
+      "referenceDate": "2026-08-15",
+      "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
+      "usefulMagnitudeLimit": 16.0,
+      "aerithCurrentDate": "2026-08-15",
+      "aerithNextUsefulDate": null,
+      "aerithCurrentMagnitude": 17.4,
+      "aerithNextMagnitude": 17.7,
+      "currentBestAltitudeDegreesByHemisphere": {
+        "north": 41.0,
+        "south": 66.0
+      },
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 40.0,
+        "south": 66.0
+      },
+      "futureUsefulStartDate": null,
+      "futureUsefulEndDate": null,
+      "daysUntilFutureUsefulStart": null,
+      "daysUntilFutureUsefulEnd": null
+    },
+    "ephemerisSummary": {
+      "validStart": "2026-07-12T00:00:00Z",
+      "validEnd": "2027-07-12T00:00:00Z",
+      "sourcePackageVersion": "comet-snapshot-v1-2026-08-16-cobs-horizons-20-aerith",
+      "sourceGeneratedAt": "2026-07-12T21:25:04Z",
+      "sampleStepHours": 12,
+      "sampleCount": 731,
+      "referenceDate": "2026-08-15",
+      "usefulMagnitudeLimit": 16.0,
+      "currentMagnitudeEstimate": 17.4,
+      "currentSampleDate": "2026-08-15",
+      "currentSampleStatus": "tooFaint",
+      "firstFutureUsefulDate": null,
+      "lastFutureUsefulDate": null,
+      "daysUntilUsefulStart": null,
+      "daysUntilUsefulEnd": null,
+      "brightestMagnitude": 16.812,
+      "brightestDate": "2026-07-12",
+      "faintestMagnitude": 23.196,
+      "faintestDate": "2027-07-12"
+    },
+    "classification": {
+      "orbitalFamily": "jupiter_family",
+      "inclinationClass": "low_inclination",
+      "returnStatus": "returning",
+      "source": {
+        "orbitClass": "Periodic Comet",
+        "jplOrbitClassCode": "JFc"
+      }
+    },
     "source": {
       "name": "Aerith / Seiichi Yoshida",
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-14T17:10:25Z",
+      "generatedAt": "2026-08-16T17:42:20Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
         "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
+        "originalURL": "http://www.aerith.net/pictures/jager/s/235P20260510UT0050sec18x60webnew.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+        "attribution": "Image courtesy Aerith / Seiichi Yoshida",
+        "byteSize": 9040,
+        "checksum": "dd433beab5d33598efa1eab5fe7a152b13d0e8dc36c12d52a8e1bfa941d273dd"
+      },
+      "hero": {
+        "kind": "hero",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
+        "originalURL": "http://www.aerith.net/pictures/jager/s/235P20260510UT0050sec18x60webnew.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
         "byteSize": 9040,
         "checksum": "dd433beab5d33598efa1eab5fe7a152b13d0e8dc36c12d52a8e1bfa941d273dd"
@@ -31,31 +99,104 @@
     },
     "brightness": [
       {
-        "id": "235P-2026-07-28-report-1",
-        "date": "2026-07-28",
-        "magnitude": 17.4,
+        "id": "235P-2026-08-04-report-1",
+        "date": "2026-08-04",
+        "magnitude": 15.8,
         "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
-        "sourceURL": "http://www.aerith.net/comet/catalog/0235P/2025.html"
+        "sourceURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+        "commentary": "It became brighter than expected. It was observed at 13 mag from winter to spring. Now it is 15.8 mag (Aug. 4, Toru Yusa). It will fade out rapidly after this. It will be fainter than 18 mag soon. It stays observable in good condition. It may be brighter than this ephemeris still now."
       },
       {
-        "id": "235P-2026-08-08-north-weekly-1",
-        "date": "2026-08-08",
-        "magnitude": 17.1,
-        "qualifier": "weekly-estimate",
-        "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -0.3
-      },
-      {
-        "id": "235P-2026-08-15-north-weekly-2",
+        "id": "235P-2026-08-15-north-weekly-1",
         "date": "2026-08-15",
         "magnitude": 17.4,
         "qualifier": "weekly-estimate",
+        "estimateKind": "current",
+        "isProjection": false,
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 1.6,
+        "isSignificant": true,
+        "significanceKind": "fade",
+        "interpretation": "Faded 1.6 mag between Aerith magnitude reports or estimates."
+      },
+      {
+        "id": "235P-2026-08-22-north-weekly-2",
+        "date": "2026-08-22",
+        "magnitude": 17.7,
+        "qualifier": "weekly-estimate",
+        "estimateKind": "projection",
+        "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
         "magnitudeDelta": 0.3
       }
-    ]
+    ],
+    "brightnessChart": {
+      "lookbackDays": 90,
+      "availableStartDate": "2026-08-04",
+      "availableEndDate": "2026-08-22",
+      "actualDaySpan": 18,
+      "pointCount": 3,
+      "containsProjection": true,
+      "containsReportedObservation": true,
+      "points": [
+        {
+          "id": "235P-2026-08-04-report-1",
+          "date": "2026-08-04",
+          "magnitude": 15.8,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+          "commentary": "It became brighter than expected. It was observed at 13 mag from winter to spring. Now it is 15.8 mag (Aug. 4, Toru Yusa). It will fade out rapidly after this. It will be fainter than 18 mag soon. It stays observable in good condition. It may be brighter than this ephemeris still now."
+        },
+        {
+          "id": "235P-2026-08-15-north-weekly-1",
+          "date": "2026-08-15",
+          "magnitude": 17.4,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "current",
+          "isProjection": false,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 1.6,
+          "isSignificant": true,
+          "significanceKind": "fade",
+          "interpretation": "Faded 1.6 mag between Aerith magnitude reports or estimates."
+        },
+        {
+          "id": "235P-2026-08-22-north-weekly-2",
+          "date": "2026-08-22",
+          "magnitude": 17.7,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "projection",
+          "isProjection": true,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.3
+        }
+      ]
+    },
+    "brightnessTrend": {
+      "currentMagnitude": 17.7,
+      "currentDate": "2026-08-22",
+      "currentPointID": "235P-2026-08-22-north-weekly-2",
+      "comparisonMagnitude": 17.4,
+      "comparisonDate": "2026-08-15",
+      "comparisonPointID": "235P-2026-08-15-north-weekly-1",
+      "comparisonWindowDays": 7,
+      "deltaMagnitude": 0.3,
+      "direction": "fading",
+      "isNotable": false,
+      "notableChangeThresholdMagnitude": 1.0,
+      "notableObservationIDs": [
+        "235P-2026-08-15-north-weekly-1"
+      ]
+    }
   }
 }
