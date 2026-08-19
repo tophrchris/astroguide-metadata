@@ -19,6 +19,7 @@ v1/packages/target-metadata/target_metadata_overlay_v1.json
 v1/packages/target-neighborhoods/target_neighborhood_definitions_v1.json
 v1/packages/equipment/equipment_catalog_v1.json
 v1/packages/equipment/astrophotography_equipment_catalog_v1.json
+v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json
 v1/packages/dark-sky-places/dark_sky_places_v1.json
 v1/packages/comets/comet_snapshot_v1.json
 v1/packages/comet-orbit-geometry/comet_orbit_geometry_v1.json
@@ -62,13 +63,22 @@ catalog:
 scripts/build_equipment_catalog_package.py --app-repo ../DSOPlanneriOS --package all
 ```
 
-The builder writes both equipment package envelopes, refreshes the stable
+The builder writes the equipment package envelopes, refreshes the stable
 manifest, and recalculates byte sizes and SHA-256 checksums.
 
 To update only the Telescope Workshop optics/imaging package, use:
 
 ```bash
 scripts/build_equipment_catalog_package.py --app-repo ../DSOPlanneriOS --package astrophotography
+```
+
+The app consumes the raw Telescope Workshop package above and applies the
+bundled curation rules at runtime. A second sanitized projection is available
+for other consumers, review tools, and web experiences that need the same rows
+the app renders without re-implementing the app's filtering logic:
+
+```bash
+scripts/build_equipment_catalog_package.py --app-repo ../DSOPlanneriOS --package astrophotography-sanitized
 ```
 
 ## Rebuilding Planet Catalog Packages

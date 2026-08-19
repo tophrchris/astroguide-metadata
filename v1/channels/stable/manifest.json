@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-08-16T17:42:20Z",
-  "publishedAt": "2026-08-16T17:42:20Z",
+  "generatedAt": "2026-08-19T21:37:34Z",
+  "publishedAt": "2026-08-19T21:37:34Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -63,6 +63,21 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled Telescope Workshop equipment catalog only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "astrophotographyEquipmentSanitizedCatalog",
+      "packageVersion": "astrophotography-equipment-sanitized-catalog-v1-2026-08-19",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "e559bccad289b5c6a76164e13f26514f7356589bef84fc70f6770067662001ba"
+      },
+      "byteSize": 951149,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Use the bundled Telescope Workshop projection if no validated cached sanitized package is available. This package mirrors the app-rendered selectable optics and imaging rows for review, web, and metadata consumers; an expired cached package remains usable until replaced by a validated refresh."
     },
     {
       "family": "darkSkyPlaces",
