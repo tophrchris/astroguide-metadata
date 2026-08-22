@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-08-19T21:37:34Z",
-  "publishedAt": "2026-08-19T21:37:34Z",
+  "generatedAt": "2026-08-21T21:52:59Z",
+  "publishedAt": "2026-08-21T21:52:59Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -33,6 +33,24 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled target metadata snapshot only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "targetImageAssets",
+      "packageVersion": "target-image-assets-v1-2026-08-21-capture-harvest-75",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/target-images/target_image_assets_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "813375b9186fa98bab5e2c4fc1994c467289bc3bb8927979405a2e31950073ad"
+      },
+      "byteSize": 418740,
+      "recordCount": 75,
+      "assetCount": 71,
+      "imageFileCount": 213,
+      "minSupportedAppVersion": "1.4.1",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Clients that support this family should use bundled target thumbnails when available, then load these hosted target-image assets lazily and degrade gracefully if the package is absent, expired, or invalid."
     },
     {
       "family": "equipmentCatalog",
