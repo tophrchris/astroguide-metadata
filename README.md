@@ -17,6 +17,10 @@ CNAME
 v1/channels/stable/manifest.json
 v1/packages/target-metadata/target_metadata_overlay_v1.json
 v1/packages/target-neighborhoods/target_neighborhood_definitions_v1.json
+v1/packages/target-images/target_image_assets_v1.json
+v1/assets/target-images/{assetOwnerTargetID}/{assetId}/thumbnail-160.jpg
+v1/assets/target-images/{assetOwnerTargetID}/{assetId}/thumbnail-320.jpg
+v1/assets/target-images/{assetOwnerTargetID}/{assetId}/hero.jpg
 v1/packages/equipment/equipment_catalog_v1.json
 v1/packages/equipment/astrophotography_equipment_catalog_v1.json
 v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json
@@ -52,6 +56,28 @@ scripts/build_target_metadata_packages.py --app-repo ../DSOPlanneriOS
 ```
 
 The builder writes the package envelopes, refreshes the stable manifest, and recalculates byte sizes and SHA-256 checksums.
+
+## Rebuilding Target Image Asset Packages
+
+The `targetImageAssets` package is generated from an approved AstroGuide
+Capture Harvest package. It publishes metadata-hosted 160 px thumbnails, 320 px
+thumbnails, and hero crops while keeping the core app catalog URL-free:
+
+```bash
+scripts/build_target_image_package.py \
+  --source-package /path/to/astroguide-capture-package-YYYY-MM-DD-NN
+
+scripts/build_target_image_package.py --validate-only
+```
+
+The builder validates the source package, verifies all source image hashes,
+copies de-duplicated JPEG assets under `v1/assets/target-images/`, writes the
+runtime package envelope, refreshes the stable manifest, and validates checked-in
+asset paths, byte sizes, SHA-256 hashes, counts, shared assets, and manifest
+linkage.
+
+The package contract and downstream consumer boundary are documented in
+[`docs/target-image-assets-v1.md`](docs/target-image-assets-v1.md).
 
 ## Rebuilding Equipment Catalog Packages
 
