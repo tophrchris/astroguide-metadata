@@ -1,0 +1,24 @@
+{
+  "id": "resp_fixture_exact",
+  "status": "completed",
+  "output": [
+    {
+      "type": "web_search_call",
+      "action": {
+        "sources": [
+          {"url": "https://maker.example/products/scope-1"},
+          {"url": "https://specialty.example/scope-1"}
+        ]
+      }
+    },
+    {
+      "type": "message",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{\"equipment_id\":\"scope-1\",\"status\":\"estimated\",\"price_basis\":\"typical_new_retail\",\"market_status\":\"current\",\"estimated_price_usd\":1025,\"match_confidence\":0.98,\"estimate_confidence\":0.9,\"reason\":\"Exact manufacturer, model, aperture, and OTA configuration agree.\",\"evidence\":[{\"url\":\"https://maker.example/products/scope-1\",\"source_type\":\"manufacturer\",\"price_usd\":999,\"identity_match\":true,\"qualifying_new_retail\":true,\"configuration\":\"exact_product\"},{\"url\":\"https://specialty.example/scope-1\",\"source_type\":\"astronomy_specialty_retailer\",\"price_usd\":1049,\"identity_match\":true,\"qualifying_new_retail\":true,\"configuration\":\"exact_product\"}]}"
+        }
+      ]
+    }
+  ]
+}
