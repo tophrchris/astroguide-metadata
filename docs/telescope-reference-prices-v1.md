@@ -3,10 +3,10 @@
 ## Purpose and scope
 
 `telescopeReferencePrices` is an optional, independently refreshed metadata
-package for broad portfolio visualization. It provides approximate US
-new-retail reference prices rounded to the nearest $50. A value is editorial
-reference data, not a live offer, retailer comparison, quote, MSRP, or promise
-that the product is currently purchasable.
+package for broad portfolio visualization. It provides approximate
+USD-normalized new-retail reference prices rounded to the nearest $50. A value
+is editorial reference data, not a live offer, retailer comparison, quote,
+MSRP, or promise that the product is currently purchasable.
 
 This package deliberately supersedes the unshipped `telescopeRetailPrices`
 prototype. The earlier contract represented exact current offers and required
@@ -14,10 +14,13 @@ retailer provenance. Removing product links and source attribution makes that
 claim unverifiable to a consumer, so v1 uses a distinct package family and
 honest estimate semantics instead of weakening the retail-price contract.
 
-The rapid release is US/USD only. It excludes affiliate links, product links,
-retailer names, tax, shipping, coupons, historical charts, alerts, geographic
-personalization, used-market values, browser automation, and generalized
-crawling.
+The rapid release publishes USD only and prefers US-market evidence when it is
+available. A public foreign-currency source may be converted to USD for a
+hard-to-source product, with the observed source amount and scan-time rate
+retained internally. It excludes affiliate links, product links, retailer
+names, tax normalization, shipping, coupons, historical charts, alerts,
+geographic personalization, used-market values, browser automation, and
+generalized crawling.
 
 ## Canonical join and publishing
 
@@ -48,8 +51,9 @@ Each `referencePrices` row contains exactly:
 - `estimated_at`: UTC time when the retained estimate was established,
   otherwise null.
 - `market_status`: `current`, `discontinued`, or `unknown`.
-- `match_confidence`: 0-1 confidence that evidence describes the exact
-  canonical product/configuration.
+- `match_confidence`: 0-1 confidence that evidence describes the canonical
+  product/configuration, including a labeled same-spec generation proxy when
+  permitted by policy.
 - `estimate_confidence`: 0-1 confidence in the approximate amount. It is
   distinct from identity confidence.
 - `evidence_count`: count of qualifying evidence items. Evidence identities
@@ -73,9 +77,21 @@ repository, package, or report.
 
 The request includes the canonical manufacturer, model, aperture, focal
 length, and focal ratio. Each evidence item must explicitly identify itself as
-the exact sold product. The pipeline rejects bundle/kit, accessory,
-used/refurbished, marketplace, financing/deposit, or other configurations even
-if the model marks the listing as a name match.
+the exact sold product or an explicitly labeled generation proxy. A newer or
+older generation is acceptable only when aperture, focal length, optical
+design, and sold configuration still match. Generation proxies are noted in
+the published row and have identity confidence capped at 0.94. The pipeline
+rejects bundle/kit, accessory, used/refurbished, marketplace,
+financing/deposit, or other configurations even if the model marks the
+listing as a name match.
+
+For the rapid coverage expansion, curators used the import lane against a
+deliberately small mix of manufacturer-direct structured product catalogs and
+established astronomy-specialty product catalogs. These source classes were
+chosen for explicit model/configuration identity, numeric new-retail prices,
+and machine-readable availability. Exact source identities remain transient;
+the repository retains only source class, numeric evidence, and an opaque hash
+that supports later rejection without publishing a retailer directory.
 
 Qualifying evidence is limited to manufacturer, established astronomy
 specialty retailer, and reputable authorized-retailer pages. A single source
@@ -85,8 +101,10 @@ reduced to their median and rounded to $50. Excessive evidence spread, weak
 identity confidence, weak estimate confidence, an uncited URL, or a material
 model/evidence disagreement sends the item to review instead of publication.
 
-The launch plausibility range is $25-$250,000 so both entry-level and
-observatory-class instruments can be represented. A change of at least 35%
+The launch plausibility range is $25-$750,000 so both entry-level instruments
+and complete one-meter observatory systems can be represented. The upper bound
+is a validation guard, not a claim that every high price is valid; identity and
+sold-configuration evidence is still required. A change of at least 35%
 and an adaptive dollar floor is retained for review rather than automatically
 replacing the prior estimate.
 
@@ -138,8 +156,33 @@ OPENAI_API_KEY=... python3 scripts/update_telescope_reference_prices.py \
   --equipment-id optical-tube-zwo-ff65-apo-quintuplet-32011 --force
 python3 scripts/update_telescope_reference_prices.py --offline
 python3 scripts/update_telescope_reference_prices.py --validate-only
-python3 -m unittest tests/test_telescope_reference_prices.py -v
+python3 -m unittest tests/test_telescope_reference_prices.py \
+  tests/test_import_telescope_reference_prices.py -v
 ```
+
+For a reviewed bulk research pass, curators can use the separate transient
+import lane:
+
+```bash
+python3 scripts/import_telescope_reference_prices.py /secure/path/curated-evidence.json
+python3 scripts/import_telescope_reference_prices.py /secure/path/curated-evidence.json --write
+python3 scripts/update_telescope_reference_prices.py --offline
+```
+
+The import file uses `schema_version: 1`, one UTC `observed_at`, and a
+nonempty `records` array. Each record supplies a canonical `equipment_id`, raw
+`price_usd`, `price_basis`, `market_status`, the two confidence values,
+`source_type`, exact `source_url`, optional `match_basis` (`exact_product` or
+`generation_proxy`), and an optional note. A non-USD public source can instead
+supply `source_price`, its three-letter `source_currency`, and the scan-time
+`usd_conversion_rate`; the internal evidence retains those numeric conversion
+inputs while the public result remains a rounded USD estimate. The command is a dry
+run unless `--write` is present and refuses to replace an existing estimate
+unless `--replace-existing` is explicit. The exact URL is validated and
+hashed in memory; it is never written to repository state, the published
+package, or the scan report. Curated imports remain automatic observations,
+not manual price overrides; curator suppressions and replacements continue to
+live in `overrides.json`.
 
 Do not paste an API key into source, logs, issues, pull requests, or chat. The
 weekly workflow requires the repository secret `OPENAI_API_KEY` and opens or
@@ -154,10 +197,17 @@ that legitimate path, the item remains missing or enters review.
 
 ## Launch coverage and known limitations
 
-The seed covers 20 high-confidence exact configurations across refractors,
-astrographs, SCT/Maksutov designs, Dobsonians/Newtonians, integrated systems,
-and observatory-class instruments. The other catalog rows are explicit nulls
-until researched. Reliable partial coverage is intentional.
+The rapid coverage expansion prices 399 of 712 eligible telescopes (56.0%). It
+prioritizes widely represented brands and spans refractors, astrographs,
+SCT/Maksutov designs, Dobsonians/Newtonians, solar telescopes, integrated
+systems, and observatory-class instruments. The other 313 catalog rows remain
+explicit nulls until researched. Reliable partial coverage is intentional.
+
+The retained set includes 30 explicitly labeled same-spec generation proxies.
+These are not loose name matches: the reviewed reference must preserve
+aperture, focal length, optical design, and sold configuration. Review results
+and corrected false candidates are recorded in
+`reports/telescope-reference-prices/manual-validation-2026-08-25.md`.
 
 Deferred: exhaustive coverage, exact live offers, retailer/source disclosure,
 affiliate integration, international markets/currencies, current inventory,

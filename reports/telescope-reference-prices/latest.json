@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "scan_completed_at": "2026-08-24T20:00:00Z",
+  "scan_completed_at": "2026-08-25T12:55:13Z",
   "catalog_package_family": "astrophotographyEquipmentSanitizedCatalog",
   "catalog_package_version": "astrophotography-equipment-sanitized-catalog-v1-2026-08-19",
   "summary": {
     "eligible_telescope_count": 712,
     "attempted_refresh_count": 0,
-    "estimated_telescope_count": 20,
-    "missing_estimate_count": 692,
+    "estimated_telescope_count": 399,
+    "missing_estimate_count": 313,
     "ambiguous_review_count": 0,
     "source_failure_count": 0,
     "changed_estimate_count": 0,
@@ -15,11 +15,11 @@
     "stale_estimate_count": 0,
     "manual_override_count": 0,
     "price_scale": {
-      "under_500": 1,
-      "500_to_1999": 11,
-      "2000_to_9999": 3,
-      "10000_to_49999": 4,
-      "50000_and_up": 1
+      "under_500": 63,
+      "500_to_1999": 190,
+      "2000_to_9999": 128,
+      "10000_to_49999": 14,
+      "50000_and_up": 4
     }
   },
   "changed_estimates": [],

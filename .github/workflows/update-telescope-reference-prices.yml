@@ -74,7 +74,10 @@ jobs:
 
       - name: Validate generated metadata
         run: |
-          python3 -m unittest tests/test_telescope_reference_prices.py -v
+          python3 -m unittest \
+            tests/test_telescope_reference_prices.py \
+            tests/test_import_telescope_reference_prices.py \
+            -v
           python3 scripts/update_telescope_reference_prices.py --validate-only
           python3 -m json.tool reports/telescope-reference-prices/latest.json >/dev/null
 

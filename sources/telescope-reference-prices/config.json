@@ -13,7 +13,7 @@
     "currency": "USD",
     "rounding_increment": 50,
     "minimum_price": 25,
-    "maximum_price": 250000,
+    "maximum_price": 750000,
     "minimum_match_confidence": 0.9,
     "minimum_estimate_confidence": 0.65,
     "single_source_allowed_types": [

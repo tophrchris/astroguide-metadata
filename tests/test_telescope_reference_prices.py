@@ -35,7 +35,7 @@ def config():
             "currency": "USD",
             "rounding_increment": 50,
             "minimum_price": 25,
-            "maximum_price": 250000,
+            "maximum_price": 750000,
             "minimum_match_confidence": 0.9,
             "minimum_estimate_confidence": 0.65,
             "single_source_allowed_types": [
@@ -163,6 +163,35 @@ class TelescopeReferencePriceTests(unittest.TestCase):
         self.assertEqual(estimate["price_amount"], 1000)
         self.assertEqual(len(estimate["evidence"]), 2)
         self.assertEqual(audit["response_id"], "resp_fixture_exact")
+
+    def test_same_spec_generation_proxy_is_labeled_and_confidence_capped(self):
+        response = result_response(match_confidence=0.99)
+        output = json.loads(response["output"][1]["content"][0]["text"])
+        output["evidence"][0]["configuration"] = "generation_proxy"
+        output["reason"] = (
+            "Same aperture, focal length, optical design, and sold configuration."
+        )
+        response["output"][1]["content"][0]["text"] = json.dumps(output)
+        estimate, _ = prices.validate_estimate_response(
+            equipment(), response, config(), "2026-08-24T20:00:00Z"
+        )
+        self.assertEqual(estimate["match_basis"], "generation_proxy")
+        self.assertEqual(estimate["match_confidence"], 0.94)
+        self.assertIn("generation proxy", estimate["note"].casefold())
+
+    def test_retained_generation_proxy_requires_label_and_confidence_cap(self):
+        proxy = retained_estimate(
+            match_basis="generation_proxy",
+            match_confidence=0.95,
+            note="Same-spec generation proxy.",
+        )
+        with self.assertRaisesRegex(prices.ReferencePriceError, "documented cap"):
+            prices.validate_state_estimate(proxy, {"scope-1"}, config())
+
+        proxy["match_confidence"] = 0.94
+        proxy["note"] = None
+        with self.assertRaisesRegex(prices.ReferencePriceError, "explicit note"):
+            prices.validate_state_estimate(proxy, {"scope-1"}, config())
 
     def test_retained_and_public_data_omit_source_names_and_urls(self):
         estimate, _ = prices.validate_estimate_response(
@@ -446,9 +475,9 @@ class TelescopeReferencePriceTests(unittest.TestCase):
         self.assertEqual(len(calls), 1)
         self.assertEqual(result["report"]["summary"]["attempted_refresh_count"], 1)
 
-    def test_price_scale_supports_hundreds_through_six_figures(self):
+    def test_price_scale_supports_hundreds_through_observatory_systems(self):
         records = [prices.missing_record(f"scope-{index}") for index in range(5)]
-        for record, amount in zip(records, [300, 1000, 7500, 25000, 100000]):
+        for record, amount in zip(records, [300, 1000, 7500, 25000, 600000]):
             record["price_amount"] = amount
         self.assertEqual(
             prices.price_scale_counts(records),
