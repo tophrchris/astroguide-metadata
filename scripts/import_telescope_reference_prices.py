@@ -26,6 +26,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("input", type=Path, help="Transient curated evidence JSON.")
     parser.add_argument("--catalog", type=Path, default=prices.DEFAULT_CATALOG)
+    parser.add_argument("--smart-catalog", type=Path, default=prices.DEFAULT_SMART_CATALOG)
     parser.add_argument("--config", type=Path, default=prices.DEFAULT_CONFIG)
     parser.add_argument("--state", type=Path, default=prices.DEFAULT_STATE)
     parser.add_argument(
@@ -223,7 +224,9 @@ def main() -> int:
     payload = load_import(args.input)
     config = prices.read_json(args.config)
     prices.validate_config(config)
-    _, telescopes = prices.load_catalog(args.catalog)
+    _, cleansed_telescopes = prices.load_catalog(args.catalog)
+    _, smart_telescopes = prices.load_smart_catalog(args.smart_catalog)
+    telescopes = prices.merge_canonical_telescopes(cleansed_telescopes, smart_telescopes)
     telescope_ids = set(telescopes)
     state = prices.read_json(args.state)
     prices.validate_state(state, telescope_ids, config)

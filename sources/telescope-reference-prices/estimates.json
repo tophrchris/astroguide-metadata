@@ -2,8 +2,14 @@
   "schema_version": 1,
   "catalog_package_family": "astrophotographyEquipmentSanitizedCatalog",
   "catalog_package_version": "astrophotography-equipment-sanitized-catalog-v1-2026-08-19",
-  "last_scan_completed_at": "2026-08-25T12:55:13Z",
+  "last_scan_completed_at": "2026-08-25T13:54:00Z",
   "known_equipment_ids": [
+    "celestron-origin",
+    "celestron-origin-mark-ii",
+    "dwarflab-dwarf-3",
+    "dwarflab-dwarf-ii",
+    "dwarflab-dwarf-mini",
+    "dwarflab-dwarf-original",
     "optical-tube-acuter-maksy-60-educational-discovery-29261",
     "optical-tube-acuter-maksygo-60-educational-20002",
     "optical-tube-acuter-newtony-50-diy-22424",
@@ -715,10 +721,156 @@
     "optical-tube-zwo-ff107-apo-quadruplet-31985",
     "optical-tube-zwo-ff130-apo-quadruplet-31962",
     "optical-tube-zwo-ff65-apo-quintuplet-32011",
-    "optical-tube-zwo-ff80-apo-quadruplet-31984"
+    "optical-tube-zwo-ff80-apo-quadruplet-31984",
+    "unistellar-equinox-2",
+    "unistellar-equinox-original",
+    "unistellar-evscope-2",
+    "unistellar-evscope-original",
+    "unistellar-odyssey",
+    "unistellar-odyssey-pro",
+    "vaonis-hestia",
+    "vaonis-stellina",
+    "vaonis-vespera",
+    "vaonis-vespera-ii",
+    "vaonis-vespera-ii-x-edition",
+    "vaonis-vespera-pro",
+    "zwo-seestar-s30",
+    "zwo-seestar-s30-pro",
+    "zwo-seestar-s30-pro-wide",
+    "zwo-seestar-s50"
   ],
   "refresh_attempts": [],
   "estimates": [
+    {
+      "equipment_id": "celestron-origin",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 4300,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.94,
+      "estimate_confidence": 0.72,
+      "method": "curated_structured_source",
+      "match_basis": "generation_proxy",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 4299.0,
+          "source_key": "a2c8dc669b91d589a61a6cef0f43e4da8ef7f3b9fd5b65d9cecb587987c809e2"
+        }
+      ],
+      "note": "Same-spec current Origin Mark II generation preserves the integrated 152 mm / 335 mm observatory configuration.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "celestron-origin-mark-ii",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 4300,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 4299.0,
+          "source_key": "a2c8dc669b91d589a61a6cef0f43e4da8ef7f3b9fd5b65d9cecb587987c809e2"
+        }
+      ],
+      "note": "Exact Origin Mark II complete intelligent home observatory; used systems and camera-only upgrades excluded.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "dwarflab-dwarf-3",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 550,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 549.0,
+          "source_key": "50c27947732790579071f15ba0d6801114bcdf082ffed9f40ccbc1140d410547"
+        }
+      ],
+      "note": "Exact DWARF 3 integrated smart telescope.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "dwarflab-dwarf-ii",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 300,
+      "currency": "USD",
+      "price_basis": "last_known_new_retail",
+      "precision": 50,
+      "market_status": "discontinued",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.72,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 300.0,
+          "source_key": "e8365a7c524c281d1e294881b42d7ba25595be5269b13b463c05102a14064b56"
+        }
+      ],
+      "note": "Exact discontinued DWARF II new-retail listing; refurbished offers excluded.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "dwarflab-dwarf-mini",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 400,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 419.0,
+          "source_key": "50c27947732790579071f15ba0d6801114bcdf082ffed9f40ccbc1140d410547"
+        }
+      ],
+      "note": "Exact DWARF mini integrated smart telescope.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
     {
       "equipment_id": "optical-tube-altair-starwave-152-v3-red-tube-achromat-2370",
       "estimated_at": "2026-08-25T12:55:13Z",
@@ -11163,6 +11315,358 @@
       "last_refresh_status": "success",
       "last_refresh_error": null,
       "pending_candidate": null
+    },
+    {
+      "equipment_id": "unistellar-equinox-2",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 2900,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 2899.0,
+          "source_key": "a60e81d6a55338181614b251a977d2bbc642e93494c67f9476e711a6cd25eadb"
+        }
+      ],
+      "note": "Exact eQuinox 2 complete smart telescope with included tripod; refurbished listing excluded.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "unistellar-evscope-2",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 5000,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 4999.0,
+          "source_key": "fa8d1ea2c6a1fe39b5fa6e06ec46a5369e3f610c401256b6eee4882e0d9561d1"
+        }
+      ],
+      "note": "Exact eVscope 2 complete smart telescope with included tripod.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "unistellar-odyssey",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 2600,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 2599.0,
+          "source_key": "dc6a8f7157caf69e3a758fc222dde9688b6eeb44fa5807bc799fcb2653f5f347"
+        }
+      ],
+      "note": "Exact current Odyssey complete smart telescope.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "unistellar-odyssey-pro",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 4600,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 4599.0,
+          "source_key": "dc6a8f7157caf69e3a758fc222dde9688b6eeb44fa5807bc799fcb2653f5f347"
+        }
+      ],
+      "note": "Exact current Odyssey Pro complete smart telescope.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "vaonis-hestia",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 200,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.72,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 220.45,
+          "source_key": "3090a8f53a31db972f5306b519c84c2e90493c430c2726be34b4e95ee9ed1246",
+          "source_price": 189.0,
+          "source_currency": "EUR",
+          "usd_conversion_rate": 1.1664
+        }
+      ],
+      "note": "Exact base Hestia product; solar, standard, and ultimate packs excluded.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "vaonis-stellina",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 3000,
+      "currency": "USD",
+      "price_basis": "last_known_new_retail",
+      "precision": 50,
+      "market_status": "discontinued",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.7,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 2999.0,
+          "source_key": "1b87542b68292b1106cb0d02fc1f15c3c774b7ff493963664070326fe31f3d40"
+        }
+      ],
+      "note": "Last-known new-retail price for the discontinued Stellina smart telescope.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "vaonis-vespera-ii",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 1850,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.74,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 1854.58,
+          "source_key": "126aae8d0a29626d28e2145dbfaf4ceecd8b136c78c7d357c6b8a42d6b16de79",
+          "source_price": 1590.0,
+          "source_currency": "EUR",
+          "usd_conversion_rate": 1.1664
+        }
+      ],
+      "note": "Exact Vespera II instrument-only configuration; optional tripod packs excluded.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "vaonis-vespera-ii-x-edition",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 2650,
+      "currency": "USD",
+      "price_basis": "last_known_new_retail",
+      "precision": 50,
+      "market_status": "discontinued",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.72,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 2671.06,
+          "source_key": "ff876aa916ce53b414ecb6d60ea5f554e24ca1ba7aea56f0f6f44361dc45168f",
+          "source_price": 2290.0,
+          "source_currency": "EUR",
+          "usd_conversion_rate": 1.1664
+        }
+      ],
+      "note": "Exact sold-out limited Vespera II X Edition configuration, including its canonical edition accessories.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "vaonis-vespera-pro",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 3250,
+      "currency": "USD",
+      "price_basis": "last_known_new_retail",
+      "precision": 50,
+      "market_status": "discontinued",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.72,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 3254.26,
+          "source_key": "f67e867405dc9446399dbe512bdb1a567d4216c7537320bdcc94d1ff62083e65",
+          "source_price": 2790.0,
+          "source_currency": "EUR",
+          "usd_conversion_rate": 1.1664
+        }
+      ],
+      "note": "Exact original Vespera Pro configuration; not the newer Vespera Pro 2.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "zwo-seestar-s30",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 400,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 399.0,
+          "source_key": "e1d17ba60f8600f13f0708327bc5babca9bdca1c5a04dfd20287bceeb2126ff6"
+        }
+      ],
+      "note": "Exact Seestar S30 all-in-one smart telescope.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "zwo-seestar-s30-pro",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 700,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 699.0,
+          "source_key": "6f6ab8c2286f2f5ecdc7adb6857873e2484d2192a22641a9404e5addcbb82f8f"
+        }
+      ],
+      "note": "Exact Seestar S30 Pro integrated dual-camera smart telescope.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "zwo-seestar-s30-pro-wide",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 700,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 699.0,
+          "source_key": "6f6ab8c2286f2f5ecdc7adb6857873e2484d2192a22641a9404e5addcbb82f8f"
+        }
+      ],
+      "note": "Canonical wide-camera profile is part of the exact S30 Pro sold system, not a separately priced accessory.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
+    },
+    {
+      "equipment_id": "zwo-seestar-s50",
+      "estimated_at": "2026-08-25T13:54:00Z",
+      "price_amount": 550,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 549.0,
+          "source_key": "bc5c370038178db6028ba2ed9d347433c65af8afca20e01958ad9a42daa23461"
+        }
+      ],
+      "note": "Exact Seestar S50 all-in-one smart telescope.",
+      "last_refresh_attempt_at": "2026-08-25T13:54:00Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
     }
-  ]
+  ],
+  "smart_catalog_package_family": "equipmentCatalog",
+  "smart_catalog_package_version": "equipment-catalog-v1-2026-07-28"
 }

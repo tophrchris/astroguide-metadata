@@ -2,9 +2,10 @@
 
 ## Method
 
-The rapid coverage expansion was checked against canonical sanitized-equipment
-IDs, sold configuration, aperture, focal length, optical design, approximate
-$50 rounding, and generated public records. A different generation was
+The rapid coverage expansion was checked against canonical production-equipment
+IDs from both telescope catalogs, sold configuration, aperture, focal length,
+optical design, approximate $50 rounding, and generated public records. A
+different generation was
 accepted only when all four identity/configuration dimensions still matched;
 those records are labeled `generation_proxy` internally, capped at 0.94 match
 confidence, and explained in the public note.
@@ -33,6 +34,12 @@ specialty retailer.
 | `optical-tube-altair-wave-130-edt-535` | Premium triplet refractor | $2,850 | Pass; exact 130 mm / 905 mm OTA |
 | `optical-tube-orion-eon-130-324` | Discontinued refractor | $2,000 | Pass; exact 130 mm / 910 mm OTA, last-known new-retail basis and discontinued status retained |
 | `optical-tube-svbony-sv550-122-apo-33191` | Standalone OTA versus bundle | $1,700 | Pass; exact 122 mm / 854 mm standalone OTA, accessory bundles excluded |
+| `zwo-seestar-s30-pro` | New dual-camera smart telescope | $700 | Pass; exact integrated S30 Pro system, telephoto profile |
+| `zwo-seestar-s30-pro-wide` | Same smart system, wide profile | $700 | Pass; canonical wide-camera profile correctly shares the full S30 Pro system price rather than pricing its camera as an accessory |
+| `dwarflab-dwarf-ii` | Discontinued smart telescope | $300 | Pass; last-known new-retail system price retained, refurbished offers excluded |
+| `vaonis-vespera-ii` | Foreign-currency smart telescope | $1,850 | Pass; exact instrument-only configuration converted at the scan-time rate, optional tripod packs excluded |
+| `unistellar-evscope-2` | Premium smart telescope | $5,000 | Pass; exact complete system with included tripod, refurbished listing excluded |
+| `celestron-origin-mark-ii` | Integrated smart observatory | $4,300 | Pass; exact Mark II system, used units and camera-only upgrade excluded |
 | `optical-tube-apertura-carbonstar-150-33199` | OTA versus accessory bundle | $950 | Pass; OTA-only reference retained, no bundle arithmetic |
 | `optical-tube-stellarvue-102t-209` | Older/newer model generation | $3,100 | Pass; 102 mm / 714 mm triplet OTA proxy labeled and confidence-capped |
 | `optical-tube-takahashi-fsq-106-16` | Similar generation naming | $7,350 | Pass; 106 mm / 530 mm four-element OTA proxy labeled; availability unknown |
@@ -55,17 +62,24 @@ specialty retailer.
   canonical 203 mm / 2346 mm configuration. It was rejected.
 - Current Astro-Physics products with reused family names did not preserve the
   focal lengths of several older canonical rows. Those rows remain unpriced.
+- The original DWARF, Vespera, eVscope, and eQuinox profiles lacked sufficiently
+  reproducible exact new-retail evidence. They remain explicit nulls.
+- Open-box and refurbished smart-telescope listings were rejected even when
+  they were cheaper than qualifying new-retail examples.
 - Several mount bundles, accessories, and different optical designs surfaced
   during candidate generation and were left unpriced rather than used to meet
   the coverage target.
 
 ## Generated-output checks
 
-- 712 eligible canonical optical-tube rows and 712 unique output rows.
-- 399 estimated rows and 313 explicit missing rows: 56.0% coverage.
-- 30 retained rows use the documented same-spec generation-proxy rule;
+- 712 eligible canonical optical-tube rows plus 22 canonical smart-telescope
+  profiles, producing 734 unique output rows.
+- 417 estimated rows and 317 explicit missing rows: 56.8% coverage overall.
+- Smart-telescope coverage is 18 of 22; cleansed optical-tube coverage remains
+  399 of 712.
+- 31 retained rows use the documented same-spec generation-proxy rule;
   all are labeled and have match confidence no higher than 0.94.
-- Price-scale coverage: 63 under $500; 190 from $500-$1,999; 128 from
+- Price-scale coverage: 67 under $500; 195 from $500-$1,999; 137 from
   $2,000-$9,999; 14 from $10,000-$49,999; 4 at $50,000 or more.
 - The documented $750,000 plausibility ceiling accepts the reviewed $600,000
   observatory-system outlier while continuing to reject larger parser errors.

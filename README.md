@@ -112,13 +112,14 @@ scripts/build_equipment_catalog_package.py --app-repo ../DSOPlanneriOS --package
 
 ## Refreshing Telescope Reference Prices
 
-The optional `telescopeReferencePrices` package joins to the sanitized
-equipment catalog by canonical `component_id`. It provides approximate
-USD-normalized new-retail reference values rounded to $50 for portfolio
-visualization—not live offers or retailer comparisons. Every canonical
-`optical_tube` receives one record, so missing estimates remain safe explicit
-nulls. Published rows contain no retailer names, product URLs, or affiliate
-URLs.
+The optional `telescopeReferencePrices` package joins to both production
+telescope catalogs: cleansed optical tubes by canonical `component_id` and
+smart telescopes by their existing equipment-catalog `id`. It provides
+approximate USD-normalized new-retail reference values rounded to $50 for
+portfolio visualization—not live offers or retailer comparisons. Every
+eligible canonical telescope receives one record, so missing estimates remain
+safe explicit nulls. Published rows contain no retailer names, product URLs,
+or affiliate URLs.
 
 Run a search-grounded refresh, target one announcement-time telescope, rebuild
 offline from retained estimates, or validate the generated package:

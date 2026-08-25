@@ -24,11 +24,19 @@ generalized crawling.
 
 ## Canonical join and publishing
 
-The production input is
-`v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json`.
-Every `catalog.opticalComponents[]` row whose `component_type` is
-`optical_tube` receives exactly one output row. `equipment_id` is copied from
-that row's canonical `component_id`; no parallel identity system exists.
+The production inputs are
+`v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json`
+and `v1/packages/equipment/equipment_catalog_v1.json`. Every cleansed
+`catalog.opticalComponents[]` row whose `component_type` is `optical_tube`
+receives exactly one output row. The smart-catalog `telescopes` category also
+receives one row per existing canonical `id`, except for its four rows already
+explicitly labeled `Traditional telescope:`; those products are represented
+by the cleansed catalog and are not duplicated under compatibility IDs.
+
+For compatibility, the package's singular `catalog` member remains the
+cleansed-catalog descriptor. The additive `catalogs` array lists both canonical
+join sources. `equipment_id` is copied directly from `component_id` or `id` as
+appropriate; the price pipeline creates no parallel identity system.
 
 The output is
 `v1/packages/telescope-reference-prices/telescope_reference_prices_v1.json`
@@ -40,7 +48,8 @@ equipment package.
 
 Each `referencePrices` row contains exactly:
 
-- `equipment_id`: canonical sanitized-catalog `component_id`.
+- `equipment_id`: canonical cleansed-catalog `component_id` or smart-catalog
+  telescope `id`.
 - `price_amount`: approximate USD major-unit amount rounded to `precision`, or
   null.
 - `currency`: `USD` when an estimate exists, otherwise null.
@@ -197,13 +206,15 @@ that legitimate path, the item remains missing or enters review.
 
 ## Launch coverage and known limitations
 
-The rapid coverage expansion prices 399 of 712 eligible telescopes (56.0%). It
-prioritizes widely represented brands and spans refractors, astrographs,
-SCT/Maksutov designs, Dobsonians/Newtonians, solar telescopes, integrated
-systems, and observatory-class instruments. The other 313 catalog rows remain
-explicit nulls until researched. Reliable partial coverage is intentional.
+The rapid coverage expansion prices 417 of 734 eligible telescope records
+(56.8%): 399 of 712 cleansed optical tubes and 18 of 22 smart-telescope
+profiles. It prioritizes widely represented brands and spans refractors,
+astrographs, SCT/Maksutov designs, Dobsonians/Newtonians, solar telescopes,
+integrated systems, and observatory-class instruments. The other 317 catalog
+rows remain explicit nulls until researched. Reliable partial coverage is
+intentional.
 
-The retained set includes 30 explicitly labeled same-spec generation proxies.
+The retained set includes 31 explicitly labeled same-spec generation proxies.
 These are not loose name matches: the reviewed reference must preserve
 aperture, focal length, optical design, and sold configuration. Review results
 and corrected false candidates are recorded in

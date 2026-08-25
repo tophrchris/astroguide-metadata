@@ -145,7 +145,77 @@ def retained_estimate(**updates):
     return result
 
 
+def smart_catalog_package():
+    return {
+        "schemaVersion": 1,
+        "packageFamily": "equipmentCatalog",
+        "packageVersion": "equipment-catalog-v1-fixture",
+        "catalog": {
+            "categories": [
+                {
+                    "id": "telescopes",
+                    "items": [
+                        {
+                            "id": "smart-scope-1",
+                            "manufacturer": "Example Smart",
+                            "name": "Smart Scope 1",
+                            "aperture_mm": 50,
+                            "focal_length_mm": 250,
+                            "notes": "Canonical smart telescope.",
+                        },
+                        {
+                            "id": "legacy-traditional-1",
+                            "manufacturer": "Example",
+                            "name": "Traditional Scope",
+                            "notes": "Traditional telescope: retained for compatibility.",
+                        },
+                    ],
+                }
+            ]
+        },
+    }
+
+
 class TelescopeReferencePriceTests(unittest.TestCase):
+    def test_smart_catalog_uses_canonical_ids_and_excludes_labeled_traditional_rows(self):
+        telescopes = prices.smart_telescopes_from_package(smart_catalog_package())
+        self.assertEqual(set(telescopes), {"smart-scope-1"})
+        smart = telescopes["smart-scope-1"]
+        self.assertEqual(smart["component_id"], "smart-scope-1")
+        self.assertEqual(smart["component_type"], "smart_telescope")
+        self.assertEqual(smart["native_focal_ratio"], 5.0)
+
+    def test_canonical_catalog_union_rejects_duplicate_ids(self):
+        with self.assertRaisesRegex(prices.ReferencePriceError, "overlap"):
+            prices.merge_canonical_telescopes(
+                {"duplicate": equipment("duplicate")},
+                {"duplicate": equipment("duplicate")},
+            )
+
+    def test_package_describes_both_canonical_catalogs(self):
+        records = [prices.missing_record("clean-1"), prices.missing_record("smart-1")]
+        package = prices.build_package(
+            {
+                "packageFamily": "astrophotographyEquipmentSanitizedCatalog",
+                "packageVersion": "clean-v1",
+            },
+            records,
+            config(),
+            "2026-08-25T12:00:00Z",
+            smart_catalog_package=smart_catalog_package(),
+            cleansed_telescope_count=1,
+            smart_telescope_count=1,
+        )
+        prices.validate_package(
+            package,
+            {"clean-1", "smart-1"},
+            config(),
+            cleansed_telescope_ids={"clean-1"},
+            smart_telescope_ids={"smart-1"},
+        )
+        self.assertEqual(package["catalog"], package["catalogs"][0])
+        self.assertEqual(package["counts"]["eligible_smart_telescopes"], 1)
+
     def test_request_is_search_grounded_structured_and_not_stored(self):
         request = prices.build_api_request(equipment(), config())
         self.assertFalse(request["store"])
