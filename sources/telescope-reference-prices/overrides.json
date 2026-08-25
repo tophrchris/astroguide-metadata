@@ -1,5 +1,1606 @@
 {
   "schema_version": 1,
-  "overrides": [],
+  "overrides": [
+    {
+      "equipment_id": "optical-tube-altair-60-edf-2199",
+      "action": "replace",
+      "result": {
+        "price_amount": 650,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-altair-72-edf-4889",
+      "action": "replace",
+      "result": {
+        "price_amount": 900,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-altair-lightwave-66-ed-353",
+      "action": "replace",
+      "result": {
+        "price_amount": 600,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-altair-lightwave-72-ed-r-251",
+      "action": "replace",
+      "result": {
+        "price_amount": 700,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-10-lx200-204",
+      "action": "replace",
+      "result": {
+        "price_amount": 4500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-10-lx850-f-8-acf-1409",
+      "action": "replace",
+      "result": {
+        "price_amount": 3500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-10-lx90-2508",
+      "action": "replace",
+      "result": {
+        "price_amount": 3000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-12-lx200-168",
+      "action": "replace",
+      "result": {
+        "price_amount": 7000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-12-lx850-f-8-acf-5530",
+      "action": "replace",
+      "result": {
+        "price_amount": 5000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-12-lx90-2802",
+      "action": "replace",
+      "result": {
+        "price_amount": 4500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-130mm-f7-series-6000-1917",
+      "action": "replace",
+      "result": {
+        "price_amount": 3000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-14-lx600-acf-1776",
+      "action": "replace",
+      "result": {
+        "price_amount": 12000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-14-lx850-f-8-acf-1812",
+      "action": "replace",
+      "result": {
+        "price_amount": 7000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-16-lx200-198",
+      "action": "replace",
+      "result": {
+        "price_amount": 20000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-16-lx850-f-8-acf-7733",
+      "action": "replace",
+      "result": {
+        "price_amount": 13000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-5000-80mm-f6-apo-260",
+      "action": "replace",
+      "result": {
+        "price_amount": 700,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-5000-series-triplet-apo-272",
+      "action": "replace",
+      "result": {
+        "price_amount": 1500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-6-lx85-f-10-acf-4075",
+      "action": "replace",
+      "result": {
+        "price_amount": 1800,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-7-lx200-197",
+      "action": "replace",
+      "result": {
+        "price_amount": 2500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-8-acf-188",
+      "action": "replace",
+      "result": {
+        "price_amount": 1400,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-ds-114-1977",
+      "action": "replace",
+      "result": {
+        "price_amount": 250,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-etx-105-1779",
+      "action": "replace",
+      "result": {
+        "price_amount": 700,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-etx-125-331",
+      "action": "replace",
+      "result": {
+        "price_amount": 900,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-etx-60-1900",
+      "action": "replace",
+      "result": {
+        "price_amount": 300,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-etx-80-231",
+      "action": "replace",
+      "result": {
+        "price_amount": 350,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-etx-90-1926",
+      "action": "replace",
+      "result": {
+        "price_amount": 650,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-lightbridge-16-2325",
+      "action": "replace",
+      "result": {
+        "price_amount": 2000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-lightbridge-mini-745",
+      "action": "replace",
+      "result": {
+        "price_amount": 250,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-ls-6-acf-194",
+      "action": "replace",
+      "result": {
+        "price_amount": 1300,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-lx-800-419",
+      "action": "replace",
+      "result": {
+        "price_amount": 6000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-lx10-160",
+      "action": "replace",
+      "result": {
+        "price_amount": 1500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-lx200gps-14-287",
+      "action": "replace",
+      "result": {
+        "price_amount": 9000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-lx600-397",
+      "action": "replace",
+      "result": {
+        "price_amount": 9000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-lxd-sn-10-at-242",
+      "action": "replace",
+      "result": {
+        "price_amount": 1600,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-rcx-400-163",
+      "action": "replace",
+      "result": {
+        "price_amount": 5000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-rcx400-14-1934",
+      "action": "replace",
+      "result": {
+        "price_amount": 10000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-meade-sn8-schmidt-newtonian-1788",
+      "action": "replace",
+      "result": {
+        "price_amount": 1000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-110-duplex-325",
+      "action": "replace",
+      "result": {
+        "price_amount": 1500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-120mm-f8-3-long-1960",
+      "action": "replace",
+      "result": {
+        "price_amount": 550,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-150mm-maksutov-1947",
+      "action": "replace",
+      "result": {
+        "price_amount": 1000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-6-rc-1916",
+      "action": "replace",
+      "result": {
+        "price_amount": 600,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-8-rc-1859",
+      "action": "replace",
+      "result": {
+        "price_amount": 1100,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-8-reflector-f4-9-539",
+      "action": "replace",
+      "result": {
+        "price_amount": 500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-80ed-apo-f6-26-1905",
+      "action": "replace",
+      "result": {
+        "price_amount": 900,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-apex-127-174",
+      "action": "replace",
+      "result": {
+        "price_amount": 600,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-ed-80mm-377",
+      "action": "replace",
+      "result": {
+        "price_amount": 700,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-eon-534",
+      "action": "replace",
+      "result": {
+        "price_amount": 1600,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-eon-80ed-11675",
+      "action": "replace",
+      "result": {
+        "price_amount": 900,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-goscope-80mm-1827",
+      "action": "replace",
+      "result": {
+        "price_amount": 150,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-premium-110-ed-1932",
+      "action": "replace",
+      "result": {
+        "price_amount": 1500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-rc-8-1955",
+      "action": "replace",
+      "result": {
+        "price_amount": 1100,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-skyquest-xt10g-191",
+      "action": "replace",
+      "result": {
+        "price_amount": 1400,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-orion-xt8-316",
+      "action": "replace",
+      "result": {
+        "price_amount": 650,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-equinox-100-pro-135",
+      "action": "replace",
+      "result": {
+        "price_amount": 1500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-equinox-120-pro-136",
+      "action": "replace",
+      "result": {
+        "price_amount": 2500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-equinox-66-ed-313",
+      "action": "replace",
+      "result": {
+        "price_amount": 600,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-equinox-80-pro-55",
+      "action": "replace",
+      "result": {
+        "price_amount": 1000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-equinox-80ed-7299",
+      "action": "replace",
+      "result": {
+        "price_amount": 1000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-esprit-100-quintuplet-165",
+      "action": "replace",
+      "result": {
+        "price_amount": 3000,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evoguide-50ed-2676",
+      "action": "replace",
+      "result": {
+        "price_amount": 350,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-102-35378",
+      "action": "replace",
+      "result": {
+        "price_amount": 400,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-120-185",
+      "action": "replace",
+      "result": {
+        "price_amount": 550,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-120ed-ds-pro-23",
+      "action": "replace",
+      "result": {
+        "price_amount": 1300,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-150-211",
+      "action": "replace",
+      "result": {
+        "price_amount": 1000,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-150ed-ds-pro-5698",
+      "action": "replace",
+      "result": {
+        "price_amount": 3000,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-90-660-19571",
+      "action": "replace",
+      "result": {
+        "price_amount": 350,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-90-f10-72",
+      "action": "replace",
+      "result": {
+        "price_amount": 300,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-130-130m-460",
+      "action": "replace",
+      "result": {
+        "price_amount": 350,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-130p-p-ds-38",
+      "action": "replace",
+      "result": {
+        "price_amount": 350,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-200p-p-ds-41",
+      "action": "replace",
+      "result": {
+        "price_amount": 600,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-mercury-707-1581",
+      "action": "replace",
+      "result": {
+        "price_amount": 200,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-250px-52",
+      "action": "replace",
+      "result": {
+        "price_amount": 800,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-350p-499",
+      "action": "replace",
+      "result": {
+        "price_amount": 2500,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-350p-flextube-6593",
+      "action": "replace",
+      "result": {
+        "price_amount": 3000,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-400p-158",
+      "action": "replace",
+      "result": {
+        "price_amount": 3500,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-400p-flextube-498",
+      "action": "replace",
+      "result": {
+        "price_amount": 4000,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-classic-300p-59",
+      "action": "replace",
+      "result": {
+        "price_amount": 1500,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-star-discovery-90i-2845",
+      "action": "replace",
+      "result": {
+        "price_amount": 500,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-stargate-450p-3485",
+      "action": "replace",
+      "result": {
+        "price_amount": 6000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-startravel-102-210",
+      "action": "replace",
+      "result": {
+        "price_amount": 350,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-startravel-120-65",
+      "action": "replace",
+      "result": {
+        "price_amount": 500,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-startravel-150-172",
+      "action": "replace",
+      "result": {
+        "price_amount": 900,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-startravel-80-152",
+      "action": "replace",
+      "result": {
+        "price_amount": 250,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-flt110-tec-33451",
+      "action": "replace",
+      "result": {
+        "price_amount": 3000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-fluorostar-flt-132-f-7-124",
+      "action": "replace",
+      "result": {
+        "price_amount": 4000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-fluorostar-flt-156-35033",
+      "action": "replace",
+      "result": {
+        "price_amount": 7400,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-fluorostar-flt120-18987",
+      "action": "replace",
+      "result": {
+        "price_amount": 3300,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-fluorostar-flt132-350",
+      "action": "replace",
+      "result": {
+        "price_amount": 4400,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-fluorostar-flt91-13920",
+      "action": "replace",
+      "result": {
+        "price_amount": 2000,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-gran-turismo-gt71-2268",
+      "action": "replace",
+      "result": {
+        "price_amount": 1200,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-gran-turismo-gt81-wifd-26732",
+      "action": "replace",
+      "result": {
+        "price_amount": 2000,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-megrez-120-f-7-5-35608",
+      "action": "replace",
+      "result": {
+        "price_amount": 2500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-megrez-80-ii-ed-31216",
+      "action": "replace",
+      "result": {
+        "price_amount": 800,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-pleiades-181-35194",
+      "action": "replace",
+      "result": {
+        "price_amount": 19000,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-spacecat-51-wifd-35124",
+      "action": "replace",
+      "result": {
+        "price_amount": 1000,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-spacecat-61-wifd-35104",
+      "action": "replace",
+      "result": {
+        "price_amount": 1400,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-zenithstar-105-apo-33997",
+      "action": "replace",
+      "result": {
+        "price_amount": 2500,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-zenithstar-61-ii-apo-35243",
+      "action": "replace",
+      "result": {
+        "price_amount": 650,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-zs126-3980",
+      "action": "replace",
+      "result": {
+        "price_amount": 3000,
+        "currency": "USD",
+        "price_basis": "last_known_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "discontinued",
+        "match_confidence": 1,
+        "estimate_confidence": 0.5,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate last-known new-retail reference for the exact canonical configuration; discontinued and not a current offer."
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-zs73-zs73-ii-5740",
+      "action": "replace",
+      "result": {
+        "price_amount": 800,
+        "currency": "USD",
+        "price_basis": "typical_new_retail",
+        "precision": 50,
+        "estimated_at": "2026-08-25T14:31:06Z",
+        "market_status": "current",
+        "match_confidence": 1,
+        "estimate_confidence": 0.6,
+        "evidence_count": 0
+      },
+      "note": "Curator-approved approximate new-retail reference for the exact canonical configuration; rounded to $50 and not a live offer."
+    }
+  ],
   "rejected_evidence": []
 }

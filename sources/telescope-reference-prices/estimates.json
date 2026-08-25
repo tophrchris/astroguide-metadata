@@ -2,7 +2,7 @@
   "schema_version": 1,
   "catalog_package_family": "astrophotographyEquipmentSanitizedCatalog",
   "catalog_package_version": "astrophotography-equipment-sanitized-catalog-v1-2026-08-19",
-  "last_scan_completed_at": "2026-08-25T14:20:04Z",
+  "last_scan_completed_at": "2026-08-25T14:31:06Z",
   "known_equipment_ids": [
     "celestron-origin",
     "celestron-origin-mark-ii",

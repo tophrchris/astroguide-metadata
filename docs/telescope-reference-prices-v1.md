@@ -206,13 +206,21 @@ that legitimate path, the item remains missing or enters review.
 
 ## Launch coverage and known limitations
 
-The rapid coverage expansion prices 418 of 735 eligible telescope records
-(56.9%): 399 of 712 cleansed optical tubes and 19 of 23 smart-telescope
+The rapid coverage expansion prices 518 of 735 eligible telescope records
+(70.5%): 499 of 712 cleansed optical tubes and 19 of 23 smart-telescope
 profiles. It prioritizes widely represented brands and spans refractors,
 astrographs, SCT/Maksutov designs, Dobsonians/Newtonians, solar telescopes,
-integrated systems, and observatory-class instruments. The other 317 catalog
+integrated systems, and observatory-class instruments. The other 217 catalog
 rows remain explicit nulls until researched. Reliable partial coverage is
 intentional.
+
+One hundred rows are explicitly version-controlled curator replacements for
+the approximate portfolio use case: 36 current new-retail references and 64
+last-known new-retail references for discontinued products. They have lower
+estimate confidence, publish `manual_override: true`, never claim to be live
+offers, and can be removed individually when search-grounded evidence becomes
+available. They cover Meade (33), Sky-Watcher (30), William Optics (17), Orion
+(16), and Altair (4).
 
 The retained set includes 31 explicitly labeled same-spec generation proxies.
 These are not loose name matches: the reviewed reference must preserve

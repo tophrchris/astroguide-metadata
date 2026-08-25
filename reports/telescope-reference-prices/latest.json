@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scan_completed_at": "2026-08-25T14:20:04Z",
+  "scan_completed_at": "2026-08-25T14:31:06Z",
   "catalog_package_family": "astrophotographyEquipmentSanitizedCatalog",
   "catalog_package_version": "astrophotography-equipment-sanitized-catalog-v1-2026-08-19",
   "catalogs": [
@@ -18,26 +18,24 @@
     "eligible_cleansed_telescope_count": 712,
     "eligible_smart_telescope_count": 23,
     "attempted_refresh_count": 0,
-    "estimated_telescope_count": 418,
-    "missing_estimate_count": 317,
+    "estimated_telescope_count": 518,
+    "missing_estimate_count": 217,
     "ambiguous_review_count": 0,
     "source_failure_count": 0,
     "changed_estimate_count": 0,
-    "new_telescope_record_count": 1,
+    "new_telescope_record_count": 0,
     "stale_estimate_count": 0,
-    "manual_override_count": 0,
+    "manual_override_count": 100,
     "price_scale": {
-      "under_500": 67,
-      "500_to_1999": 196,
-      "2000_to_9999": 137,
-      "10000_to_49999": 14,
+      "under_500": 81,
+      "500_to_1999": 245,
+      "2000_to_9999": 169,
+      "10000_to_49999": 19,
       "50000_and_up": 4
     }
   },
   "changed_estimates": [],
-  "new_telescope_records": [
-    "zwo-seestar-s50-pro"
-  ],
+  "new_telescope_records": [],
   "review_queue": [],
   "stale_estimates": [],
   "diagnostics": []
