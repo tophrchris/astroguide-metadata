@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "equipmentCatalog",
-  "packageVersion": "equipment-catalog-v1-2026-07-28",
-  "generatedAt": "2026-07-28T10:18:00Z",
+  "packageVersion": "equipment-catalog-v1-2026-08-25",
+  "generatedAt": "2026-08-25T14:20:04Z",
   "source": {
     "name": "AstroGuide bundled equipment catalog",
     "generatedBy": "astroguide-metadata equipment package builder",
@@ -356,6 +356,118 @@
               "planning_power_class": "medium_session_unlimited_with_external",
               "confidence": "high",
               "notes": "Manufacturer says up to 6 hours per charge and supports recharging with a phone power bank while in use."
+            }
+          },
+          {
+            "id": "zwo-seestar-s50-pro",
+            "name": "Seestar S50 Pro",
+            "manufacturer": "ZWO",
+            "abbreviation": "S50Pro",
+            "focal_length_mm": 260,
+            "aperture_mm": 50,
+            "focal_ratio": 5.2,
+            "sensor_model": "IMX585",
+            "default_orientation": "portrait",
+            "sensor_orientation": "portrait",
+            "native_resolution_width_px": 2160,
+            "native_resolution_height_px": 3840,
+            "fov_maj_deg": 2.46,
+            "fov_min_deg": 1.38,
+            "max_mag": 15,
+            "estimated_max_magnitude": 15,
+            "max_mag_basis": "S50-class planning heuristic",
+            "built_in_filters": [
+              {
+                "id": "zwo-built-in-uv-ir-cut",
+                "name": "UV/IR Cut",
+                "abbreviation": "UVIR",
+                "filter": "UV/IR Cut",
+                "manufacturer": "ZWO",
+                "type": "luminance/broadband",
+                "bands_purpose": "UV/IR blocking for general imaging",
+                "best_for": "General imaging / color control",
+                "has_HA": false,
+                "has_OIII": false,
+                "has_SII": false,
+                "notes": "Built-in UV/IR-cut filter for the S50 Pro telephoto camera.",
+                "attribute_basis": "manufacturer_published_filter_class",
+                "optical_role": "built_in_broadband_uv_ir_cut",
+                "has_reflection": true,
+                "source_confidence": "manufacturer"
+              },
+              {
+                "id": "zwo-built-in-dark",
+                "name": "Dark Frame Calibration",
+                "abbreviation": "DARK",
+                "filter": "Dark Frame Calibration",
+                "manufacturer": "ZWO",
+                "type": "calibration",
+                "bands_purpose": "dark-frame calibration",
+                "best_for": "Sensor calibration / hot-pixel suppression",
+                "has_HA": false,
+                "has_OIII": false,
+                "has_SII": false,
+                "User_Selectable": false,
+                "notes": "Built-in dark-frame filter for the S50 Pro telephoto camera; represented for completeness but not an optical bandpass filter.",
+                "attribute_basis": "manufacturer_published_filter_class",
+                "optical_role": "non_optical_dark_calibration",
+                "has_reflection": false,
+                "source_confidence": "manufacturer"
+              },
+              {
+                "id": "zwo-built-in-dual-band-lp",
+                "name": "Dual-band LP",
+                "abbreviation": "DBLP",
+                "filter": "Dual-band LP",
+                "manufacturer": "ZWO",
+                "type": "dual narrowband",
+                "bands_purpose": "Ha + OIII",
+                "best_for": "Emission nebulae under light pollution",
+                "has_HA": true,
+                "has_OIII": true,
+                "has_SII": false,
+                "notes": "Built-in S50 Pro telephoto light-pollution filter with manufacturer-published 20 nm H-alpha and 30 nm OIII bands.",
+                "attribute_basis": "manufacturer_published_filter_class",
+                "optical_role": "built_in_dual_narrowband_ha_oiii",
+                "has_reflection": false,
+                "bands": [
+                  {
+                    "band": "HA",
+                    "category": "emission",
+                    "state": "isolated",
+                    "wavelength_nm": 656.3,
+                    "bandwidth_nm": 20
+                  },
+                  {
+                    "band": "OIII",
+                    "category": "emission",
+                    "state": "isolated",
+                    "wavelength_nm": 500.7,
+                    "bandwidth_nm": 30
+                  }
+                ],
+                "source_confidence": "manufacturer"
+              }
+            ],
+            "notes": "Launch specification: 50 mm f/5.2 four-element APO telephoto path with ED glass and a 1/1.2-inch 8.3 MP sensor. The 2.46 x 1.38 degree rectangular field is derived from the published 2.9-micron pixels, 2160 x 3840 resolution, and 260 mm focal length; ZWO publishes a 2.8-degree portrait diagonal field.",
+            "supported_sub_exposure_lengths": [
+              2,
+              5,
+              10,
+              20,
+              30,
+              60
+            ],
+            "power": {
+              "type": "internal_battery",
+              "battery_capacity": "10000 mAh",
+              "manufacturer_claim_hours": 9,
+              "realistic_hours_min": 6,
+              "realistic_hours_max": 9,
+              "external_power_supported": true,
+              "planning_power_class": "long_session",
+              "confidence": "high",
+              "notes": "Manufacturer specifies a 10,000 mAh battery, up to 9 hours of runtime, and USB-C 5V/3A or 12V/3A power input. Runtime varies with operating conditions."
             }
           },
           {

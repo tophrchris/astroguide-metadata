@@ -177,6 +177,32 @@ def smart_catalog_package():
 
 
 class TelescopeReferencePriceTests(unittest.TestCase):
+    def test_seestar_s50_pro_launch_profile_and_price_are_published(self):
+        smart_package = prices.read_json(prices.DEFAULT_SMART_CATALOG)
+        telescope_items = next(
+            category["items"]
+            for category in smart_package["catalog"]["categories"]
+            if category["id"] == "telescopes"
+        )
+        profile = next(
+            item for item in telescope_items if item["id"] == "zwo-seestar-s50-pro"
+        )
+        self.assertEqual(profile["aperture_mm"], 50)
+        self.assertEqual(profile["focal_length_mm"], 260)
+        self.assertEqual(profile["sensor_model"], "IMX585")
+        self.assertEqual(profile["native_resolution_width_px"], 2160)
+        self.assertEqual(profile["native_resolution_height_px"], 3840)
+
+        published_package = prices.read_json(prices.DEFAULT_PACKAGE)
+        published = next(
+            record
+            for record in published_package["referencePrices"]
+            if record["equipment_id"] == "zwo-seestar-s50-pro"
+        )
+        self.assertEqual(published["price_amount"], 900)
+        self.assertEqual(published["precision"], 50)
+        self.assertEqual(published["market_status"], "current")
+
     def test_smart_catalog_uses_canonical_ids_and_excludes_labeled_traditional_rows(self):
         telescopes = prices.smart_telescopes_from_package(smart_catalog_package())
         self.assertEqual(set(telescopes), {"smart-scope-1"})

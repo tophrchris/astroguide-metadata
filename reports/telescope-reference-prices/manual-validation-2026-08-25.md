@@ -66,20 +66,23 @@ specialty retailer.
   reproducible exact new-retail evidence. They remain explicit nulls.
 - Open-box and refurbished smart-telescope listings were rejected even when
   they were cheaper than qualifying new-retail examples.
+- The newly announced Seestar S50 Pro was matched to its exact launch listing.
+  Its official 50 mm / 260 mm tele profile and $899 launch sale are represented
+  by a canonical smart-catalog row and a $900 rounded reference estimate.
 - Several mount bundles, accessories, and different optical designs surfaced
   during candidate generation and were left unpriced rather than used to meet
   the coverage target.
 
 ## Generated-output checks
 
-- 712 eligible canonical optical-tube rows plus 22 canonical smart-telescope
-  profiles, producing 734 unique output rows.
-- 417 estimated rows and 317 explicit missing rows: 56.8% coverage overall.
-- Smart-telescope coverage is 18 of 22; cleansed optical-tube coverage remains
+- 712 eligible canonical optical-tube rows plus 23 canonical smart-telescope
+  profiles, producing 735 unique output rows.
+- 418 estimated rows and 317 explicit missing rows: 56.9% coverage overall.
+- Smart-telescope coverage is 19 of 23; cleansed optical-tube coverage remains
   399 of 712.
 - 31 retained rows use the documented same-spec generation-proxy rule;
   all are labeled and have match confidence no higher than 0.94.
-- Price-scale coverage: 67 under $500; 195 from $500-$1,999; 137 from
+- Price-scale coverage: 67 under $500; 196 from $500-$1,999; 137 from
   $2,000-$9,999; 14 from $10,000-$49,999; 4 at $50,000 or more.
 - The documented $750,000 plausibility ceiling accepts the reviewed $600,000
   observatory-system outlier while continuing to reject larger parser errors.

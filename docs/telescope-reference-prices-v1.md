@@ -206,8 +206,8 @@ that legitimate path, the item remains missing or enters review.
 
 ## Launch coverage and known limitations
 
-The rapid coverage expansion prices 417 of 734 eligible telescope records
-(56.8%): 399 of 712 cleansed optical tubes and 18 of 22 smart-telescope
+The rapid coverage expansion prices 418 of 735 eligible telescope records
+(56.9%): 399 of 712 cleansed optical tubes and 19 of 23 smart-telescope
 profiles. It prioritizes widely represented brands and spans refractors,
 astrographs, SCT/Maksutov designs, Dobsonians/Newtonians, solar telescopes,
 integrated systems, and observatory-class instruments. The other 317 catalog

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "catalog_package_family": "astrophotographyEquipmentSanitizedCatalog",
   "catalog_package_version": "astrophotography-equipment-sanitized-catalog-v1-2026-08-19",
-  "last_scan_completed_at": "2026-08-25T13:54:00Z",
+  "last_scan_completed_at": "2026-08-25T14:20:04Z",
   "known_equipment_ids": [
     "celestron-origin",
     "celestron-origin-mark-ii",
@@ -737,7 +737,8 @@
     "zwo-seestar-s30",
     "zwo-seestar-s30-pro",
     "zwo-seestar-s30-pro-wide",
-    "zwo-seestar-s50"
+    "zwo-seestar-s50",
+    "zwo-seestar-s50-pro"
   ],
   "refresh_attempts": [],
   "estimates": [
@@ -11665,8 +11666,34 @@
       "last_refresh_status": "success",
       "last_refresh_error": null,
       "pending_candidate": null
+    },
+    {
+      "equipment_id": "zwo-seestar-s50-pro",
+      "estimated_at": "2026-08-25T14:20:04Z",
+      "price_amount": 900,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "method": "curated_structured_source",
+      "match_basis": "exact_product",
+      "model": null,
+      "evidence": [
+        {
+          "source_type": "manufacturer",
+          "price_amount": 899.0,
+          "source_key": "7b74b27190052eb60a40384859bbdf5438de9d6c1f7f6df75a335cc30a399ba6"
+        }
+      ],
+      "note": "Exact Seestar S50 Pro sold configuration; limited-time launch sale rounded to the nearest $50.",
+      "last_refresh_attempt_at": "2026-08-25T14:20:04Z",
+      "last_refresh_status": "success",
+      "last_refresh_error": null,
+      "pending_candidate": null
     }
   ],
   "smart_catalog_package_family": "equipmentCatalog",
-  "smart_catalog_package_version": "equipment-catalog-v1-2026-07-28"
+  "smart_catalog_package_version": "equipment-catalog-v1-2026-08-25"
 }
