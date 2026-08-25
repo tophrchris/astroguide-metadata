@@ -177,6 +177,37 @@ def smart_catalog_package():
 
 
 class TelescopeReferencePriceTests(unittest.TestCase):
+    def test_curator_coverage_batch_publishes_exactly_100_reviewable_prices(self):
+        overrides = prices.read_json(prices.DEFAULT_OVERRIDES)["overrides"]
+        self.assertEqual(len(overrides), 100)
+        self.assertEqual(len({item["equipment_id"] for item in overrides}), 100)
+        retained_ids = {
+            item["equipment_id"]
+            for item in prices.read_json(prices.DEFAULT_STATE)["estimates"]
+        }
+        self.assertTrue(
+            retained_ids.isdisjoint(item["equipment_id"] for item in overrides)
+        )
+
+        published_package = prices.read_json(prices.DEFAULT_PACKAGE)
+        manual = [
+            record
+            for record in published_package["referencePrices"]
+            if record["manual_override"]
+        ]
+        self.assertEqual(len(manual), 100)
+        self.assertTrue(all(record["price_amount"] > 0 for record in manual))
+        self.assertTrue(all(record["price_amount"] % 50 == 0 for record in manual))
+        self.assertTrue(all(record["evidence_count"] == 0 for record in manual))
+        self.assertEqual(
+            sum(record["market_status"] == "current" for record in manual),
+            36,
+        )
+        self.assertEqual(
+            sum(record["market_status"] == "discontinued" for record in manual),
+            64,
+        )
+
     def test_seestar_s50_pro_launch_profile_and_price_are_published(self):
         smart_package = prices.read_json(prices.DEFAULT_SMART_CATALOG)
         telescope_items = next(

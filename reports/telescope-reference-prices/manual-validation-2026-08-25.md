@@ -72,18 +72,24 @@ specialty retailer.
 - Several mount bundles, accessories, and different optical designs surfaced
   during candidate generation and were left unpriced rather than used to meet
   the coverage target.
+- A separate curator-approved approximate batch adds exactly 100 previously
+  missing rows across Meade (33), Sky-Watcher (30), William Optics (17), Orion
+  (16), and Altair (4). The batch separates 36 current references from 64
+  discontinued last-known new-retail references, uses lower estimate
+  confidence, and marks every published row as a manual override.
 
 ## Generated-output checks
 
 - 712 eligible canonical optical-tube rows plus 23 canonical smart-telescope
   profiles, producing 735 unique output rows.
-- 418 estimated rows and 317 explicit missing rows: 56.9% coverage overall.
+- 518 estimated rows and 217 explicit missing rows: 70.5% coverage overall.
 - Smart-telescope coverage is 19 of 23; cleansed optical-tube coverage remains
-  399 of 712.
+  499 of 712.
+- Exactly 100 rows are manual overrides: 36 current and 64 discontinued.
 - 31 retained rows use the documented same-spec generation-proxy rule;
   all are labeled and have match confidence no higher than 0.94.
-- Price-scale coverage: 67 under $500; 196 from $500-$1,999; 137 from
-  $2,000-$9,999; 14 from $10,000-$49,999; 4 at $50,000 or more.
+- Price-scale coverage: 81 under $500; 245 from $500-$1,999; 169 from
+  $2,000-$9,999; 19 from $10,000-$49,999; 4 at $50,000 or more.
 - The documented $750,000 plausibility ceiling accepts the reviewed $600,000
   observatory-system outlier while continuing to reject larger parser errors.
 - No retailer name, product URL, affiliate URL, source domain, or evidence URL
