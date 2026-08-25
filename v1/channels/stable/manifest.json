@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-08-25T12:55:13Z",
-  "publishedAt": "2026-08-25T12:55:13Z",
+  "generatedAt": "2026-08-25T13:54:00Z",
+  "publishedAt": "2026-08-25T13:54:00Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -99,14 +99,14 @@
     },
     {
       "family": "telescopeReferencePrices",
-      "packageVersion": "telescope-reference-prices-v1-20260825T125513Z",
+      "packageVersion": "telescope-reference-prices-v1-20260825T135400Z",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/telescope-reference-prices/telescope_reference_prices_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "0fd4c3335d0952344ae4d9b6027107e49b769dd29f30b5b104268bc5d1d0ff25"
+        "value": "b64c223b1cd173af4c898155d6a0d8e0205d66ec46060d0462ea02c465e823c5"
       },
-      "byteSize": 323957,
+      "byteSize": 334561,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,

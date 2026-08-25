@@ -29,7 +29,11 @@ from typing import Any, Callable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_CATALOG = REPO_ROOT / "v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json"
+DEFAULT_CATALOG = (
+    REPO_ROOT
+    / "v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json"
+)
+DEFAULT_SMART_CATALOG = REPO_ROOT / "v1/packages/equipment/equipment_catalog_v1.json"
 DEFAULT_CONFIG = REPO_ROOT / "sources/telescope-reference-prices/config.json"
 DEFAULT_STATE = REPO_ROOT / "sources/telescope-reference-prices/estimates.json"
 DEFAULT_OVERRIDES = REPO_ROOT / "sources/telescope-reference-prices/overrides.json"
@@ -41,6 +45,7 @@ DEFAULT_MANIFEST = REPO_ROOT / "v1/channels/stable/manifest.json"
 
 PACKAGE_FAMILY = "telescopeReferencePrices"
 CATALOG_FAMILY = "astrophotographyEquipmentSanitizedCatalog"
+SMART_CATALOG_FAMILY = "equipmentCatalog"
 PACKAGE_SCHEMA_VERSION = 1
 METADATA_ORIGIN = "https://metadata.astroguide.space"
 PACKAGE_URL_PATH = "/v1/packages/telescope-reference-prices/telescope_reference_prices_v1.json"
@@ -114,6 +119,7 @@ def parse_args() -> argparse.Namespace:
         description="Refresh search-grounded telescope reference-price estimates."
     )
     parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
+    parser.add_argument("--smart-catalog", type=Path, default=DEFAULT_SMART_CATALOG)
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--state", type=Path, default=DEFAULT_STATE)
     parser.add_argument("--overrides", type=Path, default=DEFAULT_OVERRIDES)
@@ -241,6 +247,76 @@ def load_catalog(path: Path) -> tuple[dict[str, Any], dict[str, dict[str, Any]]]
     if len(telescopes) != len(eligible):
         raise ReferencePriceError("Canonical telescope component IDs are not unique.")
     return package, telescopes
+
+
+def smart_telescopes_from_package(
+    package: dict[str, Any],
+) -> dict[str, dict[str, Any]]:
+    if (
+        package.get("schemaVersion") != 1
+        or package.get("packageFamily") != SMART_CATALOG_FAMILY
+    ):
+        raise ReferencePriceError("Expected the canonical smart-telescope equipment package.")
+    categories = package.get("catalog", {}).get("categories") or []
+    telescope_categories = [item for item in categories if item.get("id") == "telescopes"]
+    if len(telescope_categories) != 1:
+        raise ReferencePriceError(
+            "The canonical smart-telescope package must contain one telescopes category."
+        )
+    raw_items = telescope_categories[0].get("items") or []
+    eligible = []
+    for item in raw_items:
+        equipment_id = str(item.get("id") or "").strip()
+        notes = str(item.get("notes") or "").strip()
+        if not equipment_id or notes.casefold().startswith("traditional telescope:"):
+            continue
+        normalized = copy.deepcopy(item)
+        normalized.update(
+            {
+                "component_id": equipment_id,
+                "component_type": "smart_telescope",
+                "model": item.get("name"),
+                "display_name": " ".join(
+                    part
+                    for part in (
+                        str(item.get("manufacturer") or "").strip(),
+                        str(item.get("name") or "").strip(),
+                    )
+                    if part
+                ),
+                "native_focal_length_mm": item.get("focal_length_mm"),
+            }
+        )
+        aperture = item.get("aperture_mm")
+        focal_length = item.get("focal_length_mm")
+        if finite_positive_number(aperture) and finite_positive_number(focal_length):
+            normalized["native_focal_ratio"] = round(float(focal_length) / float(aperture), 3)
+        eligible.append(normalized)
+    telescopes = {str(item["component_id"]): item for item in eligible}
+    if not telescopes:
+        raise ReferencePriceError(
+            "The canonical smart-telescope package contained no eligible rows."
+        )
+    if len(telescopes) != len(eligible):
+        raise ReferencePriceError("Canonical smart-telescope IDs are not unique.")
+    return telescopes
+
+
+def load_smart_catalog(path: Path) -> tuple[dict[str, Any], dict[str, dict[str, Any]]]:
+    package = read_json(path)
+    return package, smart_telescopes_from_package(package)
+
+
+def merge_canonical_telescopes(
+    cleansed: dict[str, dict[str, Any]], smart: dict[str, dict[str, Any]]
+) -> dict[str, dict[str, Any]]:
+    duplicate_ids = sorted(set(cleansed) & set(smart))
+    if duplicate_ids:
+        raise ReferencePriceError(
+            "Canonical equipment IDs overlap across telescope catalogs: "
+            + ", ".join(duplicate_ids[:10])
+        )
+    return {**cleansed, **smart}
 
 
 def validate_config(config: dict[str, Any]) -> None:
@@ -940,7 +1016,12 @@ def validate_record(
 
 
 def validate_package(
-    package: dict[str, Any], telescope_ids: set[str], config: dict[str, Any]
+    package: dict[str, Any],
+    telescope_ids: set[str],
+    config: dict[str, Any],
+    *,
+    cleansed_telescope_ids: set[str] | None = None,
+    smart_telescope_ids: set[str] | None = None,
 ) -> None:
     if package.get("schemaVersion") != PACKAGE_SCHEMA_VERSION:
         raise ReferencePriceError("Unsupported telescope reference-price schemaVersion.")
@@ -965,6 +1046,18 @@ def validate_package(
         raise ReferencePriceError("Package eligible count is invalid.")
     if package.get("counts", {}).get("estimated_telescopes") != estimated:
         raise ReferencePriceError("Package estimated count is invalid.")
+    if cleansed_telescope_ids is not None and smart_telescope_ids is not None:
+        counts = package.get("counts") or {}
+        if counts.get("eligible_cleansed_telescopes") != len(cleansed_telescope_ids):
+            raise ReferencePriceError("Package cleansed-telescope count is invalid.")
+        if counts.get("eligible_smart_telescopes") != len(smart_telescope_ids):
+            raise ReferencePriceError("Package smart-telescope count is invalid.")
+        catalogs = package.get("catalogs") or []
+        if [item.get("packageFamily") for item in catalogs] != [
+            CATALOG_FAMILY,
+            SMART_CATALOG_FAMILY,
+        ]:
+            raise ReferencePriceError("Package canonical catalog descriptors are invalid.")
 
 
 def price_scale_counts(records: list[dict[str, Any]]) -> dict[str, int]:
@@ -997,19 +1090,40 @@ def build_package(
     records: list[dict[str, Any]],
     config: dict[str, Any],
     generated_at: str,
+    *,
+    smart_catalog_package: dict[str, Any] | None = None,
+    cleansed_telescope_count: int | None = None,
+    smart_telescope_count: int = 0,
 ) -> dict[str, Any]:
     estimated = sum(record["price_amount"] is not None for record in records)
+    primary_catalog = {
+        "packageFamily": catalog_package["packageFamily"],
+        "packageVersion": catalog_package["packageVersion"],
+        "idField": "catalog.opticalComponents[].component_id",
+        "eligibleComponentType": "optical_tube",
+    }
+    catalogs = [primary_catalog]
+    if smart_catalog_package:
+        catalogs.append(
+            {
+                "packageFamily": smart_catalog_package["packageFamily"],
+                "packageVersion": smart_catalog_package["packageVersion"],
+                "idField": "catalog.categories[id=telescopes].items[].id",
+                "eligibleRule": "exclude_rows_labeled_traditional_telescope",
+            }
+        )
+    cleansed_count = (
+        len(records) - smart_telescope_count
+        if cleansed_telescope_count is None
+        else cleansed_telescope_count
+    )
     return {
         "schemaVersion": PACKAGE_SCHEMA_VERSION,
         "packageFamily": PACKAGE_FAMILY,
         "packageVersion": f"telescope-reference-prices-v1-{timestamp_token(generated_at)}",
         "generatedAt": generated_at,
-        "catalog": {
-            "packageFamily": catalog_package["packageFamily"],
-            "packageVersion": catalog_package["packageVersion"],
-            "idField": "catalog.opticalComponents[].component_id",
-            "eligibleComponentType": "optical_tube",
-        },
+        "catalog": primary_catalog,
+        "catalogs": catalogs,
         "market": {
             "country": "US",
             "currency": "USD",
@@ -1031,6 +1145,8 @@ def build_package(
         },
         "counts": {
             "eligible_telescopes": len(records),
+            "eligible_cleansed_telescopes": cleansed_count,
+            "eligible_smart_telescopes": smart_telescope_count,
             "estimated_telescopes": estimated,
             "missing_estimate_telescopes": len(records) - estimated,
             "manual_overrides": sum(record["manual_override"] for record in records),
@@ -1102,6 +1218,8 @@ def build_report(
     attempted_refresh_count: int,
     generated_at: str,
     config: dict[str, Any],
+    smart_catalog_package: dict[str, Any] | None = None,
+    smart_telescope_count: int = 0,
 ) -> dict[str, Any]:
     now = parse_timestamp(generated_at, field="generated_at")
     stale_after = dt.timedelta(days=float(config["freshness_policy"]["stale_after_days"]))
@@ -1113,13 +1231,29 @@ def build_report(
     estimated = sum(record["price_amount"] is not None for record in records)
     review = [item for item in diagnostics if item.get("review_required")]
     failures = [item for item in diagnostics if item.get("category") == "source_failure"]
+    catalogs = [
+        {
+            "package_family": catalog_package["packageFamily"],
+            "package_version": catalog_package["packageVersion"],
+        }
+    ]
+    if smart_catalog_package:
+        catalogs.append(
+            {
+                "package_family": smart_catalog_package["packageFamily"],
+                "package_version": smart_catalog_package["packageVersion"],
+            }
+        )
     return {
         "schema_version": 1,
         "scan_completed_at": generated_at,
         "catalog_package_family": catalog_package["packageFamily"],
         "catalog_package_version": catalog_package["packageVersion"],
+        "catalogs": catalogs,
         "summary": {
             "eligible_telescope_count": len(records),
+            "eligible_cleansed_telescope_count": len(records) - smart_telescope_count,
+            "eligible_smart_telescope_count": smart_telescope_count,
             "attempted_refresh_count": attempted_refresh_count,
             "estimated_telescope_count": estimated,
             "missing_estimate_count": len(records) - estimated,
@@ -1155,6 +1289,8 @@ def scan(
     limit: int | None,
     api_key: str | None,
     requester: Callable[..., dict[str, Any]] = request_api,
+    smart_catalog_package: dict[str, Any] | None = None,
+    smart_telescope_ids: set[str] | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     prior_index = state_index(prior_estimates)
     attempt_index = {item["equipment_id"]: item for item in prior_attempts}
@@ -1308,6 +1444,9 @@ def scan(
         "refresh_attempts": [attempt_index[key] for key in sorted(attempt_index)],
         "estimates": estimates,
     }
+    if smart_catalog_package:
+        state_payload["smart_catalog_package_family"] = smart_catalog_package["packageFamily"]
+        state_payload["smart_catalog_package_version"] = smart_catalog_package["packageVersion"]
     records = build_records(sorted(telescopes), estimates, overrides)
     report = build_report(
         catalog_package=catalog_package,
@@ -1319,6 +1458,8 @@ def scan(
         attempted_refresh_count=len(due_ids),
         generated_at=generated_at,
         config=config,
+        smart_catalog_package=smart_catalog_package,
+        smart_telescope_count=len(smart_telescope_ids or set()),
     )
     return records, {
         "state": state_payload,
@@ -1367,7 +1508,9 @@ def main() -> int:
     parse_timestamp(generated_at, field="generated_at")
     config = read_json(args.config)
     validate_config(config)
-    catalog_package, telescopes = load_catalog(args.catalog)
+    catalog_package, cleansed_telescopes = load_catalog(args.catalog)
+    smart_catalog_package, smart_telescopes = load_smart_catalog(args.smart_catalog)
+    telescopes = merge_canonical_telescopes(cleansed_telescopes, smart_telescopes)
     telescope_ids = set(telescopes)
     state_payload = read_json(args.state)
     estimates = validate_state(state_payload, telescope_ids, config)
@@ -1376,7 +1519,13 @@ def main() -> int:
 
     if args.validate_only:
         package = read_json(args.output)
-        validate_package(package, telescope_ids, config)
+        validate_package(
+            package,
+            telescope_ids,
+            config,
+            cleansed_telescope_ids=set(cleansed_telescopes),
+            smart_telescope_ids=set(smart_telescopes),
+        )
         validate_manifest_descriptor(read_json(args.manifest), args.output)
         print(
             f"Validated {len(package['referencePrices'])} canonical telescope reference-price rows."
@@ -1402,6 +1551,8 @@ def main() -> int:
         offline=args.offline,
         limit=args.limit,
         api_key=os.environ.get("OPENAI_API_KEY"),
+        smart_catalog_package=smart_catalog_package,
+        smart_telescope_ids=set(smart_telescopes),
     )
     summary = scan_result["report"]["summary"]
     if not args.offline and summary["attempted_refresh_count"] == 0:
@@ -1411,8 +1562,22 @@ def main() -> int:
     validate_state(scan_result["state"], telescope_ids, config)
     for record in records:
         validate_record(record, telescope_ids, config)
-    package = build_package(catalog_package, records, config, generated_at)
-    validate_package(package, telescope_ids, config)
+    package = build_package(
+        catalog_package,
+        records,
+        config,
+        generated_at,
+        smart_catalog_package=smart_catalog_package,
+        cleansed_telescope_count=len(cleansed_telescopes),
+        smart_telescope_count=len(smart_telescopes),
+    )
+    validate_package(
+        package,
+        telescope_ids,
+        config,
+        cleansed_telescope_ids=set(cleansed_telescopes),
+        smart_telescope_ids=set(smart_telescopes),
+    )
     write_json(args.state, scan_result["state"])
     package_data = write_json(args.output, package)
     descriptor = package_descriptor(
