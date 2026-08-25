@@ -1,0 +1,23 @@
+{
+  "id": "resp_fixture_malformed",
+  "status": "completed",
+  "output": [
+    {
+      "type": "web_search_call",
+      "action": {
+        "sources": [
+          {"url": "https://maker.example/products/scope-1"}
+        ]
+      }
+    },
+    {
+      "type": "message",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{not valid json"
+        }
+      ]
+    }
+  ]
+}

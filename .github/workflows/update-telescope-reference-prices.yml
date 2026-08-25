@@ -1,0 +1,132 @@
+name: Update telescope reference prices
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_refresh:
+        description: Ignore the 120-day refresh interval
+        required: false
+        default: false
+        type: boolean
+      equipment_id:
+        description: Optional canonical telescope equipment ID
+        required: false
+        type: string
+      limit:
+        description: Maximum records to research in this run
+        required: false
+        default: "50"
+        type: string
+  schedule:
+    - cron: "17 11 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-telescope-reference-prices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Refresh approximate telescope reference prices
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out metadata repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh reference-price estimates
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          FORCE_REFRESH: ${{ inputs.force_refresh || 'false' }}
+          EQUIPMENT_ID: ${{ inputs.equipment_id || '' }}
+          REFRESH_LIMIT: ${{ inputs.limit || '50' }}
+        run: |
+          if [[ -z "$OPENAI_API_KEY" ]]; then
+            echo "Repository secret OPENAI_API_KEY is required." >&2
+            exit 2
+          fi
+          if [[ ! "$REFRESH_LIMIT" =~ ^[1-9][0-9]*$ ]] || (( REFRESH_LIMIT > 200 )); then
+            echo "limit must be an integer from 1 through 200" >&2
+            exit 2
+          fi
+
+          args=(--limit "$REFRESH_LIMIT")
+          if [[ "$FORCE_REFRESH" == "true" ]]; then
+            args+=(--force)
+          fi
+          if [[ -n "$EQUIPMENT_ID" ]]; then
+            if [[ ! "$EQUIPMENT_ID" =~ ^[a-z0-9-]+$ ]]; then
+              echo "Invalid canonical equipment_id: $EQUIPMENT_ID" >&2
+              exit 2
+            fi
+            args+=(--equipment-id "$EQUIPMENT_ID")
+          fi
+          python3 scripts/update_telescope_reference_prices.py "${args[@]}"
+
+      - name: Validate generated metadata
+        run: |
+          python3 -m unittest tests/test_telescope_reference_prices.py -v
+          python3 scripts/update_telescope_reference_prices.py --validate-only
+          python3 -m json.tool reports/telescope-reference-prices/latest.json >/dev/null
+
+      - name: Open or update pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH_NAME: automation/telescope-reference-prices
+        run: |
+          if git diff --quiet; then
+            echo "No telescope reference-price changes to publish."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$BRANCH_NAME"
+          git add \
+            sources/telescope-reference-prices/estimates.json \
+            reports/telescope-reference-prices/latest.json \
+            v1/packages/telescope-reference-prices/telescope_reference_prices_v1.json \
+            v1/channels/stable/manifest.json
+          git commit -m "Update telescope reference prices"
+          git push --force-with-lease origin "$BRANCH_NAME"
+
+          body="$(mktemp)"
+          python3 - <<'PY' > "$body"
+          import json
+          from pathlib import Path
+
+          summary = json.loads(
+              Path("reports/telescope-reference-prices/latest.json").read_text(encoding="utf-8")
+          )["summary"]
+          print("Automated search-grounded telescope reference-price refresh.\n")
+          print("```text")
+          for key, value in summary.items():
+              print(f"{key}: {value}")
+          print("```\n")
+          print("Values are approximate US new-retail references rounded to $50, not live offers. "
+                "The public package contains no retailer names or product links. Review all "
+                "diagnostics and suspicious changes before merging.")
+          PY
+
+          if gh pr view "$BRANCH_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh pr edit "$BRANCH_NAME" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "Update telescope reference prices" \
+              --body-file "$body"
+          else
+            gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --base main \
+              --head "$BRANCH_NAME" \
+              --title "Update telescope reference prices" \
+              --body-file "$body"
+          fi

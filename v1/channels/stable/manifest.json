@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-08-21T21:52:59Z",
-  "publishedAt": "2026-08-21T21:52:59Z",
+  "generatedAt": "2026-08-24T20:00:00Z",
+  "publishedAt": "2026-08-24T20:00:00Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -96,6 +96,21 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled Telescope Workshop projection if no validated cached sanitized package is available. This package mirrors the app-rendered selectable optics and imaging rows for review, web, and metadata consumers; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "telescopeReferencePrices",
+      "packageVersion": "telescope-reference-prices-v1-20260824T200000Z",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/telescope-reference-prices/telescope_reference_prices_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "44df1ec102194040e1794ddac13bb0e0533b940e1312168133867df779d3701f"
+      },
+      "byteSize": 280156,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Optional approximate telescope reference prices. Values are rounded to the published precision, are not live offers, and may be null without affecting equipment publication."
     },
     {
       "family": "darkSkyPlaces",

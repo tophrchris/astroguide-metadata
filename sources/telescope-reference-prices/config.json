@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "api": {
+    "endpoint": "https://api.openai.com/v1/responses",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "search_context_size": "medium",
+    "timeout_seconds": 90,
+    "max_attempts": 3,
+    "max_response_bytes": 2000000
+  },
+  "estimate_policy": {
+    "country": "US",
+    "currency": "USD",
+    "rounding_increment": 50,
+    "minimum_price": 25,
+    "maximum_price": 250000,
+    "minimum_match_confidence": 0.9,
+    "minimum_estimate_confidence": 0.65,
+    "single_source_allowed_types": [
+      "manufacturer",
+      "astronomy_specialty_retailer"
+    ],
+    "maximum_evidence_spread_ratio": 0.3,
+    "maximum_model_median_difference_ratio": 0.2,
+    "suspicious_change_ratio": 0.35,
+    "suspicious_change_minimum_usd": 250,
+    "suspicious_change_adaptive_ratio": 0.1
+  },
+  "freshness_policy": {
+    "routine_scan_cadence_days": 7,
+    "routine_batch_size": 50,
+    "refresh_after_days": 120,
+    "stale_after_days": 180
+  }
+}

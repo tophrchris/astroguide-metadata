@@ -24,6 +24,7 @@ v1/assets/target-images/{assetOwnerTargetID}/{assetId}/hero.jpg
 v1/packages/equipment/equipment_catalog_v1.json
 v1/packages/equipment/astrophotography_equipment_catalog_v1.json
 v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json
+v1/packages/telescope-reference-prices/telescope_reference_prices_v1.json
 v1/packages/dark-sky-places/dark_sky_places_v1.json
 v1/packages/comets/comet_snapshot_v1.json
 v1/packages/comet-orbit-geometry/comet_orbit_geometry_v1.json
@@ -37,6 +38,8 @@ v1/packages/comet-close-encounters/comet_close_encounter_metadata_v1.json
 v1/packages/comet-close-encounters/shards/comet_close_encounters_YYYY_MM_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 sources/target-metadata-overlay/2026-05-curated-workbooks/
+sources/telescope-reference-prices/{config,estimates,overrides}.json
+reports/telescope-reference-prices/latest.json
 ```
 
 The stable manifest is served at:
@@ -106,6 +109,34 @@ the app renders without re-implementing the app's filtering logic:
 ```bash
 scripts/build_equipment_catalog_package.py --app-repo ../DSOPlanneriOS --package astrophotography-sanitized
 ```
+
+## Refreshing Telescope Reference Prices
+
+The optional `telescopeReferencePrices` package joins to the sanitized
+equipment catalog by canonical `component_id`. It provides approximate US
+new-retail reference values rounded to $50 for portfolio visualization—not
+live offers or retailer comparisons. Every canonical `optical_tube` receives
+one record, so missing estimates remain safe explicit nulls. Published rows
+contain no retailer names, product URLs, or affiliate URLs.
+
+Run a search-grounded refresh, target one announcement-time telescope, rebuild
+offline from retained estimates, or validate the generated package:
+
+```bash
+OPENAI_API_KEY=... python3 scripts/update_telescope_reference_prices.py
+OPENAI_API_KEY=... python3 scripts/update_telescope_reference_prices.py \
+  --equipment-id CANONICAL_ID --force
+python3 scripts/update_telescope_reference_prices.py --offline
+python3 scripts/update_telescope_reference_prices.py --validate-only
+```
+
+The weekly workflow opens or updates a reviewable PR and never writes directly
+to `main`. Configuration, curator overrides, retained estimates, the public
+package, and scan diagnostics remain separate.
+
+The contract, qualification policy, source/compliance decisions, freshness
+rules, override examples, and operational runbook are in
+[`docs/telescope-reference-prices-v1.md`](docs/telescope-reference-prices-v1.md).
 
 ## Rebuilding Planet Catalog Packages
 

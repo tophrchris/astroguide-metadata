@@ -1,0 +1,23 @@
+{
+  "id": "resp_fixture_bundle",
+  "status": "completed",
+  "output": [
+    {
+      "type": "web_search_call",
+      "action": {
+        "sources": [
+          {"url": "https://specialty.example/scope-1-kit"}
+        ]
+      }
+    },
+    {
+      "type": "message",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{\"equipment_id\":\"scope-1\",\"status\":\"estimated\",\"price_basis\":\"typical_new_retail\",\"market_status\":\"current\",\"estimated_price_usd\":499,\"match_confidence\":0.97,\"estimate_confidence\":0.8,\"reason\":\"Only a telescope and mount kit was found.\",\"evidence\":[{\"url\":\"https://specialty.example/scope-1-kit\",\"source_type\":\"astronomy_specialty_retailer\",\"price_usd\":499,\"identity_match\":true,\"qualifying_new_retail\":true,\"configuration\":\"bundle_or_kit\"}]}"
+        }
+      ]
+    }
+  ]
+}
