@@ -113,11 +113,12 @@ scripts/build_equipment_catalog_package.py --app-repo ../DSOPlanneriOS --package
 ## Refreshing Telescope Reference Prices
 
 The optional `telescopeReferencePrices` package joins to the sanitized
-equipment catalog by canonical `component_id`. It provides approximate US
-new-retail reference values rounded to $50 for portfolio visualization—not
-live offers or retailer comparisons. Every canonical `optical_tube` receives
-one record, so missing estimates remain safe explicit nulls. Published rows
-contain no retailer names, product URLs, or affiliate URLs.
+equipment catalog by canonical `component_id`. It provides approximate
+USD-normalized new-retail reference values rounded to $50 for portfolio
+visualization—not live offers or retailer comparisons. Every canonical
+`optical_tube` receives one record, so missing estimates remain safe explicit
+nulls. Published rows contain no retailer names, product URLs, or affiliate
+URLs.
 
 Run a search-grounded refresh, target one announcement-time telescope, rebuild
 offline from retained estimates, or validate the generated package:
@@ -128,6 +129,15 @@ OPENAI_API_KEY=... python3 scripts/update_telescope_reference_prices.py \
   --equipment-id CANONICAL_ID --force
 python3 scripts/update_telescope_reference_prices.py --offline
 python3 scripts/update_telescope_reference_prices.py --validate-only
+```
+
+Curator-reviewed structured evidence can be bulk-imported without retaining
+source URLs or source identities in repository state:
+
+```bash
+python3 scripts/import_telescope_reference_prices.py /secure/path/curated-evidence.json
+python3 scripts/import_telescope_reference_prices.py \
+  /secure/path/curated-evidence.json --write
 ```
 
 The weekly workflow opens or updates a reviewable PR and never writes directly

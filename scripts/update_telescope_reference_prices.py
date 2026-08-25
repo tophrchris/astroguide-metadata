@@ -50,6 +50,7 @@ MARKET_STATUSES = {"current", "discontinued", "unknown"}
 SOURCE_TYPES = {"manufacturer", "astronomy_specialty_retailer", "authorized_retailer", "other"}
 EVIDENCE_CONFIGURATIONS = {
     "exact_product",
+    "generation_proxy",
     "bundle_or_kit",
     "accessory",
     "used_or_refurbished",
@@ -315,7 +316,7 @@ equipment_id={equipment['component_id']}
 
 This is editorial reference data, not a live offer or shopping comparison. Search the web and identify the exact canonical sold configuration. Prefer manufacturer pages and established astronomy retailers. A current normal or unconditional sale price may be evidence. For discontinued equipment, a reproducible last-known new-retail price may be used only with price_basis=last_known_new_retail.
 
-Reject used, open-box, refurbished, marketplace, auction, financing/monthly, coupon-dependent, deposit, reservation, accessory, reducer, flattener, focuser, mount-only, camera, and inferred bundle-equivalent prices. Do not substitute a kit or bundle for an OTA, or an OTA for an integrated telescope configuration. Treat generations, aperture variants, EdgeHD/RASA/HyperStar/reducer configurations, and similarly named models as different products.
+Reject used, open-box, refurbished, marketplace, auction, financing/monthly, coupon-dependent, deposit, reservation, accessory, reducer, flattener, focuser, mount-only, camera, and inferred bundle-equivalent prices. Do not substitute a kit or bundle for an OTA, or an OTA for an integrated telescope configuration. A newer or older generation may be used as a generation_proxy only when aperture, focal length, optical design, and sold configuration all match the canonical record; say so in reason and keep match_confidence at or below 0.94. Treat aperture variants, optical-design variants, EdgeHD/RASA/HyperStar/reducer configurations, and materially different packages as different products.
 
 Return insufficient_evidence instead of guessing. Evidence URLs must be pages actually found by web search. The estimate should represent the typical exact-product new-retail price before shipping and tax, not the lowest anomalous price. Do not round; the publishing pipeline applies its own precision."""
 
@@ -548,7 +549,7 @@ def validate_estimate_response(
         if (
             not evidence.get("identity_match")
             or not evidence.get("qualifying_new_retail")
-            or evidence.get("configuration") != "exact_product"
+            or evidence.get("configuration") not in {"exact_product", "generation_proxy"}
         ):
             continue
         source_type = evidence.get("source_type")
@@ -570,6 +571,7 @@ def validate_estimate_response(
                 "source_domain": source_domain(url),
                 "price_amount": round(amount, 2),
                 "source_key": key,
+                "configuration": evidence["configuration"],
             }
         )
     if not qualifying:
@@ -580,6 +582,13 @@ def validate_estimate_response(
         if qualifying[0]["source_type"] not in set(policy["single_source_allowed_types"]):
             raise EstimateReviewRequired("A single non-authoritative source is insufficient.")
         estimate_confidence = min(estimate_confidence, 0.75)
+    match_basis = (
+        "generation_proxy"
+        if any(item["configuration"] == "generation_proxy" for item in qualifying)
+        else "exact_product"
+    )
+    if match_basis == "generation_proxy":
+        match_confidence = min(match_confidence, 0.94)
     prices = [item["price_amount"] for item in qualifying]
     median_price = float(statistics.median(prices))
     spread = (max(prices) - min(prices)) / median_price if median_price else math.inf
@@ -595,6 +604,8 @@ def validate_estimate_response(
     increment = int(policy["rounding_increment"])
     rounded_price = round_to_increment(median_price, increment)
     reason = " ".join(str(result.get("reason") or "").split())[:300] or None
+    if match_basis == "generation_proxy" and "generation" not in (reason or "").casefold():
+        reason = f"Same-spec generation proxy. {reason or ''}".strip()[:300]
     state_estimate = {
         "equipment_id": equipment_id,
         "estimated_at": generated_at,
@@ -606,6 +617,7 @@ def validate_estimate_response(
         "match_confidence": match_confidence,
         "estimate_confidence": estimate_confidence,
         "method": "search_grounded_evidence_median",
+        "match_basis": match_basis,
         "model": config["api"]["model"],
         "evidence": [
             {
@@ -653,7 +665,9 @@ def validate_state_estimate(
         raise ReferencePriceError(f"Estimate currency or basis is invalid: {equipment_id}")
     if estimate.get("precision") != increment or estimate.get("market_status") not in MARKET_STATUSES:
         raise ReferencePriceError(f"Estimate precision or market status is invalid: {equipment_id}")
-    probability(estimate.get("match_confidence"), field=f"{equipment_id}.match_confidence")
+    match_confidence = probability(
+        estimate.get("match_confidence"), field=f"{equipment_id}.match_confidence"
+    )
     probability(estimate.get("estimate_confidence"), field=f"{equipment_id}.estimate_confidence")
     if estimate.get("last_refresh_status") not in {"success", "failed"}:
         raise ReferencePriceError(f"Invalid refresh status: {equipment_id}")
@@ -661,7 +675,9 @@ def validate_state_estimate(
     if not isinstance(evidence, list) or not evidence:
         raise ReferencePriceError(f"Estimate requires summarized evidence: {equipment_id}")
     for item in evidence:
-        if set(item) != {"source_type", "price_amount", "source_key"}:
+        base_fields = {"source_type", "price_amount", "source_key"}
+        conversion_fields = {"source_price", "source_currency", "usd_conversion_rate"}
+        if set(item) not in {frozenset(base_fields), frozenset(base_fields | conversion_fields)}:
             raise ReferencePriceError(f"Evidence fields are invalid: {equipment_id}")
         if item["source_type"] not in SOURCE_TYPES:
             raise ReferencePriceError(f"Evidence source summary is invalid: {equipment_id}")
@@ -669,6 +685,26 @@ def validate_state_estimate(
             raise ReferencePriceError(f"Evidence price is invalid: {equipment_id}")
         if not re.fullmatch(r"[0-9a-f]{64}", str(item["source_key"])):
             raise ReferencePriceError(f"Evidence source key is invalid: {equipment_id}")
+        if conversion_fields <= set(item):
+            if (
+                not finite_positive_number(item["source_price"])
+                or not finite_positive_number(item["usd_conversion_rate"])
+                or not re.fullmatch(r"[A-Z]{3}", str(item["source_currency"]))
+                or item["source_currency"] == "USD"
+            ):
+                raise ReferencePriceError(f"Evidence currency conversion is invalid: {equipment_id}")
+    match_basis = estimate.get("match_basis", "exact_product")
+    if match_basis not in {"exact_product", "generation_proxy"}:
+        raise ReferencePriceError(f"Estimate match basis is invalid: {equipment_id}")
+    if match_basis == "generation_proxy":
+        if match_confidence > 0.94:
+            raise ReferencePriceError(
+                f"Generation-proxy confidence exceeds the documented cap: {equipment_id}"
+            )
+        if "generation" not in str(estimate.get("note") or "").casefold():
+            raise ReferencePriceError(
+                f"Generation-proxy estimate requires an explicit note: {equipment_id}"
+            )
 
 
 def validate_state(
@@ -986,6 +1022,11 @@ def build_package(
             "publicSourceLinksIncluded": False,
             "affiliateLinksIncluded": False,
             "modelMemoryAloneAllowed": False,
+            "generationProxyAllowed": True,
+            "generationProxyRule": (
+                "newer_or_older_generation_only_when_aperture_focal_length_"
+                "optical_design_and_sold_configuration_match"
+            ),
             "failedRefreshBehavior": "retain_last_successful_estimate_and_original_estimated_at",
         },
         "counts": {
