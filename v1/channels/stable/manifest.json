@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-08-25T13:54:00Z",
-  "publishedAt": "2026-08-25T13:54:00Z",
+  "generatedAt": "2026-08-25T14:20:04Z",
+  "publishedAt": "2026-08-25T14:20:04Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -54,14 +54,14 @@
     },
     {
       "family": "equipmentCatalog",
-      "packageVersion": "equipment-catalog-v1-2026-07-28",
+      "packageVersion": "equipment-catalog-v1-2026-08-25",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/equipment/equipment_catalog_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "0ae8b50a7be28d155041741dae4c1ad1d37d4942ff9e0b1fb31081d1d14973aa"
+        "value": "7eee98cdb15f6e3ac959149a5bf33a701c2c36268277631f9299e14389e3bc83"
       },
-      "byteSize": 232891,
+      "byteSize": 237911,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -99,14 +99,14 @@
     },
     {
       "family": "telescopeReferencePrices",
-      "packageVersion": "telescope-reference-prices-v1-20260825T135400Z",
+      "packageVersion": "telescope-reference-prices-v1-20260825T142004Z",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/telescope-reference-prices/telescope_reference_prices_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "b64c223b1cd173af4c898155d6a0d8e0205d66ec46060d0462ea02c465e823c5"
+        "value": "f330d5329ed7432a5311ecb06e44e5123ba68bf1251e06dd92cb0ac9c90f24ce"
       },
-      "byteSize": 334561,
+      "byteSize": 335054,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scan_completed_at": "2026-08-25T13:54:00Z",
+  "scan_completed_at": "2026-08-25T14:20:04Z",
   "catalog_package_family": "astrophotographyEquipmentSanitizedCatalog",
   "catalog_package_version": "astrophotography-equipment-sanitized-catalog-v1-2026-08-19",
   "catalogs": [
@@ -10,25 +10,25 @@
     },
     {
       "package_family": "equipmentCatalog",
-      "package_version": "equipment-catalog-v1-2026-07-28"
+      "package_version": "equipment-catalog-v1-2026-08-25"
     }
   ],
   "summary": {
-    "eligible_telescope_count": 734,
+    "eligible_telescope_count": 735,
     "eligible_cleansed_telescope_count": 712,
-    "eligible_smart_telescope_count": 22,
+    "eligible_smart_telescope_count": 23,
     "attempted_refresh_count": 0,
-    "estimated_telescope_count": 417,
+    "estimated_telescope_count": 418,
     "missing_estimate_count": 317,
     "ambiguous_review_count": 0,
     "source_failure_count": 0,
     "changed_estimate_count": 0,
-    "new_telescope_record_count": 22,
+    "new_telescope_record_count": 1,
     "stale_estimate_count": 0,
     "manual_override_count": 0,
     "price_scale": {
       "under_500": 67,
-      "500_to_1999": 195,
+      "500_to_1999": 196,
       "2000_to_9999": 137,
       "10000_to_49999": 14,
       "50000_and_up": 4
@@ -36,28 +36,7 @@
   },
   "changed_estimates": [],
   "new_telescope_records": [
-    "celestron-origin",
-    "celestron-origin-mark-ii",
-    "dwarflab-dwarf-3",
-    "dwarflab-dwarf-ii",
-    "dwarflab-dwarf-mini",
-    "dwarflab-dwarf-original",
-    "unistellar-equinox-2",
-    "unistellar-equinox-original",
-    "unistellar-evscope-2",
-    "unistellar-evscope-original",
-    "unistellar-odyssey",
-    "unistellar-odyssey-pro",
-    "vaonis-hestia",
-    "vaonis-stellina",
-    "vaonis-vespera",
-    "vaonis-vespera-ii",
-    "vaonis-vespera-ii-x-edition",
-    "vaonis-vespera-pro",
-    "zwo-seestar-s30",
-    "zwo-seestar-s30-pro",
-    "zwo-seestar-s30-pro-wide",
-    "zwo-seestar-s50"
+    "zwo-seestar-s50-pro"
   ],
   "review_queue": [],
   "stale_estimates": [],

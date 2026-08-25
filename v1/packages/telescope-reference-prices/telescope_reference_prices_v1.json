@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "telescopeReferencePrices",
-  "packageVersion": "telescope-reference-prices-v1-20260825T135400Z",
-  "generatedAt": "2026-08-25T13:54:00Z",
+  "packageVersion": "telescope-reference-prices-v1-20260825T142004Z",
+  "generatedAt": "2026-08-25T14:20:04Z",
   "catalog": {
     "packageFamily": "astrophotographyEquipmentSanitizedCatalog",
     "packageVersion": "astrophotography-equipment-sanitized-catalog-v1-2026-08-19",
@@ -18,7 +18,7 @@
     },
     {
       "packageFamily": "equipmentCatalog",
-      "packageVersion": "equipment-catalog-v1-2026-07-28",
+      "packageVersion": "equipment-catalog-v1-2026-08-25",
       "idField": "catalog.categories[id=telescopes].items[].id",
       "eligibleRule": "exclude_rows_labeled_traditional_telescope"
     }
@@ -40,15 +40,15 @@
     "failedRefreshBehavior": "retain_last_successful_estimate_and_original_estimated_at"
   },
   "counts": {
-    "eligible_telescopes": 734,
+    "eligible_telescopes": 735,
     "eligible_cleansed_telescopes": 712,
-    "eligible_smart_telescopes": 22,
-    "estimated_telescopes": 417,
+    "eligible_smart_telescopes": 23,
+    "estimated_telescopes": 418,
     "missing_estimate_telescopes": 317,
     "manual_overrides": 0,
     "price_scale": {
       "under_500": 67,
-      "500_to_1999": 195,
+      "500_to_1999": 196,
       "2000_to_9999": 137,
       "10000_to_49999": 14,
       "50000_and_up": 4
@@ -10330,6 +10330,20 @@
       "evidence_count": 1,
       "manual_override": false,
       "note": "Exact Seestar S50 all-in-one smart telescope."
+    },
+    {
+      "equipment_id": "zwo-seestar-s50-pro",
+      "price_amount": 900,
+      "currency": "USD",
+      "price_basis": "typical_new_retail",
+      "precision": 50,
+      "estimated_at": "2026-08-25T14:20:04Z",
+      "market_status": "current",
+      "match_confidence": 0.99,
+      "estimate_confidence": 0.75,
+      "evidence_count": 1,
+      "manual_override": false,
+      "note": "Exact Seestar S50 Pro sold configuration; limited-time launch sale rounded to the nearest $50."
     }
   ]
 }
