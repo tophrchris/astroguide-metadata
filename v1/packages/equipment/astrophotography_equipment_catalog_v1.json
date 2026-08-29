@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "astrophotographyEquipmentCatalog",
-  "packageVersion": "astrophotography-equipment-catalog-v1-2026-08-12",
-  "generatedAt": "2026-08-12T12:47:58Z",
+  "packageVersion": "astrophotography-equipment-catalog-v1-2026-08-29",
+  "generatedAt": "2026-08-29T20:58:17Z",
   "source": {
     "name": "AstroGuide bundled astrophotography equipment catalog",
     "generatedBy": "astroguide-metadata equipment package builder",
@@ -21,8 +21,8 @@
     "counts": {
       "optical_tubes": 811,
       "lenses": 134,
-      "cameras": 381,
-      "total": 1326
+      "cameras": 382,
+      "total": 1327
     },
     "normalizationNotes": [
       "Manufacturer names are whitespace/case normalized and selected variants are merged for curation convenience.",
@@ -24577,6 +24577,32 @@
         "curation_status": "needs_review",
         "include_in_app": "",
         "component_type": "camera",
+        "component_id": "camera-qhy-minicam8-imx585-official",
+        "manufacturer": "QHY",
+        "manufacturer_raw": "QHY",
+        "model": "miniCAM8 (IMX585)",
+        "sensor_model": "Sony IMX585",
+        "pixel_size_width_um": 2.9,
+        "pixel_size_height_um": 2.9,
+        "horizontal_resolution_px": 3856,
+        "vertical_resolution_px": 2180,
+        "sensor_width_mm": 11.182,
+        "sensor_height_mm": 6.322,
+        "sensor_diagonal_mm": 12.845,
+        "max_supported_magnitude": "",
+        "supported_sub_lengths_seconds": "",
+        "source_id": "minicam8-imx585",
+        "source_label": "QHY - miniCAM8 (IMX585)",
+        "source_value": "QHY|miniCAM8 (IMX585)|2.90|2.90|3856.00|2180.00|minicam8-imx585",
+        "source_url": "https://www.qhyccd.com/minicam8-imx585/",
+        "source_attribution": "QHYCCD official miniCAM8 (IMX585) product page.",
+        "source_confidence": "official_product_page",
+        "curator_notes": "Added from QHYCCD miniCAM8 IMX585 official specifications for Telescope Workshop availability."
+      },
+      {
+        "curation_status": "needs_review",
+        "include_in_app": "",
+        "component_type": "camera",
         "component_id": "camera-qsi-532-wsg-169",
         "manufacturer": "QSI",
         "manufacturer_raw": "QSI",
@@ -27561,8 +27587,8 @@
         "manufacturer": "QHY",
         "optical_tube_rows": 0,
         "lens_rows": 1,
-        "camera_rows": 51,
-        "total_rows": 52,
+        "camera_rows": 52,
+        "total_rows": 53,
         "raw_variants": "QHY"
       },
       {
