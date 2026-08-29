@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "astrophotographyEquipmentSanitizedCatalog",
-  "packageVersion": "astrophotography-equipment-sanitized-catalog-v1-2026-08-19",
-  "generatedAt": "2026-08-19T21:37:34Z",
+  "packageVersion": "astrophotography-equipment-sanitized-catalog-v1-2026-08-29",
+  "generatedAt": "2026-08-29T20:58:17Z",
   "source": {
     "name": "AstroGuide rendered Telescope Workshop equipment catalog",
     "generatedBy": "astroguide-metadata equipment package builder",
@@ -26,8 +26,8 @@
     "generatedAt": "2026-06-23T18:53:11Z",
     "counts": {
       "opticalComponents": 835,
-      "cameraComponents": 336,
-      "totalComponents": 1171
+      "cameraComponents": 337,
+      "totalComponents": 1172
     },
     "opticalManufacturers": [
       "Acuter",
@@ -19385,6 +19385,27 @@
         "source_attribution": "Astronomy.Tools Field of View calculator equipment data; used with permission, credit required.",
         "source_confidence": "source_calculator_option",
         "pixel_size_um": 3.75
+      },
+      {
+        "component_id": "camera-qhy-minicam8-imx585-official",
+        "component_type": "camera",
+        "manufacturer": "QHY",
+        "model": "miniCAM8 (IMX585)",
+        "display_name": "QHY miniCAM8 (IMX585)",
+        "sensor_model": "Sony IMX585",
+        "pixel_size_width_um": 2.9,
+        "pixel_size_height_um": 2.9,
+        "horizontal_resolution_px": 3856,
+        "vertical_resolution_px": 2180,
+        "sensor_width_mm": 11.182,
+        "sensor_height_mm": 6.322,
+        "sensor_diagonal_mm": 12.845,
+        "source_id": "minicam8-imx585",
+        "source_label": "QHY - miniCAM8 (IMX585)",
+        "source_url": "https://www.qhyccd.com/minicam8-imx585/",
+        "source_attribution": "QHYCCD official miniCAM8 (IMX585) product page.",
+        "source_confidence": "official_product_page",
+        "pixel_size_um": 2.9
       },
       {
         "component_id": "camera-qsi-532-wsg-169",
