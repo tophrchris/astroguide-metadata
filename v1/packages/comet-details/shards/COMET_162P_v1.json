@@ -3,13 +3,13 @@
   "packageFamily": "cometDetailMetadata",
   "packageVersion": "comet-detail-metadata-v1-20260830-aerith",
   "packageRole": "comet",
-  "shardID": "COMET_235P",
+  "shardID": "COMET_162P",
   "record": {
-    "stableID": "COMET:235P",
-    "designation": "235P",
-    "displayName": "235P/LINEAR",
-    "aerithName": "235P/LINEAR",
-    "detailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+    "stableID": "COMET:162P",
+    "designation": "162P",
+    "displayName": "162P/Siding Spring",
+    "aerithName": "162P/Siding Spring",
+    "detailURL": "http://www.aerith.net/comet/catalog/0162P/2026.html",
     "generatedAt": "2026-08-30T17:16:49Z",
     "visibilitySummary": {
       "state": "notCurrentlyUseful",
@@ -18,11 +18,11 @@
       "usefulMagnitudeLimit": 16.0,
       "aerithCurrentDate": "2026-08-29",
       "aerithNextUsefulDate": null,
-      "aerithCurrentMagnitude": 18.0,
+      "aerithCurrentMagnitude": 17.8,
       "aerithNextMagnitude": null,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 38.0,
-        "south": 65.0
+        "north": 21.0,
+        "south": -10.0
       },
       "nextBestAltitudeDegreesByHemisphere": {},
       "futureUsefulStartDate": null,
@@ -39,21 +39,21 @@
       "sampleCount": 731,
       "referenceDate": "2026-08-29",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 18.435,
+      "currentMagnitudeEstimate": 18.128,
       "currentSampleDate": "2026-08-29",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
       "daysUntilUsefulStart": null,
       "daysUntilUsefulEnd": null,
-      "brightestMagnitude": 16.812,
+      "brightestMagnitude": 17.691,
       "brightestDate": "2026-07-12",
-      "faintestMagnitude": 23.196,
+      "faintestMagnitude": 20.848,
       "faintestDate": "2027-07-12"
     },
     "classification": {
       "orbitalFamily": "jupiter_family",
-      "inclinationClass": "low_inclination",
+      "inclinationClass": "moderate_inclination",
       "returnStatus": "returning",
       "source": {
         "orbitClass": "Periodic Comet",
@@ -63,7 +63,7 @@
     "source": {
       "name": "Aerith / Seiichi Yoshida",
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-      "detailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+      "detailURL": "http://www.aerith.net/comet/catalog/0162P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
       "generatedAt": "2026-08-30T17:16:49Z",
       "permissionReceived": "2026-08-15"
@@ -71,95 +71,95 @@
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
-        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
-        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
-        "cachedPath": "v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
-        "originalURL": "http://www.aerith.net/pictures/jager/s/235P20260510UT0050sec18x60webnew.jpg",
-        "sourceURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
-        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_162p_e2e251aa1d37.gif",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_162p_e2e251aa1d37.gif",
+        "cachedPath": "v1/assets/comets/aerith/comet_162p_e2e251aa1d37.gif",
+        "originalURL": "http://www.aerith.net/icon/pr_star.gif",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0162P/2026.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0162P/2026.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
-        "byteSize": 9040,
-        "checksum": "dd433beab5d33598efa1eab5fe7a152b13d0e8dc36c12d52a8e1bfa941d273dd"
+        "byteSize": 974,
+        "checksum": "e2e251aa1d370f9296dbe3aaa630d5814eacd04a36b8495bdce77f1f054f83a3"
       },
       "hero": {
         "kind": "hero",
-        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
-        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
-        "cachedPath": "v1/assets/comets/aerith/comet_235p_dd433beab5d3.jpg",
-        "originalURL": "http://www.aerith.net/pictures/jager/s/235P20260510UT0050sec18x60webnew.jpg",
-        "sourceURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
-        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_162p_e2e251aa1d37.gif",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_162p_e2e251aa1d37.gif",
+        "cachedPath": "v1/assets/comets/aerith/comet_162p_e2e251aa1d37.gif",
+        "originalURL": "http://www.aerith.net/icon/pr_star.gif",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0162P/2026.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0162P/2026.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
-        "byteSize": 9040,
-        "checksum": "dd433beab5d33598efa1eab5fe7a152b13d0e8dc36c12d52a8e1bfa941d273dd"
+        "byteSize": 974,
+        "checksum": "e2e251aa1d370f9296dbe3aaa630d5814eacd04a36b8495bdce77f1f054f83a3"
       }
     },
     "brightness": [
       {
-        "id": "235P-2026-08-15-report-1",
-        "date": "2026-08-15",
-        "magnitude": 17.1,
+        "id": "162P-2026-08-09-report-1",
+        "date": "2026-08-09",
+        "magnitude": 17.4,
         "qualifier": "reported",
         "estimateKind": "reported",
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
-        "sourceURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
-        "commentary": "It became brighter than expected. It was observed at 13 mag from winter to spring. Now it is 17.1 mag (Aug. 15, Andrew Pearce). It will fade out rapidly after this. In the Southern Hemisphere, it stays observable in good condition. It may be brighter than this ephemeris still now."
+        "sourceURL": "http://www.aerith.net/comet/catalog/0162P/2026.html",
+        "commentary": "Now it is 17.4 mag (Aug. 9, Alfons Diepvens). It stays 18 mag for a while. In the Northern Hemisphere, it will be getting higher gradually. In the Southern Hemisphere, it will never be observable after this."
       },
       {
-        "id": "235P-2026-08-29-north-weekly-1",
+        "id": "162P-2026-08-29-north-weekly-1",
         "date": "2026-08-29",
-        "magnitude": 18.0,
+        "magnitude": 17.8,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.9
+        "magnitudeDelta": 0.4
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-08-15",
+      "availableStartDate": "2026-08-09",
       "availableEndDate": "2026-08-29",
-      "actualDaySpan": 14,
+      "actualDaySpan": 20,
       "pointCount": 2,
       "containsProjection": false,
       "containsReportedObservation": true,
       "points": [
         {
-          "id": "235P-2026-08-15-report-1",
-          "date": "2026-08-15",
-          "magnitude": 17.1,
+          "id": "162P-2026-08-09-report-1",
+          "date": "2026-08-09",
+          "magnitude": 17.4,
           "qualifier": "reported",
           "estimateKind": "reported",
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
-          "sourceURL": "http://www.aerith.net/comet/catalog/0235P/2025.html",
-          "commentary": "It became brighter than expected. It was observed at 13 mag from winter to spring. Now it is 17.1 mag (Aug. 15, Andrew Pearce). It will fade out rapidly after this. In the Southern Hemisphere, it stays observable in good condition. It may be brighter than this ephemeris still now."
+          "sourceURL": "http://www.aerith.net/comet/catalog/0162P/2026.html",
+          "commentary": "Now it is 17.4 mag (Aug. 9, Alfons Diepvens). It stays 18 mag for a while. In the Northern Hemisphere, it will be getting higher gradually. In the Southern Hemisphere, it will never be observable after this."
         },
         {
-          "id": "235P-2026-08-29-north-weekly-1",
+          "id": "162P-2026-08-29-north-weekly-1",
           "date": "2026-08-29",
-          "magnitude": 18.0,
+          "magnitude": 17.8,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.9
+          "magnitudeDelta": 0.4
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 18.0,
+      "currentMagnitude": 17.8,
       "currentDate": "2026-08-29",
-      "currentPointID": "235P-2026-08-29-north-weekly-1",
-      "comparisonMagnitude": 17.1,
-      "comparisonDate": "2026-08-15",
-      "comparisonPointID": "235P-2026-08-15-report-1",
-      "comparisonWindowDays": 14,
-      "deltaMagnitude": 0.9,
+      "currentPointID": "162P-2026-08-29-north-weekly-1",
+      "comparisonMagnitude": 17.4,
+      "comparisonDate": "2026-08-09",
+      "comparisonPointID": "162P-2026-08-09-report-1",
+      "comparisonWindowDays": 20,
+      "deltaMagnitude": 0.4,
       "direction": "fading",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,

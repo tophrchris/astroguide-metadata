@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260816-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260830-aerith",
   "packageRole": "comet",
   "shardID": "COMET_65P",
   "record": {
@@ -10,24 +10,21 @@
     "displayName": "65P/Gunn",
     "aerithName": "65P/Gunn",
     "detailURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
-    "generatedAt": "2026-08-16T17:42:20Z",
+    "generatedAt": "2026-08-30T17:16:49Z",
     "visibilitySummary": {
       "state": "notCurrentlyUseful",
-      "referenceDate": "2026-08-15",
+      "referenceDate": "2026-08-29",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-08-15",
+      "aerithCurrentDate": "2026-08-29",
       "aerithNextUsefulDate": null,
       "aerithCurrentMagnitude": 16.7,
-      "aerithNextMagnitude": 16.7,
+      "aerithNextMagnitude": null,
       "currentBestAltitudeDegreesByHemisphere": {
         "north": 49.0,
         "south": 61.0
       },
-      "nextBestAltitudeDegreesByHemisphere": {
-        "north": 49.0,
-        "south": 61.0
-      },
+      "nextBestAltitudeDegreesByHemisphere": {},
       "futureUsefulStartDate": null,
       "futureUsefulEndDate": null,
       "daysUntilFutureUsefulStart": null,
@@ -40,10 +37,10 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-08-15",
+      "referenceDate": "2026-08-29",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 16.7,
-      "currentSampleDate": "2026-08-15",
+      "currentMagnitudeEstimate": 17.322,
+      "currentSampleDate": "2026-08-29",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
@@ -68,7 +65,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-16T17:42:20Z",
+      "generatedAt": "2026-08-30T17:16:49Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -99,103 +96,81 @@
     },
     "brightness": [
       {
-        "id": "65P-2026-07-10-report-1",
-        "date": "2026-07-10",
-        "magnitude": 18.4,
+        "id": "65P-2026-08-13-report-1",
+        "date": "2026-08-13",
+        "magnitude": 17.9,
         "qualifier": "reported",
         "estimateKind": "reported",
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
-        "commentary": "Now it is 18.4 mag (July 10, W. Hasubick). It stays 17 mag for a while. It stays observable in good condition."
+        "commentary": "Now it is 17.9 mag (Aug. 13, Andrew Pearce). Fading slowly. It stays observable in good condition."
       },
       {
-        "id": "65P-2026-08-15-north-weekly-1",
-        "date": "2026-08-15",
+        "id": "65P-2026-08-29-north-weekly-1",
+        "date": "2026-08-29",
         "magnitude": 16.7,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -1.7,
+        "magnitudeDelta": -1.2,
         "isSignificant": true,
         "significanceKind": "outburst",
-        "interpretation": "Brightened 1.7 mag between Aerith magnitude reports or estimates."
-      },
-      {
-        "id": "65P-2026-08-22-north-weekly-2",
-        "date": "2026-08-22",
-        "magnitude": 16.7,
-        "qualifier": "weekly-estimate",
-        "estimateKind": "projection",
-        "isProjection": true,
-        "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.0
+        "interpretation": "Brightened 1.2 mag between Aerith magnitude reports or estimates."
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-07-10",
-      "availableEndDate": "2026-08-22",
-      "actualDaySpan": 43,
-      "pointCount": 3,
-      "containsProjection": true,
+      "availableStartDate": "2026-08-13",
+      "availableEndDate": "2026-08-29",
+      "actualDaySpan": 16,
+      "pointCount": 2,
+      "containsProjection": false,
       "containsReportedObservation": true,
       "points": [
         {
-          "id": "65P-2026-07-10-report-1",
-          "date": "2026-07-10",
-          "magnitude": 18.4,
+          "id": "65P-2026-08-13-report-1",
+          "date": "2026-08-13",
+          "magnitude": 17.9,
           "qualifier": "reported",
           "estimateKind": "reported",
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
           "sourceURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
-          "commentary": "Now it is 18.4 mag (July 10, W. Hasubick). It stays 17 mag for a while. It stays observable in good condition."
+          "commentary": "Now it is 17.9 mag (Aug. 13, Andrew Pearce). Fading slowly. It stays observable in good condition."
         },
         {
-          "id": "65P-2026-08-15-north-weekly-1",
-          "date": "2026-08-15",
+          "id": "65P-2026-08-29-north-weekly-1",
+          "date": "2026-08-29",
           "magnitude": 16.7,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": -1.7,
+          "magnitudeDelta": -1.2,
           "isSignificant": true,
           "significanceKind": "outburst",
-          "interpretation": "Brightened 1.7 mag between Aerith magnitude reports or estimates."
-        },
-        {
-          "id": "65P-2026-08-22-north-weekly-2",
-          "date": "2026-08-22",
-          "magnitude": 16.7,
-          "qualifier": "weekly-estimate",
-          "estimateKind": "projection",
-          "isProjection": true,
-          "sourceLabel": "Aerith weekly bright-comet table (north)",
-          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.0
+          "interpretation": "Brightened 1.2 mag between Aerith magnitude reports or estimates."
         }
       ]
     },
     "brightnessTrend": {
       "currentMagnitude": 16.7,
-      "currentDate": "2026-08-22",
-      "currentPointID": "65P-2026-08-22-north-weekly-2",
-      "comparisonMagnitude": 16.7,
-      "comparisonDate": "2026-08-15",
-      "comparisonPointID": "65P-2026-08-15-north-weekly-1",
-      "comparisonWindowDays": 7,
-      "deltaMagnitude": 0.0,
-      "direction": "stable",
-      "isNotable": false,
+      "currentDate": "2026-08-29",
+      "currentPointID": "65P-2026-08-29-north-weekly-1",
+      "comparisonMagnitude": 17.9,
+      "comparisonDate": "2026-08-13",
+      "comparisonPointID": "65P-2026-08-13-report-1",
+      "comparisonWindowDays": 16,
+      "deltaMagnitude": -1.2,
+      "direction": "brightening",
+      "isNotable": true,
       "notableChangeThresholdMagnitude": 1.0,
       "notableObservationIDs": [
-        "65P-2026-08-15-north-weekly-1"
+        "65P-2026-08-29-north-weekly-1"
       ]
     }
   }
