@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260816-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260830-aerith",
   "packageRole": "comet",
   "shardID": "COMET_88P",
   "record": {
@@ -10,28 +10,25 @@
     "displayName": "88P/Howell",
     "aerithName": "88P/Howell",
     "detailURL": "http://www.aerith.net/comet/catalog/0088P/2026.html",
-    "generatedAt": "2026-08-16T17:42:20Z",
+    "generatedAt": "2026-08-30T17:16:49Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-08-15",
+      "referenceDate": "2026-08-29",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-08-15",
-      "aerithNextUsefulDate": "2026-08-22",
-      "aerithCurrentMagnitude": 12.6,
-      "aerithNextMagnitude": 12.7,
+      "aerithCurrentDate": "2026-08-29",
+      "aerithNextUsefulDate": null,
+      "aerithCurrentMagnitude": 12.9,
+      "aerithNextMagnitude": null,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 58.0,
-        "south": 41.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
-        "north": 63.0,
+        "north": 67.0,
         "south": 40.0
       },
-      "futureUsefulStartDate": "2026-08-15",
-      "futureUsefulEndDate": "2026-08-23",
-      "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 8
+      "nextBestAltitudeDegreesByHemisphere": {},
+      "futureUsefulStartDate": null,
+      "futureUsefulEndDate": null,
+      "daysUntilFutureUsefulStart": null,
+      "daysUntilFutureUsefulEnd": null
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +37,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-08-15",
+      "referenceDate": "2026-08-29",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 12.6,
-      "currentSampleDate": "2026-08-15",
-      "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-08-15",
-      "lastFutureUsefulDate": "2026-08-23",
-      "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 8,
+      "currentMagnitudeEstimate": 16.044,
+      "currentSampleDate": "2026-08-29",
+      "currentSampleStatus": "tooFaint",
+      "firstFutureUsefulDate": null,
+      "lastFutureUsefulDate": null,
+      "daysUntilUsefulStart": null,
+      "daysUntilUsefulEnd": null,
       "brightestMagnitude": 12.4,
       "brightestDate": "2026-08-08",
       "faintestMagnitude": 20.995,
@@ -68,7 +65,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0088P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-16T17:42:20Z",
+      "generatedAt": "2026-08-30T17:16:49Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -112,35 +109,24 @@
         "significanceKind": "outburst"
       },
       {
-        "id": "88P-2026-08-15-north-weekly-1",
-        "date": "2026-08-15",
-        "magnitude": 12.6,
+        "id": "88P-2026-08-29-north-weekly-1",
+        "date": "2026-08-29",
+        "magnitude": 12.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -0.1
-      },
-      {
-        "id": "88P-2026-08-22-north-weekly-2",
-        "date": "2026-08-22",
-        "magnitude": 12.7,
-        "qualifier": "weekly-estimate",
-        "estimateKind": "projection",
-        "isProjection": true,
-        "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.1
+        "magnitudeDelta": 0.2
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
       "availableStartDate": "2026-08-09",
-      "availableEndDate": "2026-08-22",
-      "actualDaySpan": 13,
-      "pointCount": 3,
-      "containsProjection": true,
+      "availableEndDate": "2026-08-29",
+      "actualDaySpan": 20,
+      "pointCount": 2,
+      "containsProjection": false,
       "containsReportedObservation": true,
       "points": [
         {
@@ -157,38 +143,27 @@
           "significanceKind": "outburst"
         },
         {
-          "id": "88P-2026-08-15-north-weekly-1",
-          "date": "2026-08-15",
-          "magnitude": 12.6,
+          "id": "88P-2026-08-29-north-weekly-1",
+          "date": "2026-08-29",
+          "magnitude": 12.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": -0.1
-        },
-        {
-          "id": "88P-2026-08-22-north-weekly-2",
-          "date": "2026-08-22",
-          "magnitude": 12.7,
-          "qualifier": "weekly-estimate",
-          "estimateKind": "projection",
-          "isProjection": true,
-          "sourceLabel": "Aerith weekly bright-comet table (north)",
-          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.1
+          "magnitudeDelta": 0.2
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 12.7,
-      "currentDate": "2026-08-22",
-      "currentPointID": "88P-2026-08-22-north-weekly-2",
-      "comparisonMagnitude": 12.6,
-      "comparisonDate": "2026-08-15",
-      "comparisonPointID": "88P-2026-08-15-north-weekly-1",
-      "comparisonWindowDays": 7,
-      "deltaMagnitude": 0.1,
+      "currentMagnitude": 12.9,
+      "currentDate": "2026-08-29",
+      "currentPointID": "88P-2026-08-29-north-weekly-1",
+      "comparisonMagnitude": 12.7,
+      "comparisonDate": "2026-08-09",
+      "comparisonPointID": "88P-2026-08-09-report-1",
+      "comparisonWindowDays": 20,
+      "deltaMagnitude": 0.2,
       "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,

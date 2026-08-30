@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260816-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260830-aerith",
   "packageRole": "comet",
   "shardID": "COMET_10P",
   "record": {
@@ -10,28 +10,25 @@
     "displayName": "10P/Tempel",
     "aerithName": "10P/Tempel 2",
     "detailURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
-    "generatedAt": "2026-08-16T17:42:20Z",
+    "generatedAt": "2026-08-30T17:16:49Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-08-15",
+      "referenceDate": "2026-08-29",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-08-15",
-      "aerithNextUsefulDate": "2026-08-22",
-      "aerithCurrentMagnitude": 8.1,
-      "aerithNextMagnitude": 8.2,
+      "aerithCurrentDate": "2026-08-29",
+      "aerithNextUsefulDate": null,
+      "aerithCurrentMagnitude": 8.4,
+      "aerithNextMagnitude": null,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 25.0,
-        "south": 85.0
+        "north": 21.0,
+        "south": 89.0
       },
-      "nextBestAltitudeDegreesByHemisphere": {
-        "north": 23.0,
-        "south": 87.0
-      },
-      "futureUsefulStartDate": "2026-08-15",
+      "nextBestAltitudeDegreesByHemisphere": {},
+      "futureUsefulStartDate": "2026-08-29",
       "futureUsefulEndDate": "2026-11-19",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 96
+      "daysUntilFutureUsefulEnd": 82
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +37,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-08-15",
+      "referenceDate": "2026-08-29",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 8.1,
-      "currentSampleDate": "2026-08-15",
+      "currentMagnitudeEstimate": 13.416,
+      "currentSampleDate": "2026-08-29",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-08-15",
+      "firstFutureUsefulDate": "2026-08-29",
       "lastFutureUsefulDate": "2026-11-19",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 96,
+      "daysUntilUsefulEnd": 82,
       "brightestMagnitude": 8.0,
       "brightestDate": "2026-08-08",
       "faintestMagnitude": 20.017,
@@ -68,123 +65,101 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-16T17:42:20Z",
+      "generatedAt": "2026-08-30T17:16:49Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
-        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_10p_9b0729d59505.jpg",
-        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_10p_9b0729d59505.jpg",
-        "cachedPath": "v1/assets/comets/aerith/comet_10p_9b0729d59505.jpg",
-        "originalURL": "http://www.aerith.net/pictures/jager/s/10P20260616UT0040sec18x180_2.jpg",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_10p_d9196808045e.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_10p_d9196808045e.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_10p_d9196808045e.jpg",
+        "originalURL": "http://www.aerith.net/pictures/jager/s/10P20260720UT2342secLRGBweb.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
         "aerithDetailURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
-        "byteSize": 7466,
-        "checksum": "9b0729d59505e7af9611cd0371ab855cd068a5c1a90447723a03225c1e643e06"
+        "byteSize": 7356,
+        "checksum": "d9196808045e13eab07b610dda3b1f7ac17a205f631c822900b5128006f3cb0b"
       },
       "hero": {
         "kind": "hero",
-        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_10p_9b0729d59505.jpg",
-        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_10p_9b0729d59505.jpg",
-        "cachedPath": "v1/assets/comets/aerith/comet_10p_9b0729d59505.jpg",
-        "originalURL": "http://www.aerith.net/pictures/jager/s/10P20260616UT0040sec18x180_2.jpg",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_10p_d9196808045e.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_10p_d9196808045e.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_10p_d9196808045e.jpg",
+        "originalURL": "http://www.aerith.net/pictures/jager/s/10P20260720UT2342secLRGBweb.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
         "aerithDetailURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
-        "byteSize": 7466,
-        "checksum": "9b0729d59505e7af9611cd0371ab855cd068a5c1a90447723a03225c1e643e06"
+        "byteSize": 7356,
+        "checksum": "d9196808045e13eab07b610dda3b1f7ac17a205f631c822900b5128006f3cb0b"
       }
     },
     "brightness": [
       {
-        "id": "10P-2026-08-11-report-1",
-        "date": "2026-08-11",
-        "magnitude": 7.5,
+        "id": "10P-2026-08-28-report-1",
+        "date": "2026-08-28",
+        "magnitude": 8.2,
         "qualifier": "reported",
         "estimateKind": "reported",
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
-        "commentary": "Now it is 7.5 mag (Aug. 11, Chris Wyatt). It will fade out rapidly after this. It locates somewhat low in the Northern Hemisphere. But it will become high in autumn. In the Southern Hemisphere, it stays observable in good condition."
+        "commentary": "Now it is 8.2 mag (Aug. 28, Marco Goiato). It will fade out rapidly after this. It locates somewhat low in the Northern Hemisphere. But it will become high in autumn. In the Southern Hemisphere, it stays observable in good condition."
       },
       {
-        "id": "10P-2026-08-15-north-weekly-1",
-        "date": "2026-08-15",
-        "magnitude": 8.1,
+        "id": "10P-2026-08-29-north-weekly-1",
+        "date": "2026-08-29",
+        "magnitude": 8.4,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.6
-      },
-      {
-        "id": "10P-2026-08-22-north-weekly-2",
-        "date": "2026-08-22",
-        "magnitude": 8.2,
-        "qualifier": "weekly-estimate",
-        "estimateKind": "projection",
-        "isProjection": true,
-        "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.1
+        "magnitudeDelta": 0.2
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-08-11",
-      "availableEndDate": "2026-08-22",
-      "actualDaySpan": 11,
-      "pointCount": 3,
-      "containsProjection": true,
+      "availableStartDate": "2026-08-28",
+      "availableEndDate": "2026-08-29",
+      "actualDaySpan": 1,
+      "pointCount": 2,
+      "containsProjection": false,
       "containsReportedObservation": true,
       "points": [
         {
-          "id": "10P-2026-08-11-report-1",
-          "date": "2026-08-11",
-          "magnitude": 7.5,
+          "id": "10P-2026-08-28-report-1",
+          "date": "2026-08-28",
+          "magnitude": 8.2,
           "qualifier": "reported",
           "estimateKind": "reported",
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
           "sourceURL": "http://www.aerith.net/comet/catalog/0010P/2026.html",
-          "commentary": "Now it is 7.5 mag (Aug. 11, Chris Wyatt). It will fade out rapidly after this. It locates somewhat low in the Northern Hemisphere. But it will become high in autumn. In the Southern Hemisphere, it stays observable in good condition."
+          "commentary": "Now it is 8.2 mag (Aug. 28, Marco Goiato). It will fade out rapidly after this. It locates somewhat low in the Northern Hemisphere. But it will become high in autumn. In the Southern Hemisphere, it stays observable in good condition."
         },
         {
-          "id": "10P-2026-08-15-north-weekly-1",
-          "date": "2026-08-15",
-          "magnitude": 8.1,
+          "id": "10P-2026-08-29-north-weekly-1",
+          "date": "2026-08-29",
+          "magnitude": 8.4,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.6
-        },
-        {
-          "id": "10P-2026-08-22-north-weekly-2",
-          "date": "2026-08-22",
-          "magnitude": 8.2,
-          "qualifier": "weekly-estimate",
-          "estimateKind": "projection",
-          "isProjection": true,
-          "sourceLabel": "Aerith weekly bright-comet table (north)",
-          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.1
+          "magnitudeDelta": 0.2
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 8.2,
-      "currentDate": "2026-08-22",
-      "currentPointID": "10P-2026-08-22-north-weekly-2",
-      "comparisonMagnitude": 8.1,
-      "comparisonDate": "2026-08-15",
-      "comparisonPointID": "10P-2026-08-15-north-weekly-1",
-      "comparisonWindowDays": 7,
-      "deltaMagnitude": 0.1,
+      "currentMagnitude": 8.4,
+      "currentDate": "2026-08-29",
+      "currentPointID": "10P-2026-08-29-north-weekly-1",
+      "comparisonMagnitude": 8.2,
+      "comparisonDate": "2026-08-28",
+      "comparisonPointID": "10P-2026-08-28-report-1",
+      "comparisonWindowDays": 1,
+      "deltaMagnitude": 0.2,
       "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
