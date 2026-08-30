@@ -50,6 +50,30 @@ https://metadata.astroguide.space/v1/channels/stable/manifest.json
 
 Package entries include schema, family, package version, checksum, byte size, app compatibility, cache TTL, and fallback notes. The app validates package descriptors and payload envelopes before caching remote data.
 
+## Scheduled Refresh Workflows
+
+Generated metadata refreshes run as review-first GitHub Actions. Scheduled jobs
+do not publish directly to the stable channel; they regenerate package files,
+validate them, and open or update a pull request for review.
+
+- `update-aerith-comet-metadata.yml` refreshes comet detail metadata weekly.
+- `update-telescope-reference-prices.yml` refreshes telescope reference prices weekly.
+- `update-close-encounter-metadata.yml` refreshes lunar, planet-target, and
+  comet close-encounter packages monthly from the checked-in iOS catalog and
+  comet snapshot.
+
+The close-encounter workflow checks out `tophrchris/DSOPlanneriOS` beside this
+repository so generators can read the app catalog. If the default workflow
+token cannot read that repository, configure a `DSOPLANNERIOS_READ_TOKEN`
+repository secret with read-only access.
+
+The close-encounter workflow covers the systematic Dynamic to Static and
+Dynamic to Dynamic event families currently modeled by AstroGuide: Moon/DSO,
+Moon/planet, Moon/comet, planet/DSO, comet/DSO, comet/Moon, and comet/planet.
+It intentionally skips DSO/DSO pairings because catalog targets are static, and
+it does not harvest new comet inputs; the comet snapshot package should be
+reviewed separately.
+
 ## Rebuilding Target Metadata Packages
 
 Target metadata overlay and neighborhood packages are generated from the app's bundled target metadata resources:
