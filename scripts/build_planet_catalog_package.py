@@ -16,12 +16,22 @@ PACKAGE_PATH = Path("v1/packages/planet-catalog/planet_catalog_v1.json")
 FAMILY_ORDER = [
     "targetMetadataOverlay",
     "targetNeighborhoodDefinitions",
+    "targetImageAssets",
     "equipmentCatalog",
-    "darkSkyPlaces",
     "astrophotographyEquipmentCatalog",
+    "astrophotographyEquipmentSanitizedCatalog",
+    "telescopeReferencePrices",
+    "darkSkyPlaces",
     "cometSnapshot",
+    "cometOrbitGeometry",
+    "cometDetailMetadata",
     "planetCatalog",
+    "lunarEvents",
+    "fullMoonNameAliases",
+    "planetTargetCloseEncounters",
+    "cometCloseEncounters",
     "seasonalRecommendationCandidates",
+    "transientEventFeed",
 ]
 LATITUDE_BAND_ORDER = [
     "north_high_60_90n",

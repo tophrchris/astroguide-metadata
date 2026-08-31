@@ -23,9 +23,11 @@ SANITIZED_ASTROPHOTOGRAPHY_PACKAGE_PATH = Path(
 FAMILY_ORDER = [
     "targetMetadataOverlay",
     "targetNeighborhoodDefinitions",
+    "targetImageAssets",
     "equipmentCatalog",
     "astrophotographyEquipmentCatalog",
     "astrophotographyEquipmentSanitizedCatalog",
+    "telescopeReferencePrices",
     "darkSkyPlaces",
     "cometSnapshot",
     "cometOrbitGeometry",
@@ -36,6 +38,7 @@ FAMILY_ORDER = [
     "planetTargetCloseEncounters",
     "cometCloseEncounters",
     "seasonalRecommendationCandidates",
+    "transientEventFeed",
 ]
 LATITUDE_BAND_ORDER = [
     "north_high_60_90n",

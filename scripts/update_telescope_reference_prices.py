@@ -84,7 +84,7 @@ FAMILY_ORDER = [
     "equipmentCatalog",
     "astrophotographyEquipmentCatalog",
     "astrophotographyEquipmentSanitizedCatalog",
-    PACKAGE_FAMILY,
+    "telescopeReferencePrices",
     "darkSkyPlaces",
     "cometSnapshot",
     "cometOrbitGeometry",
@@ -95,6 +95,7 @@ FAMILY_ORDER = [
     "planetTargetCloseEncounters",
     "cometCloseEncounters",
     "seasonalRecommendationCandidates",
+    "transientEventFeed",
 ]
 LATITUDE_BAND_ORDER = [
     "north_high_60_90n",
