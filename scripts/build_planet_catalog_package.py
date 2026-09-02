@@ -21,6 +21,7 @@ FAMILY_ORDER = [
     "astrophotographyEquipmentCatalog",
     "astrophotographyEquipmentSanitizedCatalog",
     "telescopeReferencePrices",
+    "telescopeOfficialProductLinks",
     "darkSkyPlaces",
     "cometSnapshot",
     "cometOrbitGeometry",

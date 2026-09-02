@@ -173,6 +173,21 @@ The contract, qualification policy, source/compliance decisions, freshness
 rules, override examples, and operational runbook are in
 [`docs/telescope-reference-prices-v1.md`](docs/telescope-reference-prices-v1.md).
 
+## Telescope Official Product Links
+
+The optional `telescopeOfficialProductLinks` package keeps official
+manufacturer and brand-owner product pages separate from the equipment and
+reference-price catalogs. Records join only by canonical `equipment_id`; a
+missing page remains an explicit `null`, and consumers hide the link instead
+of substituting a retailer or guessing a URL.
+
+The initial artifact is the reviewed output of a one-time pass across the top
+ten manufacturers in the portfolio's backyard-market projection plus the
+canonical smart-telescope profiles. No crawler or recurring collection job is
+included. The contract, scope, collection rules, and coverage limitations are
+documented in
+[`docs/telescope-official-product-links-v1.md`](docs/telescope-official-product-links-v1.md).
+
 ## Rebuilding Planet Catalog Packages
 
 The planet catalog package is generated from the app's bundled dynamic metadata snapshot:
