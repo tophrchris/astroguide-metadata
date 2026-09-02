@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "mount-kobau-star-party",
+  "displayName": "Mount Kobau Star Party",
+  "description": "A high-altitude observing and imaging camp on Mount Kobau in British Columbia, organized around dark nights at a public mountain summit site.",
+  "descriptionSources": [
+    {
+      "title": "Mount Kobau Star Party official site",
+      "url": "https://mksp.ca/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "03587ab2-6cef-5f04-bea9-96b0238024e4",
+    "name": "Mount Kobau summit",
+    "latitude": 49.113,
+    "longitude": -119.673333,
+    "elevationMeters": 1870,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Mount Kobau summit",
+    "locality": "Osoyoos",
+    "region": "British Columbia",
+    "countryCode": "CA",
+    "countryName": "Canada",
+    "timezone": "America/Vancouver",
+    "coordinateSource": {
+      "title": "Mount Kobau Star Party official map",
+      "url": "https://mksp.ca/home-2/mksp-map/",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://mksp.ca/"
+    },
+    {
+      "role": "map",
+      "url": "https://mksp.ca/home-2/mksp-map/"
+    }
+  ],
+  "events": [
+    {
+      "id": "mount-kobau-star-party-2027",
+      "name": "Mount Kobau Star Party 2027",
+      "start": "2027-07-31",
+      "end": "2027-08-08",
+      "status": "scheduled",
+      "url": "https://mksp.ca/",
+      "source": {
+        "title": "Mount Kobau Star Party official site",
+        "url": "https://mksp.ca/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

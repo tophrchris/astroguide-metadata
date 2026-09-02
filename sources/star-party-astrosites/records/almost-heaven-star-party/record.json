@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "almost-heaven-star-party",
+  "displayName": "Almost Heaven Star Party",
+  "description": "A high-elevation observing event at Spruce Knob Mountain Center in West Virginia, combining multi-night observing with astronomy talks and programs.",
+  "descriptionSources": [
+    {
+      "title": "Almost Heaven Star Party 2026",
+      "url": "https://www.ahsp.org/home-2026/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "748a23a5-5197-510e-88af-ddaab53dd7d8",
+    "name": "Spruce Knob Mountain Center main observing field",
+    "latitude": 38.676667,
+    "longitude": -79.567222,
+    "elevationMeters": 1341,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Spruce Knob Mountain Center main observing field",
+    "locality": "Circleville",
+    "region": "West Virginia",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/New_York",
+    "coordinateSource": {
+      "title": "Almost Heaven Star Party official FAQ",
+      "url": "https://www.ahsp.org/frequently-asked-questions/",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.ahsp.org/"
+    },
+    {
+      "role": "venueInformation",
+      "url": "https://www.ahsp.org/frequently-asked-questions/"
+    }
+  ],
+  "events": [
+    {
+      "id": "almost-heaven-star-party-2026",
+      "name": "Almost Heaven Star Party 2026",
+      "start": "2026-08-10",
+      "end": "2026-08-16",
+      "status": "completed",
+      "url": "https://www.ahsp.org/home-2026/",
+      "source": {
+        "title": "Almost Heaven Star Party 2026 official page",
+        "url": "https://www.ahsp.org/home-2026/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ],
+  "horizonResources": [
+    {
+      "id": "almost-heaven-entrance-to-green-lot-panorama",
+      "kind": "panorama",
+      "quality": "visual_panorama_only",
+      "disposition": "link_only_pending_permission",
+      "source": {
+        "title": "Panorama from the entrance area towards the Green Lot",
+        "pageURL": "https://www.ahsp.org/maps-and-directions/",
+        "resourceURL": "https://www.ahsp.org/wp-content/uploads/2013/03/Yellow-Field-Entrance.jpg",
+        "creator": null,
+        "verifiedAt": "2026-09-02"
+      },
+      "rights": {
+        "permissionStatus": "permission_required",
+        "licenseName": "All rights reserved",
+        "licenseURL": null,
+        "attribution": "Northern Virginia Astronomy Club / Almost Heaven Star Party website.",
+        "notes": "The public maps page links the image, but the site footer reserves rights and supplies no image-specific reuse license. Keep link-only unless NOVAC grants permission."
+      },
+      "calibration": {
+        "viewpointDescription": "Entrance area looking toward the Green Lot at Spruce Knob Mountain Center, rather than a verified camera point at the packaged main observing-field coordinate.",
+        "viewpointMatch": "approximate",
+        "northAzimuthOffsetDegrees": null,
+        "projectionType": "unknown_stitched",
+        "horizontalFieldOfViewDegrees": null,
+        "verticalFieldOfViewDegrees": null,
+        "verticalScale": "unknown",
+        "suitableForObstructionCalculations": false,
+        "notes": "The 17626-by-1336-pixel JPEG has no embedded heading, location, projection, field-of-view, or vertical-scale metadata. It is a visual venue reference only."
+      }
+    }
+  ]
+}

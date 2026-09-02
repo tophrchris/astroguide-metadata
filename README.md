@@ -26,6 +26,7 @@ v1/packages/equipment/astrophotography_equipment_catalog_v1.json
 v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json
 v1/packages/telescope-reference-prices/telescope_reference_prices_v1.json
 v1/packages/dark-sky-places/dark_sky_places_v1.json
+v1/packages/star-party-astrosites/star_party_astrosites_v1.json
 v1/packages/comets/comet_snapshot_v1.json
 v1/packages/comet-orbit-geometry/comet_orbit_geometry_v1.json
 v1/packages/planet-catalog/planet_catalog_v1.json
@@ -39,6 +40,7 @@ v1/packages/comet-close-encounters/shards/comet_close_encounters_YYYY_MM_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 sources/target-metadata-overlay/2026-05-curated-workbooks/
 sources/telescope-reference-prices/{config,estimates,overrides}.json
+sources/star-party-astrosites/records/{stable-id}/record.json
 reports/telescope-reference-prices/latest.json
 ```
 
@@ -187,6 +189,23 @@ canonical smart-telescope profiles. No crawler or recurring collection job is
 included. The contract, scope, collection rules, and coverage limitations are
 documented in
 [`docs/telescope-official-product-links-v1.md`](docs/telescope-official-product-links-v1.md).
+
+## Rebuilding Star Party AstroSites
+
+The optional `starPartyAstroSites` package is built from small, independently
+reviewable source records. Each record combines portable AstroSite venue fields
+with source-grounded descriptions, public-location provenance, official links,
+and concrete dated event instances:
+
+```bash
+python3 scripts/build_star_party_astrosite_package.py
+python3 scripts/build_star_party_astrosite_package.py --validate-only
+```
+
+This family is curator-maintained; no crawler or scheduled refresh is included.
+The schema, AstroSite compatibility boundary, add-an-entry workflow, initial
+coverage, privacy policy, and media-rights rules are documented in
+[`docs/star-party-astrosites-v1.md`](docs/star-party-astrosites-v1.md).
 
 ## Rebuilding Planet Catalog Packages
 

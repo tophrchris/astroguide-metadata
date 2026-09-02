@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "stellafane-convention",
+  "displayName": "Stellafane Convention",
+  "description": "The annual amateur telescope makers convention at historic Stellafane in Vermont, centered on telescope making, instrument judging, talks, and observing.",
+  "descriptionSources": [
+    {
+      "title": "Stellafane Convention official site",
+      "url": "https://stellafane.org/stellafane-main/convention/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "2552a489-5c94-551c-9a92-649522dbb842",
+    "name": "Stellafane on Breezy Hill",
+    "latitude": 43.278278,
+    "longitude": -72.519475,
+    "elevationMeters": 393,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Stellafane on Breezy Hill",
+    "locality": "Springfield",
+    "region": "Vermont",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/New_York",
+    "coordinateSource": {
+      "title": "Stellafane official directions",
+      "url": "https://stellafane.org/stellafane-main/about/directions.html",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "directions",
+      "url": "https://stellafane.org/stellafane-main/about/directions.html"
+    },
+    {
+      "role": "event",
+      "url": "https://stellafane.org/stellafane-main/convention/"
+    }
+  ],
+  "events": [
+    {
+      "id": "stellafane-convention-2027",
+      "name": "Stellafane Convention 2027",
+      "start": "2027-08-05",
+      "end": "2027-08-08",
+      "status": "scheduled",
+      "url": "https://stellafane.org/",
+      "source": {
+        "title": "Stellafane official site",
+        "url": "https://stellafane.org/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

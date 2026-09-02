@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "nebraska-star-party",
+  "displayName": "Nebraska Star Party",
+  "description": "An annual observing week on the south shore of Merritt Reservoir in Nebraska's Sandhills, including dark-sky observing and a beginner field school.",
+  "descriptionSources": [
+    {
+      "title": "Nebraska Star Party FAQ",
+      "url": "https://www.nebraskastarparty.org/faq/",
+      "verifiedAt": "2026-09-02"
+    },
+    {
+      "title": "Nebraska Star Party site information",
+      "url": "https://www.nebraskastarparty.org/site-information/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "a082d8ba-33d1-5e77-8dc3-9c2dcb4245c8",
+    "name": "Merritt Reservoir Snake Campground observing field",
+    "latitude": 42.6,
+    "longitude": -100.883333,
+    "elevationMeters": 910,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Merritt Reservoir Snake Campground observing field",
+    "locality": "Valentine",
+    "region": "Nebraska",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Chicago",
+    "coordinateSource": {
+      "title": "Nebraska Star Party official site information",
+      "url": "https://www.nebraskastarparty.org/site-information/",
+      "verifiedAt": "2026-09-02"
+    },
+    "relatedDarkSkyPlaceID": "darksky:merritt-reservoir-dark-sky-park"
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.nebraskastarparty.org/"
+    },
+    {
+      "role": "siteInformation",
+      "url": "https://www.nebraskastarparty.org/site-information/"
+    }
+  ],
+  "events": [
+    {
+      "id": "nebraska-star-party-2027",
+      "name": "Nebraska Star Party 2027",
+      "start": "2027-08-01",
+      "end": "2027-08-06",
+      "status": "scheduled",
+      "url": "https://www.nebraskastarparty.org/faq/",
+      "source": {
+        "title": "Nebraska Star Party official FAQ",
+        "url": "https://www.nebraskastarparty.org/faq/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

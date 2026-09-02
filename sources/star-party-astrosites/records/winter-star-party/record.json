@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "winter-star-party",
+  "displayName": "Winter Star Party",
+  "description": "An annual Florida Keys observing event at Camp Wesumkee and Camp Sawyer, offering southern-sky access for visual astronomy and imaging.",
+  "descriptionSources": [
+    {
+      "title": "Southern Cross Astronomical Society Winter Star Party",
+      "url": "https://www.scas.org/winter-star-party/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "2bc2a25f-a820-5ab1-a703-17f6c97365a1",
+    "name": "Camp Wesumkee and Camp Sawyer",
+    "latitude": 24.648173,
+    "longitude": -81.312974,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Camp Wesumkee and Camp Sawyer",
+    "locality": "Scout Key",
+    "region": "Florida",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/New_York",
+    "coordinateSource": {
+      "title": "Southern Cross Astronomical Society Winter Star Party venue map",
+      "url": "https://www.scas.org/winter-star-party/",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.scas.org/winter-star-party/"
+    },
+    {
+      "role": "organizer",
+      "url": "https://www.scas.org/"
+    }
+  ],
+  "events": [
+    {
+      "id": "winter-star-party-2027",
+      "name": "Winter Star Party 2027",
+      "start": "2027-02-01",
+      "end": "2027-02-07",
+      "status": "scheduled",
+      "url": "https://www.scas.org/winter-star-party/",
+      "source": {
+        "title": "Southern Cross Astronomical Society Winter Star Party",
+        "url": "https://www.scas.org/winter-star-party/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}
