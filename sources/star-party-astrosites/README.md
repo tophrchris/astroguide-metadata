@@ -15,7 +15,16 @@ To add or update an event:
    for the coordinates, every event date, and the short factual description.
 4. Store concrete dated event instances, not recurrence rules. Update status
    when a dated instance has passed or is cancelled.
-5. Run `python3 scripts/build_star_party_astrosite_package.py`, inspect the
+5. Add a `horizonResources` entry only when its exact viewpoint, azimuth/north
+   offset, projection, horizontal and vertical field of view, vertical scale,
+   provenance, and rights status can be stated explicitly. Unknown values must
+   remain unknown. Use `visual_panorama_only` unless the evidence supports a
+   calibrated obstruction profile.
+6. Cache a panorama only with an explicit redistribution license or permission.
+   Link-only research and permission-pending sources must not include an asset.
+   A calculation-ready `.hrz` must use azimuth/altitude degree pairs and declare
+   the `average` WIND16 aggregation used by AstroGuide.
+7. Run `python3 scripts/build_star_party_astrosite_package.py`, inspect the
    package and manifest diff, then run the validation command documented in the
    repository README.
 
@@ -28,3 +37,5 @@ Do not publish private observing-site coordinates. Media may be added only
 when redistribution rights are explicit; it must be cached under
 `v1/assets/star-party-astrosites/` with attribution, license, permission notes,
 and provenance in the source record. Never hotlink an event image or logo.
+The same rights rule applies to horizon panoramas; public availability alone is
+not permission to cache or redistribute an image.

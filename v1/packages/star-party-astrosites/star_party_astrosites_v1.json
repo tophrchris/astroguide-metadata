@@ -2,14 +2,17 @@
   "schemaVersion": 1,
   "packageFamily": "starPartyAstroSites",
   "packageVersion": "star-party-astrosites-v1-20260902",
-  "generatedAt": "2026-09-02T13:00:00Z",
+  "generatedAt": "2026-09-02T13:19:13Z",
   "scope": {
     "siteCount": 15,
     "eventCount": 19,
     "scheduledEventCount": 16,
     "completedEventCount": 3,
     "cancelledEventCount": 0,
-    "countryCount": 4
+    "countryCount": 4,
+    "horizonResourceCount": 3,
+    "cachedHorizonAssetCount": 1,
+    "obstructionProfileCount": 0
   },
   "starPartyAstroSites": [
     {
@@ -69,6 +72,39 @@
             "title": "Almost Heaven Star Party 2026 official page",
             "url": "https://www.ahsp.org/home-2026/",
             "verifiedAt": "2026-09-02"
+          }
+        }
+      ],
+      "horizonResources": [
+        {
+          "id": "almost-heaven-entrance-to-green-lot-panorama",
+          "kind": "panorama",
+          "quality": "visual_panorama_only",
+          "disposition": "link_only_pending_permission",
+          "source": {
+            "title": "Panorama from the entrance area towards the Green Lot",
+            "pageURL": "https://www.ahsp.org/maps-and-directions/",
+            "resourceURL": "https://www.ahsp.org/wp-content/uploads/2013/03/Yellow-Field-Entrance.jpg",
+            "creator": null,
+            "verifiedAt": "2026-09-02"
+          },
+          "rights": {
+            "permissionStatus": "permission_required",
+            "licenseName": "All rights reserved",
+            "licenseURL": null,
+            "attribution": "Northern Virginia Astronomy Club / Almost Heaven Star Party website.",
+            "notes": "The public maps page links the image, but the site footer reserves rights and supplies no image-specific reuse license. Keep link-only unless NOVAC grants permission."
+          },
+          "calibration": {
+            "viewpointDescription": "Entrance area looking toward the Green Lot at Spruce Knob Mountain Center, rather than a verified camera point at the packaged main observing-field coordinate.",
+            "viewpointMatch": "approximate",
+            "northAzimuthOffsetDegrees": null,
+            "projectionType": "unknown_stitched",
+            "horizontalFieldOfViewDegrees": null,
+            "verticalFieldOfViewDegrees": null,
+            "verticalScale": "unknown",
+            "suitableForObstructionCalculations": false,
+            "notes": "The 17626-by-1336-pixel JPEG has no embedded heading, location, projection, field-of-view, or vertical-scale metadata. It is a visual venue reference only."
           }
         }
       ]
@@ -158,6 +194,47 @@
             "title": "Cherry Springs Star Party official future dates",
             "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
             "verifiedAt": "2026-09-02"
+          }
+        }
+      ],
+      "horizonResources": [
+        {
+          "id": "cherry-springs-state-park-panorama-2009",
+          "kind": "panorama",
+          "quality": "visual_panorama_only",
+          "disposition": "cached_visual_reference",
+          "source": {
+            "title": "Cherry Springs State Park panorama",
+            "pageURL": "https://commons.wikimedia.org/wiki/File:Cherry_Springs_State_Park_panorama.jpg",
+            "resourceURL": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cherry_Springs_State_Park_panorama.jpg",
+            "creator": "Wikimedia Commons user Ruhrfisch",
+            "verifiedAt": "2026-09-02"
+          },
+          "rights": {
+            "permissionStatus": "licensed_for_redistribution",
+            "licenseName": "CC BY-SA 3.0",
+            "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "attribution": "Cherry Springs State Park panorama by Wikimedia Commons user Ruhrfisch, licensed CC BY-SA 3.0; resized by AstroGuide.",
+            "notes": "The creator offers the original under CC BY-SA 3.0 and GFDL. AstroGuide uses the CC BY-SA 3.0 option and identifies the cached resize as a modification."
+          },
+          "calibration": {
+            "viewpointDescription": "Unspecified camera point within Cherry Springs State Park; the image includes the Overnight Astronomy Observation Field and surrounding park features.",
+            "viewpointMatch": "approximate",
+            "northAzimuthOffsetDegrees": null,
+            "projectionType": "unknown_stitched",
+            "horizontalFieldOfViewDegrees": 340,
+            "verticalFieldOfViewDegrees": null,
+            "verticalScale": "unknown",
+            "suitableForObstructionCalculations": false,
+            "notes": "The source says Autostitch combined 13 horizontal photos into about 340 degrees, but supplies no camera coordinates, left-edge azimuth, projection model, or vertical scale. This is a visual reference, not an obstruction profile."
+          },
+          "asset": {
+            "path": "v1/assets/star-party-astrosites/cherry-springs-star-parties/cherry-springs-state-park-panorama-3840.jpg",
+            "sha256": "eb1dff9a0b82f4a62d8a351b323448d6a3df32d6b81a1affdb746f26d69595f9",
+            "byteSize": 446841,
+            "width": 3840,
+            "height": 281,
+            "derivativeNotes": "Downscaled from the 16050-by-1174-pixel original to 3840 by 281 pixels as a JPEG; no skyline trace, azimuth calibration, or further crop was applied."
           }
         }
       ]
@@ -624,6 +701,39 @@
             "title": "Oregon Star Party official site",
             "url": "https://oregonstarparty.org/",
             "verifiedAt": "2026-09-02"
+          }
+        }
+      ],
+      "horizonResources": [
+        {
+          "id": "oregon-star-party-panorama",
+          "kind": "panorama",
+          "quality": "visual_panorama_only",
+          "disposition": "link_only_research",
+          "source": {
+            "title": "Oregon Star Party panorama",
+            "pageURL": "https://oregonstarparty.org/osp/osp-site-maps/",
+            "resourceURL": "https://www.oregonphotos.com/Panorama_2009-BJ.html",
+            "creator": null,
+            "verifiedAt": "2026-09-02"
+          },
+          "rights": {
+            "permissionStatus": "unknown",
+            "licenseName": "Unspecified",
+            "licenseURL": null,
+            "attribution": "Oregon Star Party site-map page links to OregonPhotos.com.",
+            "notes": "No redistribution license was found. The linked host presented an invalid TLS certificate during verification, so the resource remains an uncached research lead."
+          },
+          "calibration": {
+            "viewpointDescription": "Presented by the official event site as the OSP panorama, but an exact camera point at Indian Trail Spring was not established.",
+            "viewpointMatch": "unverified",
+            "northAzimuthOffsetDegrees": null,
+            "projectionType": "unknown",
+            "horizontalFieldOfViewDegrees": null,
+            "verticalFieldOfViewDegrees": null,
+            "verticalScale": "unknown",
+            "suitableForObstructionCalculations": false,
+            "notes": "The unavailable linked page prevented verification of azimuth orientation, projection, coverage, vertical field of view, and scale. Do not use for calculations."
           }
         }
       ]

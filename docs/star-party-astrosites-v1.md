@@ -27,7 +27,8 @@ hide Star Parties when no compatible bundled or cached data exists.
 The envelope follows the repository convention:
 
 - `schemaVersion`, `packageFamily`, `packageVersion`, and `generatedAt`
-- `scope`, with site, event, status, and country counts
+- `scope`, with site, event, status, country, horizon-resource, cached-horizon,
+  and obstruction-profile counts
 - `starPartyAstroSites`, sorted by stable record `id`
 
 Each record contains:
@@ -44,6 +45,8 @@ Each record contains:
   local-calendar `start` and `end`, status, official URL, source, and
   `verifiedAt`
 - optional `media.hero` and `media.logo` metadata for approved cached assets
+- optional `horizonResources` with source, rights, calibration, disposition,
+  and an explicitly bounded visual or obstruction role
 
 Dates are local calendar dates in `location.timezone`; they are deliberately
 not UTC instants or recurrence rules. An event's status is one of `scheduled`,
@@ -53,6 +56,37 @@ avoids guessing how an organizer's dates recur from year to year.
 `astroSite.sourceSiteID` is a deterministic UUIDv5 derived from
 `https://metadata.astroguide.space/star-party-astrosites/<record-id>`. Stable
 identity lets a later consumer update a venue without duplicating it.
+
+## Horizon-resource and obstruction boundary
+
+A panorama is not automatically an obstruction profile. Each
+`horizonResources` entry records its exact source link, creator when known,
+redistribution status, viewpoint relationship, north/azimuth offset, projection,
+horizontal and vertical field of view, vertical scale, and whether the evidence
+is suitable for calculations. Unknown calibration values remain `null` or
+`unknown`; the package does not infer them from the image's aspect ratio.
+
+The quality vocabulary is deliberately explicit:
+
+- `authoritative_hrz`: a venue-authoritative azimuth/altitude profile
+- `manual_trace_from_panorama`: a reviewed skyline trace from a sufficiently
+  calibrated panorama
+- `estimated_from_panorama`: a lower-confidence calibrated derivation
+- `visual_panorama_only`: decorative or research context that must not drive
+  rise/set, visibility, or obstruction calculations
+
+Cached files require explicit redistribution rights. A public web link without
+a reuse grant remains link-only. The builder rejects cached horizon images that
+do not have a `licensed_for_redistribution` status, verifies cached-image size,
+dimensions, and SHA-256, and rejects `visual_panorama_only` resources marked as
+calculation-ready.
+
+The optional `.hrz` bridge matches AstroGuide's current import convention:
+UTF-8 text, blank and comment lines ignored, and the first two
+whitespace/comma/semicolon-separated values interpreted as azimuth and altitude
+degrees. Azimuth must be 0...360 and altitude 0...90. A future checked-in HRZ
+must declare its sample count and maps to WIND16 buckets using `average`
+aggregation. No current star-party resource satisfies that contract.
 
 ## AstroSite compatibility boundary
 
@@ -87,6 +121,8 @@ The builder validates:
 - required description, coordinate, and event provenance
 - optional media paths, local file presence, attribution, license, permission,
   and source metadata
+- optional horizon source, rights, calibration, cached-asset checksum/size/
+  dimensions, and HRZ sample validation
 - deterministic package ordering and exact stable-manifest checksum, size, and
   counts
 
@@ -115,7 +151,7 @@ Completed 2026 instances are retained when an organizer has not yet published
 the next date. This makes the record useful and sourced without inventing a
 future recurrence.
 
-## Deferred candidates and media omissions
+## Deferred candidates, media omissions, and horizon research
 
 - **South Pacific Star Party** is deferred because the Astronomical Society of
   New South Wales says the next event is postponed indefinitely; the package
@@ -131,6 +167,37 @@ No hero images or logos are included in v1. The available event pages do not
 consistently establish redistribution rights, so the package keeps media empty
 instead of hotlinking or copying uncertain assets. The optional media contract
 is ready for a future explicitly licensed or permission-backed cached asset.
+
+The 2026-09-02 horizon research pass found three useful panorama leads but no
+machine-usable public `.hrz`/Stellarium horizon profile for any of the 15
+venues:
+
+- **Cherry Springs:** Wikimedia Commons identifies the 2009 panorama as a
+  roughly 340-degree, 13-photo Autostitch panorama by user Ruhrfisch under
+  CC BY-SA 3.0 (and GFDL). The package caches a 3840-by-281-pixel resize with
+  attribution and checksum. Its exact camera point, north offset, projection
+  model, vertical field of view, and vertical scale are not supplied, so it is
+  `visual_panorama_only`, not an obstruction input. Source:
+  <https://commons.wikimedia.org/wiki/File:Cherry_Springs_State_Park_panorama.jpg>.
+- **Almost Heaven / Spruce Knob Mountain Center:** the official maps page links
+  a panorama from the entrance area toward the Green Lot. The site reserves
+  rights and gives no image-specific reuse license, so the package retains only
+  the source link with `permission_required`. The JPEG has no embedded heading,
+  location, projection, or field-of-view metadata and is
+  `visual_panorama_only`. Source: <https://www.ahsp.org/maps-and-directions/>.
+- **Oregon Star Party:** the official maps page links an external OSP panorama,
+  but no redistribution license was found and the external host presented an
+  invalid TLS certificate during verification. It remains an uncached,
+  `visual_panorama_only` research lead. Source:
+  <https://oregonstarparty.org/osp/osp-site-maps/>.
+
+Two other leads were deliberately excluded from records. A permissively
+licensed Spruce Knob panorama was photographed from the summit observation
+tower, not the Spruce Knob Mountain Center observing field. TheSkyX documentation
+mentions Winter Star Party panoramas supplied courtesy of a photographer, but
+that acknowledgement does not grant this repository redistribution rights or
+provide a public calibrated source file. Neither lead is suitable for
+calculation or caching here.
 
 ## Maintenance boundary
 

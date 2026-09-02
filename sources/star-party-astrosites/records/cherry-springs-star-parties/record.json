@@ -85,5 +85,46 @@
         "verifiedAt": "2026-09-02"
       }
     }
+  ],
+  "horizonResources": [
+    {
+      "id": "cherry-springs-state-park-panorama-2009",
+      "kind": "panorama",
+      "quality": "visual_panorama_only",
+      "disposition": "cached_visual_reference",
+      "source": {
+        "title": "Cherry Springs State Park panorama",
+        "pageURL": "https://commons.wikimedia.org/wiki/File:Cherry_Springs_State_Park_panorama.jpg",
+        "resourceURL": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cherry_Springs_State_Park_panorama.jpg",
+        "creator": "Wikimedia Commons user Ruhrfisch",
+        "verifiedAt": "2026-09-02"
+      },
+      "rights": {
+        "permissionStatus": "licensed_for_redistribution",
+        "licenseName": "CC BY-SA 3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attribution": "Cherry Springs State Park panorama by Wikimedia Commons user Ruhrfisch, licensed CC BY-SA 3.0; resized by AstroGuide.",
+        "notes": "The creator offers the original under CC BY-SA 3.0 and GFDL. AstroGuide uses the CC BY-SA 3.0 option and identifies the cached resize as a modification."
+      },
+      "calibration": {
+        "viewpointDescription": "Unspecified camera point within Cherry Springs State Park; the image includes the Overnight Astronomy Observation Field and surrounding park features.",
+        "viewpointMatch": "approximate",
+        "northAzimuthOffsetDegrees": null,
+        "projectionType": "unknown_stitched",
+        "horizontalFieldOfViewDegrees": 340,
+        "verticalFieldOfViewDegrees": null,
+        "verticalScale": "unknown",
+        "suitableForObstructionCalculations": false,
+        "notes": "The source says Autostitch combined 13 horizontal photos into about 340 degrees, but supplies no camera coordinates, left-edge azimuth, projection model, or vertical scale. This is a visual reference, not an obstruction profile."
+      },
+      "asset": {
+        "path": "v1/assets/star-party-astrosites/cherry-springs-star-parties/cherry-springs-state-park-panorama-3840.jpg",
+        "sha256": "eb1dff9a0b82f4a62d8a351b323448d6a3df32d6b81a1affdb746f26d69595f9",
+        "byteSize": 446841,
+        "width": 3840,
+        "height": 281,
+        "derivativeNotes": "Downscaled from the 16050-by-1174-pixel original to 3840 by 281 pixels as a JPEG; no skyline trace, azimuth calibration, or further crop was applied."
+      }
+    }
   ]
 }

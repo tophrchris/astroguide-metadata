@@ -57,5 +57,38 @@
         "verifiedAt": "2026-09-02"
       }
     }
+  ],
+  "horizonResources": [
+    {
+      "id": "oregon-star-party-panorama",
+      "kind": "panorama",
+      "quality": "visual_panorama_only",
+      "disposition": "link_only_research",
+      "source": {
+        "title": "Oregon Star Party panorama",
+        "pageURL": "https://oregonstarparty.org/osp/osp-site-maps/",
+        "resourceURL": "https://www.oregonphotos.com/Panorama_2009-BJ.html",
+        "creator": null,
+        "verifiedAt": "2026-09-02"
+      },
+      "rights": {
+        "permissionStatus": "unknown",
+        "licenseName": "Unspecified",
+        "licenseURL": null,
+        "attribution": "Oregon Star Party site-map page links to OregonPhotos.com.",
+        "notes": "No redistribution license was found. The linked host presented an invalid TLS certificate during verification, so the resource remains an uncached research lead."
+      },
+      "calibration": {
+        "viewpointDescription": "Presented by the official event site as the OSP panorama, but an exact camera point at Indian Trail Spring was not established.",
+        "viewpointMatch": "unverified",
+        "northAzimuthOffsetDegrees": null,
+        "projectionType": "unknown",
+        "horizontalFieldOfViewDegrees": null,
+        "verticalFieldOfViewDegrees": null,
+        "verticalScale": "unknown",
+        "suitableForObstructionCalculations": false,
+        "notes": "The unavailable linked page prevented verification of azimuth orientation, projection, coverage, vertical field of view, and scale. Do not use for calculations."
+      }
+    }
   ]
 }

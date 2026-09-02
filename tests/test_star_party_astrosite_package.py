@@ -3,6 +3,7 @@ import datetime as dt
 import hashlib
 import importlib.util
 import json
+import tempfile
 import unittest
 from pathlib import Path
 from urllib.parse import urlparse
@@ -47,6 +48,9 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
         self.assertEqual(self.package["scope"]["completedEventCount"], 3)
         self.assertEqual(self.package["scope"]["cancelledEventCount"], 0)
         self.assertEqual(self.package["scope"]["countryCount"], 4)
+        self.assertEqual(self.package["scope"]["horizonResourceCount"], 3)
+        self.assertEqual(self.package["scope"]["cachedHorizonAssetCount"], 1)
+        self.assertEqual(self.package["scope"]["obstructionProfileCount"], 0)
         ids = [record["id"] for record in self.records]
         self.assertEqual(ids, sorted(ids))
         self.assertEqual(len(ids), len(set(ids)))
@@ -139,13 +143,68 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
         )
         self.assertEqual(len(source_paths), len(self.records))
 
-    def test_schema_is_checked_in_and_declares_optional_cached_media(self):
+    def test_schema_declares_optional_cached_media_and_horizon_resources(self):
         schema = read_json(SCHEMA_PATH)
         self.assertEqual(schema["$schema"], "https://json-schema.org/draft/2020-12/schema")
         self.assertIn("astroSite", schema["properties"])
         self.assertIn("events", schema["properties"])
         self.assertEqual(set(schema["properties"]["media"]["properties"]), {"hero", "logo"})
         self.assertTrue(all("media" not in record for record in self.records))
+        self.assertIn("horizonResources", schema["properties"])
+        self.assertEqual(
+            set(schema["$defs"]["horizonResource"]["properties"]["quality"]["enum"]),
+            {
+                "authoritative_hrz",
+                "manual_trace_from_panorama",
+                "estimated_from_panorama",
+                "visual_panorama_only",
+            },
+        )
+
+    def test_horizon_resources_keep_visual_references_out_of_obstruction_math(self):
+        resources = {
+            resource["id"]: resource
+            for record in self.records
+            for resource in record.get("horizonResources", [])
+        }
+        self.assertEqual(
+            set(resources),
+            {
+                "cherry-springs-state-park-panorama-2009",
+                "almost-heaven-entrance-to-green-lot-panorama",
+                "oregon-star-party-panorama",
+            },
+        )
+        for resource in resources.values():
+            with self.subTest(resource=resource["id"]):
+                self.assertEqual(resource["quality"], "visual_panorama_only")
+                self.assertFalse(
+                    resource["calibration"]["suitableForObstructionCalculations"]
+                )
+                self.assertNotIn("obstructionProfile", resource)
+
+        cherry = resources["cherry-springs-state-park-panorama-2009"]
+        self.assertEqual(cherry["disposition"], "cached_visual_reference")
+        self.assertEqual(
+            cherry["rights"]["permissionStatus"], "licensed_for_redistribution"
+        )
+        self.assertEqual(cherry["rights"]["licenseName"], "CC BY-SA 3.0")
+        asset = cherry["asset"]
+        asset_path = ROOT / asset["path"]
+        asset_bytes = asset_path.read_bytes()
+        self.assertEqual(hashlib.sha256(asset_bytes).hexdigest(), asset["sha256"])
+        self.assertEqual(len(asset_bytes), asset["byteSize"])
+        self.assertEqual(BUILDER.image_dimensions(asset_path), (3840, 281))
+
+        almost_heaven = resources["almost-heaven-entrance-to-green-lot-panorama"]
+        self.assertEqual(almost_heaven["disposition"], "link_only_pending_permission")
+        self.assertEqual(almost_heaven["rights"]["permissionStatus"], "permission_required")
+        self.assertNotIn("asset", almost_heaven)
+
+        oregon = resources["oregon-star-party-panorama"]
+        self.assertEqual(oregon["disposition"], "link_only_research")
+        self.assertEqual(oregon["rights"]["permissionStatus"], "unknown")
+        self.assertNotIn("asset", oregon)
 
     def test_manifest_registers_exact_artifact(self):
         manifest = read_json(MANIFEST_PATH)
@@ -159,6 +218,17 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
         self.assertEqual(entry["minSupportedAppVersion"], "1.4.1")
         self.assertEqual(entry["siteCount"], len(self.records))
         self.assertEqual(entry["eventCount"], self.package["scope"]["eventCount"])
+        self.assertEqual(
+            entry["horizonResourceCount"], self.package["scope"]["horizonResourceCount"]
+        )
+        self.assertEqual(
+            entry["cachedHorizonAssetCount"],
+            self.package["scope"]["cachedHorizonAssetCount"],
+        )
+        self.assertEqual(
+            entry["obstructionProfileCount"],
+            self.package["scope"]["obstructionProfileCount"],
+        )
         self.assertEqual(entry["byteSize"], len(package_bytes))
         self.assertEqual(
             entry["checksum"],
@@ -208,6 +278,36 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
         records[1]["events"][0]["id"] = records[0]["events"][0]["id"]
         with self.assertRaisesRegex(BUILDER.ValidationError, "Duplicate event ID"):
             BUILDER.validate_unique_identities(records)
+
+    def test_validator_rejects_uncalibrated_or_unlicensed_horizon_use(self):
+        resource = copy.deepcopy(
+            self.by_id["cherry-springs-star-parties"]["horizonResources"][0]
+        )
+
+        resource["calibration"]["suitableForObstructionCalculations"] = True
+        with self.assertRaises(BUILDER.ValidationError):
+            BUILDER.validate_horizon_resources(
+                [resource], "cherry-springs-star-parties", dt.date(2026, 9, 2)
+            )
+
+        resource = copy.deepcopy(
+            self.by_id["cherry-springs-star-parties"]["horizonResources"][0]
+        )
+        resource["rights"]["permissionStatus"] = "permission_required"
+        with self.assertRaises(BUILDER.ValidationError):
+            BUILDER.validate_horizon_resources(
+                [resource], "cherry-springs-star-parties", dt.date(2026, 9, 2)
+            )
+
+    def test_hrz_parser_matches_astroguide_azimuth_altitude_convention(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "test.hrz"
+            path.write_text("# azimuth altitude\n0 3\n90,4.5\n180; 2\n", encoding="utf-8")
+            self.assertEqual(BUILDER.validate_hrz_asset(path, "test.hrz"), 3)
+
+            path.write_text("361 2\n", encoding="utf-8")
+            with self.assertRaises(BUILDER.ValidationError):
+                BUILDER.validate_hrz_asset(path, "test.hrz")
 
 
 if __name__ == "__main__":
