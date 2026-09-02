@@ -21,8 +21,22 @@ PACKAGE_PATHS = {
 FAMILY_ORDER = [
     "targetMetadataOverlay",
     "targetNeighborhoodDefinitions",
+    "targetImageAssets",
     "equipmentCatalog",
+    "astrophotographyEquipmentCatalog",
+    "astrophotographyEquipmentSanitizedCatalog",
+    "telescopeReferencePrices",
+    "darkSkyPlaces",
+    "cometSnapshot",
+    "cometOrbitGeometry",
+    "cometDetailMetadata",
+    "planetCatalog",
+    "lunarEvents",
+    "fullMoonNameAliases",
+    "planetTargetCloseEncounters",
+    "cometCloseEncounters",
     "seasonalRecommendationCandidates",
+    "transientEventFeed",
 ]
 
 

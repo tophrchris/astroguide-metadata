@@ -61,6 +61,7 @@ FAMILY_ORDER = [
     "equipmentCatalog",
     "astrophotographyEquipmentCatalog",
     "astrophotographyEquipmentSanitizedCatalog",
+    "telescopeReferencePrices",
     "darkSkyPlaces",
     "cometSnapshot",
     "cometOrbitGeometry",

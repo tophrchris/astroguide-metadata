@@ -35,6 +35,24 @@
       "fallbackNotes": "Use the bundled target metadata snapshot only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
     },
     {
+      "family": "targetImageAssets",
+      "packageVersion": "target-image-assets-v1-2026-08-21-capture-harvest-75",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/target-images/target_image_assets_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "813375b9186fa98bab5e2c4fc1994c467289bc3bb8927979405a2e31950073ad"
+      },
+      "byteSize": 418740,
+      "recordCount": 75,
+      "assetCount": 71,
+      "imageFileCount": 213,
+      "minSupportedAppVersion": "1.4.1",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Clients that support this family should use bundled target thumbnails when available, then load these hosted target-image assets lazily and degrade gracefully if the package is absent, expired, or invalid."
+    },
+    {
       "family": "equipmentCatalog",
       "packageVersion": "equipment-catalog-v1-2026-08-25",
       "payloadSchemaVersion": 1,
@@ -63,6 +81,36 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled Telescope Workshop equipment catalog only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "astrophotographyEquipmentSanitizedCatalog",
+      "packageVersion": "astrophotography-equipment-sanitized-catalog-v1-2026-08-29",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "90a52141493ee16e978c5a1a5428063f56c78bcacf954e0bc5a6ab6761ce044c"
+      },
+      "byteSize": 952005,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Use the bundled Telescope Workshop projection if no validated cached sanitized package is available. This package mirrors the app-rendered selectable optics and imaging rows for review, web, and metadata consumers; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "telescopeReferencePrices",
+      "packageVersion": "telescope-reference-prices-v1-20260825T143106Z",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/telescope-reference-prices/telescope_reference_prices_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "f7c1ea9fe2fb6afeefab5ff2a78d5b741682073ffd7e5e9cc886f6f38b983270"
+      },
+      "byteSize": 351601,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Optional approximate telescope reference prices. Values are rounded to the published precision, are not live offers, and may be null without affecting equipment publication."
     },
     {
       "family": "darkSkyPlaces",
@@ -296,54 +344,6 @@
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled seasonal recommendation snapshot for this latitude band only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh.",
       "latitudeBand": "south_high_60_90s"
-    },
-    {
-      "family": "astrophotographyEquipmentSanitizedCatalog",
-      "packageVersion": "astrophotography-equipment-sanitized-catalog-v1-2026-08-29",
-      "payloadSchemaVersion": 1,
-      "packageURL": "https://metadata.astroguide.space/v1/packages/equipment/astrophotography_equipment_sanitized_catalog_v1.json",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "90a52141493ee16e978c5a1a5428063f56c78bcacf954e0bc5a6ab6761ce044c"
-      },
-      "byteSize": 952005,
-      "minSupportedAppVersion": "0.1.2",
-      "minSupportedBuild": "1",
-      "cacheTTLSeconds": 604800,
-      "fallbackNotes": "Use the bundled Telescope Workshop projection if no validated cached sanitized package is available. This package mirrors the app-rendered selectable optics and imaging rows for review, web, and metadata consumers; an expired cached package remains usable until replaced by a validated refresh."
-    },
-    {
-      "family": "targetImageAssets",
-      "packageVersion": "target-image-assets-v1-2026-08-21-capture-harvest-75",
-      "payloadSchemaVersion": 1,
-      "packageURL": "https://metadata.astroguide.space/v1/packages/target-images/target_image_assets_v1.json",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "813375b9186fa98bab5e2c4fc1994c467289bc3bb8927979405a2e31950073ad"
-      },
-      "byteSize": 418740,
-      "recordCount": 75,
-      "assetCount": 71,
-      "imageFileCount": 213,
-      "minSupportedAppVersion": "1.4.1",
-      "minSupportedBuild": "1",
-      "cacheTTLSeconds": 604800,
-      "fallbackNotes": "Clients that support this family should use bundled target thumbnails when available, then load these hosted target-image assets lazily and degrade gracefully if the package is absent, expired, or invalid."
-    },
-    {
-      "family": "telescopeReferencePrices",
-      "packageVersion": "telescope-reference-prices-v1-20260825T143106Z",
-      "payloadSchemaVersion": 1,
-      "packageURL": "https://metadata.astroguide.space/v1/packages/telescope-reference-prices/telescope_reference_prices_v1.json",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "f7c1ea9fe2fb6afeefab5ff2a78d5b741682073ffd7e5e9cc886f6f38b983270"
-      },
-      "byteSize": 351601,
-      "minSupportedAppVersion": "0.1.2",
-      "minSupportedBuild": "1",
-      "cacheTTLSeconds": 604800,
-      "fallbackNotes": "Optional approximate telescope reference prices. Values are rounded to the published precision, are not live offers, and may be null without affecting equipment publication."
     }
   ]
 }

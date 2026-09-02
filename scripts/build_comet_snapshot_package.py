@@ -18,8 +18,11 @@ PACKAGE_PATH = Path("v1/packages/comets/comet_snapshot_v1.json")
 FAMILY_ORDER = [
     "targetMetadataOverlay",
     "targetNeighborhoodDefinitions",
+    "targetImageAssets",
     "equipmentCatalog",
     "astrophotographyEquipmentCatalog",
+    "astrophotographyEquipmentSanitizedCatalog",
+    "telescopeReferencePrices",
     "darkSkyPlaces",
     "cometSnapshot",
     "cometOrbitGeometry",

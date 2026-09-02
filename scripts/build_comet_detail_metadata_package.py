@@ -73,8 +73,11 @@ TREND_DIRECTIONS = {"brightening", "fading", "stable", "uncertain"}
 FAMILY_ORDER = [
     "targetMetadataOverlay",
     "targetNeighborhoodDefinitions",
+    "targetImageAssets",
     "equipmentCatalog",
     "astrophotographyEquipmentCatalog",
+    "astrophotographyEquipmentSanitizedCatalog",
+    "telescopeReferencePrices",
     "darkSkyPlaces",
     "cometSnapshot",
     "cometOrbitGeometry",
