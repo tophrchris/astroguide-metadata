@@ -30,13 +30,22 @@ jobs:
           path: astroguide-metadata
           fetch-depth: 0
 
+      - name: Require private catalog deploy key
+        env:
+          DSOPLANNERIOS_READ_SSH_KEY: ${{ secrets.DSOPLANNERIOS_READ_SSH_KEY }}
+        run: |
+          if [[ -z "$DSOPLANNERIOS_READ_SSH_KEY" ]]; then
+            echo "Repository secret DSOPLANNERIOS_READ_SSH_KEY is required." >&2
+            exit 2
+          fi
+
       - name: Check out AstroGuide iOS catalog source
         uses: actions/checkout@v4
         with:
           repository: tophrchris/DSOPlanneriOS
           path: DSOPlanneriOS
           ref: ${{ inputs.ios_ref || 'main' }}
-          token: ${{ secrets.DSOPLANNERIOS_READ_TOKEN || github.token }}
+          ssh-key: ${{ secrets.DSOPLANNERIOS_READ_SSH_KEY }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
