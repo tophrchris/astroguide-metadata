@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "packageFamily": "telescopeOfficialProductLinks",
   "packageVersion": "telescope-official-product-links-v1-2026-09-02",
-  "generatedAt": "2026-09-02T11:40:59Z",
+  "generatedAt": "2026-09-02T11:55:56Z",
   "scope": {
     "selection": "Top ten manufacturers by telescope count in the AstroGuide backyard-market projection, plus canonical smart-telescope profiles.",
     "topVendors": [
@@ -20,8 +20,8 @@
     "topVendorRecordCount": 438,
     "smartTelescopeRecordCount": 23,
     "recordCount": 461,
-    "linkedCount": 161,
-    "unresolvedCount": 300
+    "linkedCount": 162,
+    "unresolvedCount": 299
   },
   "officialProductLinks": [
     {
@@ -1382,7 +1382,7 @@
     },
     {
       "equipment_id": "optical-tube-sky-watcher-hac125-34564",
-      "official_url": null
+      "official_url": "https://www.skywatcherusa.com/products/hac125dx"
     },
     {
       "equipment_id": "optical-tube-sky-watcher-heliostar-100ha-39126",
