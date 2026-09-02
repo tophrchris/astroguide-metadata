@@ -87,6 +87,15 @@ class TelescopeOfficialProductLinksTests(unittest.TestCase):
         )
         self.assertTrue(smart_ids.issubset({record["equipment_id"] for record in self.records}))
 
+    def test_hac125_uses_the_current_sky_watcher_product_page(self):
+        links_by_id = {
+            record["equipment_id"]: record["official_url"] for record in self.records
+        }
+        self.assertEqual(
+            links_by_id["optical-tube-sky-watcher-hac125-34564"],
+            "https://www.skywatcherusa.com/products/hac125dx",
+        )
+
     def test_manifest_registers_the_package(self):
         manifest = read_json(ROOT / "v1/channels/stable/manifest.json")
         entry = next(

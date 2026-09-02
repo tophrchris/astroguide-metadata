@@ -114,17 +114,17 @@
     },
     {
       "family": "telescopeOfficialProductLinks",
-      "packageVersion": "telescope-official-product-links-v1-2026-09-02",
+      "packageVersion": "telescope-official-product-links-v1-2026-09-02-hac125",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/telescope-official-product-links/telescope_official_product_links_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "27aa95450f0bcdcb5f7ec4e849628449d582d0a670825672a97b57d1c71b334c"
+        "value": "feee3b8f4011a0c7ab9950d6a646bb56ca23bb221362bf01e67435ae2cecf2b9"
       },
-      "byteSize": 60989,
+      "byteSize": 61041,
       "recordCount": 461,
-      "linkedCount": 161,
-      "unresolvedCount": 300,
+      "linkedCount": 162,
+      "unresolvedCount": 299,
       "minSupportedAppVersion": "0.1.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
