@@ -1,0 +1,1872 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "telescopeOfficialProductLinks",
+  "packageVersion": "telescope-official-product-links-v1-2026-09-02",
+  "generatedAt": "2026-09-02T11:40:59Z",
+  "scope": {
+    "selection": "Top ten manufacturers by telescope count in the AstroGuide backyard-market projection, plus canonical smart-telescope profiles.",
+    "topVendors": [
+      "Celestron",
+      "Sky-Watcher",
+      "Astro-Tech",
+      "Omegon",
+      "Askar",
+      "Takahashi",
+      "Meade",
+      "William Optics",
+      "Orion",
+      "Altair"
+    ],
+    "topVendorRecordCount": 438,
+    "smartTelescopeRecordCount": 23,
+    "recordCount": 461,
+    "linkedCount": 161,
+    "unresolvedCount": 300
+  },
+  "officialProductLinks": [
+    {
+      "equipment_id": "celestron-origin",
+      "official_url": "https://www.celestron.com/products/celestron-origin-intelligent-home-observatory-12099-old-version"
+    },
+    {
+      "equipment_id": "celestron-origin-mark-ii",
+      "official_url": "https://www.celestron.com/products/celestron-origin-intelligent-home-observatory"
+    },
+    {
+      "equipment_id": "dwarflab-dwarf-3",
+      "official_url": "https://www.dwarflab.com/us/products/dwarf-3-smart-telescope"
+    },
+    {
+      "equipment_id": "dwarflab-dwarf-ii",
+      "official_url": "https://www.dwarflab.com/us/products/dwarf-2-smart-telescope"
+    },
+    {
+      "equipment_id": "dwarflab-dwarf-mini",
+      "official_url": "https://www.dwarflab.com/us/products/dwarf-mini-smart-telescope"
+    },
+    {
+      "equipment_id": "dwarflab-dwarf-original",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-60-edf-2199",
+      "official_url": "https://altairastro.com/altair-60-edf-doublet-refractor-telescope-v3-450-p.asp"
+    },
+    {
+      "equipment_id": "optical-tube-altair-60mm-mini-guider-90",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-72-edf-4889",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-80mm-finder-457",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-f4-newtonian-astrograph-1426",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-lightwave-60-167",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-lightwave-66-ed-353",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-lightwave-72-ed-r-251",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-lightwave-80-ed-2356",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-rc-300-tt-v3-1287",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-rc250tt-169",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-rc250tt-660",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-starwave-110-1181",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-starwave-152-f5-9-2066",
+      "official_url": "https://altairastro.com/starwave-152mm-f59-v3-white-tube-achromat-refractor-telescope-461-p.asp"
+    },
+    {
+      "equipment_id": "optical-tube-altair-starwave-152-v3-red-tube-achromat-2370",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-starwave-50mm-finder-2857",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-starwave-70-edq-r-2608",
+      "official_url": "https://altairastro.com/altair-70-edq-r-f5-quad-apo-astrograph-463-p.asp"
+    },
+    {
+      "equipment_id": "optical-tube-altair-starwave-70ed-2379",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-starwave-80-ed-2353",
+      "official_url": "https://altairastro.com/starwave-80ed-r-ed-doublet-refractor-telescope-466-p.asp"
+    },
+    {
+      "equipment_id": "optical-tube-altair-starwave-ascent-80ed-f7-17573",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-wave-102-f7-ed-triplet-267",
+      "official_url": "https://altairastro.com/altair-wave-series-102mm-f7-super-ed-triplet-apo-452-p.asp"
+    },
+    {
+      "equipment_id": "optical-tube-altair-wave-115-ed-173",
+      "official_url": "https://altairastro.com/altair-wave-series-115-f7-ed-triplet-apo-453-p.asp"
+    },
+    {
+      "equipment_id": "optical-tube-altair-wave-125-edf-7753",
+      "official_url": "https://altairastro.com/altair-wave-series-125-edf-apo-refractor-w-heavy-duty-m92-rp-focuser-454-p.asp"
+    },
+    {
+      "equipment_id": "optical-tube-altair-wave-130-edt-535",
+      "official_url": "https://altairastro.com/altair-wave-series-130-f7-ed-triplet-apo-455-p.asp"
+    },
+    {
+      "equipment_id": "optical-tube-altair-wave-80-2929",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-altair-wave-80edt-6137",
+      "official_url": "https://altairastro.com/altair-wave-series-80mm-f6-super-ed-triplet-apo-457-p.asp"
+    },
+    {
+      "equipment_id": "optical-tube-askar-103apo-31022",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/79.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-107phq-19594",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/28.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-120apo-30802",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/84.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-130phq-21902",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/78.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-140apo-31028",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/90.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-151phq-34584",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/70.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-160apo-40278",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/160APO.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-185apo-30619",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/93.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-230apo-40277",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-askar-60f-flat-field-40226",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/60F.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-65phq-24029",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/39.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-71f-flat-field-33454",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/101.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-80ed-40937",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/80ED.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-80phq-20730",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/1.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-91f-flat-field-40380",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/91F.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-acl200-12317",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/23.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-fma180-11475",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/33.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-fma230-16832",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/21.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-fma230-with-reducer-16643",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-askar-fra300-20069",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-askar-fra400-10469",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/34.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-fra400c-41160",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/FRA400C.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-fra500-17005",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/35.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-fra600-13152",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/36.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-sqa106-41124",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/SQA106.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-sqa55-34583",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/SQA55.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-sqa70-41123",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/SQA70.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-sqa85-41121",
+      "official_url": "https://www.sharpstar-optics.com/Products_1/SQA85.html"
+    },
+    {
+      "equipment_id": "optical-tube-askar-v-60mm-extender-27064",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-askar-v-60mm-native-flattener-26388",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-askar-v-60mm-reducer-26899",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-askar-v-80mm-extender-26643",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-askar-v-80mm-flattener-26641",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-askar-v-80mm-native-26387",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-askar-v-80mm-reducer-26642",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-10-f-4-cf-truss-imaging-newtonian-33097",
+      "official_url": "https://astronomics.com/products/astro-tech-10-f-4-carbon-fiber-truss-tube-imaging-newtonian"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-10-f-8-ritchey-chr-tien-astrograph-32818",
+      "official_url": "https://astronomics.com/products/astro-tech-10-f-8-ritchey-chretien-optical-tube"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-10-f-8-truss-ritchey-chr-tien-astrograph-32551",
+      "official_url": "https://astronomics.com/products/astro-tech-10-f-8-truss-tube-ritchey-chretien-optical-tube"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-12-astrograph-626",
+      "official_url": "https://astronomics.com/products/astro-tech-12-f-8-truss-tube-ritchey-chretien-optical-tube"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-12-f-4-cf-truss-imaging-newtonian-33036",
+      "official_url": "https://astronomics.com/products/astro-tech-12-f-4-carbon-fiber-truss-tube-imaging-newtonian"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-12-f-8-truss-ritchey-chr-tien-astrograph-32505",
+      "official_url": "https://astronomics.com/products/astro-tech-12-f-8-truss-tube-ritchey-chretien-optical-tube"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-14-f-8-truss-ritchey-chr-tien-astrograph-32504",
+      "official_url": "https://astronomics.com/products/astro-tech-14-f-8-truss-tube-ritchey-chretien-optical-tube"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-16-f-8-truss-ritchey-chr-tien-astrograph-32503",
+      "official_url": "https://astronomics.com/products/astro-tech-16-f-8-truss-tube-ritchey-chretien-optical-tube"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-6-f-9-ritchey-chr-tien-astrograph-33002",
+      "official_url": "https://astronomics.com/products/astro-tech-6-f-9-ritchey-chretien-astrograph"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-8-f-8-ritchey-chr-tien-astrograph-32880",
+      "official_url": "https://astronomics.com/products/astro-tech-8-f-8-ritchey-chretien-astrograph-steel-tube"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at102ed-33585",
+      "official_url": "https://astronomics.com/products/astro-tech-at102ed-4-f-7-ed-refractor-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at102edl-34026",
+      "official_url": "https://astronomics.com/products/astro-tech-at102edl-refractor-ota-fcd-100-and-lanthanum-f-7-doublet"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at106edt-396",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at10int-2995",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at10rc-1732",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at111edt-34179",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at115edt-1839",
+      "official_url": "https://astronomics.com/products/astro-tech-at115edt-f-7-ed-triplet-refractor-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at115edt-32110",
+      "official_url": "https://astronomics.com/products/astro-tech-at115edt-f-7-ed-triplet-refractor-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at125edl-33957",
+      "official_url": "https://astronomics.com/products/astro-tech-at125edl-refractor-ota-fcd-100-and-lanthanum-f-7-8-doublet"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at12int-4025",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at130edt-1592",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at130edt-31939",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at130edt-691",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at14rct-2094",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at150edl-33863",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at152edt-31870",
+      "official_url": "https://astronomics.com/products/astro-tech-at152edt-f-8-triplet-apo-refractor-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at152edt-4397",
+      "official_url": "https://astronomics.com/products/astro-tech-at152edt-f-8-triplet-apo-refractor-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at60ed-33644",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at60ed-4099",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at60edp-34302",
+      "official_url": "https://astronomics.com/products/astro-tech-at60edp-60mm-f-5-petzval-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at65edq-2512",
+      "official_url": "https://astronomics.com/products/astro-tech-at65edq-65mm-f-6-5-ed-quadruplet-astrograph"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at65edq-33761",
+      "official_url": "https://astronomics.com/products/astro-tech-at65edq-65mm-f-6-5-ed-quadruplet-astrograph"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at6cc-6-f-12-classical-cassegrain-32467",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at6rc-156",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at70ed-34516",
+      "official_url": "https://astronomics.com/products/astro-tech-at70ed-2-8-f-6-ed-refractor-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at72ed-424",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at72edii-2853",
+      "official_url": "https://astronomics.com/products/astro-tech-at72edii-refractor-ota-fpl-53-f-6"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at72edii-33441",
+      "official_url": "https://astronomics.com/products/astro-tech-at72edii-refractor-ota-fpl-53-f-6"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at80edl-26812",
+      "official_url": "https://astronomics.com/products/astro-tech-at80edl-refractor-ota-fcd-100-and-lanthanum-f-7-doublet"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at80edt-32398",
+      "official_url": "https://astronomics.com/products/astro-tech-at80edt-f-6-ed-triplet-refractor-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at80edt-4148",
+      "official_url": "https://astronomics.com/products/astro-tech-at80edt-f-6-ed-triplet-refractor-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at8in-423",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at8rc-3265",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at90cft-34498",
+      "official_url": "https://astronomics.com/products/astro-tech-at90cft-f-6-triplet-apo-refractor-carbon-fiber-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at92-32168",
+      "official_url": "https://astronomics.com/products/astro-tech-at92-f-5-5-triplet-apo-refractor-ota"
+    },
+    {
+      "equipment_id": "optical-tube-astro-tech-at92-apo-4672",
+      "official_url": "https://astronomics.com/products/astro-tech-at92-f-5-5-triplet-apo-refractor-ota"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-102-slt-105",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-11-rowe-ackermann-schmidt-astrograph-99",
+      "official_url": "https://www.celestron.com/products/11-rowe-ackermann-schmidt-astrograph-rasa-11-v2-optical-tube-assembly-cge-dovetail"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-114-gt-1825",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-127-slt-106",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-130-slt-104",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-14-rowe-ackermann-schmidt-astrograph-5741",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-8-rowe-ackermann-schmidt-astrograph-5736",
+      "official_url": "https://www.celestron.com/products/8-rowe-ackermann-schmidt-astrograph-rasa-8-optical-tube-assembly-cge-dovetail"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-80-slt-1942",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-80ed-onyx-1508",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-80mm-guidescope-34579",
+      "official_url": "https://www.celestron.com/products/80-mm-guidescope-package"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-90-slt-103",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-advanced-vx-5-sct-4562",
+      "official_url": "https://www.celestron.com/products/advanced-vx-5-schmidt-cassegrain-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astro-fi-102mm-maksutov-10098",
+      "official_url": "https://www.celestron.com/products/astro-fi-102mm-maksutov-cassegrain-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astro-fi-125mm-5-sct-1746",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astro-fi-130mm-newtonian-10611",
+      "official_url": "https://www.celestron.com/products/astro-fi-130mm-newtonian-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astro-fi-6-sct-8965",
+      "official_url": "https://www.celestron.com/products/astro-fi-6-schmidt-cassegrain-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astromaster-114eq-1043",
+      "official_url": "https://www.celestron.com/products/astromaster-114eq-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astromaster-130eq-88",
+      "official_url": "https://www.celestron.com/products/astromaster-130eq-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astromaster-70eq-az-3133",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astromaster-80azs-14702",
+      "official_url": "https://www.celestron.com/products/astromaster-80azs-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astromaster-80eq-1044",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astromaster-90-eq-az-123",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astromaster-lt-60az-862",
+      "official_url": "https://www.celestron.com/products/astromaster-lt-60az-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astromaster-lt-70az-1890",
+      "official_url": "https://www.celestron.com/products/astromaster-lt-70az-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-astromaster-lt-76az-1889",
+      "official_url": "https://www.celestron.com/products/astromaster-lt-76az-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c100-ed-9",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c11-edge-hd-120",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c11-sct-301",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c11-sct-4",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c14-edge-hd-119",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c14-sct-118",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c14-sct-1807",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c5-sct-aka-spotting-scope-138",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c6-sct-117",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c6n-282",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c6r-543",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c8-edge-hd-122",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c8-sct-14",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c80ed-961",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c8n-187",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c8n-advanced-vx-1954",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c9-25-edge-hd-121",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c9-25-sct-17",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-c90-mak-1792",
+      "official_url": "https://www.celestron.com/products/c90-mak-spotting-scope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-cpc-1100-deluxe-hd-114",
+      "official_url": "https://www.celestron.com/products/cpc-deluxe-1100-hd-computerized-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-cpc-1100-edge-hd-230",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-cpc-1100-gps-111",
+      "official_url": "https://www.celestron.com/products/cpc-1100-gps-xlt-computerized-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-cpc-800-deluxe-hd-116",
+      "official_url": "https://www.celestron.com/products/cpc-deluxe-800-hd-computerized-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-cpc-800-gps-113",
+      "official_url": "https://www.celestron.com/products/cpc-800-gps-xlt-computerized-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-cpc-800-sct-425",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-cpc-925-deluxe-hd-115",
+      "official_url": "https://www.celestron.com/products/cpc-deluxe-925-hd-computerized-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-cpc-925-gps-112",
+      "official_url": "https://www.celestron.com/products/cpc-925-gps-xlt-computerized-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-firstscope-76-232",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-102gt-2846",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-4se-107",
+      "official_url": "https://www.celestron.com/products/nexstar-4se-computerized-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-5-slt-4546",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-5se-108",
+      "official_url": "https://www.celestron.com/products/nexstar-5se-computerized-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-6-slt-4547",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-6se-109",
+      "official_url": "https://www.celestron.com/products/nexstar-6se-computerized-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-8se-110",
+      "official_url": "https://www.celestron.com/products/nexstar-8se-computerized-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-evolution-5-4545",
+      "official_url": "https://www.celestron.com/products/nexstar-evolution-5-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-evolution-6-91",
+      "official_url": "https://www.celestron.com/products/nexstar-evolution-6-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-evolution-8-92",
+      "official_url": "https://www.celestron.com/products/nexstar-evolution-8-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-nexstar-evolution-9-25-93",
+      "official_url": "https://www.celestron.com/products/nexstar-evolution-925-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-omni-xlt-102-142",
+      "official_url": "https://www.celestron.com/products/omni-xlt-102-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-omni-xlt-120-141",
+      "official_url": "https://www.celestron.com/products/omni-xlt-120-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-omni-xlt-127-143",
+      "official_url": "https://www.celestron.com/products/omni-xlt-127-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-omni-xlt-150-newtonian-139",
+      "official_url": "https://www.celestron.com/products/omni-xlt-150-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-omni-xlt-150-r-refractor-140",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-origin-33497",
+      "official_url": "https://www.celestron.com/products/celestron-origin-intelligent-home-observatory-12099-old-version"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-powerseeker-70-1914",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-rasa-11-2729",
+      "official_url": "https://www.celestron.com/products/11-rowe-ackermann-schmidt-astrograph-rasa-11-v2-optical-tube-assembly-cge-dovetail"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-skyprodigy-6-sct-288",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-10-dobsonian-33804",
+      "official_url": "https://www.celestron.com/products/starsense-explorer-10-smartphone-app-enabled-dobsonian-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-114mm-tabletop-dob-33331",
+      "official_url": "https://www.celestron.com/products/starsense-explorer-114mm-smartphone-app-enabled-tabletop-dobsonian-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-12-dobsonian-33805",
+      "official_url": "https://www.celestron.com/products/starsense-explorer-12-smartphone-app-enabled-dobsonian-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-130mm-tabletop-dob-33253",
+      "official_url": "https://www.celestron.com/products/starsense-explorer-130mm-smartphone-app-enabled-tabletop-dobsonian-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-150mm-tabletop-dob-33167",
+      "official_url": "https://www.celestron.com/products/starsense-explorer-150mm-smartphone-app-enabled-tabletop-dobsonian-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-8-dobsonian-33803",
+      "official_url": "https://www.celestron.com/products/starsense-explorer-8-smartphone-app-enabled-dobsonian-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-dx-100az-royal-observatory-36665",
+      "official_url": "https://www.celestron.com/products/royal-observatory-greenwich-celestron-starsense-explorer-dx-100az-smartphone-app-enabled-refractor-telescope-1"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-dx-102az-33332",
+      "official_url": "https://www.celestron.com/products/starsense-explorer-dx-102az"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-dx-130az-33465",
+      "official_url": "https://www.celestron.com/products/starsense-explorer-dx-130az"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-dx-5-sct-33531",
+      "official_url": "https://www.celestron.com/products/starsense-explorer-trade-dx-5-smartphone-app-enabled-schmidt-cassegrain-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-lt-114az-33409",
+      "official_url": "https://www.celestron.com/products/starsense-explorer-lt-114az"
+    },
+    {
+      "equipment_id": "optical-tube-celestron-starsense-explorer-lt-80-az-9694",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-celestron-travel-scope-70-217",
+      "official_url": "https://www.celestron.com/products/travel-scope-70-portable-telescope"
+    },
+    {
+      "equipment_id": "optical-tube-meade-10-lx200-204",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-10-lx850-f-8-acf-1409",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-10-lx90-2508",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-12-lx200-168",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-12-lx850-f-8-acf-5530",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-12-lx90-2802",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-130mm-f7-series-6000-1917",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-14-lx850-f-8-acf-1812",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-16-lx200-198",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-16-lx850-f-8-acf-7733",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-5000-80mm-f6-apo-260",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-5000-series-triplet-apo-272",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-6-lx85-f-10-acf-4075",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-7-lx200-197",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-8-acf-188",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-8-lx200-1793",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-ds-114-1977",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-etx-105-1779",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-etx-125-331",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-etx-60-1900",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-etx-80-231",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-etx-90-1926",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-lightbridge-16-2325",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-lightbridge-mini-745",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-ls-6-acf-194",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-lx-800-419",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-lx10-160",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-lx200gps-14-287",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-lx600-397",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-lx90-8-312",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-lxd-sn-10-at-242",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-rcx-400-163",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-rcx400-14-1934",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-meade-sn8-schmidt-newtonian-1788",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-127-ed-apo-1986",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-127mm-maksutov-1828",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-72mm-1989",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-ac-102-660-33078",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-ac-90-1000-33021",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-advanced-150-750-32228",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-apo-ap-61-360-triplet-ed-29764",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-cassegrain-pro-cc-203-2436-28249",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-cassegrain-telescope-pro-cc-203-2436-ota/p%2C61487"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-dobson-advanced-n-152-1200-33153",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-dobson-advanced-x-n-203-1200-33507",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-dobson-advanced-x-n-304-1500-33104",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-n-114-900-30875",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-n-130-920-31349",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-n-150-750-33226",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-104-650-ed-triplet-33169",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-108-600-quintuplet-32800",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-108-600-quintuplet-34259",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-110-660-ed-32077",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-40-180-33777",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-apochromatic-refractor-pro-apo-doubleed-ap-40-180-sixtuplet-ota/p%2C85633"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-66-400-ed-34281",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-apochromatic-refractor-pro-apo-ap-66-400-ed-ota/p%2C14173"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-72-400-quintuplet-29699",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-pro-apo-ap-72-400-quintuplet-ota-apochromatic-refractor/p%2C65156"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-76-342-triplet-ed-31744",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-80-500-ed-carbon-33807",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-85-510-triplet-ed-fcd-100-32476",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-85-560-ed-triplet-31683",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-94-517-triplet-ed-33742",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-apo-ap-96-575-triplet-ed-fcd-100-34485",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-astrograph-154-600-34491",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-telescope-pro-astrograph-v2-154-600-ota/p%2C87873"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-astrograph-203-800-33473",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-telescope-pro-astrograph-203-800-ota/p%2C53818"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-astrograph-254-1016-34058",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-telescope-pro-astrograph-254-1016-ota/p%2C54741"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pro-astrograph-n-150-420-34059",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-prodob-n-203-1200-31417",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-dobson-telescope-prodob-n-203-1200-dob-ii-with-radiant/p%2C71921"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-prodob-n-254-1250-dob-ii-33922",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-dobson-telescope-prodob-n-254-1250-dob-ii/p%2C71922"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-prodob-n-304-1500-dob-ii-32106",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-dobson-telescope-prodob-n-304-1500-dob-ii-with-radiant/p%2C71925"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pronewton-n-153-750-28652",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-pronewton-n-153-750-33778",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-ritchey-chretien-pro-rc-154-1370-33743",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-ritchey-chretien-pro-rc-203-1624-33927",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-ritchey-chretien-pro-rc-203-1624-ota/p%2C53810"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-ritchey-chretien-pro-rc-250-2000-33464",
+      "official_url": "https://www.omegon.eu/telescopes/omegon-carbon-full-tube-ritchey-chretien-pro-rc-250-2000-ota/p%2C85449"
+    },
+    {
+      "equipment_id": "optical-tube-omegon-ritchey-chretien-pro-rc-304-2432-truss-33440",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-ritchey-chretien-pro-rc-355-2845-truss-33427",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-omegon-ritchey-chretien-pro-rc-406-3250-truss-33241",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-10-f-3-9-newtonian-astrograph-617",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-110-duplex-325",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-120mm-f8-3-long-1960",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-150mm-maksutov-1947",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-50mm-guidescope-311",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-6-rc-1916",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-8-rc-1859",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-8-reflector-f4-9-539",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-80ed-apo-f6-26-1905",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-80edt-cf-6210",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-apex-127-174",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-ed-80mm-377",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-ed80t-cf-193",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-eon-115mm-ed-373",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-eon-130-324",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-eon-534",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-eon-80ed-11675",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-goscope-80mm-1827",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-guidescope-60-1951",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-guidescope-60mm-1865",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-guidescope-70-1924",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-mini-guidescope-319",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-premium-110-ed-1932",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-rc-8-1955",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-short-tube-80-318",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-skyquest-xt10-629",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-skyquest-xt10g-191",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-spaceprobe-130st-eq-268",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-xt-10-1787",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-orion-xt8-316",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-9x50-finder-505",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-capricorn-70-34586",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-equinox-100-pro-135",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-equinox-120-pro-136",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-equinox-66-ed-313",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-equinox-80-pro-55",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-equinox-80ed-7299",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-esprit-100-quintuplet-165",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-esprit-100ed-227",
+      "official_url": "https://www.skywatcherusa.com/products/esprit-100mm-ed-triplet-apo-refractor"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-esprit-120ed-74",
+      "official_url": "https://www.skywatcherusa.com/products/esprit-120mm-ed-triplet-apo-refractor"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-esprit-150ed-161",
+      "official_url": "https://www.skywatcherusa.com/products/esprit-150mm-ed-triplet-apo-refractor"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-esprit-80ed-69",
+      "official_url": "https://www.skywatcherusa.com/products/esprit-80mm-ed-triplet-apo-refractor"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evoguide-50ed-2676",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evolux-62ed-8154",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evolux-82ed-9656",
+      "official_url": "https://www.skywatcherusa.com/products/evolux-82ed-doublet-apo-refractor"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-100ed-ds-pro-46",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-102-35378",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-120-185",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-120ed-ds-pro-23",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-150-211",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-150ed-ds-pro-5698",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-72ed-2654",
+      "official_url": "https://www.skywatcherusa.com/products/evostar-72-apo-refractor"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-80ed-ds-pro-3",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-90-660-19571",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-evostar-90-f10-72",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-130-130m-460",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-130p-p-ds-38",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-150p-p-ds-39",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-150pds-53",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-150pl-40",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-190mn-ds-pro-18",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-200p-p-ds-41",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-250p-p-ds-42",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-explorer-300p-p-ds-19",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-hac125-34564",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-heliostar-100ha-39126",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-heliostar-76ha-38950",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-heritage-100p-202",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-heritage-114p-virtuoso-387",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-heritage-130p-48",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-heritage-150p-10054",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-heritage-90-virtuoso-57",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-infinity-76p-27338",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-mercury-70-500-35309",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-mercury-707-1581",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-quattro-10-250p-f-4-36",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-quattro-12-300p-f-4-8984",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyhawk-1145ps-15898",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-250p-flextube-34582",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-250px-52",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-300p-flextube-243",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-350p-499",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-350p-flextube-6593",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-400p-158",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-400p-flextube-498",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-classic-150p-2",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-classic-200p-1",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skyliner-classic-300p-59",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skymax-102-1945",
+      "official_url": "https://www.skywatcherusa.com/products/sky-watcher-skymax-102"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skymax-127-320",
+      "official_url": "https://www.skywatcherusa.com/products/sky-watcher-skymax-127"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skymax-127-70",
+      "official_url": "https://www.skywatcherusa.com/products/sky-watcher-skymax-127"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skymax-150-pro-137",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-skymax-180-pro-50",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-star-discovery-150p-157",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-star-discovery-90i-2845",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-stargate-450p-3485",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-stargate-500p-3486",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-starlux-190mm-maksutov-newtonian-34519",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-starquest-130p-9191",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-startravel-102-210",
+      "official_url": "https://www.skywatcherusa.com/products/startravel-102-az3"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-startravel-120-65",
+      "official_url": "https://www.skywatcherusa.com/products/startravel-120-az3"
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-startravel-150-172",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-sky-watcher-startravel-80-152",
+      "official_url": "https://www.skywatcherusa.com/products/startravel-80-az-gte"
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-106ed-150",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-cn212-cassegrain-214",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-cn212-newton-215",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-epsilon-130-ed-146",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-epsilon-130d-1814",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-epsilon-160-ed-5634",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-epsilon-180-ed-145",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fc-100dc-257",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fc-100dl-1961",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fc-60-1962",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fc-76dcu-2093",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fc-76ds-2946",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fc-76ds-76d-rd-148",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fct-65d-11048",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fct-65d-fu-reducer-35214",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-foa-60-2944",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-foa-60q-2945",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fs-102-1804",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fs-128-1668",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fs-60cb-147",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fs-60q-1595",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fs-78-1631",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fsq-106-16",
+      "official_url": "https://takahashijapan.jp/products/product_end/tubeproduct_end/fsq106/"
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fsq-106edx4-298",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fsq-130ed-1915",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-fsq-85edx-62",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-mewlon-180c-1928",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-mewlon-210-1191",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-mewlon-250-659",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-sky-90-1981",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-toa130-228",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-toa150-525",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-tsa-102-85",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-tsa-120-226",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-takahashi-tsc225-285",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-cat-91-wifd",
+      "official_url": "https://williamoptics.com/products/cat-91-wifd"
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-flt110-tec-33451",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-fluorostar-flt-132-f-7-124",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-fluorostar-flt-156-35033",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-fluorostar-flt120-18987",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-fluorostar-flt132-350",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-fluorostar-flt91-13920",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-gran-turismo-gt71-2268",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-gran-turismo-gt81-wifd-26732",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-guide-scope-2858",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-megrez-120-f-7-5-35608",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-megrez-80-ii-ed-31216",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-minicat-51-wifd-35278",
+      "official_url": "https://williamoptics.com/products/minicat-51-wifd"
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-pleiades-181-35194",
+      "official_url": "https://williamoptics.com/products/pleiades-181"
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-redcat-51-wifd-35193",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-redcat-61-27496",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-redcat-61-wifd-35190",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-redcat-71-17742",
+      "official_url": "https://williamoptics.com/products/redcat-71"
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-redcat-71-wifd-35174",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-redcat-91-wifd-42217",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-spacecat-51-wifd-35124",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-spacecat-61-wifd-35104",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-ultra-cat-108",
+      "official_url": "https://williamoptics.com/products/ultra-cat-108-wifd"
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-ultra-cat-131",
+      "official_url": "https://williamoptics.com/products/ultra-cat-131"
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-ultra-cat-56",
+      "official_url": "https://williamoptics.com/products/ultra-cat-56"
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-ultra-cat-76",
+      "official_url": "https://williamoptics.com/products/ultra-cat-76"
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-zenithstar-105-apo-33997",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-zenithstar-61-ii-apo-35243",
+      "official_url": "https://williamoptics.com/products/zenithstar-61ii"
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-zenithstar-81-wifd-35209",
+      "official_url": "https://williamoptics.com/products/zenithstar-81"
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-zs126-3980",
+      "official_url": null
+    },
+    {
+      "equipment_id": "optical-tube-william-optics-zs73-zs73-ii-5740",
+      "official_url": null
+    },
+    {
+      "equipment_id": "unistellar-equinox-2",
+      "official_url": "https://www.unistellar.com/new-expert/"
+    },
+    {
+      "equipment_id": "unistellar-equinox-original",
+      "official_url": null
+    },
+    {
+      "equipment_id": "unistellar-evscope-2",
+      "official_url": "https://www.unistellar.com/new-expert/"
+    },
+    {
+      "equipment_id": "unistellar-evscope-original",
+      "official_url": null
+    },
+    {
+      "equipment_id": "unistellar-odyssey",
+      "official_url": "https://www.unistellar.com/odyssey/"
+    },
+    {
+      "equipment_id": "unistellar-odyssey-pro",
+      "official_url": "https://www.unistellar.com/odyssey/"
+    },
+    {
+      "equipment_id": "vaonis-hestia",
+      "official_url": "https://vaonis.com/products/hestia"
+    },
+    {
+      "equipment_id": "vaonis-stellina",
+      "official_url": null
+    },
+    {
+      "equipment_id": "vaonis-vespera",
+      "official_url": null
+    },
+    {
+      "equipment_id": "vaonis-vespera-ii",
+      "official_url": "https://vaonis.com/products/vespera-2"
+    },
+    {
+      "equipment_id": "vaonis-vespera-ii-x-edition",
+      "official_url": "https://vaonis.com/products/vespera-2"
+    },
+    {
+      "equipment_id": "vaonis-vespera-pro",
+      "official_url": "https://vaonis.com/products/vespera-pro"
+    },
+    {
+      "equipment_id": "zwo-seestar-s30",
+      "official_url": "https://www.seestar.com/products/seestar-s30-all-in-one-smart-telescope"
+    },
+    {
+      "equipment_id": "zwo-seestar-s30-pro",
+      "official_url": "https://us.seestar.com/products/seestar-s30-pro"
+    },
+    {
+      "equipment_id": "zwo-seestar-s30-pro-wide",
+      "official_url": null
+    },
+    {
+      "equipment_id": "zwo-seestar-s50",
+      "official_url": "https://us.seestar.com/collections/s50-series-smart-telescope/products/seestar-s50"
+    },
+    {
+      "equipment_id": "zwo-seestar-s50-pro",
+      "official_url": "https://us.seestar.com/products/seestar-s50-pro-smart-telescope"
+    }
+  ]
+}
