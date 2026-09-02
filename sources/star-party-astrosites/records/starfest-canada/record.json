@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "starfest-canada",
+  "displayName": "Starfest Canada",
+  "description": "An annual amateur astronomy conference and star party at River Place Campground in Ontario, with observing, talks, workshops, exhibits, and astrophotography.",
+  "descriptionSources": [
+    {
+      "title": "North York Astronomical Association Starfest",
+      "url": "https://www.nyaa.ca/starfest.html",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "422209f0-4eed-5980-9b03-40b4c8d2b8fa",
+    "name": "River Place Campground",
+    "latitude": 44.074444,
+    "longitude": -80.840833,
+    "elevationMeters": 400,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "River Place Campground",
+    "locality": "Ayton",
+    "region": "Ontario",
+    "countryCode": "CA",
+    "countryName": "Canada",
+    "timezone": "America/Toronto",
+    "coordinateSource": {
+      "title": "Starfest official directions",
+      "url": "https://www.nyaa.ca/index.php?page=sf25%2Fsf.directionstostarfest",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "directions",
+      "url": "https://www.nyaa.ca/index.php?page=sf25%2Fsf.directionstostarfest"
+    },
+    {
+      "role": "event",
+      "url": "https://www.nyaa.ca/starfest.html"
+    }
+  ],
+  "events": [
+    {
+      "id": "starfest-canada-2026",
+      "name": "Starfest 2026",
+      "start": "2026-08-13",
+      "end": "2026-08-16",
+      "status": "completed",
+      "url": "https://www.nyaa.ca/starfest.html",
+      "source": {
+        "title": "North York Astronomical Association Starfest",
+        "url": "https://www.nyaa.ca/starfest.html",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

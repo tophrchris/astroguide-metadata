@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "texas-star-party",
+  "displayName": "Texas Star Party",
+  "description": "A week-long observing gathering at Prude Ranch in the Davis Mountains, with dark-sky observing, astronomy talks, and astrophotography activities.",
+  "descriptionSources": [
+    {
+      "title": "Texas Star Party official site",
+      "url": "https://texasstarparty.org/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "a8079c1c-8f0c-5d93-a8e9-bdcc09409408",
+    "name": "Prude Ranch",
+    "latitude": 30.6002,
+    "longitude": -103.9446,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Prude Ranch",
+    "locality": "Fort Davis",
+    "region": "Texas",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Chicago",
+    "coordinateSource": {
+      "title": "Texas Star Party official event listing",
+      "url": "https://texasstarparty.org/",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://texasstarparty.org/"
+    },
+    {
+      "role": "venue",
+      "url": "https://www.prude-ranch.com/contact/"
+    }
+  ],
+  "events": [
+    {
+      "id": "texas-star-party-2027",
+      "name": "Texas Star Party 2027",
+      "start": "2027-05-02",
+      "end": "2027-05-09",
+      "status": "scheduled",
+      "url": "https://texasstarparty.org/",
+      "source": {
+        "title": "Texas Star Party official event listing",
+        "url": "https://texasstarparty.org/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

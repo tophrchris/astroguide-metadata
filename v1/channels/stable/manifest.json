@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-09-02T11:40:59Z",
-  "publishedAt": "2026-09-02T11:40:59Z",
+  "generatedAt": "2026-09-02T13:00:00Z",
+  "publishedAt": "2026-09-02T13:00:00Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -144,6 +144,24 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled dark sky places snapshot only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "starPartyAstroSites",
+      "packageVersion": "star-party-astrosites-v1-20260902",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/star-party-astrosites/star_party_astrosites_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "af4d3e911067feb85ed1b9bba1623e40e17655c6ef4d241911e07d9d9ceeb51e"
+      },
+      "byteSize": 34913,
+      "siteCount": 15,
+      "eventCount": 19,
+      "scheduledEventCount": 16,
+      "minSupportedAppVersion": "1.4.1",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Clients that support this family should retain a bundled or cached validated snapshot and hide Star Parties when no compatible package exists. Expired cached data remains usable until replaced by a validated refresh."
     },
     {
       "family": "cometSnapshot",

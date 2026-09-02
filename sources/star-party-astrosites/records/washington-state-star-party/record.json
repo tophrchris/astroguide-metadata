@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "washington-state-star-party",
+  "displayName": "Washington State Star Party",
+  "description": "A multi-day observing event, formerly called the Table Mountain Star Party, held on public land near Jameson Lake with talks and observing programs.",
+  "descriptionSources": [
+    {
+      "title": "Washington State Star Party official site",
+      "url": "https://washingtonstatestarparty.com/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "5ed35942-5e84-56a6-9cc2-3fccbc3afa11",
+    "name": "Jameson Lake star party site",
+    "latitude": 47.656,
+    "longitude": -119.628,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Jameson Lake star party site",
+    "locality": "Mansfield",
+    "region": "Washington",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Los_Angeles",
+    "coordinateSource": {
+      "title": "Washington State Star Party official site information and GPS coordinates",
+      "url": "https://washingtonstatestarparty.com/?page_id=467",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "directions",
+      "url": "https://washingtonstatestarparty.com/?page_id=467"
+    },
+    {
+      "role": "event",
+      "url": "https://washingtonstatestarparty.com/"
+    }
+  ],
+  "events": [
+    {
+      "id": "washington-state-star-party-2026",
+      "name": "Washington State Star Party 2026",
+      "start": "2026-07-14",
+      "end": "2026-07-19",
+      "status": "completed",
+      "url": "https://washingtonstatestarparty.com/?page_id=467",
+      "source": {
+        "title": "Washington State Star Party official 2026 event information",
+        "url": "https://washingtonstatestarparty.com/?page_id=467",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

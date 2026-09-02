@@ -25,6 +25,7 @@ FAMILY_ORDER = [
     "telescopeReferencePrices",
     "telescopeOfficialProductLinks",
     "darkSkyPlaces",
+    "starPartyAstroSites",
     "cometSnapshot",
     "cometOrbitGeometry",
     "cometDetailMetadata",

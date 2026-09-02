@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "kelling-heath-autumn-equinox-sky-camp",
+  "displayName": "Kelling Heath Autumn Equinox Sky Camp",
+  "description": "A week-long UK observing camp at Kelling Heath Holiday Park in North Norfolk, using dedicated touring fields and a site-wide dark-hours lighting policy.",
+  "descriptionSources": [
+    {
+      "title": "Kelling Heath Autumn Equinox Sky Camp official site",
+      "url": "https://las-skycamp.org/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "bd44358c-9bf1-5a34-b71f-d52d3be2a424",
+    "name": "Kelling Heath Holiday Park",
+    "latitude": 52.927924,
+    "longitude": 1.14089,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Kelling Heath Holiday Park",
+    "locality": "Holt",
+    "region": "Norfolk",
+    "countryCode": "GB",
+    "countryName": "United Kingdom",
+    "timezone": "Europe/London",
+    "coordinateSource": {
+      "title": "UK Planning Data venue point",
+      "url": "https://www.planning.data.gov.uk/entity/19173205",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://las-skycamp.org/"
+    }
+  ],
+  "events": [
+    {
+      "id": "kelling-heath-autumn-equinox-sky-camp-2026",
+      "name": "Kelling Heath Autumn Equinox Sky Camp 2026",
+      "start": "2026-10-05",
+      "end": "2026-10-12",
+      "status": "scheduled",
+      "url": "https://las-skycamp.org/",
+      "source": {
+        "title": "Kelling Heath Autumn Equinox Sky Camp official dates",
+        "url": "https://las-skycamp.org/",
+        "verifiedAt": "2026-09-02"
+      }
+    },
+    {
+      "id": "kelling-heath-autumn-equinox-sky-camp-2027",
+      "name": "Kelling Heath Autumn Equinox Sky Camp 2027",
+      "start": "2027-09-27",
+      "end": "2027-10-04",
+      "status": "scheduled",
+      "url": "https://las-skycamp.org/",
+      "source": {
+        "title": "Kelling Heath Autumn Equinox Sky Camp official future dates",
+        "url": "https://las-skycamp.org/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

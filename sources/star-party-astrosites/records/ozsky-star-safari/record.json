@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "ozsky-star-safari",
+  "displayName": "OzSky Star Safari",
+  "description": "An observing-focused southern-sky event near Coonabarabran, where participants share large telescopes and structured observing time at a rural motel site.",
+  "descriptionSources": [
+    {
+      "title": "OzSky Star Safari overview",
+      "url": "https://ozsky.org/overview/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "71af3c34-29a0-54d8-82d5-b1993edc91b0",
+    "name": "Warrumbungles Mountain Motel",
+    "latitude": -31.273333,
+    "longitude": 149.189444,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Warrumbungles Mountain Motel",
+    "locality": "Coonabarabran",
+    "region": "New South Wales",
+    "countryCode": "AU",
+    "countryName": "Australia",
+    "timezone": "Australia/Sydney",
+    "coordinateSource": {
+      "title": "OzSky official site and coordinates",
+      "url": "https://ozsky.org/site/",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://ozsky.org/overview/"
+    },
+    {
+      "role": "venueInformation",
+      "url": "https://ozsky.org/site/"
+    }
+  ],
+  "events": [
+    {
+      "id": "ozsky-star-safari-classic-2027",
+      "name": "OzSky Star Safari Classic 2027",
+      "start": "2027-04-03",
+      "end": "2027-04-10",
+      "status": "scheduled",
+      "url": "https://ozsky.org/overview/",
+      "source": {
+        "title": "OzSky Star Safari official overview",
+        "url": "https://ozsky.org/overview/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

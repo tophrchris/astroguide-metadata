@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "almost-heaven-star-party",
+  "displayName": "Almost Heaven Star Party",
+  "description": "A high-elevation observing event at Spruce Knob Mountain Center in West Virginia, combining multi-night observing with astronomy talks and programs.",
+  "descriptionSources": [
+    {
+      "title": "Almost Heaven Star Party 2026",
+      "url": "https://www.ahsp.org/home-2026/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "748a23a5-5197-510e-88af-ddaab53dd7d8",
+    "name": "Spruce Knob Mountain Center main observing field",
+    "latitude": 38.676667,
+    "longitude": -79.567222,
+    "elevationMeters": 1341,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Spruce Knob Mountain Center main observing field",
+    "locality": "Circleville",
+    "region": "West Virginia",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/New_York",
+    "coordinateSource": {
+      "title": "Almost Heaven Star Party official FAQ",
+      "url": "https://www.ahsp.org/frequently-asked-questions/",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.ahsp.org/"
+    },
+    {
+      "role": "venueInformation",
+      "url": "https://www.ahsp.org/frequently-asked-questions/"
+    }
+  ],
+  "events": [
+    {
+      "id": "almost-heaven-star-party-2026",
+      "name": "Almost Heaven Star Party 2026",
+      "start": "2026-08-10",
+      "end": "2026-08-16",
+      "status": "completed",
+      "url": "https://www.ahsp.org/home-2026/",
+      "source": {
+        "title": "Almost Heaven Star Party 2026 official page",
+        "url": "https://www.ahsp.org/home-2026/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

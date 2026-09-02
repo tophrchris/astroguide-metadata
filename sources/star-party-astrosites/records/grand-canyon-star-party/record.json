@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "grand-canyon-star-party",
+  "displayName": "Grand Canyon Star Party",
+  "description": "A week of free public astronomy programs at Grand Canyon National Park's South Rim, including telescope viewing, presentations, and constellation tours.",
+  "descriptionSources": [
+    {
+      "title": "Grand Canyon National Park Star Party",
+      "url": "https://home.nps.gov/grca/planyourvisit/grand-canyon-star-party.htm/index.htm",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "3a9c5645-e53b-5f15-b081-ab469c12622c",
+    "name": "Grand Canyon Visitor Center, South Rim",
+    "latitude": 36.058889,
+    "longitude": -112.109167,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Grand Canyon Visitor Center, South Rim",
+    "locality": "Grand Canyon Village",
+    "region": "Arizona",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Phoenix",
+    "coordinateSource": {
+      "title": "Grand Canyon National Park official trip planner visitor center coordinates",
+      "url": "https://www.nps.gov/grca/learn/news/upload/trip-planner-grca.pdf",
+      "verifiedAt": "2026-09-02"
+    },
+    "relatedDarkSkyPlaceID": "darksky:grand-canyon-national-park-dark-sky-park"
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://home.nps.gov/grca/planyourvisit/grand-canyon-star-party.htm/index.htm"
+    },
+    {
+      "role": "venue",
+      "url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-visitor-center.htm"
+    }
+  ],
+  "events": [
+    {
+      "id": "grand-canyon-star-party-2027",
+      "name": "Grand Canyon Star Party 2027",
+      "start": "2027-05-29",
+      "end": "2027-06-05",
+      "status": "scheduled",
+      "url": "https://home.nps.gov/grca/planyourvisit/grand-canyon-star-party.htm/index.htm",
+      "source": {
+        "title": "Grand Canyon National Park official future dates",
+        "url": "https://home.nps.gov/grca/planyourvisit/grand-canyon-star-party.htm/index.htm",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

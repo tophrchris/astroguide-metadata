@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "oregon-star-party",
+  "displayName": "Oregon Star Party",
+  "description": "A remote summer observing gathering at Indian Trail Spring in the Ochoco National Forest, using a high-elevation site with broad horizons.",
+  "descriptionSources": [
+    {
+      "title": "About Oregon Star Party",
+      "url": "https://oregonstarparty.org/about/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "1c880856-603b-5669-bbf3-32d507400c09",
+    "name": "Indian Trail Spring",
+    "latitude": 44.2988,
+    "longitude": -120.1417,
+    "elevationMeters": 1530,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Indian Trail Spring",
+    "locality": "Ochoco National Forest",
+    "region": "Oregon",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Los_Angeles",
+    "coordinateSource": {
+      "title": "Oregon Star Party official site coordinates",
+      "url": "https://oregonstarparty.org/wp-content/uploads/2017/07/OSP-Newsletter-Vol-3-Issue-1.pdf",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://oregonstarparty.org/"
+    },
+    {
+      "role": "venueInformation",
+      "url": "https://oregonstarparty.org/about/"
+    }
+  ],
+  "events": [
+    {
+      "id": "oregon-star-party-2027",
+      "name": "Oregon Star Party 2027",
+      "start": "2027-07-06",
+      "end": "2027-07-11",
+      "status": "scheduled",
+      "url": "https://oregonstarparty.org/",
+      "source": {
+        "title": "Oregon Star Party official site",
+        "url": "https://oregonstarparty.org/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

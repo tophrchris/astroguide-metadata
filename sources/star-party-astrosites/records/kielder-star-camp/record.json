@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "kielder-star-camp",
+  "displayName": "Kielder Star Camp",
+  "description": "A twice-yearly camping and observing event at Kielder Campsite in Northumberland, with informal telescope sessions and talks under protected dark skies.",
+  "descriptionSources": [
+    {
+      "title": "Kielder Star Camp official overview",
+      "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "5fdb6eb8-2eec-5924-b10c-db59c231e598",
+    "name": "Kielder Campsite",
+    "latitude": 55.237018,
+    "longitude": -2.586676,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Kielder Campsite",
+    "locality": "Kielder",
+    "region": "Northumberland",
+    "countryCode": "GB",
+    "countryName": "United Kingdom",
+    "timezone": "Europe/London",
+    "coordinateSource": {
+      "title": "Northumberland International Dark Sky Park application, Kielder Campsite OS grid reference NY 62790 93803",
+      "url": "https://www.tarset.co.uk/files/NIDSPapplication_finalversion.pdf",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp"
+    },
+    {
+      "role": "venue",
+      "url": "https://kieldercampsite.co.uk/"
+    }
+  ],
+  "events": [
+    {
+      "id": "kielder-autumn-star-camp-2026",
+      "name": "Kielder Autumn Star Camp 2026",
+      "start": "2026-10-07",
+      "end": "2026-10-12",
+      "status": "scheduled",
+      "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+      "source": {
+        "title": "Kielder Star Camp official dates",
+        "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+        "verifiedAt": "2026-09-02"
+      }
+    },
+    {
+      "id": "kielder-spring-star-camp-2027",
+      "name": "Kielder Spring Star Camp 2027",
+      "start": "2027-03-03",
+      "end": "2027-03-08",
+      "status": "scheduled",
+      "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+      "source": {
+        "title": "Kielder Star Camp official future dates",
+        "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+        "verifiedAt": "2026-09-02"
+      }
+    },
+    {
+      "id": "kielder-autumn-star-camp-2027",
+      "name": "Kielder Autumn Star Camp 2027",
+      "start": "2027-10-27",
+      "end": "2027-11-01",
+      "status": "scheduled",
+      "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+      "source": {
+        "title": "Kielder Star Camp official future dates",
+        "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

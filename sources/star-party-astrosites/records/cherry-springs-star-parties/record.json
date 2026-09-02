@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "cherry-springs-star-parties",
+  "displayName": "Cherry Springs Star Parties",
+  "description": "Two independently organized star parties use Cherry Springs State Park's public overnight astronomy field: Cherry Springs in early summer and Black Forest in autumn.",
+  "descriptionSources": [
+    {
+      "title": "Cherry Springs State Park stargazing",
+      "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing",
+      "verifiedAt": "2026-09-02"
+    },
+    {
+      "title": "Cherry Springs Star Party official dates",
+      "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
+      "verifiedAt": "2026-09-02"
+    },
+    {
+      "title": "Black Forest Star Party official site",
+      "url": "https://bfsp.org/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "b6a04270-7b2a-5ecc-949d-0f779ee93794",
+    "name": "Cherry Springs State Park Overnight Astronomy Observation Field",
+    "latitude": 41.6501,
+    "longitude": -77.8164,
+    "elevationMeters": 701,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Cherry Springs State Park Overnight Astronomy Observation Field",
+    "locality": "Coudersport",
+    "region": "Pennsylvania",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/New_York",
+    "coordinateSource": {
+      "title": "Cherry Springs State Park official stargazing field",
+      "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing",
+      "verifiedAt": "2026-09-02"
+    },
+    "relatedDarkSkyPlaceID": "darksky:cherry-springs-state-park-dark-sky-park"
+  },
+  "officialURLs": [
+    {
+      "role": "blackForestEvent",
+      "url": "https://bfsp.org/"
+    },
+    {
+      "role": "cherrySpringsEvent",
+      "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/"
+    },
+    {
+      "role": "venue",
+      "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing"
+    }
+  ],
+  "events": [
+    {
+      "id": "black-forest-star-party-2026",
+      "name": "Black Forest Star Party 2026",
+      "start": "2026-09-11",
+      "end": "2026-09-13",
+      "status": "scheduled",
+      "url": "https://bfsp.org/",
+      "source": {
+        "title": "Black Forest Star Party official site",
+        "url": "https://bfsp.org/",
+        "verifiedAt": "2026-09-02"
+      }
+    },
+    {
+      "id": "cherry-springs-star-party-2027",
+      "name": "Cherry Springs Star Party 2027",
+      "start": "2027-06-03",
+      "end": "2027-06-06",
+      "status": "scheduled",
+      "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
+      "source": {
+        "title": "Cherry Springs Star Party official future dates",
+        "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}
