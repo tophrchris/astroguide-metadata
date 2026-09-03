@@ -42,6 +42,24 @@
       "url": "https://www.prude-ranch.com/contact/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/texas-star-party/hero.jpg",
+      "sourceURL": "https://texasstarparty.org/TSPLogoNew_JustTexas-currentColor.svg",
+      "attribution": "Texas Star Party event mark via the official event site.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the scalable event mark was placed on a neutral 4:3 background because no suitable official photo was identified.",
+      "verifiedAt": "2026-09-02"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/texas-star-party/logo-thumbnail.jpg",
+      "sourceURL": "https://texasstarparty.org/TSPLogoNew_JustTexas-currentColor.svg",
+      "attribution": "Texas Star Party event mark via the official event site.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "texas-star-party-2027",

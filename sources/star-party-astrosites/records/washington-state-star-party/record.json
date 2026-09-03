@@ -42,6 +42,24 @@
       "url": "https://washingtonstatestarparty.com/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/washington-state-star-party/hero.jpg",
+      "sourceURL": "https://washingtonstatestarparty.com/wp-content/uploads/2026/02/Erika-Plummer-MW-2024-1024x683.jpg",
+      "attribution": "Washington State Star Party Milky Way field photo by Erika Plummer.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Erika Plummer and TMSPA Inc. retain any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/washington-state-star-party/logo-thumbnail.jpg",
+      "sourceURL": "https://washingtonstatestarparty.com/wp-content/uploads/2026/02/WaStSP_logo_trace-cs4.gif",
+      "attribution": "Washington State Star Party logo via TMSPA Inc.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; TMSPA Inc. retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "washington-state-star-party-2026",

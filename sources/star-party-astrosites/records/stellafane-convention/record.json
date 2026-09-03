@@ -43,6 +43,24 @@
       "url": "https://stellafane.org/stellafane-main/convention/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/stellafane-convention/hero.jpg",
+      "sourceURL": "https://stellafane.org/stellafane-main/convention/2025/images/Stellafabe2025SteveHannah.jpg",
+      "attribution": "Stellafane 2025 night-sky image by Steve Hannah.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Steve Hannah and the source organization retain any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/stellafane-convention/thumbnail.jpg",
+      "sourceURL": "https://stellafane.org/stellafane-main/convention/2025/images/Stellafabe2025SteveHannah.jpg",
+      "attribution": "Square crop of the Stellafane 2025 night-sky image by Steve Hannah.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Steve Hannah and the source organization retain any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "stellafane-convention-2027",

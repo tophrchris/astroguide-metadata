@@ -203,6 +203,9 @@
         },
         "logo": {
           "$ref": "#/$defs/mediaAsset"
+        },
+        "thumbnail": {
+          "$ref": "#/$defs/mediaAsset"
         }
       }
     },

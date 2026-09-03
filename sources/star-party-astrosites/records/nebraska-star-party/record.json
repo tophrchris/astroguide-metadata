@@ -49,6 +49,24 @@
       "url": "https://www.nebraskastarparty.org/site-information/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/nebraska-star-party/hero.jpg",
+      "sourceURL": "https://www.nebraskastarparty.org/wp-content/uploads/2024/08/20230719-_1014708.jpg",
+      "attribution": "Image via Nebraska Star Party official site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/nebraska-star-party/logo-thumbnail.jpg",
+      "sourceURL": "https://www.nebraskastarparty.org/wp-content/uploads/2024/08/NSPLogo_Generic.png",
+      "attribution": "Nebraska Star Party logo via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "nebraska-star-party-2027",

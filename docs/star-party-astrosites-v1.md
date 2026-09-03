@@ -5,8 +5,10 @@
 `starPartyAstroSites` is a small, curated metadata family for the Star Parties
 folder under Sites, immediately after Dark Skies. It models the public observing
 venue as an AstroSite-compatible core and attaches one or more concrete event
-instances. A shared venue therefore remains one site even when separate
-organizations hold different events there.
+instances. A shared physical venue can back separate event listings when each
+event has its own organizer, official identity, schedule, and media.
+AstroGuide's import deduplication still prevents those listings from creating
+duplicate saved sites at the same named coordinates.
 
 Consumers can calculate two useful sort keys without changing the payload:
 
@@ -44,7 +46,9 @@ Each record contains:
 - one or more dated `events`, each with a globally stable ID, name, inclusive
   local-calendar `start` and `end`, status, official URL, source, and
   `verifiedAt`
-- optional `media.hero` and `media.logo` metadata for approved cached assets
+- optional `media.hero`, `media.logo`, and `media.thumbnail` metadata for
+  approved cached assets; `thumbnail` is reserved for a square crop when an
+  event has no stand-alone logo
 - optional `horizonResources` with source, rights, calibration, disposition,
   and an explicitly bounded visual or obstruction role
 
@@ -80,6 +84,12 @@ a reuse grant remains link-only. The builder rejects cached horizon images that
 do not have a `licensed_for_redistribution` status, verifies cached-image size,
 dimensions, and SHA-256, and rejects `visual_panorama_only` resources marked as
 calculation-ready.
+
+Event media uses a separate editorial-approval record. Its `sourceURL`,
+`attribution`, `license`, and `permissionNotes` fields preserve the source and
+the limits found during review; project-owner selection approval does not
+convert or broaden a source copyright. Keep those fields intact and recheck the
+source terms before using an event image outside this Star Party presentation.
 
 The optional `.hrz` bridge matches AstroGuide's current import convention:
 UTF-8 text, blank and comment lines ignored, and the first two
@@ -139,10 +149,12 @@ timestamp through `--generated-at`.
 
 ## Initial curated coverage
 
-The first package contains 15 public venues and 19 dated event instances:
+The current package contains 16 event listings at 15 public venues and 19 dated
+event instances:
 
 - Texas, Winter, Okie-Tex, Oregon, Nebraska, and Almost Heaven Star Parties
-- one Cherry Springs venue with Cherry Springs and Black Forest events
+- separate Cherry Springs and Black Forest event listings at their shared
+  Cherry Springs State Park observing venue
 - Kelling Heath Autumn Equinox Sky Camp, Starfest Canada, and OzSky Star Safari
 - Stellafane Convention, Mount Kobau Star Party, and Kielder Star Camp
 - Washington State Star Party and Grand Canyon Star Party
@@ -151,7 +163,7 @@ Completed 2026 instances are retained when an organizer has not yet published
 the next date. This makes the record useful and sourced without inventing a
 future recurrence.
 
-## Deferred candidates, media omissions, and horizon research
+## Deferred candidates, media provenance, and horizon research
 
 - **South Pacific Star Party** is deferred because the Astronomical Society of
   New South Wales says the next event is postponed indefinitely; the package
@@ -163,10 +175,15 @@ future recurrence.
   contract. Recheck <https://goldenstatestarparty.org/golden-state-star-party/faq/>
   only if the organizer publishes a clearly approved public event point.
 
-No hero images or logos are included in v1. The available event pages do not
-consistently establish redistribution rights, so the package keeps media empty
-instead of hotlinking or copying uncertain assets. The optional media contract
-is ready for a future explicitly licensed or permission-backed cached asset.
+The package caches the project-owner-approved media set reviewed on 2026-09-02.
+Each listing has a roughly 4:3 hero. Listings with a usable official event logo
+use a compact logo derivative in the list; the others use an explicit square
+`thumbnail` crop of the hero source. Texas uses its scalable event mark on a
+neutral 4:3 background because no suitable official photo was identified.
+Cherry Springs uses the approved Hero A observing-field photo and a separate
+crop of the event's physical field sign. Every source record retains the exact
+source link, attribution available during review, stated license status, and
+the project-owner approval note; no hotlinks are used by the consumer.
 
 The 2026-09-02 horizon research pass found three useful panorama leads but no
 machine-usable public `.hrz`/Stellarium horizon profile for any of the 15

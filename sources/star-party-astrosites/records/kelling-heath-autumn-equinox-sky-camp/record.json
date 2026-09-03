@@ -38,6 +38,24 @@
       "url": "https://las-skycamp.org/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/kelling-heath-autumn-equinox-sky-camp/hero.jpg",
+      "sourceURL": "https://las-skycamp.org/images/Index_5.jpg",
+      "attribution": "Image via Loughton Astronomical Society Sky Camp.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/kelling-heath-autumn-equinox-sky-camp/thumbnail.jpg",
+      "sourceURL": "https://las-skycamp.org/images/Index_5.jpg",
+      "attribution": "Square crop of the image via Loughton Astronomical Society Sky Camp.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "kelling-heath-autumn-equinox-sky-camp-2026",

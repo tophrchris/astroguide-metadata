@@ -43,6 +43,24 @@
       "url": "https://www.okie-tex.com/schedule.php"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/okie-tex-star-party/hero.jpg",
+      "sourceURL": "https://www.okie-tex.com/photos/2009/MilkyWay_west.jpg",
+      "attribution": "Milky Way over Okie-Tex, photographed by Donald Bumgarner on September 17, 2009.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Donald Bumgarner and the source organization retain any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/okie-tex-star-party/logo-thumbnail.jpg",
+      "sourceURL": "https://www.okie-tex.com/images/OTSP_logo_l.gif",
+      "attribution": "Okie-Tex Star Party logo via the Oklahoma City Astronomy Club.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "okie-tex-star-party-2026",

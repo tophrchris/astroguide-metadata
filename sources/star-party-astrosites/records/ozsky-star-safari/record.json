@@ -42,6 +42,24 @@
       "url": "https://ozsky.org/site/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/ozsky-star-safari/hero.jpg",
+      "sourceURL": "https://ozsky.org/Gallery/OzSky2026/Milky_Way_OzSky_2026__Steve_Odendahl.jpg",
+      "attribution": "Milky Way at OzSky 2026, photographed by Steve Odendahl.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Steve Odendahl and the source organization retain any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/ozsky-star-safari/logo-thumbnail.jpg",
+      "sourceURL": "https://ozsky.org/common/images/OzSky-2026-Website-Header-Logo.png",
+      "attribution": "OzSky Star Safari logo via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "ozsky-star-safari-classic-2027",

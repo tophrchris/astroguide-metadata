@@ -43,6 +43,24 @@
       "url": "https://www.nyaa.ca/starfest.html"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/starfest-canada/hero.jpg",
+      "sourceURL": "https://www.nyaa.ca/body_pages/images/sf2023-group-photo_600x512.jpg",
+      "attribution": "Starfest 2023 group photo via the North York Astronomical Association.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/starfest-canada/thumbnail.jpg",
+      "sourceURL": "https://www.nyaa.ca/body_pages/images/sf2023-group-photo_600x512.jpg",
+      "attribution": "Square crop of the Starfest 2023 group photo via the North York Astronomical Association.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "starfest-canada-2026",

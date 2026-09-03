@@ -41,15 +41,15 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
     def test_package_contract_counts_and_order_are_deterministic(self):
         self.assertEqual(self.package["schemaVersion"], 1)
         self.assertEqual(self.package["packageFamily"], "starPartyAstroSites")
-        self.assertEqual(self.package["packageVersion"], "star-party-astrosites-v1-20260902")
-        self.assertEqual(self.package["scope"]["siteCount"], 15)
+        self.assertEqual(self.package["packageVersion"], "star-party-astrosites-v1-20260903-r2")
+        self.assertEqual(self.package["scope"]["siteCount"], 16)
         self.assertEqual(self.package["scope"]["eventCount"], 19)
         self.assertEqual(self.package["scope"]["scheduledEventCount"], 16)
         self.assertEqual(self.package["scope"]["completedEventCount"], 3)
         self.assertEqual(self.package["scope"]["cancelledEventCount"], 0)
         self.assertEqual(self.package["scope"]["countryCount"], 4)
-        self.assertEqual(self.package["scope"]["horizonResourceCount"], 3)
-        self.assertEqual(self.package["scope"]["cachedHorizonAssetCount"], 1)
+        self.assertEqual(self.package["scope"]["horizonResourceCount"], 4)
+        self.assertEqual(self.package["scope"]["cachedHorizonAssetCount"], 2)
         self.assertEqual(self.package["scope"]["obstructionProfileCount"], 0)
         ids = [record["id"] for record in self.records]
         self.assertEqual(ids, sorted(ids))
@@ -67,7 +67,8 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
             "winter-star-party",
             "okie-tex-star-party",
             "oregon-star-party",
-            "cherry-springs-star-parties",
+            "black-forest-star-party",
+            "cherry-springs-star-party",
             "nebraska-star-party",
             "almost-heaven-star-party",
             "kelling-heath-autumn-equinox-sky-camp",
@@ -83,16 +84,27 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
         self.assertNotIn("south-pacific-star-party", self.by_id)
         self.assertNotIn("golden-state-star-party", self.by_id)
 
-    def test_shared_cherry_springs_venue_has_both_events(self):
-        record = self.by_id["cherry-springs-star-parties"]
+    def test_cherry_springs_events_are_separate_listings_at_the_shared_venue(self):
+        black_forest = self.by_id["black-forest-star-party"]
+        cherry_springs = self.by_id["cherry-springs-star-party"]
         self.assertEqual(
-            {event["id"] for event in record["events"]},
-            {"black-forest-star-party-2026", "cherry-springs-star-party-2027"},
+            [event["id"] for event in black_forest["events"]],
+            ["black-forest-star-party-2026"],
         )
         self.assertEqual(
-            record["location"]["relatedDarkSkyPlaceID"],
-            "darksky:cherry-springs-state-park-dark-sky-park",
+            [event["id"] for event in cherry_springs["events"]],
+            ["cherry-springs-star-party-2027"],
         )
+        self.assertEqual(black_forest["astroSite"]["name"], cherry_springs["astroSite"]["name"])
+        self.assertEqual(
+            (black_forest["astroSite"]["latitude"], black_forest["astroSite"]["longitude"]),
+            (cherry_springs["astroSite"]["latitude"], cherry_springs["astroSite"]["longitude"]),
+        )
+        for record in (black_forest, cherry_springs):
+            self.assertEqual(
+                record["location"]["relatedDarkSkyPlaceID"],
+                "darksky:cherry-springs-state-park-dark-sky-park",
+            )
 
     def test_records_have_portable_sites_descriptions_and_provenance(self):
         generated_date = dt.datetime.fromisoformat(
@@ -148,8 +160,21 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
         self.assertEqual(schema["$schema"], "https://json-schema.org/draft/2020-12/schema")
         self.assertIn("astroSite", schema["properties"])
         self.assertIn("events", schema["properties"])
-        self.assertEqual(set(schema["properties"]["media"]["properties"]), {"hero", "logo"})
-        self.assertTrue(all("media" not in record for record in self.records))
+        self.assertEqual(
+            set(schema["properties"]["media"]["properties"]),
+            {"hero", "logo", "thumbnail"},
+        )
+        self.assertTrue(all("hero" in record["media"] for record in self.records))
+        for record in self.records:
+            with self.subTest(record=record["id"]):
+                self.assertEqual(
+                    {"logo", "thumbnail"}.intersection(record["media"]),
+                    {"logo"} if "logo" in record["media"] else {"thumbnail"},
+                )
+                for asset in record["media"].values():
+                    self.assertTrue((ROOT / asset["assetPath"]).is_file())
+                    self.assertTrue(asset["attribution"])
+                    self.assertTrue(asset["permissionNotes"])
         self.assertIn("horizonResources", schema["properties"])
         self.assertEqual(
             set(schema["$defs"]["horizonResource"]["properties"]["quality"]["enum"]),
@@ -170,7 +195,8 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
         self.assertEqual(
             set(resources),
             {
-                "cherry-springs-state-park-panorama-2009",
+                "black-forest-cherry-springs-panorama-2009",
+                "cherry-springs-star-party-panorama-2009",
                 "almost-heaven-entrance-to-green-lot-panorama",
                 "oregon-star-party-panorama",
             },
@@ -183,18 +209,22 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
                 )
                 self.assertNotIn("obstructionProfile", resource)
 
-        cherry = resources["cherry-springs-state-park-panorama-2009"]
-        self.assertEqual(cherry["disposition"], "cached_visual_reference")
-        self.assertEqual(
-            cherry["rights"]["permissionStatus"], "licensed_for_redistribution"
-        )
-        self.assertEqual(cherry["rights"]["licenseName"], "CC BY-SA 3.0")
-        asset = cherry["asset"]
-        asset_path = ROOT / asset["path"]
-        asset_bytes = asset_path.read_bytes()
-        self.assertEqual(hashlib.sha256(asset_bytes).hexdigest(), asset["sha256"])
-        self.assertEqual(len(asset_bytes), asset["byteSize"])
-        self.assertEqual(BUILDER.image_dimensions(asset_path), (3840, 281))
+        for resource_id in (
+            "black-forest-cherry-springs-panorama-2009",
+            "cherry-springs-star-party-panorama-2009",
+        ):
+            cherry = resources[resource_id]
+            self.assertEqual(cherry["disposition"], "cached_visual_reference")
+            self.assertEqual(
+                cherry["rights"]["permissionStatus"], "licensed_for_redistribution"
+            )
+            self.assertEqual(cherry["rights"]["licenseName"], "CC BY-SA 3.0")
+            asset = cherry["asset"]
+            asset_path = ROOT / asset["path"]
+            asset_bytes = asset_path.read_bytes()
+            self.assertEqual(hashlib.sha256(asset_bytes).hexdigest(), asset["sha256"])
+            self.assertEqual(len(asset_bytes), asset["byteSize"])
+            self.assertEqual(BUILDER.image_dimensions(asset_path), (3840, 281))
 
         almost_heaven = resources["almost-heaven-entrance-to-green-lot-panorama"]
         self.assertEqual(almost_heaven["disposition"], "link_only_pending_permission")
@@ -281,22 +311,22 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
 
     def test_validator_rejects_uncalibrated_or_unlicensed_horizon_use(self):
         resource = copy.deepcopy(
-            self.by_id["cherry-springs-star-parties"]["horizonResources"][0]
+            self.by_id["cherry-springs-star-party"]["horizonResources"][0]
         )
 
         resource["calibration"]["suitableForObstructionCalculations"] = True
         with self.assertRaises(BUILDER.ValidationError):
             BUILDER.validate_horizon_resources(
-                [resource], "cherry-springs-star-parties", dt.date(2026, 9, 2)
+                [resource], "cherry-springs-star-party", dt.date(2026, 9, 3)
             )
 
         resource = copy.deepcopy(
-            self.by_id["cherry-springs-star-parties"]["horizonResources"][0]
+            self.by_id["cherry-springs-star-party"]["horizonResources"][0]
         )
         resource["rights"]["permissionStatus"] = "permission_required"
         with self.assertRaises(BUILDER.ValidationError):
             BUILDER.validate_horizon_resources(
-                [resource], "cherry-springs-star-parties", dt.date(2026, 9, 2)
+                [resource], "cherry-springs-star-party", dt.date(2026, 9, 3)
             )
 
     def test_hrz_parser_matches_astroguide_azimuth_altitude_convention(self):

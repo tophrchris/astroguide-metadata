@@ -43,6 +43,24 @@
       "url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-visitor-center.htm"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/grand-canyon-star-party/hero.jpg",
+      "sourceURL": "https://www.nps.gov/grca/planyourvisit/images/Still-6.jpg",
+      "attribution": "Grand Canyon Star Party image via Grand Canyon National Park / National Park Service.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; no separate image credit or license was published with the source image.",
+      "verifiedAt": "2026-09-02"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/grand-canyon-star-party/thumbnail.jpg",
+      "sourceURL": "https://www.nps.gov/grca/planyourvisit/images/Still-6.jpg",
+      "attribution": "Square crop of the Grand Canyon Star Party image via the National Park Service.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; no separate image credit or license was published with the source image.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "grand-canyon-star-party-2027",

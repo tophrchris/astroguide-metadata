@@ -22,6 +22,7 @@ MANIFEST_PATH = REPO_ROOT / "v1/channels/stable/manifest.json"
 METADATA_ORIGIN = "https://metadata.astroguide.space"
 PACKAGE_FAMILY = "starPartyAstroSites"
 CACHE_TTL_SECONDS = 604800
+PACKAGE_REVISION = 2
 SOURCE_SITE_ID_ROOT = f"{METADATA_ORIGIN}/star-party-astrosites/"
 
 FAMILY_ORDER = [
@@ -191,8 +192,10 @@ def expected_source_site_id(record_id: str) -> str:
 def validate_media(media, record_id: str, generated_date: dt.date) -> None:
     if not isinstance(media, dict) or not media:
         raise ValidationError(f"{record_id}.media must be a non-empty object when present.")
-    if not set(media).issubset({"hero", "logo"}):
-        raise ValidationError(f"{record_id}.media supports only hero and logo assets.")
+    if not set(media).issubset({"hero", "logo", "thumbnail"}):
+        raise ValidationError(
+            f"{record_id}.media supports only hero, logo, and thumbnail assets."
+        )
     required = {
         "assetPath",
         "sourceURL",
@@ -206,11 +209,22 @@ def validate_media(media, record_id: str, generated_date: dt.date) -> None:
         if not isinstance(asset, dict) or set(asset) != required:
             raise ValidationError(f"{label} must contain exactly {sorted(required)}.")
         asset_path = validate_nonempty_string(asset["assetPath"], f"{label}.assetPath")
-        prefix = "v1/assets/star-party-astrosites/"
+        prefix = f"v1/assets/star-party-astrosites/{record_id}/"
         if not asset_path.startswith(prefix) or ".." in Path(asset_path).parts:
             raise ValidationError(f"{label}.assetPath must stay under {prefix}.")
-        if not (REPO_ROOT / asset_path).is_file():
+        local_path = REPO_ROOT / asset_path
+        if not local_path.is_file():
             raise ValidationError(f"{label}.assetPath does not exist: {asset_path}")
+        width, height = image_dimensions(local_path)
+        if role == "hero":
+            if width < 600 or height < 450 or not 1.3 <= width / height <= 1.37:
+                raise ValidationError(
+                    f"{label}.assetPath must be an approximately 4:3 image of at least 600x450."
+                )
+        elif width != height or width < 200:
+            raise ValidationError(
+                f"{label}.assetPath must be a square image of at least 200x200."
+            )
         validate_https_url(asset["sourceURL"], f"{label}.sourceURL")
         validate_nonempty_string(asset["attribution"], f"{label}.attribution")
         validate_nonempty_string(asset["license"], f"{label}.license")
@@ -234,7 +248,7 @@ def image_dimensions(path: Path) -> tuple[int, int]:
     if data.startswith(b"\x89PNG\r\n\x1a\n") and len(data) >= 24:
         return int.from_bytes(data[16:20], "big"), int.from_bytes(data[20:24], "big")
     if not data.startswith(b"\xff\xd8"):
-        raise ValidationError(f"Unsupported cached horizon image format: {path}")
+        raise ValidationError(f"Unsupported cached image format: {path}")
 
     start_of_frame_markers = {
         0xC0,
@@ -721,7 +735,9 @@ def build_package(records: list[dict], generated_at: str) -> dict:
     return {
         "schemaVersion": 1,
         "packageFamily": PACKAGE_FAMILY,
-        "packageVersion": f"star-party-astrosites-v1-{generated_date:%Y%m%d}",
+        "packageVersion": (
+            f"star-party-astrosites-v1-{generated_date:%Y%m%d}-r{PACKAGE_REVISION}"
+        ),
         "generatedAt": generated_at,
         "scope": {
             "siteCount": len(normalized),

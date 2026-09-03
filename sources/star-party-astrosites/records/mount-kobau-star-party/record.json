@@ -43,6 +43,24 @@
       "url": "https://mksp.ca/home-2/mksp-map/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/mount-kobau-star-party/hero.jpg",
+      "sourceURL": "https://mksp.ca/wp-content/uploads/2020/07/cropped-KobauSkies2019.jpg",
+      "attribution": "Mount Kobau midnight skies, photographed by attendee David Kwan in 2019.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; David Kwan and the source organization retain any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/mount-kobau-star-party/logo-thumbnail.jpg",
+      "sourceURL": "https://mksp.ca/wp-content/uploads/2020/07/MKSP_Logo_lg.jpg",
+      "attribution": "Mount Kobau Star Party logo via the Mount Kobau Astronomical Society.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "mount-kobau-star-party-2027",
