@@ -42,6 +42,24 @@
       "url": "https://www.scas.org/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/winter-star-party/hero.jpg",
+      "sourceURL": "https://www.scas.org/assetsGalleries/79/lg/galleryid-79_docid-12000.jpg",
+      "attribution": "Winter Star Party 2026 gallery image via the Southern Cross Astronomical Society.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization and photographer retain any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/winter-star-party/thumbnail.jpg",
+      "sourceURL": "https://www.scas.org/assetsGalleries/79/lg/galleryid-79_docid-12000.jpg",
+      "attribution": "Square crop of a Winter Star Party 2026 gallery image via the Southern Cross Astronomical Society.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization and photographer retain any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "winter-star-party-2027",

@@ -43,6 +43,24 @@
       "url": "https://oregonstarparty.org/about/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/oregon-star-party/hero.jpg",
+      "sourceURL": "https://oregonstarparty.org/wp-content/uploads/2021/02/osp-at-night-scaled.jpg",
+      "attribution": "Night observing-field image via Oregon Star Party.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/oregon-star-party/logo-thumbnail.jpg",
+      "sourceURL": "https://oregonstarparty.org/wp-content/uploads/2026/03/Tent2OSP2026artworksb_WEBSITE-HEADER-FOOTER.jpg",
+      "attribution": "Oregon Star Party 2026 artwork via the official event site; design credit shown there as Sara B.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the designer and source organization retain any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "oregon-star-party-2027",

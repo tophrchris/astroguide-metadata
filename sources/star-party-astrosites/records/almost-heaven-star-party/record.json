@@ -43,6 +43,24 @@
       "url": "https://www.ahsp.org/frequently-asked-questions/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/almost-heaven-star-party/hero.jpg",
+      "sourceURL": "https://i0.wp.com/www.ahsp.org/wp-content/gallery/ahsp-photos/star_party_ahsp_0806_009.jpg?w=1600",
+      "attribution": "Star-party photograph via Northern Virginia Astronomy Club / Almost Heaven Star Party.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/almost-heaven-star-party/logo-thumbnail.jpg",
+      "sourceURL": "https://www.ahsp.org/wp-content/uploads/2014/12/cropped-AHPS2015.png",
+      "attribution": "Almost Heaven Star Party logo via Northern Virginia Astronomy Club.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "almost-heaven-star-party-2026",

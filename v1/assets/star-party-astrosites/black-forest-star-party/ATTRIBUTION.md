@@ -8,4 +8,6 @@
 
 The cached derivative is distributed under CC BY-SA 3.0. The source also offers
 the original under the GNU Free Documentation License; this repository uses the
-CC BY-SA 3.0 option.
+CC BY-SA 3.0 option. Black Forest Star Party and Cherry Springs Star Party share
+this public observing venue, so each event record carries the same visual-only
+panorama reference.

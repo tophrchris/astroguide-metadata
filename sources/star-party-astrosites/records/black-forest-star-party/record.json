@@ -1,29 +1,24 @@
 {
   "schemaVersion": 1,
   "recordKind": "starPartyAstroSite",
-  "id": "cherry-springs-star-parties",
-  "displayName": "Cherry Springs Star Parties",
-  "description": "Two independently organized star parties use Cherry Springs State Park's public overnight astronomy field: Cherry Springs in early summer and Black Forest in autumn.",
+  "id": "black-forest-star-party",
+  "displayName": "Black Forest Star Party",
+  "description": "An autumn observing gathering presented by the Central Pennsylvania Observers at Cherry Springs State Park's Overnight Astronomy Observation Field.",
   "descriptionSources": [
-    {
-      "title": "Cherry Springs State Park stargazing",
-      "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing",
-      "verifiedAt": "2026-09-02"
-    },
-    {
-      "title": "Cherry Springs Star Party official dates",
-      "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
-      "verifiedAt": "2026-09-02"
-    },
     {
       "title": "Black Forest Star Party official site",
       "url": "https://bfsp.org/",
+      "verifiedAt": "2026-09-02"
+    },
+    {
+      "title": "Cherry Springs State Park stargazing",
+      "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing",
       "verifiedAt": "2026-09-02"
     }
   ],
   "astroSite": {
     "schemaVersion": 1,
-    "sourceSiteID": "b6a04270-7b2a-5ecc-949d-0f779ee93794",
+    "sourceSiteID": "b7491992-377b-55d7-9910-b0fa9b4113be",
     "name": "Cherry Springs State Park Overnight Astronomy Observation Field",
     "latitude": 41.6501,
     "longitude": -77.8164,
@@ -46,18 +41,32 @@
   },
   "officialURLs": [
     {
-      "role": "blackForestEvent",
+      "role": "event",
       "url": "https://bfsp.org/"
-    },
-    {
-      "role": "cherrySpringsEvent",
-      "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/"
     },
     {
       "role": "venue",
       "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/black-forest-star-party/hero.jpg",
+      "sourceURL": "https://bfsp.org/wp-content/uploads/2023/03/hd-wallpaper-g1dc0e5b76_1280.jpg",
+      "attribution": "Image via Black Forest Star Party / Central Pennsylvania Observers.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/black-forest-star-party/thumbnail.jpg",
+      "sourceURL": "https://bfsp.org/wp-content/uploads/2023/03/hd-wallpaper-g1dc0e5b76_1280.jpg",
+      "attribution": "Square crop of the Black Forest Star Party image via Central Pennsylvania Observers.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "black-forest-star-party-2026",
@@ -71,24 +80,11 @@
         "url": "https://bfsp.org/",
         "verifiedAt": "2026-09-02"
       }
-    },
-    {
-      "id": "cherry-springs-star-party-2027",
-      "name": "Cherry Springs Star Party 2027",
-      "start": "2027-06-03",
-      "end": "2027-06-06",
-      "status": "scheduled",
-      "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
-      "source": {
-        "title": "Cherry Springs Star Party official future dates",
-        "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
-        "verifiedAt": "2026-09-02"
-      }
     }
   ],
   "horizonResources": [
     {
-      "id": "cherry-springs-state-park-panorama-2009",
+      "id": "black-forest-cherry-springs-panorama-2009",
       "kind": "panorama",
       "quality": "visual_panorama_only",
       "disposition": "cached_visual_reference",
@@ -104,7 +100,7 @@
         "licenseName": "CC BY-SA 3.0",
         "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
         "attribution": "Cherry Springs State Park panorama by Wikimedia Commons user Ruhrfisch, licensed CC BY-SA 3.0; resized by AstroGuide.",
-        "notes": "The creator offers the original under CC BY-SA 3.0 and GFDL. AstroGuide uses the CC BY-SA 3.0 option and identifies the cached resize as a modification."
+        "notes": "The creator offers the original under CC BY-SA 3.0 and GFDL. AstroGuide uses the CC BY-SA 3.0 option and identifies the cached resize as a modification. This venue reference is shared by the separately listed Black Forest and Cherry Springs events."
       },
       "calibration": {
         "viewpointDescription": "Unspecified camera point within Cherry Springs State Park; the image includes the Overnight Astronomy Observation Field and surrounding park features.",
@@ -118,7 +114,7 @@
         "notes": "The source says Autostitch combined 13 horizontal photos into about 340 degrees, but supplies no camera coordinates, left-edge azimuth, projection model, or vertical scale. This is a visual reference, not an obstruction profile."
       },
       "asset": {
-        "path": "v1/assets/star-party-astrosites/cherry-springs-star-parties/cherry-springs-state-park-panorama-3840.jpg",
+        "path": "v1/assets/star-party-astrosites/black-forest-star-party/cherry-springs-state-park-panorama-3840.jpg",
         "sha256": "eb1dff9a0b82f4a62d8a351b323448d6a3df32d6b81a1affdb746f26d69595f9",
         "byteSize": 446841,
         "width": 3840,

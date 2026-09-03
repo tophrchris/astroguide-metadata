@@ -42,6 +42,24 @@
       "url": "https://kieldercampsite.co.uk/"
     }
   ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/kielder-star-camp/hero.jpg",
+      "sourceURL": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+      "attribution": "Image via Kielder Star Camp official site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/kielder-star-camp/thumbnail.jpg",
+      "sourceURL": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+      "attribution": "Square crop of the image via Kielder Star Camp official site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
   "events": [
     {
       "id": "kielder-autumn-star-camp-2026",

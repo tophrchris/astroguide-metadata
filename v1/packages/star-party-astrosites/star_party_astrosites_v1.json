@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "packageFamily": "starPartyAstroSites",
-  "packageVersion": "star-party-astrosites-v1-20260902",
-  "generatedAt": "2026-09-02T13:19:13Z",
+  "packageVersion": "star-party-astrosites-v1-20260903-r2",
+  "generatedAt": "2026-09-03T00:37:29Z",
   "scope": {
-    "siteCount": 15,
+    "siteCount": 16,
     "eventCount": 19,
     "scheduledEventCount": 16,
     "completedEventCount": 3,
     "cancelledEventCount": 0,
     "countryCount": 4,
-    "horizonResourceCount": 3,
-    "cachedHorizonAssetCount": 1,
+    "horizonResourceCount": 4,
+    "cachedHorizonAssetCount": 2,
     "obstructionProfileCount": 0
   },
   "starPartyAstroSites": [
@@ -60,6 +60,24 @@
           "url": "https://www.ahsp.org/frequently-asked-questions/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/almost-heaven-star-party/hero.jpg",
+          "sourceURL": "https://i0.wp.com/www.ahsp.org/wp-content/gallery/ahsp-photos/star_party_ahsp_0806_009.jpg?w=1600",
+          "attribution": "Star-party photograph via Northern Virginia Astronomy Club / Almost Heaven Star Party.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/almost-heaven-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://www.ahsp.org/wp-content/uploads/2014/12/cropped-AHPS2015.png",
+          "attribution": "Almost Heaven Star Party logo via Northern Virginia Astronomy Club.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "almost-heaven-star-party-2026",
@@ -112,18 +130,13 @@
     {
       "schemaVersion": 1,
       "recordKind": "starPartyAstroSite",
-      "id": "cherry-springs-star-parties",
-      "displayName": "Cherry Springs Star Parties",
-      "description": "Two independently organized star parties use Cherry Springs State Park's public overnight astronomy field: Cherry Springs in early summer and Black Forest in autumn.",
+      "id": "black-forest-star-party",
+      "displayName": "Black Forest Star Party",
+      "description": "An autumn observing gathering presented by the Central Pennsylvania Observers at Cherry Springs State Park's Overnight Astronomy Observation Field.",
       "descriptionSources": [
         {
           "title": "Black Forest Star Party official site",
           "url": "https://bfsp.org/",
-          "verifiedAt": "2026-09-02"
-        },
-        {
-          "title": "Cherry Springs Star Party official dates",
-          "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
           "verifiedAt": "2026-09-02"
         },
         {
@@ -134,7 +147,7 @@
       ],
       "astroSite": {
         "schemaVersion": 1,
-        "sourceSiteID": "b6a04270-7b2a-5ecc-949d-0f779ee93794",
+        "sourceSiteID": "b7491992-377b-55d7-9910-b0fa9b4113be",
         "name": "Cherry Springs State Park Overnight Astronomy Observation Field",
         "latitude": 41.6501,
         "longitude": -77.8164,
@@ -157,18 +170,32 @@
       },
       "officialURLs": [
         {
-          "role": "blackForestEvent",
+          "role": "event",
           "url": "https://bfsp.org/"
-        },
-        {
-          "role": "cherrySpringsEvent",
-          "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/"
         },
         {
           "role": "venue",
           "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/black-forest-star-party/hero.jpg",
+          "sourceURL": "https://bfsp.org/wp-content/uploads/2023/03/hd-wallpaper-g1dc0e5b76_1280.jpg",
+          "attribution": "Image via Black Forest Star Party / Central Pennsylvania Observers.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/black-forest-star-party/thumbnail.jpg",
+          "sourceURL": "https://bfsp.org/wp-content/uploads/2023/03/hd-wallpaper-g1dc0e5b76_1280.jpg",
+          "attribution": "Square crop of the Black Forest Star Party image via Central Pennsylvania Observers.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "black-forest-star-party-2026",
@@ -182,7 +209,125 @@
             "url": "https://bfsp.org/",
             "verifiedAt": "2026-09-02"
           }
+        }
+      ],
+      "horizonResources": [
+        {
+          "id": "black-forest-cherry-springs-panorama-2009",
+          "kind": "panorama",
+          "quality": "visual_panorama_only",
+          "disposition": "cached_visual_reference",
+          "source": {
+            "title": "Cherry Springs State Park panorama",
+            "pageURL": "https://commons.wikimedia.org/wiki/File:Cherry_Springs_State_Park_panorama.jpg",
+            "resourceURL": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cherry_Springs_State_Park_panorama.jpg",
+            "creator": "Wikimedia Commons user Ruhrfisch",
+            "verifiedAt": "2026-09-02"
+          },
+          "rights": {
+            "permissionStatus": "licensed_for_redistribution",
+            "licenseName": "CC BY-SA 3.0",
+            "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "attribution": "Cherry Springs State Park panorama by Wikimedia Commons user Ruhrfisch, licensed CC BY-SA 3.0; resized by AstroGuide.",
+            "notes": "The creator offers the original under CC BY-SA 3.0 and GFDL. AstroGuide uses the CC BY-SA 3.0 option and identifies the cached resize as a modification. This venue reference is shared by the separately listed Black Forest and Cherry Springs events."
+          },
+          "calibration": {
+            "viewpointDescription": "Unspecified camera point within Cherry Springs State Park; the image includes the Overnight Astronomy Observation Field and surrounding park features.",
+            "viewpointMatch": "approximate",
+            "northAzimuthOffsetDegrees": null,
+            "projectionType": "unknown_stitched",
+            "horizontalFieldOfViewDegrees": 340,
+            "verticalFieldOfViewDegrees": null,
+            "verticalScale": "unknown",
+            "suitableForObstructionCalculations": false,
+            "notes": "The source says Autostitch combined 13 horizontal photos into about 340 degrees, but supplies no camera coordinates, left-edge azimuth, projection model, or vertical scale. This is a visual reference, not an obstruction profile."
+          },
+          "asset": {
+            "path": "v1/assets/star-party-astrosites/black-forest-star-party/cherry-springs-state-park-panorama-3840.jpg",
+            "sha256": "eb1dff9a0b82f4a62d8a351b323448d6a3df32d6b81a1affdb746f26d69595f9",
+            "byteSize": 446841,
+            "width": 3840,
+            "height": 281,
+            "derivativeNotes": "Downscaled from the 16050-by-1174-pixel original to 3840 by 281 pixels as a JPEG; no skyline trace, azimuth calibration, or further crop was applied."
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "cherry-springs-star-party",
+      "displayName": "Cherry Springs Star Party",
+      "description": "An early-summer observing gathering presented by the Astronomical Society of Harrisburg at Cherry Springs State Park's Overnight Astronomy Observation Field.",
+      "descriptionSources": [
+        {
+          "title": "Cherry Springs Star Party official site",
+          "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/",
+          "verifiedAt": "2026-09-02"
         },
+        {
+          "title": "Cherry Springs Star Party official dates",
+          "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
+          "verifiedAt": "2026-09-02"
+        },
+        {
+          "title": "Cherry Springs State Park stargazing",
+          "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "a96deeaa-0ab0-5490-a7fd-ff302bed7db6",
+        "name": "Cherry Springs State Park Overnight Astronomy Observation Field",
+        "latitude": 41.6501,
+        "longitude": -77.8164,
+        "elevationMeters": 701,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Cherry Springs State Park Overnight Astronomy Observation Field",
+        "locality": "Coudersport",
+        "region": "Pennsylvania",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/New_York",
+        "coordinateSource": {
+          "title": "Cherry Springs State Park official stargazing field",
+          "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing",
+          "verifiedAt": "2026-09-02"
+        },
+        "relatedDarkSkyPlaceID": "darksky:cherry-springs-state-park-dark-sky-park"
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/cherry-springs-star-party/hero.jpg",
+          "sourceURL": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/",
+          "attribution": "Observing-field image via Astronomical Society of Harrisburg / Cherry Springs Star Party.",
+          "license": "All rights reserved",
+          "permissionNotes": "Hero A approved for AstroGuide presentation by the project owner on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/cherry-springs-star-party/thumbnail.jpg",
+          "sourceURL": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/",
+          "attribution": "Cherry Springs Star Party field-sign image via Astronomical Society of Harrisburg.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
         {
           "id": "cherry-springs-star-party-2027",
           "name": "Cherry Springs Star Party 2027",
@@ -199,7 +344,7 @@
       ],
       "horizonResources": [
         {
-          "id": "cherry-springs-state-park-panorama-2009",
+          "id": "cherry-springs-star-party-panorama-2009",
           "kind": "panorama",
           "quality": "visual_panorama_only",
           "disposition": "cached_visual_reference",
@@ -215,7 +360,7 @@
             "licenseName": "CC BY-SA 3.0",
             "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
             "attribution": "Cherry Springs State Park panorama by Wikimedia Commons user Ruhrfisch, licensed CC BY-SA 3.0; resized by AstroGuide.",
-            "notes": "The creator offers the original under CC BY-SA 3.0 and GFDL. AstroGuide uses the CC BY-SA 3.0 option and identifies the cached resize as a modification."
+            "notes": "The creator offers the original under CC BY-SA 3.0 and GFDL. AstroGuide uses the CC BY-SA 3.0 option and identifies the cached resize as a modification. This venue reference is shared by the separately listed Cherry Springs and Black Forest events."
           },
           "calibration": {
             "viewpointDescription": "Unspecified camera point within Cherry Springs State Park; the image includes the Overnight Astronomy Observation Field and surrounding park features.",
@@ -229,7 +374,7 @@
             "notes": "The source says Autostitch combined 13 horizontal photos into about 340 degrees, but supplies no camera coordinates, left-edge azimuth, projection model, or vertical scale. This is a visual reference, not an obstruction profile."
           },
           "asset": {
-            "path": "v1/assets/star-party-astrosites/cherry-springs-star-parties/cherry-springs-state-park-panorama-3840.jpg",
+            "path": "v1/assets/star-party-astrosites/cherry-springs-star-party/cherry-springs-state-park-panorama-3840.jpg",
             "sha256": "eb1dff9a0b82f4a62d8a351b323448d6a3df32d6b81a1affdb746f26d69595f9",
             "byteSize": 446841,
             "width": 3840,
@@ -284,6 +429,24 @@
           "url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-visitor-center.htm"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/grand-canyon-star-party/hero.jpg",
+          "sourceURL": "https://www.nps.gov/grca/planyourvisit/images/Still-6.jpg",
+          "attribution": "Grand Canyon Star Party image via Grand Canyon National Park / National Park Service.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; no separate image credit or license was published with the source image.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/grand-canyon-star-party/thumbnail.jpg",
+          "sourceURL": "https://www.nps.gov/grca/planyourvisit/images/Still-6.jpg",
+          "attribution": "Square crop of the Grand Canyon Star Party image via the National Park Service.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; no separate image credit or license was published with the source image.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "grand-canyon-star-party-2027",
@@ -340,6 +503,24 @@
           "url": "https://las-skycamp.org/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/kelling-heath-autumn-equinox-sky-camp/hero.jpg",
+          "sourceURL": "https://las-skycamp.org/images/Index_5.jpg",
+          "attribution": "Image via Loughton Astronomical Society Sky Camp.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/kelling-heath-autumn-equinox-sky-camp/thumbnail.jpg",
+          "sourceURL": "https://las-skycamp.org/images/Index_5.jpg",
+          "attribution": "Square crop of the image via Loughton Astronomical Society Sky Camp.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "kelling-heath-autumn-equinox-sky-camp-2026",
@@ -413,6 +594,24 @@
           "url": "https://kieldercampsite.co.uk/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/kielder-star-camp/hero.jpg",
+          "sourceURL": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+          "attribution": "Image via Kielder Star Camp official site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/kielder-star-camp/thumbnail.jpg",
+          "sourceURL": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+          "attribution": "Square crop of the image via Kielder Star Camp official site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "kielder-autumn-star-camp-2026",
@@ -500,6 +699,24 @@
           "url": "https://mksp.ca/home-2/mksp-map/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/mount-kobau-star-party/hero.jpg",
+          "sourceURL": "https://mksp.ca/wp-content/uploads/2020/07/cropped-KobauSkies2019.jpg",
+          "attribution": "Mount Kobau midnight skies, photographed by attendee David Kwan in 2019.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; David Kwan and the source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/mount-kobau-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://mksp.ca/wp-content/uploads/2020/07/MKSP_Logo_lg.jpg",
+          "attribution": "Mount Kobau Star Party logo via the Mount Kobau Astronomical Society.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "mount-kobau-star-party-2027",
@@ -567,6 +784,24 @@
           "url": "https://www.nebraskastarparty.org/site-information/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/nebraska-star-party/hero.jpg",
+          "sourceURL": "https://www.nebraskastarparty.org/wp-content/uploads/2024/08/20230719-_1014708.jpg",
+          "attribution": "Image via Nebraska Star Party official site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/nebraska-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://www.nebraskastarparty.org/wp-content/uploads/2024/08/NSPLogo_Generic.png",
+          "attribution": "Nebraska Star Party logo via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "nebraska-star-party-2027",
@@ -628,6 +863,24 @@
           "url": "https://www.okie-tex.com/schedule.php"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/okie-tex-star-party/hero.jpg",
+          "sourceURL": "https://www.okie-tex.com/photos/2009/MilkyWay_west.jpg",
+          "attribution": "Milky Way over Okie-Tex, photographed by Donald Bumgarner on September 17, 2009.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Donald Bumgarner and the source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/okie-tex-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://www.okie-tex.com/images/OTSP_logo_l.gif",
+          "attribution": "Okie-Tex Star Party logo via the Oklahoma City Astronomy Club.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "okie-tex-star-party-2026",
@@ -689,6 +942,24 @@
           "url": "https://oregonstarparty.org/about/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/oregon-star-party/hero.jpg",
+          "sourceURL": "https://oregonstarparty.org/wp-content/uploads/2021/02/osp-at-night-scaled.jpg",
+          "attribution": "Night observing-field image via Oregon Star Party.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/oregon-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://oregonstarparty.org/wp-content/uploads/2026/03/Tent2OSP2026artworksb_WEBSITE-HEADER-FOOTER.jpg",
+          "attribution": "Oregon Star Party 2026 artwork via the official event site; design credit shown there as Sara B.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the designer and source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "oregon-star-party-2027",
@@ -782,6 +1053,24 @@
           "url": "https://ozsky.org/site/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/ozsky-star-safari/hero.jpg",
+          "sourceURL": "https://ozsky.org/Gallery/OzSky2026/Milky_Way_OzSky_2026__Steve_Odendahl.jpg",
+          "attribution": "Milky Way at OzSky 2026, photographed by Steve Odendahl.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Steve Odendahl and the source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/ozsky-star-safari/logo-thumbnail.jpg",
+          "sourceURL": "https://ozsky.org/common/images/OzSky-2026-Website-Header-Logo.png",
+          "attribution": "OzSky Star Safari logo via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "ozsky-star-safari-classic-2027",
@@ -843,6 +1132,24 @@
           "url": "https://www.nyaa.ca/starfest.html"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/starfest-canada/hero.jpg",
+          "sourceURL": "https://www.nyaa.ca/body_pages/images/sf2023-group-photo_600x512.jpg",
+          "attribution": "Starfest 2023 group photo via the North York Astronomical Association.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/starfest-canada/thumbnail.jpg",
+          "sourceURL": "https://www.nyaa.ca/body_pages/images/sf2023-group-photo_600x512.jpg",
+          "attribution": "Square crop of the Starfest 2023 group photo via the North York Astronomical Association.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "starfest-canada-2026",
@@ -904,6 +1211,24 @@
           "url": "https://stellafane.org/stellafane-main/convention/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/stellafane-convention/hero.jpg",
+          "sourceURL": "https://stellafane.org/stellafane-main/convention/2025/images/Stellafabe2025SteveHannah.jpg",
+          "attribution": "Stellafane 2025 night-sky image by Steve Hannah.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Steve Hannah and the source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/stellafane-convention/thumbnail.jpg",
+          "sourceURL": "https://stellafane.org/stellafane-main/convention/2025/images/Stellafabe2025SteveHannah.jpg",
+          "attribution": "Square crop of the Stellafane 2025 night-sky image by Steve Hannah.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Steve Hannah and the source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "stellafane-convention-2027",
@@ -964,6 +1289,24 @@
           "url": "https://www.prude-ranch.com/contact/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/texas-star-party/hero.jpg",
+          "sourceURL": "https://texasstarparty.org/TSPLogoNew_JustTexas-currentColor.svg",
+          "attribution": "Texas Star Party event mark via the official event site.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the scalable event mark was placed on a neutral 4:3 background because no suitable official photo was identified.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/texas-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://texasstarparty.org/TSPLogoNew_JustTexas-currentColor.svg",
+          "attribution": "Texas Star Party event mark via the official event site.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "texas-star-party-2027",
@@ -1024,6 +1367,24 @@
           "url": "https://washingtonstatestarparty.com/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/washington-state-star-party/hero.jpg",
+          "sourceURL": "https://washingtonstatestarparty.com/wp-content/uploads/2026/02/Erika-Plummer-MW-2024-1024x683.jpg",
+          "attribution": "Washington State Star Party Milky Way field photo by Erika Plummer.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Erika Plummer and TMSPA Inc. retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/washington-state-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://washingtonstatestarparty.com/wp-content/uploads/2026/02/WaStSP_logo_trace-cs4.gif",
+          "attribution": "Washington State Star Party logo via TMSPA Inc.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; TMSPA Inc. retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "washington-state-star-party-2026",
@@ -1084,6 +1445,24 @@
           "url": "https://www.scas.org/"
         }
       ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/winter-star-party/hero.jpg",
+          "sourceURL": "https://www.scas.org/assetsGalleries/79/lg/galleryid-79_docid-12000.jpg",
+          "attribution": "Winter Star Party 2026 gallery image via the Southern Cross Astronomical Society.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization and photographer retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/winter-star-party/thumbnail.jpg",
+          "sourceURL": "https://www.scas.org/assetsGalleries/79/lg/galleryid-79_docid-12000.jpg",
+          "attribution": "Square crop of a Winter Star Party 2026 gallery image via the Southern Cross Astronomical Society.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization and photographer retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
       "events": [
         {
           "id": "winter-star-party-2027",
