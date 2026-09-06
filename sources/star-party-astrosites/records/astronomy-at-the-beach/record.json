@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "astronomy-at-the-beach",
+  "displayName": "Astronomy at the Beach",
+  "description": "Michigan's large, free public Astronomy at the Beach event fills the Kent Lake Beach area with solar and night observing, presentations, exhibits, and astronomy clubs.",
+  "descriptionSources": [
+    {
+      "title": "Astronomy at the Beach official site",
+      "url": "https://www.glaac.org/",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "4149accf-e8e4-5727-9aa1-38c62361be99",
+    "name": "Kent Lake Beach telescope field",
+    "latitude": 42.5101,
+    "longitude": -83.699,
+    "elevationMeters": 255,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Kent Lake Beach telescope field",
+    "locality": "Brighton",
+    "region": "Michigan",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Detroit",
+    "coordinateSource": {
+      "title": "Astronomy at the Beach official event map",
+      "url": "https://www.glaac.org/wp-content/uploads/2026/05/AATB_2019_map-scaled.jpg",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.glaac.org/"
+    },
+    {
+      "role": "venue",
+      "url": "https://www.michigan.gov/recsearch/parks/islandlake"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/astronomy-at-the-beach/hero.jpg",
+      "sourceURL": "https://www.glaac.org/wp-content/uploads/2024/08/aatb_tent-1024x768.jpg",
+      "attribution": "Astronomy at the Beach club tent photo by Amy Cantu.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Amy Cantu and GLAAC retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/astronomy-at-the-beach/thumbnail.jpg",
+      "sourceURL": "https://www.glaac.org/wp-content/uploads/2024/08/AATB-Header-cropped-Doug-Bock-1024x414.png",
+      "attribution": "Square crop of Astronomy at the Beach header artwork by Doug Bock.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Doug Bock and GLAAC retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "astronomy-at-the-beach-2026",
+      "name": "Astronomy at the Beach 2026",
+      "start": "2026-09-18",
+      "end": "2026-09-19",
+      "status": "scheduled",
+      "url": "https://www.glaac.org/",
+      "source": {
+        "title": "Astronomy at the Beach official site",
+        "url": "https://www.glaac.org/",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

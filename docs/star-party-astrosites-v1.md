@@ -116,7 +116,10 @@ Human-curated inputs live at
 `sources/star-party-astrosites/records/<id>/record.json`; the matching JSON
 Schema is beside the source README. Official organizer, venue, park, or public
 planning sources are retained in every record. Public event/campground points
-are permitted. Private or personal observing locations are not.
+are permitted. A privately owned venue is permitted only when its organizer
+deliberately publishes exact event coordinates or a public map/directions pin
+and the project owner approves that reuse. Non-public private or personal
+observing locations remain excluded.
 
 The builder validates:
 
@@ -147,10 +150,10 @@ python3 -m unittest tests.test_star_party_astrosite_package
 For a byte-for-byte reproducible editorial rebuild, pass the checked-in UTC
 timestamp through `--generated-at`.
 
-## Initial curated coverage
+## Curated coverage
 
-The current package contains 16 event listings at 15 public venues and 19 dated
-event instances:
+The current package contains 39 event listings at 38 venues and 48 dated
+event instances across eight countries. The original coverage includes:
 
 - Texas, Winter, Okie-Tex, Oregon, Nebraska, and Almost Heaven Star Parties
 - separate Cherry Springs and Black Forest event listings at their shared
@@ -158,6 +161,22 @@ event instances:
 - Kelling Heath Autumn Equinox Sky Camp, Starfest Canada, and OzSky Star Safari
 - Stellafane Convention, Mount Kobau Star Party, and Kielder Star Camp
 - Washington State Star Party and Grand Canyon Star Party
+
+The 2026-09-06 expansion adds:
+
+- Tainai and Hara Village Star Festivals in Japan
+- International Telescope Meeting Vogelsberg and Herzberg Telescope Meeting in
+  Germany, plus International Telescope Meeting Emberger Alm in Austria
+- Queensland Astrofest and New Zealand's Central Star Party
+- Bryce Canyon, Badlands, Death Valley, Great Basin, and Flagstaff public park
+  festivals
+- Saskatchewan Summer Star Party, Nova East, and Kejimkujik Dark Sky Weekend in
+  Canada
+- Peach State Star Gaze, Green Bank Star Quest, Staunton River Star Party,
+  Great Lakes Star Gaze, and Astronomy at the Beach in the United States
+- Golden State Star Party, Rocky Mountain Star Stare, and Enchanted Skies Star
+  Party using the exact event locations deliberately published by their
+  organizers
 
 Completed 2026 instances are retained when an organizer has not yet published
 the next date. This makes the record useful and sourced without inventing a
@@ -169,13 +188,20 @@ future recurrence.
   New South Wales says the next event is postponed indefinitely; the package
   requires at least one concrete dated instance. Recheck
   <https://www.asnsw.com/spsp/> during the next editorial update.
-- **Golden State Star Party** is deferred because its official FAQ describes
-  the site as private property. Publishing a coordinate would conflict with the
-  privacy rule, while omitting coordinates would violate the v1 package
-  contract. Recheck <https://goldenstatestarparty.org/golden-state-star-party/faq/>
-  only if the organizer publishes a clearly approved public event point.
+Golden State Star Party and Rocky Mountain Star Stare publish exact coordinates
+and turn-by-turn directions on their official event sites. Enchanted Skies
+publishes the Montosa Ranch Campground venue and uses a public map pin for event
+directions. The project owner explicitly approved reusing those disclosures in
+AstroGuide on 2026-09-06; the package records the relevant directions or map
+link as coordinate provenance. This approval is specific to the published event
+points and does not authorize disclosure of any other private location.
 
-The package caches the project-owner-approved media set reviewed on 2026-09-02.
+Queensland Astrofest remains in the package with its published 2027 dates. Its
+official site also records that the 2026 event was cancelled, but no concrete
+2026 date range was retained because the current page does not publish one.
+
+The package caches the project-owner-approved media sets reviewed on 2026-09-02
+and 2026-09-06.
 Each listing has a roughly 4:3 hero. Listings with a usable official event logo
 use a compact logo derivative in the list; the others use an explicit square
 `thumbnail` crop of the hero source. Texas uses its scalable event mark on a

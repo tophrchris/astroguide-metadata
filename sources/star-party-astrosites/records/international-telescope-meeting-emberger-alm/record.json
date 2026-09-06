@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "international-telescope-meeting-emberger-alm",
+  "displayName": "International Telescope Meeting Emberger Alm",
+  "description": "The Internationales Teleskoptreffen on Austria's Emberger Alm is a high-alpine amateur astronomy gathering centered on dark-sky observing and shared telescope time.",
+  "descriptionSources": [
+    {
+      "title": "Emberger Alm International Telescope Meeting",
+      "url": "https://www.embergeralm.com/internationales-teleskoptreffen-itt_D.html",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "b27d2bd8-d526-50fe-a1a4-4bdc6ae193e9",
+    "name": "Emberger Alm",
+    "latitude": 46.774957,
+    "longitude": 13.157137,
+    "elevationMeters": 1800,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Emberger Alm",
+    "locality": "Berg im Drautal",
+    "region": "Carinthia",
+    "countryCode": "AT",
+    "countryName": "Austria",
+    "timezone": "Europe/Vienna",
+    "coordinateSource": {
+      "title": "Emberger Alm official site",
+      "url": "https://www.embergeralm.com/",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.embergeralm.com/internationales-teleskoptreffen-itt_D.html"
+    },
+    {
+      "role": "venue",
+      "url": "https://www.embergeralm.com/"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/international-telescope-meeting-emberger-alm/hero.jpg",
+      "sourceURL": "https://www.embergeralm.com/media/images/itt6.jpg",
+      "attribution": "International Telescope Meeting photo via the official Emberger Alm event page.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/international-telescope-meeting-emberger-alm/thumbnail.jpg",
+      "sourceURL": "https://www.embergeralm.com/media/images/itt6.jpg",
+      "attribution": "Square crop of an International Telescope Meeting photo via Emberger Alm.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "international-telescope-meeting-emberger-alm-2026",
+      "name": "International Telescope Meeting Emberger Alm 2026",
+      "start": "2026-10-03",
+      "end": "2026-10-11",
+      "status": "scheduled",
+      "url": "https://www.embergeralm.com/internationales-teleskoptreffen-itt_D.html",
+      "source": {
+        "title": "Emberger Alm International Telescope Meeting",
+        "url": "https://www.embergeralm.com/internationales-teleskoptreffen-itt_D.html",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

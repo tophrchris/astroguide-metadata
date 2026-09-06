@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "queensland-astrofest",
+  "displayName": "Queensland Astrofest",
+  "description": "Queensland Astrofest is a multi-night Australian astronomy gathering at Camp Duckadang, combining dark-sky observing with talks, workshops, and social activities.",
+  "descriptionSources": [
+    {
+      "title": "Queensland Astrofest official site",
+      "url": "https://www.qldastrofest.org.au/",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "f72fa81b-cfb9-53e2-86e9-905919f65c43",
+    "name": "Camp Duckadang",
+    "latitude": -26.74875,
+    "longitude": 152.2408,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Camp Duckadang",
+    "locality": "Avoca Vale",
+    "region": "Queensland",
+    "countryCode": "AU",
+    "countryName": "Australia",
+    "timezone": "Australia/Brisbane",
+    "coordinateSource": {
+      "title": "Queensland Astrofest venue information",
+      "url": "https://www.qldastrofest.org.au/",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.qldastrofest.org.au/"
+    },
+    {
+      "role": "venue",
+      "url": "https://campduckadang.com.au/"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/queensland-astrofest/hero.jpg",
+      "sourceURL": "https://www.qldastrofest.org.au/wp-content/uploads/2013/02/moon_set.jpg",
+      "attribution": "Moonset over Queensland Astrofest via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Queensland Astrofest and the photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/queensland-astrofest/thumbnail.jpg",
+      "sourceURL": "https://www.qldastrofest.org.au/wp-content/uploads/2013/02/moon_set.jpg",
+      "attribution": "Square crop of a Queensland Astrofest moonset photo.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Queensland Astrofest and the photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "queensland-astrofest-2027",
+      "name": "Queensland Astrofest 2027",
+      "start": "2027-07-30",
+      "end": "2027-08-08",
+      "status": "scheduled",
+      "url": "https://www.qldastrofest.org.au/",
+      "source": {
+        "title": "Queensland Astrofest 2027 dates",
+        "url": "https://www.qldastrofest.org.au/",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

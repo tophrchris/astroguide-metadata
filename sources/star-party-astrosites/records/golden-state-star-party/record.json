@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "golden-state-star-party",
+  "displayName": "Golden State Star Party",
+  "description": "A four-night summer observing gathering in northeastern California with dark-sky observing, an organized observing program, talks, and community activities.",
+  "descriptionSources": [
+    {
+      "title": "Golden State Star Party official site",
+      "url": "https://goldenstatestarparty.org/",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "6c2021f8-58c4-53d6-9bb3-70e0ddd17490",
+    "name": "Golden State Star Party Site",
+    "latitude": 41.135135,
+    "longitude": -120.978509,
+    "elevationMeters": 1315,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Golden State Star Party Site",
+    "locality": "Bieber",
+    "region": "California",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Los_Angeles",
+    "coordinateSource": {
+      "title": "Golden State Star Party official directions and published coordinates",
+      "url": "https://goldenstatestarparty.org/golden-state-star-party/directions-to-gssp/",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://goldenstatestarparty.org/"
+    },
+    {
+      "role": "directions",
+      "url": "https://goldenstatestarparty.org/golden-state-star-party/directions-to-gssp/"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/golden-state-star-party/hero.jpg",
+      "sourceURL": "https://goldenstatestarparty.org/wp-content/uploads/2016/12/gssp.group_.jpg",
+      "attribution": "Golden State Star Party observing-field group photo via the official event site; photographer not identified on the source page.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Golden State Star Party and the photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/golden-state-star-party/logo.png",
+      "sourceURL": "https://goldenstatestarparty.org/wp-content/uploads/2016/12/gssp.jpg",
+      "attribution": "Golden State Star Party event mark via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Golden State Star Party and the artwork creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "golden-state-star-party-2026",
+      "name": "Golden State Star Party 2026",
+      "start": "2026-07-11",
+      "end": "2026-07-15",
+      "status": "completed",
+      "url": "https://goldenstatestarparty.org/",
+      "source": {
+        "title": "Golden State Star Party 2026 official site",
+        "url": "https://goldenstatestarparty.org/",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

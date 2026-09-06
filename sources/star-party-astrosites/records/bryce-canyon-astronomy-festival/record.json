@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "bryce-canyon-astronomy-festival",
+  "displayName": "Bryce Canyon Astronomy Festival",
+  "description": "Bryce Canyon National Park's annual public astronomy festival features evening telescope viewing, constellation tours, talks, daytime activities, and astrophotography workshops.",
+  "descriptionSources": [
+    {
+      "title": "Bryce Canyon Annual Astronomy Festival",
+      "url": "https://www.nps.gov/brca/planyourvisit/astrofest.htm",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "73fc639a-cc56-5ef2-95d1-ab169f91bbca",
+    "name": "Bryce Canyon Telescope Stargazing Site",
+    "latitude": 37.640403,
+    "longitude": -112.169629,
+    "elevationMeters": 2438,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Bryce Canyon Telescope Stargazing Site",
+    "locality": "Bryce Canyon City",
+    "region": "Utah",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Denver",
+    "coordinateSource": {
+      "title": "Bryce Canyon Astronomy Festival telescope site",
+      "url": "https://www.nps.gov/brca/planyourvisit/astrofest.htm",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.nps.gov/brca/planyourvisit/astrofest.htm"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/bryce-canyon-astronomy-festival/hero.jpg",
+      "sourceURL": "https://www.nps.gov/brca/planyourvisit/images/Astro-Fest-Banner-Keith-Moore.jpg",
+      "attribution": "Bryce Canyon Astronomy Festival banner photo, NPS/Keith Moore.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Keith Moore and the National Park Service retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/bryce-canyon-astronomy-festival/thumbnail.jpg",
+      "sourceURL": "https://www.nps.gov/brca/planyourvisit/images/Astro_Fest_2026.jpg",
+      "attribution": "Square crop of the Bryce Canyon Astronomy Festival 2026 poster, NPS/Tiana Reading.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Tiana Reading and the National Park Service retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "bryce-canyon-astronomy-festival-2026",
+      "name": "Bryce Canyon Astronomy Festival 2026",
+      "start": "2026-06-11",
+      "end": "2026-06-13",
+      "status": "completed",
+      "url": "https://www.nps.gov/brca/planyourvisit/astrofest.htm",
+      "source": {
+        "title": "Bryce Canyon Annual Astronomy Festival",
+        "url": "https://www.nps.gov/brca/planyourvisit/astrofest.htm",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "herzberg-telescope-meeting",
+  "displayName": "Herzberg Telescope Meeting",
+  "description": "The Herzberger Teleskoptreffen is a major German observing gathering at the Elsterland Observatory grounds, with telescope fields, talks, and workshops.",
+  "descriptionSources": [
+    {
+      "title": "Herzberger Teleskoptreffen official site",
+      "url": "https://herzberger-teleskoptreffen.de/",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "c855c0da-e511-5fd7-9f0c-242a8184bfb8",
+    "name": "Elsterland Observatory",
+    "latitude": 51.7474,
+    "longitude": 13.2883,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Elsterland Observatory",
+    "locality": "Jeßnigk",
+    "region": "Brandenburg",
+    "countryCode": "DE",
+    "countryName": "Germany",
+    "timezone": "Europe/Berlin",
+    "coordinateSource": {
+      "title": "Herzberger Teleskoptreffen official site location",
+      "url": "https://herzberger-teleskoptreffen.de/",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://herzberger-teleskoptreffen.de/"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/herzberg-telescope-meeting/hero.jpg",
+      "sourceURL": "https://herzberger-teleskoptreffen.de/wp-content/uploads/2025/09/20250919_165935-850x479.jpg",
+      "attribution": "Herzberger Teleskoptreffen observing-field photo via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the event organization and photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/herzberg-telescope-meeting/logo.png",
+      "sourceURL": "https://herzberger-teleskoptreffen.de/wp-content/uploads/2026/08/HTT-2026-850x850.png",
+      "attribution": "Herzberger Teleskoptreffen 2026 event mark via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the event organization and artwork creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "herzberg-telescope-meeting-2026",
+      "name": "Herzberg Telescope Meeting 2026",
+      "start": "2026-09-09",
+      "end": "2026-09-13",
+      "status": "scheduled",
+      "url": "https://herzberger-teleskoptreffen.de/",
+      "source": {
+        "title": "Herzberger Teleskoptreffen official site",
+        "url": "https://herzberger-teleskoptreffen.de/",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

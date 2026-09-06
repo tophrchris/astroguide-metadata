@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "green-bank-star-quest",
+  "displayName": "Green Bank Star Quest",
+  "description": "Green Bank Star Quest combines multi-night optical observing, astronomy talks, workshops, and tours at the Green Bank Observatory in West Virginia's National Radio Quiet Zone.",
+  "descriptionSources": [
+    {
+      "title": "Green Bank Star Quest registration",
+      "url": "https://greenbankstarquest.org/Registration.html",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "13ee88a1-9c32-5eba-a6e3-5f3f4a624523",
+    "name": "Green Bank Science Center",
+    "latitude": 38.430015,
+    "longitude": -79.817696,
+    "elevationMeters": 807,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Green Bank Science Center",
+    "locality": "Green Bank",
+    "region": "West Virginia",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/New_York",
+    "coordinateSource": {
+      "title": "Green Bank Observatory official site",
+      "url": "https://greenbankobservatory.org/",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://greenbankstarquest.org/Registration.html"
+    },
+    {
+      "role": "venue",
+      "url": "https://greenbankobservatory.org/"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/green-bank-star-quest/hero.jpg",
+      "sourceURL": "https://greenbankstarquest.org/2026%20star%20quest%20group%20pic/2026%20Star%20Quest%20group%20pic.jpg",
+      "attribution": "Green Bank Star Quest 2026 group photo via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Green Bank Star Quest and the photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/green-bank-star-quest/thumbnail.jpg",
+      "sourceURL": "https://greenbankstarquest.org/images/photos/GBSQ6Banner1.jpg",
+      "attribution": "Square crop of the Green Bank Star Quest event banner.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Green Bank Star Quest and the photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "green-bank-star-quest-2026",
+      "name": "Green Bank Star Quest 2026",
+      "start": "2026-07-15",
+      "end": "2026-07-18",
+      "status": "completed",
+      "url": "https://greenbankstarquest.org/Registration.html",
+      "source": {
+        "title": "Green Bank Star Quest registration",
+        "url": "https://greenbankstarquest.org/Registration.html",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

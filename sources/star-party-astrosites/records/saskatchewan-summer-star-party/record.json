@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "saskatchewan-summer-star-party",
+  "displayName": "Saskatchewan Summer Star Party",
+  "description": "The Saskatoon Centre of the Royal Astronomical Society of Canada hosts this annual dark-sky observing event in Cypress Hills Interprovincial Park.",
+  "descriptionSources": [
+    {
+      "title": "Saskatchewan Summer Star Party official site",
+      "url": "https://sssp.saskatoon.rasc.ca/",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "d89d1ce3-9efb-5bf2-bedd-feb59693748d",
+    "name": "Cypress Hills Centre Block",
+    "latitude": 49.6541,
+    "longitude": -109.5222,
+    "elevationMeters": 1280,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Cypress Hills Centre Block",
+    "locality": "Maple Creek",
+    "region": "Saskatchewan",
+    "countryCode": "CA",
+    "countryName": "Canada",
+    "timezone": "America/Regina",
+    "coordinateSource": {
+      "title": "Saskatchewan Summer Star Party official venue point",
+      "url": "https://sssp.saskatoon.rasc.ca/",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://sssp.saskatoon.rasc.ca/"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/saskatchewan-summer-star-party/hero.jpg",
+      "sourceURL": "https://sssp.saskatoon.rasc.ca/nova/galleries/SSSP2025-GCharpentier/SSSP2025_DSC1213_DxO_68.jpg",
+      "attribution": "Saskatchewan Summer Star Party observing field, photo by G. Charpentier via the official event gallery.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; G. Charpentier and RASC Saskatoon Centre retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/saskatchewan-summer-star-party/logo.png",
+      "sourceURL": "https://sssp.saskatoon.rasc.ca/images/logo192.png",
+      "attribution": "Saskatchewan Summer Star Party event logo via RASC Saskatoon Centre.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; RASC Saskatoon Centre and the logo creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "saskatchewan-summer-star-party-2026",
+      "name": "Saskatchewan Summer Star Party 2026",
+      "start": "2026-08-11",
+      "end": "2026-08-16",
+      "status": "completed",
+      "url": "https://sssp.saskatoon.rasc.ca/",
+      "source": {
+        "title": "Saskatchewan Summer Star Party official site",
+        "url": "https://sssp.saskatoon.rasc.ca/",
+        "verifiedAt": "2026-09-06"
+      }
+    },
+    {
+      "id": "saskatchewan-summer-star-party-2027",
+      "name": "Saskatchewan Summer Star Party 2027",
+      "start": "2027-08-03",
+      "end": "2027-08-08",
+      "status": "scheduled",
+      "url": "https://sssp.saskatoon.rasc.ca/",
+      "source": {
+        "title": "Saskatchewan Summer Star Party official site",
+        "url": "https://sssp.saskatoon.rasc.ca/",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}
