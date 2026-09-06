@@ -33,9 +33,13 @@ The machine-readable authoring contract is
 cross-record, filesystem, chronology, timezone, URL, deterministic-ID, and
 manifest checks that JSON Schema alone cannot express.
 
-Do not publish private observing-site coordinates. Media may be added only
-when redistribution rights are explicit; it must be cached under
-`v1/assets/star-party-astrosites/` with attribution, license, permission notes,
-and provenance in the source record. Never hotlink an event image or logo.
+Do not infer or publish non-public private observing-site coordinates. A
+privately owned event venue may be included only when its organizer deliberately
+publishes exact event coordinates or a public map/directions pin and the project
+owner approves that reuse; retain that disclosure as coordinate provenance.
+Media may be added only when redistribution rights are explicit; it must be
+cached under `v1/assets/star-party-astrosites/` with attribution, license,
+permission notes, and provenance in the source record. Never hotlink an event
+image or logo.
 The same rights rule applies to horizon panoramas; public availability alone is
 not permission to cache or redistribute an image.

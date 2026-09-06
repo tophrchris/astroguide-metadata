@@ -22,7 +22,7 @@ MANIFEST_PATH = REPO_ROOT / "v1/channels/stable/manifest.json"
 METADATA_ORIGIN = "https://metadata.astroguide.space"
 PACKAGE_FAMILY = "starPartyAstroSites"
 CACHE_TTL_SECONDS = 604800
-PACKAGE_REVISION = 3
+PACKAGE_REVISION = 4
 SOURCE_SITE_ID_ROOT = f"{METADATA_ORIGIN}/star-party-astrosites/"
 
 FAMILY_ORDER = [

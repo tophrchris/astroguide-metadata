@@ -41,11 +41,11 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
     def test_package_contract_counts_and_order_are_deterministic(self):
         self.assertEqual(self.package["schemaVersion"], 1)
         self.assertEqual(self.package["packageFamily"], "starPartyAstroSites")
-        self.assertEqual(self.package["packageVersion"], "star-party-astrosites-v1-20260906-r3")
-        self.assertEqual(self.package["scope"]["siteCount"], 36)
-        self.assertEqual(self.package["scope"]["eventCount"], 44)
-        self.assertEqual(self.package["scope"]["scheduledEventCount"], 29)
-        self.assertEqual(self.package["scope"]["completedEventCount"], 15)
+        self.assertEqual(self.package["packageVersion"], "star-party-astrosites-v1-20260906-r4")
+        self.assertEqual(self.package["scope"]["siteCount"], 39)
+        self.assertEqual(self.package["scope"]["eventCount"], 48)
+        self.assertEqual(self.package["scope"]["scheduledEventCount"], 31)
+        self.assertEqual(self.package["scope"]["completedEventCount"], 17)
         self.assertEqual(self.package["scope"]["cancelledEventCount"], 0)
         self.assertEqual(self.package["scope"]["countryCount"], 8)
         self.assertEqual(self.package["scope"]["horizonResourceCount"], 4)
@@ -84,7 +84,9 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
             "bryce-canyon-astronomy-festival",
             "central-star-party",
             "death-valley-dark-sky-festival",
+            "enchanted-skies-star-party",
             "flagstaff-star-party",
+            "golden-state-star-party",
             "great-basin-astronomy-festival",
             "great-lakes-star-gaze",
             "green-bank-star-quest",
@@ -96,15 +98,48 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
             "nova-east-star-party",
             "peach-state-star-gaze",
             "queensland-astrofest",
+            "rocky-mountain-star-stare",
             "saskatchewan-summer-star-party",
             "staunton-river-star-party",
             "tainai-star-festival",
         }
         self.assertEqual(set(self.by_id), expected)
         self.assertNotIn("south-pacific-star-party", self.by_id)
-        self.assertNotIn("golden-state-star-party", self.by_id)
-        self.assertNotIn("enchanted-skies-star-party", self.by_id)
-        self.assertNotIn("rocky-mountain-star-stare", self.by_id)
+
+    def test_organizer_published_private_event_points_retain_coordinate_provenance(self):
+        self.assertEqual(
+            (
+                self.by_id["golden-state-star-party"]["astroSite"]["latitude"],
+                self.by_id["golden-state-star-party"]["astroSite"]["longitude"],
+            ),
+            (41.135135, -120.978509),
+        )
+        self.assertEqual(
+            (
+                self.by_id["rocky-mountain-star-stare"]["astroSite"]["latitude"],
+                self.by_id["rocky-mountain-star-stare"]["astroSite"]["longitude"],
+            ),
+            (37.844492, -105.190978),
+        )
+        self.assertEqual(
+            (
+                self.by_id["enchanted-skies-star-party"]["astroSite"]["latitude"],
+                self.by_id["enchanted-skies-star-party"]["astroSite"]["longitude"],
+            ),
+            (34.080917, -107.481532),
+        )
+        self.assertEqual(
+            self.by_id["golden-state-star-party"]["location"]["coordinateSource"]["url"],
+            "https://goldenstatestarparty.org/golden-state-star-party/directions-to-gssp/",
+        )
+        self.assertEqual(
+            self.by_id["rocky-mountain-star-stare"]["location"]["coordinateSource"]["url"],
+            "https://rmss.org/directions/",
+        )
+        self.assertEqual(
+            self.by_id["enchanted-skies-star-party"]["location"]["coordinateSource"]["url"],
+            "https://maps.app.goo.gl/bMM17cwo2YZrcit37",
+        )
 
     def test_expansion_retains_completed_and_future_instances_without_guessing_recurrence(self):
         self.assertEqual(

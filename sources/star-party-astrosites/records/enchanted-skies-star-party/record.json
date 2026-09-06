@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "enchanted-skies-star-party",
+  "displayName": "Enchanted Skies Star Party",
+  "description": "The Magdalena Astronomical Society's annual New Mexico gathering offers multiple nights of observing, an afternoon lecture program, camping, and astronomy community activities at Montosa Ranch Campground.",
+  "descriptionSources": [
+    {
+      "title": "Enchanted Skies Star Party official site",
+      "url": "https://www.enchantedskies.org/home",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "b668063a-ba4a-57b4-8664-e48b58eded4d",
+    "name": "Montosa Ranch Campground",
+    "latitude": 34.080917,
+    "longitude": -107.481532,
+    "elevationMeters": 2170,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Montosa Ranch Campground",
+    "locality": "Magdalena",
+    "region": "New Mexico",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Denver",
+    "coordinateSource": {
+      "title": "Public Montosa Ranch Campground map pin shared for Enchanted Skies",
+      "url": "https://maps.app.goo.gl/bMM17cwo2YZrcit37",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.enchantedskies.org/home"
+    },
+    {
+      "role": "venueMap",
+      "url": "https://maps.app.goo.gl/bMM17cwo2YZrcit37"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/enchanted-skies-star-party/hero.jpg",
+      "sourceURL": "https://www.enchantedskies.org/sites/default/files/2025-10/Day%20201.jpeg?fid=64",
+      "attribution": "Nighttime telescope setup at Enchanted Skies Star Party via the official event site; photographer not identified on the source page.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Magdalena Astronomical Society and photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/enchanted-skies-star-party/thumbnail.jpg",
+      "sourceURL": "https://www.enchantedskies.org/sites/default/files/2025-10/Day%20201.jpeg?fid=64",
+      "attribution": "Square crop of the nighttime Enchanted Skies telescope-setup photo via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Magdalena Astronomical Society and photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "enchanted-skies-star-party-2026",
+      "name": "Enchanted Skies Star Party 2026",
+      "start": "2026-10-06",
+      "end": "2026-10-11",
+      "status": "scheduled",
+      "url": "https://www.enchantedskies.org/home",
+      "source": {
+        "title": "Enchanted Skies Star Party 2026 official site",
+        "url": "https://www.enchantedskies.org/home",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "packageFamily": "starPartyAstroSites",
-  "packageVersion": "star-party-astrosites-v1-20260906-r3",
+  "packageVersion": "star-party-astrosites-v1-20260906-r4",
   "generatedAt": "2026-09-06T06:30:00Z",
   "scope": {
-    "siteCount": 36,
-    "eventCount": 44,
-    "scheduledEventCount": 29,
-    "completedEventCount": 15,
+    "siteCount": 39,
+    "eventCount": 48,
+    "scheduledEventCount": 31,
+    "completedEventCount": 17,
     "cancelledEventCount": 0,
     "countryCount": 8,
     "horizonResourceCount": 4,
@@ -786,6 +786,85 @@
     {
       "schemaVersion": 1,
       "recordKind": "starPartyAstroSite",
+      "id": "enchanted-skies-star-party",
+      "displayName": "Enchanted Skies Star Party",
+      "description": "The Magdalena Astronomical Society's annual New Mexico gathering offers multiple nights of observing, an afternoon lecture program, camping, and astronomy community activities at Montosa Ranch Campground.",
+      "descriptionSources": [
+        {
+          "title": "Enchanted Skies Star Party official site",
+          "url": "https://www.enchantedskies.org/home",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "b668063a-ba4a-57b4-8664-e48b58eded4d",
+        "name": "Montosa Ranch Campground",
+        "latitude": 34.080917,
+        "longitude": -107.481532,
+        "elevationMeters": 2170,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Montosa Ranch Campground",
+        "locality": "Magdalena",
+        "region": "New Mexico",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Denver",
+        "coordinateSource": {
+          "title": "Public Montosa Ranch Campground map pin shared for Enchanted Skies",
+          "url": "https://maps.app.goo.gl/bMM17cwo2YZrcit37",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.enchantedskies.org/home"
+        },
+        {
+          "role": "venueMap",
+          "url": "https://maps.app.goo.gl/bMM17cwo2YZrcit37"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/enchanted-skies-star-party/hero.jpg",
+          "sourceURL": "https://www.enchantedskies.org/sites/default/files/2025-10/Day%20201.jpeg?fid=64",
+          "attribution": "Nighttime telescope setup at Enchanted Skies Star Party via the official event site; photographer not identified on the source page.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Magdalena Astronomical Society and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/enchanted-skies-star-party/thumbnail.jpg",
+          "sourceURL": "https://www.enchantedskies.org/sites/default/files/2025-10/Day%20201.jpeg?fid=64",
+          "attribution": "Square crop of the nighttime Enchanted Skies telescope-setup photo via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Magdalena Astronomical Society and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "enchanted-skies-star-party-2026",
+          "name": "Enchanted Skies Star Party 2026",
+          "start": "2026-10-06",
+          "end": "2026-10-11",
+          "status": "scheduled",
+          "url": "https://www.enchantedskies.org/home",
+          "source": {
+            "title": "Enchanted Skies Star Party 2026 official site",
+            "url": "https://www.enchantedskies.org/home",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
       "id": "flagstaff-star-party",
       "displayName": "Flagstaff Star Party",
       "description": "The free Flagstaff Star Party brings public telescope viewing, night-sky orientations, music, and astronomy presentations to Buffalo Park in the world's first International Dark-Sky City.",
@@ -857,6 +936,85 @@
           "source": {
             "title": "Flagstaff Star Party official site",
             "url": "https://flagstaffstarparty.org/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "golden-state-star-party",
+      "displayName": "Golden State Star Party",
+      "description": "A four-night summer observing gathering in northeastern California with dark-sky observing, an organized observing program, talks, and community activities.",
+      "descriptionSources": [
+        {
+          "title": "Golden State Star Party official site",
+          "url": "https://goldenstatestarparty.org/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "6c2021f8-58c4-53d6-9bb3-70e0ddd17490",
+        "name": "Golden State Star Party Site",
+        "latitude": 41.135135,
+        "longitude": -120.978509,
+        "elevationMeters": 1315,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Golden State Star Party Site",
+        "locality": "Bieber",
+        "region": "California",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Los_Angeles",
+        "coordinateSource": {
+          "title": "Golden State Star Party official directions and published coordinates",
+          "url": "https://goldenstatestarparty.org/golden-state-star-party/directions-to-gssp/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "directions",
+          "url": "https://goldenstatestarparty.org/golden-state-star-party/directions-to-gssp/"
+        },
+        {
+          "role": "event",
+          "url": "https://goldenstatestarparty.org/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/golden-state-star-party/hero.jpg",
+          "sourceURL": "https://goldenstatestarparty.org/wp-content/uploads/2016/12/gssp.group_.jpg",
+          "attribution": "Golden State Star Party observing-field group photo via the official event site; photographer not identified on the source page.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Golden State Star Party and the photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/golden-state-star-party/logo.png",
+          "sourceURL": "https://goldenstatestarparty.org/wp-content/uploads/2016/12/gssp.jpg",
+          "attribution": "Golden State Star Party event mark via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Golden State Star Party and the artwork creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "golden-state-star-party-2026",
+          "name": "Golden State Star Party 2026",
+          "start": "2026-07-11",
+          "end": "2026-07-15",
+          "status": "completed",
+          "url": "https://goldenstatestarparty.org/",
+          "source": {
+            "title": "Golden State Star Party 2026 official site",
+            "url": "https://goldenstatestarparty.org/",
             "verifiedAt": "2026-09-06"
           }
         }
@@ -2447,6 +2605,98 @@
           "source": {
             "title": "Queensland Astrofest 2027 dates",
             "url": "https://www.qldastrofest.org.au/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "rocky-mountain-star-stare",
+      "displayName": "Rocky Mountain Star Stare",
+      "description": "The Colorado Springs Astronomical Society's annual Starry Meadows gathering combines dark-sky observing with speakers, workshops, family activities, and on-site camping near Gardner, Colorado.",
+      "descriptionSources": [
+        {
+          "title": "What is Rocky Mountain Star Stare?",
+          "url": "https://rmss.org/event-information/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "7261c77c-f8a8-58eb-aec1-b3c515af589d",
+        "name": "Starry Meadows",
+        "latitude": 37.844492,
+        "longitude": -105.190978,
+        "elevationMeters": 2320,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Starry Meadows",
+        "locality": "Gardner",
+        "region": "Colorado",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Denver",
+        "coordinateSource": {
+          "title": "Rocky Mountain Star Stare official directions and GPS coordinates",
+          "url": "https://rmss.org/directions/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "directions",
+          "url": "https://rmss.org/directions/"
+        },
+        {
+          "role": "event",
+          "url": "https://rmss.org/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/rocky-mountain-star-stare/hero.jpg",
+          "sourceURL": "https://rmss.org/wp-content/gallery/2025-rmss-gallery/2025_RMSS_Gallery_0061.JPG?t=1771002036",
+          "attribution": "Starry Meadows observing field and mountain setting from the official 2025 RMSS gallery; photographer not identified on the source page.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Colorado Springs Astronomical Society and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/rocky-mountain-star-stare/thumbnail.jpg",
+          "sourceURL": "https://rmss.org/wp-content/gallery/2025-rmss-gallery/2025_RMSS_Gallery_0061.JPG?t=1771002036",
+          "attribution": "Square crop of the Starry Meadows observing-field photo from the official 2025 RMSS gallery.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Colorado Springs Astronomical Society and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "rocky-mountain-star-stare-2026",
+          "name": "Rocky Mountain Star Stare 2026",
+          "start": "2026-06-10",
+          "end": "2026-06-14",
+          "status": "completed",
+          "url": "https://rmss.org/schedule/",
+          "source": {
+            "title": "Rocky Mountain Star Stare 2026 official schedule",
+            "url": "https://rmss.org/schedule/",
+            "verifiedAt": "2026-09-06"
+          }
+        },
+        {
+          "id": "rocky-mountain-star-stare-2027",
+          "name": "Rocky Mountain Star Stare 2027",
+          "start": "2027-06-30",
+          "end": "2027-07-04",
+          "status": "scheduled",
+          "url": "https://rmss.org/",
+          "source": {
+            "title": "Rocky Mountain Star Stare official site",
+            "url": "https://rmss.org/",
             "verifiedAt": "2026-09-06"
           }
         }
