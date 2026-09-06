@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "kejimkujik-dark-sky-weekend",
+  "displayName": "Kejimkujik Dark Sky Weekend",
+  "description": "Parks Canada and RASC host this annual weekend of astronomy activities, guided sky programs, solar viewing, and public telescope observing at Kejimkujik's Sky Circle.",
+  "descriptionSources": [
+    {
+      "title": "Kejimkujik Dark Sky Preserve",
+      "url": "https://www.parks.canada.ca/pn-np/ns/kejimkujik/activ/reserve-etoile-sky-preserve",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "27c5250c-8cf7-572d-87c5-193f6443e413",
+    "name": "Kejimkujik Sky Circle",
+    "latitude": 44.406418,
+    "longitude": -65.248205,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Kejimkujik Sky Circle",
+    "locality": "Maitland Bridge",
+    "region": "Nova Scotia",
+    "countryCode": "CA",
+    "countryName": "Canada",
+    "timezone": "America/Halifax",
+    "coordinateSource": {
+      "title": "Parks Canada Dark Sky Weekend venue information",
+      "url": "https://parks.canada.ca/pn-np/ns/kejimkujik/activ/calendrier-calendar/9e5bdad1-71d9-45f8-b779-4c6dfd2fcc05",
+      "verifiedAt": "2026-09-06"
+    },
+    "relatedDarkSkyPlaceID": "darksky:kejimkujik-national-park-dark-sky-preserve"
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://parks.canada.ca/pn-np/ns/kejimkujik/activ/calendrier-calendar/9e5bdad1-71d9-45f8-b779-4c6dfd2fcc05"
+    },
+    {
+      "role": "venue",
+      "url": "https://www.parks.canada.ca/pn-np/ns/kejimkujik/activ/reserve-etoile-sky-preserve"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/kejimkujik-dark-sky-weekend/hero.jpg",
+      "sourceURL": "https://pcweb2.azureedge.net/-/media/pn-np/ns/kejimkujik/WET4/activ/dark-sky-night/NS-Kej-030jpg-640x360.jpg",
+      "attribution": "Annual Dark Sky Weekend image via Parks Canada.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Parks Canada and the photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/kejimkujik-dark-sky-weekend/thumbnail.jpg",
+      "sourceURL": "https://pcweb2.azureedge.net/-/media/pn-np/ns/kejimkujik/WET4/activ/dark-sky-night/NS-Kej-030jpg-640x360.jpg",
+      "attribution": "Square crop of the Annual Dark Sky Weekend image via Parks Canada.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Parks Canada and the photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "kejimkujik-dark-sky-weekend-2026",
+      "name": "Kejimkujik Dark Sky Weekend 2026",
+      "start": "2026-08-07",
+      "end": "2026-08-09",
+      "status": "completed",
+      "url": "https://parks.canada.ca/pn-np/ns/kejimkujik/activ/calendrier-calendar/9e5bdad1-71d9-45f8-b779-4c6dfd2fcc05",
+      "source": {
+        "title": "17th Annual Kejimkujik Dark Sky Weekend",
+        "url": "https://parks.canada.ca/pn-np/ns/kejimkujik/activ/calendrier-calendar/9e5bdad1-71d9-45f8-b779-4c6dfd2fcc05",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "nova-east-star-party",
+  "displayName": "Nova East Star Party",
+  "description": "Atlantic Canada's longest-running star party brings RASC Halifax Centre members and regional observers to Smiley's Provincial Park for dark skies, talks, workshops, and camping.",
+  "descriptionSources": [
+    {
+      "title": "Nova East Star Party official site",
+      "url": "https://novaeast.rasc.ca/",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "0363d5b1-c2b3-5dec-bfa2-bf267ef32f8f",
+    "name": "Smiley's Provincial Park observing field",
+    "latitude": 45.014272,
+    "longitude": -63.964444,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Smiley's Provincial Park observing field",
+    "locality": "Brooklyn",
+    "region": "Nova Scotia",
+    "countryCode": "CA",
+    "countryName": "Canada",
+    "timezone": "America/Halifax",
+    "coordinateSource": {
+      "title": "Nova East map and directions",
+      "url": "https://novaeast.rasc.ca/index.php/camping/map",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://novaeast.rasc.ca/"
+    },
+    {
+      "role": "directions",
+      "url": "https://novaeast.rasc.ca/index.php/camping/map"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/nova-east-star-party/hero.jpg",
+      "sourceURL": "https://novaeast.rasc.ca/images/novaeast/photos/2026/Jerry/IMG_9885.jpeg",
+      "attribution": "Nova East 2026 group photo by Jerry, via the official event gallery.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; RASC Halifax Centre and the photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/nova-east-star-party/logo.png",
+      "sourceURL": "https://novaeast.rasc.ca/images/novaeast/logos/Nova%20East%20Logo_Full%20Colour%20alpha.png",
+      "attribution": "Nova East event logo via RASC Halifax Centre.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; RASC Halifax Centre and the logo creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "nova-east-star-party-2026",
+      "name": "Nova East Star Party 2026",
+      "start": "2026-08-12",
+      "end": "2026-08-16",
+      "status": "completed",
+      "url": "https://novaeast.rasc.ca/",
+      "source": {
+        "title": "Nova East Star Party official site",
+        "url": "https://novaeast.rasc.ca/",
+        "verifiedAt": "2026-09-06"
+      }
+    },
+    {
+      "id": "nova-east-star-party-2027",
+      "name": "Nova East Star Party 2027",
+      "start": "2027-08-27",
+      "end": "2027-08-30",
+      "status": "scheduled",
+      "url": "https://novaeast.rasc.ca/",
+      "source": {
+        "title": "Nova East Star Party official site",
+        "url": "https://novaeast.rasc.ca/",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

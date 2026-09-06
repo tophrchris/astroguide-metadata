@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "death-valley-dark-sky-festival",
+  "displayName": "Death Valley Dark Sky Festival",
+  "description": "Death Valley National Park's annual dark-sky festival offers public telescope viewing, ranger and scientist programs, demonstrations, and activities around Furnace Creek.",
+  "descriptionSources": [
+    {
+      "title": "Death Valley Dark Sky Festival",
+      "url": "https://www.nps.gov/deva/planyourvisit/darkskyfestival.htm",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "abfb510e-5341-55b7-8ee9-c27d2216cdb8",
+    "name": "Furnace Creek Visitor Center",
+    "latitude": 36.462711,
+    "longitude": -116.866851,
+    "elevationMeters": -58,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Furnace Creek Visitor Center",
+    "locality": "Furnace Creek",
+    "region": "California",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Los_Angeles",
+    "coordinateSource": {
+      "title": "Death Valley National Park directions",
+      "url": "https://www.nps.gov/deva/planyourvisit/directions.htm",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.nps.gov/deva/planyourvisit/darkskyfestival.htm"
+    },
+    {
+      "role": "directions",
+      "url": "https://www.nps.gov/deva/planyourvisit/directions.htm"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/death-valley-dark-sky-festival/hero.jpg",
+      "sourceURL": "https://www.nps.gov/common/uploads/image_group/deva/44561C36-FEE1-A033-E69AF38D9A50D43B.jpg?maxwidth=1280&autorotate=false",
+      "attribution": "Brightness of the Void presentation at Zabriskie Point, NASA Earth to Sky via Death Valley National Park.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; NASA Earth to Sky and the National Park Service retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/death-valley-dark-sky-festival/logo.png",
+      "sourceURL": "https://www.nps.gov/deva/planyourvisit/images/DSF_Images.jpg",
+      "attribution": "Death Valley Dark Sky Festival event artwork via the National Park Service.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Used as the listing mark after project-owner selection on 2026-09-06; the National Park Service and artwork creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "death-valley-dark-sky-festival-2026",
+      "name": "Death Valley Dark Sky Festival 2026",
+      "start": "2026-02-06",
+      "end": "2026-02-08",
+      "status": "completed",
+      "url": "https://www.nps.gov/deva/planyourvisit/darkskyfestival.htm",
+      "source": {
+        "title": "Death Valley Dark Sky Festival",
+        "url": "https://www.nps.gov/deva/planyourvisit/darkskyfestival.htm",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

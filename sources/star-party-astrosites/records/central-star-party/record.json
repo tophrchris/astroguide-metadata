@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "central-star-party",
+  "displayName": "Central Star Party",
+  "description": "New Zealand's Central Star Party is an annual social astronomy gathering at Tuki Tuki Camp in Hawke's Bay, with observing, talks, workshops, and family activities.",
+  "descriptionSources": [
+    {
+      "title": "Central Star Party official site",
+      "url": "https://censtar.party/",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "5d3b29e3-4c92-52f4-9526-7dc348887d1e",
+    "name": "Tuki Tuki Camp",
+    "latitude": -39.652846,
+    "longitude": 176.926467,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Tuki Tuki Camp",
+    "locality": "Haumoana",
+    "region": "Hawke's Bay",
+    "countryCode": "NZ",
+    "countryName": "New Zealand",
+    "timezone": "Pacific/Auckland",
+    "coordinateSource": {
+      "title": "Tuki Tuki Camp official site",
+      "url": "https://tukitukicamp.weebly.com/",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://censtar.party/"
+    },
+    {
+      "role": "venue",
+      "url": "https://tukitukicamp.weebly.com/"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/central-star-party/hero.jpg",
+      "sourceURL": "https://censtar.party/wp-content/uploads/2026/07/CSP-2026-attendees.jpg",
+      "attribution": "Central Star Party 2026 attendee photo via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Central Star Party and the photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/central-star-party/logo.png",
+      "sourceURL": "https://censtar.party/wp-content/uploads/2018/04/logo.png",
+      "attribution": "Central Star Party event logo via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Central Star Party and the logo creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "central-star-party-2026",
+      "name": "Central Star Party 2026",
+      "start": "2026-01-15",
+      "end": "2026-01-19",
+      "status": "completed",
+      "url": "https://censtar.party/?page_id=3557",
+      "source": {
+        "title": "Central Star Party 2026 programme",
+        "url": "https://censtar.party/?page_id=3557",
+        "verifiedAt": "2026-09-06"
+      }
+    },
+    {
+      "id": "central-star-party-2027",
+      "name": "Central Star Party 2027",
+      "start": "2027-01-07",
+      "end": "2027-01-11",
+      "status": "scheduled",
+      "url": "https://censtar.party/",
+      "source": {
+        "title": "Central Star Party official site",
+        "url": "https://censtar.party/",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

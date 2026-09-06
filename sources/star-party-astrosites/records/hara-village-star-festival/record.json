@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "hara-village-star-festival",
+  "displayName": "Hara Village Star Festival",
+  "description": "Summer Holiday in Hara Village Star Festival is a long-running Japanese astronomy gathering with observing, telescope displays, talks, and family programs in the Yatsugatake highlands.",
+  "descriptionSources": [
+    {
+      "title": "Summer Holiday in Hara Village Star Festival",
+      "url": "https://www.lcv.ne.jp/~kasugahi/ebennto.htm",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "4939f9a0-fd37-59a6-af57-cf46bc65c4ec",
+    "name": "Hara Village Star Festival grounds",
+    "latitude": 35.969611,
+    "longitude": 138.269556,
+    "elevationMeters": 1300,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Hara Village Star Festival grounds",
+    "locality": "Hara",
+    "region": "Nagano",
+    "countryCode": "JP",
+    "countryName": "Japan",
+    "timezone": "Asia/Tokyo",
+    "coordinateSource": {
+      "title": "Hara Village Star Festival official event page and map point",
+      "url": "https://www.lcv.ne.jp/~kasugahi/ebennto.htm",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.lcv.ne.jp/~kasugahi/ebennto.htm"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/hara-village-star-festival/hero.jpg",
+      "sourceURL": "https://www.lcv.ne.jp/~kasugahi/2026.07.15-01.jpg",
+      "attribution": "Hara Village Star Festival 2026 program artwork via the official event site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the event organization and artwork creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/hara-village-star-festival/thumbnail.jpg",
+      "sourceURL": "https://www.lcv.ne.jp/~kasugahi/2026.07.15-01.jpg",
+      "attribution": "Square crop of Hara Village Star Festival 2026 program artwork.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the event organization and artwork creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "hara-village-star-festival-2026",
+      "name": "Hara Village Star Festival 2026",
+      "start": "2026-07-25",
+      "end": "2026-08-12",
+      "status": "completed",
+      "url": "https://www.lcv.ne.jp/~kasugahi/ebennto.htm",
+      "source": {
+        "title": "Summer Holiday in Hara Village Star Festival",
+        "url": "https://www.lcv.ne.jp/~kasugahi/ebennto.htm",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

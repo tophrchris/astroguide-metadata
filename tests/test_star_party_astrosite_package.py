@@ -41,13 +41,13 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
     def test_package_contract_counts_and_order_are_deterministic(self):
         self.assertEqual(self.package["schemaVersion"], 1)
         self.assertEqual(self.package["packageFamily"], "starPartyAstroSites")
-        self.assertEqual(self.package["packageVersion"], "star-party-astrosites-v1-20260903-r2")
-        self.assertEqual(self.package["scope"]["siteCount"], 16)
-        self.assertEqual(self.package["scope"]["eventCount"], 19)
-        self.assertEqual(self.package["scope"]["scheduledEventCount"], 16)
-        self.assertEqual(self.package["scope"]["completedEventCount"], 3)
+        self.assertEqual(self.package["packageVersion"], "star-party-astrosites-v1-20260906-r3")
+        self.assertEqual(self.package["scope"]["siteCount"], 36)
+        self.assertEqual(self.package["scope"]["eventCount"], 44)
+        self.assertEqual(self.package["scope"]["scheduledEventCount"], 29)
+        self.assertEqual(self.package["scope"]["completedEventCount"], 15)
         self.assertEqual(self.package["scope"]["cancelledEventCount"], 0)
-        self.assertEqual(self.package["scope"]["countryCount"], 4)
+        self.assertEqual(self.package["scope"]["countryCount"], 8)
         self.assertEqual(self.package["scope"]["horizonResourceCount"], 4)
         self.assertEqual(self.package["scope"]["cachedHorizonAssetCount"], 2)
         self.assertEqual(self.package["scope"]["obstructionProfileCount"], 0)
@@ -61,7 +61,7 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
                 sorted((event["start"], event["end"], event["id"]) for event in events),
             )
 
-    def test_initial_seed_and_sourceable_extras_are_present(self):
+    def test_curated_star_parties_are_present_and_private_sites_are_deferred(self):
         expected = {
             "texas-star-party",
             "winter-star-party",
@@ -79,10 +79,49 @@ class StarPartyAstroSitePackageTests(unittest.TestCase):
             "kielder-star-camp",
             "washington-state-star-party",
             "grand-canyon-star-party",
+            "astronomy-at-the-beach",
+            "badlands-astronomy-festival",
+            "bryce-canyon-astronomy-festival",
+            "central-star-party",
+            "death-valley-dark-sky-festival",
+            "flagstaff-star-party",
+            "great-basin-astronomy-festival",
+            "great-lakes-star-gaze",
+            "green-bank-star-quest",
+            "hara-village-star-festival",
+            "herzberg-telescope-meeting",
+            "international-telescope-meeting-emberger-alm",
+            "international-telescope-meeting-vogelsberg",
+            "kejimkujik-dark-sky-weekend",
+            "nova-east-star-party",
+            "peach-state-star-gaze",
+            "queensland-astrofest",
+            "saskatchewan-summer-star-party",
+            "staunton-river-star-party",
+            "tainai-star-festival",
         }
         self.assertEqual(set(self.by_id), expected)
         self.assertNotIn("south-pacific-star-party", self.by_id)
         self.assertNotIn("golden-state-star-party", self.by_id)
+        self.assertNotIn("enchanted-skies-star-party", self.by_id)
+        self.assertNotIn("rocky-mountain-star-stare", self.by_id)
+
+    def test_expansion_retains_completed_and_future_instances_without_guessing_recurrence(self):
+        self.assertEqual(
+            [event["status"] for event in self.by_id["queensland-astrofest"]["events"]],
+            ["scheduled"],
+        )
+        self.assertEqual(
+            [event["id"] for event in self.by_id["staunton-river-star-party"]["events"]],
+            [
+                "staunton-river-spring-star-party-2026",
+                "staunton-river-fall-star-party-2026",
+            ],
+        )
+        self.assertEqual(
+            [event["status"] for event in self.by_id["nova-east-star-party"]["events"]],
+            ["completed", "scheduled"],
+        )
 
     def test_cherry_springs_events_are_separate_listings_at_the_shared_venue(self):
         black_forest = self.by_id["black-forest-star-party"]
