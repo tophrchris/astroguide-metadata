@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "great-lakes-star-gaze",
+  "displayName": "Great Lakes Star Gaze",
+  "description": "The Great Lakes Star Gaze is a northern Michigan observing weekend at the Ocqueoc Outdoor Center, with dark skies, camping, speakers, and astronomy activities.",
+  "descriptionSources": [
+    {
+      "title": "Great Lakes Star Gaze 2026 public schedule listing",
+      "url": "https://www.eatoncounty.org/651/Public-Viewing-Schedule",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "858ce306-d350-53d8-9c62-4f9f73682238",
+    "name": "Ocqueoc Outdoor Center",
+    "latitude": 45.48185,
+    "longitude": -84.11157,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Ocqueoc Outdoor Center",
+    "locality": "Millersburg",
+    "region": "Michigan",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Detroit",
+    "coordinateSource": {
+      "title": "Ocqueoc Outdoor Center official site",
+      "url": "https://ocqueocoutdoorcenter.org/",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.eatoncounty.org/651/Public-Viewing-Schedule"
+    },
+    {
+      "role": "venue",
+      "url": "https://ocqueocoutdoorcenter.org/events/"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/great-lakes-star-gaze/hero.jpg",
+      "sourceURL": "https://i0.wp.com/ocqueocoutdoorcenter.org/wp-content/uploads/2025/09/IMG_7036.jpeg?fit=1200%2C900&ssl=1",
+      "attribution": "Great Lakes Star Gaze 2025 observing field via the official venue gallery.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/great-lakes-star-gaze/thumbnail.jpg",
+      "sourceURL": "https://i0.wp.com/ocqueocoutdoorcenter.org/wp-content/uploads/2026/06/OOC_StargazerEvent_Ad_sans_QR.jpg?fit=750%2C629&ssl=1",
+      "attribution": "Square crop of Great Lakes Star Gaze 2026 event artwork via the official venue site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and artwork creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "great-lakes-star-gaze-2026",
+      "name": "Great Lakes Star Gaze 2026",
+      "start": "2026-09-10",
+      "end": "2026-09-13",
+      "status": "scheduled",
+      "url": "https://www.eatoncounty.org/651/Public-Viewing-Schedule",
+      "source": {
+        "title": "Great Lakes Star Gaze 2026 public schedule listing",
+        "url": "https://www.eatoncounty.org/651/Public-Viewing-Schedule",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "international-telescope-meeting-vogelsberg",
+  "displayName": "International Telescope Meeting Vogelsberg",
+  "description": "Germany's long-running Internationales Teleskoptreffen Vogelsberg brings amateur astronomers and telescope makers together at the Gedern lakeside campground.",
+  "descriptionSources": [
+    {
+      "title": "VdS ITV 2026 event listing",
+      "url": "https://sternfreunde.de/event/internationales-teleskoptreffen-vogelsberg-itv-2026/",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "030e8d8b-41a6-5724-bd50-dab7cd6b4b04",
+    "name": "Campingpark am Gederner See",
+    "latitude": 50.430466,
+    "longitude": 9.17712,
+    "elevationMeters": 340,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Campingpark am Gederner See",
+    "locality": "Gedern",
+    "region": "Hesse",
+    "countryCode": "DE",
+    "countryName": "Germany",
+    "timezone": "Europe/Berlin",
+    "coordinateSource": {
+      "title": "Campingpark am Gederner See official site",
+      "url": "https://www.campingpark-gedern.de/",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://sternfreunde.de/event/internationales-teleskoptreffen-vogelsberg-itv-2026/"
+    },
+    {
+      "role": "program",
+      "url": "https://www.intercon-spacetec.de/fileadmin/downloads/ITV_Internationales_Teleskoptreffen_Vogelsberg.pdf"
+    },
+    {
+      "role": "venue",
+      "url": "https://www.campingpark-gedern.de/"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/international-telescope-meeting-vogelsberg/hero.jpg",
+      "sourceURL": "https://www.campingpark-gedern.de/__l5e/assets-v1/7f4c287f-3a3d-4168-b27e-9336cfa7049e/hero-panorama-see.jpg-3200.webp",
+      "attribution": "Campingpark am Gederner See panorama via the official venue.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/international-telescope-meeting-vogelsberg/thumbnail.jpg",
+      "sourceURL": "https://www.campingpark-gedern.de/__l5e/assets-v1/7f4c287f-3a3d-4168-b27e-9336cfa7049e/hero-panorama-see.jpg-3200.webp",
+      "attribution": "Square crop of the official Campingpark am Gederner See panorama.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "international-telescope-meeting-vogelsberg-2026",
+      "name": "International Telescope Meeting Vogelsberg 2026",
+      "start": "2026-05-13",
+      "end": "2026-05-17",
+      "status": "completed",
+      "url": "https://sternfreunde.de/event/internationales-teleskoptreffen-vogelsberg-itv-2026/",
+      "source": {
+        "title": "VdS ITV 2026 event listing",
+        "url": "https://sternfreunde.de/event/internationales-teleskoptreffen-vogelsberg-itv-2026/",
+        "verifiedAt": "2026-09-06"
+      }
+    },
+    {
+      "id": "international-telescope-meeting-vogelsberg-2027",
+      "name": "International Telescope Meeting Vogelsberg 2027",
+      "start": "2027-05-05",
+      "end": "2027-05-09",
+      "status": "scheduled",
+      "url": "https://www.intercon-spacetec.de/fileadmin/downloads/ITV_Internationales_Teleskoptreffen_Vogelsberg.pdf",
+      "source": {
+        "title": "ITV official program and future dates",
+        "url": "https://www.intercon-spacetec.de/fileadmin/downloads/ITV_Internationales_Teleskoptreffen_Vogelsberg.pdf",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

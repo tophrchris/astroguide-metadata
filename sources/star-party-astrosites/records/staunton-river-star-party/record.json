@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "staunton-river-star-party",
+  "displayName": "Staunton River Star Party",
+  "description": "Staunton River State Park hosts spring and fall star parties on its public dark-sky observation field, with registered observing and a public observing night.",
+  "descriptionSources": [
+    {
+      "title": "Virginia State Parks stargazing guide",
+      "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "642d27eb-c8f7-54b4-b0a2-b513aee3f890",
+    "name": "Staunton River Dark Sky Observation Area",
+    "latitude": 36.696066,
+    "longitude": -78.685254,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Staunton River Dark Sky Observation Area",
+    "locality": "Scottsburg",
+    "region": "Virginia",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/New_York",
+    "coordinateSource": {
+      "title": "Staunton River State Park official location",
+      "url": "https://www.dcr.virginia.gov/state-parks/staunton-river",
+      "verifiedAt": "2026-09-06"
+    },
+    "relatedDarkSkyPlaceID": "darksky:staunton-river-state-park-dark-sky-park"
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp"
+    },
+    {
+      "role": "venue",
+      "url": "https://www.dcr.virginia.gov/state-parks/staunton-river"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/staunton-river-star-party/hero.jpg",
+      "sourceURL": "https://live.staticflickr.com/7395/12942539653_eb07914a10_z.jpg",
+      "attribution": "Staunton River Spring Star Party photo by Steve Andrews, linked by Virginia State Parks.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Steve Andrews retains applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/staunton-river-star-party/thumbnail.jpg",
+      "sourceURL": "https://live.staticflickr.com/7395/12942539653_eb07914a10_z.jpg",
+      "attribution": "Square crop of the Staunton River Spring Star Party photo by Steve Andrews.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Steve Andrews retains applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "staunton-river-spring-star-party-2026",
+      "name": "Staunton River Spring Star Party 2026",
+      "start": "2026-03-16",
+      "end": "2026-03-22",
+      "status": "completed",
+      "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp",
+      "source": {
+        "title": "Virginia State Parks 2026 star party dates",
+        "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp",
+        "verifiedAt": "2026-09-06"
+      }
+    },
+    {
+      "id": "staunton-river-fall-star-party-2026",
+      "name": "Staunton River Fall Star Party 2026",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "status": "scheduled",
+      "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp",
+      "source": {
+        "title": "Virginia State Parks 2026 star party dates",
+        "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

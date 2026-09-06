@@ -1,0 +1,3357 @@
+{
+  "schemaVersion": 1,
+  "packageFamily": "starPartyAstroSites",
+  "packageVersion": "star-party-astrosites-v1-20260906-r4",
+  "generatedAt": "2026-09-06T06:30:00Z",
+  "scope": {
+    "siteCount": 39,
+    "eventCount": 48,
+    "scheduledEventCount": 31,
+    "completedEventCount": 17,
+    "cancelledEventCount": 0,
+    "countryCount": 8,
+    "horizonResourceCount": 4,
+    "cachedHorizonAssetCount": 2,
+    "obstructionProfileCount": 0
+  },
+  "starPartyAstroSites": [
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "almost-heaven-star-party",
+      "displayName": "Almost Heaven Star Party",
+      "description": "A high-elevation observing event at Spruce Knob Mountain Center in West Virginia, combining multi-night observing with astronomy talks and programs.",
+      "descriptionSources": [
+        {
+          "title": "Almost Heaven Star Party 2026",
+          "url": "https://www.ahsp.org/home-2026/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "748a23a5-5197-510e-88af-ddaab53dd7d8",
+        "name": "Spruce Knob Mountain Center main observing field",
+        "latitude": 38.676667,
+        "longitude": -79.567222,
+        "elevationMeters": 1341,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Spruce Knob Mountain Center main observing field",
+        "locality": "Circleville",
+        "region": "West Virginia",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/New_York",
+        "coordinateSource": {
+          "title": "Almost Heaven Star Party official FAQ",
+          "url": "https://www.ahsp.org/frequently-asked-questions/",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.ahsp.org/"
+        },
+        {
+          "role": "venueInformation",
+          "url": "https://www.ahsp.org/frequently-asked-questions/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/almost-heaven-star-party/hero.jpg",
+          "sourceURL": "https://i0.wp.com/www.ahsp.org/wp-content/gallery/ahsp-photos/star_party_ahsp_0806_009.jpg?w=1600",
+          "attribution": "Star-party photograph via Northern Virginia Astronomy Club / Almost Heaven Star Party.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/almost-heaven-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://www.ahsp.org/wp-content/uploads/2014/12/cropped-AHPS2015.png",
+          "attribution": "Almost Heaven Star Party logo via Northern Virginia Astronomy Club.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "almost-heaven-star-party-2026",
+          "name": "Almost Heaven Star Party 2026",
+          "start": "2026-08-10",
+          "end": "2026-08-16",
+          "status": "completed",
+          "url": "https://www.ahsp.org/home-2026/",
+          "source": {
+            "title": "Almost Heaven Star Party 2026 official page",
+            "url": "https://www.ahsp.org/home-2026/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ],
+      "horizonResources": [
+        {
+          "id": "almost-heaven-entrance-to-green-lot-panorama",
+          "kind": "panorama",
+          "quality": "visual_panorama_only",
+          "disposition": "link_only_pending_permission",
+          "source": {
+            "title": "Panorama from the entrance area towards the Green Lot",
+            "pageURL": "https://www.ahsp.org/maps-and-directions/",
+            "resourceURL": "https://www.ahsp.org/wp-content/uploads/2013/03/Yellow-Field-Entrance.jpg",
+            "creator": null,
+            "verifiedAt": "2026-09-02"
+          },
+          "rights": {
+            "permissionStatus": "permission_required",
+            "licenseName": "All rights reserved",
+            "licenseURL": null,
+            "attribution": "Northern Virginia Astronomy Club / Almost Heaven Star Party website.",
+            "notes": "The public maps page links the image, but the site footer reserves rights and supplies no image-specific reuse license. Keep link-only unless NOVAC grants permission."
+          },
+          "calibration": {
+            "viewpointDescription": "Entrance area looking toward the Green Lot at Spruce Knob Mountain Center, rather than a verified camera point at the packaged main observing-field coordinate.",
+            "viewpointMatch": "approximate",
+            "northAzimuthOffsetDegrees": null,
+            "projectionType": "unknown_stitched",
+            "horizontalFieldOfViewDegrees": null,
+            "verticalFieldOfViewDegrees": null,
+            "verticalScale": "unknown",
+            "suitableForObstructionCalculations": false,
+            "notes": "The 17626-by-1336-pixel JPEG has no embedded heading, location, projection, field-of-view, or vertical-scale metadata. It is a visual venue reference only."
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "astronomy-at-the-beach",
+      "displayName": "Astronomy at the Beach",
+      "description": "Michigan's large, free public Astronomy at the Beach event fills the Kent Lake Beach area with solar and night observing, presentations, exhibits, and astronomy clubs.",
+      "descriptionSources": [
+        {
+          "title": "Astronomy at the Beach official site",
+          "url": "https://www.glaac.org/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "4149accf-e8e4-5727-9aa1-38c62361be99",
+        "name": "Kent Lake Beach telescope field",
+        "latitude": 42.5101,
+        "longitude": -83.699,
+        "elevationMeters": 255,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Kent Lake Beach telescope field",
+        "locality": "Brighton",
+        "region": "Michigan",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Detroit",
+        "coordinateSource": {
+          "title": "Astronomy at the Beach official event map",
+          "url": "https://www.glaac.org/wp-content/uploads/2026/05/AATB_2019_map-scaled.jpg",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.glaac.org/"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.michigan.gov/recsearch/parks/islandlake"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/astronomy-at-the-beach/hero.jpg",
+          "sourceURL": "https://www.glaac.org/wp-content/uploads/2024/08/aatb_tent-1024x768.jpg",
+          "attribution": "Astronomy at the Beach club tent photo by Amy Cantu.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Amy Cantu and GLAAC retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/astronomy-at-the-beach/thumbnail.jpg",
+          "sourceURL": "https://www.glaac.org/wp-content/uploads/2024/08/AATB-Header-cropped-Doug-Bock-1024x414.png",
+          "attribution": "Square crop of Astronomy at the Beach header artwork by Doug Bock.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Doug Bock and GLAAC retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "astronomy-at-the-beach-2026",
+          "name": "Astronomy at the Beach 2026",
+          "start": "2026-09-18",
+          "end": "2026-09-19",
+          "status": "scheduled",
+          "url": "https://www.glaac.org/",
+          "source": {
+            "title": "Astronomy at the Beach official site",
+            "url": "https://www.glaac.org/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "badlands-astronomy-festival",
+      "displayName": "Badlands Astronomy Festival",
+      "description": "Badlands National Park's three-day public astronomy festival brings together scientists, amateur astronomers, educators, and visitors for talks, activities, and stargazing.",
+      "descriptionSources": [
+        {
+          "title": "Badlands Astronomy Festival",
+          "url": "https://www.nps.gov/thingstodo/badl-astronomy-festival.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "234ef28e-22ac-5915-9af5-b7d532b963f8",
+        "name": "Ben Reifel Visitor Center",
+        "latitude": 43.74908,
+        "longitude": -101.941661,
+        "elevationMeters": 728,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Ben Reifel Visitor Center",
+        "locality": "Interior",
+        "region": "South Dakota",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Denver",
+        "coordinateSource": {
+          "title": "Badlands Astronomy Festival event details",
+          "url": "https://www.nps.gov/thingstodo/badl-astronomy-festival.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.nps.gov/thingstodo/badl-astronomy-festival.htm"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/badlands-astronomy-festival/hero.jpg",
+          "sourceURL": "https://www.nps.gov/common/uploads/cropped_image/primary/AD404E5E-A205-D56D-D21208540CEFFDA2.jpg?width=1300&quality=90&mode=crop",
+          "attribution": "Badlands Astronomy Festival night-sky image via the National Park Service.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the National Park Service and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/badlands-astronomy-festival/thumbnail.jpg",
+          "sourceURL": "https://www.nps.gov/common/uploads/cropped_image/primary/AD404E5E-A205-D56D-D21208540CEFFDA2.jpg?width=1300&quality=90&mode=crop",
+          "attribution": "Square crop of the Badlands Astronomy Festival night-sky image.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the National Park Service and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "badlands-astronomy-festival-2026",
+          "name": "Badlands Astronomy Festival 2026",
+          "start": "2026-07-17",
+          "end": "2026-07-19",
+          "status": "completed",
+          "url": "https://www.nps.gov/thingstodo/badl-astronomy-festival.htm",
+          "source": {
+            "title": "Badlands Astronomy Festival",
+            "url": "https://www.nps.gov/thingstodo/badl-astronomy-festival.htm",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "black-forest-star-party",
+      "displayName": "Black Forest Star Party",
+      "description": "An autumn observing gathering presented by the Central Pennsylvania Observers at Cherry Springs State Park's Overnight Astronomy Observation Field.",
+      "descriptionSources": [
+        {
+          "title": "Black Forest Star Party official site",
+          "url": "https://bfsp.org/",
+          "verifiedAt": "2026-09-02"
+        },
+        {
+          "title": "Cherry Springs State Park stargazing",
+          "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "b7491992-377b-55d7-9910-b0fa9b4113be",
+        "name": "Cherry Springs State Park Overnight Astronomy Observation Field",
+        "latitude": 41.6501,
+        "longitude": -77.8164,
+        "elevationMeters": 701,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Cherry Springs State Park Overnight Astronomy Observation Field",
+        "locality": "Coudersport",
+        "region": "Pennsylvania",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/New_York",
+        "coordinateSource": {
+          "title": "Cherry Springs State Park official stargazing field",
+          "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing",
+          "verifiedAt": "2026-09-02"
+        },
+        "relatedDarkSkyPlaceID": "darksky:cherry-springs-state-park-dark-sky-park"
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://bfsp.org/"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/black-forest-star-party/hero.jpg",
+          "sourceURL": "https://bfsp.org/wp-content/uploads/2023/03/hd-wallpaper-g1dc0e5b76_1280.jpg",
+          "attribution": "Image via Black Forest Star Party / Central Pennsylvania Observers.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/black-forest-star-party/thumbnail.jpg",
+          "sourceURL": "https://bfsp.org/wp-content/uploads/2023/03/hd-wallpaper-g1dc0e5b76_1280.jpg",
+          "attribution": "Square crop of the Black Forest Star Party image via Central Pennsylvania Observers.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "black-forest-star-party-2026",
+          "name": "Black Forest Star Party 2026",
+          "start": "2026-09-11",
+          "end": "2026-09-13",
+          "status": "scheduled",
+          "url": "https://bfsp.org/",
+          "source": {
+            "title": "Black Forest Star Party official site",
+            "url": "https://bfsp.org/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ],
+      "horizonResources": [
+        {
+          "id": "black-forest-cherry-springs-panorama-2009",
+          "kind": "panorama",
+          "quality": "visual_panorama_only",
+          "disposition": "cached_visual_reference",
+          "source": {
+            "title": "Cherry Springs State Park panorama",
+            "pageURL": "https://commons.wikimedia.org/wiki/File:Cherry_Springs_State_Park_panorama.jpg",
+            "resourceURL": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cherry_Springs_State_Park_panorama.jpg",
+            "creator": "Wikimedia Commons user Ruhrfisch",
+            "verifiedAt": "2026-09-02"
+          },
+          "rights": {
+            "permissionStatus": "licensed_for_redistribution",
+            "licenseName": "CC BY-SA 3.0",
+            "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "attribution": "Cherry Springs State Park panorama by Wikimedia Commons user Ruhrfisch, licensed CC BY-SA 3.0; resized by AstroGuide.",
+            "notes": "The creator offers the original under CC BY-SA 3.0 and GFDL. AstroGuide uses the CC BY-SA 3.0 option and identifies the cached resize as a modification. This venue reference is shared by the separately listed Black Forest and Cherry Springs events."
+          },
+          "calibration": {
+            "viewpointDescription": "Unspecified camera point within Cherry Springs State Park; the image includes the Overnight Astronomy Observation Field and surrounding park features.",
+            "viewpointMatch": "approximate",
+            "northAzimuthOffsetDegrees": null,
+            "projectionType": "unknown_stitched",
+            "horizontalFieldOfViewDegrees": 340,
+            "verticalFieldOfViewDegrees": null,
+            "verticalScale": "unknown",
+            "suitableForObstructionCalculations": false,
+            "notes": "The source says Autostitch combined 13 horizontal photos into about 340 degrees, but supplies no camera coordinates, left-edge azimuth, projection model, or vertical scale. This is a visual reference, not an obstruction profile."
+          },
+          "asset": {
+            "path": "v1/assets/star-party-astrosites/black-forest-star-party/cherry-springs-state-park-panorama-3840.jpg",
+            "sha256": "eb1dff9a0b82f4a62d8a351b323448d6a3df32d6b81a1affdb746f26d69595f9",
+            "byteSize": 446841,
+            "width": 3840,
+            "height": 281,
+            "derivativeNotes": "Downscaled from the 16050-by-1174-pixel original to 3840 by 281 pixels as a JPEG; no skyline trace, azimuth calibration, or further crop was applied."
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "bryce-canyon-astronomy-festival",
+      "displayName": "Bryce Canyon Astronomy Festival",
+      "description": "Bryce Canyon National Park's annual public astronomy festival features evening telescope viewing, constellation tours, talks, daytime activities, and astrophotography workshops.",
+      "descriptionSources": [
+        {
+          "title": "Bryce Canyon Annual Astronomy Festival",
+          "url": "https://www.nps.gov/brca/planyourvisit/astrofest.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "73fc639a-cc56-5ef2-95d1-ab169f91bbca",
+        "name": "Bryce Canyon Telescope Stargazing Site",
+        "latitude": 37.640403,
+        "longitude": -112.169629,
+        "elevationMeters": 2438,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Bryce Canyon Telescope Stargazing Site",
+        "locality": "Bryce Canyon City",
+        "region": "Utah",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Denver",
+        "coordinateSource": {
+          "title": "Bryce Canyon Astronomy Festival telescope site",
+          "url": "https://www.nps.gov/brca/planyourvisit/astrofest.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.nps.gov/brca/planyourvisit/astrofest.htm"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/bryce-canyon-astronomy-festival/hero.jpg",
+          "sourceURL": "https://www.nps.gov/brca/planyourvisit/images/Astro-Fest-Banner-Keith-Moore.jpg",
+          "attribution": "Bryce Canyon Astronomy Festival banner photo, NPS/Keith Moore.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Keith Moore and the National Park Service retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/bryce-canyon-astronomy-festival/thumbnail.jpg",
+          "sourceURL": "https://www.nps.gov/brca/planyourvisit/images/Astro_Fest_2026.jpg",
+          "attribution": "Square crop of the Bryce Canyon Astronomy Festival 2026 poster, NPS/Tiana Reading.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Tiana Reading and the National Park Service retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "bryce-canyon-astronomy-festival-2026",
+          "name": "Bryce Canyon Astronomy Festival 2026",
+          "start": "2026-06-11",
+          "end": "2026-06-13",
+          "status": "completed",
+          "url": "https://www.nps.gov/brca/planyourvisit/astrofest.htm",
+          "source": {
+            "title": "Bryce Canyon Annual Astronomy Festival",
+            "url": "https://www.nps.gov/brca/planyourvisit/astrofest.htm",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "central-star-party",
+      "displayName": "Central Star Party",
+      "description": "New Zealand's Central Star Party is an annual social astronomy gathering at Tuki Tuki Camp in Hawke's Bay, with observing, talks, workshops, and family activities.",
+      "descriptionSources": [
+        {
+          "title": "Central Star Party official site",
+          "url": "https://censtar.party/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "5d3b29e3-4c92-52f4-9526-7dc348887d1e",
+        "name": "Tuki Tuki Camp",
+        "latitude": -39.652846,
+        "longitude": 176.926467,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Tuki Tuki Camp",
+        "locality": "Haumoana",
+        "region": "Hawke's Bay",
+        "countryCode": "NZ",
+        "countryName": "New Zealand",
+        "timezone": "Pacific/Auckland",
+        "coordinateSource": {
+          "title": "Tuki Tuki Camp official site",
+          "url": "https://tukitukicamp.weebly.com/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://censtar.party/"
+        },
+        {
+          "role": "venue",
+          "url": "https://tukitukicamp.weebly.com/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/central-star-party/hero.jpg",
+          "sourceURL": "https://censtar.party/wp-content/uploads/2026/07/CSP-2026-attendees.jpg",
+          "attribution": "Central Star Party 2026 attendee photo via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Central Star Party and the photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/central-star-party/logo.png",
+          "sourceURL": "https://censtar.party/wp-content/uploads/2018/04/logo.png",
+          "attribution": "Central Star Party event logo via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Central Star Party and the logo creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "central-star-party-2026",
+          "name": "Central Star Party 2026",
+          "start": "2026-01-15",
+          "end": "2026-01-19",
+          "status": "completed",
+          "url": "https://censtar.party/?page_id=3557",
+          "source": {
+            "title": "Central Star Party 2026 programme",
+            "url": "https://censtar.party/?page_id=3557",
+            "verifiedAt": "2026-09-06"
+          }
+        },
+        {
+          "id": "central-star-party-2027",
+          "name": "Central Star Party 2027",
+          "start": "2027-01-07",
+          "end": "2027-01-11",
+          "status": "scheduled",
+          "url": "https://censtar.party/",
+          "source": {
+            "title": "Central Star Party official site",
+            "url": "https://censtar.party/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "cherry-springs-star-party",
+      "displayName": "Cherry Springs Star Party",
+      "description": "An early-summer observing gathering presented by the Astronomical Society of Harrisburg at Cherry Springs State Park's Overnight Astronomy Observation Field.",
+      "descriptionSources": [
+        {
+          "title": "Cherry Springs Star Party official site",
+          "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/",
+          "verifiedAt": "2026-09-02"
+        },
+        {
+          "title": "Cherry Springs Star Party official dates",
+          "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
+          "verifiedAt": "2026-09-02"
+        },
+        {
+          "title": "Cherry Springs State Park stargazing",
+          "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "a96deeaa-0ab0-5490-a7fd-ff302bed7db6",
+        "name": "Cherry Springs State Park Overnight Astronomy Observation Field",
+        "latitude": 41.6501,
+        "longitude": -77.8164,
+        "elevationMeters": 701,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Cherry Springs State Park Overnight Astronomy Observation Field",
+        "locality": "Coudersport",
+        "region": "Pennsylvania",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/New_York",
+        "coordinateSource": {
+          "title": "Cherry Springs State Park official stargazing field",
+          "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing",
+          "verifiedAt": "2026-09-02"
+        },
+        "relatedDarkSkyPlaceID": "darksky:cherry-springs-state-park-dark-sky-park"
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/cherry-springs-state-park/stargazing"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/cherry-springs-star-party/hero.jpg",
+          "sourceURL": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/",
+          "attribution": "Observing-field image via Astronomical Society of Harrisburg / Cherry Springs Star Party.",
+          "license": "All rights reserved",
+          "permissionNotes": "Hero A approved for AstroGuide presentation by the project owner on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/cherry-springs-star-party/thumbnail.jpg",
+          "sourceURL": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/",
+          "attribution": "Cherry Springs Star Party field-sign image via Astronomical Society of Harrisburg.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "cherry-springs-star-party-2027",
+          "name": "Cherry Springs Star Party 2027",
+          "start": "2027-06-03",
+          "end": "2027-06-06",
+          "status": "scheduled",
+          "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
+          "source": {
+            "title": "Cherry Springs Star Party official future dates",
+            "url": "https://sites.google.com/astrohbg.org/cherry-springs-star-party/future-star-party-dates",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ],
+      "horizonResources": [
+        {
+          "id": "cherry-springs-star-party-panorama-2009",
+          "kind": "panorama",
+          "quality": "visual_panorama_only",
+          "disposition": "cached_visual_reference",
+          "source": {
+            "title": "Cherry Springs State Park panorama",
+            "pageURL": "https://commons.wikimedia.org/wiki/File:Cherry_Springs_State_Park_panorama.jpg",
+            "resourceURL": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cherry_Springs_State_Park_panorama.jpg",
+            "creator": "Wikimedia Commons user Ruhrfisch",
+            "verifiedAt": "2026-09-02"
+          },
+          "rights": {
+            "permissionStatus": "licensed_for_redistribution",
+            "licenseName": "CC BY-SA 3.0",
+            "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "attribution": "Cherry Springs State Park panorama by Wikimedia Commons user Ruhrfisch, licensed CC BY-SA 3.0; resized by AstroGuide.",
+            "notes": "The creator offers the original under CC BY-SA 3.0 and GFDL. AstroGuide uses the CC BY-SA 3.0 option and identifies the cached resize as a modification. This venue reference is shared by the separately listed Cherry Springs and Black Forest events."
+          },
+          "calibration": {
+            "viewpointDescription": "Unspecified camera point within Cherry Springs State Park; the image includes the Overnight Astronomy Observation Field and surrounding park features.",
+            "viewpointMatch": "approximate",
+            "northAzimuthOffsetDegrees": null,
+            "projectionType": "unknown_stitched",
+            "horizontalFieldOfViewDegrees": 340,
+            "verticalFieldOfViewDegrees": null,
+            "verticalScale": "unknown",
+            "suitableForObstructionCalculations": false,
+            "notes": "The source says Autostitch combined 13 horizontal photos into about 340 degrees, but supplies no camera coordinates, left-edge azimuth, projection model, or vertical scale. This is a visual reference, not an obstruction profile."
+          },
+          "asset": {
+            "path": "v1/assets/star-party-astrosites/cherry-springs-star-party/cherry-springs-state-park-panorama-3840.jpg",
+            "sha256": "eb1dff9a0b82f4a62d8a351b323448d6a3df32d6b81a1affdb746f26d69595f9",
+            "byteSize": 446841,
+            "width": 3840,
+            "height": 281,
+            "derivativeNotes": "Downscaled from the 16050-by-1174-pixel original to 3840 by 281 pixels as a JPEG; no skyline trace, azimuth calibration, or further crop was applied."
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "death-valley-dark-sky-festival",
+      "displayName": "Death Valley Dark Sky Festival",
+      "description": "Death Valley National Park's annual dark-sky festival offers public telescope viewing, ranger and scientist programs, demonstrations, and activities around Furnace Creek.",
+      "descriptionSources": [
+        {
+          "title": "Death Valley Dark Sky Festival",
+          "url": "https://www.nps.gov/deva/planyourvisit/darkskyfestival.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "abfb510e-5341-55b7-8ee9-c27d2216cdb8",
+        "name": "Furnace Creek Visitor Center",
+        "latitude": 36.462711,
+        "longitude": -116.866851,
+        "elevationMeters": -58,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Furnace Creek Visitor Center",
+        "locality": "Furnace Creek",
+        "region": "California",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Los_Angeles",
+        "coordinateSource": {
+          "title": "Death Valley National Park directions",
+          "url": "https://www.nps.gov/deva/planyourvisit/directions.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "directions",
+          "url": "https://www.nps.gov/deva/planyourvisit/directions.htm"
+        },
+        {
+          "role": "event",
+          "url": "https://www.nps.gov/deva/planyourvisit/darkskyfestival.htm"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/death-valley-dark-sky-festival/hero.jpg",
+          "sourceURL": "https://www.nps.gov/common/uploads/image_group/deva/44561C36-FEE1-A033-E69AF38D9A50D43B.jpg?maxwidth=1280&autorotate=false",
+          "attribution": "Brightness of the Void presentation at Zabriskie Point, NASA Earth to Sky via Death Valley National Park.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; NASA Earth to Sky and the National Park Service retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/death-valley-dark-sky-festival/logo.png",
+          "sourceURL": "https://www.nps.gov/deva/planyourvisit/images/DSF_Images.jpg",
+          "attribution": "Death Valley Dark Sky Festival event artwork via the National Park Service.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Used as the listing mark after project-owner selection on 2026-09-06; the National Park Service and artwork creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "death-valley-dark-sky-festival-2026",
+          "name": "Death Valley Dark Sky Festival 2026",
+          "start": "2026-02-06",
+          "end": "2026-02-08",
+          "status": "completed",
+          "url": "https://www.nps.gov/deva/planyourvisit/darkskyfestival.htm",
+          "source": {
+            "title": "Death Valley Dark Sky Festival",
+            "url": "https://www.nps.gov/deva/planyourvisit/darkskyfestival.htm",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "enchanted-skies-star-party",
+      "displayName": "Enchanted Skies Star Party",
+      "description": "The Magdalena Astronomical Society's annual New Mexico gathering offers multiple nights of observing, an afternoon lecture program, camping, and astronomy community activities at Montosa Ranch Campground.",
+      "descriptionSources": [
+        {
+          "title": "Enchanted Skies Star Party official site",
+          "url": "https://www.enchantedskies.org/home",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "b668063a-ba4a-57b4-8664-e48b58eded4d",
+        "name": "Montosa Ranch Campground",
+        "latitude": 34.080917,
+        "longitude": -107.481532,
+        "elevationMeters": 2170,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Montosa Ranch Campground",
+        "locality": "Magdalena",
+        "region": "New Mexico",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Denver",
+        "coordinateSource": {
+          "title": "Public Montosa Ranch Campground map pin shared for Enchanted Skies",
+          "url": "https://maps.app.goo.gl/bMM17cwo2YZrcit37",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.enchantedskies.org/home"
+        },
+        {
+          "role": "venueMap",
+          "url": "https://maps.app.goo.gl/bMM17cwo2YZrcit37"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/enchanted-skies-star-party/hero.jpg",
+          "sourceURL": "https://www.enchantedskies.org/sites/default/files/2025-10/Day%20201.jpeg?fid=64",
+          "attribution": "Nighttime telescope setup at Enchanted Skies Star Party via the official event site; photographer not identified on the source page.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Magdalena Astronomical Society and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/enchanted-skies-star-party/thumbnail.jpg",
+          "sourceURL": "https://www.enchantedskies.org/sites/default/files/2025-10/Day%20201.jpeg?fid=64",
+          "attribution": "Square crop of the nighttime Enchanted Skies telescope-setup photo via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Magdalena Astronomical Society and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "enchanted-skies-star-party-2026",
+          "name": "Enchanted Skies Star Party 2026",
+          "start": "2026-10-06",
+          "end": "2026-10-11",
+          "status": "scheduled",
+          "url": "https://www.enchantedskies.org/home",
+          "source": {
+            "title": "Enchanted Skies Star Party 2026 official site",
+            "url": "https://www.enchantedskies.org/home",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "flagstaff-star-party",
+      "displayName": "Flagstaff Star Party",
+      "description": "The free Flagstaff Star Party brings public telescope viewing, night-sky orientations, music, and astronomy presentations to Buffalo Park in the world's first International Dark-Sky City.",
+      "descriptionSources": [
+        {
+          "title": "Flagstaff Star Party official site",
+          "url": "https://flagstaffstarparty.org/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "943cdec0-2ded-5c77-a37d-e7a431d62e21",
+        "name": "Buffalo Park",
+        "latitude": 35.222158,
+        "longitude": -111.633222,
+        "elevationMeters": 2115,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Buffalo Park",
+        "locality": "Flagstaff",
+        "region": "Arizona",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Phoenix",
+        "coordinateSource": {
+          "title": "Coconino County Flagstaff Star Party event listing",
+          "url": "https://www.coconino.az.gov/Calendar.aspx?EID=3273",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://flagstaffstarparty.org/"
+        },
+        {
+          "role": "local-tourism",
+          "url": "https://www.flagstaffarizona.org/events/festivals/flagstaff-star-party/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/flagstaff-star-party/hero.jpg",
+          "sourceURL": "https://flagstaffstarparty.org/wp-content/uploads/2025/07/7R304973.1000w.jpg",
+          "attribution": "Touring the sky in the Binocular Circle, via the Flagstaff Star Party official site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Flagstaff Dark Skies Coalition and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/flagstaff-star-party/logo.png",
+          "sourceURL": "https://flagstaffstarparty.org/wp-content/uploads/2025/07/FSP.CotN_.2020.blk_.png",
+          "attribution": "Flagstaff Star Party and Celebration of the Night event mark via the official site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Flagstaff Dark Skies Coalition and artwork creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "flagstaff-star-party-2026",
+          "name": "Flagstaff Star Party 2026",
+          "start": "2026-10-01",
+          "end": "2026-10-03",
+          "status": "scheduled",
+          "url": "https://flagstaffstarparty.org/",
+          "source": {
+            "title": "Flagstaff Star Party official site",
+            "url": "https://flagstaffstarparty.org/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "golden-state-star-party",
+      "displayName": "Golden State Star Party",
+      "description": "A four-night summer observing gathering in northeastern California with dark-sky observing, an organized observing program, talks, and community activities.",
+      "descriptionSources": [
+        {
+          "title": "Golden State Star Party official site",
+          "url": "https://goldenstatestarparty.org/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "6c2021f8-58c4-53d6-9bb3-70e0ddd17490",
+        "name": "Golden State Star Party Site",
+        "latitude": 41.135135,
+        "longitude": -120.978509,
+        "elevationMeters": 1315,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Golden State Star Party Site",
+        "locality": "Bieber",
+        "region": "California",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Los_Angeles",
+        "coordinateSource": {
+          "title": "Golden State Star Party official directions and published coordinates",
+          "url": "https://goldenstatestarparty.org/golden-state-star-party/directions-to-gssp/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "directions",
+          "url": "https://goldenstatestarparty.org/golden-state-star-party/directions-to-gssp/"
+        },
+        {
+          "role": "event",
+          "url": "https://goldenstatestarparty.org/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/golden-state-star-party/hero.jpg",
+          "sourceURL": "https://goldenstatestarparty.org/wp-content/uploads/2016/12/gssp.group_.jpg",
+          "attribution": "Golden State Star Party observing-field group photo via the official event site; photographer not identified on the source page.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Golden State Star Party and the photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/golden-state-star-party/logo.png",
+          "sourceURL": "https://goldenstatestarparty.org/wp-content/uploads/2016/12/gssp.jpg",
+          "attribution": "Golden State Star Party event mark via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Golden State Star Party and the artwork creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "golden-state-star-party-2026",
+          "name": "Golden State Star Party 2026",
+          "start": "2026-07-11",
+          "end": "2026-07-15",
+          "status": "completed",
+          "url": "https://goldenstatestarparty.org/",
+          "source": {
+            "title": "Golden State Star Party 2026 official site",
+            "url": "https://goldenstatestarparty.org/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "grand-canyon-star-party",
+      "displayName": "Grand Canyon Star Party",
+      "description": "A week of free public astronomy programs at Grand Canyon National Park's South Rim, including telescope viewing, presentations, and constellation tours.",
+      "descriptionSources": [
+        {
+          "title": "Grand Canyon National Park Star Party",
+          "url": "https://home.nps.gov/grca/planyourvisit/grand-canyon-star-party.htm/index.htm",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "3a9c5645-e53b-5f15-b081-ab469c12622c",
+        "name": "Grand Canyon Visitor Center, South Rim",
+        "latitude": 36.058889,
+        "longitude": -112.109167,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Grand Canyon Visitor Center, South Rim",
+        "locality": "Grand Canyon Village",
+        "region": "Arizona",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Phoenix",
+        "coordinateSource": {
+          "title": "Grand Canyon National Park official trip planner visitor center coordinates",
+          "url": "https://www.nps.gov/grca/learn/news/upload/trip-planner-grca.pdf",
+          "verifiedAt": "2026-09-02"
+        },
+        "relatedDarkSkyPlaceID": "darksky:grand-canyon-national-park-dark-sky-park"
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://home.nps.gov/grca/planyourvisit/grand-canyon-star-party.htm/index.htm"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-visitor-center.htm"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/grand-canyon-star-party/hero.jpg",
+          "sourceURL": "https://www.nps.gov/grca/planyourvisit/images/Still-6.jpg",
+          "attribution": "Grand Canyon Star Party image via Grand Canyon National Park / National Park Service.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; no separate image credit or license was published with the source image.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/grand-canyon-star-party/thumbnail.jpg",
+          "sourceURL": "https://www.nps.gov/grca/planyourvisit/images/Still-6.jpg",
+          "attribution": "Square crop of the Grand Canyon Star Party image via the National Park Service.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; no separate image credit or license was published with the source image.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "grand-canyon-star-party-2027",
+          "name": "Grand Canyon Star Party 2027",
+          "start": "2027-05-29",
+          "end": "2027-06-05",
+          "status": "scheduled",
+          "url": "https://home.nps.gov/grca/planyourvisit/grand-canyon-star-party.htm/index.htm",
+          "source": {
+            "title": "Grand Canyon National Park official future dates",
+            "url": "https://home.nps.gov/grca/planyourvisit/grand-canyon-star-party.htm/index.htm",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "great-basin-astronomy-festival",
+      "displayName": "Great Basin Astronomy Festival",
+      "description": "Great Basin National Park's annual astronomy festival is a free three-night celebration with public telescope viewing, ranger programs, speakers, tours, and astrophotography workshops.",
+      "descriptionSources": [
+        {
+          "title": "Great Basin Astronomy Festival",
+          "url": "https://www.nps.gov/grba/planyourvisit/great-basin-astronomy-festival.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "3d231a67-7eb5-5b8a-942e-ee399ac67ae4",
+        "name": "Great Basin Astronomy Amphitheater",
+        "latitude": 39.005618,
+        "longitude": -114.219953,
+        "elevationMeters": 2080,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Great Basin Astronomy Amphitheater",
+        "locality": "Baker",
+        "region": "Nevada",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Los_Angeles",
+        "coordinateSource": {
+          "title": "Great Basin astronomy program venue",
+          "url": "https://www.nps.gov/grba/planyourvisit/astronomy-programs.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.nps.gov/grba/planyourvisit/great-basin-astronomy-festival.htm"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.nps.gov/grba/planyourvisit/visitor-centers.htm"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/great-basin-astronomy-festival/hero.jpg",
+          "sourceURL": "https://www.nps.gov/grba/planyourvisit/images/_37A7921-Copy.JPG",
+          "attribution": "Great Basin Astronomy Festival at the Astronomy Amphitheater, photo by Tom Auchter.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Tom Auchter and the National Park Service retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/great-basin-astronomy-festival/logo.png",
+          "sourceURL": "https://www.nps.gov/thingstodo/images/Astrofest-Logo-sticker-design-2026-2.png",
+          "attribution": "Great Basin Astrofest 2026 graphic, NPS Graphic/C. Kouba.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; C. Kouba and the National Park Service retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "great-basin-astronomy-festival-2026",
+          "name": "Great Basin Astronomy Festival 2026",
+          "start": "2026-09-10",
+          "end": "2026-09-12",
+          "status": "scheduled",
+          "url": "https://www.nps.gov/grba/planyourvisit/great-basin-astronomy-festival.htm",
+          "source": {
+            "title": "Great Basin Astronomy Festival",
+            "url": "https://www.nps.gov/grba/planyourvisit/great-basin-astronomy-festival.htm",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "great-lakes-star-gaze",
+      "displayName": "Great Lakes Star Gaze",
+      "description": "The Great Lakes Star Gaze is a northern Michigan observing weekend at the Ocqueoc Outdoor Center, with dark skies, camping, speakers, and astronomy activities.",
+      "descriptionSources": [
+        {
+          "title": "Great Lakes Star Gaze 2026 public schedule listing",
+          "url": "https://www.eatoncounty.org/651/Public-Viewing-Schedule",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "858ce306-d350-53d8-9c62-4f9f73682238",
+        "name": "Ocqueoc Outdoor Center",
+        "latitude": 45.48185,
+        "longitude": -84.11157,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Ocqueoc Outdoor Center",
+        "locality": "Millersburg",
+        "region": "Michigan",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Detroit",
+        "coordinateSource": {
+          "title": "Ocqueoc Outdoor Center official site",
+          "url": "https://ocqueocoutdoorcenter.org/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.eatoncounty.org/651/Public-Viewing-Schedule"
+        },
+        {
+          "role": "venue",
+          "url": "https://ocqueocoutdoorcenter.org/events/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/great-lakes-star-gaze/hero.jpg",
+          "sourceURL": "https://i0.wp.com/ocqueocoutdoorcenter.org/wp-content/uploads/2025/09/IMG_7036.jpeg?fit=1200%2C900&ssl=1",
+          "attribution": "Great Lakes Star Gaze 2025 observing field via the official venue gallery.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/great-lakes-star-gaze/thumbnail.jpg",
+          "sourceURL": "https://i0.wp.com/ocqueocoutdoorcenter.org/wp-content/uploads/2026/06/OOC_StargazerEvent_Ad_sans_QR.jpg?fit=750%2C629&ssl=1",
+          "attribution": "Square crop of Great Lakes Star Gaze 2026 event artwork via the official venue site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and artwork creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "great-lakes-star-gaze-2026",
+          "name": "Great Lakes Star Gaze 2026",
+          "start": "2026-09-10",
+          "end": "2026-09-13",
+          "status": "scheduled",
+          "url": "https://www.eatoncounty.org/651/Public-Viewing-Schedule",
+          "source": {
+            "title": "Great Lakes Star Gaze 2026 public schedule listing",
+            "url": "https://www.eatoncounty.org/651/Public-Viewing-Schedule",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "green-bank-star-quest",
+      "displayName": "Green Bank Star Quest",
+      "description": "Green Bank Star Quest combines multi-night optical observing, astronomy talks, workshops, and tours at the Green Bank Observatory in West Virginia's National Radio Quiet Zone.",
+      "descriptionSources": [
+        {
+          "title": "Green Bank Star Quest registration",
+          "url": "https://greenbankstarquest.org/Registration.html",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "13ee88a1-9c32-5eba-a6e3-5f3f4a624523",
+        "name": "Green Bank Science Center",
+        "latitude": 38.430015,
+        "longitude": -79.817696,
+        "elevationMeters": 807,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Green Bank Science Center",
+        "locality": "Green Bank",
+        "region": "West Virginia",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/New_York",
+        "coordinateSource": {
+          "title": "Green Bank Observatory official site",
+          "url": "https://greenbankobservatory.org/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://greenbankstarquest.org/Registration.html"
+        },
+        {
+          "role": "venue",
+          "url": "https://greenbankobservatory.org/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/green-bank-star-quest/hero.jpg",
+          "sourceURL": "https://greenbankstarquest.org/2026%20star%20quest%20group%20pic/2026%20Star%20Quest%20group%20pic.jpg",
+          "attribution": "Green Bank Star Quest 2026 group photo via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Green Bank Star Quest and the photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/green-bank-star-quest/thumbnail.jpg",
+          "sourceURL": "https://greenbankstarquest.org/images/photos/GBSQ6Banner1.jpg",
+          "attribution": "Square crop of the Green Bank Star Quest event banner.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Green Bank Star Quest and the photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "green-bank-star-quest-2026",
+          "name": "Green Bank Star Quest 2026",
+          "start": "2026-07-15",
+          "end": "2026-07-18",
+          "status": "completed",
+          "url": "https://greenbankstarquest.org/Registration.html",
+          "source": {
+            "title": "Green Bank Star Quest registration",
+            "url": "https://greenbankstarquest.org/Registration.html",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "hara-village-star-festival",
+      "displayName": "Hara Village Star Festival",
+      "description": "Summer Holiday in Hara Village Star Festival is a long-running Japanese astronomy gathering with observing, telescope displays, talks, and family programs in the Yatsugatake highlands.",
+      "descriptionSources": [
+        {
+          "title": "Summer Holiday in Hara Village Star Festival",
+          "url": "https://www.lcv.ne.jp/~kasugahi/ebennto.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "4939f9a0-fd37-59a6-af57-cf46bc65c4ec",
+        "name": "Hara Village Star Festival grounds",
+        "latitude": 35.969611,
+        "longitude": 138.269556,
+        "elevationMeters": 1300,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Hara Village Star Festival grounds",
+        "locality": "Hara",
+        "region": "Nagano",
+        "countryCode": "JP",
+        "countryName": "Japan",
+        "timezone": "Asia/Tokyo",
+        "coordinateSource": {
+          "title": "Hara Village Star Festival official event page and map point",
+          "url": "https://www.lcv.ne.jp/~kasugahi/ebennto.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.lcv.ne.jp/~kasugahi/ebennto.htm"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/hara-village-star-festival/hero.jpg",
+          "sourceURL": "https://www.lcv.ne.jp/~kasugahi/2026.07.15-01.jpg",
+          "attribution": "Hara Village Star Festival 2026 program artwork via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the event organization and artwork creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/hara-village-star-festival/thumbnail.jpg",
+          "sourceURL": "https://www.lcv.ne.jp/~kasugahi/2026.07.15-01.jpg",
+          "attribution": "Square crop of Hara Village Star Festival 2026 program artwork.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the event organization and artwork creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "hara-village-star-festival-2026",
+          "name": "Hara Village Star Festival 2026",
+          "start": "2026-07-25",
+          "end": "2026-08-12",
+          "status": "completed",
+          "url": "https://www.lcv.ne.jp/~kasugahi/ebennto.htm",
+          "source": {
+            "title": "Summer Holiday in Hara Village Star Festival",
+            "url": "https://www.lcv.ne.jp/~kasugahi/ebennto.htm",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "herzberg-telescope-meeting",
+      "displayName": "Herzberg Telescope Meeting",
+      "description": "The Herzberger Teleskoptreffen is a major German observing gathering at the Elsterland Observatory grounds, with telescope fields, talks, and workshops.",
+      "descriptionSources": [
+        {
+          "title": "Herzberger Teleskoptreffen official site",
+          "url": "https://herzberger-teleskoptreffen.de/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "c855c0da-e511-5fd7-9f0c-242a8184bfb8",
+        "name": "Elsterland Observatory",
+        "latitude": 51.7474,
+        "longitude": 13.2883,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Elsterland Observatory",
+        "locality": "Je\u00dfnigk",
+        "region": "Brandenburg",
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "timezone": "Europe/Berlin",
+        "coordinateSource": {
+          "title": "Herzberger Teleskoptreffen official site location",
+          "url": "https://herzberger-teleskoptreffen.de/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://herzberger-teleskoptreffen.de/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/herzberg-telescope-meeting/hero.jpg",
+          "sourceURL": "https://herzberger-teleskoptreffen.de/wp-content/uploads/2025/09/20250919_165935-850x479.jpg",
+          "attribution": "Herzberger Teleskoptreffen observing-field photo via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the event organization and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/herzberg-telescope-meeting/logo.png",
+          "sourceURL": "https://herzberger-teleskoptreffen.de/wp-content/uploads/2026/08/HTT-2026-850x850.png",
+          "attribution": "Herzberger Teleskoptreffen 2026 event mark via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the event organization and artwork creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "herzberg-telescope-meeting-2026",
+          "name": "Herzberg Telescope Meeting 2026",
+          "start": "2026-09-09",
+          "end": "2026-09-13",
+          "status": "scheduled",
+          "url": "https://herzberger-teleskoptreffen.de/",
+          "source": {
+            "title": "Herzberger Teleskoptreffen official site",
+            "url": "https://herzberger-teleskoptreffen.de/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "international-telescope-meeting-emberger-alm",
+      "displayName": "International Telescope Meeting Emberger Alm",
+      "description": "The Internationales Teleskoptreffen on Austria's Emberger Alm is a high-alpine amateur astronomy gathering centered on dark-sky observing and shared telescope time.",
+      "descriptionSources": [
+        {
+          "title": "Emberger Alm International Telescope Meeting",
+          "url": "https://www.embergeralm.com/internationales-teleskoptreffen-itt_D.html",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "b27d2bd8-d526-50fe-a1a4-4bdc6ae193e9",
+        "name": "Emberger Alm",
+        "latitude": 46.774957,
+        "longitude": 13.157137,
+        "elevationMeters": 1800,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Emberger Alm",
+        "locality": "Berg im Drautal",
+        "region": "Carinthia",
+        "countryCode": "AT",
+        "countryName": "Austria",
+        "timezone": "Europe/Vienna",
+        "coordinateSource": {
+          "title": "Emberger Alm official site",
+          "url": "https://www.embergeralm.com/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.embergeralm.com/internationales-teleskoptreffen-itt_D.html"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.embergeralm.com/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/international-telescope-meeting-emberger-alm/hero.jpg",
+          "sourceURL": "https://www.embergeralm.com/media/images/itt6.jpg",
+          "attribution": "International Telescope Meeting photo via the official Emberger Alm event page.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/international-telescope-meeting-emberger-alm/thumbnail.jpg",
+          "sourceURL": "https://www.embergeralm.com/media/images/itt6.jpg",
+          "attribution": "Square crop of an International Telescope Meeting photo via Emberger Alm.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "international-telescope-meeting-emberger-alm-2026",
+          "name": "International Telescope Meeting Emberger Alm 2026",
+          "start": "2026-10-03",
+          "end": "2026-10-11",
+          "status": "scheduled",
+          "url": "https://www.embergeralm.com/internationales-teleskoptreffen-itt_D.html",
+          "source": {
+            "title": "Emberger Alm International Telescope Meeting",
+            "url": "https://www.embergeralm.com/internationales-teleskoptreffen-itt_D.html",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "international-telescope-meeting-vogelsberg",
+      "displayName": "International Telescope Meeting Vogelsberg",
+      "description": "Germany's long-running Internationales Teleskoptreffen Vogelsberg brings amateur astronomers and telescope makers together at the Gedern lakeside campground.",
+      "descriptionSources": [
+        {
+          "title": "VdS ITV 2026 event listing",
+          "url": "https://sternfreunde.de/event/internationales-teleskoptreffen-vogelsberg-itv-2026/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "030e8d8b-41a6-5724-bd50-dab7cd6b4b04",
+        "name": "Campingpark am Gederner See",
+        "latitude": 50.430466,
+        "longitude": 9.17712,
+        "elevationMeters": 340,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Campingpark am Gederner See",
+        "locality": "Gedern",
+        "region": "Hesse",
+        "countryCode": "DE",
+        "countryName": "Germany",
+        "timezone": "Europe/Berlin",
+        "coordinateSource": {
+          "title": "Campingpark am Gederner See official site",
+          "url": "https://www.campingpark-gedern.de/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://sternfreunde.de/event/internationales-teleskoptreffen-vogelsberg-itv-2026/"
+        },
+        {
+          "role": "program",
+          "url": "https://www.intercon-spacetec.de/fileadmin/downloads/ITV_Internationales_Teleskoptreffen_Vogelsberg.pdf"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.campingpark-gedern.de/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/international-telescope-meeting-vogelsberg/hero.jpg",
+          "sourceURL": "https://www.campingpark-gedern.de/__l5e/assets-v1/7f4c287f-3a3d-4168-b27e-9336cfa7049e/hero-panorama-see.jpg-3200.webp",
+          "attribution": "Campingpark am Gederner See panorama via the official venue.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/international-telescope-meeting-vogelsberg/thumbnail.jpg",
+          "sourceURL": "https://www.campingpark-gedern.de/__l5e/assets-v1/7f4c287f-3a3d-4168-b27e-9336cfa7049e/hero-panorama-see.jpg-3200.webp",
+          "attribution": "Square crop of the official Campingpark am Gederner See panorama.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the venue and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "international-telescope-meeting-vogelsberg-2026",
+          "name": "International Telescope Meeting Vogelsberg 2026",
+          "start": "2026-05-13",
+          "end": "2026-05-17",
+          "status": "completed",
+          "url": "https://sternfreunde.de/event/internationales-teleskoptreffen-vogelsberg-itv-2026/",
+          "source": {
+            "title": "VdS ITV 2026 event listing",
+            "url": "https://sternfreunde.de/event/internationales-teleskoptreffen-vogelsberg-itv-2026/",
+            "verifiedAt": "2026-09-06"
+          }
+        },
+        {
+          "id": "international-telescope-meeting-vogelsberg-2027",
+          "name": "International Telescope Meeting Vogelsberg 2027",
+          "start": "2027-05-05",
+          "end": "2027-05-09",
+          "status": "scheduled",
+          "url": "https://www.intercon-spacetec.de/fileadmin/downloads/ITV_Internationales_Teleskoptreffen_Vogelsberg.pdf",
+          "source": {
+            "title": "ITV official program and future dates",
+            "url": "https://www.intercon-spacetec.de/fileadmin/downloads/ITV_Internationales_Teleskoptreffen_Vogelsberg.pdf",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "kejimkujik-dark-sky-weekend",
+      "displayName": "Kejimkujik Dark Sky Weekend",
+      "description": "Parks Canada and RASC host this annual weekend of astronomy activities, guided sky programs, solar viewing, and public telescope observing at Kejimkujik's Sky Circle.",
+      "descriptionSources": [
+        {
+          "title": "Kejimkujik Dark Sky Preserve",
+          "url": "https://www.parks.canada.ca/pn-np/ns/kejimkujik/activ/reserve-etoile-sky-preserve",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "27c5250c-8cf7-572d-87c5-193f6443e413",
+        "name": "Kejimkujik Sky Circle",
+        "latitude": 44.406418,
+        "longitude": -65.248205,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Kejimkujik Sky Circle",
+        "locality": "Maitland Bridge",
+        "region": "Nova Scotia",
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "timezone": "America/Halifax",
+        "coordinateSource": {
+          "title": "Parks Canada Dark Sky Weekend venue information",
+          "url": "https://parks.canada.ca/pn-np/ns/kejimkujik/activ/calendrier-calendar/9e5bdad1-71d9-45f8-b779-4c6dfd2fcc05",
+          "verifiedAt": "2026-09-06"
+        },
+        "relatedDarkSkyPlaceID": "darksky:kejimkujik-national-park-dark-sky-preserve"
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://parks.canada.ca/pn-np/ns/kejimkujik/activ/calendrier-calendar/9e5bdad1-71d9-45f8-b779-4c6dfd2fcc05"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.parks.canada.ca/pn-np/ns/kejimkujik/activ/reserve-etoile-sky-preserve"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/kejimkujik-dark-sky-weekend/hero.jpg",
+          "sourceURL": "https://pcweb2.azureedge.net/-/media/pn-np/ns/kejimkujik/WET4/activ/dark-sky-night/NS-Kej-030jpg-640x360.jpg",
+          "attribution": "Annual Dark Sky Weekend image via Parks Canada.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Parks Canada and the photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/kejimkujik-dark-sky-weekend/thumbnail.jpg",
+          "sourceURL": "https://pcweb2.azureedge.net/-/media/pn-np/ns/kejimkujik/WET4/activ/dark-sky-night/NS-Kej-030jpg-640x360.jpg",
+          "attribution": "Square crop of the Annual Dark Sky Weekend image via Parks Canada.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Parks Canada and the photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "kejimkujik-dark-sky-weekend-2026",
+          "name": "Kejimkujik Dark Sky Weekend 2026",
+          "start": "2026-08-07",
+          "end": "2026-08-09",
+          "status": "completed",
+          "url": "https://parks.canada.ca/pn-np/ns/kejimkujik/activ/calendrier-calendar/9e5bdad1-71d9-45f8-b779-4c6dfd2fcc05",
+          "source": {
+            "title": "17th Annual Kejimkujik Dark Sky Weekend",
+            "url": "https://parks.canada.ca/pn-np/ns/kejimkujik/activ/calendrier-calendar/9e5bdad1-71d9-45f8-b779-4c6dfd2fcc05",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "kelling-heath-autumn-equinox-sky-camp",
+      "displayName": "Kelling Heath Autumn Equinox Sky Camp",
+      "description": "A week-long UK observing camp at Kelling Heath Holiday Park in North Norfolk, using dedicated touring fields and a site-wide dark-hours lighting policy.",
+      "descriptionSources": [
+        {
+          "title": "Kelling Heath Autumn Equinox Sky Camp official site",
+          "url": "https://las-skycamp.org/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "bd44358c-9bf1-5a34-b71f-d52d3be2a424",
+        "name": "Kelling Heath Holiday Park",
+        "latitude": 52.927924,
+        "longitude": 1.14089,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Kelling Heath Holiday Park",
+        "locality": "Holt",
+        "region": "Norfolk",
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "timezone": "Europe/London",
+        "coordinateSource": {
+          "title": "UK Planning Data venue point",
+          "url": "https://www.planning.data.gov.uk/entity/19173205",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://las-skycamp.org/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/kelling-heath-autumn-equinox-sky-camp/hero.jpg",
+          "sourceURL": "https://las-skycamp.org/images/Index_5.jpg",
+          "attribution": "Image via Loughton Astronomical Society Sky Camp.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/kelling-heath-autumn-equinox-sky-camp/thumbnail.jpg",
+          "sourceURL": "https://las-skycamp.org/images/Index_5.jpg",
+          "attribution": "Square crop of the image via Loughton Astronomical Society Sky Camp.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "kelling-heath-autumn-equinox-sky-camp-2026",
+          "name": "Kelling Heath Autumn Equinox Sky Camp 2026",
+          "start": "2026-10-05",
+          "end": "2026-10-12",
+          "status": "scheduled",
+          "url": "https://las-skycamp.org/",
+          "source": {
+            "title": "Kelling Heath Autumn Equinox Sky Camp official dates",
+            "url": "https://las-skycamp.org/",
+            "verifiedAt": "2026-09-02"
+          }
+        },
+        {
+          "id": "kelling-heath-autumn-equinox-sky-camp-2027",
+          "name": "Kelling Heath Autumn Equinox Sky Camp 2027",
+          "start": "2027-09-27",
+          "end": "2027-10-04",
+          "status": "scheduled",
+          "url": "https://las-skycamp.org/",
+          "source": {
+            "title": "Kelling Heath Autumn Equinox Sky Camp official future dates",
+            "url": "https://las-skycamp.org/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "kielder-star-camp",
+      "displayName": "Kielder Star Camp",
+      "description": "A twice-yearly camping and observing event at Kielder Campsite in Northumberland, with informal telescope sessions and talks under protected dark skies.",
+      "descriptionSources": [
+        {
+          "title": "Kielder Star Camp official overview",
+          "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "5fdb6eb8-2eec-5924-b10c-db59c231e598",
+        "name": "Kielder Campsite",
+        "latitude": 55.237018,
+        "longitude": -2.586676,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Kielder Campsite",
+        "locality": "Kielder",
+        "region": "Northumberland",
+        "countryCode": "GB",
+        "countryName": "United Kingdom",
+        "timezone": "Europe/London",
+        "coordinateSource": {
+          "title": "Northumberland International Dark Sky Park application, Kielder Campsite OS grid reference NY 62790 93803",
+          "url": "https://www.tarset.co.uk/files/NIDSPapplication_finalversion.pdf",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp"
+        },
+        {
+          "role": "venue",
+          "url": "https://kieldercampsite.co.uk/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/kielder-star-camp/hero.jpg",
+          "sourceURL": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+          "attribution": "Image via Kielder Star Camp official site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/kielder-star-camp/thumbnail.jpg",
+          "sourceURL": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+          "attribution": "Square crop of the image via Kielder Star Camp official site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "kielder-autumn-star-camp-2026",
+          "name": "Kielder Autumn Star Camp 2026",
+          "start": "2026-10-07",
+          "end": "2026-10-12",
+          "status": "scheduled",
+          "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+          "source": {
+            "title": "Kielder Star Camp official dates",
+            "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+            "verifiedAt": "2026-09-02"
+          }
+        },
+        {
+          "id": "kielder-spring-star-camp-2027",
+          "name": "Kielder Spring Star Camp 2027",
+          "start": "2027-03-03",
+          "end": "2027-03-08",
+          "status": "scheduled",
+          "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+          "source": {
+            "title": "Kielder Star Camp official future dates",
+            "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+            "verifiedAt": "2026-09-02"
+          }
+        },
+        {
+          "id": "kielder-autumn-star-camp-2027",
+          "name": "Kielder Autumn Star Camp 2027",
+          "start": "2027-10-27",
+          "end": "2027-11-01",
+          "status": "scheduled",
+          "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+          "source": {
+            "title": "Kielder Star Camp official future dates",
+            "url": "https://sites.google.com/a/richarddarn.com/kielder-forest-star-camp-bookings/what-is-the-star-camp",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "mount-kobau-star-party",
+      "displayName": "Mount Kobau Star Party",
+      "description": "A high-altitude observing and imaging camp on Mount Kobau in British Columbia, organized around dark nights at a public mountain summit site.",
+      "descriptionSources": [
+        {
+          "title": "Mount Kobau Star Party official site",
+          "url": "https://mksp.ca/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "03587ab2-6cef-5f04-bea9-96b0238024e4",
+        "name": "Mount Kobau summit",
+        "latitude": 49.113,
+        "longitude": -119.673333,
+        "elevationMeters": 1870,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Mount Kobau summit",
+        "locality": "Osoyoos",
+        "region": "British Columbia",
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "timezone": "America/Vancouver",
+        "coordinateSource": {
+          "title": "Mount Kobau Star Party official map",
+          "url": "https://mksp.ca/home-2/mksp-map/",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://mksp.ca/"
+        },
+        {
+          "role": "map",
+          "url": "https://mksp.ca/home-2/mksp-map/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/mount-kobau-star-party/hero.jpg",
+          "sourceURL": "https://mksp.ca/wp-content/uploads/2020/07/cropped-KobauSkies2019.jpg",
+          "attribution": "Mount Kobau midnight skies, photographed by attendee David Kwan in 2019.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; David Kwan and the source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/mount-kobau-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://mksp.ca/wp-content/uploads/2020/07/MKSP_Logo_lg.jpg",
+          "attribution": "Mount Kobau Star Party logo via the Mount Kobau Astronomical Society.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "mount-kobau-star-party-2027",
+          "name": "Mount Kobau Star Party 2027",
+          "start": "2027-07-31",
+          "end": "2027-08-08",
+          "status": "scheduled",
+          "url": "https://mksp.ca/",
+          "source": {
+            "title": "Mount Kobau Star Party official site",
+            "url": "https://mksp.ca/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "nebraska-star-party",
+      "displayName": "Nebraska Star Party",
+      "description": "An annual observing week on the south shore of Merritt Reservoir in Nebraska's Sandhills, including dark-sky observing and a beginner field school.",
+      "descriptionSources": [
+        {
+          "title": "Nebraska Star Party FAQ",
+          "url": "https://www.nebraskastarparty.org/faq/",
+          "verifiedAt": "2026-09-02"
+        },
+        {
+          "title": "Nebraska Star Party site information",
+          "url": "https://www.nebraskastarparty.org/site-information/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "a082d8ba-33d1-5e77-8dc3-9c2dcb4245c8",
+        "name": "Merritt Reservoir Snake Campground observing field",
+        "latitude": 42.6,
+        "longitude": -100.883333,
+        "elevationMeters": 910,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Merritt Reservoir Snake Campground observing field",
+        "locality": "Valentine",
+        "region": "Nebraska",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Chicago",
+        "coordinateSource": {
+          "title": "Nebraska Star Party official site information",
+          "url": "https://www.nebraskastarparty.org/site-information/",
+          "verifiedAt": "2026-09-02"
+        },
+        "relatedDarkSkyPlaceID": "darksky:merritt-reservoir-dark-sky-park"
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.nebraskastarparty.org/"
+        },
+        {
+          "role": "siteInformation",
+          "url": "https://www.nebraskastarparty.org/site-information/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/nebraska-star-party/hero.jpg",
+          "sourceURL": "https://www.nebraskastarparty.org/wp-content/uploads/2024/08/20230719-_1014708.jpg",
+          "attribution": "Image via Nebraska Star Party official site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/nebraska-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://www.nebraskastarparty.org/wp-content/uploads/2024/08/NSPLogo_Generic.png",
+          "attribution": "Nebraska Star Party logo via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "nebraska-star-party-2027",
+          "name": "Nebraska Star Party 2027",
+          "start": "2027-08-01",
+          "end": "2027-08-06",
+          "status": "scheduled",
+          "url": "https://www.nebraskastarparty.org/faq/",
+          "source": {
+            "title": "Nebraska Star Party official FAQ",
+            "url": "https://www.nebraskastarparty.org/faq/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "nova-east-star-party",
+      "displayName": "Nova East Star Party",
+      "description": "Atlantic Canada's longest-running star party brings RASC Halifax Centre members and regional observers to Smiley's Provincial Park for dark skies, talks, workshops, and camping.",
+      "descriptionSources": [
+        {
+          "title": "Nova East Star Party official site",
+          "url": "https://novaeast.rasc.ca/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "0363d5b1-c2b3-5dec-bfa2-bf267ef32f8f",
+        "name": "Smiley's Provincial Park observing field",
+        "latitude": 45.014272,
+        "longitude": -63.964444,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Smiley's Provincial Park observing field",
+        "locality": "Brooklyn",
+        "region": "Nova Scotia",
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "timezone": "America/Halifax",
+        "coordinateSource": {
+          "title": "Nova East map and directions",
+          "url": "https://novaeast.rasc.ca/index.php/camping/map",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "directions",
+          "url": "https://novaeast.rasc.ca/index.php/camping/map"
+        },
+        {
+          "role": "event",
+          "url": "https://novaeast.rasc.ca/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/nova-east-star-party/hero.jpg",
+          "sourceURL": "https://novaeast.rasc.ca/images/novaeast/photos/2026/Jerry/IMG_9885.jpeg",
+          "attribution": "Nova East 2026 group photo by Jerry, via the official event gallery.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; RASC Halifax Centre and the photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/nova-east-star-party/logo.png",
+          "sourceURL": "https://novaeast.rasc.ca/images/novaeast/logos/Nova%20East%20Logo_Full%20Colour%20alpha.png",
+          "attribution": "Nova East event logo via RASC Halifax Centre.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; RASC Halifax Centre and the logo creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "nova-east-star-party-2026",
+          "name": "Nova East Star Party 2026",
+          "start": "2026-08-12",
+          "end": "2026-08-16",
+          "status": "completed",
+          "url": "https://novaeast.rasc.ca/",
+          "source": {
+            "title": "Nova East Star Party official site",
+            "url": "https://novaeast.rasc.ca/",
+            "verifiedAt": "2026-09-06"
+          }
+        },
+        {
+          "id": "nova-east-star-party-2027",
+          "name": "Nova East Star Party 2027",
+          "start": "2027-08-27",
+          "end": "2027-08-30",
+          "status": "scheduled",
+          "url": "https://novaeast.rasc.ca/",
+          "source": {
+            "title": "Nova East Star Party official site",
+            "url": "https://novaeast.rasc.ca/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "okie-tex-star-party",
+      "displayName": "Okie-Tex Star Party",
+      "description": "A multi-night observing event at Camp Billy Joe in the Oklahoma Panhandle, with open observing fields, astronomy programs, and imaging activities.",
+      "descriptionSources": [
+        {
+          "title": "Okie-Tex Star Party official site",
+          "url": "https://www.okie-tex.com/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "eb868321-148a-5337-98fe-a9dd8968c3db",
+        "name": "Camp Billy Joe",
+        "latitude": 36.897833,
+        "longitude": -102.952,
+        "elevationMeters": 1353,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Camp Billy Joe",
+        "locality": "Kenton",
+        "region": "Oklahoma",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Chicago",
+        "coordinateSource": {
+          "title": "Okie-Tex Star Party official site coordinates",
+          "url": "https://www.okie-tex.com/",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.okie-tex.com/"
+        },
+        {
+          "role": "schedule",
+          "url": "https://www.okie-tex.com/schedule.php"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/okie-tex-star-party/hero.jpg",
+          "sourceURL": "https://www.okie-tex.com/photos/2009/MilkyWay_west.jpg",
+          "attribution": "Milky Way over Okie-Tex, photographed by Donald Bumgarner on September 17, 2009.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Donald Bumgarner and the source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/okie-tex-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://www.okie-tex.com/images/OTSP_logo_l.gif",
+          "attribution": "Okie-Tex Star Party logo via the Oklahoma City Astronomy Club.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "okie-tex-star-party-2026",
+          "name": "Okie-Tex Star Party 2026",
+          "start": "2026-10-09",
+          "end": "2026-10-17",
+          "status": "scheduled",
+          "url": "https://www.okie-tex.com/",
+          "source": {
+            "title": "Okie-Tex Star Party official site",
+            "url": "https://www.okie-tex.com/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "oregon-star-party",
+      "displayName": "Oregon Star Party",
+      "description": "A remote summer observing gathering at Indian Trail Spring in the Ochoco National Forest, using a high-elevation site with broad horizons.",
+      "descriptionSources": [
+        {
+          "title": "About Oregon Star Party",
+          "url": "https://oregonstarparty.org/about/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "1c880856-603b-5669-bbf3-32d507400c09",
+        "name": "Indian Trail Spring",
+        "latitude": 44.2988,
+        "longitude": -120.1417,
+        "elevationMeters": 1530,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Indian Trail Spring",
+        "locality": "Ochoco National Forest",
+        "region": "Oregon",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Los_Angeles",
+        "coordinateSource": {
+          "title": "Oregon Star Party official site coordinates",
+          "url": "https://oregonstarparty.org/wp-content/uploads/2017/07/OSP-Newsletter-Vol-3-Issue-1.pdf",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://oregonstarparty.org/"
+        },
+        {
+          "role": "venueInformation",
+          "url": "https://oregonstarparty.org/about/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/oregon-star-party/hero.jpg",
+          "sourceURL": "https://oregonstarparty.org/wp-content/uploads/2021/02/osp-at-night-scaled.jpg",
+          "attribution": "Night observing-field image via Oregon Star Party.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/oregon-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://oregonstarparty.org/wp-content/uploads/2026/03/Tent2OSP2026artworksb_WEBSITE-HEADER-FOOTER.jpg",
+          "attribution": "Oregon Star Party 2026 artwork via the official event site; design credit shown there as Sara B.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the designer and source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "oregon-star-party-2027",
+          "name": "Oregon Star Party 2027",
+          "start": "2027-07-06",
+          "end": "2027-07-11",
+          "status": "scheduled",
+          "url": "https://oregonstarparty.org/",
+          "source": {
+            "title": "Oregon Star Party official site",
+            "url": "https://oregonstarparty.org/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ],
+      "horizonResources": [
+        {
+          "id": "oregon-star-party-panorama",
+          "kind": "panorama",
+          "quality": "visual_panorama_only",
+          "disposition": "link_only_research",
+          "source": {
+            "title": "Oregon Star Party panorama",
+            "pageURL": "https://oregonstarparty.org/osp/osp-site-maps/",
+            "resourceURL": "https://www.oregonphotos.com/Panorama_2009-BJ.html",
+            "creator": null,
+            "verifiedAt": "2026-09-02"
+          },
+          "rights": {
+            "permissionStatus": "unknown",
+            "licenseName": "Unspecified",
+            "licenseURL": null,
+            "attribution": "Oregon Star Party site-map page links to OregonPhotos.com.",
+            "notes": "No redistribution license was found. The linked host presented an invalid TLS certificate during verification, so the resource remains an uncached research lead."
+          },
+          "calibration": {
+            "viewpointDescription": "Presented by the official event site as the OSP panorama, but an exact camera point at Indian Trail Spring was not established.",
+            "viewpointMatch": "unverified",
+            "northAzimuthOffsetDegrees": null,
+            "projectionType": "unknown",
+            "horizontalFieldOfViewDegrees": null,
+            "verticalFieldOfViewDegrees": null,
+            "verticalScale": "unknown",
+            "suitableForObstructionCalculations": false,
+            "notes": "The unavailable linked page prevented verification of azimuth orientation, projection, coverage, vertical field of view, and scale. Do not use for calculations."
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "ozsky-star-safari",
+      "displayName": "OzSky Star Safari",
+      "description": "An observing-focused southern-sky event near Coonabarabran, where participants share large telescopes and structured observing time at a rural motel site.",
+      "descriptionSources": [
+        {
+          "title": "OzSky Star Safari overview",
+          "url": "https://ozsky.org/overview/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "71af3c34-29a0-54d8-82d5-b1993edc91b0",
+        "name": "Warrumbungles Mountain Motel",
+        "latitude": -31.273333,
+        "longitude": 149.189444,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Warrumbungles Mountain Motel",
+        "locality": "Coonabarabran",
+        "region": "New South Wales",
+        "countryCode": "AU",
+        "countryName": "Australia",
+        "timezone": "Australia/Sydney",
+        "coordinateSource": {
+          "title": "OzSky official site and coordinates",
+          "url": "https://ozsky.org/site/",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://ozsky.org/overview/"
+        },
+        {
+          "role": "venueInformation",
+          "url": "https://ozsky.org/site/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/ozsky-star-safari/hero.jpg",
+          "sourceURL": "https://ozsky.org/Gallery/OzSky2026/Milky_Way_OzSky_2026__Steve_Odendahl.jpg",
+          "attribution": "Milky Way at OzSky 2026, photographed by Steve Odendahl.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Steve Odendahl and the source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/ozsky-star-safari/logo-thumbnail.jpg",
+          "sourceURL": "https://ozsky.org/common/images/OzSky-2026-Website-Header-Logo.png",
+          "attribution": "OzSky Star Safari logo via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "ozsky-star-safari-classic-2027",
+          "name": "OzSky Star Safari Classic 2027",
+          "start": "2027-04-03",
+          "end": "2027-04-10",
+          "status": "scheduled",
+          "url": "https://ozsky.org/overview/",
+          "source": {
+            "title": "OzSky Star Safari official overview",
+            "url": "https://ozsky.org/overview/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "peach-state-star-gaze",
+      "displayName": "Peach State Star Gaze",
+      "description": "The Atlanta Astronomy Club's Peach State Star Gaze is a week-long dark-sky observing event at Deerlick Astronomy Village with speakers, door prizes, and community activities.",
+      "descriptionSources": [
+        {
+          "title": "Peach State Star Gaze official site",
+          "url": "https://atlantaastronomy.org/PSSGO/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "47a5f952-800b-56ec-9ee6-4c6f3ae8c33c",
+        "name": "Deerlick Astronomy Village",
+        "latitude": 33.56142,
+        "longitude": -82.76314,
+        "elevationMeters": 175,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Deerlick Astronomy Village",
+        "locality": "Sharon",
+        "region": "Georgia",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/New_York",
+        "coordinateSource": {
+          "title": "Peach State Star Gaze official directions",
+          "url": "https://atlantaastronomy.org/PSSGO/PSSG_D.htm",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "directions",
+          "url": "https://atlantaastronomy.org/PSSGO/PSSG_D.htm"
+        },
+        {
+          "role": "event",
+          "url": "https://atlantaastronomy.org/PSSGO/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/peach-state-star-gaze/hero.jpg",
+          "sourceURL": "https://atlantaastronomy.org/PSSGO/images/griersfieldW.jpg",
+          "attribution": "Grier's Field at Deerlick Astronomy Village via the Peach State Star Gaze site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Atlanta Astronomy Club and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/peach-state-star-gaze/thumbnail.jpg",
+          "sourceURL": "https://atlantaastronomy.org/PSSGO/images/griersfieldW.jpg",
+          "attribution": "Square crop of Grier's Field at Deerlick Astronomy Village.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Atlanta Astronomy Club and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "peach-state-star-gaze-2026",
+          "name": "Peach State Star Gaze 2026",
+          "start": "2026-10-04",
+          "end": "2026-10-11",
+          "status": "scheduled",
+          "url": "https://atlantaastronomy.org/PSSGO/",
+          "source": {
+            "title": "Peach State Star Gaze official site",
+            "url": "https://atlantaastronomy.org/PSSGO/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "queensland-astrofest",
+      "displayName": "Queensland Astrofest",
+      "description": "Queensland Astrofest is a multi-night Australian astronomy gathering at Camp Duckadang, combining dark-sky observing with talks, workshops, and social activities.",
+      "descriptionSources": [
+        {
+          "title": "Queensland Astrofest official site",
+          "url": "https://www.qldastrofest.org.au/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "f72fa81b-cfb9-53e2-86e9-905919f65c43",
+        "name": "Camp Duckadang",
+        "latitude": -26.74875,
+        "longitude": 152.2408,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Camp Duckadang",
+        "locality": "Avoca Vale",
+        "region": "Queensland",
+        "countryCode": "AU",
+        "countryName": "Australia",
+        "timezone": "Australia/Brisbane",
+        "coordinateSource": {
+          "title": "Queensland Astrofest venue information",
+          "url": "https://www.qldastrofest.org.au/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.qldastrofest.org.au/"
+        },
+        {
+          "role": "venue",
+          "url": "https://campduckadang.com.au/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/queensland-astrofest/hero.jpg",
+          "sourceURL": "https://www.qldastrofest.org.au/wp-content/uploads/2013/02/moon_set.jpg",
+          "attribution": "Moonset over Queensland Astrofest via the official event site.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Queensland Astrofest and the photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/queensland-astrofest/thumbnail.jpg",
+          "sourceURL": "https://www.qldastrofest.org.au/wp-content/uploads/2013/02/moon_set.jpg",
+          "attribution": "Square crop of a Queensland Astrofest moonset photo.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Queensland Astrofest and the photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "queensland-astrofest-2027",
+          "name": "Queensland Astrofest 2027",
+          "start": "2027-07-30",
+          "end": "2027-08-08",
+          "status": "scheduled",
+          "url": "https://www.qldastrofest.org.au/",
+          "source": {
+            "title": "Queensland Astrofest 2027 dates",
+            "url": "https://www.qldastrofest.org.au/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "rocky-mountain-star-stare",
+      "displayName": "Rocky Mountain Star Stare",
+      "description": "The Colorado Springs Astronomical Society's annual Starry Meadows gathering combines dark-sky observing with speakers, workshops, family activities, and on-site camping near Gardner, Colorado.",
+      "descriptionSources": [
+        {
+          "title": "What is Rocky Mountain Star Stare?",
+          "url": "https://rmss.org/event-information/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "7261c77c-f8a8-58eb-aec1-b3c515af589d",
+        "name": "Starry Meadows",
+        "latitude": 37.844492,
+        "longitude": -105.190978,
+        "elevationMeters": 2320,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Starry Meadows",
+        "locality": "Gardner",
+        "region": "Colorado",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Denver",
+        "coordinateSource": {
+          "title": "Rocky Mountain Star Stare official directions and GPS coordinates",
+          "url": "https://rmss.org/directions/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "directions",
+          "url": "https://rmss.org/directions/"
+        },
+        {
+          "role": "event",
+          "url": "https://rmss.org/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/rocky-mountain-star-stare/hero.jpg",
+          "sourceURL": "https://rmss.org/wp-content/gallery/2025-rmss-gallery/2025_RMSS_Gallery_0061.JPG?t=1771002036",
+          "attribution": "Starry Meadows observing field and mountain setting from the official 2025 RMSS gallery; photographer not identified on the source page.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Colorado Springs Astronomical Society and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/rocky-mountain-star-stare/thumbnail.jpg",
+          "sourceURL": "https://rmss.org/wp-content/gallery/2025-rmss-gallery/2025_RMSS_Gallery_0061.JPG?t=1771002036",
+          "attribution": "Square crop of the Starry Meadows observing-field photo from the official 2025 RMSS gallery.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Colorado Springs Astronomical Society and photographer retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "rocky-mountain-star-stare-2026",
+          "name": "Rocky Mountain Star Stare 2026",
+          "start": "2026-06-10",
+          "end": "2026-06-14",
+          "status": "completed",
+          "url": "https://rmss.org/schedule/",
+          "source": {
+            "title": "Rocky Mountain Star Stare 2026 official schedule",
+            "url": "https://rmss.org/schedule/",
+            "verifiedAt": "2026-09-06"
+          }
+        },
+        {
+          "id": "rocky-mountain-star-stare-2027",
+          "name": "Rocky Mountain Star Stare 2027",
+          "start": "2027-06-30",
+          "end": "2027-07-04",
+          "status": "scheduled",
+          "url": "https://rmss.org/",
+          "source": {
+            "title": "Rocky Mountain Star Stare official site",
+            "url": "https://rmss.org/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "saskatchewan-summer-star-party",
+      "displayName": "Saskatchewan Summer Star Party",
+      "description": "The Saskatoon Centre of the Royal Astronomical Society of Canada hosts this annual dark-sky observing event in Cypress Hills Interprovincial Park.",
+      "descriptionSources": [
+        {
+          "title": "Saskatchewan Summer Star Party official site",
+          "url": "https://sssp.saskatoon.rasc.ca/",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "d89d1ce3-9efb-5bf2-bedd-feb59693748d",
+        "name": "Cypress Hills Centre Block",
+        "latitude": 49.6541,
+        "longitude": -109.5222,
+        "elevationMeters": 1280,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Cypress Hills Centre Block",
+        "locality": "Maple Creek",
+        "region": "Saskatchewan",
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "timezone": "America/Regina",
+        "coordinateSource": {
+          "title": "Saskatchewan Summer Star Party official venue point",
+          "url": "https://sssp.saskatoon.rasc.ca/",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://sssp.saskatoon.rasc.ca/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/saskatchewan-summer-star-party/hero.jpg",
+          "sourceURL": "https://sssp.saskatoon.rasc.ca/nova/galleries/SSSP2025-GCharpentier/SSSP2025_DSC1213_DxO_68.jpg",
+          "attribution": "Saskatchewan Summer Star Party observing field, photo by G. Charpentier via the official event gallery.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; G. Charpentier and RASC Saskatoon Centre retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/saskatchewan-summer-star-party/logo.png",
+          "sourceURL": "https://sssp.saskatoon.rasc.ca/images/logo192.png",
+          "attribution": "Saskatchewan Summer Star Party event logo via RASC Saskatoon Centre.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; RASC Saskatoon Centre and the logo creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "saskatchewan-summer-star-party-2026",
+          "name": "Saskatchewan Summer Star Party 2026",
+          "start": "2026-08-11",
+          "end": "2026-08-16",
+          "status": "completed",
+          "url": "https://sssp.saskatoon.rasc.ca/",
+          "source": {
+            "title": "Saskatchewan Summer Star Party official site",
+            "url": "https://sssp.saskatoon.rasc.ca/",
+            "verifiedAt": "2026-09-06"
+          }
+        },
+        {
+          "id": "saskatchewan-summer-star-party-2027",
+          "name": "Saskatchewan Summer Star Party 2027",
+          "start": "2027-08-03",
+          "end": "2027-08-08",
+          "status": "scheduled",
+          "url": "https://sssp.saskatoon.rasc.ca/",
+          "source": {
+            "title": "Saskatchewan Summer Star Party official site",
+            "url": "https://sssp.saskatoon.rasc.ca/",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "starfest-canada",
+      "displayName": "Starfest Canada",
+      "description": "An annual amateur astronomy conference and star party at River Place Campground in Ontario, with observing, talks, workshops, exhibits, and astrophotography.",
+      "descriptionSources": [
+        {
+          "title": "North York Astronomical Association Starfest",
+          "url": "https://www.nyaa.ca/starfest.html",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "422209f0-4eed-5980-9b03-40b4c8d2b8fa",
+        "name": "River Place Campground",
+        "latitude": 44.074444,
+        "longitude": -80.840833,
+        "elevationMeters": 400,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "River Place Campground",
+        "locality": "Ayton",
+        "region": "Ontario",
+        "countryCode": "CA",
+        "countryName": "Canada",
+        "timezone": "America/Toronto",
+        "coordinateSource": {
+          "title": "Starfest official directions",
+          "url": "https://www.nyaa.ca/index.php?page=sf25%2Fsf.directionstostarfest",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "directions",
+          "url": "https://www.nyaa.ca/index.php?page=sf25%2Fsf.directionstostarfest"
+        },
+        {
+          "role": "event",
+          "url": "https://www.nyaa.ca/starfest.html"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/starfest-canada/hero.jpg",
+          "sourceURL": "https://www.nyaa.ca/body_pages/images/sf2023-group-photo_600x512.jpg",
+          "attribution": "Starfest 2023 group photo via the North York Astronomical Association.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/starfest-canada/thumbnail.jpg",
+          "sourceURL": "https://www.nyaa.ca/body_pages/images/sf2023-group-photo_600x512.jpg",
+          "attribution": "Square crop of the Starfest 2023 group photo via the North York Astronomical Association.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "starfest-canada-2026",
+          "name": "Starfest 2026",
+          "start": "2026-08-13",
+          "end": "2026-08-16",
+          "status": "completed",
+          "url": "https://www.nyaa.ca/starfest.html",
+          "source": {
+            "title": "North York Astronomical Association Starfest",
+            "url": "https://www.nyaa.ca/starfest.html",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "staunton-river-star-party",
+      "displayName": "Staunton River Star Party",
+      "description": "Staunton River State Park hosts spring and fall star parties on its public dark-sky observation field, with registered observing and a public observing night.",
+      "descriptionSources": [
+        {
+          "title": "Virginia State Parks stargazing guide",
+          "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "642d27eb-c8f7-54b4-b0a2-b513aee3f890",
+        "name": "Staunton River Dark Sky Observation Area",
+        "latitude": 36.696066,
+        "longitude": -78.685254,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Staunton River Dark Sky Observation Area",
+        "locality": "Scottsburg",
+        "region": "Virginia",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/New_York",
+        "coordinateSource": {
+          "title": "Staunton River State Park official location",
+          "url": "https://www.dcr.virginia.gov/state-parks/staunton-river",
+          "verifiedAt": "2026-09-06"
+        },
+        "relatedDarkSkyPlaceID": "darksky:staunton-river-state-park-dark-sky-park"
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.dcr.virginia.gov/state-parks/staunton-river"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/staunton-river-star-party/hero.jpg",
+          "sourceURL": "https://live.staticflickr.com/7395/12942539653_eb07914a10_z.jpg",
+          "attribution": "Staunton River Spring Star Party photo by Steve Andrews, linked by Virginia State Parks.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Steve Andrews retains applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/staunton-river-star-party/thumbnail.jpg",
+          "sourceURL": "https://live.staticflickr.com/7395/12942539653_eb07914a10_z.jpg",
+          "attribution": "Square crop of the Staunton River Spring Star Party photo by Steve Andrews.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Steve Andrews retains applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "staunton-river-spring-star-party-2026",
+          "name": "Staunton River Spring Star Party 2026",
+          "start": "2026-03-16",
+          "end": "2026-03-22",
+          "status": "completed",
+          "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp",
+          "source": {
+            "title": "Virginia State Parks 2026 star party dates",
+            "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp",
+            "verifiedAt": "2026-09-06"
+          }
+        },
+        {
+          "id": "staunton-river-fall-star-party-2026",
+          "name": "Staunton River Fall Star Party 2026",
+          "start": "2026-10-05",
+          "end": "2026-10-11",
+          "status": "scheduled",
+          "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp",
+          "source": {
+            "title": "Virginia State Parks 2026 star party dates",
+            "url": "https://www.dcr.virginia.gov/state-parks/blog/how-to-have-stargazing-adventure-in-vsp",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "stellafane-convention",
+      "displayName": "Stellafane Convention",
+      "description": "The annual amateur telescope makers convention at historic Stellafane in Vermont, centered on telescope making, instrument judging, talks, and observing.",
+      "descriptionSources": [
+        {
+          "title": "Stellafane Convention official site",
+          "url": "https://stellafane.org/stellafane-main/convention/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "2552a489-5c94-551c-9a92-649522dbb842",
+        "name": "Stellafane on Breezy Hill",
+        "latitude": 43.278278,
+        "longitude": -72.519475,
+        "elevationMeters": 393,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Stellafane on Breezy Hill",
+        "locality": "Springfield",
+        "region": "Vermont",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/New_York",
+        "coordinateSource": {
+          "title": "Stellafane official directions",
+          "url": "https://stellafane.org/stellafane-main/about/directions.html",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "directions",
+          "url": "https://stellafane.org/stellafane-main/about/directions.html"
+        },
+        {
+          "role": "event",
+          "url": "https://stellafane.org/stellafane-main/convention/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/stellafane-convention/hero.jpg",
+          "sourceURL": "https://stellafane.org/stellafane-main/convention/2025/images/Stellafabe2025SteveHannah.jpg",
+          "attribution": "Stellafane 2025 night-sky image by Steve Hannah.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Steve Hannah and the source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/stellafane-convention/thumbnail.jpg",
+          "sourceURL": "https://stellafane.org/stellafane-main/convention/2025/images/Stellafabe2025SteveHannah.jpg",
+          "attribution": "Square crop of the Stellafane 2025 night-sky image by Steve Hannah.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Steve Hannah and the source organization retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "stellafane-convention-2027",
+          "name": "Stellafane Convention 2027",
+          "start": "2027-08-05",
+          "end": "2027-08-08",
+          "status": "scheduled",
+          "url": "https://stellafane.org/",
+          "source": {
+            "title": "Stellafane official site",
+            "url": "https://stellafane.org/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "tainai-star-festival",
+      "displayName": "Tainai Star Festival",
+      "description": "A large public astronomy festival at Tainai-daira in Niigata, with telescope exhibits, observing, talks, and family activities organized by Tainai City.",
+      "descriptionSources": [
+        {
+          "title": "Tainai City 2026 Star Festival",
+          "url": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/hoshimaturi2026.html",
+          "verifiedAt": "2026-09-06"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "71400148-dc71-5403-8840-d4df634a68ad",
+        "name": "Tainai Nature Observatory",
+        "latitude": 38.028361,
+        "longitude": 139.501667,
+        "elevationMeters": 220,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Tainai Nature Observatory",
+        "locality": "Tainai",
+        "region": "Niigata",
+        "countryCode": "JP",
+        "countryName": "Japan",
+        "timezone": "Asia/Tokyo",
+        "coordinateSource": {
+          "title": "Tainai City Nature Observatory location",
+          "url": "https://www.city.tainai.niigata.jp/kurashi/kyoiku/syogaigakusyu/sonota/tenmon/tenmon.html",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/hoshimaturi2026.html"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.city.tainai.niigata.jp/kurashi/kyoiku/syogaigakusyu/sonota/tenmon/tenmon.html"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/tainai-star-festival/hero.jpg",
+          "sourceURL": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/images/43.jpg",
+          "attribution": "43rd Tainai Star Party 2026 banner via Tainai City.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Tainai City and the artwork creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/tainai-star-festival/thumbnail.jpg",
+          "sourceURL": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/images/43.jpg",
+          "attribution": "Square crop of the 43rd Tainai Star Party 2026 mark via Tainai City.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Tainai City and the artwork creator retain applicable rights.",
+          "verifiedAt": "2026-09-06"
+        }
+      },
+      "events": [
+        {
+          "id": "tainai-star-festival-2026",
+          "name": "Tainai Star Festival 2026",
+          "start": "2026-08-28",
+          "end": "2026-08-30",
+          "status": "completed",
+          "url": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/hoshimaturi2026.html",
+          "source": {
+            "title": "Tainai City 2026 Star Festival",
+            "url": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/hoshimaturi2026.html",
+            "verifiedAt": "2026-09-06"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "texas-star-party",
+      "displayName": "Texas Star Party",
+      "description": "A week-long observing gathering at Prude Ranch in the Davis Mountains, with dark-sky observing, astronomy talks, and astrophotography activities.",
+      "descriptionSources": [
+        {
+          "title": "Texas Star Party official site",
+          "url": "https://texasstarparty.org/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "a8079c1c-8f0c-5d93-a8e9-bdcc09409408",
+        "name": "Prude Ranch",
+        "latitude": 30.6002,
+        "longitude": -103.9446,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Prude Ranch",
+        "locality": "Fort Davis",
+        "region": "Texas",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Chicago",
+        "coordinateSource": {
+          "title": "Texas Star Party official event listing",
+          "url": "https://texasstarparty.org/",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://texasstarparty.org/"
+        },
+        {
+          "role": "venue",
+          "url": "https://www.prude-ranch.com/contact/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/texas-star-party/hero.jpg",
+          "sourceURL": "https://texasstarparty.org/TSPLogoNew_JustTexas-currentColor.svg",
+          "attribution": "Texas Star Party event mark via the official event site.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the scalable event mark was placed on a neutral 4:3 background because no suitable official photo was identified.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/texas-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://texasstarparty.org/TSPLogoNew_JustTexas-currentColor.svg",
+          "attribution": "Texas Star Party event mark via the official event site.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "texas-star-party-2027",
+          "name": "Texas Star Party 2027",
+          "start": "2027-05-02",
+          "end": "2027-05-09",
+          "status": "scheduled",
+          "url": "https://texasstarparty.org/",
+          "source": {
+            "title": "Texas Star Party official event listing",
+            "url": "https://texasstarparty.org/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "washington-state-star-party",
+      "displayName": "Washington State Star Party",
+      "description": "A multi-day observing event, formerly called the Table Mountain Star Party, held on public land near Jameson Lake with talks and observing programs.",
+      "descriptionSources": [
+        {
+          "title": "Washington State Star Party official site",
+          "url": "https://washingtonstatestarparty.com/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "5ed35942-5e84-56a6-9cc2-3fccbc3afa11",
+        "name": "Jameson Lake star party site",
+        "latitude": 47.656,
+        "longitude": -119.628,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Jameson Lake star party site",
+        "locality": "Mansfield",
+        "region": "Washington",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/Los_Angeles",
+        "coordinateSource": {
+          "title": "Washington State Star Party official site information and GPS coordinates",
+          "url": "https://washingtonstatestarparty.com/?page_id=467",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "directions",
+          "url": "https://washingtonstatestarparty.com/?page_id=467"
+        },
+        {
+          "role": "event",
+          "url": "https://washingtonstatestarparty.com/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/washington-state-star-party/hero.jpg",
+          "sourceURL": "https://washingtonstatestarparty.com/wp-content/uploads/2026/02/Erika-Plummer-MW-2024-1024x683.jpg",
+          "attribution": "Washington State Star Party Milky Way field photo by Erika Plummer.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Erika Plummer and TMSPA Inc. retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "logo": {
+          "assetPath": "v1/assets/star-party-astrosites/washington-state-star-party/logo-thumbnail.jpg",
+          "sourceURL": "https://washingtonstatestarparty.com/wp-content/uploads/2026/02/WaStSP_logo_trace-cs4.gif",
+          "attribution": "Washington State Star Party logo via TMSPA Inc.",
+          "license": "All rights reserved",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; TMSPA Inc. retains any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "washington-state-star-party-2026",
+          "name": "Washington State Star Party 2026",
+          "start": "2026-07-14",
+          "end": "2026-07-19",
+          "status": "completed",
+          "url": "https://washingtonstatestarparty.com/?page_id=467",
+          "source": {
+            "title": "Washington State Star Party official 2026 event information",
+            "url": "https://washingtonstatestarparty.com/?page_id=467",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "recordKind": "starPartyAstroSite",
+      "id": "winter-star-party",
+      "displayName": "Winter Star Party",
+      "description": "An annual Florida Keys observing event at Camp Wesumkee and Camp Sawyer, offering southern-sky access for visual astronomy and imaging.",
+      "descriptionSources": [
+        {
+          "title": "Southern Cross Astronomical Society Winter Star Party",
+          "url": "https://www.scas.org/winter-star-party/",
+          "verifiedAt": "2026-09-02"
+        }
+      ],
+      "astroSite": {
+        "schemaVersion": 1,
+        "sourceSiteID": "2bc2a25f-a820-5ab1-a703-17f6c97365a1",
+        "name": "Camp Wesumkee and Camp Sawyer",
+        "latitude": 24.648173,
+        "longitude": -81.312974,
+        "preferredPathPreviewCenterDirectionRaw": null
+      },
+      "location": {
+        "venueName": "Camp Wesumkee and Camp Sawyer",
+        "locality": "Scout Key",
+        "region": "Florida",
+        "countryCode": "US",
+        "countryName": "United States",
+        "timezone": "America/New_York",
+        "coordinateSource": {
+          "title": "Southern Cross Astronomical Society Winter Star Party venue map",
+          "url": "https://www.scas.org/winter-star-party/",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "officialURLs": [
+        {
+          "role": "event",
+          "url": "https://www.scas.org/winter-star-party/"
+        },
+        {
+          "role": "organizer",
+          "url": "https://www.scas.org/"
+        }
+      ],
+      "media": {
+        "hero": {
+          "assetPath": "v1/assets/star-party-astrosites/winter-star-party/hero.jpg",
+          "sourceURL": "https://www.scas.org/assetsGalleries/79/lg/galleryid-79_docid-12000.jpg",
+          "attribution": "Winter Star Party 2026 gallery image via the Southern Cross Astronomical Society.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization and photographer retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        },
+        "thumbnail": {
+          "assetPath": "v1/assets/star-party-astrosites/winter-star-party/thumbnail.jpg",
+          "sourceURL": "https://www.scas.org/assetsGalleries/79/lg/galleryid-79_docid-12000.jpg",
+          "attribution": "Square crop of a Winter Star Party 2026 gallery image via the Southern Cross Astronomical Society.",
+          "license": "No standalone image license stated",
+          "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization and photographer retain any applicable rights.",
+          "verifiedAt": "2026-09-02"
+        }
+      },
+      "events": [
+        {
+          "id": "winter-star-party-2027",
+          "name": "Winter Star Party 2027",
+          "start": "2027-02-01",
+          "end": "2027-02-07",
+          "status": "scheduled",
+          "url": "https://www.scas.org/winter-star-party/",
+          "source": {
+            "title": "Southern Cross Astronomical Society Winter Star Party",
+            "url": "https://www.scas.org/winter-star-party/",
+            "verifiedAt": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

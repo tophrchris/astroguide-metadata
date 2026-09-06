@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "peach-state-star-gaze",
+  "displayName": "Peach State Star Gaze",
+  "description": "The Atlanta Astronomy Club's Peach State Star Gaze is a week-long dark-sky observing event at Deerlick Astronomy Village with speakers, door prizes, and community activities.",
+  "descriptionSources": [
+    {
+      "title": "Peach State Star Gaze official site",
+      "url": "https://atlantaastronomy.org/PSSGO/",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "47a5f952-800b-56ec-9ee6-4c6f3ae8c33c",
+    "name": "Deerlick Astronomy Village",
+    "latitude": 33.56142,
+    "longitude": -82.76314,
+    "elevationMeters": 175,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Deerlick Astronomy Village",
+    "locality": "Sharon",
+    "region": "Georgia",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/New_York",
+    "coordinateSource": {
+      "title": "Peach State Star Gaze official directions",
+      "url": "https://atlantaastronomy.org/PSSGO/PSSG_D.htm",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://atlantaastronomy.org/PSSGO/"
+    },
+    {
+      "role": "directions",
+      "url": "https://atlantaastronomy.org/PSSGO/PSSG_D.htm"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/peach-state-star-gaze/hero.jpg",
+      "sourceURL": "https://atlantaastronomy.org/PSSGO/images/griersfieldW.jpg",
+      "attribution": "Grier's Field at Deerlick Astronomy Village via the Peach State Star Gaze site.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Atlanta Astronomy Club and photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/peach-state-star-gaze/thumbnail.jpg",
+      "sourceURL": "https://atlantaastronomy.org/PSSGO/images/griersfieldW.jpg",
+      "attribution": "Square crop of Grier's Field at Deerlick Astronomy Village.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; the Atlanta Astronomy Club and photographer retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "peach-state-star-gaze-2026",
+      "name": "Peach State Star Gaze 2026",
+      "start": "2026-10-04",
+      "end": "2026-10-11",
+      "status": "scheduled",
+      "url": "https://atlantaastronomy.org/PSSGO/",
+      "source": {
+        "title": "Peach State Star Gaze official site",
+        "url": "https://atlantaastronomy.org/PSSGO/",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

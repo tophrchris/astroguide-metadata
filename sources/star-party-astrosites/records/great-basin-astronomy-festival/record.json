@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "great-basin-astronomy-festival",
+  "displayName": "Great Basin Astronomy Festival",
+  "description": "Great Basin National Park's annual astronomy festival is a free three-night celebration with public telescope viewing, ranger programs, speakers, tours, and astrophotography workshops.",
+  "descriptionSources": [
+    {
+      "title": "Great Basin Astronomy Festival",
+      "url": "https://www.nps.gov/grba/planyourvisit/great-basin-astronomy-festival.htm",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "3d231a67-7eb5-5b8a-942e-ee399ac67ae4",
+    "name": "Great Basin Astronomy Amphitheater",
+    "latitude": 39.005618,
+    "longitude": -114.219953,
+    "elevationMeters": 2080,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Great Basin Astronomy Amphitheater",
+    "locality": "Baker",
+    "region": "Nevada",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Los_Angeles",
+    "coordinateSource": {
+      "title": "Great Basin astronomy program venue",
+      "url": "https://www.nps.gov/grba/planyourvisit/astronomy-programs.htm",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.nps.gov/grba/planyourvisit/great-basin-astronomy-festival.htm"
+    },
+    {
+      "role": "venue",
+      "url": "https://www.nps.gov/grba/planyourvisit/visitor-centers.htm"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/great-basin-astronomy-festival/hero.jpg",
+      "sourceURL": "https://www.nps.gov/grba/planyourvisit/images/_37A7921-Copy.JPG",
+      "attribution": "Great Basin Astronomy Festival at the Astronomy Amphitheater, photo by Tom Auchter.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Tom Auchter and the National Park Service retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/great-basin-astronomy-festival/logo.png",
+      "sourceURL": "https://www.nps.gov/thingstodo/images/Astrofest-Logo-sticker-design-2026-2.png",
+      "attribution": "Great Basin Astrofest 2026 graphic, NPS Graphic/C. Kouba.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; C. Kouba and the National Park Service retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "great-basin-astronomy-festival-2026",
+      "name": "Great Basin Astronomy Festival 2026",
+      "start": "2026-09-10",
+      "end": "2026-09-12",
+      "status": "scheduled",
+      "url": "https://www.nps.gov/grba/planyourvisit/great-basin-astronomy-festival.htm",
+      "source": {
+        "title": "Great Basin Astronomy Festival",
+        "url": "https://www.nps.gov/grba/planyourvisit/great-basin-astronomy-festival.htm",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}

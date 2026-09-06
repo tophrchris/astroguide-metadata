@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "okie-tex-star-party",
+  "displayName": "Okie-Tex Star Party",
+  "description": "A multi-night observing event at Camp Billy Joe in the Oklahoma Panhandle, with open observing fields, astronomy programs, and imaging activities.",
+  "descriptionSources": [
+    {
+      "title": "Okie-Tex Star Party official site",
+      "url": "https://www.okie-tex.com/",
+      "verifiedAt": "2026-09-02"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "eb868321-148a-5337-98fe-a9dd8968c3db",
+    "name": "Camp Billy Joe",
+    "latitude": 36.897833,
+    "longitude": -102.952,
+    "elevationMeters": 1353,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Camp Billy Joe",
+    "locality": "Kenton",
+    "region": "Oklahoma",
+    "countryCode": "US",
+    "countryName": "United States",
+    "timezone": "America/Chicago",
+    "coordinateSource": {
+      "title": "Okie-Tex Star Party official site coordinates",
+      "url": "https://www.okie-tex.com/",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.okie-tex.com/"
+    },
+    {
+      "role": "schedule",
+      "url": "https://www.okie-tex.com/schedule.php"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/okie-tex-star-party/hero.jpg",
+      "sourceURL": "https://www.okie-tex.com/photos/2009/MilkyWay_west.jpg",
+      "attribution": "Milky Way over Okie-Tex, photographed by Donald Bumgarner on September 17, 2009.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; Donald Bumgarner and the source organization retain any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    },
+    "logo": {
+      "assetPath": "v1/assets/star-party-astrosites/okie-tex-star-party/logo-thumbnail.jpg",
+      "sourceURL": "https://www.okie-tex.com/images/OTSP_logo_l.gif",
+      "attribution": "Okie-Tex Star Party logo via the Oklahoma City Astronomy Club.",
+      "license": "All rights reserved",
+      "permissionNotes": "Approved for AstroGuide presentation by the project owner after source review on 2026-09-02; the source organization retains any applicable rights.",
+      "verifiedAt": "2026-09-02"
+    }
+  },
+  "events": [
+    {
+      "id": "okie-tex-star-party-2026",
+      "name": "Okie-Tex Star Party 2026",
+      "start": "2026-10-09",
+      "end": "2026-10-17",
+      "status": "scheduled",
+      "url": "https://www.okie-tex.com/",
+      "source": {
+        "title": "Okie-Tex Star Party official site",
+        "url": "https://www.okie-tex.com/",
+        "verifiedAt": "2026-09-02"
+      }
+    }
+  ]
+}

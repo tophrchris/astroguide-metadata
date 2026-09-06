@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-09-02T01:32:25Z",
-  "publishedAt": "2026-09-02T01:32:25Z",
+  "generatedAt": "2026-09-06T06:30:00Z",
+  "publishedAt": "2026-09-06T06:30:00Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -113,6 +113,24 @@
       "fallbackNotes": "Optional approximate telescope reference prices. Values are rounded to the published precision, are not live offers, and may be null without affecting equipment publication."
     },
     {
+      "family": "telescopeOfficialProductLinks",
+      "packageVersion": "telescope-official-product-links-v1-2026-09-02-hac125",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/telescope-official-product-links/telescope_official_product_links_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "feee3b8f4011a0c7ab9950d6a646bb56ca23bb221362bf01e67435ae2cecf2b9"
+      },
+      "byteSize": 61041,
+      "recordCount": 461,
+      "linkedCount": 162,
+      "unresolvedCount": 299,
+      "minSupportedAppVersion": "0.1.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Optional exact official product links from a reviewed one-time top-vendor pass. Null or missing links must hide the affordance; clients must not synthesize or substitute retailer URLs."
+    },
+    {
       "family": "darkSkyPlaces",
       "packageVersion": "dark-sky-places-v1-20260707",
       "payloadSchemaVersion": 1,
@@ -126,6 +144,27 @@
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled dark sky places snapshot only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh."
+    },
+    {
+      "family": "starPartyAstroSites",
+      "packageVersion": "star-party-astrosites-v1-20260906-r4",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/star-party-astrosites/star_party_astrosites_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "8fa24c1e06577986f37c1ababcaae7b617931e40dacbe93095bce9e91c6d593c"
+      },
+      "byteSize": 145966,
+      "siteCount": 39,
+      "eventCount": 48,
+      "scheduledEventCount": 31,
+      "horizonResourceCount": 4,
+      "cachedHorizonAssetCount": 2,
+      "obstructionProfileCount": 0,
+      "minSupportedAppVersion": "1.4.1",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 604800,
+      "fallbackNotes": "Clients that support this family should retain a bundled or cached validated snapshot and hide Star Parties when no compatible package exists. Expired cached data remains usable until replaced by a validated refresh."
     },
     {
       "family": "cometSnapshot",

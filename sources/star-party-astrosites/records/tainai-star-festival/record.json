@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "starPartyAstroSite",
+  "id": "tainai-star-festival",
+  "displayName": "Tainai Star Festival",
+  "description": "A large public astronomy festival at Tainai-daira in Niigata, with telescope exhibits, observing, talks, and family activities organized by Tainai City.",
+  "descriptionSources": [
+    {
+      "title": "Tainai City 2026 Star Festival",
+      "url": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/hoshimaturi2026.html",
+      "verifiedAt": "2026-09-06"
+    }
+  ],
+  "astroSite": {
+    "schemaVersion": 1,
+    "sourceSiteID": "71400148-dc71-5403-8840-d4df634a68ad",
+    "name": "Tainai Nature Observatory",
+    "latitude": 38.028361,
+    "longitude": 139.501667,
+    "elevationMeters": 220,
+    "preferredPathPreviewCenterDirectionRaw": null
+  },
+  "location": {
+    "venueName": "Tainai Nature Observatory",
+    "locality": "Tainai",
+    "region": "Niigata",
+    "countryCode": "JP",
+    "countryName": "Japan",
+    "timezone": "Asia/Tokyo",
+    "coordinateSource": {
+      "title": "Tainai City Nature Observatory location",
+      "url": "https://www.city.tainai.niigata.jp/kurashi/kyoiku/syogaigakusyu/sonota/tenmon/tenmon.html",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "officialURLs": [
+    {
+      "role": "event",
+      "url": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/hoshimaturi2026.html"
+    },
+    {
+      "role": "venue",
+      "url": "https://www.city.tainai.niigata.jp/kurashi/kyoiku/syogaigakusyu/sonota/tenmon/tenmon.html"
+    }
+  ],
+  "media": {
+    "hero": {
+      "assetPath": "v1/assets/star-party-astrosites/tainai-star-festival/hero.jpg",
+      "sourceURL": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/images/43.jpg",
+      "attribution": "43rd Tainai Star Party 2026 banner via Tainai City.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Tainai City and the artwork creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    },
+    "thumbnail": {
+      "assetPath": "v1/assets/star-party-astrosites/tainai-star-festival/thumbnail.jpg",
+      "sourceURL": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/images/43.jpg",
+      "attribution": "Square crop of the 43rd Tainai Star Party 2026 mark via Tainai City.",
+      "license": "No standalone image license stated",
+      "permissionNotes": "Selected for AstroGuide presentation by the project owner on 2026-09-06; Tainai City and the artwork creator retain applicable rights.",
+      "verifiedAt": "2026-09-06"
+    }
+  },
+  "events": [
+    {
+      "id": "tainai-star-festival-2026",
+      "name": "Tainai Star Festival 2026",
+      "start": "2026-08-28",
+      "end": "2026-08-30",
+      "status": "completed",
+      "url": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/hoshimaturi2026.html",
+      "source": {
+        "title": "Tainai City 2026 Star Festival",
+        "url": "https://www.city.tainai.niigata.jp/sangyo/kanko/event/hoshimaturi2026.html",
+        "verifiedAt": "2026-09-06"
+      }
+    }
+  ]
+}
