@@ -53,6 +53,40 @@ Aug. 15   5 20.42  -12 54.6   4.733   4.471    69   12.9   3:47 (298, 15)
 
 
 class AerithCometSourceTests(unittest.TestCase):
+    def test_accepts_aerith_september_title_and_compact_row_dates(self):
+        document = """
+        <HTML><HEAD><TITLE>
+        Weekly Information about Bright Comets (2026 Sept. 5: North)
+        </TITLE></HEAD></HTML>
+        """
+        context = aerith.parse_page_context(document)
+        rows = aerith.parse_pre_rows(
+            """
+Sept. 5  22 24.16  -34 50.5   0.495   1.462   151    8.6  23:27 (  0, 20)
+Sept.12  22 29.99  -35 13.7   0.532   1.481   147    8.9  23:05 (  0, 20)
+            """,
+            context["pageDate"],
+        )
+
+        self.assertEqual(context["pageDate"], dt.date(2026, 9, 5))
+        self.assertEqual(context["hemisphere"], "north")
+        self.assertEqual([row["date"] for row in rows], ["2026-09-05", "2026-09-12"])
+        self.assertEqual([row["magnitude"] for row in rows], [8.6, 8.9])
+
+    def test_accepts_aerith_full_june_and_july_labels(self):
+        for month_label, expected_date in (
+            ("June", dt.date(2026, 6, 6)),
+            ("July", dt.date(2026, 7, 4)),
+        ):
+            with self.subTest(month_label=month_label):
+                document = (
+                    "<TITLE>Weekly Information about Bright Comets "
+                    f"(2026 {month_label} {expected_date.day}: South)</TITLE>"
+                )
+                context = aerith.parse_page_context(document)
+                self.assertEqual(context["pageDate"], expected_date)
+                self.assertEqual(context["hemisphere"], "south")
+
     def test_parse_entries_extracts_designation_images_and_weekly_magnitudes(self):
         context, entries = aerith.parse_entries(
             SAMPLE_PAGE,

@@ -23,9 +23,12 @@ MONTHS = {
     "Apr.": 4,
     "May": 5,
     "Jun.": 6,
+    "June": 6,
     "Jul.": 7,
+    "July": 7,
     "Aug.": 8,
     "Sep.": 9,
+    "Sept.": 9,
     "Oct.": 10,
     "Nov.": 11,
     "Dec.": 12,
@@ -93,7 +96,7 @@ def parse_page_context(document: str) -> dict[str, Any]:
     title = strip_tags(re.search(r"<TITLE>(.*?)</TITLE>", document, re.I | re.S).group(1))
     updated_match = re.search(r"Updated on\s+([^<]+)", document, re.I)
     page_date_match = re.search(
-        r"\((\d{4})\s+([A-Z][a-z]{2}\.?)\s+(\d+):\s+(North|South)\)",
+        r"\((\d{4})\s+([A-Z][a-z]{2,3}\.?)\s+(\d+):\s+(North|South)\)",
         title,
     )
     if not page_date_match:
@@ -140,7 +143,7 @@ def row_date(page_date: dt.date, month_label: str, day: int) -> str:
 def parse_pre_rows(pre_text: str, page_date: dt.date) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     row_pattern = re.compile(
-        r"^(?P<month>[A-Z][a-z]{2}\.?)\s+"
+        r"^(?P<month>[A-Z][a-z]{2,3}\.?)\s*"
         r"(?P<day>\d+)\s+"
         r"(?P<rah>\d+)\s+(?P<ram>\d+(?:\.\d+)?)\s+"
         r"(?P<decd>-?\d+)\s+(?P<decm>\d+(?:\.\d+)?)\s+"
