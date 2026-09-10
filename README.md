@@ -68,6 +68,20 @@ validate them, and open or update a pull request for review.
   opportunity queue every Monday and Thursday. It does not publish the queue
   to the stable manifest or app.
 
+The TNS workflow routes its fetches through a Tailscale exit node before it
+contacts TNS, because TNS bot access is tied to an approved outbound IP. The
+GitHub runner joins the tailnet as an ephemeral `tag:github-actions` node,
+selects the configured exit node, verifies the resulting public IP, and only
+then downloads staged TNS deltas. Required repository secrets:
+
+- `TNS_USER_AGENT`: the approved full `tns_marker{...}` user-agent string.
+- `TS_OAUTH_CLIENT_ID` and `TS_OAUTH_SECRET`: Tailscale OAuth client
+  credentials with writable auth-key scope and access to `tag:github-actions`.
+- `TS_EXIT_NODE`: the Tailscale machine name or 100.x address of the approved
+  exit node, currently expected to be Chris's iMac.
+- `TS_EXPECTED_PUBLIC_IP`: the exit node's public WAN IP, also registered in
+  the TNS bot IP allowlist.
+
 The close-encounter workflow checks out `tophrchris/DSOPlanneriOS` beside this
 repository so generators can read the app catalog. If the default workflow
 token cannot read that repository, configure a `DSOPLANNERIOS_READ_TOKEN`

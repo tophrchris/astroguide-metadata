@@ -31,6 +31,35 @@ repository secret named `TNS_USER_AGENT` whose value begins with
 `tns_marker{`. The iOS catalog checkout uses the existing read-only
 `DSOPLANNERIOS_READ_SSH_KEY` deploy-key contract.
 
+The scheduled workflow also requires a Tailscale exit-node path so that TNS sees
+a stable, approved outbound IP rather than a rotating GitHub-hosted runner IP.
+The workflow joins the tailnet using `tailscale/github-action`, applies
+`tag:github-actions`, selects `TS_EXIT_NODE`, and verifies that
+`https://api.ipify.org` returns `TS_EXPECTED_PUBLIC_IP` before making any TNS
+request. `TS_EXPECTED_PUBLIC_IP` is the exit node's public WAN IP, not its
+Tailscale 100.x address, and it must match the Bot IP allowlist in TNS.
+
+Required GitHub repository secrets for the scheduled fetch path:
+
+- `TNS_USER_AGENT`: the approved full `tns_marker{...}` user-agent string.
+- `DSOPLANNERIOS_READ_SSH_KEY`: read-only deploy key for the iOS catalog repo.
+- `TS_OAUTH_CLIENT_ID`: Tailscale OAuth client ID.
+- `TS_OAUTH_SECRET`: Tailscale OAuth client secret.
+- `TS_EXIT_NODE`: approved exit-node machine name or Tailscale 100.x address.
+- `TS_EXPECTED_PUBLIC_IP`: public IP that TNS should see after exit-node
+  routing.
+
+Tailnet prerequisites:
+
+- Create or reuse `tag:github-actions`.
+- Give the OAuth client writable auth-key scope and permission to issue nodes
+  tagged `tag:github-actions`.
+- Ensure the iMac advertises itself as an exit node and is approved in the
+  Tailscale admin console.
+- If the tailnet uses custom access controls, allow `tag:github-actions` to
+  reach `autogroup:internet`; granting access to the exit-node machine itself
+  is not sufficient for internet egress.
+
 ## Local usage
 
 With already-downloaded staged files:
