@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260830-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260910-aerith",
   "packageRole": "comet",
   "shardID": "COMET_88P",
   "record": {
@@ -10,21 +10,24 @@
     "displayName": "88P/Howell",
     "aerithName": "88P/Howell",
     "detailURL": "http://www.aerith.net/comet/catalog/0088P/2026.html",
-    "generatedAt": "2026-08-30T17:16:49Z",
+    "generatedAt": "2026-09-10T22:23:29Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-08-29",
+      "referenceDate": "2026-09-05",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-08-29",
-      "aerithNextUsefulDate": null,
-      "aerithCurrentMagnitude": 12.9,
-      "aerithNextMagnitude": null,
+      "aerithCurrentDate": "2026-09-05",
+      "aerithNextUsefulDate": "2026-09-12",
+      "aerithCurrentMagnitude": 13.0,
+      "aerithNextMagnitude": 13.1,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 67.0,
+        "north": 70.0,
         "south": 40.0
       },
-      "nextBestAltitudeDegreesByHemisphere": {},
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 70.0,
+        "south": 40.0
+      },
       "futureUsefulStartDate": null,
       "futureUsefulEndDate": null,
       "daysUntilFutureUsefulStart": null,
@@ -37,10 +40,10 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-08-29",
+      "referenceDate": "2026-09-05",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 16.044,
-      "currentSampleDate": "2026-08-29",
+      "currentMagnitudeEstimate": 16.093,
+      "currentSampleDate": "2026-09-05",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
@@ -65,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0088P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-30T17:16:49Z",
+      "generatedAt": "2026-09-10T22:23:29Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -109,24 +112,35 @@
         "significanceKind": "outburst"
       },
       {
-        "id": "88P-2026-08-29-north-weekly-1",
-        "date": "2026-08-29",
-        "magnitude": 12.9,
+        "id": "88P-2026-09-05-north-weekly-1",
+        "date": "2026-09-05",
+        "magnitude": 13.0,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.2
+        "magnitudeDelta": 0.3
+      },
+      {
+        "id": "88P-2026-09-12-north-weekly-2",
+        "date": "2026-09-12",
+        "magnitude": 13.1,
+        "qualifier": "weekly-estimate",
+        "estimateKind": "projection",
+        "isProjection": true,
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.1
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
       "availableStartDate": "2026-08-09",
-      "availableEndDate": "2026-08-29",
-      "actualDaySpan": 20,
-      "pointCount": 2,
-      "containsProjection": false,
+      "availableEndDate": "2026-09-12",
+      "actualDaySpan": 34,
+      "pointCount": 3,
+      "containsProjection": true,
       "containsReportedObservation": true,
       "points": [
         {
@@ -143,27 +157,38 @@
           "significanceKind": "outburst"
         },
         {
-          "id": "88P-2026-08-29-north-weekly-1",
-          "date": "2026-08-29",
-          "magnitude": 12.9,
+          "id": "88P-2026-09-05-north-weekly-1",
+          "date": "2026-09-05",
+          "magnitude": 13.0,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.2
+          "magnitudeDelta": 0.3
+        },
+        {
+          "id": "88P-2026-09-12-north-weekly-2",
+          "date": "2026-09-12",
+          "magnitude": 13.1,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "projection",
+          "isProjection": true,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.1
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 12.9,
-      "currentDate": "2026-08-29",
-      "currentPointID": "88P-2026-08-29-north-weekly-1",
-      "comparisonMagnitude": 12.7,
-      "comparisonDate": "2026-08-09",
-      "comparisonPointID": "88P-2026-08-09-report-1",
-      "comparisonWindowDays": 20,
-      "deltaMagnitude": 0.2,
+      "currentMagnitude": 13.1,
+      "currentDate": "2026-09-12",
+      "currentPointID": "88P-2026-09-12-north-weekly-2",
+      "comparisonMagnitude": 13.0,
+      "comparisonDate": "2026-09-05",
+      "comparisonPointID": "88P-2026-09-05-north-weekly-1",
+      "comparisonWindowDays": 7,
+      "deltaMagnitude": 0.1,
       "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,

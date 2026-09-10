@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260830-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260910-aerith",
   "packageRole": "comet",
   "shardID": "COMET_123P",
   "record": {
@@ -10,21 +10,24 @@
     "displayName": "123P/West-Hartley",
     "aerithName": "123P/West-Hartley",
     "detailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
-    "generatedAt": "2026-08-30T17:16:49Z",
+    "generatedAt": "2026-09-10T22:23:29Z",
     "visibilitySummary": {
       "state": "notCurrentlyUseful",
-      "referenceDate": "2026-08-29",
+      "referenceDate": "2026-09-05",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-08-29",
+      "aerithCurrentDate": "2026-09-05",
       "aerithNextUsefulDate": null,
       "aerithCurrentMagnitude": 15.0,
-      "aerithNextMagnitude": null,
+      "aerithNextMagnitude": 15.0,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": -5.0,
-        "south": -21.0
+        "north": -3.0,
+        "south": -19.0
       },
-      "nextBestAltitudeDegreesByHemisphere": {},
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": -1.0,
+        "south": -18.0
+      },
       "futureUsefulStartDate": null,
       "futureUsefulEndDate": null,
       "daysUntilFutureUsefulStart": null,
@@ -37,10 +40,10 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-08-29",
+      "referenceDate": "2026-09-05",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 16.891,
-      "currentSampleDate": "2026-08-29",
+      "currentMagnitudeEstimate": 16.863,
+      "currentSampleDate": "2026-09-05",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
@@ -65,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-30T17:16:49Z",
+      "generatedAt": "2026-09-10T22:23:29Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -104,11 +107,11 @@
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
-        "commentary": "Now it is 16.9 mag (May 17, Kunihiro Shima). It stays 15 mag for a while. Now it is not observable. It will appear in September in the Northern Hemisphere, or in November in the Southern Hemisphere."
+        "commentary": "Now it is 16.9 mag (May 17, Kunihiro Shima). It stays 15 mag for a while. Now it is not observable. It will appear soon in the Northern Hemisphere, or in November in the Southern Hemisphere."
       },
       {
-        "id": "123P-2026-08-29-north-weekly-1",
-        "date": "2026-08-29",
+        "id": "123P-2026-09-05-north-weekly-1",
+        "date": "2026-09-05",
         "magnitude": 15.0,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
@@ -119,20 +122,31 @@
         "isSignificant": true,
         "significanceKind": "outburst",
         "interpretation": "Brightened 1.9 mag between Aerith magnitude reports or estimates."
+      },
+      {
+        "id": "123P-2026-09-12-north-weekly-2",
+        "date": "2026-09-12",
+        "magnitude": 15.0,
+        "qualifier": "weekly-estimate",
+        "estimateKind": "projection",
+        "isProjection": true,
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.0
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-08-29",
-      "availableEndDate": "2026-08-29",
-      "actualDaySpan": 0,
-      "pointCount": 1,
-      "containsProjection": false,
+      "availableStartDate": "2026-09-05",
+      "availableEndDate": "2026-09-12",
+      "actualDaySpan": 7,
+      "pointCount": 2,
+      "containsProjection": true,
       "containsReportedObservation": false,
       "points": [
         {
-          "id": "123P-2026-08-29-north-weekly-1",
-          "date": "2026-08-29",
+          "id": "123P-2026-09-05-north-weekly-1",
+          "date": "2026-09-05",
           "magnitude": 15.0,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
@@ -143,23 +157,34 @@
           "isSignificant": true,
           "significanceKind": "outburst",
           "interpretation": "Brightened 1.9 mag between Aerith magnitude reports or estimates."
+        },
+        {
+          "id": "123P-2026-09-12-north-weekly-2",
+          "date": "2026-09-12",
+          "magnitude": 15.0,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "projection",
+          "isProjection": true,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.0
         }
       ]
     },
     "brightnessTrend": {
       "currentMagnitude": 15.0,
-      "currentDate": "2026-08-29",
-      "currentPointID": "123P-2026-08-29-north-weekly-1",
-      "comparisonMagnitude": null,
-      "comparisonDate": null,
-      "comparisonPointID": null,
-      "comparisonWindowDays": null,
-      "deltaMagnitude": null,
-      "direction": "uncertain",
+      "currentDate": "2026-09-12",
+      "currentPointID": "123P-2026-09-12-north-weekly-2",
+      "comparisonMagnitude": 15.0,
+      "comparisonDate": "2026-09-05",
+      "comparisonPointID": "123P-2026-09-05-north-weekly-1",
+      "comparisonWindowDays": 7,
+      "deltaMagnitude": 0.0,
+      "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
       "notableObservationIDs": [
-        "123P-2026-08-29-north-weekly-1"
+        "123P-2026-09-05-north-weekly-1"
       ]
     }
   }
