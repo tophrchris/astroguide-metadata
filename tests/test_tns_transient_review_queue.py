@@ -118,6 +118,12 @@ class TNSTransientReviewQueueTests(unittest.TestCase):
             "https://www.wis-tns.org/object/2026xyz",
         )
 
+    def test_default_fetch_as_of_uses_previous_utc_day(self):
+        self.assertEqual(
+            queue_builder.default_fetch_as_of(dt.date(2026, 9, 10)),
+            dt.date(2026, 9, 9),
+        )
+
     def test_json_and_markdown_are_deterministic_across_input_order(self):
         first = self.build(self.inputs)
         second = self.build(list(reversed(self.inputs)))

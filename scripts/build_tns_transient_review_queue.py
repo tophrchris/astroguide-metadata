@@ -19,6 +19,7 @@ import os
 import re
 import sqlite3
 import sys
+import urllib.error
 import urllib.request
 import zipfile
 from collections import Counter, defaultdict
@@ -802,8 +803,16 @@ def fetch_staged_deltas(
             TNS_STAGED_URL.format(date=date_text),
             headers={"User-Agent": user_agent},
         )
-        with urllib.request.urlopen(request, timeout=90) as response:
-            payload = response.read()
+        try:
+            with urllib.request.urlopen(request, timeout=90) as response:
+                payload = response.read()
+        except urllib.error.HTTPError as error:
+            if error.code == 404:
+                raise RuntimeError(
+                    f"TNS staged delta is not available yet for {date_text}; "
+                    "rerun with an earlier --as-of date or wait for TNS to publish it."
+                ) from error
+            raise
         path.write_bytes(payload)
         if not zipfile.is_zipfile(path):
             raise RuntimeError(f"TNS response is not a ZIP archive: {date_text}")
@@ -851,11 +860,17 @@ def parse_as_of(value: str) -> dt.date:
         raise argparse.ArgumentTypeError("expected YYYY-MM-DD") from error
 
 
+def default_fetch_as_of(today: dt.date | None = None) -> dt.date:
+    """Use yesterday by default because same-day TNS staged deltas can lag."""
+    current_day = today or dt.datetime.now(dt.UTC).date()
+    return current_day - dt.timedelta(days=1)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("inputs", nargs="*", type=Path, help="TNS staged .csv or .csv.zip deltas")
     parser.add_argument("--catalog", type=Path, required=True, help="AstroGuide catalog.sqlite")
-    parser.add_argument("--as-of", type=parse_as_of, default=dt.datetime.now(dt.UTC).date())
+    parser.add_argument("--as-of", type=parse_as_of, default=default_fetch_as_of())
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--radius-deg", type=float, default=2.0)
     parser.add_argument("--max-age-days", type=int, default=45)
