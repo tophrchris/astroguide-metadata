@@ -93,8 +93,15 @@ jobs:
           Aerith usage is covered by the documented permission from Seiichi Yoshida, with attribution and relevant Aerith detail-page links preserved in the metadata package.
           BODY
 
-          if gh pr view "$BRANCH_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            gh pr edit "$BRANCH_NAME" \
+          open_pr="$(gh pr list \
+            --repo "$GITHUB_REPOSITORY" \
+            --head "$BRANCH_NAME" \
+            --state open \
+            --json number \
+            --jq '.[0].number // empty')"
+
+          if [[ -n "$open_pr" ]]; then
+            gh pr edit "$open_pr" \
               --repo "$GITHUB_REPOSITORY" \
               --title "Update Aerith comet metadata" \
               --body-file "$body"

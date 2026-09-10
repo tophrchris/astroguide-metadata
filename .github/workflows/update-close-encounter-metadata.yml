@@ -128,8 +128,15 @@ jobs:
           This workflow does not harvest new comet inputs. It consumes the checked-in comet snapshot package that is current on \`main\`; review upstream comet snapshot changes separately before relying on new comet close encounters.
           BODY
 
-          if gh pr view "$BRANCH_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            gh pr edit "$BRANCH_NAME" \
+          open_pr="$(gh pr list \
+            --repo "$GITHUB_REPOSITORY" \
+            --head "$BRANCH_NAME" \
+            --state open \
+            --json number \
+            --jq '.[0].number // empty')"
+
+          if [[ -n "$open_pr" ]]; then
+            gh pr edit "$open_pr" \
               --repo "$GITHUB_REPOSITORY" \
               --title "Update close encounter metadata" \
               --body-file "$body"
