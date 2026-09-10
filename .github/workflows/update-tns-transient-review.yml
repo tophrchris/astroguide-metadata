@@ -134,7 +134,7 @@ jobs:
           LOOKBACK_DAYS: ${{ inputs.lookback_days || '7' }}
           TNS_USER_AGENT: ${{ secrets.TNS_USER_AGENT }}
         run: |
-          as_of="${REQUESTED_AS_OF:-$(date -u +%F)}"
+          as_of="${REQUESTED_AS_OF:-$(date -u -d 'yesterday' +%F)}"
           python scripts/build_tns_transient_review_queue.py \
             --catalog ../DSOPlanneriOS/App/Resources/Catalog/catalog.sqlite \
             --as-of "$as_of" \
