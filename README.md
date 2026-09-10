@@ -63,6 +63,9 @@ validate them, and open or update a pull request for review.
 - `update-close-encounter-metadata.yml` refreshes lunar, planet-target, and
   comet close-encounter packages monthly from the checked-in iOS catalog and
   comet snapshot.
+- `update-tns-transient-review.yml` builds a review-only TNS transient
+  opportunity queue every Monday and Thursday. It does not publish the queue
+  to the stable manifest or app.
 
 The close-encounter workflow checks out `tophrchris/DSOPlanneriOS` beside this
 repository so generators can read the app catalog. If the default workflow
@@ -75,6 +78,29 @@ Moon/planet, Moon/comet, planet/DSO, comet/DSO, comet/Moon, and comet/planet.
 It intentionally skips DSO/DSO pairings because catalog targets are static, and
 it does not harvest new comet inputs; the comet snapshot package should be
 reviewed separately.
+
+## Building the TNS Transient Review Queue
+
+The TNS review builder consumes staged daily CSV/ZIP deltas, retains the newest
+`lastmodified` row per `objid`, rejects known contaminants, and scores recent
+objects with an AstroGuide catalog subject within 2 degrees. Proximity is
+always labeled a `near_field` / **near-field match** unless TNS explicitly
+supplies matching host evidence.
+
+```bash
+python3 scripts/build_tns_transient_review_queue.py \
+  --catalog ../DSOPlanneriOS/App/Resources/Catalog/catalog.sqlite \
+  --as-of 2026-09-09 \
+  path/to/tns_public_objects_20260908.csv.zip \
+  path/to/tns_public_objects_20260909.csv.zip
+```
+
+The builder emits dated JSON and Markdown under `outputs/transients/review/`.
+These are decision-support artifacts shaped for later promotion, not published
+`transientOpportunities`. Fetching requires the approved full marker in the
+`TNS_USER_AGENT` environment variable. See
+[`docs/tns-transient-review-queue-v1.md`](docs/tns-transient-review-queue-v1.md)
+for the source contract, scoring policy, and automation boundary.
 
 ## Rebuilding Target Metadata Packages
 
