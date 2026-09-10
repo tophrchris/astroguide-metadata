@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260830-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260910-aerith",
   "packageRole": "comet",
   "shardID": "COMET_C_2025_R3",
   "record": {
@@ -10,21 +10,24 @@
     "displayName": "C/2025 R3 (PANSTARRS)",
     "aerithName": "C/2025 R3 ( PanSTARRS )",
     "detailURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
-    "generatedAt": "2026-08-30T17:16:49Z",
+    "generatedAt": "2026-09-10T22:23:29Z",
     "visibilitySummary": {
-      "state": "current",
-      "referenceDate": "2026-08-29",
+      "state": "notCurrentlyUseful",
+      "referenceDate": "2026-09-05",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-08-29",
+      "aerithCurrentDate": "2026-09-05",
       "aerithNextUsefulDate": null,
-      "aerithCurrentMagnitude": 15.9,
-      "aerithNextMagnitude": null,
+      "aerithCurrentMagnitude": 16.1,
+      "aerithNextMagnitude": 16.3,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": -1.0,
-        "south": 33.0
+        "north": 4.0,
+        "south": 37.0
       },
-      "nextBestAltitudeDegreesByHemisphere": {},
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 9.0,
+        "south": 42.0
+      },
       "futureUsefulStartDate": null,
       "futureUsefulEndDate": null,
       "daysUntilFutureUsefulStart": null,
@@ -37,10 +40,10 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-08-29",
+      "referenceDate": "2026-09-05",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 18.397,
-      "currentSampleDate": "2026-08-29",
+      "currentMagnitudeEstimate": 18.605,
+      "currentSampleDate": "2026-09-05",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
@@ -65,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-08-30T17:16:49Z",
+      "generatedAt": "2026-09-10T22:23:29Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -96,50 +99,109 @@
     },
     "brightness": [
       {
-        "id": "C/2025R3-2026-08-29-north-weekly-1",
-        "date": "2026-08-29",
-        "magnitude": 15.9,
+        "id": "C/2025R3-2026-08-15-report-1",
+        "date": "2026-08-15",
+        "magnitude": 13.4,
+        "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
+        "commentary": "It brightened up to 4.0 mag in late April (Apr. 30, Chris Wyatt). It brightened up to 1.3 mag due to the forward scattering in the SOHO LASCO images (Apr. 25, Mikolaj Kaszczyk). Now it is 13.4 mag (Aug. 15, Thomas Lehmann). Fading gradually. It will be fainter than 18 mag in November. It locates somewhat low in the Northern Hemisphere. In the Southern Hemisphere, it stays observable in good condition.",
+        "isSignificant": true,
+        "significanceKind": "outburst"
+      },
+      {
+        "id": "C/2025R3-2026-09-05-north-weekly-1",
+        "date": "2026-09-05",
+        "magnitude": 16.1,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html"
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 2.7,
+        "isSignificant": true,
+        "significanceKind": "fade",
+        "interpretation": "Faded 2.7 mag between Aerith magnitude reports or estimates."
+      },
+      {
+        "id": "C/2025R3-2026-09-12-north-weekly-2",
+        "date": "2026-09-12",
+        "magnitude": 16.3,
+        "qualifier": "weekly-estimate",
+        "estimateKind": "projection",
+        "isProjection": true,
+        "sourceLabel": "Aerith weekly bright-comet table (north)",
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+        "magnitudeDelta": 0.2
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-08-29",
-      "availableEndDate": "2026-08-29",
-      "actualDaySpan": 0,
-      "pointCount": 1,
-      "containsProjection": false,
-      "containsReportedObservation": false,
+      "availableStartDate": "2026-08-15",
+      "availableEndDate": "2026-09-12",
+      "actualDaySpan": 28,
+      "pointCount": 3,
+      "containsProjection": true,
+      "containsReportedObservation": true,
       "points": [
         {
-          "id": "C/2025R3-2026-08-29-north-weekly-1",
-          "date": "2026-08-29",
-          "magnitude": 15.9,
+          "id": "C/2025R3-2026-08-15-report-1",
+          "date": "2026-08-15",
+          "magnitude": 13.4,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
+          "commentary": "It brightened up to 4.0 mag in late April (Apr. 30, Chris Wyatt). It brightened up to 1.3 mag due to the forward scattering in the SOHO LASCO images (Apr. 25, Mikolaj Kaszczyk). Now it is 13.4 mag (Aug. 15, Thomas Lehmann). Fading gradually. It will be fainter than 18 mag in November. It locates somewhat low in the Northern Hemisphere. In the Southern Hemisphere, it stays observable in good condition.",
+          "isSignificant": true,
+          "significanceKind": "outburst"
+        },
+        {
+          "id": "C/2025R3-2026-09-05-north-weekly-1",
+          "date": "2026-09-05",
+          "magnitude": 16.1,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
-          "sourceURL": "http://www.aerith.net/comet/weekly/current.html"
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 2.7,
+          "isSignificant": true,
+          "significanceKind": "fade",
+          "interpretation": "Faded 2.7 mag between Aerith magnitude reports or estimates."
+        },
+        {
+          "id": "C/2025R3-2026-09-12-north-weekly-2",
+          "date": "2026-09-12",
+          "magnitude": 16.3,
+          "qualifier": "weekly-estimate",
+          "estimateKind": "projection",
+          "isProjection": true,
+          "sourceLabel": "Aerith weekly bright-comet table (north)",
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
+          "magnitudeDelta": 0.2
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 15.9,
-      "currentDate": "2026-08-29",
-      "currentPointID": "C/2025R3-2026-08-29-north-weekly-1",
-      "comparisonMagnitude": null,
-      "comparisonDate": null,
-      "comparisonPointID": null,
-      "comparisonWindowDays": null,
-      "deltaMagnitude": null,
-      "direction": "uncertain",
+      "currentMagnitude": 16.3,
+      "currentDate": "2026-09-12",
+      "currentPointID": "C/2025R3-2026-09-12-north-weekly-2",
+      "comparisonMagnitude": 16.1,
+      "comparisonDate": "2026-09-05",
+      "comparisonPointID": "C/2025R3-2026-09-05-north-weekly-1",
+      "comparisonWindowDays": 7,
+      "deltaMagnitude": 0.2,
+      "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
-      "notableObservationIDs": []
+      "notableObservationIDs": [
+        "C/2025R3-2026-08-15-report-1",
+        "C/2025R3-2026-09-05-north-weekly-1"
+      ]
     }
   }
 }
