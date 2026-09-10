@@ -1,0 +1,4 @@
+2026-09-09 00:00:00 - 23:59:59
+"objid","name_prefix","name","ra","declination","type","status","discoverydate","discoverymag","discmagfilter","reporting_group","source_group","internal_names","lastmodified"
+"1001","SN","2026abc","10.0000","20.0000","SN II","classified","2026-09-01 02:00:00","16.2","r","Survey A","Survey A","ZTF26abc, ATLAS26abc","2026-09-09 02:00:00"
+"1007","AT","2026far","80.0000","-40.0000","candidate","unclassified","2026-09-07 08:00:00","17.0","g","Survey G","Survey G","FAR","2026-09-09 08:00:00"

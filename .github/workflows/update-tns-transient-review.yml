@@ -1,0 +1,146 @@
+name: Update TNS transient review queue
+
+on:
+  workflow_dispatch:
+    inputs:
+      as_of:
+        description: Queue date in YYYY-MM-DD (defaults to current UTC date)
+        required: false
+        type: string
+      lookback_days:
+        description: Number of staged daily deltas to fetch (1-14)
+        required: false
+        default: "7"
+        type: string
+      ios_ref:
+        description: DSOPlanneriOS ref to use for catalog input
+        required: false
+        default: main
+        type: string
+  schedule:
+    - cron: "17 13 * * 1,4"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-tns-transient-review
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Refresh TNS review queue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out metadata repository
+        uses: actions/checkout@v4
+        with:
+          path: astroguide-metadata
+          fetch-depth: 0
+
+      - name: Continue the existing review branch when present
+        working-directory: astroguide-metadata
+        env:
+          BRANCH_NAME: automation/tns-transient-review
+        run: |
+          if git fetch origin "$BRANCH_NAME:refs/remotes/origin/$BRANCH_NAME"; then
+            git switch -C "$BRANCH_NAME" "origin/$BRANCH_NAME"
+          else
+            git switch -C "$BRANCH_NAME" origin/main
+          fi
+
+      - name: Require private catalog deploy key and TNS marker
+        env:
+          DSOPLANNERIOS_READ_SSH_KEY: ${{ secrets.DSOPLANNERIOS_READ_SSH_KEY }}
+          TNS_USER_AGENT: ${{ secrets.TNS_USER_AGENT }}
+        run: |
+          if [[ -z "$DSOPLANNERIOS_READ_SSH_KEY" ]]; then
+            echo "Repository secret DSOPLANNERIOS_READ_SSH_KEY is required." >&2
+            exit 2
+          fi
+          if [[ "$TNS_USER_AGENT" != tns_marker\{* ]]; then
+            echo "Repository secret TNS_USER_AGENT must contain the approved tns_marker JSON user agent." >&2
+            exit 2
+          fi
+
+      - name: Check out AstroGuide iOS catalog source
+        uses: actions/checkout@v4
+        with:
+          repository: tophrchris/DSOPlanneriOS
+          path: DSOPlanneriOS
+          ref: ${{ inputs.ios_ref || 'main' }}
+          ssh-key: ${{ secrets.DSOPLANNERIOS_READ_SSH_KEY }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build review queue from staged TNS deltas
+        working-directory: astroguide-metadata
+        env:
+          REQUESTED_AS_OF: ${{ inputs.as_of }}
+          LOOKBACK_DAYS: ${{ inputs.lookback_days || '7' }}
+          TNS_USER_AGENT: ${{ secrets.TNS_USER_AGENT }}
+        run: |
+          as_of="${REQUESTED_AS_OF:-$(date -u +%F)}"
+          python scripts/build_tns_transient_review_queue.py \
+            --catalog ../DSOPlanneriOS/App/Resources/Catalog/catalog.sqlite \
+            --as-of "$as_of" \
+            --fetch-days "$LOOKBACK_DAYS" \
+            --skip-unchanged
+
+      - name: Validate generated review artifacts
+        working-directory: astroguide-metadata
+        run: |
+          python -m unittest tests/test_tns_transient_review_queue.py
+          latest="$(find outputs/transients/review -name 'transient-review-*.json' -type f | sort | tail -1)"
+          if [[ -n "$latest" ]]; then
+            python scripts/build_tns_transient_review_queue.py \
+              --catalog ../DSOPlanneriOS/App/Resources/Catalog/catalog.sqlite \
+              --validate-only "$latest"
+          fi
+
+      - name: Open or update review pull request
+        working-directory: astroguide-metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH_NAME: automation/tns-transient-review
+          IOS_REF: ${{ inputs.ios_ref || 'main' }}
+        run: |
+          if git diff --quiet -- outputs/transients/review; then
+            echo "No material TNS review-queue changes to publish."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/transients/review
+          git commit -m "Update TNS transient review queue"
+          git push --force-with-lease origin "$BRANCH_NAME"
+
+          body="$(mktemp)"
+          cat > "$body" <<BODY
+          Automated TNS transient opportunity review refresh using staged daily deltas and the AstroGuide catalog from `tophrchris/DSOPlanneriOS@$IOS_REF`.
+
+          This PR contains a human review queue and an app-facing-shape JSON artifact. It does **not** publish `transientOpportunities`, change iOS UI, send push notifications, ingest Gmail, or automatically approve candidates.
+
+          Catalog proximity is labeled **near-field match** and is not treated as host or physical association unless TNS explicitly supplies matching host evidence.
+
+          Generated for #58.
+          BODY
+
+          if gh pr view "$BRANCH_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh pr edit "$BRANCH_NAME" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "Update TNS transient opportunity review queue" \
+              --body-file "$body"
+          else
+            gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --base main \
+              --head "$BRANCH_NAME" \
+              --title "Update TNS transient opportunity review queue" \
+              --body-file "$body"
+          fi
