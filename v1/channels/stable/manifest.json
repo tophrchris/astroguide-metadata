@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-09-06T06:30:00Z",
-  "publishedAt": "2026-09-06T06:30:00Z",
+  "generatedAt": "2026-09-10T15:01:56Z",
+  "publishedAt": "2026-09-10T15:01:56Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -383,6 +383,26 @@
       "cacheTTLSeconds": 604800,
       "fallbackNotes": "Use the bundled seasonal recommendation snapshot for this latitude band only if no validated cached package is available. Cache TTL indicates when the app should check for a fresher package; an expired cached package remains usable until replaced by a validated refresh.",
       "latitudeBand": "south_high_60_90s"
+    },
+    {
+      "family": "transientEventFeed",
+      "packageVersion": "transient-event-feed-v1-20260909-approved",
+      "payloadSchemaVersion": 1,
+      "packageURL": "https://metadata.astroguide.space/v1/packages/transients/transient_opportunities_v1.json",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "b44cd7358c3681a818c2f8341e8ee6924624f82b3ccaae9fac843f81529a247a"
+      },
+      "byteSize": 30225,
+      "reviewedCount": 24,
+      "approvedCount": 16,
+      "opportunityCount": 16,
+      "urgentCount": 12,
+      "asOfDate": "2026-09-09",
+      "minSupportedAppVersion": "1.4.2",
+      "minSupportedBuild": "1",
+      "cacheTTLSeconds": 21600,
+      "fallbackNotes": "Curator-approved TNS transient opportunities. Clients should show this short-lived feed only from a validated cached remote package; expired cached data remains usable until replaced, but individual events must honor their activeWindow expiry."
     }
   ]
 }
