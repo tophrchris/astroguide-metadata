@@ -37,6 +37,7 @@ v1/packages/planet-target-close-encounters/planet_target_close_encounter_metadat
 v1/packages/planet-target-close-encounters/shards/planet_target_close_encounters_YYYY_MM_v1.json
 v1/packages/comet-close-encounters/comet_close_encounter_metadata_v1.json
 v1/packages/comet-close-encounters/shards/comet_close_encounters_YYYY_MM_v1.json
+v1/packages/transients/transient_opportunities_v1.json
 v1/packages/seasonal-recommendations/seasonal_recommendation_candidates_north_mid_30_60n_v1.json
 sources/target-metadata-overlay/2026-05-curated-workbooks/
 sources/telescope-reference-prices/{config,estimates,overrides}.json
@@ -101,6 +102,19 @@ These are decision-support artifacts shaped for later promotion, not published
 `TNS_USER_AGENT` environment variable. See
 [`docs/tns-transient-review-queue-v1.md`](docs/tns-transient-review-queue-v1.md)
 for the source contract, scoring policy, and automation boundary.
+
+After human approval, promote a runtime feed into the stable metadata channel:
+
+```bash
+python3 scripts/publish_tns_transient_opportunities.py \
+  --source outputs/transients/runtime/transient_opportunities_v1.json
+
+python3 scripts/publish_tns_transient_opportunities.py --validate-only
+```
+
+The promoted package is published as the `transientEventFeed` dynamic metadata
+family and keeps individual opportunity `activeWindow` expirations as the final
+display guard.
 
 ## Rebuilding Target Metadata Packages
 
