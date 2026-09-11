@@ -1,22 +1,34 @@
 {
   "schemaVersion": 1,
-  "packageFamily": "transientEventFeed",
-  "packageVersion": "transient-event-feed-v1-20260910-approved",
   "family": "transientOpportunities",
-  "reviewOnly": false,
+  "reviewOnly": true,
   "asOfDate": "2026-09-10",
-  "generatedAtUTC": "2026-09-11T15:24:13Z",
-  "approvalPolicy": {
-    "description": "Lightweight hand-approved first cut: include candidates brighter than magnitude 19 whose matched AstroGuide catalog target has a description.",
-    "magnitudeField": "reportedMagnitude.value when present, otherwise discovery.magnitude",
-    "magnitudeLimitExclusive": 19,
-    "requiresAstroGuideDescription": true,
-    "sourceReviewQueue": "outputs/transients/review/transient-review-2026-09-10.json"
+  "generatedAtUTC": "2026-09-10T00:00:00Z",
+  "policy": {
+    "nearFieldRadiusDegrees": 2.0,
+    "preferredDiscoveryAgeDays": 30,
+    "maximumDiscoveryAgeDays": 45,
+    "preferredDiscoveryMagnitude": 18.5,
+    "watchDiscoveryMagnitude": 19.5,
+    "relationshipDefault": "near_field"
   },
   "counts": {
-    "reviewed": 24,
-    "approved": 19,
-    "excluded": 5
+    "rawRows": 742,
+    "duplicateRowsCollapsed": 67,
+    "uniqueObjects": 675,
+    "contaminantsRejected": 0,
+    "unsupportedClassificationsRejected": 0,
+    "plausibleCandidates": 675,
+    "outsideDiscoveryWindow": 97,
+    "fainterThanWatchBand": 375,
+    "invalidCoordinates": 0,
+    "outsideNearFieldRadius": 125,
+    "nearFieldMatches": 78,
+    "outsideReviewGate": 54,
+    "reviewOpportunities": 24,
+    "urgent": 14,
+    "watch": 9,
+    "expired": 1
   },
   "opportunities": [
     {
@@ -28,9 +40,9 @@
       "title": "Supernova SN2026aaiv near Caldwell 30",
       "shortTitle": "SN2026aaiv",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-09-01T11:23:32Z",
         "expiresAtUTC": "2026-10-01T11:23:32Z"
@@ -54,6 +66,15 @@
         "raDegrees": 339.2734487,
         "decDegrees": 34.409775
       },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "C30",
         "displayName": "Caldwell 30",
@@ -69,6 +90,18 @@
       },
       "lastModifiedUTC": "2026-09-10T21:19:03Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260906.csv.zip",
+            "rowNumber": 82,
+            "lastModifiedUTC": "2026-09-06T12:39:05Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260910.csv.zip",
+            "rowNumber": 20,
+            "lastModifiedUTC": "2026-09-10T21:19:03Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
@@ -77,12 +110,6 @@
           "GOTO26jfm",
           "PS26hnd"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -94,9 +121,9 @@
       "title": "Transient candidate AT2026aaom near Andromeda Galaxy",
       "shortTitle": "AT2026aaom",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-09-04T03:37:43Z",
         "expiresAtUTC": "2026-10-04T03:37:43Z"
@@ -120,6 +147,15 @@
         "raDegrees": 10.7098845,
         "decDegrees": 41.3159264
       },
+      "score": 100,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "M31",
         "displayName": "Andromeda Galaxy",
@@ -135,6 +171,23 @@
       },
       "lastModifiedUTC": "2026-09-06T12:39:05Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260904.csv.zip",
+            "rowNumber": 54,
+            "lastModifiedUTC": "2026-09-04T13:45:02Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260905.csv.zip",
+            "rowNumber": 27,
+            "lastModifiedUTC": "2026-09-05T14:51:11Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260906.csv.zip",
+            "rowNumber": 78,
+            "lastModifiedUTC": "2026-09-06T12:39:05Z"
+          }
+        ],
         "reportingGroup": "None",
         "sourceGroup": "None",
         "internalNames": [
@@ -142,12 +195,6 @@
           "ZTF26abseonx",
           "ATLAS26kuh"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -159,9 +206,9 @@
       "title": "Supernova SN2026aars near NGC 3910",
       "shortTitle": "SN2026aars",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-09-04T09:21:00Z",
         "expiresAtUTC": "2026-10-04T09:21:00Z"
@@ -185,6 +232,15 @@
         "raDegrees": 37.3953473,
         "decDegrees": 23.1162324
       },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC 1803",
         "displayName": "NGC 3910",
@@ -200,6 +256,23 @@
       },
       "lastModifiedUTC": "2026-09-10T15:06:35Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260905.csv.zip",
+            "rowNumber": 15,
+            "lastModifiedUTC": "2026-09-05T16:40:24Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260906.csv.zip",
+            "rowNumber": 71,
+            "lastModifiedUTC": "2026-09-06T12:39:05Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260910.csv.zip",
+            "rowNumber": 30,
+            "lastModifiedUTC": "2026-09-10T15:06:35Z"
+          }
+        ],
         "reportingGroup": "ZTF",
         "sourceGroup": "ZTF",
         "internalNames": [
@@ -207,12 +280,6 @@
           "ATLAS26kuy",
           "GOTO26jgg"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -224,9 +291,9 @@
       "title": "Supernova SN2026zvc near IC2158",
       "shortTitle": "SN2026zvc",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-08-25T02:41:46Z",
         "expiresAtUTC": "2026-09-24T02:41:46Z"
@@ -250,6 +317,15 @@
         "raDegrees": 90.1136578,
         "decDegrees": -27.5402967
       },
+      "score": 90,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC2158",
         "displayName": "IC2158",
@@ -265,18 +341,19 @@
       },
       "lastModifiedUTC": "2026-09-09T07:19:23Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260909.csv.zip",
+            "rowNumber": 112,
+            "lastModifiedUTC": "2026-09-09T07:19:23Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
           "ATLAS26knm",
           "GOTO26ipp"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -288,9 +365,9 @@
       "title": "Supernova SN2026zwj near IC179",
       "shortTitle": "SN2026zwj",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-08-24T21:07:44Z",
         "expiresAtUTC": "2026-09-23T21:07:44Z"
@@ -314,6 +391,15 @@
         "raDegrees": 32.361687,
         "decDegrees": 37.2612967
       },
+      "score": 90,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC179",
         "displayName": "IC179",
@@ -329,6 +415,13 @@
       },
       "lastModifiedUTC": "2026-09-05T23:28:43Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260905.csv.zip",
+            "rowNumber": 10,
+            "lastModifiedUTC": "2026-09-05T23:28:43Z"
+          }
+        ],
         "reportingGroup": "XOSS",
         "sourceGroup": "XOSS",
         "internalNames": [
@@ -338,12 +431,6 @@
           "PS26hla",
           "ZTF26abqudqr"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -355,9 +442,9 @@
       "title": "Supernova SN2026aacj near IC162",
       "shortTitle": "SN2026aacj",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-08-30T10:02:35Z",
         "expiresAtUTC": "2026-09-29T10:02:35Z"
@@ -381,6 +468,15 @@
         "raDegrees": 28.3602269,
         "decDegrees": 10.1235888
       },
+      "score": 90,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC162",
         "displayName": "IC162",
@@ -396,18 +492,24 @@
       },
       "lastModifiedUTC": "2026-09-06T12:39:05Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260904.csv.zip",
+            "rowNumber": 20,
+            "lastModifiedUTC": "2026-09-04T16:50:54Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260906.csv.zip",
+            "rowNumber": 90,
+            "lastModifiedUTC": "2026-09-06T12:39:05Z"
+          }
+        ],
         "reportingGroup": "ZTF",
         "sourceGroup": "ZTF",
         "internalNames": [
           "ZTF26abrgiyy",
           "GOTO26isa"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -419,9 +521,9 @@
       "title": "Transient candidate AT2026aayx near Dwingeloo 1",
       "shortTitle": "AT2026aayx",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-09-08T03:15:34Z",
         "expiresAtUTC": "2026-10-08T03:15:34Z"
@@ -445,6 +547,15 @@
         "raDegrees": 321.8114922,
         "decDegrees": -71.5187333
       },
+      "score": 90,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC 5106",
         "displayName": "Dwingeloo 1",
@@ -460,17 +571,18 @@
       },
       "lastModifiedUTC": "2026-09-08T22:10:12Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260908.csv.zip",
+            "rowNumber": 21,
+            "lastModifiedUTC": "2026-09-08T22:10:12Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
           "ATLAS26lct"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -482,9 +594,9 @@
       "title": "Transient candidate AT2026aazh near IC4718",
       "shortTitle": "AT2026aazh",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-09-08T01:33:36Z",
         "expiresAtUTC": "2026-10-08T01:33:36Z"
@@ -508,6 +620,15 @@
         "raDegrees": 277.4409378,
         "decDegrees": -60.4014487
       },
+      "score": 90,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC4718",
         "displayName": "IC4718",
@@ -523,17 +644,91 @@
       },
       "lastModifiedUTC": "2026-09-08T22:12:58Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260908.csv.zip",
+            "rowNumber": 11,
+            "lastModifiedUTC": "2026-09-08T22:12:58Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
           "ATLAS26ldd"
         ]
+      }
+    },
+    {
+      "id": "tns:219118",
+      "source": "TNS",
+      "sourceId": "219118",
+      "sourceObjectName": "SN2026aafh",
+      "sourceURL": "https://www.wis-tns.org/object/2026aafh",
+      "title": "Supernova SN2026aafh near NGC6133",
+      "shortTitle": "SN2026aafh",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve_or_enrich",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-01T06:35:40Z",
+        "expiresAtUTC": "2026-10-01T06:35:40Z"
       },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
+      "discovery": {
+        "dateUTC": "2026-09-01T06:35:40Z",
+        "ageDays": 9,
+        "magnitude": 18.457,
+        "band": "orange"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 245.3008542,
+        "decDegrees": 57.6308793
+      },
+      "score": 87,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC6133",
+        "displayName": "NGC6133",
+        "catalogName": "NGC NGC6133",
+        "objectType": "Nebula",
+        "magnitude": null
+      },
+      "angularSeparationDegrees": 0.98639,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-06T12:39:05Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260906.csv.zip",
+            "rowNumber": 86,
+            "lastModifiedUTC": "2026-09-06T12:39:05Z"
+          }
+        ],
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26krm",
+          "ZTF26abrvdps"
+        ]
       }
     },
     {
@@ -545,9 +740,9 @@
       "title": "Transient candidate AT2026aavt near NGC 7130",
       "shortTitle": "AT2026aavt",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-09-06T23:29:38Z",
         "expiresAtUTC": "2026-10-06T23:29:38Z"
@@ -571,6 +766,15 @@
         "raDegrees": 207.517282,
         "decDegrees": -28.197736
       },
+      "score": 83,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC 4320",
         "displayName": "NGC 7130",
@@ -586,17 +790,18 @@
       },
       "lastModifiedUTC": "2026-09-07T16:01:53Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260907.csv.zip",
+            "rowNumber": 26,
+            "lastModifiedUTC": "2026-09-07T16:01:53Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
           "ATLAS26kww"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -608,9 +813,9 @@
       "title": "Transient candidate AT2026aavy near IC4214",
       "shortTitle": "AT2026aavy",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-09-06T23:25:03Z",
         "expiresAtUTC": "2026-10-06T23:25:03Z"
@@ -634,6 +839,15 @@
         "raDegrees": 201.3285887,
         "decDegrees": -33.1417925
       },
+      "score": 83,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC4214",
         "displayName": "IC4214",
@@ -649,17 +863,18 @@
       },
       "lastModifiedUTC": "2026-09-07T16:21:29Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260907.csv.zip",
+            "rowNumber": 21,
+            "lastModifiedUTC": "2026-09-07T16:21:29Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
           "ATLAS26kxe"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -671,9 +886,9 @@
       "title": "Transient candidate AT2026aazi near NGC 568",
       "shortTitle": "AT2026aazi",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-09-08T02:52:49Z",
         "expiresAtUTC": "2026-10-08T02:52:49Z"
@@ -697,6 +912,15 @@
         "raDegrees": 303.11567,
         "decDegrees": -72.772189
       },
+      "score": 83,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC 5016",
         "displayName": "NGC 568",
@@ -712,17 +936,18 @@
       },
       "lastModifiedUTC": "2026-09-08T22:13:09Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260908.csv.zip",
+            "rowNumber": 10,
+            "lastModifiedUTC": "2026-09-08T22:13:09Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
           "ATLAS26lde"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -734,9 +959,9 @@
       "title": "Transient candidate AT2026aazu near IC1156",
       "shortTitle": "AT2026aazu",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-09-08T20:30:36Z",
         "expiresAtUTC": "2026-10-08T20:30:36Z"
@@ -760,6 +985,15 @@
         "raDegrees": 241.18609,
         "decDegrees": 20.01383
       },
+      "score": 83,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC1156",
         "displayName": "IC1156",
@@ -775,17 +1009,18 @@
       },
       "lastModifiedUTC": "2026-09-09T07:56:21Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260909.csv.zip",
+            "rowNumber": 110,
+            "lastModifiedUTC": "2026-09-09T07:56:21Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
           "ATLAS26ldt"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -797,9 +1032,9 @@
       "title": "Transient candidate AT2026abdi near NGC1527",
       "shortTitle": "AT2026abdi",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "urgent",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "approve_or_enrich",
       "activeWindow": {
         "startsAtUTC": "2026-09-01T01:40:12Z",
         "expiresAtUTC": "2026-10-01T01:40:12Z"
@@ -823,6 +1058,15 @@
         "raDegrees": 63.06061,
         "decDegrees": -47.2076333
       },
+      "score": 82,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "NGC1527",
         "displayName": "NGC1527",
@@ -838,17 +1082,91 @@
       },
       "lastModifiedUTC": "2026-09-10T09:19:09Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260910.csv.zip",
+            "rowNumber": 60,
+            "lastModifiedUTC": "2026-09-10T09:19:09Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
           "ATLAS26lfg"
         ]
+      }
+    },
+    {
+      "id": "tns:219681",
+      "source": "TNS",
+      "sourceId": "219681",
+      "sourceObjectName": "AT2026aayt",
+      "sourceURL": "https://www.wis-tns.org/object/2026aayt",
+      "title": "Transient candidate AT2026aayt near IC4661",
+      "shortTitle": "AT2026aayt",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "watch",
+      "recommendedReviewAction": "watch",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-08T01:43:25Z",
+        "expiresAtUTC": "2026-10-08T01:43:25Z"
       },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
+      "discovery": {
+        "dateUTC": "2026-09-08T01:43:25Z",
+        "ageDays": 2,
+        "magnitude": 19.427,
+        "band": "cyan"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 268.0006886,
+        "decDegrees": -74.0333371
+      },
+      "score": 93,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_watch_band",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC4661",
+        "displayName": "IC4661",
+        "catalogName": "IC IC4661",
+        "objectType": "Galaxy",
+        "magnitude": 13.5
+      },
+      "angularSeparationDegrees": 0.06668,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-08T22:03:29Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260908.csv.zip",
+            "rowNumber": 42,
+            "lastModifiedUTC": "2026-09-08T22:03:29Z"
+          }
+        ],
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26lbv"
+        ]
       }
     },
     {
@@ -860,9 +1178,9 @@
       "title": "Transient candidate AT2026abeq near Great Nebula in Andromeda",
       "shortTitle": "AT2026abeq",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "watch",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "watch",
       "activeWindow": {
         "startsAtUTC": "2026-09-10T22:01:18Z",
         "expiresAtUTC": "2026-10-10T22:01:18Z"
@@ -886,6 +1204,15 @@
         "raDegrees": 10.553167,
         "decDegrees": 41.274556
       },
+      "score": 93,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_watch_band",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "NGC224",
         "displayName": "Great Nebula in Andromeda",
@@ -901,17 +1228,18 @@
       },
       "lastModifiedUTC": "2026-09-10T23:27:15Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260910.csv.zip",
+            "rowNumber": 1,
+            "lastModifiedUTC": "2026-09-10T23:27:15Z"
+          }
+        ],
         "reportingGroup": "XOSS",
         "sourceGroup": "XOSS",
         "internalNames": [
           "PSP26S"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -923,9 +1251,9 @@
       "title": "Supernova SN2026aarv near IC5332",
       "shortTitle": "SN2026aarv",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "watch",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "watch",
       "activeWindow": {
         "startsAtUTC": "2026-09-05T10:21:24Z",
         "expiresAtUTC": "2026-10-05T10:21:24Z"
@@ -949,6 +1277,15 @@
         "raDegrees": 351.864604,
         "decDegrees": -35.812296
       },
+      "score": 88,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_7_days",
+        "discovery_magnitude_watch_band",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC5332",
         "displayName": "IC5332",
@@ -964,18 +1301,99 @@
       },
       "lastModifiedUTC": "2026-09-09T07:19:22Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260905.csv.zip",
+            "rowNumber": 4,
+            "lastModifiedUTC": "2026-09-05T23:49:06Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260909.csv.zip",
+            "rowNumber": 114,
+            "lastModifiedUTC": "2026-09-09T07:19:22Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
           "ATLAS26kvd",
           "GOTO26iwq"
         ]
+      }
+    },
+    {
+      "id": "tns:218217",
+      "source": "TNS",
+      "sourceId": "218217",
+      "sourceObjectName": "SN2026zbq",
+      "sourceURL": "https://www.wis-tns.org/object/2026zbq",
+      "title": "Supernova SN2026zbq near IC 1613",
+      "shortTitle": "SN2026zbq",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "watch",
+      "recommendedReviewAction": "watch",
+      "activeWindow": {
+        "startsAtUTC": "2026-08-15T11:18:34Z",
+        "expiresAtUTC": "2026-09-14T11:18:34Z"
       },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
+      "discovery": {
+        "dateUTC": "2026-08-15T11:18:34Z",
+        "ageDays": 26,
+        "magnitude": 19.3945,
+        "band": "i"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN II",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 19.5923394,
+        "decDegrees": -15.9335101
+      },
+      "score": 87,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_watch_band",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC 1670 A",
+        "displayName": "IC 1613",
+        "catalogName": "IC IC 1670 A",
+        "objectType": "Galaxy",
+        "magnitude": null
+      },
+      "angularSeparationDegrees": 0.87645,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-04T04:25:24Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260904.csv.zip",
+            "rowNumber": 180,
+            "lastModifiedUTC": "2026-09-04T04:25:24Z"
+          }
+        ],
+        "reportingGroup": "ZTF",
+        "sourceGroup": "ZTF",
+        "internalNames": [
+          "ZTF26abokatm",
+          "ATLAS26kga",
+          "GOTO26ign"
+        ]
       }
     },
     {
@@ -987,9 +1405,9 @@
       "title": "Supernova SN2026zhu near NGC797",
       "shortTitle": "SN2026zhu",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "watch",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "watch",
       "activeWindow": {
         "startsAtUTC": "2026-08-20T03:39:10Z",
         "expiresAtUTC": "2026-09-19T03:39:10Z"
@@ -1013,6 +1431,15 @@
         "raDegrees": 17.6740516,
         "decDegrees": -15.5164811
       },
+      "score": 87,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_watch_band",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC 80 NED02",
         "displayName": "NGC797",
@@ -1028,6 +1455,13 @@
       },
       "lastModifiedUTC": "2026-09-10T21:18:14Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260910.csv.zip",
+            "rowNumber": 21,
+            "lastModifiedUTC": "2026-09-10T21:18:14Z"
+          }
+        ],
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
@@ -1035,12 +1469,6 @@
           "GOTO26iij",
           "PS26hkl"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -1052,9 +1480,9 @@
       "title": "Nova AT2026aabo near Andromeda Galaxy",
       "shortTitle": "AT2026aabo",
       "eventType": "novaOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "watch",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "watch",
       "activeWindow": {
         "startsAtUTC": "2026-08-29T09:28:57Z",
         "expiresAtUTC": "2026-09-28T09:28:57Z"
@@ -1078,6 +1506,15 @@
         "raDegrees": 11.2260832,
         "decDegrees": 41.5529135
       },
+      "score": 87,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_watch_band",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "M31",
         "displayName": "Andromeda Galaxy",
@@ -1093,6 +1530,23 @@
       },
       "lastModifiedUTC": "2026-09-10T21:20:49Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260904.csv.zip",
+            "rowNumber": 181,
+            "lastModifiedUTC": "2026-09-04T00:05:51Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260908.csv.zip",
+            "rowNumber": 104,
+            "lastModifiedUTC": "2026-09-08T10:54:07Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260910.csv.zip",
+            "rowNumber": 18,
+            "lastModifiedUTC": "2026-09-10T21:20:49Z"
+          }
+        ],
         "reportingGroup": "ZTF",
         "sourceGroup": "ZTF",
         "internalNames": [
@@ -1102,12 +1556,80 @@
           "GOTO26jfq",
           "PS26hne"
         ]
+      }
+    },
+    {
+      "id": "tns:219039",
+      "source": "TNS",
+      "sourceId": "219039",
+      "sourceObjectName": "SN2026aacp",
+      "sourceURL": "https://www.wis-tns.org/object/2026aacp",
+      "title": "Supernova SN2026aacp near NGC5866",
+      "shortTitle": "SN2026aacp",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "watch",
+      "recommendedReviewAction": "watch",
+      "activeWindow": {
+        "startsAtUTC": "2026-08-31T05:54:55Z",
+        "expiresAtUTC": "2026-09-30T05:54:55Z"
       },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
+      "discovery": {
+        "dateUTC": "2026-08-31T05:54:55Z",
+        "ageDays": 10,
+        "magnitude": 18.81,
+        "band": "orange"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 229.3269526,
+        "decDegrees": 55.4551458
+      },
+      "score": 87,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_watch_band",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC5866",
+        "displayName": "NGC5866",
+        "catalogName": "NGC NGC5866",
+        "objectType": "Galaxy",
+        "magnitude": 9.9
+      },
+      "angularSeparationDegrees": 0.81802,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-05T04:13:24Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260905.csv.zip",
+            "rowNumber": 68,
+            "lastModifiedUTC": "2026-09-05T04:13:24Z"
+          }
+        ],
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS25heg",
+          "ZTF26abrbsnh"
+        ]
       }
     },
     {
@@ -1119,9 +1641,9 @@
       "title": "Supernova SN2026zzh near IC1386",
       "shortTitle": "SN2026zzh",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "watch",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "watch",
       "activeWindow": {
         "startsAtUTC": "2026-08-30T06:32:06Z",
         "expiresAtUTC": "2026-09-29T06:32:06Z"
@@ -1145,6 +1667,15 @@
         "raDegrees": 322.5604814,
         "decDegrees": -22.7146472
       },
+      "score": 80,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_watch_band",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC1386",
         "displayName": "IC1386",
@@ -1160,6 +1691,13 @@
       },
       "lastModifiedUTC": "2026-09-08T18:05:14Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260908.csv.zip",
+            "rowNumber": 89,
+            "lastModifiedUTC": "2026-09-08T18:05:14Z"
+          }
+        ],
         "reportingGroup": "ZTF",
         "sourceGroup": "ZTF",
         "internalNames": [
@@ -1167,12 +1705,89 @@
           "GOTO26iow",
           "ATLAS26kur"
         ]
+      }
+    },
+    {
+      "id": "tns:219074",
+      "source": "TNS",
+      "sourceId": "219074",
+      "sourceObjectName": "SN2026aadx",
+      "sourceURL": "https://www.wis-tns.org/object/2026aadx",
+      "title": "Supernova SN2026aadx near NGC1429",
+      "shortTitle": "SN2026aadx",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "watch",
+      "recommendedReviewAction": "watch",
+      "activeWindow": {
+        "startsAtUTC": "2026-08-25T05:29:05Z",
+        "expiresAtUTC": "2026-09-24T05:29:05Z"
       },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
+      "discovery": {
+        "dateUTC": "2026-08-25T05:29:05Z",
+        "ageDays": 16,
+        "magnitude": 19.39,
+        "band": "L"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN IIP",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 55.5658472,
+        "decDegrees": -4.731226
+      },
+      "score": 77,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_watch_band",
+        "separation_le_1_deg",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC1429",
+        "displayName": "NGC1429",
+        "catalogName": "NGC NGC1429",
+        "objectType": "Nebula",
+        "magnitude": null
+      },
+      "angularSeparationDegrees": 0.44948,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-08T11:57:48Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260904.csv.zip",
+            "rowNumber": 18,
+            "lastModifiedUTC": "2026-09-04T17:16:38Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260906.csv.zip",
+            "rowNumber": 89,
+            "lastModifiedUTC": "2026-09-06T12:39:05Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260908.csv.zip",
+            "rowNumber": 103,
+            "lastModifiedUTC": "2026-09-08T11:57:48Z"
+          }
+        ],
+        "reportingGroup": "GOTO",
+        "sourceGroup": "GOTO",
+        "internalNames": [
+          "GOTO26ioe",
+          "ZTF26absqcsp"
+        ]
       }
     },
     {
@@ -1184,9 +1799,9 @@
       "title": "Supernova SN2026wih near IC 1101",
       "shortTitle": "SN2026wih",
       "eventType": "transientOpportunity",
-      "reviewOnly": false,
+      "reviewOnly": true,
       "urgency": "expired",
-      "recommendedReviewAction": "approved",
+      "recommendedReviewAction": "reject",
       "activeWindow": {
         "startsAtUTC": "2026-07-27T19:48:40Z",
         "expiresAtUTC": "2026-08-26T19:48:40Z"
@@ -1210,6 +1825,15 @@
         "raDegrees": 65.8325933,
         "decDegrees": -12.1156614
       },
+      "score": 60,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "older_than_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
       "astroGuideObject": {
         "id": "IC 369",
         "displayName": "IC 1101",
@@ -1225,6 +1849,18 @@
       },
       "lastModifiedUTC": "2026-09-09T22:32:01Z",
       "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260905.csv.zip",
+            "rowNumber": 34,
+            "lastModifiedUTC": "2026-09-05T14:07:59Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260909.csv.zip",
+            "rowNumber": 21,
+            "lastModifiedUTC": "2026-09-09T22:32:01Z"
+          }
+        ],
         "reportingGroup": "GOTO",
         "sourceGroup": "GOTO",
         "internalNames": [
@@ -1233,12 +1869,6 @@
           "ZTF26absholc",
           "PS26hnb"
         ]
-      },
-      "review": {
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     }
   ]
