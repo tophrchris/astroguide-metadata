@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "packageFamily": "transientEventFeed",
-  "packageVersion": "transient-event-feed-v1-20260909-approved",
+  "packageVersion": "transient-event-feed-v1-20260910-approved",
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "asOfDate": "2026-09-09",
-  "generatedAtUTC": "2026-09-10T14:20:08Z",
+  "asOfDate": "2026-09-10",
+  "generatedAtUTC": "2026-09-11T15:24:13Z",
   "approvalPolicy": {
     "description": "Lightweight hand-approved first cut: include candidates brighter than magnitude 19 whose matched AstroGuide catalog target has a description.",
     "magnitudeField": "reportedMagnitude.value when present, otherwise discovery.magnitude",
     "magnitudeLimitExclusive": 19,
     "requiresAstroGuideDescription": true,
-    "sourceReviewQueue": "outputs/transients/review/transient-review-2026-09-09.json"
+    "sourceReviewQueue": "outputs/transients/review/transient-review-2026-09-10.json"
   },
   "counts": {
     "reviewed": 24,
-    "approved": 16,
-    "excluded": 8
+    "approved": 19,
+    "excluded": 5
   },
   "opportunities": [
     {
@@ -37,7 +37,7 @@
       },
       "discovery": {
         "dateUTC": "2026-09-01T11:23:32Z",
-        "ageDays": 8,
+        "ageDays": 9,
         "magnitude": 17.325,
         "band": "orange"
       },
@@ -51,8 +51,8 @@
         "status": null
       },
       "coordinates": {
-        "raDegrees": 339.27341,
-        "decDegrees": 34.409825
+        "raDegrees": 339.2734487,
+        "decDegrees": 34.409775
       },
       "astroGuideObject": {
         "id": "C30",
@@ -61,25 +61,28 @@
         "objectType": "Galaxy",
         "magnitude": 9.5
       },
-      "angularSeparationDegrees": 0.00797,
+      "angularSeparationDegrees": 0.00802,
       "relationship": {
         "type": "near_field",
         "wording": "near-field match",
         "tnsReportedHost": null
       },
-      "lastModifiedUTC": "2026-09-06T12:39:05Z",
+      "lastModifiedUTC": "2026-09-10T21:19:03Z",
       "provenance": {
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
-          "ATLAS26krw"
+          "ATLAS26krw",
+          "SN 2026aaiv",
+          "GOTO26jfm",
+          "PS26hnd"
         ]
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -100,7 +103,7 @@
       },
       "discovery": {
         "dateUTC": "2026-09-04T03:37:43Z",
-        "ageDays": 5,
+        "ageDays": 6,
         "magnitude": 18.2,
         "band": "Clear"
       },
@@ -142,19 +145,19 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
       "id": "tns:219464",
       "source": "TNS",
       "sourceId": "219464",
-      "sourceObjectName": "AT2026aars",
+      "sourceObjectName": "SN2026aars",
       "sourceURL": "https://www.wis-tns.org/object/2026aars",
-      "title": "Transient candidate AT2026aars near NGC 3910",
-      "shortTitle": "AT2026aars",
+      "title": "Supernova SN2026aars near NGC 3910",
+      "shortTitle": "SN2026aars",
       "eventType": "transientOpportunity",
       "reviewOnly": false,
       "urgency": "urgent",
@@ -165,7 +168,7 @@
       },
       "discovery": {
         "dateUTC": "2026-09-04T09:21:00Z",
-        "ageDays": 5,
+        "ageDays": 6,
         "magnitude": 18.4204,
         "band": "g"
       },
@@ -174,8 +177,8 @@
         "band": null
       },
       "classification": {
-        "kind": "transient_candidate",
-        "type": null,
+        "kind": "supernova",
+        "type": "SN Ia",
         "status": null
       },
       "coordinates": {
@@ -195,20 +198,21 @@
         "wording": "near-field match",
         "tnsReportedHost": null
       },
-      "lastModifiedUTC": "2026-09-06T12:39:05Z",
+      "lastModifiedUTC": "2026-09-10T15:06:35Z",
       "provenance": {
         "reportingGroup": "ZTF",
         "sourceGroup": "ZTF",
         "internalNames": [
           "ZTF22abovhzu",
-          "ATLAS26kuy"
+          "ATLAS26kuy",
+          "GOTO26jgg"
         ]
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -229,7 +233,7 @@
       },
       "discovery": {
         "dateUTC": "2026-08-25T02:41:46Z",
-        "ageDays": 15,
+        "ageDays": 16,
         "magnitude": 18.226,
         "band": "orange"
       },
@@ -270,9 +274,9 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -293,7 +297,7 @@
       },
       "discovery": {
         "dateUTC": "2026-08-24T21:07:44Z",
-        "ageDays": 16,
+        "ageDays": 17,
         "magnitude": 17.62,
         "band": "Clear"
       },
@@ -337,9 +341,9 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -360,7 +364,7 @@
       },
       "discovery": {
         "dateUTC": "2026-08-30T10:02:35Z",
-        "ageDays": 10,
+        "ageDays": 11,
         "magnitude": 18.2953,
         "band": "g"
       },
@@ -401,9 +405,9 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -424,7 +428,7 @@
       },
       "discovery": {
         "dateUTC": "2026-09-08T03:15:34Z",
-        "ageDays": 1,
+        "ageDays": 2,
         "magnitude": 18.487,
         "band": "cyan"
       },
@@ -464,9 +468,9 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -487,7 +491,7 @@
       },
       "discovery": {
         "dateUTC": "2026-09-08T01:33:36Z",
-        "ageDays": 1,
+        "ageDays": 2,
         "magnitude": 18.118,
         "band": "cyan"
       },
@@ -527,9 +531,9 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -550,7 +554,7 @@
       },
       "discovery": {
         "dateUTC": "2026-09-06T23:29:38Z",
-        "ageDays": 3,
+        "ageDays": 4,
         "magnitude": 18.493,
         "band": "cyan"
       },
@@ -590,9 +594,9 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -613,7 +617,7 @@
       },
       "discovery": {
         "dateUTC": "2026-09-06T23:25:03Z",
-        "ageDays": 3,
+        "ageDays": 4,
         "magnitude": 17.564,
         "band": "cyan"
       },
@@ -653,9 +657,9 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -676,7 +680,7 @@
       },
       "discovery": {
         "dateUTC": "2026-09-08T02:52:49Z",
-        "ageDays": 1,
+        "ageDays": 2,
         "magnitude": 18.284,
         "band": "cyan"
       },
@@ -716,9 +720,9 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -739,7 +743,7 @@
       },
       "discovery": {
         "dateUTC": "2026-09-08T20:30:36Z",
-        "ageDays": 1,
+        "ageDays": 2,
         "magnitude": 18.481,
         "band": "wide"
       },
@@ -779,9 +783,135 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
+      }
+    },
+    {
+      "id": "tns:219804",
+      "source": "TNS",
+      "sourceId": "219804",
+      "sourceObjectName": "AT2026abdi",
+      "sourceURL": "https://www.wis-tns.org/object/2026abdi",
+      "title": "Transient candidate AT2026abdi near NGC1527",
+      "shortTitle": "AT2026abdi",
+      "eventType": "transientOpportunity",
+      "reviewOnly": false,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approved",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-01T01:40:12Z",
+        "expiresAtUTC": "2026-10-01T01:40:12Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-01T01:40:12Z",
+        "ageDays": 9,
+        "magnitude": 18.441,
+        "band": "orange"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 63.06061,
+        "decDegrees": -47.2076333
+      },
+      "astroGuideObject": {
+        "id": "NGC1527",
+        "displayName": "NGC1527",
+        "catalogName": "NGC NGC1527",
+        "objectType": "Galaxy",
+        "magnitude": 10.8
+      },
+      "angularSeparationDegrees": 0.94635,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-10T09:19:09Z",
+      "provenance": {
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26lfg"
+        ]
+      },
+      "review": {
+        "approvedBy": "Chris",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
+        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
+      }
+    },
+    {
+      "id": "tns:219842",
+      "source": "TNS",
+      "sourceId": "219842",
+      "sourceObjectName": "AT2026abeq",
+      "sourceURL": "https://www.wis-tns.org/object/2026abeq",
+      "title": "Transient candidate AT2026abeq near Great Nebula in Andromeda",
+      "shortTitle": "AT2026abeq",
+      "eventType": "transientOpportunity",
+      "reviewOnly": false,
+      "urgency": "watch",
+      "recommendedReviewAction": "approved",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-10T22:01:18Z",
+        "expiresAtUTC": "2026-10-10T22:01:18Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-10T22:01:18Z",
+        "ageDays": 0,
+        "magnitude": 18.67,
+        "band": "Clear"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 10.553167,
+        "decDegrees": 41.274556
+      },
+      "astroGuideObject": {
+        "id": "NGC224",
+        "displayName": "Great Nebula in Andromeda",
+        "catalogName": "NGC NGC224",
+        "objectType": "Galaxy",
+        "magnitude": 3.4
+      },
+      "angularSeparationDegrees": 0.09799,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-10T23:27:15Z",
+      "provenance": {
+        "reportingGroup": "XOSS",
+        "sourceGroup": "XOSS",
+        "internalNames": [
+          "PSP26S"
+        ]
+      },
+      "review": {
+        "approvedBy": "Chris",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
+        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -802,7 +932,7 @@
       },
       "discovery": {
         "dateUTC": "2026-09-05T10:21:24Z",
-        "ageDays": 4,
+        "ageDays": 5,
         "magnitude": 18.794,
         "band": "cyan"
       },
@@ -843,9 +973,74 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
+      }
+    },
+    {
+      "id": "tns:218394",
+      "source": "TNS",
+      "sourceId": "218394",
+      "sourceObjectName": "SN2026zhu",
+      "sourceURL": "https://www.wis-tns.org/object/2026zhu",
+      "title": "Supernova SN2026zhu near NGC797",
+      "shortTitle": "SN2026zhu",
+      "eventType": "transientOpportunity",
+      "reviewOnly": false,
+      "urgency": "watch",
+      "recommendedReviewAction": "approved",
+      "activeWindow": {
+        "startsAtUTC": "2026-08-20T03:39:10Z",
+        "expiresAtUTC": "2026-09-19T03:39:10Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-08-20T03:39:10Z",
+        "ageDays": 21,
+        "magnitude": 18.727,
+        "band": "wide"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 17.6740516,
+        "decDegrees": -15.5164811
+      },
+      "astroGuideObject": {
+        "id": "IC 80 NED02",
+        "displayName": "NGC797",
+        "catalogName": "IC IC 80 NED02",
+        "objectType": "Galaxy",
+        "magnitude": null
+      },
+      "angularSeparationDegrees": 0.45778,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-10T21:18:14Z",
+      "provenance": {
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26kjg",
+          "GOTO26iij",
+          "PS26hkl"
+        ]
+      },
+      "review": {
+        "approvedBy": "Chris",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
+        "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -866,7 +1061,7 @@
       },
       "discovery": {
         "dateUTC": "2026-08-29T09:28:57Z",
-        "ageDays": 11,
+        "ageDays": 12,
         "magnitude": 18.5784,
         "band": "g"
       },
@@ -880,8 +1075,8 @@
         "status": null
       },
       "coordinates": {
-        "raDegrees": 11.2260917,
-        "decDegrees": 41.5529251
+        "raDegrees": 11.2260832,
+        "decDegrees": 41.5529135
       },
       "astroGuideObject": {
         "id": "M31",
@@ -890,27 +1085,29 @@
         "objectType": "Galaxy",
         "magnitude": 3.4
       },
-      "angularSeparationDegrees": 0.49559,
+      "angularSeparationDegrees": 0.49558,
       "relationship": {
         "type": "near_field",
         "wording": "near-field match",
         "tnsReportedHost": null
       },
-      "lastModifiedUTC": "2026-09-08T10:54:07Z",
+      "lastModifiedUTC": "2026-09-10T21:20:49Z",
       "provenance": {
         "reportingGroup": "ZTF",
         "sourceGroup": "ZTF",
         "internalNames": [
           "ZTF26abramlb",
           "ATLAS26kqn",
-          "MASTER OT J004454.26+413310.2"
+          "MASTER OT J004454.26+413310.2",
+          "GOTO26jfq",
+          "PS26hne"
         ]
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -931,7 +1128,7 @@
       },
       "discovery": {
         "dateUTC": "2026-08-30T06:32:06Z",
-        "ageDays": 10,
+        "ageDays": 11,
         "magnitude": 18.9888,
         "band": "r"
       },
@@ -973,9 +1170,9 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     },
     {
@@ -996,7 +1193,7 @@
       },
       "discovery": {
         "dateUTC": "2026-07-27T19:48:40Z",
-        "ageDays": 44,
+        "ageDays": 45,
         "magnitude": 18.48,
         "band": "L"
       },
@@ -1039,9 +1236,9 @@
       },
       "review": {
         "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-10T14:20:08Z",
+        "approvedAtUTC": "2026-09-11T15:24:13Z",
         "approvalPolicy": "magnitude_lt_19_and_catalog_description_present",
-        "sourceReviewQueue": "transient-review-2026-09-09.json"
+        "sourceReviewQueue": "transient-review-2026-09-10.json"
       }
     }
   ]
