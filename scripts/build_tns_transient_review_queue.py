@@ -514,6 +514,7 @@ def build_queue(
     radius_deg: float = 2.0,
     max_age_days: int = 45,
     watch_magnitude: float = 19.5,
+    max_opportunities: int = 0,
 ) -> dict[str, object]:
     selected, provenance, duplicate_count = deduplicate_records(records)
     counts = Counter(
@@ -664,6 +665,11 @@ def build_queue(
             str(item["id"]),
         )
     )
+    eligible_opportunities = len(opportunities)
+    if max_opportunities > 0:
+        opportunities = opportunities[:max_opportunities]
+    counts["eligibleReviewOpportunities"] = eligible_opportunities
+    counts["reviewOpportunitiesLimit"] = max_opportunities
     counts["reviewOpportunities"] = len(opportunities)
     counts["urgent"] = sum(item["urgency"] == "urgent" for item in opportunities)
     counts["watch"] = sum(item["urgency"] == "watch" for item in opportunities)
@@ -682,6 +688,8 @@ def build_queue(
         "outsideNearFieldRadius",
         "nearFieldMatches",
         "outsideReviewGate",
+        "eligibleReviewOpportunities",
+        "reviewOpportunitiesLimit",
         "reviewOpportunities",
         "urgent",
         "watch",
@@ -699,6 +707,7 @@ def build_queue(
             "maximumDiscoveryAgeDays": max_age_days,
             "preferredDiscoveryMagnitude": 18.5,
             "watchDiscoveryMagnitude": watch_magnitude,
+            "maxReviewOpportunities": max_opportunities,
             "relationshipDefault": RELATIONSHIP_NEAR_FIELD,
         },
         "counts": {key: counts[key] for key in ordered_count_keys},
@@ -727,6 +736,7 @@ def render_markdown(queue: dict[str, object]) -> str:
         "## Summary",
         "",
         f"- {counts['reviewOpportunities']} review opportunities: {counts['urgent']} urgent, {counts['watch']} watch, {counts['expired']} expired",
+        f"- {counts['eligibleReviewOpportunities']} eligible opportunities before the top-{counts['reviewOpportunitiesLimit'] or 'all'} review cap",
         f"- {counts['rawRows']} staged rows collapsed to {counts['uniqueObjects']} unique TNS objects ({counts['duplicateRowsCollapsed']} duplicate/change rows)",
         f"- {counts['contaminantsRejected']} known contaminants rejected before cross-match",
         "",
@@ -875,6 +885,12 @@ def main() -> int:
     parser.add_argument("--radius-deg", type=float, default=2.0)
     parser.add_argument("--max-age-days", type=int, default=45)
     parser.add_argument("--watch-magnitude", type=float, default=19.5)
+    parser.add_argument(
+        "--max-opportunities",
+        type=int,
+        default=0,
+        help="Limit output to the top N sorted review opportunities; 0 means unlimited.",
+    )
     parser.add_argument("--fetch-days", type=int, default=0)
     parser.add_argument("--staging-dir", type=Path, default=Path("work/tns"))
     parser.add_argument("--tns-user-agent", default=os.environ.get("TNS_USER_AGENT", ""))
@@ -917,6 +933,8 @@ def main() -> int:
         parser.error(f"input does not exist: {missing[0]}")
     if not args.catalog.is_file():
         parser.error(f"catalog does not exist: {args.catalog}")
+    if args.max_opportunities < 0:
+        parser.error("--max-opportunities must be non-negative")
 
     catalog, grid = load_catalog(args.catalog)
     queue = build_queue(
@@ -927,6 +945,7 @@ def main() -> int:
         radius_deg=args.radius_deg,
         max_age_days=args.max_age_days,
         watch_magnitude=args.watch_magnitude,
+        max_opportunities=args.max_opportunities,
     )
     json_path, markdown_path, wrote = write_outputs(
         queue,

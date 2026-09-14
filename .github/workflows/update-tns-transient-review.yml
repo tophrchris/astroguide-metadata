@@ -12,13 +12,18 @@ on:
         required: false
         default: "7"
         type: string
+      max_candidates:
+        description: Maximum review candidates to publish in the PR (0 for unlimited)
+        required: false
+        default: "5"
+        type: string
       ios_ref:
         description: DSOPlanneriOS ref to use for catalog input
         required: false
         default: main
         type: string
   schedule:
-    - cron: "17 13 * * 1,4"
+    - cron: "17 13 * * *"
 
 permissions:
   contents: write
@@ -132,6 +137,7 @@ jobs:
         env:
           REQUESTED_AS_OF: ${{ inputs.as_of }}
           LOOKBACK_DAYS: ${{ inputs.lookback_days || '7' }}
+          MAX_CANDIDATES: ${{ inputs.max_candidates || '5' }}
           TNS_USER_AGENT: ${{ secrets.TNS_USER_AGENT }}
         run: |
           as_of="${REQUESTED_AS_OF:-$(date -u -d 'yesterday' +%F)}"
@@ -139,6 +145,7 @@ jobs:
             --catalog ../DSOPlanneriOS/App/Resources/Catalog/catalog.sqlite \
             --as-of "$as_of" \
             --fetch-days "$LOOKBACK_DAYS" \
+            --max-opportunities "$MAX_CANDIDATES" \
             --skip-unchanged
 
       - name: Validate generated review artifacts
@@ -175,6 +182,8 @@ jobs:
           Automated TNS transient opportunity review refresh using staged daily deltas and the AstroGuide catalog from `tophrchris/DSOPlanneriOS@$IOS_REF`.
 
           This PR contains a human review queue and an app-facing-shape JSON artifact. It does **not** publish `transientOpportunities`, change iOS UI, send push notifications, ingest Gmail, or automatically approve candidates.
+
+          Scheduled runs publish at most 5 candidates per day by default; manual dispatch can override the cap.
 
           Catalog proximity is labeled **near-field match** and is not treated as host or physical association unless TNS explicitly supplies matching host evidence.
 
