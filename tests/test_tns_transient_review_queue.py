@@ -137,6 +137,25 @@ class TNSTransientReviewQueueTests(unittest.TestCase):
             queue_builder.render_markdown(second),
         )
 
+    def test_can_limit_review_queue_to_top_ranked_opportunities(self):
+        catalog, grid = queue_builder.load_catalog(self.catalog_path)
+        queue = queue_builder.build_queue(
+            queue_builder.load_source_records(self.inputs),
+            catalog,
+            grid,
+            as_of=dt.date(2026, 9, 9),
+            max_opportunities=2,
+        )
+
+        self.assertEqual(queue["counts"]["eligibleReviewOpportunities"], 3)
+        self.assertEqual(queue["counts"]["reviewOpportunitiesLimit"], 2)
+        self.assertEqual(queue["counts"]["reviewOpportunities"], 2)
+        self.assertEqual([item["sourceId"] for item in queue["opportunities"]], ["1001", "1003"])
+        self.assertIn(
+            "3 eligible opportunities before the top-2 review cap",
+            queue_builder.render_markdown(queue),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
