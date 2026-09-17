@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "family": "transientOpportunities",
+  "reviewOnly": true,
+  "asOfDate": "2026-09-16",
+  "generatedAtUTC": "2026-09-16T00:00:00Z",
+  "policy": {
+    "nearFieldRadiusDegrees": 2.0,
+    "preferredDiscoveryAgeDays": 30,
+    "maximumDiscoveryAgeDays": 45,
+    "preferredDiscoveryMagnitude": 18.5,
+    "watchDiscoveryMagnitude": 19.5,
+    "maxReviewOpportunities": 5,
+    "relationshipDefault": "near_field"
+  },
+  "counts": {
+    "rawRows": 586,
+    "duplicateRowsCollapsed": 41,
+    "uniqueObjects": 545,
+    "contaminantsRejected": 1,
+    "unsupportedClassificationsRejected": 0,
+    "plausibleCandidates": 544,
+    "outsideDiscoveryWindow": 29,
+    "fainterThanWatchBand": 387,
+    "invalidCoordinates": 0,
+    "outsideNearFieldRadius": 70,
+    "nearFieldMatches": 58,
+    "outsideReviewGate": 36,
+    "eligibleReviewOpportunities": 22,
+    "reviewOpportunitiesLimit": 5,
+    "reviewOpportunities": 5,
+    "urgent": 5,
+    "watch": 0,
+    "expired": 0
+  },
+  "opportunities": [
+    {
+      "id": "tns:219217",
+      "source": "TNS",
+      "sourceId": "219217",
+      "sourceObjectName": "SN2026aaiv",
+      "sourceURL": "https://www.wis-tns.org/object/2026aaiv",
+      "title": "Supernova SN2026aaiv near Caldwell 30",
+      "shortTitle": "SN2026aaiv",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve_or_enrich",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-01T11:23:32Z",
+        "expiresAtUTC": "2026-10-01T11:23:32Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-01T11:23:32Z",
+        "ageDays": 15,
+        "magnitude": 17.325,
+        "band": "orange"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 339.2734487,
+        "decDegrees": 34.409775
+      },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "C30",
+        "displayName": "Caldwell 30",
+        "catalogName": "C C30",
+        "objectType": "Galaxy",
+        "magnitude": 9.5
+      },
+      "angularSeparationDegrees": 0.00802,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-10T21:19:03Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260910.csv.zip",
+            "rowNumber": 20,
+            "lastModifiedUTC": "2026-09-10T21:19:03Z"
+          }
+        ],
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26krw",
+          "SN 2026aaiv",
+          "GOTO26jfm",
+          "PS26hnd"
+        ]
+      }
+    },
+    {
+      "id": "tns:219373",
+      "source": "TNS",
+      "sourceId": "219373",
+      "sourceObjectName": "AT2026aaom",
+      "sourceURL": "https://www.wis-tns.org/object/2026aaom",
+      "title": "Nova AT2026aaom near Andromeda Galaxy",
+      "shortTitle": "AT2026aaom",
+      "eventType": "novaOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve_or_enrich",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-04T03:37:43Z",
+        "expiresAtUTC": "2026-10-04T03:37:43Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-04T03:37:43Z",
+        "ageDays": 12,
+        "magnitude": 18.2,
+        "band": "Clear"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "nova",
+        "type": "Nova",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 10.709944,
+        "decDegrees": 41.3158936
+      },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "M31",
+        "displayName": "Andromeda Galaxy",
+        "catalogName": "M M31",
+        "objectType": "Galaxy",
+        "magnitude": 3.4
+      },
+      "angularSeparationDegrees": 0.05081,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-15T15:26:55Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260911.csv.zip",
+            "rowNumber": 6,
+            "lastModifiedUTC": "2026-09-11T22:19:44Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260915.csv.zip",
+            "rowNumber": 14,
+            "lastModifiedUTC": "2026-09-15T15:26:55Z"
+          }
+        ],
+        "reportingGroup": "None",
+        "sourceGroup": "None",
+        "internalNames": [
+          "Vend91",
+          "ZTF26abseonx",
+          "ATLAS26kuh",
+          "GOTO26jfr",
+          "PS26hpt"
+        ]
+      }
+    },
+    {
+      "id": "tns:219464",
+      "source": "TNS",
+      "sourceId": "219464",
+      "sourceObjectName": "SN2026aars",
+      "sourceURL": "https://www.wis-tns.org/object/2026aars",
+      "title": "Supernova SN2026aars near NGC 3910",
+      "shortTitle": "SN2026aars",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve_or_enrich",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-04T09:21:00Z",
+        "expiresAtUTC": "2026-10-04T09:21:00Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-04T09:21:00Z",
+        "ageDays": 12,
+        "magnitude": 18.4204,
+        "band": "g"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 37.3953473,
+        "decDegrees": 23.1162324
+      },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC 1803",
+        "displayName": "NGC 3910",
+        "catalogName": "IC IC 1803",
+        "objectType": "Galaxy",
+        "magnitude": null
+      },
+      "angularSeparationDegrees": 0.05821,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-10T15:06:35Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260910.csv.zip",
+            "rowNumber": 30,
+            "lastModifiedUTC": "2026-09-10T15:06:35Z"
+          }
+        ],
+        "reportingGroup": "ZTF",
+        "sourceGroup": "ZTF",
+        "internalNames": [
+          "ZTF22abovhzu",
+          "ATLAS26kuy",
+          "GOTO26jgg"
+        ]
+      }
+    },
+    {
+      "id": "tns:220034",
+      "source": "TNS",
+      "sourceId": "220034",
+      "sourceObjectName": "AT2026ably",
+      "sourceURL": "https://www.wis-tns.org/object/2026ably",
+      "title": "Transient candidate AT2026ably near NGC265",
+      "shortTitle": "AT2026ably",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve_or_enrich",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-07T03:25:55Z",
+        "expiresAtUTC": "2026-10-07T03:25:55Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-07T03:25:55Z",
+        "ageDays": 9,
+        "magnitude": 14.52,
+        "band": "R"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 11.725962,
+        "decDegrees": -73.567631
+      },
+      "score": 95,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_16_5",
+        "separation_le_0_25_deg",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC265",
+        "displayName": "NGC265",
+        "catalogName": "NGC NGC265",
+        "objectType": "Open_cluster",
+        "magnitude": 12.2
+      },
+      "angularSeparationDegrees": 0.09236,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-13T12:01:08Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260912.csv.zip",
+            "rowNumber": 18,
+            "lastModifiedUTC": "2026-09-12T19:27:32Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260913.csv.zip",
+            "rowNumber": 75,
+            "lastModifiedUTC": "2026-09-13T12:01:08Z"
+          }
+        ],
+        "reportingGroup": "DAO_OTS",
+        "sourceGroup": "DAO_OTS",
+        "internalNames": []
+      }
+    },
+    {
+      "id": "tns:219766",
+      "source": "TNS",
+      "sourceId": "219766",
+      "sourceObjectName": "AT2026abbx",
+      "sourceURL": "https://www.wis-tns.org/object/2026abbx",
+      "title": "Nova AT2026abbx near Lynds Dark Nebula 161 (LDN161)",
+      "shortTitle": "AT2026abbx",
+      "eventType": "novaOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve_or_enrich",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-08T18:57:36Z",
+        "expiresAtUTC": "2026-10-08T18:57:36Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-08T18:57:36Z",
+        "ageDays": 8,
+        "magnitude": 12.6,
+        "band": "g"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "nova",
+        "type": "Nova",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 268.02833,
+        "decDegrees": -23.72242
+      },
+      "score": 89,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_16_5",
+        "separation_le_1_deg"
+      ],
+      "astroGuideObject": {
+        "id": "LDN161",
+        "displayName": "Lynds Dark Nebula 161 (LDN161)",
+        "catalogName": "LDN LDN161",
+        "objectType": "DarkNeb",
+        "magnitude": null
+      },
+      "angularSeparationDegrees": 0.37662,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-12T12:24:06Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260912.csv.zip",
+            "rowNumber": 114,
+            "lastModifiedUTC": "2026-09-12T12:24:06Z"
+          }
+        ],
+        "reportingGroup": "ASAS-SN",
+        "sourceGroup": "ASAS-SN",
+        "internalNames": [
+          "ASASSN-26fc"
+        ]
+      }
+    }
+  ]
+}
