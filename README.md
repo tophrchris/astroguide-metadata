@@ -76,6 +76,10 @@ selects the configured exit node, verifies the resulting public IP, and only
 then downloads staged TNS deltas. Required repository secrets:
 
 - `TNS_USER_AGENT`: the approved full `tns_marker{...}` user-agent string.
+- `TNS_API_KEY` (optional): the matching TNS Bot API key. When present, the
+  already-ranked top five candidates receive bounded Get Object enrichment;
+  without it, the queue still includes staged-feed and AstroGuide catalog
+  context and marks detailed fields unavailable.
 - `TS_OAUTH_CLIENT_ID` and `TS_OAUTH_SECRET`: Tailscale OAuth client
   credentials with writable auth-key scope and access to `tag:github-actions`.
 - `TS_EXIT_NODE`: the Tailscale machine name or 100.x address of the approved

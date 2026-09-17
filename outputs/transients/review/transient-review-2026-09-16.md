@@ -4,9 +4,12 @@
 
 AstroGuide catalog proximity is a smart-scope relevance filter. A **near-field match** is angular proximity only; it is not a host or physical association unless TNS explicitly supplies matching host evidence.
 
+**Review evidence hash:** `e40ff89879d1ff17`. A pull-request approval is the editorial rubber stamp for this artifact; treat any changed PR head or evidence hash as requiring re-approval. Merge still does not publish it to the app or change `reviewDecision` from `pending`.
+
 ## Summary
 
 - 5 review opportunities: 5 urgent, 0 watch, 0 expired
+- Recommendations: 3 approve, 2 hold, 0 reject
 - 22 eligible opportunities before the top-5 review cap
 - 586 staged rows collapsed to 545 unique TNS objects (41 duplicate/change rows)
 - 1 known contaminants rejected before cross-match
@@ -15,11 +18,209 @@ AstroGuide catalog proximity is a smart-scope relevance filter. A **near-field m
 
 | Priority | Candidate | Type | Age | Disc. mag | AstroGuide subject | Separation | Relationship | Score | Action |
 |---|---|---|---:|---:|---|---:|---|---:|---|
-| urgent | [SN2026aaiv](https://www.wis-tns.org/object/2026aaiv) | SN Ia | 15 | 17.32 | Caldwell 30 (Galaxy) | 0.00802° | near-field match | 100 | approve_or_enrich |
-| urgent | [AT2026aaom](https://www.wis-tns.org/object/2026aaom) | Nova | 12 | 18.2 | Andromeda Galaxy (Galaxy) | 0.05081° | near-field match | 100 | approve_or_enrich |
-| urgent | [SN2026aars](https://www.wis-tns.org/object/2026aars) | SN Ia | 12 | 18.42 | NGC 3910 (Galaxy) | 0.05821° | near-field match | 100 | approve_or_enrich |
-| urgent | [AT2026ably](https://www.wis-tns.org/object/2026ably) | transient_candidate | 9 | 14.52 | NGC265 (Open_cluster) | 0.09236° | near-field match | 95 | approve_or_enrich |
-| urgent | [AT2026abbx](https://www.wis-tns.org/object/2026abbx) | Nova | 8 | 12.6 | Lynds Dark Nebula 161 (LDN161) (DarkNeb) | 0.37662° | near-field match | 89 | approve_or_enrich |
+| urgent | [SN2026aaiv](https://www.wis-tns.org/object/2026aaiv) | SN Ia | 15 | 17.32 | Caldwell 30 (Galaxy) | 0.00802° | TNS-reported host match | 100 | approve |
+| urgent | [AT2026aaom](https://www.wis-tns.org/object/2026aaom) | Fe II nova | 12 | 18.2 | Andromeda Galaxy (Galaxy) | 0.05081° | TNS-reported host match | 100 | approve |
+| urgent | [SN2026aars](https://www.wis-tns.org/object/2026aars) | SN Ia | 12 | 18.42 | IC 1803 (Galaxy) | 0.05821° | near-field match | 100 | hold |
+| urgent | [AT2026ably](https://www.wis-tns.org/object/2026ably) | Unclassified | 9 | 14.52 | NGC265 (Open cluster) | 0.09236° | near-field match | 95 | hold |
+| urgent | [AT2026abbx](https://www.wis-tns.org/object/2026abbx) | Nova | 8 | 12.6 | Lynds Dark Nebula 161 (LDN161) (Dark nebula) | 0.37662° | near-field match | 89 | approve |
+
+## Candidate dossiers
+
+### 1. [SN2026aaiv](https://www.wis-tns.org/object/2026aaiv) near Caldwell 30
+
+**Recommendation:** `approve` · **Priority:** `urgent` · **Score:** 100/100
+
+> **Catalog image:** No provenance-safe hosted AstroGuide catalog thumbnail is available.
+
+> **Host evidence:** TNS reports `NGC7331` and it resolves to this AstroGuide subject.
+
+| TNS context | Value |
+|---|---|
+| Current classification | SN Ia |
+| Redshift | 0.003 |
+| TNS host | NGC7331 |
+| Host redshift | 0.002722 |
+| Discovery | 2026-09-01T11:23:32Z · 15 days · 17.32 orange |
+| Latest public photometry | 12.94 · ABMag · L · GOTO · 2026-09-08 |
+| Public spectra | 4 |
+| Discovery reference | [2026TNSTR3537....1T](https://ui.adsabs.harvard.edu/abs/2026TNSTR3537....1T/abstract) |
+| Classification references | [2026TNSCR3579....1V](https://ui.adsabs.harvard.edu/abs/2026TNSCR3579....1V/abstract) |
+| TNS remarks | — |
+| Enrichment | `complete` via tns_staged_daily_delta, astroguide_catalog, tns_public_object_page |
+| Enrichment retrieved | 2026-09-17T22:05:15Z |
+| Enrichment gaps | None |
+
+| AstroGuide catalog context | Value |
+|---|---|
+| Subject | **Caldwell 30** · `C30` |
+| Catalog display name | Caldwell 30 |
+| Type / constellation | Galaxy · Pegasus |
+| Catalog magnitude / angular size | 9.5 · 11′ × 4′ |
+| Distance | — |
+| Separation | 0.00802° · 0.48′ |
+| Catalog description | NGC 7331, also known as Caldwell 30, is an unbarred spiral galaxy about 13.427 megaparsecs away in the constellation Pegasus. It was discovered by William Herschel on 6 September 1784. |
+
+**Why it ranked:** confirmed high-interest transient class; discovered within 30 days; discovery magnitude ≤18.5; separation ≤0.25°; nearby catalog subject is a galaxy; recognizable AstroGuide subject.
+
+[TNS object](https://www.wis-tns.org/object/2026aaiv) · [Aladin coordinate view](https://aladin.u-strasbg.fr/AladinLite/?target=339.2734487%2034.409775&fov=0.5&survey=P%2FDSS2%2Fcolor)
+
+### 2. [AT2026aaom](https://www.wis-tns.org/object/2026aaom) near Andromeda Galaxy
+
+**Recommendation:** `approve` · **Priority:** `urgent` · **Score:** 100/100
+
+> **Catalog image:** No provenance-safe hosted AstroGuide catalog thumbnail is available.
+
+> **Host evidence:** TNS reports `NGC0224 / M31` and it resolves to this AstroGuide subject.
+
+| TNS context | Value |
+|---|---|
+| Current classification | Fe II nova |
+| Redshift | — |
+| TNS host | NGC0224 / M31 |
+| Host redshift | — |
+| Discovery | 2026-09-04T03:37:43Z · 12 days · 18.2 Clear |
+| Latest public photometry | 15.65 · ABMag · i · Pan-STARRS1 · 2026-09-12 |
+| Public spectra | 2 |
+| Discovery reference | [2026TNSTR3573....1F](https://ui.adsabs.harvard.edu/abs/2026TNSTR3573....1F/abstract) |
+| Classification references | [2026TNSCR3698....1Z](https://ui.adsabs.harvard.edu/abs/2026TNSCR3698....1Z/abstract) |
+| TNS remarks | — |
+| Enrichment | `complete` via tns_staged_daily_delta, astroguide_catalog, tns_public_object_page |
+| Enrichment retrieved | 2026-09-17T22:05:15Z |
+| Enrichment gaps | None |
+
+| AstroGuide catalog context | Value |
+|---|---|
+| Subject | **Andromeda Galaxy** · `M31` |
+| Catalog display name | Andromeda Galaxy |
+| Type / constellation | Galaxy · Andromeda |
+| Catalog magnitude / angular size | 3.4 · 178′ × 63′ |
+| Distance | 889.144 kpc |
+| Separation | 0.05081° · 3.05′ |
+| Catalog description | The Andromeda Galaxy is a barred spiral galaxy and is the nearest major galaxy to the Milky Way. It was originally named the Andromeda Nebula and is cataloged as Messier 31, M31, and NGC 224. Andromeda has a D25 isophotal diameter of about 46.56 kiloparsecs (152,000 light-years) and is approximately 765 kpc (2.5 million light-years) from Earth. The galaxy's name stems from the area of Earth's sky in which it appears, the constellation of Andromeda, which itself is named after the princess who was the wife of Perseus in Greek mythology. |
+
+**Why it ranked:** confirmed high-interest transient class; discovered within 30 days; discovery magnitude ≤18.5; separation ≤0.25°; nearby catalog subject is a galaxy; recognizable AstroGuide subject.
+
+[TNS object](https://www.wis-tns.org/object/2026aaom) · [Aladin coordinate view](https://aladin.u-strasbg.fr/AladinLite/?target=10.709944%2041.3158936&fov=0.5&survey=P%2FDSS2%2Fcolor)
+
+### 3. [SN2026aars](https://www.wis-tns.org/object/2026aars) near IC 1803
+
+**Recommendation:** `hold` · **Priority:** `urgent` · **Score:** 100/100
+
+**Decision note:** Hold until the AstroGuide catalog identity conflict is resolved.
+
+> **Catalog image:** No provenance-safe hosted AstroGuide catalog thumbnail is available.
+
+> **Near-field only:** TNS does not identify IC 1803 as this object's host. The 0.05821° (3.49′) match is contextual, not a physical association.
+
+| TNS context | Value |
+|---|---|
+| Current classification | SN Ia |
+| Redshift | 0.03 |
+| TNS host | GLADE41253 |
+| Host redshift | — |
+| Discovery | 2026-09-04T09:21:00Z · 12 days · 18.42 g |
+| Latest public photometry | 17.06 · ABMag · Clear · 2026-09-11 |
+| Public spectra | 1 · 2026-09-10T09:05:20Z · EFOSC2-NTT · ePESSTO+ |
+| Discovery reference | [2026TNSTR3593....1W](https://ui.adsabs.harvard.edu/abs/2026TNSTR3593....1W/abstract) |
+| Classification references | [2026TNSCR3656....1S](https://ui.adsabs.harvard.edu/abs/2026TNSCR3656....1S/abstract) |
+| TNS remarks | — |
+| Enrichment | `complete` via tns_staged_daily_delta, astroguide_catalog, tns_public_object_page |
+| Enrichment retrieved | 2026-09-17T22:05:15Z |
+| Enrichment gaps | None |
+
+| AstroGuide catalog context | Value |
+|---|---|
+| Subject | **IC 1803** · `IC 1803` |
+| Catalog display name | NGC 3910 |
+| Type / constellation | Galaxy · Ari |
+| Catalog magnitude / angular size | — · 0.46′ × 0.46′ |
+| Distance | — |
+| Separation | 0.05821° · 3.49′ |
+| Catalog description | NGC 3910 is a lenticular galaxy located 370 million light-years away in the Leo constellation. It was discovered on December 27, 1786, by astronomer William Herschel. NGC 3910 is a member of the NGC 3937 Group. |
+
+> **Catalog data caution:** Catalog identity conflict: canonical ID IC 1803 has the different designation NGC 3910 as its display name.
+
+**Why it ranked:** confirmed high-interest transient class; discovered within 30 days; discovery magnitude ≤18.5; separation ≤0.25°; nearby catalog subject is a galaxy; recognizable AstroGuide subject.
+
+[TNS object](https://www.wis-tns.org/object/2026aars) · [Aladin coordinate view](https://aladin.u-strasbg.fr/AladinLite/?target=37.3953473%2023.1162324&fov=0.5&survey=P%2FDSS2%2Fcolor)
+
+### 4. [AT2026ably](https://www.wis-tns.org/object/2026ably) near NGC265
+
+**Recommendation:** `hold` · **Priority:** `urgent` · **Score:** 95/100
+
+**Decision note:** Hold until the likely cataclysmic-variable interpretation is resolved.
+
+> **Catalog image:** No provenance-safe hosted AstroGuide catalog thumbnail is available.
+
+> **Near-field only:** TNS does not identify NGC265 as this object's host. The 0.09236° (5.54′) match is contextual, not a physical association.
+
+| TNS context | Value |
+|---|---|
+| Current classification | Unclassified |
+| Redshift | — |
+| TNS host | NGC0292 / SMC |
+| Host redshift | -0.001 |
+| Discovery | 2026-09-07T03:25:55Z · 9 days · 14.52 R |
+| Latest public photometry | 14.52 · ABMag · R · 2026-09-07T03:25:55Z |
+| Public spectra | 0 |
+| Discovery reference | [2026TNSTR3684....1B](https://ui.adsabs.harvard.edu/abs/2026TNSTR3684....1B/abstract) |
+| Classification references | — |
+| TNS remarks | The discovery report describes the object as a likely cataclysmic variable and notes a faint Gaia point source at the position. |
+| Enrichment | `complete` via tns_staged_daily_delta, astroguide_catalog, tns_public_object_page |
+| Enrichment retrieved | 2026-09-17T22:05:15Z |
+| Enrichment gaps | None |
+
+| AstroGuide catalog context | Value |
+|---|---|
+| Subject | **NGC265** · `NGC265` |
+| Catalog display name | NGC265 |
+| Type / constellation | Open cluster · Tucana |
+| Catalog magnitude / angular size | 12.2 · 1.2′ × 1.2′ |
+| Distance | — |
+| Separation | 0.09236° · 5.54′ |
+| Catalog description | NGC 265 is an open cluster of stars in the southern constellation of Tucana. It is located in the Small Magellanic Cloud, a nearby dwarf galaxy. The cluster was discovered by English astronomer John Herschel on April 11, 1834. J. L. E. Dreyer described it as, "faint, pretty small, round", and added it as the 265th entry in his New General Catalogue. |
+
+**Why it ranked:** unclassified transient candidate; discovered within 30 days; discovery magnitude ≤16.5; separation ≤0.25°; recognizable AstroGuide subject.
+
+[TNS object](https://www.wis-tns.org/object/2026ably) · [Aladin coordinate view](https://aladin.u-strasbg.fr/AladinLite/?target=11.725962%20-73.567631&fov=0.5&survey=P%2FDSS2%2Fcolor)
+
+### 5. [AT2026abbx](https://www.wis-tns.org/object/2026abbx) near Lynds Dark Nebula 161 (LDN161)
+
+**Recommendation:** `approve` · **Priority:** `urgent` · **Score:** 89/100
+
+> **Catalog image:** No provenance-safe hosted AstroGuide catalog thumbnail is available.
+
+> **Near-field only:** TNS does not identify Lynds Dark Nebula 161 (LDN161) as this object's host. The 0.37662° (22.60′) match is contextual, not a physical association.
+
+| TNS context | Value |
+|---|---|
+| Current classification | Nova |
+| Redshift | — |
+| TNS host | Milky Way |
+| Host redshift | — |
+| Discovery | 2026-09-08T18:57:36Z · 8 days · 12.6 g |
+| Latest public photometry | 10.6 · VegaMag · R-Cousins · 2026-09-12 |
+| Public spectra | 1 · 2026-09-12T09:46:31Z · Other |
+| Discovery reference | [2026TNSTR3631....1S](https://ui.adsabs.harvard.edu/abs/2026TNSTR3631....1S/abstract) |
+| Classification references | [2026TNSCR3699....1L](https://ui.adsabs.harvard.edu/abs/2026TNSCR3699....1L/abstract) |
+| TNS remarks | — |
+| Enrichment | `complete` via tns_staged_daily_delta, astroguide_catalog, tns_public_object_page |
+| Enrichment retrieved | 2026-09-17T22:05:15Z |
+| Enrichment gaps | None |
+
+| AstroGuide catalog context | Value |
+|---|---|
+| Subject | **Lynds Dark Nebula 161 (LDN161)** · `LDN161` |
+| Catalog display name | Lynds Dark Nebula 161 (LDN161) |
+| Type / constellation | Dark nebula · Sagittarius |
+| Catalog magnitude / angular size | — · 23.16′ × 23.16′ |
+| Distance | — |
+| Separation | 0.37662° · 22.60′ |
+| Catalog description | No catalog description available. |
+
+**Why it ranked:** confirmed high-interest transient class; discovered within 30 days; discovery magnitude ≤16.5; separation ≤1°.
+
+[TNS object](https://www.wis-tns.org/object/2026abbx) · [Aladin coordinate view](https://aladin.u-strasbg.fr/AladinLite/?target=268.02833%20-23.72242&fov=0.5&survey=P%2FDSS2%2Fcolor)
 
 ## Policy notes
 
