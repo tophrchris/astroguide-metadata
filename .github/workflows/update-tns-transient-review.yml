@@ -179,9 +179,9 @@ jobs:
 
           body="$(mktemp)"
           cat > "$body" <<BODY
-          Automated TNS transient opportunity review refresh using staged daily deltas and the AstroGuide catalog from `tophrchris/DSOPlanneriOS@$IOS_REF`.
+          Automated TNS transient opportunity review refresh using staged daily deltas and the AstroGuide catalog from \`tophrchris/DSOPlanneriOS@$IOS_REF\`.
 
-          This PR contains a human review queue and an app-facing-shape JSON artifact. It does **not** publish `transientOpportunities`, change iOS UI, send push notifications, ingest Gmail, or automatically approve candidates.
+          This PR contains a human review queue and an app-facing-shape JSON artifact. It does **not** publish \`transientOpportunities\`, change iOS UI, send push notifications, ingest Gmail, or automatically approve candidates.
 
           Scheduled runs publish at most 5 candidates per day by default; manual dispatch can override the cap.
 
