@@ -25,6 +25,10 @@ When fetching directly, the builder makes one bounded request per UTC date to:
 https://www.wis-tns.org/system/files/tns_public_objects/tns_public_objects_YYYYMMDD.csv.zip
 ```
 
+An HTTP 404 for one requested date is treated as an explicit source gap: the
+builder warns and continues with other available dates. Other HTTP failures,
+invalid ZIP responses, and a window with no usable inputs remain fatal.
+
 The complete approved TNS marker must be supplied through `TNS_USER_AGENT` or
 `--tns-user-agent`. Do not commit the marker. The scheduled workflow expects a
 repository secret named `TNS_USER_AGENT` whose value begins with
@@ -126,11 +130,13 @@ keeps the relationship `near_field`.
 
 ## Automation
 
-`update-tns-transient-review.yml` runs each Monday and Thursday and also
-supports manual dispatch. It checks out the private iOS repository for the
-canonical catalog, fetches up to 14 bounded daily TNS deltas, runs focused
-tests and validation, and opens or updates one
-`automation/tns-transient-review` pull request.
+`update-tns-transient-review.yml` runs daily and also supports manual dispatch.
+It checks out the private iOS repository for the canonical catalog, fetches up
+to 14 bounded daily TNS deltas, runs focused tests and validation, and opens or
+updates one `automation/tns-transient-review` pull request. Scheduled runs
+publish at most five review candidates; manual dispatch can override that cap.
+An unavailable staged date is reported and skipped when another requested date
+is available, while a fully unavailable window still fails closed.
 
 With `--skip-unchanged`, a new dated artifact is written only when the material
 opportunity records differ from the latest checked-in review artifact. Input

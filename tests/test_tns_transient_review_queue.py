@@ -1,11 +1,16 @@
+import contextlib
 import datetime as dt
 import importlib.util
+import io
 import json
 import sqlite3
 import sys
 import tempfile
 import unittest
+import urllib.error
+import zipfile
 from pathlib import Path
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -155,6 +160,86 @@ class TNSTransientReviewQueueTests(unittest.TestCase):
             "3 eligible opportunities before the top-2 review cap",
             queue_builder.render_markdown(queue),
         )
+
+    def test_fetch_skips_missing_staged_delta_when_other_days_are_available(self):
+        payload = io.BytesIO()
+        with zipfile.ZipFile(payload, "w") as archive:
+            archive.writestr("tns.csv", "objid,name\n")
+        requested_urls = []
+
+        def open_staged_delta(request, timeout):
+            del timeout
+            requested_urls.append(request.full_url)
+            if "20260902" in request.full_url:
+                raise urllib.error.HTTPError(request.full_url, 404, "Not Found", None, None)
+            return io.BytesIO(payload.getvalue())
+
+        stderr = io.StringIO()
+        with contextlib.redirect_stderr(stderr):
+            with mock.patch.object(queue_builder.urllib.request, "urlopen", side_effect=open_staged_delta):
+                paths = queue_builder.fetch_staged_deltas(
+                    as_of=dt.date(2026, 9, 3),
+                    days=3,
+                    destination=self.root / "staged",
+                    user_agent='tns_marker{"tns_id": 1}',
+                )
+
+        self.assertEqual(len(requested_urls), 3)
+        self.assertTrue(any("20260902" in url for url in requested_urls))
+        self.assertIn("missing: 20260902", stderr.getvalue())
+        self.assertEqual(
+            [path.name for path in paths],
+            [
+                "tns_public_objects_20260901.csv.zip",
+                "tns_public_objects_20260903.csv.zip",
+            ],
+        )
+
+    def test_main_fails_when_no_staged_deltas_are_available(self):
+        def missing_staged_delta(request, timeout):
+            del timeout
+            raise urllib.error.HTTPError(request.full_url, 404, "Not Found", None, None)
+
+        arguments = [
+            str(SCRIPT_PATH),
+            "--catalog",
+            str(self.catalog_path),
+            "--as-of",
+            "2026-09-03",
+            "--fetch-days",
+            "3",
+            "--staging-dir",
+            str(self.root / "staged"),
+            "--output-dir",
+            str(self.root / "outputs"),
+            "--tns-user-agent",
+            'tns_marker{"tns_id": 1}',
+        ]
+        stderr = io.StringIO()
+        with contextlib.redirect_stderr(stderr):
+            with mock.patch.object(sys, "argv", arguments):
+                with mock.patch.object(queue_builder.urllib.request, "urlopen", side_effect=missing_staged_delta):
+                    with self.assertRaises(SystemExit) as raised:
+                        queue_builder.main()
+
+        self.assertEqual(raised.exception.code, 2)
+        self.assertIn("no usable staged inputs were provided or fetched", stderr.getvalue())
+        self.assertFalse((self.root / "outputs").exists())
+
+    def test_fetch_does_not_mask_non_404_http_errors(self):
+        def forbidden_staged_delta(request, timeout):
+            del timeout
+            raise urllib.error.HTTPError(request.full_url, 403, "Forbidden", None, None)
+
+        with mock.patch.object(queue_builder.urllib.request, "urlopen", side_effect=forbidden_staged_delta):
+            with self.assertRaises(urllib.error.HTTPError) as raised:
+                queue_builder.fetch_staged_deltas(
+                    as_of=dt.date(2026, 9, 3),
+                    days=1,
+                    destination=self.root / "staged",
+                    user_agent='tns_marker{"tns_id": 1}',
+                )
+        raised.exception.close()
 
 
 if __name__ == "__main__":

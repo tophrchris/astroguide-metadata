@@ -805,6 +805,7 @@ def fetch_staged_deltas(
         raise ValueError("TNS user agent must use the approved tns_marker{...} format")
     destination.mkdir(parents=True, exist_ok=True)
     paths = []
+    missing_dates = []
     for offset in reversed(range(days)):
         date = as_of - dt.timedelta(days=offset)
         date_text = date.strftime("%Y%m%d")
@@ -818,15 +819,25 @@ def fetch_staged_deltas(
                 payload = response.read()
         except urllib.error.HTTPError as error:
             if error.code == 404:
-                raise RuntimeError(
-                    f"TNS staged delta is not available yet for {date_text}; "
-                    "rerun with an earlier --as-of date or wait for TNS to publish it."
-                ) from error
+                error.close()
+                missing_dates.append(date_text)
+                print(
+                    f"Warning: TNS staged delta is unavailable for {date_text}; "
+                    "continuing with the remaining requested dates.",
+                    file=sys.stderr,
+                )
+                continue
             raise
         path.write_bytes(payload)
         if not zipfile.is_zipfile(path):
             raise RuntimeError(f"TNS response is not a ZIP archive: {date_text}")
         paths.append(path)
+    if missing_dates:
+        print(
+            f"Fetched {len(paths)} of {days} requested TNS staged deltas; "
+            f"missing: {', '.join(missing_dates)}.",
+            file=sys.stderr,
+        )
     return paths
 
 
@@ -927,7 +938,7 @@ def main() -> int:
             )
         )
     if not inputs:
-        parser.error("provide staged inputs or --fetch-days")
+        parser.error("no usable staged inputs were provided or fetched")
     missing = [path for path in inputs if not path.is_file()]
     if missing:
         parser.error(f"input does not exist: {missing[0]}")
