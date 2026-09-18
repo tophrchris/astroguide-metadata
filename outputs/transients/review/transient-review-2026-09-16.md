@@ -4,12 +4,12 @@
 
 AstroGuide catalog proximity is a smart-scope relevance filter. A **near-field match** is angular proximity only; it is not a host or physical association unless TNS explicitly supplies matching host evidence.
 
-**Review evidence hash:** `e40ff89879d1ff17`. A pull-request approval is the editorial rubber stamp for this artifact; treat any changed PR head or evidence hash as requiring re-approval. Merge still does not publish it to the app or change `reviewDecision` from `pending`.
+**Review evidence hash:** `1bb8f22ce913682a`. A pull-request approval is the editorial rubber stamp for this artifact; treat any changed PR head or evidence hash as requiring re-approval. Merge still does not publish it to the app or change `reviewDecision` from `pending`.
 
 ## Summary
 
 - 5 review opportunities: 5 urgent, 0 watch, 0 expired
-- Recommendations: 3 approve, 2 hold, 0 reject
+- Recommendations: 4 approve, 1 hold, 0 reject
 - 22 eligible opportunities before the top-5 review cap
 - 586 staged rows collapsed to 545 unique TNS objects (41 duplicate/change rows)
 - 1 known contaminants rejected before cross-match
@@ -20,7 +20,7 @@ AstroGuide catalog proximity is a smart-scope relevance filter. A **near-field m
 |---|---|---|---:|---:|---|---:|---|---:|---|
 | urgent | [SN2026aaiv](https://www.wis-tns.org/object/2026aaiv) | SN Ia | 15 | 17.32 | Caldwell 30 (Galaxy) | 0.00802° | TNS-reported host match | 100 | approve |
 | urgent | [AT2026aaom](https://www.wis-tns.org/object/2026aaom) | Fe II nova | 12 | 18.2 | Andromeda Galaxy (Galaxy) | 0.05081° | TNS-reported host match | 100 | approve |
-| urgent | [SN2026aars](https://www.wis-tns.org/object/2026aars) | SN Ia | 12 | 18.42 | IC 1803 (Galaxy) | 0.05821° | near-field match | 100 | hold |
+| urgent | [SN2026aars](https://www.wis-tns.org/object/2026aars) | SN Ia | 12 | 18.42 | IC 1803 (Galaxy) | 0.05821° | near-field match | 100 | approve |
 | urgent | [AT2026ably](https://www.wis-tns.org/object/2026ably) | Unclassified | 9 | 14.52 | NGC265 (Open cluster) | 0.09236° | near-field match | 95 | hold |
 | urgent | [AT2026abbx](https://www.wis-tns.org/object/2026abbx) | Nova | 8 | 12.6 | Lynds Dark Nebula 161 (LDN161) (Dark nebula) | 0.37662° | near-field match | 89 | approve |
 
@@ -104,9 +104,9 @@ AstroGuide catalog proximity is a smart-scope relevance filter. A **near-field m
 
 ### 3. [SN2026aars](https://www.wis-tns.org/object/2026aars) near IC 1803
 
-**Recommendation:** `hold` · **Priority:** `urgent` · **Score:** 100/100
+**Recommendation:** `approve` · **Priority:** `urgent` · **Score:** 100/100
 
-**Decision note:** Hold until the AstroGuide catalog identity conflict is resolved.
+**Decision note:** Recommendation overridden to approve by Chris on 2026-09-17; retain the AstroGuide catalog identity caution as a separate metadata follow-up.
 
 > **Catalog image:** No provenance-safe hosted AstroGuide catalog thumbnail is available.
 

@@ -103,7 +103,9 @@
           "bibcode": "2026TNSCR3656....1S",
           "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3656....1S/abstract"
         }
-      ]
+      ],
+      "recommendedDecision": "approve",
+      "decisionReason": "Recommendation overridden to approve by Chris on 2026-09-17; retain the AstroGuide catalog identity caution as a separate metadata follow-up."
     },
     "220034": {
       "currentType": "Unclassified",
