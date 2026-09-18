@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "asOfDate": "2026-09-16",
+  "retrievedAtUTC": "2026-09-17T22:05:15Z",
+  "sourceKind": "tns_public_object_page",
+  "objects": {
+    "219217": {
+      "currentType": "SN Ia",
+      "redshift": 0.003,
+      "host": {
+        "name": "NGC7331",
+        "redshift": 0.002722
+      },
+      "latestPhotometry": {
+        "observationDateUTC": "2026-09-08",
+        "value": 12.94,
+        "error": null,
+        "units": "ABMag",
+        "band": "L",
+        "instrument": "GOTO",
+        "telescope": null,
+        "isUpperLimit": false
+      },
+      "spectra": {
+        "count": 4,
+        "latest": null
+      },
+      "discoveryReference": {
+        "bibcode": "2026TNSTR3537....1T",
+        "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3537....1T/abstract"
+      },
+      "classificationReferences": [
+        {
+          "bibcode": "2026TNSCR3579....1V",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3579....1V/abstract"
+        }
+      ]
+    },
+    "219373": {
+      "currentType": "Fe II nova",
+      "redshift": null,
+      "host": {
+        "name": "NGC0224 / M31",
+        "redshift": null
+      },
+      "latestPhotometry": {
+        "observationDateUTC": "2026-09-12",
+        "value": 15.65,
+        "error": null,
+        "units": "ABMag",
+        "band": "i",
+        "instrument": "Pan-STARRS1",
+        "telescope": null,
+        "isUpperLimit": false
+      },
+      "spectra": {
+        "count": 2,
+        "latest": null
+      },
+      "discoveryReference": {
+        "bibcode": "2026TNSTR3573....1F",
+        "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3573....1F/abstract"
+      },
+      "classificationReferences": [
+        {
+          "bibcode": "2026TNSCR3698....1Z",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3698....1Z/abstract"
+        }
+      ]
+    },
+    "219464": {
+      "currentType": "SN Ia",
+      "redshift": 0.03,
+      "host": {
+        "name": "GLADE41253",
+        "redshift": null
+      },
+      "latestPhotometry": {
+        "observationDateUTC": "2026-09-11",
+        "value": 17.06,
+        "error": null,
+        "units": "ABMag",
+        "band": "Clear",
+        "instrument": null,
+        "telescope": null,
+        "isUpperLimit": false
+      },
+      "spectra": {
+        "count": 1,
+        "latest": {
+          "observationDateUTC": "2026-09-10T09:05:20Z",
+          "instrument": "EFOSC2-NTT",
+          "sourceGroup": "ePESSTO+",
+          "remarks": null
+        }
+      },
+      "discoveryReference": {
+        "bibcode": "2026TNSTR3593....1W",
+        "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3593....1W/abstract"
+      },
+      "classificationReferences": [
+        {
+          "bibcode": "2026TNSCR3656....1S",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3656....1S/abstract"
+        }
+      ],
+      "recommendedDecision": "approve",
+      "decisionReason": "Recommendation overridden to approve by Chris on 2026-09-17; retain the AstroGuide catalog identity caution as a separate metadata follow-up."
+    },
+    "220034": {
+      "currentType": "Unclassified",
+      "redshift": null,
+      "host": {
+        "name": "NGC0292 / SMC",
+        "redshift": -0.001
+      },
+      "latestPhotometry": {
+        "observationDateUTC": "2026-09-07T03:25:55Z",
+        "value": 14.52,
+        "error": null,
+        "units": "ABMag",
+        "band": "R",
+        "instrument": null,
+        "telescope": null,
+        "isUpperLimit": false
+      },
+      "spectra": {
+        "count": 0,
+        "latest": null
+      },
+      "discoveryReference": {
+        "bibcode": "2026TNSTR3684....1B",
+        "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3684....1B/abstract"
+      },
+      "classificationReferences": [],
+      "remarks": [
+        "The discovery report describes the object as a likely cataclysmic variable and notes a faint Gaia point source at the position."
+      ],
+      "recommendedDecision": "hold",
+      "decisionReason": "Hold until the likely cataclysmic-variable interpretation is resolved."
+    },
+    "219766": {
+      "currentType": "Nova",
+      "redshift": null,
+      "host": {
+        "name": "Milky Way",
+        "redshift": null
+      },
+      "latestPhotometry": {
+        "observationDateUTC": "2026-09-12",
+        "value": 10.6,
+        "error": null,
+        "units": "VegaMag",
+        "band": "R-Cousins",
+        "instrument": null,
+        "telescope": null,
+        "isUpperLimit": false
+      },
+      "spectra": {
+        "count": 1,
+        "latest": {
+          "observationDateUTC": "2026-09-12T09:46:31Z",
+          "instrument": "Other",
+          "sourceGroup": null,
+          "remarks": null
+        }
+      },
+      "discoveryReference": {
+        "bibcode": "2026TNSTR3631....1S",
+        "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3631....1S/abstract"
+      },
+      "classificationReferences": [
+        {
+          "bibcode": "2026TNSCR3699....1L",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3699....1L/abstract"
+        }
+      ]
+    }
+  }
+}

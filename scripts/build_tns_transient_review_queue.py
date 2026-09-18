@@ -13,13 +13,16 @@ from __future__ import annotations
 import argparse
 import csv
 import datetime as dt
+import hashlib
 import json
 import math
 import os
 import re
 import sqlite3
 import sys
+import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import zipfile
 from collections import Counter, defaultdict
@@ -33,9 +36,13 @@ TNS_STAGED_URL = (
     "https://www.wis-tns.org/system/files/tns_public_objects/"
     "tns_public_objects_{date}.csv.zip"
 )
+TNS_OBJECT_API_URL = "https://www.wis-tns.org/api/get/object"
 DEFAULT_OUTPUT_DIR = Path("outputs/transients/review")
+DEFAULT_TARGET_IMAGE_PACKAGE = Path("v1/packages/target-images/target_image_assets_v1.json")
+METADATA_ORIGIN = "https://metadata.astroguide.space"
 NEAR_FIELD_WORDING = "near-field match"
 RELATIONSHIP_NEAR_FIELD = "near_field"
+TargetImageIndex = dict[str, list[tuple[int, dict[str, object]]]]
 
 FIELD_ALIASES = {
     "objid": ("objid", "object_id", "tns_id"),
@@ -75,6 +82,21 @@ FIELD_ALIASES = {
     "reporting_group": ("reporting_group", "reportinggroup"),
     "source_group": ("source_group", "sourcegroup"),
     "internal_names": ("internal_names", "internalnames"),
+    "redshift": ("redshift", "object_redshift"),
+    "reporters": ("reporters", "reporter"),
+    "time_received": ("time_received", "timereceived"),
+    "creation_date": ("creationdate", "creation_date", "created"),
+    "discovery_bibcode": (
+        "discovery_ads_bibcode",
+        "discoveryadsbibcode",
+        "discovery_bibcode",
+    ),
+    "classification_bibcodes": (
+        "class_ads_bibcodes",
+        "classadsbibcodes",
+        "classification_ads_bibcodes",
+        "classification_bibcodes",
+    ),
 }
 
 CONTAMINANT_PATTERNS = (
@@ -312,8 +334,11 @@ def load_catalog(path: Path) -> tuple[list[dict[str, object]], dict[tuple[int, i
     try:
         rows = connection.execute(
             """
-            SELECT object_id, primary_name, catalog_name, object_type, magnitude,
-                   ra_hours * 15.0 AS ra_deg, dec_degrees, aliases
+            SELECT object_id, primary_name, catalog_name, object_type,
+                   constellation, magnitude, angular_size_arcmin,
+                   angular_size_maj_arcmin, angular_size_min_arcmin,
+                   ra_hours * 15.0 AS ra_deg, dec_degrees, aliases,
+                   distance, description
             FROM deep_sky_objects
             WHERE ra_hours IS NOT NULL AND dec_degrees IS NOT NULL
             """
@@ -325,6 +350,140 @@ def load_catalog(path: Path) -> tuple[list[dict[str, object]], dict[tuple[int, i
     for index, row in enumerate(catalog):
         grid[(math.floor(float(row["dec_degrees"])), math.floor(float(row["ra_deg"])) % 360)].append(index)
     return catalog, grid
+
+
+def identifier_values(value: object) -> list[str]:
+    if value is None:
+        return []
+    if isinstance(value, list):
+        return [str(item).strip() for item in value if str(item).strip()]
+    return [item.strip() for item in str(value).split("|") if item.strip()]
+
+
+def target_identifiers(target: dict[str, object]) -> set[str]:
+    values = []
+    for key in ("object_id", "primary_name", "catalog_name", "aliases"):
+        values.extend(identifier_values(target.get(key)))
+    return {normalized_designation(value) for value in values if normalized_designation(value)}
+
+
+def load_target_image_index(path: Path | None) -> TargetImageIndex:
+    """Index provenance-bearing hosted target images by normalized target identifier."""
+    if path is None or not path.is_file():
+        return {}
+    package = json.loads(path.read_text(encoding="utf-8"))
+    if (
+        package.get("schemaVersion") != 1
+        or package.get("packageFamily") != "targetImageAssets"
+        or package.get("packageRole") != "index"
+        or not str(package.get("packageVersion") or "").strip()
+    ):
+        raise ValueError("target image package must be targetImageAssets schemaVersion 1")
+    index: TargetImageIndex = defaultdict(list)
+    for record in package.get("targets", []):
+        if not isinstance(record, dict):
+            continue
+        source = record.get("source") if isinstance(record.get("source"), dict) else {}
+        if not source.get("attribution") or not source.get("sourcePackageID"):
+            raise ValueError(
+                f"target image {record.get('canonicalTargetID')} lacks governed provenance"
+            )
+        variants = record.get("variants") if isinstance(record.get("variants"), dict) else {}
+        for role, variant in variants.items():
+            if not isinstance(variant, dict):
+                raise ValueError(
+                    f"target image {record.get('canonicalTargetID')} has invalid {role} variant"
+                )
+            variant_path = str(variant.get("path") or "")
+            expected_url = f"{METADATA_ORIGIN}/{variant_path}"
+            checksum = str(variant.get("sha256") or "")
+            if (
+                not variant_path.startswith("v1/assets/target-images/")
+                or variant.get("url") != expected_url
+                or not re.fullmatch(r"[0-9a-f]{64}", checksum)
+                or not isinstance(variant.get("byteSize"), int)
+                or int(variant["byteSize"]) <= 0
+                or not isinstance(variant.get("width"), int)
+                or int(variant["width"]) <= 0
+                or not isinstance(variant.get("height"), int)
+                or int(variant["height"]) <= 0
+            ):
+                raise ValueError(
+                    f"target image {record.get('canonicalTargetID')} has ungoverned {role} variant"
+                )
+        prioritized_keys = (
+            (0, ("canonicalTargetID", "catalogObjectID")),
+            (1, ("assetOwnerTargetID", "alternateIDs", "sharedWithTargetIDs")),
+            (2, ("aliases",)),
+        )
+        for priority, keys in prioritized_keys:
+            values = []
+            for key in keys:
+                values.extend(identifier_values(record.get(key)))
+            for value in values:
+                normalized = normalized_designation(value)
+                match = (priority, record)
+                if normalized and match not in index[normalized]:
+                    index[normalized].append(match)
+    return index
+
+
+def catalog_thumbnail(
+    target: dict[str, object],
+    target_image_index: TargetImageIndex | None,
+) -> dict[str, object]:
+    if not target_image_index:
+        return {
+            "status": "unavailable",
+            "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available.",
+        }
+    matches: dict[str, tuple[int, dict[str, object]]] = {}
+    for identifier in target_identifiers(target):
+        for priority, record in target_image_index.get(identifier, []):
+            record_id = str(record.get("assetID") or record.get("canonicalTargetID") or "")
+            current = matches.get(record_id)
+            if current is None or priority < current[0]:
+                matches[record_id] = (priority, record)
+    if not matches:
+        return {
+            "status": "unavailable",
+            "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available.",
+        }
+    _, record = min(
+        matches.values(),
+        key=lambda match: (
+            match[0],
+            str(match[1].get("canonicalTargetID") or ""),
+            str(match[1].get("assetID") or ""),
+        ),
+    )
+    variants = record.get("variants") if isinstance(record.get("variants"), dict) else {}
+    variant = next(
+        (
+            variants.get(role)
+            for role in ("thumbnail160", "thumbnail320", "hero")
+            if isinstance(variants.get(role), dict)
+        ),
+        None,
+    )
+    if not variant or not variant.get("url"):
+        return {
+            "status": "unavailable",
+            "reason": "The matched AstroGuide image record has no hosted display variant.",
+        }
+    source = record.get("source") if isinstance(record.get("source"), dict) else {}
+    return {
+        "status": "available",
+        "url": variant.get("url"),
+        "path": variant.get("path"),
+        "width": variant.get("width"),
+        "height": variant.get("height"),
+        "sha256": variant.get("sha256"),
+        "assetID": record.get("assetID"),
+        "ownerTargetID": record.get("assetOwnerTargetID") or record.get("canonicalTargetID"),
+        "attribution": source.get("attribution"),
+        "sourcePackageID": source.get("sourcePackageID"),
+    }
 
 
 def nearby_catalog_indices(
@@ -393,9 +552,14 @@ def normalized_designation(value: str) -> str:
     return re.sub(r"[^a-z0-9]", "", value.lower())
 
 
+def normalized_designations(value: str) -> set[str]:
+    parts = [value, *re.split(r"[/;,()]", value)]
+    return {normalized_designation(part) for part in parts if normalized_designation(part)}
+
+
 def host_matches_target(host_name: str, target: dict[str, object]) -> bool:
-    host = normalized_designation(host_name)
-    if not host:
+    hosts = normalized_designations(host_name)
+    if not hosts:
         return False
     values = [
         str(target.get("object_id") or ""),
@@ -403,7 +567,93 @@ def host_matches_target(host_name: str, target: dict[str, object]) -> bool:
         str(target.get("catalog_name") or ""),
         *str(target.get("aliases") or "").split("|"),
     ]
-    return host in {normalized_designation(value) for value in values if value}
+    target_values = {normalized_designation(value) for value in values if value}
+    return bool(hosts & target_values)
+
+
+def split_list(value: str) -> list[str]:
+    return [item.strip() for item in re.split(r"[,;]", value or "") if item.strip()]
+
+
+def ads_url(bibcode: str) -> str:
+    return f"https://ui.adsabs.harvard.edu/abs/{urllib.parse.quote(bibcode, safe='')}/abstract"
+
+
+def catalog_designation(value: object) -> str | None:
+    normalized = re.sub(r"[^A-Z0-9]", "", str(value or "").upper())
+    return normalized if re.fullmatch(r"(?:M|NGC|IC|C|LDN)\d+[A-Z]?", normalized) else None
+
+
+def clean_catalog_distance(value: object) -> str | None:
+    text = str(value or "").strip()
+    return text if any(character.isdigit() for character in text) else None
+
+
+def catalog_context(
+    target: dict[str, object],
+    target_image_index: TargetImageIndex | None,
+) -> dict[str, object]:
+    aliases = identifier_values(target.get("aliases"))
+    object_designation = catalog_designation(target.get("object_id"))
+    name_designation = catalog_designation(target.get("primary_name"))
+    identity_warning = None
+    if object_designation and name_designation and object_designation != name_designation:
+        identity_warning = (
+            f"Catalog identity conflict: canonical ID {target['object_id']} has the "
+            f"different designation {target['primary_name']} as its display name."
+        )
+    return {
+        "id": target["object_id"],
+        "displayName": target["primary_name"],
+        "catalogName": target["catalog_name"],
+        "objectType": target["object_type"],
+        "constellation": target.get("constellation"),
+        "magnitude": target.get("magnitude"),
+        "angularSizeArcmin": target.get("angular_size_arcmin"),
+        "angularSizeMajorArcmin": target.get("angular_size_maj_arcmin"),
+        "angularSizeMinorArcmin": target.get("angular_size_min_arcmin"),
+        "distance": clean_catalog_distance(target.get("distance")),
+        "description": target.get("description"),
+        "aliases": aliases,
+        "identityWarning": identity_warning,
+        "coordinates": {
+            "raDegrees": round(float(target["ra_deg"]), 7),
+            "decDegrees": round(float(target["dec_degrees"]), 7),
+        },
+        "catalogThumbnail": catalog_thumbnail(target, target_image_index),
+    }
+
+
+def staged_tns_context(row: dict[str, str]) -> dict[str, object]:
+    discovery_bibcode = field(row, "discovery_bibcode")
+    classification_bibcodes = split_list(field(row, "classification_bibcodes"))
+    return {
+        "redshift": parse_float(field(row, "redshift")),
+        "reporters": field(row, "reporters") or None,
+        "receivedAtUTC": isoformat_z(parse_datetime(field(row, "time_received"))),
+        "createdAtUTC": isoformat_z(parse_datetime(field(row, "creation_date"))),
+        "discoveryReference": (
+            {"bibcode": discovery_bibcode, "url": ads_url(discovery_bibcode)}
+            if discovery_bibcode
+            else None
+        ),
+        "classificationReferences": [
+            {"bibcode": bibcode, "url": ads_url(bibcode)}
+            for bibcode in classification_bibcodes
+        ],
+    }
+
+
+def recommended_decision(urgency: str) -> str:
+    if urgency == "urgent":
+        return "approve"
+    if urgency == "expired":
+        return "reject"
+    return "hold"
+
+
+def review_target_name(target: dict[str, object]) -> str:
+    return str(target["id"] if target.get("identityWarning") else target["displayName"])
 
 
 def score_candidate(
@@ -511,6 +761,7 @@ def build_queue(
     grid: dict[tuple[int, int], list[int]],
     *,
     as_of: dt.date,
+    target_image_index: TargetImageIndex | None = None,
     radius_deg: float = 2.0,
     max_age_days: int = 45,
     watch_magnitude: float = 19.5,
@@ -579,13 +830,10 @@ def build_queue(
         )
         if age_days is not None and age_days > 30:
             urgency = "expired"
-            action = "reject"
         elif magnitude is not None and magnitude <= 18.5 and score >= 70:
             urgency = "urgent"
-            action = "approve_or_enrich"
         else:
             urgency = "watch"
-            action = "watch" if discovered and magnitude is not None else "needs_enrichment"
 
         identity = row_identity(record)
         host_name = field(row, "host_name")
@@ -595,6 +843,12 @@ def build_queue(
         expires = discovered + dt.timedelta(days=30) if discovered else None
         source_id = field(row, "objid")
         stable_id = f"tns:{source_id}" if source_id else f"tns:{normalized_designation(name)}"
+        target_context = catalog_context(target, target_image_index)
+        decision = recommended_decision(urgency)
+        decision_reason = None
+        if target_context.get("identityWarning"):
+            decision = "hold"
+            decision_reason = "Hold until the AstroGuide catalog identity conflict is resolved."
 
         opportunities.append(
             {
@@ -603,12 +857,15 @@ def build_queue(
                 "sourceId": source_id or None,
                 "sourceObjectName": name,
                 "sourceURL": source_url(name),
-                "title": event_title(kind, name, str(target["primary_name"])),
+                "title": event_title(kind, name, review_target_name(target_context)),
                 "shortTitle": name,
                 "eventType": "novaOpportunity" if kind == "nova" else "transientOpportunity",
                 "reviewOnly": True,
                 "urgency": urgency,
-                "recommendedReviewAction": action,
+                "recommendedReviewAction": decision,
+                "recommendedDecision": decision,
+                "reviewDecision": "pending",
+                "decisionReason": decision_reason,
                 "activeWindow": {
                     "startsAtUTC": isoformat_z(discovered),
                     "expiresAtUTC": isoformat_z(expires),
@@ -628,16 +885,20 @@ def build_queue(
                     "type": field(row, "type") or None,
                     "status": field(row, "status") or None,
                 },
+                "tnsContext": staged_tns_context(row),
+                "enrichment": {
+                    "status": "partial",
+                    "sources": ["tns_staged_daily_delta", "astroguide_catalog"],
+                    "missing": [
+                        "tns_reported_host",
+                        "latest_public_photometry",
+                        "latest_public_spectrum",
+                    ],
+                },
                 "coordinates": {"raDegrees": round(ra, 7), "decDegrees": round(dec, 7)},
                 "score": score,
                 "reasonTags": reasons,
-                "astroGuideObject": {
-                    "id": target["object_id"],
-                    "displayName": target["primary_name"],
-                    "catalogName": target["catalog_name"],
-                    "objectType": target["object_type"],
-                    "magnitude": target["magnitude"],
-                },
+                "astroGuideObject": target_context,
                 "angularSeparationDegrees": round(separation, 5),
                 "relationship": {
                     "type": relationship_type,
@@ -674,6 +935,17 @@ def build_queue(
     counts["urgent"] = sum(item["urgency"] == "urgent" for item in opportunities)
     counts["watch"] = sum(item["urgency"] == "watch" for item in opportunities)
     counts["expired"] = sum(item["urgency"] == "expired" for item in opportunities)
+    counts["recommendedApprove"] = sum(
+        item["recommendedDecision"] == "approve" for item in opportunities
+    )
+    counts["recommendedHold"] = sum(
+        item["recommendedDecision"] == "hold" for item in opportunities
+    )
+    counts["recommendedReject"] = sum(
+        item["recommendedDecision"] == "reject" for item in opportunities
+    )
+
+    review_set_id = review_set_identifier(opportunities)
 
     ordered_count_keys = (
         "rawRows",
@@ -694,11 +966,15 @@ def build_queue(
         "urgent",
         "watch",
         "expired",
+        "recommendedApprove",
+        "recommendedHold",
+        "recommendedReject",
     )
     return {
         "schemaVersion": 1,
         "family": "transientOpportunities",
         "reviewOnly": True,
+        "reviewSetID": review_set_id,
         "asOfDate": as_of.isoformat(),
         "generatedAtUTC": f"{as_of.isoformat()}T00:00:00Z",
         "policy": {
@@ -715,12 +991,646 @@ def build_queue(
     }
 
 
+def review_set_identifier(opportunities: Iterable[dict[str, object]]) -> str:
+    payload = json.loads(json.dumps(list(opportunities)))
+    for item in payload:
+        item.pop("reviewDecision", None)
+        item.get("provenance", {}).pop("inputRecords", None)
+        item.get("enrichment", {}).pop("retrievedAtUTC", None)
+    return hashlib.sha256(
+        json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    ).hexdigest()[:16]
+
+
+def refresh_recommendation_counts(queue: dict[str, object]) -> None:
+    opportunities = queue.get("opportunities", [])
+    counts = queue.setdefault("counts", {})
+    counts["recommendedApprove"] = sum(
+        item.get("recommendedDecision") == "approve" for item in opportunities
+    )
+    counts["recommendedHold"] = sum(
+        item.get("recommendedDecision") == "hold" for item in opportunities
+    )
+    counts["recommendedReject"] = sum(
+        item.get("recommendedDecision") == "reject" for item in opportunities
+    )
+
+
+def refresh_existing_queue(
+    queue: dict[str, object],
+    catalog: list[dict[str, object]],
+    target_image_index: TargetImageIndex | None,
+) -> None:
+    catalog_by_id = {str(target["object_id"]): target for target in catalog}
+    for opportunity in queue.get("opportunities", []):
+        existing_target = opportunity.get("astroGuideObject") or {}
+        target = catalog_by_id.get(str(existing_target.get("id") or ""))
+        if target:
+            opportunity["astroGuideObject"] = catalog_context(target, target_image_index)
+            opportunity["title"] = event_title(
+                str(opportunity.get("classification", {}).get("kind") or "transient_candidate"),
+                str(opportunity.get("sourceObjectName") or ""),
+                review_target_name(opportunity["astroGuideObject"]),
+            )
+        urgency = str(opportunity.get("urgency") or "watch")
+        decision = recommended_decision(urgency)
+        if opportunity.get("astroGuideObject", {}).get("identityWarning"):
+            decision = "hold"
+            opportunity["decisionReason"] = (
+                "Hold until the AstroGuide catalog identity conflict is resolved."
+            )
+        opportunity["recommendedReviewAction"] = decision
+        opportunity["recommendedDecision"] = decision
+        opportunity.setdefault("reviewDecision", "pending")
+        opportunity.setdefault(
+            "tnsContext",
+            {
+                "redshift": None,
+                "reporters": None,
+                "receivedAtUTC": None,
+                "createdAtUTC": None,
+                "discoveryReference": None,
+                "classificationReferences": [],
+            },
+        )
+        opportunity.setdefault(
+            "enrichment",
+            {
+                "status": "partial",
+                "sources": ["tns_staged_daily_delta", "astroguide_catalog"],
+                "missing": [
+                    "tns_reported_host",
+                    "latest_public_photometry",
+                    "latest_public_spectrum",
+                ],
+            },
+        )
+    refresh_recommendation_counts(queue)
+    queue["reviewSetID"] = review_set_identifier(queue.get("opportunities", []))
+
+
 def markdown_escape(value: object) -> str:
     return str(value).replace("|", "\\|").replace("\n", " ")
 
 
+def nested_name(value: object) -> str | None:
+    if isinstance(value, dict):
+        for key in ("name", "value", "label"):
+            if value.get(key) not in (None, ""):
+                return str(value[key])
+        return None
+    if value in (None, ""):
+        return None
+    return str(value)
+
+
+def detail_entries(value: object) -> list[dict[str, object]]:
+    if isinstance(value, dict):
+        for key in ("photometry", "spectra", "items", "reply"):
+            nested = value.get(key)
+            if isinstance(nested, list):
+                value = nested
+                break
+    if not isinstance(value, list):
+        return []
+    return [entry for entry in value if isinstance(entry, dict)]
+
+
+def public_detail_entries(value: object) -> list[dict[str, object]]:
+    entries = []
+    for entry in detail_entries(value):
+        visibility = entry.get("public", entry.get("is_public", entry.get("isPublic")))
+        if str(visibility).strip().lower() not in {"1", "true", "yes", "y", "public"}:
+            continue
+        entries.append(entry)
+    return entries
+
+
+def detail_timestamp(entry: dict[str, object]) -> str:
+    for key in ("obsdate", "observation_date", "observationDate", "date"):
+        value = entry.get(key)
+        if value:
+            return str(value)
+    return ""
+
+
+def latest_public_photometry(value: object) -> dict[str, object] | None:
+    entries = public_detail_entries(value)
+    if not entries:
+        return None
+    entries = [
+        entry
+        for entry in entries
+        if entry.get("flux", entry.get("magnitude", entry.get("mag"))) not in (None, "")
+        or entry.get("limflux") not in (None, "")
+    ]
+    if not entries:
+        return None
+    entry = max(entries, key=lambda item: detail_timestamp(item))
+    flux = entry.get("flux", entry.get("magnitude", entry.get("mag")))
+    error = entry.get("fluxerr", entry.get("magnitude_error", entry.get("error")))
+    upper_limit = entry.get("upperlimit", entry.get("upper_limit"))
+    is_upper_limit = str(upper_limit).strip().lower() in {"1", "true", "yes"} or (
+        flux in (None, "") and entry.get("limflux") not in (None, "")
+    )
+    if is_upper_limit:
+        flux = entry.get("limflux")
+    return {
+        "observationDateUTC": isoformat_z(parse_datetime(detail_timestamp(entry)))
+        or detail_timestamp(entry)
+        or None,
+        "value": parse_float(str(flux)) if flux not in (None, "") else None,
+        "error": parse_float(str(error)) if error not in (None, "") else None,
+        "units": nested_name(entry.get("flux_unit") or entry.get("units")),
+        "band": nested_name(entry.get("filters") or entry.get("filter")),
+        "instrument": nested_name(entry.get("instruments") or entry.get("instrument")),
+        "telescope": nested_name(entry.get("telescope")),
+        "isUpperLimit": is_upper_limit,
+    }
+
+
+def public_spectrum_summary(value: object) -> dict[str, object] | None:
+    raw_entries = detail_entries(value)
+    entries = public_detail_entries(value)
+    if not entries:
+        return {"count": 0, "latest": None} if not raw_entries else None
+    entry = max(entries, key=lambda item: detail_timestamp(item))
+    return {
+        "count": len(entries),
+        "latest": {
+            "observationDateUTC": isoformat_z(parse_datetime(detail_timestamp(entry)))
+            or detail_timestamp(entry)
+            or None,
+            "instrument": nested_name(entry.get("instruments") or entry.get("instrument")),
+            "sourceGroup": nested_name(entry.get("source_group") or entry.get("sourceGroup")),
+            "remarks": entry.get("remarks") or None,
+        },
+    }
+
+
+def normalize_tns_detail(reply: dict[str, object]) -> dict[str, object]:
+    classification = nested_name(reply.get("type") or reply.get("object_type"))
+    remarks = [
+        str(value).strip()
+        for value in (
+            reply.get("remarks"),
+            reply.get("at_rep_remarks"),
+            reply.get("classification_remarks"),
+        )
+        if value and str(value).strip()
+    ]
+    return {
+        "currentType": classification,
+        "redshift": (
+            parse_float(str(reply.get("redshift")))
+            if reply.get("redshift") not in (None, "")
+            else None
+        ),
+        "host": {
+            "name": nested_name(reply.get("hostname") or reply.get("host_name")),
+            "redshift": (
+                parse_float(str(reply.get("host_redshift")))
+                if reply.get("host_redshift") not in (None, "")
+                else None
+            ),
+        },
+        "latestPhotometry": latest_public_photometry(reply.get("photometry")),
+        "spectra": public_spectrum_summary(reply.get("spectra")),
+        "remarks": remarks,
+    }
+
+
+def catalog_context_host_match(host_name: str | None, target: dict[str, object]) -> bool:
+    hosts = normalized_designations(host_name or "")
+    if not hosts:
+        return False
+    values = [
+        target.get("id"),
+        target.get("displayName"),
+        target.get("catalogName"),
+        *(target.get("aliases") or []),
+    ]
+    target_values = {normalized_designation(str(value)) for value in values if value}
+    return bool(hosts & target_values)
+
+
+def is_magnitude_unit(value: object) -> bool:
+    """Return whether a TNS photometry unit can populate reportedMagnitude."""
+
+    return isinstance(value, str) and "mag" in value.casefold()
+
+
+def merge_tns_detail(
+    opportunity: dict[str, object],
+    detail: dict[str, object],
+    *,
+    retrieved_at: str,
+    source_kind: str,
+) -> None:
+    context = opportunity.setdefault("tnsContext", {})
+    current_type = detail.get("currentType")
+    if current_type:
+        classification = opportunity.setdefault("classification", {})
+        classification["type"] = current_type
+        classification["kind"] = classification_kind(
+            str(opportunity.get("sourceObjectName") or ""),
+            str(current_type),
+            str(classification.get("status") or ""),
+        )
+        context["currentType"] = current_type
+    if detail.get("redshift") is not None:
+        context["redshift"] = detail["redshift"]
+    host = detail.get("host") if isinstance(detail.get("host"), dict) else {}
+    host_name = host.get("name")
+    if host_name:
+        context["host"] = {
+            "name": host_name,
+            "redshift": host.get("redshift"),
+        }
+        relationship = opportunity.setdefault("relationship", {})
+        relationship["tnsReportedHost"] = host_name
+        if catalog_context_host_match(str(host_name), opportunity["astroGuideObject"]):
+            relationship["type"] = "tns_reported_host"
+            relationship["wording"] = "TNS-reported host match"
+        else:
+            relationship["type"] = RELATIONSHIP_NEAR_FIELD
+            relationship["wording"] = NEAR_FIELD_WORDING
+    if detail.get("latestPhotometry"):
+        context["latestPublicPhotometry"] = detail["latestPhotometry"]
+        photometry = detail["latestPhotometry"]
+        if (
+            photometry.get("value") is not None
+            and not photometry.get("isUpperLimit")
+            and is_magnitude_unit(photometry.get("units"))
+        ):
+            opportunity["reportedMagnitude"] = {
+                "value": photometry.get("value"),
+                "band": photometry.get("band"),
+                "units": photometry.get("units"),
+                "observedAtUTC": photometry.get("observationDateUTC"),
+            }
+    if detail.get("spectra"):
+        context["publicSpectra"] = detail["spectra"]
+    discovery_reference = detail.get("discoveryReference")
+    if isinstance(discovery_reference, dict) and discovery_reference.get("bibcode"):
+        context["discoveryReference"] = discovery_reference
+    references = detail.get("classificationReferences")
+    if isinstance(references, list) and references:
+        existing = {
+            str(item.get("bibcode")): item
+            for item in context.get("classificationReferences", [])
+            if isinstance(item, dict) and item.get("bibcode")
+        }
+        for reference in references:
+            if isinstance(reference, dict) and reference.get("bibcode"):
+                existing[str(reference["bibcode"])] = reference
+        context["classificationReferences"] = [existing[key] for key in sorted(existing)]
+    raw_remarks = detail.get("remarks", [])
+    if isinstance(raw_remarks, str):
+        raw_remarks = [raw_remarks]
+    remarks = [str(value).strip() for value in raw_remarks if str(value).strip()]
+    if remarks:
+        context["remarks"] = remarks
+    requested_decision = detail.get("recommendedDecision")
+    decision_reason = detail.get("decisionReason")
+    combined_remarks = " ".join(remarks).lower()
+    possible_contaminant = any(
+        re.search(pattern, combined_remarks) for pattern in CONTAMINANT_PATTERNS
+    )
+    if requested_decision in {"approve", "hold", "reject"}:
+        opportunity["recommendedDecision"] = requested_decision
+        opportunity["recommendedReviewAction"] = requested_decision
+    enriched_kind = str(opportunity.get("classification", {}).get("kind") or "")
+    if enriched_kind == "contaminant":
+        opportunity["recommendedDecision"] = "reject"
+        opportunity["recommendedReviewAction"] = "reject"
+        decision_reason = "Reject because the authoritative classification is a known contaminant class."
+    elif enriched_kind in {"transient_candidate", "unsupported"} and opportunity.get(
+        "recommendedDecision"
+    ) == "approve":
+        opportunity["recommendedDecision"] = "hold"
+        opportunity["recommendedReviewAction"] = "hold"
+        decision_reason = decision_reason or "Hold pending a confirmed high-interest classification."
+    if possible_contaminant and opportunity.get("recommendedDecision") != "reject":
+        opportunity["recommendedDecision"] = "hold"
+        opportunity["recommendedReviewAction"] = "hold"
+        decision_reason = decision_reason or "Authoritative remarks flag a possible contaminant."
+    if decision_reason:
+        opportunity["decisionReason"] = str(decision_reason)
+    enrichment = opportunity.setdefault("enrichment", {})
+    sources = list(enrichment.get("sources") or [])
+    if source_kind not in sources:
+        sources.append(source_kind)
+    missing = []
+    if not context.get("host"):
+        missing.append("tns_reported_host")
+    if not context.get("latestPublicPhotometry"):
+        missing.append("latest_public_photometry")
+    if not context.get("publicSpectra"):
+        missing.append("latest_public_spectrum")
+    enrichment.update(
+        {
+            "status": "partial" if missing else "complete",
+            "sources": sources,
+            "retrievedAtUTC": retrieved_at,
+            "missing": missing,
+        }
+    )
+
+
+def rate_limit_wait_seconds(headers: object) -> int:
+    getter = getattr(headers, "get", None)
+    if not getter:
+        return 5
+    retry_after = getter("Retry-After")
+    if retry_after:
+        try:
+            return max(1, int(float(retry_after)))
+        except ValueError:
+            pass
+    reset = getter("x-rate-limit-reset") or getter("X-Rate-Limit-Reset")
+    if reset:
+        try:
+            reset_value = float(reset)
+            now = dt.datetime.now(dt.UTC).timestamp()
+            return max(1, math.ceil(reset_value - now) + 1) if reset_value > now else max(1, math.ceil(reset_value) + 1)
+        except ValueError:
+            pass
+    return 5
+
+
+def require_tns_bot_credentials(api_key: str, user_agent: str) -> None:
+    if not api_key:
+        raise ValueError("TNS API key is required for detailed object enrichment")
+    if not user_agent.startswith("tns_marker{"):
+        raise ValueError("TNS user agent must use the approved tns_marker{...} format")
+    try:
+        marker = json.loads(user_agent.removeprefix("tns_marker"))
+    except (TypeError, json.JSONDecodeError) as error:
+        raise ValueError("TNS user agent contains invalid marker JSON") from error
+    if str(marker.get("type") or "").lower() != "bot":
+        raise ValueError("TNS Get Object enrichment requires a bot marker")
+
+
+def fetch_tns_object_detail(
+    opportunity: dict[str, object],
+    *,
+    api_key: str,
+    user_agent: str,
+) -> tuple[dict[str, object], object]:
+    require_tns_bot_credentials(api_key, user_agent)
+    object_name = re.sub(
+        r"^(?:AT|SN|TDE|SLSN|NOVA)(?=\d{4})",
+        "",
+        str(opportunity["sourceObjectName"]).replace(" ", ""),
+        flags=re.I,
+    )
+    form = urllib.parse.urlencode(
+        {
+            "api_key": api_key,
+            "data": json.dumps(
+                {"objname": object_name, "photometry": "1", "spectra": "1"},
+                separators=(",", ":"),
+            ),
+        }
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        TNS_OBJECT_API_URL,
+        data=form,
+        headers={
+            "User-Agent": user_agent,
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+    )
+    payload: dict[str, object] = {}
+    headers: object = {}
+    for attempt in range(2):
+        try:
+            with urllib.request.urlopen(request, timeout=90) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+                headers = response.headers
+        except urllib.error.HTTPError as error:
+            if error.code != 429 or attempt == 1:
+                raise
+            wait_seconds = rate_limit_wait_seconds(error.headers)
+            error.close()
+            if wait_seconds > 60:
+                raise RuntimeError(
+                    f"TNS rate limit resets in {wait_seconds}s; refusing an in-process wait over 60s"
+                )
+            time.sleep(wait_seconds)
+            continue
+        try:
+            id_code = int(payload.get("id_code", 0))
+        except (TypeError, ValueError):
+            id_code = 0
+        if id_code == 429 and attempt == 0:
+            wait_seconds = rate_limit_wait_seconds(headers)
+            if wait_seconds > 60:
+                raise RuntimeError(
+                    f"TNS rate limit resets in {wait_seconds}s; refusing an in-process wait over 60s"
+                )
+            time.sleep(wait_seconds)
+            continue
+        break
+    else:  # pragma: no cover - the loop always returns or raises
+        raise RuntimeError("TNS object enrichment failed")
+    try:
+        id_code = int(payload.get("id_code", 0))
+    except (TypeError, ValueError):
+        id_code = 0
+    if id_code != 200:
+        raise RuntimeError(
+            f"TNS Get Object failed for {opportunity['sourceObjectName']}: "
+            f"{payload.get('id_message') or payload.get('id_code')}"
+        )
+    reply = payload.get("data", {}).get("reply")
+    if not isinstance(reply, dict):
+        raise RuntimeError(f"TNS Get Object returned no object for {opportunity['sourceObjectName']}")
+    return normalize_tns_detail(reply), headers
+
+
+def enrich_queue_from_tns_api(
+    queue: dict[str, object],
+    *,
+    api_key: str,
+    user_agent: str,
+    max_lookups: int = 5,
+) -> None:
+    require_tns_bot_credentials(api_key, user_agent)
+    retrieved_at = dt.datetime.now(dt.UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    opportunities = list(queue.get("opportunities", []))[:max_lookups]
+    for index, opportunity in enumerate(opportunities):
+        try:
+            detail, headers = fetch_tns_object_detail(
+                opportunity,
+                api_key=api_key,
+                user_agent=user_agent,
+            )
+        except Exception as error:
+            if isinstance(error, urllib.error.HTTPError):
+                failure = f"tns_http_{error.code}"
+                error.close()
+            elif "rate limit" in str(error).lower():
+                failure = "tns_rate_limited"
+            else:
+                failure = "tns_detail_lookup_failed"
+            enrichment = opportunity.setdefault("enrichment", {})
+            sources = list(enrichment.get("sources") or [])
+            if "tns_get_object_api" not in sources:
+                sources.append("tns_get_object_api")
+            enrichment.update(
+                {
+                    "status": "partial",
+                    "sources": sources,
+                    "retrievedAtUTC": retrieved_at,
+                    "detailLookupError": failure,
+                }
+            )
+            print(
+                f"Warning: detailed TNS enrichment failed for "
+                f"{opportunity.get('sourceObjectName')}: {failure}.",
+                file=sys.stderr,
+            )
+            if failure == "tns_rate_limited":
+                for remaining in opportunities[index + 1 :]:
+                    remaining_enrichment = remaining.setdefault("enrichment", {})
+                    remaining_sources = list(remaining_enrichment.get("sources") or [])
+                    if "tns_get_object_api" not in remaining_sources:
+                        remaining_sources.append("tns_get_object_api")
+                    remaining_enrichment.update(
+                        {
+                            "status": "partial",
+                            "sources": remaining_sources,
+                            "retrievedAtUTC": retrieved_at,
+                            "detailLookupError": "tns_rate_limited_before_lookup",
+                        }
+                    )
+                break
+            continue
+        merge_tns_detail(
+            opportunity,
+            detail,
+            retrieved_at=retrieved_at,
+            source_kind="tns_get_object_api",
+        )
+        remaining = getattr(headers, "get", lambda _key: None)("x-rate-limit-remaining")
+        if index + 1 < len(opportunities) and str(remaining) == "0":
+            wait_seconds = rate_limit_wait_seconds(headers)
+            if wait_seconds > 60:
+                for pending in opportunities[index + 1 :]:
+                    pending_enrichment = pending.setdefault("enrichment", {})
+                    pending_sources = list(pending_enrichment.get("sources") or [])
+                    if "tns_get_object_api" not in pending_sources:
+                        pending_sources.append("tns_get_object_api")
+                    pending_enrichment.update(
+                        {
+                            "status": "partial",
+                            "sources": pending_sources,
+                            "retrievedAtUTC": retrieved_at,
+                            "detailLookupError": "tns_rate_limited_before_lookup",
+                        }
+                    )
+                print(
+                    f"Warning: TNS rate limit resets in {wait_seconds}s; "
+                    "leaving remaining candidates partially enriched.",
+                    file=sys.stderr,
+                )
+                break
+            time.sleep(wait_seconds)
+
+
+def apply_tns_details_file(queue: dict[str, object], path: Path) -> None:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    retrieved_at = str(payload.get("retrievedAtUTC") or "")
+    if not retrieved_at:
+        raise ValueError("TNS details file requires retrievedAtUTC")
+    objects = payload.get("objects")
+    if not isinstance(objects, dict):
+        raise ValueError("TNS details file requires an objects mapping")
+    for opportunity in queue.get("opportunities", []):
+        keys = (str(opportunity.get("sourceId") or ""), str(opportunity.get("sourceObjectName") or ""))
+        detail = next((objects[key] for key in keys if key in objects), None)
+        if not isinstance(detail, dict):
+            continue
+        merge_tns_detail(
+            opportunity,
+            detail,
+            retrieved_at=retrieved_at,
+            source_kind=str(payload.get("sourceKind") or "tns_public_object_page"),
+        )
+
+
 def format_magnitude(value: object) -> str:
     return "—" if value is None else f"{float(value):.2f}".rstrip("0").rstrip(".")
+
+
+def format_arcminutes(degrees: object) -> str:
+    return f"{float(degrees) * 60.0:.2f}′"
+
+
+def format_photometry(value: object) -> str:
+    if not isinstance(value, dict):
+        return "Not available in the staged feed"
+    measurement = format_magnitude(value.get("value"))
+    if value.get("isUpperLimit"):
+        measurement = f"limit {measurement}"
+    parts = [measurement]
+    for key in ("units", "band", "instrument", "telescope"):
+        if value.get(key):
+            parts.append(str(value[key]))
+    if value.get("observationDateUTC"):
+        parts.append(str(value["observationDateUTC"]))
+    return " · ".join(parts)
+
+
+def format_spectra(value: object) -> str:
+    if not isinstance(value, dict):
+        return "Not included in this review snapshot"
+    parts = [str(value.get("count", 0))]
+    latest = value.get("latest") if isinstance(value.get("latest"), dict) else {}
+    if latest:
+        for key in ("observationDateUTC", "instrument", "sourceGroup"):
+            if latest.get(key):
+                parts.append(str(latest[key]))
+    return " · ".join(parts)
+
+
+def format_angular_size(target: dict[str, object]) -> str:
+    major = target.get("angularSizeMajorArcmin")
+    minor = target.get("angularSizeMinorArcmin")
+    if major is not None and minor is not None:
+        return f"{format_magnitude(major)}′ × {format_magnitude(minor)}′"
+    if target.get("angularSizeArcmin") is not None:
+        return f"{format_magnitude(target['angularSizeArcmin'])}′"
+    return "—"
+
+
+def humanize_reason(value: str) -> str:
+    labels = {
+        "classified_high_interest_transient": "confirmed high-interest transient class",
+        "unclassified_transient_candidate": "unclassified transient candidate",
+        "discovered_within_7_days": "discovered within 7 days",
+        "discovered_within_30_days": "discovered within 30 days",
+        "older_than_30_days": "older than 30 days",
+        "discovery_magnitude_le_16_5": "discovery magnitude ≤16.5",
+        "discovery_magnitude_le_18_5": "discovery magnitude ≤18.5",
+        "discovery_magnitude_watch_band": "discovery magnitude in watch band",
+        "separation_le_0_25_deg": "separation ≤0.25°",
+        "separation_le_1_deg": "separation ≤1°",
+        "separation_le_2_deg": "separation ≤2°",
+        "nearby_catalog_object_is_galaxy": "nearby catalog subject is a galaxy",
+        "recognizable_astroguide_subject": "recognizable AstroGuide subject",
+    }
+    return labels.get(value, value.replace("_", " "))
+
+
+def humanize_object_type(value: object) -> str:
+    text = str(value or "—")
+    return {
+        "Open_cluster": "Open cluster",
+        "DarkNeb": "Dark nebula",
+    }.get(text, text.replace("_", " "))
 
 
 def render_markdown(queue: dict[str, object]) -> str:
@@ -733,9 +1643,12 @@ def render_markdown(queue: dict[str, object]) -> str:
         "",
         "AstroGuide catalog proximity is a smart-scope relevance filter. A **near-field match** is angular proximity only; it is not a host or physical association unless TNS explicitly supplies matching host evidence.",
         "",
+        f"**Review evidence hash:** `{queue.get('reviewSetID', 'legacy')}`. A pull-request approval is the editorial rubber stamp for this artifact; treat any changed PR head or evidence hash as requiring re-approval. Merge still does not publish it to the app or change `reviewDecision` from `pending`.",
+        "",
         "## Summary",
         "",
         f"- {counts['reviewOpportunities']} review opportunities: {counts['urgent']} urgent, {counts['watch']} watch, {counts['expired']} expired",
+        f"- Recommendations: {counts.get('recommendedApprove', 0)} approve, {counts.get('recommendedHold', 0)} hold, {counts.get('recommendedReject', 0)} reject",
         f"- {counts['eligibleReviewOpportunities']} eligible opportunities before the top-{counts['reviewOpportunitiesLimit'] or 'all'} review cap",
         f"- {counts['rawRows']} staged rows collapsed to {counts['uniqueObjects']} unique TNS objects ({counts['duplicateRowsCollapsed']} duplicate/change rows)",
         f"- {counts['contaminantsRejected']} known contaminants rejected before cross-match",
@@ -758,6 +1671,7 @@ def render_markdown(queue: dict[str, object]) -> str:
             classification = item["classification"]
             target = item["astroGuideObject"]
             relationship = item["relationship"]
+            target_name = review_target_name(target)
             age = "—" if discovery["ageDays"] is None else str(discovery["ageDays"])
             lines.append(
                 "| "
@@ -769,16 +1683,131 @@ def render_markdown(queue: dict[str, object]) -> str:
                         classification["type"] or classification["kind"],
                         age,
                         format_magnitude(discovery["magnitude"]),
-                        f"{target['displayName']} ({target['objectType']})",
+                        f"{target_name} ({humanize_object_type(target['objectType'])})",
                         f"{item['angularSeparationDegrees']:.5f}°",
                         relationship["wording"],
                         item["score"],
-                        item["recommendedReviewAction"],
+                        item.get("recommendedDecision") or item["recommendedReviewAction"],
                     )
                 )
                 + " |"
             )
         lines.append("")
+        lines.extend(["## Candidate dossiers", ""])
+        for index, item in enumerate(opportunities, start=1):
+            discovery = item["discovery"]
+            classification = item["classification"]
+            context = item.get("tnsContext") or {}
+            target = item["astroGuideObject"]
+            target_name = review_target_name(target)
+            thumbnail = target.get("catalogThumbnail") or {}
+            relationship = item["relationship"]
+            enrichment = item.get("enrichment") or {}
+            coordinates = item["coordinates"]
+            aladin_target = urllib.parse.quote(
+                f"{coordinates['raDegrees']} {coordinates['decDegrees']}",
+                safe="",
+            )
+            lines.extend(
+                [
+                    f"### {index}. [{item['sourceObjectName']}]({item['sourceURL']}) near {target_name}",
+                    "",
+                    f"**Recommendation:** `{item.get('recommendedDecision') or item['recommendedReviewAction']}` · **Priority:** `{item['urgency']}` · **Score:** {item['score']}/100",
+                    "",
+                ]
+            )
+            if item.get("decisionReason"):
+                lines.extend([f"**Decision note:** {item['decisionReason']}", ""])
+            if thumbnail.get("status") == "available":
+                lines.extend(
+                    [
+                        f"![AstroGuide catalog thumbnail for {target_name}]({thumbnail['url']})",
+                        "",
+                        f"Catalog image: {thumbnail.get('attribution') or 'AstroGuide metadata asset'} · [open hosted image]({thumbnail['url']})",
+                        "",
+                    ]
+                )
+            else:
+                lines.extend(
+                    [
+                        f"> **Catalog image:** {thumbnail.get('reason') or 'No governed hosted thumbnail is available.'}",
+                        "",
+                    ]
+                )
+            if relationship["type"] == RELATIONSHIP_NEAR_FIELD:
+                lines.extend(
+                    [
+                        f"> **Near-field only:** TNS does not identify {target_name} as this object's host. The {item['angularSeparationDegrees']:.5f}° ({format_arcminutes(item['angularSeparationDegrees'])}) match is contextual, not a physical association.",
+                        "",
+                    ]
+                )
+            else:
+                lines.extend(
+                    [
+                        f"> **Host evidence:** TNS reports `{relationship.get('tnsReportedHost')}` and it resolves to this AstroGuide subject.",
+                        "",
+                    ]
+                )
+
+            latest_photometry = context.get("latestPublicPhotometry")
+            spectra = context.get("publicSpectra") if isinstance(context.get("publicSpectra"), dict) else {}
+            host = context.get("host") if isinstance(context.get("host"), dict) else {}
+            references = context.get("classificationReferences") or []
+            discovery_reference = context.get("discoveryReference") or {}
+            discovery_reference_link = (
+                f"[{discovery_reference['bibcode']}]({discovery_reference['url']})"
+                if discovery_reference.get("bibcode") and discovery_reference.get("url")
+                else "—"
+            )
+            reference_links = ", ".join(
+                f"[{reference['bibcode']}]({reference['url']})"
+                for reference in references
+                if isinstance(reference, dict) and reference.get("bibcode") and reference.get("url")
+            ) or "—"
+            age = "—" if discovery["ageDays"] is None else f"{discovery['ageDays']} days"
+            identity_warning = target.get("identityWarning")
+            enrichment_gaps = list(enrichment.get("missing") or [])
+            if enrichment.get("detailLookupError"):
+                enrichment_gaps.append(str(enrichment["detailLookupError"]))
+            lines.extend(
+                [
+                    "| TNS context | Value |",
+                    "|---|---|",
+                    f"| Current classification | {markdown_escape(context.get('currentType') or classification.get('type') or classification.get('kind'))} |",
+                    f"| Redshift | {markdown_escape(context.get('redshift') if context.get('redshift') is not None else '—')} |",
+                    f"| TNS host | {markdown_escape(host.get('name') or relationship.get('tnsReportedHost') or 'Not supplied')} |",
+                    f"| Host redshift | {markdown_escape(host.get('redshift') if host.get('redshift') is not None else '—')} |",
+                    f"| Discovery | {markdown_escape(discovery.get('dateUTC') or '—')} · {age} · {format_magnitude(discovery.get('magnitude'))} {markdown_escape(discovery.get('band') or '')} |",
+                    f"| Latest public photometry | {markdown_escape(format_photometry(latest_photometry))} |",
+                    f"| Public spectra | {markdown_escape(format_spectra(spectra))} |",
+                    f"| Discovery reference | {discovery_reference_link} |",
+                    f"| Classification references | {reference_links} |",
+                    f"| TNS remarks | {markdown_escape('; '.join(context.get('remarks') or []) or '—')} |",
+                    f"| Enrichment | `{markdown_escape(enrichment.get('status') or 'partial')}` via {markdown_escape(', '.join(enrichment.get('sources') or []))} |",
+                    f"| Enrichment retrieved | {markdown_escape(enrichment.get('retrievedAtUTC') or 'Staged record timestamp')} |",
+                    f"| Enrichment gaps | {markdown_escape(', '.join(enrichment_gaps) or 'None')} |",
+                    "",
+                    "| AstroGuide catalog context | Value |",
+                    "|---|---|",
+                    f"| Subject | **{markdown_escape(target_name)}** · `{markdown_escape(target['id'])}` |",
+                    f"| Catalog display name | {markdown_escape(target['displayName'])} |",
+                    f"| Type / constellation | {markdown_escape(humanize_object_type(target.get('objectType')))} · {markdown_escape(target.get('constellation') or '—')} |",
+                    f"| Catalog magnitude / angular size | {format_magnitude(target.get('magnitude'))} · {format_angular_size(target)} |",
+                    f"| Distance | {markdown_escape(target.get('distance') or '—')} |",
+                    f"| Separation | {item['angularSeparationDegrees']:.5f}° · {format_arcminutes(item['angularSeparationDegrees'])} |",
+                    f"| Catalog description | {markdown_escape(target.get('description') or 'No catalog description available.')} |",
+                    "",
+                    *(
+                        [f"> **Catalog data caution:** {markdown_escape(identity_warning)}", ""]
+                        if identity_warning
+                        else []
+                    ),
+                    "**Why it ranked:** " + "; ".join(humanize_reason(reason) for reason in item.get("reasonTags", [])) + ".",
+                    "",
+                    f"[TNS object]({item['sourceURL']}) · [Aladin coordinate view](https://aladin.u-strasbg.fr/AladinLite/?target={aladin_target}&fov=0.5&survey=P%2FDSS2%2Fcolor)",
+                    "",
+                ]
+            )
     lines.extend(
         [
             "## Policy notes",
@@ -805,6 +1834,7 @@ def fetch_staged_deltas(
         raise ValueError("TNS user agent must use the approved tns_marker{...} format")
     destination.mkdir(parents=True, exist_ok=True)
     paths = []
+    missing_dates = []
     for offset in reversed(range(days)):
         date = as_of - dt.timedelta(days=offset)
         date_text = date.strftime("%Y%m%d")
@@ -818,15 +1848,25 @@ def fetch_staged_deltas(
                 payload = response.read()
         except urllib.error.HTTPError as error:
             if error.code == 404:
-                raise RuntimeError(
-                    f"TNS staged delta is not available yet for {date_text}; "
-                    "rerun with an earlier --as-of date or wait for TNS to publish it."
-                ) from error
+                error.close()
+                missing_dates.append(date_text)
+                print(
+                    f"Warning: TNS staged delta is unavailable for {date_text}; "
+                    "continuing with the remaining requested dates.",
+                    file=sys.stderr,
+                )
+                continue
             raise
         path.write_bytes(payload)
         if not zipfile.is_zipfile(path):
             raise RuntimeError(f"TNS response is not a ZIP archive: {date_text}")
         paths.append(path)
+    if missing_dates:
+        print(
+            f"Fetched {len(paths)} of {days} requested TNS staged deltas; "
+            f"missing: {', '.join(missing_dates)}.",
+            file=sys.stderr,
+        )
     return paths
 
 
@@ -834,6 +1874,7 @@ def meaningful_opportunities(queue: dict[str, object]) -> list[dict[str, object]
     material = json.loads(json.dumps(queue["opportunities"]))
     for item in material:
         item.get("provenance", {}).pop("inputRecords", None)
+        item.get("enrichment", {}).pop("retrievedAtUTC", None)
     return material
 
 
@@ -894,6 +1935,30 @@ def main() -> int:
     parser.add_argument("--fetch-days", type=int, default=0)
     parser.add_argument("--staging-dir", type=Path, default=Path("work/tns"))
     parser.add_argument("--tns-user-agent", default=os.environ.get("TNS_USER_AGENT", ""))
+    parser.add_argument("--tns-api-key", default=os.environ.get("TNS_API_KEY", ""))
+    parser.add_argument(
+        "--max-detail-lookups",
+        type=int,
+        default=5,
+        help="Maximum selected candidates to enrich via TNS Get Object; capped at 5.",
+    )
+    parser.add_argument(
+        "--target-image-package",
+        type=Path,
+        default=DEFAULT_TARGET_IMAGE_PACKAGE,
+        help="AstroGuide targetImageAssets package used for governed thumbnails.",
+    )
+    parser.add_argument(
+        "--tns-details-file",
+        type=Path,
+        help="Optional compact, public TNS detail snapshot to merge after selection.",
+    )
+    parser.add_argument(
+        "--refresh-existing",
+        type=Path,
+        metavar="QUEUE_JSON",
+        help="Refresh catalog context/rendering for an existing review queue without fetching.",
+    )
     parser.add_argument("--skip-unchanged", action="store_true")
     parser.add_argument("--validate-only", type=Path, metavar="QUEUE_JSON")
     args = parser.parse_args()
@@ -909,7 +1974,58 @@ def main() -> int:
             relationship = item.get("relationship", {})
             if relationship.get("type") == RELATIONSHIP_NEAR_FIELD and relationship.get("wording") != NEAR_FIELD_WORDING:
                 raise RuntimeError("near_field relationship does not use near-field match wording")
+            if item.get("recommendedDecision") not in (None, "approve", "hold", "reject"):
+                raise RuntimeError("recommendedDecision must be approve, hold, or reject")
+            thumbnail = item.get("astroGuideObject", {}).get("catalogThumbnail", {})
+            if thumbnail.get("status") == "available" and not str(thumbnail.get("url") or "").startswith(
+                "https://metadata.astroguide.space/"
+            ):
+                raise RuntimeError("catalog thumbnail must use the governed AstroGuide metadata origin")
+        expected_review_set_id = review_set_identifier(queue.get("opportunities", []))
+        if queue.get("reviewSetID") and queue.get("reviewSetID") != expected_review_set_id:
+            raise RuntimeError("reviewSetID does not match the material review evidence")
         print(f"Validated {len(queue.get('opportunities', []))} review opportunities.")
+        return 0
+
+    if not args.catalog.is_file():
+        parser.error(f"catalog does not exist: {args.catalog}")
+    if args.max_detail_lookups < 0 or args.max_detail_lookups > 5:
+        parser.error("--max-detail-lookups must be between 0 and 5")
+    if args.tns_details_file and not args.tns_details_file.is_file():
+        parser.error(f"TNS details file does not exist: {args.tns_details_file}")
+    if args.target_image_package and not args.target_image_package.is_file():
+        print(
+            f"Warning: target image package not found at {args.target_image_package}; "
+            "using explicit no-image fallbacks.",
+            file=sys.stderr,
+        )
+    target_image_index = load_target_image_index(args.target_image_package)
+    catalog, grid = load_catalog(args.catalog)
+
+    if args.refresh_existing:
+        if args.inputs or args.fetch_days:
+            parser.error("--refresh-existing cannot be combined with staged inputs or --fetch-days")
+        if not args.refresh_existing.is_file():
+            parser.error(f"existing queue does not exist: {args.refresh_existing}")
+        queue = json.loads(args.refresh_existing.read_text(encoding="utf-8"))
+        refresh_existing_queue(queue, catalog, target_image_index)
+        if args.tns_details_file:
+            apply_tns_details_file(queue, args.tns_details_file)
+        if args.tns_api_key and args.max_detail_lookups:
+            enrich_queue_from_tns_api(
+                queue,
+                api_key=args.tns_api_key,
+                user_agent=args.tns_user_agent,
+                max_lookups=args.max_detail_lookups,
+            )
+        refresh_recommendation_counts(queue)
+        queue["reviewSetID"] = review_set_identifier(queue.get("opportunities", []))
+        json_path, markdown_path, _ = write_outputs(
+            queue,
+            args.refresh_existing.parent,
+            skip_unchanged=False,
+        )
+        print(f"Refreshed {json_path} and {markdown_path}.")
         return 0
 
     inputs = list(args.inputs)
@@ -927,26 +2043,35 @@ def main() -> int:
             )
         )
     if not inputs:
-        parser.error("provide staged inputs or --fetch-days")
+        parser.error("no usable staged inputs were provided or fetched")
     missing = [path for path in inputs if not path.is_file()]
     if missing:
         parser.error(f"input does not exist: {missing[0]}")
-    if not args.catalog.is_file():
-        parser.error(f"catalog does not exist: {args.catalog}")
     if args.max_opportunities < 0:
         parser.error("--max-opportunities must be non-negative")
 
-    catalog, grid = load_catalog(args.catalog)
     queue = build_queue(
         load_source_records(inputs),
         catalog,
         grid,
         as_of=args.as_of,
+        target_image_index=target_image_index,
         radius_deg=args.radius_deg,
         max_age_days=args.max_age_days,
         watch_magnitude=args.watch_magnitude,
         max_opportunities=args.max_opportunities,
     )
+    if args.tns_details_file:
+        apply_tns_details_file(queue, args.tns_details_file)
+    if args.tns_api_key and args.max_detail_lookups:
+        enrich_queue_from_tns_api(
+            queue,
+            api_key=args.tns_api_key,
+            user_agent=args.tns_user_agent,
+            max_lookups=args.max_detail_lookups,
+        )
+    refresh_recommendation_counts(queue)
+    queue["reviewSetID"] = review_set_identifier(queue.get("opportunities", []))
     json_path, markdown_path, wrote = write_outputs(
         queue,
         args.output_dir,

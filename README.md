@@ -65,8 +65,9 @@ validate them, and open or update a pull request for review.
   comet close-encounter packages monthly from the checked-in iOS catalog and
   comet snapshot.
 - `update-tns-transient-review.yml` builds a review-only TNS transient
-  opportunity queue every Monday and Thursday. It does not publish the queue
-  to the stable manifest or app.
+  opportunity queue every day, capped at five candidates by default. It opens
+  the queue for human review and does not automatically publish it to the
+  stable manifest or app.
 
 The TNS workflow routes its fetches through a Tailscale exit node before it
 contacts TNS, because TNS bot access is tied to an approved outbound IP. The
@@ -75,6 +76,10 @@ selects the configured exit node, verifies the resulting public IP, and only
 then downloads staged TNS deltas. Required repository secrets:
 
 - `TNS_USER_AGENT`: the approved full `tns_marker{...}` user-agent string.
+- `TNS_API_KEY` (optional): the matching TNS Bot API key. When present, the
+  already-ranked top five candidates receive bounded Get Object enrichment;
+  without it, the queue still includes staged-feed and AstroGuide catalog
+  context and marks detailed fields unavailable.
 - `TS_OAUTH_CLIENT_ID` and `TS_OAUTH_SECRET`: Tailscale OAuth client
   credentials with writable auth-key scope and access to `tag:github-actions`.
 - `TS_EXIT_NODE`: the Tailscale machine name or 100.x address of the approved
@@ -116,6 +121,10 @@ These are decision-support artifacts shaped for later promotion, not published
 `TNS_USER_AGENT` environment variable. See
 [`docs/tns-transient-review-queue-v1.md`](docs/tns-transient-review-queue-v1.md)
 for the source contract, scoring policy, and automation boundary.
+
+If TNS omits an individual staged date, the bounded fetch records a warning and
+continues with the available dates. The run still fails when the entire
+requested window is unavailable.
 
 After human approval, promote a runtime feed into the stable metadata channel:
 

@@ -19,11 +19,23 @@ These are change deltas, not new-object feeds. Rows are grouped by `objid`; the
 record with the newest `lastmodified` timestamp wins, while every contributing
 input filename, row number, and timestamp remains in provenance.
 
+The staged records are also the bounded pre-enrichment source. They can supply
+the stable TNS object ID and name, coordinates, classification type and
+redshift, discovery date/magnitude/filter, reporting and discovery-source
+groups, internal names, discovery and classification ADS bibcodes, creation
+time, and last-modified time. Candidate filtering, AstroGuide catalog matching,
+scoring, sorting, and the configured review cap are all applied from these
+staged fields before any per-object API request is considered.
+
 When fetching directly, the builder makes one bounded request per UTC date to:
 
 ```text
 https://www.wis-tns.org/system/files/tns_public_objects/tns_public_objects_YYYYMMDD.csv.zip
 ```
+
+An HTTP 404 for one requested date is treated as an explicit source gap: the
+builder warns and continues with other available dates. Other HTTP failures,
+invalid ZIP responses, and a window with no usable inputs remain fatal.
 
 The complete approved TNS marker must be supplied through `TNS_USER_AGENT` or
 `--tns-user-agent`. Do not commit the marker. The scheduled workflow expects a
@@ -48,6 +60,32 @@ Required GitHub repository secrets for the scheduled fetch path:
 - `TS_EXIT_NODE`: approved exit-node machine name or Tailscale 100.x address.
 - `TS_EXPECTED_PUBLIC_IP`: public IP that TNS should see after exit-node
   routing.
+
+Detailed per-object enrichment is optional and additionally requires:
+
+- `TNS_API_KEY`: the API key for the same TNS Bot identified by
+  `TNS_USER_AGENT`.
+
+When enabled, the builder makes one exact-name or object-ID request for each
+already-ranked and capped candidate to the official TNS Get Object endpoint:
+
+```text
+https://www.wis-tns.org/api/get/object
+```
+
+The request may include public photometry and spectra so that the review record
+can carry current classification/host context, the latest public photometric
+detection or upper limit, and compact classification evidence. The builder
+must honor the TNS response rate-limit headers and must not replace this bounded
+lookup with Search API or cone-search fan-out.
+
+Only public information is eligible for the review artifact. Normalize and
+retain compact facts such as the current type, object and host redshift,
+TNS-reported host, latest public photometry with date/value-or-limit/units/filter
+and instrument, latest public spectrum date/instrument/source group, ADS and
+certificate links, and the enrichment timestamp. Do not persist proprietary
+entries, complete raw API replies, downloaded spectra, or credentials. Missing
+optional source values stay explicitly unavailable rather than being inferred.
 
 Tailnet prerequisites:
 
@@ -113,6 +151,10 @@ Scores are deterministic policy hints, not scientific classifications.
 `urgent`, `watch`, and `expired` are review states. Discovery magnitude is not
 a claim about current brightness.
 
+Detailed enrichment does not change the initial candidate ranking or expand
+the number of TNS API calls. It supplies evidence for the human decision after
+the staged-data gate has selected the bounded review list.
+
 ## Relationship terminology
 
 `relationship.type = near_field` and the wording `near-field match` mean only
@@ -124,13 +166,42 @@ normalizes to the matched AstroGuide object's identifier, name, catalog name,
 or alias. It otherwise preserves any source host text only as provenance and
 keeps the relationship `near_field`.
 
+## Review presentation and thumbnails
+
+The review page may show an AstroGuide catalog-subject thumbnail only when the
+matched target resolves to a governed record in the stable `targetImageAssets`
+package documented by `docs/target-image-assets-v1.md`. Use that record's
+metadata-hosted `thumbnail160` or `thumbnail320` URL and preserve its attribution
+and target identity. TNS object pages can display third-party survey cutouts,
+but those images are not TNS-owned review assets and must not be treated as an
+AstroGuide thumbnail or hotlinked into the queue.
+
+When no governed target image exists, omit the image URL and render an explicit
+no-image fallback while retaining the target name, object type, coordinates,
+and source links. A missing thumbnail must never block candidate review or be
+silently replaced with an unrelated nearby image.
+
+The page separates enrichment state from an `approve`, `hold`, or `reject`
+recommendation and leaves `reviewDecision` pending. A pull-request approval is
+the editorial rubber stamp for the current PR head and generated review-evidence
+hash; a changed head or hash requires renewed review. Approval or merge does
+not itself mutate `reviewDecision`, publish a runtime package, change iOS UI,
+or send a notification. The workflow dismisses approvals attached to an older
+head after a material artifact update and refreshes the PR body even when a
+rerun produces no new artifact commit. Promotion remains a separate explicit
+step.
+
 ## Automation
 
-`update-tns-transient-review.yml` runs each Monday and Thursday and also
-supports manual dispatch. It checks out the private iOS repository for the
-canonical catalog, fetches up to 14 bounded daily TNS deltas, runs focused
-tests and validation, and opens or updates one
-`automation/tns-transient-review` pull request.
+`update-tns-transient-review.yml` runs daily and also supports manual dispatch.
+It checks out the private iOS repository for the canonical catalog, fetches up
+to 14 bounded daily TNS deltas, runs focused tests and validation, and opens or
+updates one `automation/tns-transient-review` pull request. Scheduled runs
+publish at most five review candidates; manual dispatch can override that cap.
+The workflow ranks and caps candidates before optional Get Object enrichment,
+so the scheduled default performs no more than five detailed TNS lookups.
+An unavailable staged date is reported and skipped when another requested date
+is available, while a fully unavailable window still fails closed.
 
 With `--skip-unchanged`, a new dated artifact is written only when the material
 opportunity records differ from the latest checked-in review artifact. Input

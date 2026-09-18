@@ -1,0 +1,774 @@
+{
+  "schemaVersion": 1,
+  "family": "transientOpportunities",
+  "reviewOnly": true,
+  "asOfDate": "2026-09-16",
+  "generatedAtUTC": "2026-09-16T00:00:00Z",
+  "policy": {
+    "nearFieldRadiusDegrees": 2.0,
+    "preferredDiscoveryAgeDays": 30,
+    "maximumDiscoveryAgeDays": 45,
+    "preferredDiscoveryMagnitude": 18.5,
+    "watchDiscoveryMagnitude": 19.5,
+    "maxReviewOpportunities": 5,
+    "relationshipDefault": "near_field"
+  },
+  "counts": {
+    "rawRows": 586,
+    "duplicateRowsCollapsed": 41,
+    "uniqueObjects": 545,
+    "contaminantsRejected": 1,
+    "unsupportedClassificationsRejected": 0,
+    "plausibleCandidates": 544,
+    "outsideDiscoveryWindow": 29,
+    "fainterThanWatchBand": 387,
+    "invalidCoordinates": 0,
+    "outsideNearFieldRadius": 70,
+    "nearFieldMatches": 58,
+    "outsideReviewGate": 36,
+    "eligibleReviewOpportunities": 22,
+    "reviewOpportunitiesLimit": 5,
+    "reviewOpportunities": 5,
+    "urgent": 5,
+    "watch": 0,
+    "expired": 0,
+    "recommendedApprove": 4,
+    "recommendedHold": 1,
+    "recommendedReject": 0
+  },
+  "opportunities": [
+    {
+      "id": "tns:219217",
+      "source": "TNS",
+      "sourceId": "219217",
+      "sourceObjectName": "SN2026aaiv",
+      "sourceURL": "https://www.wis-tns.org/object/2026aaiv",
+      "title": "Supernova SN2026aaiv near Caldwell 30",
+      "shortTitle": "SN2026aaiv",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-01T11:23:32Z",
+        "expiresAtUTC": "2026-10-01T11:23:32Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-01T11:23:32Z",
+        "ageDays": 15,
+        "magnitude": 17.325,
+        "band": "orange"
+      },
+      "reportedMagnitude": {
+        "value": 12.94,
+        "band": "L",
+        "units": "ABMag",
+        "observedAtUTC": "2026-09-08"
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 339.2734487,
+        "decDegrees": 34.409775
+      },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "C30",
+        "displayName": "Caldwell 30",
+        "catalogName": "C C30",
+        "objectType": "Galaxy",
+        "constellation": "Pegasus",
+        "magnitude": 9.5,
+        "angularSizeArcmin": 11.0,
+        "angularSizeMajorArcmin": 11.0,
+        "angularSizeMinorArcmin": 4.0,
+        "distance": null,
+        "description": "NGC 7331, also known as Caldwell 30, is an unbarred spiral galaxy about 13.427 megaparsecs away in the constellation Pegasus. It was discovered by William Herschel on 6 September 1784.",
+        "aliases": [
+          "NGC 7331",
+          "PGC 69327",
+          "UGC 12113",
+          "Caldwell 30 (C30)"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 339.2666667,
+          "decDegrees": 34.4155278
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.00802,
+      "relationship": {
+        "type": "tns_reported_host",
+        "wording": "TNS-reported host match",
+        "tnsReportedHost": "NGC7331"
+      },
+      "lastModifiedUTC": "2026-09-10T21:19:03Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260910.csv.zip",
+            "rowNumber": 20,
+            "lastModifiedUTC": "2026-09-10T21:19:03Z"
+          }
+        ],
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26krw",
+          "SN 2026aaiv",
+          "GOTO26jfm",
+          "PS26hnd"
+        ]
+      },
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "tnsContext": {
+        "redshift": 0.003,
+        "reporters": null,
+        "receivedAtUTC": null,
+        "createdAtUTC": null,
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3537....1T",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3537....1T/abstract"
+        },
+        "classificationReferences": [
+          {
+            "bibcode": "2026TNSCR3579....1V",
+            "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3579....1V/abstract"
+          }
+        ],
+        "currentType": "SN Ia",
+        "host": {
+          "name": "NGC7331",
+          "redshift": 0.002722
+        },
+        "latestPublicPhotometry": {
+          "observationDateUTC": "2026-09-08",
+          "value": 12.94,
+          "error": null,
+          "units": "ABMag",
+          "band": "L",
+          "instrument": "GOTO",
+          "telescope": null,
+          "isUpperLimit": false
+        },
+        "publicSpectra": {
+          "count": 4,
+          "latest": null
+        }
+      },
+      "enrichment": {
+        "status": "complete",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog",
+          "tns_public_object_page"
+        ],
+        "missing": [],
+        "retrievedAtUTC": "2026-09-17T22:05:15Z"
+      }
+    },
+    {
+      "id": "tns:219373",
+      "source": "TNS",
+      "sourceId": "219373",
+      "sourceObjectName": "AT2026aaom",
+      "sourceURL": "https://www.wis-tns.org/object/2026aaom",
+      "title": "Nova AT2026aaom near Andromeda Galaxy",
+      "shortTitle": "AT2026aaom",
+      "eventType": "novaOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-04T03:37:43Z",
+        "expiresAtUTC": "2026-10-04T03:37:43Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-04T03:37:43Z",
+        "ageDays": 12,
+        "magnitude": 18.2,
+        "band": "Clear"
+      },
+      "reportedMagnitude": {
+        "value": 15.65,
+        "band": "i",
+        "units": "ABMag",
+        "observedAtUTC": "2026-09-12"
+      },
+      "classification": {
+        "kind": "nova",
+        "type": "Fe II nova",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 10.709944,
+        "decDegrees": 41.3158936
+      },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "M31",
+        "displayName": "Andromeda Galaxy",
+        "catalogName": "M M31",
+        "objectType": "Galaxy",
+        "constellation": "Andromeda",
+        "magnitude": 3.4,
+        "angularSizeArcmin": 178.0,
+        "angularSizeMajorArcmin": 178.0,
+        "angularSizeMinorArcmin": 63.0,
+        "distance": "889.144 kpc",
+        "description": "The Andromeda Galaxy is a barred spiral galaxy and is the nearest major galaxy to the Milky Way. It was originally named the Andromeda Nebula and is cataloged as Messier 31, M31, and NGC 224. Andromeda has a D25 isophotal diameter of about 46.56 kiloparsecs (152,000 light-years) and is approximately 765 kpc (2.5 million light-years) from Earth. The galaxy's name stems from the area of Earth's sky in which it appears, the constellation of Andromeda, which itself is named after the princess who was the wife of Perseus in Greek mythology.",
+        "aliases": [
+          "Andromeda A",
+          "Andromeda Galaxy",
+          "NGC 224",
+          "PGC 2557",
+          "UGC 454",
+          "Great Nebula in Andromeda"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 10.6847083,
+          "decDegrees": 41.26875
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.05081,
+      "relationship": {
+        "type": "tns_reported_host",
+        "wording": "TNS-reported host match",
+        "tnsReportedHost": "NGC0224 / M31"
+      },
+      "lastModifiedUTC": "2026-09-15T15:26:55Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260911.csv.zip",
+            "rowNumber": 6,
+            "lastModifiedUTC": "2026-09-11T22:19:44Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260915.csv.zip",
+            "rowNumber": 14,
+            "lastModifiedUTC": "2026-09-15T15:26:55Z"
+          }
+        ],
+        "reportingGroup": "None",
+        "sourceGroup": "None",
+        "internalNames": [
+          "Vend91",
+          "ZTF26abseonx",
+          "ATLAS26kuh",
+          "GOTO26jfr",
+          "PS26hpt"
+        ]
+      },
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "tnsContext": {
+        "redshift": null,
+        "reporters": null,
+        "receivedAtUTC": null,
+        "createdAtUTC": null,
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3573....1F",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3573....1F/abstract"
+        },
+        "classificationReferences": [
+          {
+            "bibcode": "2026TNSCR3698....1Z",
+            "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3698....1Z/abstract"
+          }
+        ],
+        "currentType": "Fe II nova",
+        "host": {
+          "name": "NGC0224 / M31",
+          "redshift": null
+        },
+        "latestPublicPhotometry": {
+          "observationDateUTC": "2026-09-12",
+          "value": 15.65,
+          "error": null,
+          "units": "ABMag",
+          "band": "i",
+          "instrument": "Pan-STARRS1",
+          "telescope": null,
+          "isUpperLimit": false
+        },
+        "publicSpectra": {
+          "count": 2,
+          "latest": null
+        }
+      },
+      "enrichment": {
+        "status": "complete",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog",
+          "tns_public_object_page"
+        ],
+        "missing": [],
+        "retrievedAtUTC": "2026-09-17T22:05:15Z"
+      }
+    },
+    {
+      "id": "tns:219464",
+      "source": "TNS",
+      "sourceId": "219464",
+      "sourceObjectName": "SN2026aars",
+      "sourceURL": "https://www.wis-tns.org/object/2026aars",
+      "title": "Supernova SN2026aars near IC 1803",
+      "shortTitle": "SN2026aars",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-04T09:21:00Z",
+        "expiresAtUTC": "2026-10-04T09:21:00Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-04T09:21:00Z",
+        "ageDays": 12,
+        "magnitude": 18.4204,
+        "band": "g"
+      },
+      "reportedMagnitude": {
+        "value": 17.06,
+        "band": "Clear",
+        "units": "ABMag",
+        "observedAtUTC": "2026-09-11"
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 37.3953473,
+        "decDegrees": 23.1162324
+      },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC 1803",
+        "displayName": "NGC 3910",
+        "catalogName": "IC IC 1803",
+        "objectType": "Galaxy",
+        "constellation": "Ari",
+        "magnitude": null,
+        "angularSizeArcmin": 0.46,
+        "angularSizeMajorArcmin": 0.46,
+        "angularSizeMinorArcmin": 0.46,
+        "distance": null,
+        "description": "NGC 3910 is a lenticular galaxy located 370 million light-years away in the Leo constellation. It was discovered on December 27, 1786, by astronomer William Herschel. NGC 3910 is a member of the NGC 3937 Group.",
+        "aliases": [
+          "2MASX J02294993+2306310",
+          "MCG +04-06-058",
+          "PGC 009507",
+          "I1803",
+          "NGC 3910"
+        ],
+        "identityWarning": "Catalog identity conflict: canonical ID IC 1803 has the different designation NGC 3910 as its display name.",
+        "coordinates": {
+          "raDegrees": 37.4580833,
+          "decDegrees": 23.1085833
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.05821,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": "GLADE41253"
+      },
+      "lastModifiedUTC": "2026-09-10T15:06:35Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260910.csv.zip",
+            "rowNumber": 30,
+            "lastModifiedUTC": "2026-09-10T15:06:35Z"
+          }
+        ],
+        "reportingGroup": "ZTF",
+        "sourceGroup": "ZTF",
+        "internalNames": [
+          "ZTF22abovhzu",
+          "ATLAS26kuy",
+          "GOTO26jgg"
+        ]
+      },
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "tnsContext": {
+        "redshift": 0.03,
+        "reporters": null,
+        "receivedAtUTC": null,
+        "createdAtUTC": null,
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3593....1W",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3593....1W/abstract"
+        },
+        "classificationReferences": [
+          {
+            "bibcode": "2026TNSCR3656....1S",
+            "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3656....1S/abstract"
+          }
+        ],
+        "currentType": "SN Ia",
+        "host": {
+          "name": "GLADE41253",
+          "redshift": null
+        },
+        "latestPublicPhotometry": {
+          "observationDateUTC": "2026-09-11",
+          "value": 17.06,
+          "error": null,
+          "units": "ABMag",
+          "band": "Clear",
+          "instrument": null,
+          "telescope": null,
+          "isUpperLimit": false
+        },
+        "publicSpectra": {
+          "count": 1,
+          "latest": {
+            "observationDateUTC": "2026-09-10T09:05:20Z",
+            "instrument": "EFOSC2-NTT",
+            "sourceGroup": "ePESSTO+",
+            "remarks": null
+          }
+        }
+      },
+      "enrichment": {
+        "status": "complete",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog",
+          "tns_public_object_page"
+        ],
+        "missing": [],
+        "retrievedAtUTC": "2026-09-17T22:05:15Z"
+      },
+      "decisionReason": "Recommendation overridden to approve by Chris on 2026-09-17; retain the AstroGuide catalog identity caution as a separate metadata follow-up."
+    },
+    {
+      "id": "tns:220034",
+      "source": "TNS",
+      "sourceId": "220034",
+      "sourceObjectName": "AT2026ably",
+      "sourceURL": "https://www.wis-tns.org/object/2026ably",
+      "title": "Transient candidate AT2026ably near NGC265",
+      "shortTitle": "AT2026ably",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "hold",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-07T03:25:55Z",
+        "expiresAtUTC": "2026-10-07T03:25:55Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-07T03:25:55Z",
+        "ageDays": 9,
+        "magnitude": 14.52,
+        "band": "R"
+      },
+      "reportedMagnitude": {
+        "value": 14.52,
+        "band": "R",
+        "units": "ABMag",
+        "observedAtUTC": "2026-09-07T03:25:55Z"
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": "Unclassified",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 11.725962,
+        "decDegrees": -73.567631
+      },
+      "score": 95,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_16_5",
+        "separation_le_0_25_deg",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC265",
+        "displayName": "NGC265",
+        "catalogName": "NGC NGC265",
+        "objectType": "Open_cluster",
+        "constellation": "Tucana",
+        "magnitude": 12.2,
+        "angularSizeArcmin": 1.2,
+        "angularSizeMajorArcmin": 1.2,
+        "angularSizeMinorArcmin": 1.2,
+        "distance": null,
+        "description": "NGC 265 is an open cluster of stars in the southern constellation of Tucana. It is located in the Small Magellanic Cloud, a nearby dwarf galaxy. The cluster was discovered by English astronomer John Herschel on April 11, 1834. J. L. E. Dreyer described it as, \"faint, pretty small, round\", and added it as the 265th entry in his New General Catalogue.",
+        "aliases": [],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 11.7916667,
+          "decDegrees": -73.4771667
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.09236,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": "NGC0292 / SMC"
+      },
+      "lastModifiedUTC": "2026-09-13T12:01:08Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260912.csv.zip",
+            "rowNumber": 18,
+            "lastModifiedUTC": "2026-09-12T19:27:32Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260913.csv.zip",
+            "rowNumber": 75,
+            "lastModifiedUTC": "2026-09-13T12:01:08Z"
+          }
+        ],
+        "reportingGroup": "DAO_OTS",
+        "sourceGroup": "DAO_OTS",
+        "internalNames": []
+      },
+      "recommendedDecision": "hold",
+      "reviewDecision": "pending",
+      "tnsContext": {
+        "redshift": null,
+        "reporters": null,
+        "receivedAtUTC": null,
+        "createdAtUTC": null,
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3684....1B",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3684....1B/abstract"
+        },
+        "classificationReferences": [],
+        "currentType": "Unclassified",
+        "host": {
+          "name": "NGC0292 / SMC",
+          "redshift": -0.001
+        },
+        "latestPublicPhotometry": {
+          "observationDateUTC": "2026-09-07T03:25:55Z",
+          "value": 14.52,
+          "error": null,
+          "units": "ABMag",
+          "band": "R",
+          "instrument": null,
+          "telescope": null,
+          "isUpperLimit": false
+        },
+        "remarks": [
+          "The discovery report describes the object as a likely cataclysmic variable and notes a faint Gaia point source at the position."
+        ],
+        "publicSpectra": {
+          "count": 0,
+          "latest": null
+        }
+      },
+      "enrichment": {
+        "status": "complete",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog",
+          "tns_public_object_page"
+        ],
+        "missing": [],
+        "retrievedAtUTC": "2026-09-17T22:05:15Z"
+      },
+      "decisionReason": "Hold until the likely cataclysmic-variable interpretation is resolved."
+    },
+    {
+      "id": "tns:219766",
+      "source": "TNS",
+      "sourceId": "219766",
+      "sourceObjectName": "AT2026abbx",
+      "sourceURL": "https://www.wis-tns.org/object/2026abbx",
+      "title": "Nova AT2026abbx near Lynds Dark Nebula 161 (LDN161)",
+      "shortTitle": "AT2026abbx",
+      "eventType": "novaOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "activeWindow": {
+        "startsAtUTC": "2026-09-08T18:57:36Z",
+        "expiresAtUTC": "2026-10-08T18:57:36Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-08T18:57:36Z",
+        "ageDays": 8,
+        "magnitude": 12.6,
+        "band": "g"
+      },
+      "reportedMagnitude": {
+        "value": 10.6,
+        "band": "R-Cousins",
+        "units": "VegaMag",
+        "observedAtUTC": "2026-09-12"
+      },
+      "classification": {
+        "kind": "nova",
+        "type": "Nova",
+        "status": null
+      },
+      "coordinates": {
+        "raDegrees": 268.02833,
+        "decDegrees": -23.72242
+      },
+      "score": 89,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_16_5",
+        "separation_le_1_deg"
+      ],
+      "astroGuideObject": {
+        "id": "LDN161",
+        "displayName": "Lynds Dark Nebula 161 (LDN161)",
+        "catalogName": "LDN LDN161",
+        "objectType": "DarkNeb",
+        "constellation": "Sagittarius",
+        "magnitude": null,
+        "angularSizeArcmin": 23.157903537290473,
+        "angularSizeMajorArcmin": 23.157903537290473,
+        "angularSizeMinorArcmin": 23.157903537290473,
+        "distance": null,
+        "description": null,
+        "aliases": [],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 267.75,
+          "decDegrees": -24.0
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.37662,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": "Milky Way"
+      },
+      "lastModifiedUTC": "2026-09-12T12:24:06Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260912.csv.zip",
+            "rowNumber": 114,
+            "lastModifiedUTC": "2026-09-12T12:24:06Z"
+          }
+        ],
+        "reportingGroup": "ASAS-SN",
+        "sourceGroup": "ASAS-SN",
+        "internalNames": [
+          "ASASSN-26fc"
+        ]
+      },
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "tnsContext": {
+        "redshift": null,
+        "reporters": null,
+        "receivedAtUTC": null,
+        "createdAtUTC": null,
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3631....1S",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3631....1S/abstract"
+        },
+        "classificationReferences": [
+          {
+            "bibcode": "2026TNSCR3699....1L",
+            "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3699....1L/abstract"
+          }
+        ],
+        "currentType": "Nova",
+        "host": {
+          "name": "Milky Way",
+          "redshift": null
+        },
+        "latestPublicPhotometry": {
+          "observationDateUTC": "2026-09-12",
+          "value": 10.6,
+          "error": null,
+          "units": "VegaMag",
+          "band": "R-Cousins",
+          "instrument": null,
+          "telescope": null,
+          "isUpperLimit": false
+        },
+        "publicSpectra": {
+          "count": 1,
+          "latest": {
+            "observationDateUTC": "2026-09-12T09:46:31Z",
+            "instrument": "Other",
+            "sourceGroup": null,
+            "remarks": null
+          }
+        }
+      },
+      "enrichment": {
+        "status": "complete",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog",
+          "tns_public_object_page"
+        ],
+        "missing": [],
+        "retrievedAtUTC": "2026-09-17T22:05:15Z"
+      }
+    }
+  ],
+  "reviewSetID": "1bb8f22ce913682a"
+}
