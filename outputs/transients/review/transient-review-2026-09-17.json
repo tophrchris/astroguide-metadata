@@ -1,0 +1,644 @@
+{
+  "schemaVersion": 1,
+  "family": "transientOpportunities",
+  "reviewOnly": true,
+  "reviewSetID": "087e69360b03ad75",
+  "asOfDate": "2026-09-17",
+  "generatedAtUTC": "2026-09-17T00:00:00Z",
+  "policy": {
+    "nearFieldRadiusDegrees": 2.0,
+    "preferredDiscoveryAgeDays": 30,
+    "maximumDiscoveryAgeDays": 45,
+    "preferredDiscoveryMagnitude": 18.5,
+    "watchDiscoveryMagnitude": 19.5,
+    "maxReviewOpportunities": 5,
+    "relationshipDefault": "near_field"
+  },
+  "counts": {
+    "rawRows": 552,
+    "duplicateRowsCollapsed": 36,
+    "uniqueObjects": 516,
+    "contaminantsRejected": 1,
+    "unsupportedClassificationsRejected": 0,
+    "plausibleCandidates": 515,
+    "outsideDiscoveryWindow": 16,
+    "fainterThanWatchBand": 377,
+    "invalidCoordinates": 0,
+    "outsideNearFieldRadius": 64,
+    "nearFieldMatches": 58,
+    "outsideReviewGate": 39,
+    "eligibleReviewOpportunities": 19,
+    "reviewOpportunitiesLimit": 5,
+    "reviewOpportunities": 5,
+    "urgent": 5,
+    "watch": 0,
+    "expired": 0,
+    "recommendedApprove": 5,
+    "recommendedHold": 0,
+    "recommendedReject": 0
+  },
+  "opportunities": [
+    {
+      "id": "tns:219373",
+      "source": "TNS",
+      "sourceId": "219373",
+      "sourceObjectName": "AT2026aaom",
+      "sourceURL": "https://www.wis-tns.org/object/2026aaom",
+      "title": "Nova AT2026aaom near Andromeda Galaxy",
+      "shortTitle": "AT2026aaom",
+      "eventType": "novaOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-09-04T03:37:43Z",
+        "expiresAtUTC": "2026-10-04T03:37:43Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-04T03:37:43Z",
+        "ageDays": 13,
+        "magnitude": 18.2,
+        "band": "Clear"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "nova",
+        "type": "Nova",
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": 0.0,
+        "reporters": "Róbert Fidrich",
+        "receivedAtUTC": "2026-09-04T13:45:00Z",
+        "createdAtUTC": "2026-09-04T13:45:02Z",
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3573....1F",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3573....1F/abstract"
+        },
+        "classificationReferences": [
+          {
+            "bibcode": "2026TNSCR3675....1B",
+            "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3675....1B/abstract"
+          },
+          {
+            "bibcode": "2026TNSCR3698....1Z",
+            "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR3698....1Z/abstract"
+          }
+        ]
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 10.709944,
+        "decDegrees": 41.3158936
+      },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "M31",
+        "displayName": "Andromeda Galaxy",
+        "catalogName": "M M31",
+        "objectType": "Galaxy",
+        "constellation": "Andromeda",
+        "magnitude": 3.4,
+        "angularSizeArcmin": 178.0,
+        "angularSizeMajorArcmin": 178.0,
+        "angularSizeMinorArcmin": 63.0,
+        "distance": "889.144 kpc",
+        "description": "The Andromeda Galaxy is a barred spiral galaxy and is the nearest major galaxy to the Milky Way. It was originally named the Andromeda Nebula and is cataloged as Messier 31, M31, and NGC 224. Andromeda has a D25 isophotal diameter of about 46.56 kiloparsecs (152,000 light-years) and is approximately 765 kpc (2.5 million light-years) from Earth. The galaxy's name stems from the area of Earth's sky in which it appears, the constellation of Andromeda, which itself is named after the princess who was the wife of Perseus in Greek mythology.",
+        "aliases": [
+          "Andromeda A",
+          "Andromeda Galaxy",
+          "NGC 224",
+          "PGC 2557",
+          "UGC 454",
+          "Great Nebula in Andromeda"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 10.6847083,
+          "decDegrees": 41.26875
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.05081,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-15T15:26:55Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260911.csv.zip",
+            "rowNumber": 6,
+            "lastModifiedUTC": "2026-09-11T22:19:44Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260915.csv.zip",
+            "rowNumber": 14,
+            "lastModifiedUTC": "2026-09-15T15:26:55Z"
+          }
+        ],
+        "reportingGroup": "None",
+        "sourceGroup": "None",
+        "internalNames": [
+          "Vend91",
+          "ZTF26abseonx",
+          "ATLAS26kuh",
+          "GOTO26jfr",
+          "PS26hpt"
+        ]
+      }
+    },
+    {
+      "id": "tns:220034",
+      "source": "TNS",
+      "sourceId": "220034",
+      "sourceObjectName": "AT2026ably",
+      "sourceURL": "https://www.wis-tns.org/object/2026ably",
+      "title": "Transient candidate AT2026ably near NGC265",
+      "shortTitle": "AT2026ably",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-09-07T03:25:55Z",
+        "expiresAtUTC": "2026-10-07T03:25:55Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-07T03:25:55Z",
+        "ageDays": 10,
+        "magnitude": 14.52,
+        "band": "R"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "D. D. Balam (Dominion Astrophysical Observatory, National Research Council of Canada), S. Chan (University of British Columbia) & A. C. Boley (UBC)",
+        "receivedAtUTC": "2026-09-12T19:27:31Z",
+        "createdAtUTC": "2026-09-12T19:27:32Z",
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3684....1B",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3684....1B/abstract"
+        },
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 11.725962,
+        "decDegrees": -73.567631
+      },
+      "score": 95,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_16_5",
+        "separation_le_0_25_deg",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC265",
+        "displayName": "NGC265",
+        "catalogName": "NGC NGC265",
+        "objectType": "Open_cluster",
+        "constellation": "Tucana",
+        "magnitude": 12.2,
+        "angularSizeArcmin": 1.2,
+        "angularSizeMajorArcmin": 1.2,
+        "angularSizeMinorArcmin": 1.2,
+        "distance": null,
+        "description": "NGC 265 is an open cluster of stars in the southern constellation of Tucana. It is located in the Small Magellanic Cloud, a nearby dwarf galaxy. The cluster was discovered by English astronomer John Herschel on April 11, 1834. J. L. E. Dreyer described it as, \"faint, pretty small, round\", and added it as the 265th entry in his New General Catalogue.",
+        "aliases": [],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 11.7916667,
+          "decDegrees": -73.4771667
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.09236,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-13T12:01:08Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260912.csv.zip",
+            "rowNumber": 18,
+            "lastModifiedUTC": "2026-09-12T19:27:32Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20260913.csv.zip",
+            "rowNumber": 75,
+            "lastModifiedUTC": "2026-09-13T12:01:08Z"
+          }
+        ],
+        "reportingGroup": "DAO_OTS",
+        "sourceGroup": "DAO_OTS",
+        "internalNames": []
+      }
+    },
+    {
+      "id": "tns:220385",
+      "source": "TNS",
+      "sourceId": "220385",
+      "sourceObjectName": "AT2026abys",
+      "sourceURL": "https://www.wis-tns.org/object/2026abys",
+      "title": "Transient candidate AT2026abys near Caldwell 7 (C7)",
+      "shortTitle": "AT2026abys",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-09-17T04:35:54Z",
+        "expiresAtUTC": "2026-10-17T04:35:54Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-17T04:35:54Z",
+        "ageDays": 0,
+        "magnitude": 18.077,
+        "band": "wide"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "J. Tonry, L. Denneau, H. Weiland (IfA, University of Hawaii), N. Erasmus, W. Koorts (South African Astronomical Observatory), A. Jordan, V. Suc (UAI, Obstech), M. R. Alarcón, J. Licandro, P. Nichita (IAC), S. J. Smartt, K. W. Smith (Oxford/QUB), D. R. Young, M. Nicholl, J. Weston, X. Sheng, C. R. Angus, D. Magill, A. J. Smith, L. Shingles (QUB), A. Aamer (Arizona), P. Ramsden (Birmingham/QUB), S. Srivastav, J. H. Gillanders, H. Stevance, A. J. Cooper, F. Stoppa, J. Tweddle, L. Eastman (Oxford), L. Rhodes (TSI/McGill), T. Moore, A. Rest (STScI), T.-W. Chen (NCU), C. Deasy-Millar (TCD), C. Stubbs (Harvard), J. S. Sommer (LMU), B. P. Schmidt (ANU)",
+        "receivedAtUTC": "2026-09-17T21:54:59Z",
+        "createdAtUTC": "2026-09-17T21:55:02Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 113.7759913,
+        "decDegrees": 65.0075553
+      },
+      "score": 90,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "C7",
+        "displayName": "Caldwell 7 (C7)",
+        "catalogName": "C C7",
+        "objectType": "Galaxy",
+        "constellation": "Camelopardalis",
+        "magnitude": 8.9,
+        "angularSizeArcmin": 18.0,
+        "angularSizeMajorArcmin": 18.0,
+        "angularSizeMinorArcmin": 10.0,
+        "distance": null,
+        "description": "NGC 2403 is an intermediate spiral galaxy in the constellation Camelopardalis. It is an outlying member of the M81 Group, and is approximately 8 million light-years distant.",
+        "aliases": [
+          "NGC 2403",
+          "PGC 21396",
+          "UGC 3918"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 114.2125,
+          "decDegrees": 65.6025556
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.62232,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-17T21:55:02Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260917.csv.zip",
+            "rowNumber": 5,
+            "lastModifiedUTC": "2026-09-17T21:55:02Z"
+          }
+        ],
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26lpv"
+        ]
+      }
+    },
+    {
+      "id": "tns:219766",
+      "source": "TNS",
+      "sourceId": "219766",
+      "sourceObjectName": "AT2026abbx",
+      "sourceURL": "https://www.wis-tns.org/object/2026abbx",
+      "title": "Nova AT2026abbx near Lynds Dark Nebula 161 (LDN161)",
+      "shortTitle": "AT2026abbx",
+      "eventType": "novaOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-09-08T18:57:36Z",
+        "expiresAtUTC": "2026-10-08T18:57:36Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-08T18:57:36Z",
+        "ageDays": 9,
+        "magnitude": 12.6,
+        "band": "g"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "nova",
+        "type": "Nova",
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "K. Z. Stanek, for the ASAS-SN team",
+        "receivedAtUTC": "2026-09-09T20:56:51Z",
+        "createdAtUTC": "2026-09-09T20:56:52Z",
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3631....1S",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3631....1S/abstract"
+        },
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 268.02833,
+        "decDegrees": -23.72242
+      },
+      "score": 89,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_16_5",
+        "separation_le_1_deg"
+      ],
+      "astroGuideObject": {
+        "id": "LDN161",
+        "displayName": "Lynds Dark Nebula 161 (LDN161)",
+        "catalogName": "LDN LDN161",
+        "objectType": "DarkNeb",
+        "constellation": "Sagittarius",
+        "magnitude": null,
+        "angularSizeArcmin": 23.157903537290473,
+        "angularSizeMajorArcmin": 23.157903537290473,
+        "angularSizeMinorArcmin": 23.157903537290473,
+        "distance": null,
+        "description": null,
+        "aliases": [],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 267.75,
+          "decDegrees": -24.0
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.37662,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-12T12:24:06Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260912.csv.zip",
+            "rowNumber": 114,
+            "lastModifiedUTC": "2026-09-12T12:24:06Z"
+          }
+        ],
+        "reportingGroup": "ASAS-SN",
+        "sourceGroup": "ASAS-SN",
+        "internalNames": [
+          "ASASSN-26fc"
+        ]
+      }
+    },
+    {
+      "id": "tns:220258",
+      "source": "TNS",
+      "sourceId": "220258",
+      "sourceObjectName": "AT2026abuf",
+      "sourceURL": "https://www.wis-tns.org/object/2026abuf",
+      "title": "Transient candidate AT2026abuf near Wild Duck cluster",
+      "shortTitle": "AT2026abuf",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-08-29T16:27:06Z",
+        "expiresAtUTC": "2026-09-28T16:27:06Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-08-29T16:27:06Z",
+        "ageDays": 19,
+        "magnitude": 17.89,
+        "band": "Clear"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "Jianlin Xu, Mi Zhang, Ziyang Mai, Guoyou Sun, Jiangao Ruan, Jingyuan Zhao, Wenjie Zhou, Yong Ma, Ezhar Elijan, Ye, Zhuoyang Chen (Xingming Obs.), Hanjie Tan (AUUK), Guangwei Wu (NAAA), Xing Gao, Ali Esamdin, Chunhai Bai, Yong Wang (XAO), on behalf of the KATS team",
+        "receivedAtUTC": "2026-09-15T08:55:01Z",
+        "createdAtUTC": "2026-09-15T08:55:03Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 282.749417,
+        "decDegrees": -6.066639
+      },
+      "score": 85,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "CR391",
+        "displayName": "Wild Duck cluster",
+        "catalogName": "CR CR391",
+        "objectType": "Open_cluster",
+        "constellation": "Scutum",
+        "magnitude": 5.8,
+        "angularSizeArcmin": 9.0,
+        "angularSizeMajorArcmin": 9.0,
+        "angularSizeMinorArcmin": 9.0,
+        "distance": "1.877 kpc",
+        "description": "The Wild Duck Cluster is an open cluster of stars in the constellation Scutum. It was discovered by Gottfried Kirch in 1681. Charles Messier included it in his catalogue of diffuse objects in 1764. Its popular name derives from the brighter stars forming a triangle which could resemble a flying flock of ducks. The cluster is located just to the east of the Scutum Star Cloud midpoint.",
+        "aliases": [
+          "M 11",
+          "Mel 213",
+          "NGC 6705",
+          "Scutum Salt-and-Pepper"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 282.775,
+          "decDegrees": -6.2667
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.20167,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-09-15T08:55:03Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20260915.csv.zip",
+            "rowNumber": 39,
+            "lastModifiedUTC": "2026-09-15T08:55:03Z"
+          }
+        ],
+        "reportingGroup": "XOSS",
+        "sourceGroup": "XOSS",
+        "internalNames": [
+          "KATS26Q005"
+        ]
+      }
+    }
+  ]
+}
