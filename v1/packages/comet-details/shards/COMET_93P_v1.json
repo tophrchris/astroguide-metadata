@@ -3,13 +3,13 @@
   "packageFamily": "cometDetailMetadata",
   "packageVersion": "comet-detail-metadata-v1-20260921-aerith",
   "packageRole": "comet",
-  "shardID": "COMET_123P",
+  "shardID": "COMET_93P",
   "record": {
-    "stableID": "COMET:123P",
-    "designation": "123P",
-    "displayName": "123P/West-Hartley",
-    "aerithName": "123P/West-Hartley",
-    "detailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
+    "stableID": "COMET:93P",
+    "designation": "93P",
+    "displayName": "93P/Lovas",
+    "aerithName": "93P/Lovas 1",
+    "detailURL": "http://www.aerith.net/comet/catalog/0093P/2026.html",
     "generatedAt": "2026-09-21T10:32:18Z",
     "visibilitySummary": {
       "state": "notCurrentlyUseful",
@@ -18,15 +18,15 @@
       "usefulMagnitudeLimit": 16.0,
       "aerithCurrentDate": "2026-09-12",
       "aerithNextUsefulDate": null,
-      "aerithCurrentMagnitude": 15.0,
-      "aerithNextMagnitude": 15.0,
+      "aerithCurrentMagnitude": 17.3,
+      "aerithNextMagnitude": 17.4,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": -1.0,
-        "south": -18.0
+        "north": 17.0,
+        "south": -3.0
       },
       "nextBestAltitudeDegreesByHemisphere": {
-        "north": 2.0,
-        "south": -17.0
+        "north": 20.0,
+        "south": -2.0
       },
       "futureUsefulStartDate": null,
       "futureUsefulEndDate": null,
@@ -42,16 +42,16 @@
       "sampleCount": 731,
       "referenceDate": "2026-09-12",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 16.839,
+      "currentMagnitudeEstimate": 18.308,
       "currentSampleDate": "2026-09-12",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
       "daysUntilUsefulStart": null,
       "daysUntilUsefulEnd": null,
-      "brightestMagnitude": 15.1,
-      "brightestDate": "2026-08-15",
-      "faintestMagnitude": 19.104,
+      "brightestMagnitude": 17.476,
+      "brightestDate": "2026-07-12",
+      "faintestMagnitude": 22.37,
       "faintestDate": "2027-07-12"
     },
     "classification": {
@@ -66,7 +66,7 @@
     "source": {
       "name": "Aerith / Seiichi Yoshida",
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-      "detailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
+      "detailURL": "http://www.aerith.net/comet/catalog/0093P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
       "generatedAt": "2026-09-21T10:32:18Z",
       "permissionReceived": "2026-08-15"
@@ -74,65 +74,50 @@
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
-        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_123p_fc79d899be64.jpg",
-        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_123p_fc79d899be64.jpg",
-        "cachedPath": "v1/assets/comets/aerith/comet_123p_fc79d899be64.jpg",
-        "originalURL": "http://www.aerith.net/pictures/fichtl/s/123P_20260306_2040_6B_4min_MG_L_W_b2.jpg",
-        "sourceURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
-        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_93p_b6b4df5e0e23.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_93p_b6b4df5e0e23.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_93p_b6b4df5e0e23.jpg",
+        "originalURL": "http://www.aerith.net/pictures/fichtl/s/93P_20260116_1735_12B_3min_MG_L_R_b2.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0093P/2026.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0093P/2026.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
-        "byteSize": 8709,
-        "checksum": "fc79d899be64b856b9818bdf0e242016617388e108b6a3988419a525275282b3"
+        "byteSize": 20368,
+        "checksum": "b6b4df5e0e2317701107c725411978c8e2e0842854cd382b68de982f1047a458"
       },
       "hero": {
         "kind": "hero",
-        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_123p_fc79d899be64.jpg",
-        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_123p_fc79d899be64.jpg",
-        "cachedPath": "v1/assets/comets/aerith/comet_123p_fc79d899be64.jpg",
-        "originalURL": "http://www.aerith.net/pictures/fichtl/s/123P_20260306_2040_6B_4min_MG_L_W_b2.jpg",
-        "sourceURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
-        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_93p_b6b4df5e0e23.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_93p_b6b4df5e0e23.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_93p_b6b4df5e0e23.jpg",
+        "originalURL": "http://www.aerith.net/pictures/fichtl/s/93P_20260116_1735_12B_3min_MG_L_R_b2.jpg",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0093P/2026.html",
+        "aerithDetailURL": "http://www.aerith.net/comet/catalog/0093P/2026.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
-        "byteSize": 8709,
-        "checksum": "fc79d899be64b856b9818bdf0e242016617388e108b6a3988419a525275282b3"
+        "byteSize": 20368,
+        "checksum": "b6b4df5e0e2317701107c725411978c8e2e0842854cd382b68de982f1047a458"
       }
     },
     "brightness": [
       {
-        "id": "123P-2026-05-17-report-1",
-        "date": "2026-05-17",
-        "magnitude": 16.9,
-        "qualifier": "reported",
-        "estimateKind": "reported",
-        "isProjection": false,
-        "sourceLabel": "Aerith reported magnitude",
-        "sourceURL": "http://www.aerith.net/comet/catalog/0123P/2026.html",
-        "commentary": "Now it is 16.9 mag (May 17, Kunihiro Shima). It stays 15 mag for a while. In the Northern Hemisphere, it will be unobservable soon. But it will be observable again in September. In the Southern Hemisphere, it is not observable now, but it will appear in November."
-      },
-      {
-        "id": "123P-2026-09-12-north-weekly-1",
+        "id": "93P-2026-09-12-north-weekly-1",
         "date": "2026-09-12",
-        "magnitude": 15.0,
+        "magnitude": 17.3,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -1.9,
-        "isSignificant": true,
-        "significanceKind": "outburst",
-        "interpretation": "Brightened 1.9 mag between Aerith magnitude reports or estimates."
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html"
       },
       {
-        "id": "123P-2026-09-19-north-weekly-2",
+        "id": "93P-2026-09-19-north-weekly-2",
         "date": "2026-09-19",
-        "magnitude": 15.0,
+        "magnitude": 17.4,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.0
+        "magnitudeDelta": 0.1
       }
     ],
     "brightnessChart": {
@@ -145,47 +130,41 @@
       "containsReportedObservation": false,
       "points": [
         {
-          "id": "123P-2026-09-12-north-weekly-1",
+          "id": "93P-2026-09-12-north-weekly-1",
           "date": "2026-09-12",
-          "magnitude": 15.0,
+          "magnitude": 17.3,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
-          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": -1.9,
-          "isSignificant": true,
-          "significanceKind": "outburst",
-          "interpretation": "Brightened 1.9 mag between Aerith magnitude reports or estimates."
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html"
         },
         {
-          "id": "123P-2026-09-19-north-weekly-2",
+          "id": "93P-2026-09-19-north-weekly-2",
           "date": "2026-09-19",
-          "magnitude": 15.0,
+          "magnitude": 17.4,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.0
+          "magnitudeDelta": 0.1
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 15.0,
+      "currentMagnitude": 17.4,
       "currentDate": "2026-09-19",
-      "currentPointID": "123P-2026-09-19-north-weekly-2",
-      "comparisonMagnitude": 15.0,
+      "currentPointID": "93P-2026-09-19-north-weekly-2",
+      "comparisonMagnitude": 17.3,
       "comparisonDate": "2026-09-12",
-      "comparisonPointID": "123P-2026-09-12-north-weekly-1",
+      "comparisonPointID": "93P-2026-09-12-north-weekly-1",
       "comparisonWindowDays": 7,
-      "deltaMagnitude": 0.0,
+      "deltaMagnitude": 0.1,
       "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
-      "notableObservationIDs": [
-        "123P-2026-09-12-north-weekly-1"
-      ]
+      "notableObservationIDs": []
     }
   }
 }
