@@ -122,8 +122,8 @@ def normalize_package(source: dict[str, Any]) -> dict[str, Any]:
     if source.get("reviewOnly") is not False:
         raise ValidationError("Runtime transient opportunity package must set reviewOnly=false.")
     opportunities = source.get("opportunities")
-    if not isinstance(opportunities, list) or not opportunities:
-        raise ValidationError("Runtime transient opportunity package must contain opportunities.")
+    if not isinstance(opportunities, list):
+        raise ValidationError("Runtime transient opportunity package opportunities must be a list.")
 
     promoted: dict[str, Any] = {
         "schemaVersion": source["schemaVersion"],
@@ -151,8 +151,8 @@ def validate_package(package: dict[str, Any]) -> None:
     if package.get("reviewOnly") is not False:
         raise ValidationError("Package reviewOnly must be false.")
     opportunities = package.get("opportunities")
-    if not isinstance(opportunities, list) or not opportunities:
-        raise ValidationError("Package opportunities must be a non-empty list.")
+    if not isinstance(opportunities, list):
+        raise ValidationError("Package opportunities must be a list.")
     for index, opportunity in enumerate(opportunities):
         if opportunity.get("reviewOnly") is not False:
             raise ValidationError(f"Opportunity {index} must set reviewOnly=false.")

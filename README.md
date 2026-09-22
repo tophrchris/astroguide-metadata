@@ -116,8 +116,12 @@ python3 scripts/build_tns_transient_review_queue.py \
 ```
 
 The builder emits dated JSON and Markdown under `outputs/transients/review/`.
-These are decision-support artifacts shaped for later promotion, not published
-`transientOpportunities`. Fetching requires the approved full marker in the
+These remain immutable decision-support artifacts. Curated status lives in
+`outputs/transients/review/transient-review-decisions-v1.json`; the scheduled
+review workflow converts every still-active `approved` entry into the runtime
+source, stable `transientEventFeed` package, and manifest in the same PR.
+Merging that PR publishes the approved set through the normal metadata hosting
+path. Fetching requires the approved full marker in the
 `TNS_USER_AGENT` environment variable. See
 [`docs/tns-transient-review-queue-v1.md`](docs/tns-transient-review-queue-v1.md)
 for the source contract, scoring policy, and automation boundary.
@@ -126,12 +130,14 @@ If TNS omits an individual staged date, the bounded fetch records a warning and
 continues with the available dates. The run still fails when the entire
 requested window is unavailable.
 
-After human approval, promote a runtime feed into the stable metadata channel:
+To regenerate and validate the approved runtime feed locally:
 
 ```bash
+python3 scripts/apply_tns_transient_review_decisions.py
 python3 scripts/publish_tns_transient_opportunities.py \
   --source outputs/transients/runtime/transient_opportunities_v1.json
 
+python3 scripts/apply_tns_transient_review_decisions.py --check
 python3 scripts/publish_tns_transient_opportunities.py --validate-only
 ```
 
