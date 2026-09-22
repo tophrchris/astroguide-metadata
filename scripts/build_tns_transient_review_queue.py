@@ -1643,7 +1643,7 @@ def render_markdown(queue: dict[str, object]) -> str:
         "",
         "AstroGuide catalog proximity is a smart-scope relevance filter. A **near-field match** is angular proximity only; it is not a host or physical association unless TNS explicitly supplies matching host evidence.",
         "",
-        f"**Review evidence hash:** `{queue.get('reviewSetID', 'legacy')}`. A pull-request approval is the editorial rubber stamp for this artifact; treat any changed PR head or evidence hash as requiring re-approval. Merge still does not publish it to the app or change `reviewDecision` from `pending`.",
+        f"**Review evidence hash:** `{queue.get('reviewSetID', 'legacy')}`. This dated queue remains immutable evidence and keeps `reviewDecision` pending. Curated status lives in `transient-review-decisions-v1.json`; changed evidence resets an existing decision to pending. The generated runtime package includes only still-active approved decisions, so merging a synchronized review PR publishes that approved set through dynamic metadata.",
         "",
         "## Summary",
         "",

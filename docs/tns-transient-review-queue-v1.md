@@ -7,10 +7,14 @@ recent supernova, nova, and other transient candidates in fields near
 AstroGuide catalog subjects. It produces dated JSON and Markdown artifacts
 under `outputs/transients/review/` for human review.
 
-The JSON deliberately resembles a future `transientOpportunities` event
-source, but it is not a published runtime package and is not listed in the
-stable manifest. Approval, app publication, iOS UI, and notifications remain
-separate work.
+The dated review JSON remains immutable decision-support evidence and is not
+itself a runtime package. Human decisions live in
+`outputs/transients/review/transient-review-decisions-v1.json`. The automation
+materializes every still-active entry with status `approved` into the runtime
+source, generated `transientEventFeed` package, and stable manifest in the same
+pull request. Merging that pull request therefore publishes the approved set
+through the normal dynamic-metadata channel. Pending, held, rejected, expired,
+or stale-evidence entries are not published.
 
 ## Source contract
 
@@ -182,14 +186,19 @@ and source links. A missing thumbnail must never block candidate review or be
 silently replaced with an unrelated nearby image.
 
 The page separates enrichment state from an `approve`, `hold`, or `reject`
-recommendation and leaves `reviewDecision` pending. A pull-request approval is
-the editorial rubber stamp for the current PR head and generated review-evidence
-hash; a changed head or hash requires renewed review. Approval or merge does
-not itself mutate `reviewDecision`, publish a runtime package, change iOS UI,
-or send a notification. The workflow dismisses approvals attached to an older
-head after a material artifact update and refreshes the PR body even when a
-rerun produces no new artifact commit. Promotion remains a separate explicit
-step.
+recommendation. The generated queue keeps `reviewDecision` pending because the
+dated queue is evidence, not the decision surface. Curated status lives in the
+decision registry and must be one of `pending`, `approved`, `hold`, or
+`rejected`. Non-pending decisions require stable `decidedBy` and
+`decidedAtUTC` values.
+
+Each decision records a candidate evidence hash. If the source evidence changes,
+the workflow resets the decision to pending and requires review again. The
+workflow also dismisses GitHub approvals attached to an older PR head. Before
+merge, it regenerates the runtime source, stable package, and manifest from the
+decision registry and validates that they agree. The merge publishes only the
+still-active approved entries; PR approval alone does not change statuses,
+alter iOS UI, or send notifications.
 
 ## Automation
 
@@ -208,3 +217,22 @@ opportunity records differ from the latest checked-in review artifact. Input
 filename/row provenance and counts alone do not create review churn;
 classification, score, age/status, source modification time, or candidate-set
 changes do.
+
+The workflow continues the existing review branch, merges the current metadata
+`main` branch, synchronizes new candidates into the decision registry as
+pending, and preserves unchanged human decisions. It then runs:
+
+```bash
+python3 scripts/apply_tns_transient_review_decisions.py
+python3 scripts/publish_tns_transient_opportunities.py
+python3 scripts/apply_tns_transient_review_decisions.py --check
+python3 scripts/publish_tns_transient_opportunities.py --validate-only
+```
+
+To publish a candidate, edit only the canonical decision registry: set its
+status to `approved`, fill `decidedBy` with a stable project alias, and record an
+ISO-8601 `decidedAtUTC`. Rerun the workflow so the generated runtime/package
+files and PR body reflect the decision. Merge the PR only after those generated
+files are current. The existing metadata hosting path then exposes the updated
+stable manifest and package to compatible AstroGuide clients on their normal
+dynamic-data refresh cadence.
