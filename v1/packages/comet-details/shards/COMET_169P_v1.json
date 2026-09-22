@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260910-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260921-aerith",
   "packageRole": "comet",
   "shardID": "COMET_169P",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "169P/NEAT",
     "aerithName": "169P/NEAT",
     "detailURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
-    "generatedAt": "2026-09-10T22:23:29Z",
+    "generatedAt": "2026-09-21T10:32:18Z",
     "visibilitySummary": {
-      "state": "futureVisible",
-      "referenceDate": "2026-09-05",
+      "state": "comingSoon",
+      "referenceDate": "2026-09-12",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-09-05",
-      "aerithNextUsefulDate": null,
-      "aerithCurrentMagnitude": 10.2,
-      "aerithNextMagnitude": 10.1,
+      "aerithCurrentDate": "2026-09-12",
+      "aerithNextUsefulDate": "2026-09-19",
+      "aerithCurrentMagnitude": 10.1,
+      "aerithNextMagnitude": 10.3,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 1.0,
-        "south": -8.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 7.0,
         "south": 0.0
       },
-      "futureUsefulStartDate": "2026-09-05",
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 12.0,
+        "south": 5.0
+      },
+      "futureUsefulStartDate": "2026-09-12",
       "futureUsefulEndDate": "2026-10-10",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 35
+      "daysUntilFutureUsefulEnd": 28
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-09-05",
+      "referenceDate": "2026-09-12",
       "usefulMagnitudeLimit": 16.0,
       "currentMagnitudeEstimate": 14.0,
-      "currentSampleDate": "2026-09-05",
+      "currentSampleDate": "2026-09-12",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-09-05",
+      "firstFutureUsefulDate": "2026-09-12",
       "lastFutureUsefulDate": "2026-10-10",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 35,
+      "daysUntilUsefulEnd": 28,
       "brightestMagnitude": 10.7,
       "brightestDate": "2026-08-22",
       "faintestMagnitude": 21.951,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-09-10T22:23:29Z",
+      "generatedAt": "2026-09-21T10:32:18Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -99,92 +99,92 @@
     },
     "brightness": [
       {
-        "id": "169P-2026-08-11-report-1",
-        "date": "2026-08-11",
-        "magnitude": 10.8,
+        "id": "169P-2026-09-09-report-1",
+        "date": "2026-09-09",
+        "magnitude": 11.0,
         "qualifier": "reported",
         "estimateKind": "reported",
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
-        "commentary": "It approached to Earth down to 0.17 a.u. mid August. Now it is 10.8 mag (Aug. 11, Thomas Lehmann). It will turn to fade out rapidly after the peak. It will be fainter than 18 mag in November. It locates somewhat low in the Northern Hemisphere. In the Southern Hemisphere, it is not observable now, but it will be observable soon."
+        "commentary": "It approached to Earth down to 0.17 a.u. mid August. Now it is 11.0 mag (Sept. 9, Mike Olason). It will fade out rapidly after this. It will be fainter than 18 mag in November. It locates somewhat low in the Northern Hemisphere. It stays extremely low in the Southern Hemisphere."
       },
       {
-        "id": "169P-2026-09-05-north-weekly-1",
-        "date": "2026-09-05",
-        "magnitude": 10.2,
+        "id": "169P-2026-09-12-north-weekly-1",
+        "date": "2026-09-12",
+        "magnitude": 10.1,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -0.6
+        "magnitudeDelta": -0.9
       },
       {
-        "id": "169P-2026-09-12-north-weekly-2",
-        "date": "2026-09-12",
-        "magnitude": 10.1,
+        "id": "169P-2026-09-19-north-weekly-2",
+        "date": "2026-09-19",
+        "magnitude": 10.3,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -0.1
+        "magnitudeDelta": 0.2
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-08-11",
-      "availableEndDate": "2026-09-12",
-      "actualDaySpan": 32,
+      "availableStartDate": "2026-09-09",
+      "availableEndDate": "2026-09-19",
+      "actualDaySpan": 10,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
       "points": [
         {
-          "id": "169P-2026-08-11-report-1",
-          "date": "2026-08-11",
-          "magnitude": 10.8,
+          "id": "169P-2026-09-09-report-1",
+          "date": "2026-09-09",
+          "magnitude": 11.0,
           "qualifier": "reported",
           "estimateKind": "reported",
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
           "sourceURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
-          "commentary": "It approached to Earth down to 0.17 a.u. mid August. Now it is 10.8 mag (Aug. 11, Thomas Lehmann). It will turn to fade out rapidly after the peak. It will be fainter than 18 mag in November. It locates somewhat low in the Northern Hemisphere. In the Southern Hemisphere, it is not observable now, but it will be observable soon."
+          "commentary": "It approached to Earth down to 0.17 a.u. mid August. Now it is 11.0 mag (Sept. 9, Mike Olason). It will fade out rapidly after this. It will be fainter than 18 mag in November. It locates somewhat low in the Northern Hemisphere. It stays extremely low in the Southern Hemisphere."
         },
         {
-          "id": "169P-2026-09-05-north-weekly-1",
-          "date": "2026-09-05",
-          "magnitude": 10.2,
+          "id": "169P-2026-09-12-north-weekly-1",
+          "date": "2026-09-12",
+          "magnitude": 10.1,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": -0.6
+          "magnitudeDelta": -0.9
         },
         {
-          "id": "169P-2026-09-12-north-weekly-2",
-          "date": "2026-09-12",
-          "magnitude": 10.1,
+          "id": "169P-2026-09-19-north-weekly-2",
+          "date": "2026-09-19",
+          "magnitude": 10.3,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": -0.1
+          "magnitudeDelta": 0.2
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 10.1,
-      "currentDate": "2026-09-12",
-      "currentPointID": "169P-2026-09-12-north-weekly-2",
-      "comparisonMagnitude": 10.2,
-      "comparisonDate": "2026-09-05",
-      "comparisonPointID": "169P-2026-09-05-north-weekly-1",
+      "currentMagnitude": 10.3,
+      "currentDate": "2026-09-19",
+      "currentPointID": "169P-2026-09-19-north-weekly-2",
+      "comparisonMagnitude": 10.1,
+      "comparisonDate": "2026-09-12",
+      "comparisonPointID": "169P-2026-09-12-north-weekly-1",
       "comparisonWindowDays": 7,
-      "deltaMagnitude": -0.1,
+      "deltaMagnitude": 0.2,
       "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
