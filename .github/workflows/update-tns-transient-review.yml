@@ -44,6 +44,12 @@ jobs:
           path: astroguide-metadata
           fetch-depth: 0
 
+      - name: Configure Git identity for automation
+        working-directory: astroguide-metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Continue the existing review branch when present
         working-directory: astroguide-metadata
         env:
@@ -213,8 +219,6 @@ jobs:
             exit 2
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [[ "$has_changes" == true ]]; then
             git commit -m "Update TNS transient review queue"
             git push --force-with-lease origin "$BRANCH_NAME"
