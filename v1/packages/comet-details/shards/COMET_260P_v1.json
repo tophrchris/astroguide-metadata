@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260921-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260925-aerith",
   "packageRole": "comet",
   "shardID": "COMET_260P",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "260P/McNaught",
     "aerithName": "260P/McNaught",
     "detailURL": "http://www.aerith.net/comet/catalog/0260P/2026.html",
-    "generatedAt": "2026-09-21T10:32:18Z",
+    "generatedAt": "2026-09-25T03:36:32Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-09-12",
+      "referenceDate": "2026-09-19",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-09-12",
-      "aerithNextUsefulDate": "2026-09-19",
-      "aerithCurrentMagnitude": 13.1,
-      "aerithNextMagnitude": 13.2,
+      "aerithCurrentDate": "2026-09-19",
+      "aerithNextUsefulDate": "2026-09-26",
+      "aerithCurrentMagnitude": 13.2,
+      "aerithNextMagnitude": 13.3,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 73.0,
-        "south": 16.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 76.0,
         "south": 14.0
       },
-      "futureUsefulStartDate": "2026-09-12",
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 78.0,
+        "south": 12.0
+      },
+      "futureUsefulStartDate": "2026-09-19",
       "futureUsefulEndDate": "2026-11-16",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 65
+      "daysUntilFutureUsefulEnd": 58
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-09-12",
+      "referenceDate": "2026-09-19",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 15.059,
-      "currentSampleDate": "2026-09-12",
+      "currentMagnitudeEstimate": 15.119,
+      "currentSampleDate": "2026-09-19",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-09-12",
+      "firstFutureUsefulDate": "2026-09-19",
       "lastFutureUsefulDate": "2026-11-16",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 65,
+      "daysUntilUsefulEnd": 58,
       "brightestMagnitude": 13.0,
       "brightestDate": "2026-08-22",
       "faintestMagnitude": 22.734,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0260P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-09-21T10:32:18Z",
+      "generatedAt": "2026-09-25T03:36:32Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -99,31 +99,31 @@
     },
     "brightness": [
       {
-        "id": "260P-2026-08-24-report-1",
-        "date": "2026-08-24",
-        "magnitude": 13.7,
+        "id": "260P-2026-09-08-report-1",
+        "date": "2026-09-08",
+        "magnitude": 13.4,
         "qualifier": "reported",
         "estimateKind": "reported",
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0260P/2026.html",
-        "commentary": "Now it is 13.7 mag (Aug. 24, Hiroshi Abe). It will fade out rapidly after this. In the Northern Hemisphere, it stays observable in good condition. It stays extremely low in the Southern Hemisphere."
+        "commentary": "Now it is 13.4 mag (Sept. 8, M. Jaeger, G. Rhemann, E. Prosperi). It will fade out rapidly after this. In the Northern Hemisphere, it stays observable in good condition. It stays extremely low in the Southern Hemisphere."
       },
       {
-        "id": "260P-2026-09-12-north-weekly-1",
-        "date": "2026-09-12",
-        "magnitude": 13.1,
+        "id": "260P-2026-09-19-north-weekly-1",
+        "date": "2026-09-19",
+        "magnitude": 13.2,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -0.6
+        "magnitudeDelta": -0.2
       },
       {
-        "id": "260P-2026-09-19-north-weekly-2",
-        "date": "2026-09-19",
-        "magnitude": 13.2,
+        "id": "260P-2026-09-26-north-weekly-2",
+        "date": "2026-09-26",
+        "magnitude": 13.3,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
@@ -134,39 +134,39 @@
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-08-24",
-      "availableEndDate": "2026-09-19",
-      "actualDaySpan": 26,
+      "availableStartDate": "2026-09-08",
+      "availableEndDate": "2026-09-26",
+      "actualDaySpan": 18,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
       "points": [
         {
-          "id": "260P-2026-08-24-report-1",
-          "date": "2026-08-24",
-          "magnitude": 13.7,
+          "id": "260P-2026-09-08-report-1",
+          "date": "2026-09-08",
+          "magnitude": 13.4,
           "qualifier": "reported",
           "estimateKind": "reported",
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
           "sourceURL": "http://www.aerith.net/comet/catalog/0260P/2026.html",
-          "commentary": "Now it is 13.7 mag (Aug. 24, Hiroshi Abe). It will fade out rapidly after this. In the Northern Hemisphere, it stays observable in good condition. It stays extremely low in the Southern Hemisphere."
+          "commentary": "Now it is 13.4 mag (Sept. 8, M. Jaeger, G. Rhemann, E. Prosperi). It will fade out rapidly after this. In the Northern Hemisphere, it stays observable in good condition. It stays extremely low in the Southern Hemisphere."
         },
         {
-          "id": "260P-2026-09-12-north-weekly-1",
-          "date": "2026-09-12",
-          "magnitude": 13.1,
+          "id": "260P-2026-09-19-north-weekly-1",
+          "date": "2026-09-19",
+          "magnitude": 13.2,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": -0.6
+          "magnitudeDelta": -0.2
         },
         {
-          "id": "260P-2026-09-19-north-weekly-2",
-          "date": "2026-09-19",
-          "magnitude": 13.2,
+          "id": "260P-2026-09-26-north-weekly-2",
+          "date": "2026-09-26",
+          "magnitude": 13.3,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
@@ -177,12 +177,12 @@
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 13.2,
-      "currentDate": "2026-09-19",
-      "currentPointID": "260P-2026-09-19-north-weekly-2",
-      "comparisonMagnitude": 13.1,
-      "comparisonDate": "2026-09-12",
-      "comparisonPointID": "260P-2026-09-12-north-weekly-1",
+      "currentMagnitude": 13.3,
+      "currentDate": "2026-09-26",
+      "currentPointID": "260P-2026-09-26-north-weekly-2",
+      "comparisonMagnitude": 13.2,
+      "comparisonDate": "2026-09-19",
+      "comparisonPointID": "260P-2026-09-19-north-weekly-1",
       "comparisonWindowDays": 7,
       "deltaMagnitude": 0.1,
       "direction": "stable",

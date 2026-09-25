@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260921-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260925-aerith",
   "packageRole": "comet",
   "shardID": "COMET_93P",
   "record": {
@@ -10,23 +10,23 @@
     "displayName": "93P/Lovas",
     "aerithName": "93P/Lovas 1",
     "detailURL": "http://www.aerith.net/comet/catalog/0093P/2026.html",
-    "generatedAt": "2026-09-21T10:32:18Z",
+    "generatedAt": "2026-09-25T03:36:32Z",
     "visibilitySummary": {
       "state": "notCurrentlyUseful",
-      "referenceDate": "2026-09-12",
+      "referenceDate": "2026-09-19",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-09-12",
+      "aerithCurrentDate": "2026-09-19",
       "aerithNextUsefulDate": null,
-      "aerithCurrentMagnitude": 17.3,
-      "aerithNextMagnitude": 17.4,
+      "aerithCurrentMagnitude": 17.4,
+      "aerithNextMagnitude": 17.5,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 17.0,
-        "south": -3.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 20.0,
         "south": -2.0
+      },
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 24.0,
+        "south": 0.0
       },
       "futureUsefulStartDate": null,
       "futureUsefulEndDate": null,
@@ -40,10 +40,10 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-09-12",
+      "referenceDate": "2026-09-19",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 18.308,
-      "currentSampleDate": "2026-09-12",
+      "currentMagnitudeEstimate": 18.397,
+      "currentSampleDate": "2026-09-19",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0093P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-09-21T10:32:18Z",
+      "generatedAt": "2026-09-25T03:36:32Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -99,9 +99,9 @@
     },
     "brightness": [
       {
-        "id": "93P-2026-09-12-north-weekly-1",
-        "date": "2026-09-12",
-        "magnitude": 17.3,
+        "id": "93P-2026-09-19-north-weekly-1",
+        "date": "2026-09-19",
+        "magnitude": 17.4,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
@@ -109,9 +109,9 @@
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html"
       },
       {
-        "id": "93P-2026-09-19-north-weekly-2",
-        "date": "2026-09-19",
-        "magnitude": 17.4,
+        "id": "93P-2026-09-26-north-weekly-2",
+        "date": "2026-09-26",
+        "magnitude": 17.5,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
@@ -122,17 +122,17 @@
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-09-12",
-      "availableEndDate": "2026-09-19",
+      "availableStartDate": "2026-09-19",
+      "availableEndDate": "2026-09-26",
       "actualDaySpan": 7,
       "pointCount": 2,
       "containsProjection": true,
       "containsReportedObservation": false,
       "points": [
         {
-          "id": "93P-2026-09-12-north-weekly-1",
-          "date": "2026-09-12",
-          "magnitude": 17.3,
+          "id": "93P-2026-09-19-north-weekly-1",
+          "date": "2026-09-19",
+          "magnitude": 17.4,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
@@ -140,9 +140,9 @@
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html"
         },
         {
-          "id": "93P-2026-09-19-north-weekly-2",
-          "date": "2026-09-19",
-          "magnitude": 17.4,
+          "id": "93P-2026-09-26-north-weekly-2",
+          "date": "2026-09-26",
+          "magnitude": 17.5,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
@@ -153,12 +153,12 @@
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 17.4,
-      "currentDate": "2026-09-19",
-      "currentPointID": "93P-2026-09-19-north-weekly-2",
-      "comparisonMagnitude": 17.3,
-      "comparisonDate": "2026-09-12",
-      "comparisonPointID": "93P-2026-09-12-north-weekly-1",
+      "currentMagnitude": 17.5,
+      "currentDate": "2026-09-26",
+      "currentPointID": "93P-2026-09-26-north-weekly-2",
+      "comparisonMagnitude": 17.4,
+      "comparisonDate": "2026-09-19",
+      "comparisonPointID": "93P-2026-09-19-north-weekly-1",
       "comparisonWindowDays": 7,
       "deltaMagnitude": 0.1,
       "direction": "stable",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260921-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260925-aerith",
   "packageRole": "comet",
   "shardID": "COMET_161P",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "161P/Hartley-IRAS",
     "aerithName": "161P/Hartley-IRAS",
     "detailURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
-    "generatedAt": "2026-09-21T10:32:18Z",
+    "generatedAt": "2026-09-25T03:36:32Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-09-12",
+      "referenceDate": "2026-09-19",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-09-12",
-      "aerithNextUsefulDate": "2026-09-19",
-      "aerithCurrentMagnitude": 12.3,
-      "aerithNextMagnitude": 11.6,
+      "aerithCurrentDate": "2026-09-19",
+      "aerithNextUsefulDate": "2026-09-26",
+      "aerithCurrentMagnitude": 11.6,
+      "aerithNextMagnitude": 10.9,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 38.0,
-        "south": 72.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 40.0,
         "south": 70.0
       },
-      "futureUsefulStartDate": "2026-09-12",
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 44.0,
+        "south": 66.0
+      },
+      "futureUsefulStartDate": "2026-09-19",
       "futureUsefulEndDate": "2027-03-24",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 193
+      "daysUntilFutureUsefulEnd": 186
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-09-12",
+      "referenceDate": "2026-09-19",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 13.355,
-      "currentSampleDate": "2026-09-12",
+      "currentMagnitudeEstimate": 12.764,
+      "currentSampleDate": "2026-09-19",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-09-12",
+      "firstFutureUsefulDate": "2026-09-19",
       "lastFutureUsefulDate": "2027-03-24",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 193,
+      "daysUntilUsefulEnd": 186,
       "brightestMagnitude": 11.945,
       "brightestDate": "2026-10-06",
       "faintestMagnitude": 19.664,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-09-21T10:32:18Z",
+      "generatedAt": "2026-09-25T03:36:32Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -107,25 +107,25 @@
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
-        "commentary": "It is expected to brighten up 10 mag from autumn to winter, and it will be observable in good condition. Now it is 11.5 mag (Sept. 9, Michael Jager). Brightening slowly. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be getting lower gradually after this, and it will be unobservable in November.",
+        "commentary": "Now it is 11.5 mag (Sept. 9, Michael Jager). Brightening slowly. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be getting lower gradually after this, and it will be unobservable in November.",
         "isSignificant": true,
         "significanceKind": "outburst"
       },
       {
-        "id": "161P-2026-09-12-north-weekly-1",
-        "date": "2026-09-12",
-        "magnitude": 12.3,
+        "id": "161P-2026-09-19-north-weekly-1",
+        "date": "2026-09-19",
+        "magnitude": 11.6,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.8
+        "magnitudeDelta": 0.1
       },
       {
-        "id": "161P-2026-09-19-north-weekly-2",
-        "date": "2026-09-19",
-        "magnitude": 11.6,
+        "id": "161P-2026-09-26-north-weekly-2",
+        "date": "2026-09-26",
+        "magnitude": 10.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
@@ -137,8 +137,8 @@
     "brightnessChart": {
       "lookbackDays": 90,
       "availableStartDate": "2026-09-09",
-      "availableEndDate": "2026-09-19",
-      "actualDaySpan": 10,
+      "availableEndDate": "2026-09-26",
+      "actualDaySpan": 17,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
@@ -152,25 +152,25 @@
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
           "sourceURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
-          "commentary": "It is expected to brighten up 10 mag from autumn to winter, and it will be observable in good condition. Now it is 11.5 mag (Sept. 9, Michael Jager). Brightening slowly. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be getting lower gradually after this, and it will be unobservable in November.",
+          "commentary": "Now it is 11.5 mag (Sept. 9, Michael Jager). Brightening slowly. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be getting lower gradually after this, and it will be unobservable in November.",
           "isSignificant": true,
           "significanceKind": "outburst"
         },
         {
-          "id": "161P-2026-09-12-north-weekly-1",
-          "date": "2026-09-12",
-          "magnitude": 12.3,
+          "id": "161P-2026-09-19-north-weekly-1",
+          "date": "2026-09-19",
+          "magnitude": 11.6,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.8
+          "magnitudeDelta": 0.1
         },
         {
-          "id": "161P-2026-09-19-north-weekly-2",
-          "date": "2026-09-19",
-          "magnitude": 11.6,
+          "id": "161P-2026-09-26-north-weekly-2",
+          "date": "2026-09-26",
+          "magnitude": 10.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
@@ -181,12 +181,12 @@
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 11.6,
-      "currentDate": "2026-09-19",
-      "currentPointID": "161P-2026-09-19-north-weekly-2",
-      "comparisonMagnitude": 12.3,
-      "comparisonDate": "2026-09-12",
-      "comparisonPointID": "161P-2026-09-12-north-weekly-1",
+      "currentMagnitude": 10.9,
+      "currentDate": "2026-09-26",
+      "currentPointID": "161P-2026-09-26-north-weekly-2",
+      "comparisonMagnitude": 11.6,
+      "comparisonDate": "2026-09-19",
+      "comparisonPointID": "161P-2026-09-19-north-weekly-1",
       "comparisonWindowDays": 7,
       "deltaMagnitude": -0.7,
       "direction": "brightening",

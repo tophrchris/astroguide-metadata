@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260921-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260925-aerith",
   "packageRole": "index",
-  "generatedAt": "2026-09-21T10:32:18Z",
+  "generatedAt": "2026-09-25T03:36:32Z",
   "source": {
     "name": "Aerith / Seiichi Yoshida",
     "sourceURL": "https://www.aerith.net/",
@@ -21,25 +21,25 @@
       "visibilityState": "current",
       "visibilitySummary": {
         "state": "current",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
-        "aerithNextUsefulDate": "2026-09-19",
-        "aerithCurrentMagnitude": 8.9,
-        "aerithNextMagnitude": 9.2,
+        "aerithCurrentDate": "2026-09-19",
+        "aerithNextUsefulDate": "2026-09-26",
+        "aerithCurrentMagnitude": 9.2,
+        "aerithNextMagnitude": 9.5,
         "currentBestAltitudeDegreesByHemisphere": {
           "north": 20.0,
           "south": 90.0
         },
         "nextBestAltitudeDegreesByHemisphere": {
-          "north": 20.0,
-          "south": 90.0
+          "north": 21.0,
+          "south": 89.0
         },
-        "futureUsefulStartDate": "2026-09-12",
+        "futureUsefulStartDate": "2026-09-19",
         "futureUsefulEndDate": "2026-11-19",
         "daysUntilFutureUsefulStart": 0,
-        "daysUntilFutureUsefulEnd": 68
+        "daysUntilFutureUsefulEnd": 61
       },
       "ephemerisSummary": {
         "validStart": "2026-07-12T00:00:00Z",
@@ -48,15 +48,15 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 13.767,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 13.972,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "useful",
-        "firstFutureUsefulDate": "2026-09-12",
+        "firstFutureUsefulDate": "2026-09-19",
         "lastFutureUsefulDate": "2026-11-19",
         "daysUntilUsefulStart": 0,
-        "daysUntilUsefulEnd": 68,
+        "daysUntilUsefulEnd": 61,
         "brightestMagnitude": 8.0,
         "brightestDate": "2026-08-08",
         "faintestMagnitude": 20.017,
@@ -72,26 +72,24 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 9.2,
-        "currentDate": "2026-09-19",
-        "currentPointID": "10P-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 8.9,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "10P-2026-09-12-north-weekly-1",
+        "currentMagnitude": 9.5,
+        "currentDate": "2026-09-26",
+        "currentPointID": "10P-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 9.2,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "10P-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
         "deltaMagnitude": 0.3,
         "direction": "fading",
         "isNotable": false,
         "notableChangeThresholdMagnitude": 1.0,
-        "notableObservationIDs": [
-          "10P-2026-09-12-north-weekly-1"
-        ]
+        "notableObservationIDs": []
       },
       "brightnessRange": {
         "lookbackDays": 90,
-        "availableStartDate": "2026-09-07",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 12,
+        "availableStartDate": "2026-09-17",
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 9,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -100,10 +98,10 @@
       "fileName": "COMET_10P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_10P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_10P_v1.json",
-      "checksum": "2f1e502004d83f71a078751cc554919e10c8beb9a0599d72fc20d2bfcb323de1",
-      "byteSize": 8202,
+      "checksum": "6cc95b73e5bf28b3a19aa322a1b50db93f6d742e8099436b894ffeb5f57ea7fe",
+      "byteSize": 7826,
       "observationCount": 3,
-      "highlightCount": 1,
+      "highlightCount": 0,
       "cachedImageCount": 2
     },
     {
@@ -116,16 +114,16 @@
       "visibilityState": "current",
       "visibilitySummary": {
         "state": "current",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
-        "aerithNextUsefulDate": "2026-09-19",
-        "aerithCurrentMagnitude": 10.9,
-        "aerithNextMagnitude": 11.6,
+        "aerithCurrentDate": "2026-09-19",
+        "aerithNextUsefulDate": "2026-09-26",
+        "aerithCurrentMagnitude": 11.6,
+        "aerithNextMagnitude": 12.2,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 63.0,
-          "south": 47.0
+          "north": 62.0,
+          "south": 48.0
         },
         "nextBestAltitudeDegreesByHemisphere": {
           "north": 62.0,
@@ -143,10 +141,10 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 17.195,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 17.363,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "tooFaint",
         "firstFutureUsefulDate": null,
         "lastFutureUsefulDate": null,
@@ -167,27 +165,28 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 11.6,
-        "currentDate": "2026-09-19",
-        "currentPointID": "220P-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 10.9,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "220P-2026-09-12-north-weekly-1",
-        "comparisonWindowDays": 7,
-        "deltaMagnitude": 0.7,
+        "currentMagnitude": 12.2,
+        "currentDate": "2026-09-26",
+        "currentPointID": "220P-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 11.6,
+        "comparisonDate": "2026-09-21",
+        "comparisonPointID": "220P-2026-09-21-report-3",
+        "comparisonWindowDays": 5,
+        "deltaMagnitude": 0.6,
         "direction": "fading",
         "isNotable": false,
         "notableChangeThresholdMagnitude": 1.0,
         "notableObservationIDs": [
           "220P-2026-08-06-report-2",
-          "220P-2026-09-04-report-3"
+          "220P-2026-09-19-north-weekly-1",
+          "220P-2026-09-21-report-3"
         ]
       },
       "brightnessRange": {
         "lookbackDays": 90,
         "availableStartDate": "2026-08-06",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 44,
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 51,
         "pointCount": 4,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -196,10 +195,10 @@
       "fileName": "COMET_220P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_220P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_220P_v1.json",
-      "checksum": "e3dd44e09e235ffe195f59d152b01eb13d0faeb07341de238a4c87bc14c42970",
-      "byteSize": 11219,
+      "checksum": "860fd3138bb1b059d8af521840f8747efd0ba7e21067ffc6b7c32f897a1620bf",
+      "byteSize": 11419,
       "observationCount": 5,
-      "highlightCount": 3,
+      "highlightCount": 4,
       "cachedImageCount": 2
     },
     {
@@ -212,25 +211,25 @@
       "visibilityState": "current",
       "visibilitySummary": {
         "state": "current",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
-        "aerithNextUsefulDate": "2026-09-19",
+        "aerithCurrentDate": "2026-09-19",
+        "aerithNextUsefulDate": "2026-09-26",
         "aerithCurrentMagnitude": 13.3,
         "aerithNextMagnitude": 13.3,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 45.0,
-          "south": 23.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 49.0,
           "south": 24.0
         },
-        "futureUsefulStartDate": "2026-09-12",
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 53.0,
+          "south": 26.0
+        },
+        "futureUsefulStartDate": "2026-09-19",
         "futureUsefulEndDate": "2027-02-08",
         "daysUntilFutureUsefulStart": 0,
-        "daysUntilFutureUsefulEnd": 149
+        "daysUntilFutureUsefulEnd": 142
       },
       "ephemerisSummary": {
         "validStart": "2026-07-12T00:00:00Z",
@@ -239,15 +238,15 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 15.17,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 15.168,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "useful",
-        "firstFutureUsefulDate": "2026-09-12",
+        "firstFutureUsefulDate": "2026-09-19",
         "lastFutureUsefulDate": "2027-02-08",
         "daysUntilUsefulStart": 0,
-        "daysUntilUsefulEnd": 149,
+        "daysUntilUsefulEnd": 142,
         "brightestMagnitude": 13.2,
         "brightestDate": "2026-08-08",
         "faintestMagnitude": 19.22,
@@ -264,11 +263,11 @@
       },
       "brightnessTrend": {
         "currentMagnitude": 13.3,
-        "currentDate": "2026-09-19",
-        "currentPointID": "78P-2026-09-19-north-weekly-2",
+        "currentDate": "2026-09-26",
+        "currentPointID": "78P-2026-09-26-north-weekly-2",
         "comparisonMagnitude": 13.3,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "78P-2026-09-12-north-weekly-1",
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "78P-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
         "deltaMagnitude": 0.0,
         "direction": "stable",
@@ -278,9 +277,9 @@
       },
       "brightnessRange": {
         "lookbackDays": 90,
-        "availableStartDate": "2026-08-16",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 34,
+        "availableStartDate": "2026-09-08",
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 18,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -289,8 +288,8 @@
       "fileName": "COMET_78P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_78P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_78P_v1.json",
-      "checksum": "2ecc852f2dd7368c4d5c1562b7c1ca31d24292443c07ca2cd5db7e4c4607e4c1",
-      "byteSize": 7708,
+      "checksum": "52899d82a6d20ce658d7d62cdba7c6c9adfdcff3e801389565087f346b4a9603",
+      "byteSize": 7747,
       "observationCount": 3,
       "highlightCount": 0,
       "cachedImageCount": 2
@@ -305,25 +304,25 @@
       "visibilityState": "current",
       "visibilitySummary": {
         "state": "current",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
-        "aerithNextUsefulDate": "2026-09-19",
-        "aerithCurrentMagnitude": 14.5,
-        "aerithNextMagnitude": 14.6,
+        "aerithCurrentDate": "2026-09-19",
+        "aerithNextUsefulDate": "2026-09-26",
+        "aerithCurrentMagnitude": 14.6,
+        "aerithNextMagnitude": 14.7,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 18.0,
-          "south": 44.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 15.0,
           "south": 37.0
         },
-        "futureUsefulStartDate": "2026-09-12",
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 11.0,
+          "south": 31.0
+        },
+        "futureUsefulStartDate": "2026-09-19",
         "futureUsefulEndDate": "2026-10-21",
         "daysUntilFutureUsefulStart": 0,
-        "daysUntilFutureUsefulEnd": 39
+        "daysUntilFutureUsefulEnd": 32
       },
       "ephemerisSummary": {
         "validStart": "2026-07-12T00:00:00Z",
@@ -332,15 +331,15 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 15.538,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 15.634,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "useful",
-        "firstFutureUsefulDate": "2026-09-12",
+        "firstFutureUsefulDate": "2026-09-19",
         "lastFutureUsefulDate": "2026-10-21",
         "daysUntilUsefulStart": 0,
-        "daysUntilUsefulEnd": 39,
+        "daysUntilUsefulEnd": 32,
         "brightestMagnitude": 14.0,
         "brightestDate": "2026-08-08",
         "faintestMagnitude": 17.273,
@@ -356,12 +355,12 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 14.6,
-        "currentDate": "2026-09-19",
-        "currentPointID": "C/2023R1-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 14.5,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "C/2023R1-2026-09-12-north-weekly-1",
+        "currentMagnitude": 14.7,
+        "currentDate": "2026-09-26",
+        "currentPointID": "C/2023R1-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 14.6,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "C/2023R1-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
         "deltaMagnitude": 0.1,
         "direction": "stable",
@@ -372,8 +371,8 @@
       "brightnessRange": {
         "lookbackDays": 90,
         "availableStartDate": "2026-09-07",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 12,
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 19,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -382,7 +381,7 @@
       "fileName": "COMET_C_2023_R1_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_C_2023_R1_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_C_2023_R1_v1.json",
-      "checksum": "f23daf36c9cb8473af80d4454868c4b6917c756291f23ba221324e66eb79058b",
+      "checksum": "102a03e8aa4466054fe04df4373c50dbddb1887be4eb960f363114c291e1c533",
       "byteSize": 7987,
       "observationCount": 3,
       "highlightCount": 0,
@@ -398,25 +397,25 @@
       "visibilityState": "current",
       "visibilitySummary": {
         "state": "current",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
-        "aerithNextUsefulDate": "2026-09-19",
-        "aerithCurrentMagnitude": 13.5,
+        "aerithCurrentDate": "2026-09-19",
+        "aerithNextUsefulDate": "2026-09-26",
+        "aerithCurrentMagnitude": 13.6,
         "aerithNextMagnitude": 13.6,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 80.0,
-          "south": 12.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 77.0,
           "south": 12.0
         },
-        "futureUsefulStartDate": "2026-09-12",
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 75.0,
+          "south": 11.0
+        },
+        "futureUsefulStartDate": "2026-09-19",
         "futureUsefulEndDate": "2027-07-12",
         "daysUntilFutureUsefulStart": 0,
-        "daysUntilFutureUsefulEnd": 303
+        "daysUntilFutureUsefulEnd": 296
       },
       "ephemerisSummary": {
         "validStart": "2026-07-12T00:00:00Z",
@@ -425,15 +424,15 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 14.911,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 14.931,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "useful",
-        "firstFutureUsefulDate": "2026-09-12",
+        "firstFutureUsefulDate": "2026-09-19",
         "lastFutureUsefulDate": "2027-07-12",
         "daysUntilUsefulStart": 0,
-        "daysUntilUsefulEnd": 303,
+        "daysUntilUsefulEnd": 296,
         "brightestMagnitude": 13.5,
         "brightestDate": "2026-08-08",
         "faintestMagnitude": 15.743,
@@ -450,13 +449,13 @@
       },
       "brightnessTrend": {
         "currentMagnitude": 13.6,
-        "currentDate": "2026-09-19",
-        "currentPointID": "C/2024J3-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 13.5,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "C/2024J3-2026-09-12-north-weekly-1",
+        "currentDate": "2026-09-26",
+        "currentPointID": "C/2024J3-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 13.6,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "C/2024J3-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
-        "deltaMagnitude": 0.1,
+        "deltaMagnitude": 0.0,
         "direction": "stable",
         "isNotable": false,
         "notableChangeThresholdMagnitude": 1.0,
@@ -464,9 +463,9 @@
       },
       "brightnessRange": {
         "lookbackDays": 90,
-        "availableStartDate": "2026-08-24",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 26,
+        "availableStartDate": "2026-09-17",
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 9,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -475,8 +474,8 @@
       "fileName": "COMET_C_2024_J3_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_C_2024_J3_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_C_2024_J3_v1.json",
-      "checksum": "daba776136e2608e4667f934f4ff336bdf39dba6bbf7799eda5c472fbfe86d0c",
-      "byteSize": 8007,
+      "checksum": "3b8f92f0d8de87a335f42e6c83fd974fcf9ae71a04a128009ec1cb64a81007b5",
+      "byteSize": 7954,
       "observationCount": 3,
       "highlightCount": 0,
       "cachedImageCount": 2
@@ -491,20 +490,20 @@
       "visibilityState": "notCurrentlyUseful",
       "visibilitySummary": {
         "state": "notCurrentlyUseful",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
+        "aerithCurrentDate": "2026-09-19",
         "aerithNextUsefulDate": null,
-        "aerithCurrentMagnitude": 16.3,
-        "aerithNextMagnitude": 16.5,
+        "aerithCurrentMagnitude": 16.5,
+        "aerithNextMagnitude": 16.7,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 9.0,
-          "south": 42.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 14.0,
           "south": 46.0
+        },
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 18.0,
+          "south": 51.0
         },
         "futureUsefulStartDate": null,
         "futureUsefulEndDate": null,
@@ -518,10 +517,10 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 18.797,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 18.975,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "tooFaint",
         "firstFutureUsefulDate": null,
         "lastFutureUsefulDate": null,
@@ -542,39 +541,36 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 16.5,
-        "currentDate": "2026-09-19",
-        "currentPointID": "C/2025R3-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 16.3,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "C/2025R3-2026-09-12-north-weekly-1",
+        "currentMagnitude": 16.7,
+        "currentDate": "2026-09-26",
+        "currentPointID": "C/2025R3-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 16.5,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "C/2025R3-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
         "deltaMagnitude": 0.2,
         "direction": "stable",
         "isNotable": false,
         "notableChangeThresholdMagnitude": 1.0,
-        "notableObservationIDs": [
-          "C/2025R3-2026-08-15-report-1",
-          "C/2025R3-2026-09-12-north-weekly-1"
-        ]
+        "notableObservationIDs": []
       },
       "brightnessRange": {
         "lookbackDays": 90,
-        "availableStartDate": "2026-08-15",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 35,
-        "pointCount": 3,
+        "availableStartDate": "2026-09-19",
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 7,
+        "pointCount": 2,
         "containsProjection": true,
-        "containsReportedObservation": true
+        "containsReportedObservation": false
       },
       "shardID": "COMET_C_2025_R3",
       "fileName": "COMET_C_2025_R3_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_C_2025_R3_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_C_2025_R3_v1.json",
-      "checksum": "a79e9fea31ae7c635e8f4db5f75ffe696dc038993dd4afb28c8872e524a0f236",
-      "byteSize": 8857,
-      "observationCount": 3,
-      "highlightCount": 2,
+      "checksum": "62e35e889222527e1d66a9f4473a65c73b97b90e258a59b1bd7a67cbfb9e6051",
+      "byteSize": 6654,
+      "observationCount": 2,
+      "highlightCount": 0,
       "cachedImageCount": 2
     },
     {
@@ -584,28 +580,28 @@
       "aerithName": "169P/NEAT",
       "aliases": [],
       "aerithDetailURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
-      "visibilityState": "comingSoon",
+      "visibilityState": "current",
       "visibilitySummary": {
-        "state": "comingSoon",
-        "referenceDate": "2026-09-12",
+        "state": "current",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
-        "aerithNextUsefulDate": "2026-09-19",
-        "aerithCurrentMagnitude": 10.1,
-        "aerithNextMagnitude": 10.3,
+        "aerithCurrentDate": "2026-09-19",
+        "aerithNextUsefulDate": "2026-09-26",
+        "aerithCurrentMagnitude": 10.3,
+        "aerithNextMagnitude": 10.8,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 7.0,
-          "south": 0.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 12.0,
           "south": 5.0
         },
-        "futureUsefulStartDate": "2026-09-12",
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 16.0,
+          "south": 8.0
+        },
+        "futureUsefulStartDate": "2026-09-19",
         "futureUsefulEndDate": "2026-10-10",
         "daysUntilFutureUsefulStart": 0,
-        "daysUntilFutureUsefulEnd": 28
+        "daysUntilFutureUsefulEnd": 21
       },
       "ephemerisSummary": {
         "validStart": "2026-07-12T00:00:00Z",
@@ -614,15 +610,15 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 14.0,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 14.655,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "useful",
-        "firstFutureUsefulDate": "2026-09-12",
+        "firstFutureUsefulDate": "2026-09-19",
         "lastFutureUsefulDate": "2026-10-10",
         "daysUntilUsefulStart": 0,
-        "daysUntilUsefulEnd": 28,
+        "daysUntilUsefulEnd": 21,
         "brightestMagnitude": 10.7,
         "brightestDate": "2026-08-22",
         "faintestMagnitude": 21.951,
@@ -638,15 +634,15 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 10.3,
-        "currentDate": "2026-09-19",
-        "currentPointID": "169P-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 10.1,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "169P-2026-09-12-north-weekly-1",
+        "currentMagnitude": 10.8,
+        "currentDate": "2026-09-26",
+        "currentPointID": "169P-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 10.3,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "169P-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
-        "deltaMagnitude": 0.2,
-        "direction": "stable",
+        "deltaMagnitude": 0.5,
+        "direction": "fading",
         "isNotable": false,
         "notableChangeThresholdMagnitude": 1.0,
         "notableObservationIDs": []
@@ -654,8 +650,8 @@
       "brightnessRange": {
         "lookbackDays": 90,
         "availableStartDate": "2026-09-09",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 10,
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 17,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -664,7 +660,7 @@
       "fileName": "COMET_169P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_169P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_169P_v1.json",
-      "checksum": "7b1c277444407bdccb0b76ee0992b54ca6389040bc9f454ae327854785b6a3c8",
+      "checksum": "e3db02e79db46d3c964ab2c3aec68a49faa58f341a15056aba72b9146bc70989",
       "byteSize": 7941,
       "observationCount": 3,
       "highlightCount": 0,
@@ -680,20 +676,20 @@
       "visibilityState": "notCurrentlyUseful",
       "visibilitySummary": {
         "state": "notCurrentlyUseful",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
+        "aerithCurrentDate": "2026-09-19",
         "aerithNextUsefulDate": null,
         "aerithCurrentMagnitude": 15.0,
-        "aerithNextMagnitude": 15.0,
+        "aerithNextMagnitude": 14.9,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": -1.0,
-          "south": -18.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 2.0,
           "south": -17.0
+        },
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 5.0,
+          "south": -16.0
         },
         "futureUsefulStartDate": null,
         "futureUsefulEndDate": null,
@@ -707,10 +703,10 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 16.839,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 16.818,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "tooFaint",
         "firstFutureUsefulDate": null,
         "lastFutureUsefulDate": null,
@@ -731,25 +727,23 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 15.0,
-        "currentDate": "2026-09-19",
-        "currentPointID": "123P-2026-09-19-north-weekly-2",
+        "currentMagnitude": 14.9,
+        "currentDate": "2026-09-26",
+        "currentPointID": "123P-2026-09-26-north-weekly-2",
         "comparisonMagnitude": 15.0,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "123P-2026-09-12-north-weekly-1",
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "123P-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
-        "deltaMagnitude": 0.0,
+        "deltaMagnitude": -0.1,
         "direction": "stable",
         "isNotable": false,
         "notableChangeThresholdMagnitude": 1.0,
-        "notableObservationIDs": [
-          "123P-2026-09-12-north-weekly-1"
-        ]
+        "notableObservationIDs": []
       },
       "brightnessRange": {
         "lookbackDays": 90,
-        "availableStartDate": "2026-09-12",
-        "availableEndDate": "2026-09-19",
+        "availableStartDate": "2026-09-19",
+        "availableEndDate": "2026-09-26",
         "actualDaySpan": 7,
         "pointCount": 2,
         "containsProjection": true,
@@ -759,10 +753,10 @@
       "fileName": "COMET_123P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_123P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_123P_v1.json",
-      "checksum": "22ffbba9033635c15bfad00078659bac361c164deadc318111b4d15206e8fa46",
-      "byteSize": 7661,
-      "observationCount": 3,
-      "highlightCount": 1,
+      "checksum": "82f5a4bd39276322da0b8bb25854760e1a580aff405a3cc10abb1e15d92cff35",
+      "byteSize": 6579,
+      "observationCount": 2,
+      "highlightCount": 0,
       "cachedImageCount": 2
     },
     {
@@ -775,25 +769,25 @@
       "visibilityState": "current",
       "visibilitySummary": {
         "state": "current",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
-        "aerithNextUsefulDate": "2026-09-19",
-        "aerithCurrentMagnitude": 12.3,
-        "aerithNextMagnitude": 11.6,
+        "aerithCurrentDate": "2026-09-19",
+        "aerithNextUsefulDate": "2026-09-26",
+        "aerithCurrentMagnitude": 11.6,
+        "aerithNextMagnitude": 10.9,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 38.0,
-          "south": 72.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 40.0,
           "south": 70.0
         },
-        "futureUsefulStartDate": "2026-09-12",
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 44.0,
+          "south": 66.0
+        },
+        "futureUsefulStartDate": "2026-09-19",
         "futureUsefulEndDate": "2027-03-24",
         "daysUntilFutureUsefulStart": 0,
-        "daysUntilFutureUsefulEnd": 193
+        "daysUntilFutureUsefulEnd": 186
       },
       "ephemerisSummary": {
         "validStart": "2026-07-12T00:00:00Z",
@@ -802,15 +796,15 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 13.355,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 12.764,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "useful",
-        "firstFutureUsefulDate": "2026-09-12",
+        "firstFutureUsefulDate": "2026-09-19",
         "lastFutureUsefulDate": "2027-03-24",
         "daysUntilUsefulStart": 0,
-        "daysUntilUsefulEnd": 193,
+        "daysUntilUsefulEnd": 186,
         "brightestMagnitude": 11.945,
         "brightestDate": "2026-10-06",
         "faintestMagnitude": 19.664,
@@ -826,12 +820,12 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 11.6,
-        "currentDate": "2026-09-19",
-        "currentPointID": "161P-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 12.3,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "161P-2026-09-12-north-weekly-1",
+        "currentMagnitude": 10.9,
+        "currentDate": "2026-09-26",
+        "currentPointID": "161P-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 11.6,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "161P-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
         "deltaMagnitude": -0.7,
         "direction": "brightening",
@@ -844,8 +838,8 @@
       "brightnessRange": {
         "lookbackDays": 90,
         "availableStartDate": "2026-09-09",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 10,
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 17,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -854,8 +848,8 @@
       "fileName": "COMET_161P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_161P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_161P_v1.json",
-      "checksum": "a2eaf447942b598d3f56d3ef9193801c86ee114a8b929bea3a234308f600e4d2",
-      "byteSize": 8293,
+      "checksum": "092ddbb4d08a17ebcd39e5c361c618fe398fd322666597a83096ff9c1794a7ae",
+      "byteSize": 8083,
       "observationCount": 3,
       "highlightCount": 1,
       "cachedImageCount": 2
@@ -870,16 +864,16 @@
       "visibilityState": "notCurrentlyUseful",
       "visibilitySummary": {
         "state": "notCurrentlyUseful",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
+        "aerithCurrentDate": "2026-09-19",
         "aerithNextUsefulDate": null,
-        "aerithCurrentMagnitude": 16.6,
+        "aerithCurrentMagnitude": 16.7,
         "aerithNextMagnitude": 16.7,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 48.0,
-          "south": 62.0
+          "north": 47.0,
+          "south": 63.0
         },
         "nextBestAltitudeDegreesByHemisphere": {
           "north": 47.0,
@@ -897,10 +891,10 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 17.304,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 17.311,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "tooFaint",
         "firstFutureUsefulDate": null,
         "lastFutureUsefulDate": null,
@@ -922,25 +916,25 @@
       },
       "brightnessTrend": {
         "currentMagnitude": 16.7,
-        "currentDate": "2026-09-19",
-        "currentPointID": "65P-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 16.6,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "65P-2026-09-12-north-weekly-1",
+        "currentDate": "2026-09-26",
+        "currentPointID": "65P-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 16.7,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "65P-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
-        "deltaMagnitude": 0.1,
+        "deltaMagnitude": 0.0,
         "direction": "stable",
         "isNotable": false,
         "notableChangeThresholdMagnitude": 1.0,
         "notableObservationIDs": [
-          "65P-2026-09-12-north-weekly-1"
+          "65P-2026-09-19-north-weekly-1"
         ]
       },
       "brightnessRange": {
         "lookbackDays": 90,
-        "availableStartDate": "2026-08-13",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 37,
+        "availableStartDate": "2026-09-10",
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 16,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -949,8 +943,8 @@
       "fileName": "COMET_65P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_65P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_65P_v1.json",
-      "checksum": "08239b9651d820be79a7e5788f55db9a848d7720b26dafd3e0f4baaf1335c698",
-      "byteSize": 7899,
+      "checksum": "cfb6fae0c4f75fd831955eee5e8a3c89ffbee216a6054700d62280f4eb2064c2",
+      "byteSize": 7901,
       "observationCount": 3,
       "highlightCount": 1,
       "cachedImageCount": 2
@@ -965,19 +959,19 @@
       "visibilityState": "notCurrentlyUseful",
       "visibilitySummary": {
         "state": "notCurrentlyUseful",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
+        "aerithCurrentDate": "2026-09-19",
         "aerithNextUsefulDate": null,
-        "aerithCurrentMagnitude": 17.4,
-        "aerithNextMagnitude": 17.6,
+        "aerithCurrentMagnitude": 17.6,
+        "aerithNextMagnitude": 17.9,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 71.0,
-          "south": 8.0
+          "north": 74.0,
+          "south": 7.0
         },
         "nextBestAltitudeDegreesByHemisphere": {
-          "north": 74.0,
+          "north": 77.0,
           "south": 7.0
         },
         "futureUsefulStartDate": null,
@@ -992,10 +986,10 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 18.809,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 19.408,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "tooFaint",
         "firstFutureUsefulDate": null,
         "lastFutureUsefulDate": null,
@@ -1016,15 +1010,15 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 17.6,
-        "currentDate": "2026-09-19",
-        "currentPointID": "P/2021N1-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 17.4,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "P/2021N1-2026-09-12-north-weekly-1",
+        "currentMagnitude": 17.9,
+        "currentDate": "2026-09-26",
+        "currentPointID": "P/2021N1-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 17.6,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "P/2021N1-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
-        "deltaMagnitude": 0.2,
-        "direction": "stable",
+        "deltaMagnitude": 0.3,
+        "direction": "fading",
         "isNotable": false,
         "notableChangeThresholdMagnitude": 1.0,
         "notableObservationIDs": [
@@ -1035,8 +1029,8 @@
       "brightnessRange": {
         "lookbackDays": 90,
         "availableStartDate": "2026-07-14",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 67,
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 74,
         "pointCount": 4,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -1045,7 +1039,7 @@
       "fileName": "COMET_P_2021_N1_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_P_2021_N1_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_P_2021_N1_v1.json",
-      "checksum": "074f78661ed87f26b0ec7cebad736bdc435e901e8db7fa533db120271f804d57",
+      "checksum": "e1935a3436fcf4b4561e246469deb6915b3d1eeeae8fd920888738095dde3a74",
       "byteSize": 10663,
       "observationCount": 4,
       "highlightCount": 2,
@@ -1061,20 +1055,20 @@
       "visibilityState": "notCurrentlyUseful",
       "visibilitySummary": {
         "state": "notCurrentlyUseful",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
+        "aerithCurrentDate": "2026-09-19",
         "aerithNextUsefulDate": null,
-        "aerithCurrentMagnitude": 17.4,
-        "aerithNextMagnitude": 17.6,
+        "aerithCurrentMagnitude": 17.6,
+        "aerithNextMagnitude": 17.8,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 35.0,
-          "south": 60.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 34.0,
           "south": 57.0
+        },
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 33.0,
+          "south": 52.0
         },
         "futureUsefulStartDate": null,
         "futureUsefulEndDate": null,
@@ -1088,10 +1082,10 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 18.882,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 19.098,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "tooFaint",
         "firstFutureUsefulDate": null,
         "lastFutureUsefulDate": null,
@@ -1112,12 +1106,12 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 17.6,
-        "currentDate": "2026-09-19",
-        "currentPointID": "235P-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 17.4,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "235P-2026-09-12-north-weekly-1",
+        "currentMagnitude": 17.8,
+        "currentDate": "2026-09-26",
+        "currentPointID": "235P-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 17.6,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "235P-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
         "deltaMagnitude": 0.2,
         "direction": "stable",
@@ -1128,8 +1122,8 @@
       "brightnessRange": {
         "lookbackDays": 90,
         "availableStartDate": "2026-08-30",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 20,
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 27,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -1138,8 +1132,8 @@
       "fileName": "COMET_235P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_235P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_235P_v1.json",
-      "checksum": "65ce94ea8637b998cbb708d872e9715158cc024ba82450c063f7ae8aab6c04b8",
-      "byteSize": 7894,
+      "checksum": "5cf23fc3c6c386b2e19d667799ce08cd5e4f838d2968449b86a9a353ecfceafb",
+      "byteSize": 7998,
       "observationCount": 3,
       "highlightCount": 0,
       "cachedImageCount": 2
@@ -1154,25 +1148,25 @@
       "visibilityState": "current",
       "visibilitySummary": {
         "state": "current",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
-        "aerithNextUsefulDate": "2026-09-19",
-        "aerithCurrentMagnitude": 13.1,
-        "aerithNextMagnitude": 13.0,
+        "aerithCurrentDate": "2026-09-19",
+        "aerithNextUsefulDate": "2026-09-26",
+        "aerithCurrentMagnitude": 13.0,
+        "aerithNextMagnitude": 12.9,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 34.0,
-          "south": 59.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 37.0,
           "south": 62.0
         },
-        "futureUsefulStartDate": "2026-09-12",
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 40.0,
+          "south": 64.0
+        },
+        "futureUsefulStartDate": "2026-09-19",
         "futureUsefulEndDate": "2027-07-12",
         "daysUntilFutureUsefulStart": 0,
-        "daysUntilFutureUsefulEnd": 303
+        "daysUntilFutureUsefulEnd": 296
       },
       "ephemerisSummary": {
         "validStart": "2026-07-12T00:00:00Z",
@@ -1181,15 +1175,15 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 14.019,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 13.94,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "useful",
-        "firstFutureUsefulDate": "2026-09-12",
+        "firstFutureUsefulDate": "2026-09-19",
         "lastFutureUsefulDate": "2027-07-12",
         "daysUntilUsefulStart": 0,
-        "daysUntilUsefulEnd": 303,
+        "daysUntilUsefulEnd": 296,
         "brightestMagnitude": 12.8,
         "brightestDate": "2026-08-22",
         "faintestMagnitude": 14.628,
@@ -1205,12 +1199,12 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 13.0,
-        "currentDate": "2026-09-19",
-        "currentPointID": "C/2024T5-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 13.1,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "C/2024T5-2026-09-12-north-weekly-1",
+        "currentMagnitude": 12.9,
+        "currentDate": "2026-09-26",
+        "currentPointID": "C/2024T5-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 13.0,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "C/2024T5-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
         "deltaMagnitude": -0.1,
         "direction": "stable",
@@ -1221,8 +1215,8 @@
       "brightnessRange": {
         "lookbackDays": 90,
         "availableStartDate": "2026-09-03",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 16,
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 23,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -1231,8 +1225,8 @@
       "fileName": "COMET_C_2024_T5_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_C_2024_T5_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_C_2024_T5_v1.json",
-      "checksum": "665e07441a38fe084f5c47d06940e66aae48fa89a91955aa8383563f0f583774",
-      "byteSize": 7766,
+      "checksum": "52bca14080fddd6b69fd4c932ed3ec4ca2ed215b1f5ec169d96415be9f03cd63",
+      "byteSize": 7765,
       "observationCount": 3,
       "highlightCount": 0,
       "cachedImageCount": 2
@@ -1247,20 +1241,20 @@
       "visibilityState": "notCurrentlyUseful",
       "visibilitySummary": {
         "state": "notCurrentlyUseful",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
+        "aerithCurrentDate": "2026-09-19",
         "aerithNextUsefulDate": null,
-        "aerithCurrentMagnitude": 17.3,
-        "aerithNextMagnitude": 17.4,
+        "aerithCurrentMagnitude": 17.4,
+        "aerithNextMagnitude": 17.5,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 17.0,
-          "south": -3.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 20.0,
           "south": -2.0
+        },
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 24.0,
+          "south": 0.0
         },
         "futureUsefulStartDate": null,
         "futureUsefulEndDate": null,
@@ -1274,10 +1268,10 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 18.308,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 18.397,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "tooFaint",
         "firstFutureUsefulDate": null,
         "lastFutureUsefulDate": null,
@@ -1298,12 +1292,12 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 17.4,
-        "currentDate": "2026-09-19",
-        "currentPointID": "93P-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 17.3,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "93P-2026-09-12-north-weekly-1",
+        "currentMagnitude": 17.5,
+        "currentDate": "2026-09-26",
+        "currentPointID": "93P-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 17.4,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "93P-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
         "deltaMagnitude": 0.1,
         "direction": "stable",
@@ -1313,8 +1307,8 @@
       },
       "brightnessRange": {
         "lookbackDays": 90,
-        "availableStartDate": "2026-09-12",
-        "availableEndDate": "2026-09-19",
+        "availableStartDate": "2026-09-19",
+        "availableEndDate": "2026-09-26",
         "actualDaySpan": 7,
         "pointCount": 2,
         "containsProjection": true,
@@ -1324,8 +1318,8 @@
       "fileName": "COMET_93P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_93P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_93P_v1.json",
-      "checksum": "c18e5caf6030c948e225ca2d7bb1e9fbba53b67f26426ec8fee2c450e60f9de7",
-      "byteSize": 6550,
+      "checksum": "b9e1bc79737b692c4e4798499d9ac7217a61215c26f755c2a348e3c5c34c228b",
+      "byteSize": 6549,
       "observationCount": 2,
       "highlightCount": 0,
       "cachedImageCount": 2
@@ -1340,25 +1334,25 @@
       "visibilityState": "current",
       "visibilitySummary": {
         "state": "current",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
-        "aerithNextUsefulDate": "2026-09-19",
-        "aerithCurrentMagnitude": 13.1,
-        "aerithNextMagnitude": 13.2,
+        "aerithCurrentDate": "2026-09-19",
+        "aerithNextUsefulDate": "2026-09-26",
+        "aerithCurrentMagnitude": 13.2,
+        "aerithNextMagnitude": 13.3,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 73.0,
-          "south": 16.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 76.0,
           "south": 14.0
         },
-        "futureUsefulStartDate": "2026-09-12",
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 78.0,
+          "south": 12.0
+        },
+        "futureUsefulStartDate": "2026-09-19",
         "futureUsefulEndDate": "2026-11-16",
         "daysUntilFutureUsefulStart": 0,
-        "daysUntilFutureUsefulEnd": 65
+        "daysUntilFutureUsefulEnd": 58
       },
       "ephemerisSummary": {
         "validStart": "2026-07-12T00:00:00Z",
@@ -1367,15 +1361,15 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 15.059,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 15.119,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "useful",
-        "firstFutureUsefulDate": "2026-09-12",
+        "firstFutureUsefulDate": "2026-09-19",
         "lastFutureUsefulDate": "2026-11-16",
         "daysUntilUsefulStart": 0,
-        "daysUntilUsefulEnd": 65,
+        "daysUntilUsefulEnd": 58,
         "brightestMagnitude": 13.0,
         "brightestDate": "2026-08-22",
         "faintestMagnitude": 22.734,
@@ -1391,12 +1385,12 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 13.2,
-        "currentDate": "2026-09-19",
-        "currentPointID": "260P-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 13.1,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "260P-2026-09-12-north-weekly-1",
+        "currentMagnitude": 13.3,
+        "currentDate": "2026-09-26",
+        "currentPointID": "260P-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 13.2,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "260P-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
         "deltaMagnitude": 0.1,
         "direction": "stable",
@@ -1406,9 +1400,9 @@
       },
       "brightnessRange": {
         "lookbackDays": 90,
-        "availableStartDate": "2026-08-24",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 26,
+        "availableStartDate": "2026-09-08",
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 18,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -1417,8 +1411,8 @@
       "fileName": "COMET_260P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_260P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_260P_v1.json",
-      "checksum": "cbac49e4a770c40de244f57c08a332a4b313c917a01388836e0ed0e15024a464",
-      "byteSize": 7787,
+      "checksum": "55a0f4b6acdd80215659ad72744fd774d7d7b0f22755857567066a17c9fe6bc1",
+      "byteSize": 7833,
       "observationCount": 3,
       "highlightCount": 0,
       "cachedImageCount": 2
@@ -1433,20 +1427,20 @@
       "visibilityState": "notCurrentlyUseful",
       "visibilitySummary": {
         "state": "notCurrentlyUseful",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
+        "aerithCurrentDate": "2026-09-19",
         "aerithNextUsefulDate": null,
         "aerithCurrentMagnitude": 16.1,
-        "aerithNextMagnitude": 16.1,
+        "aerithNextMagnitude": 16.2,
         "currentBestAltitudeDegreesByHemisphere": {
-          "north": 56.0,
-          "south": 36.0
-        },
-        "nextBestAltitudeDegreesByHemisphere": {
           "north": 53.0,
           "south": 33.0
+        },
+        "nextBestAltitudeDegreesByHemisphere": {
+          "north": 50.0,
+          "south": 29.0
         },
         "futureUsefulStartDate": null,
         "futureUsefulEndDate": null,
@@ -1460,10 +1454,10 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 16.947,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 16.996,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "tooFaint",
         "firstFutureUsefulDate": null,
         "lastFutureUsefulDate": null,
@@ -1484,14 +1478,14 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 16.1,
-        "currentDate": "2026-09-19",
-        "currentPointID": "C/2021G2-2026-09-19-north-weekly-2",
+        "currentMagnitude": 16.2,
+        "currentDate": "2026-09-26",
+        "currentPointID": "C/2021G2-2026-09-26-north-weekly-2",
         "comparisonMagnitude": 16.1,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "C/2021G2-2026-09-12-north-weekly-1",
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "C/2021G2-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
-        "deltaMagnitude": 0.0,
+        "deltaMagnitude": 0.1,
         "direction": "stable",
         "isNotable": false,
         "notableChangeThresholdMagnitude": 1.0,
@@ -1500,8 +1494,8 @@
       "brightnessRange": {
         "lookbackDays": 90,
         "availableStartDate": "2026-08-25",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 25,
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 32,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -1510,7 +1504,7 @@
       "fileName": "COMET_C_2021_G2_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_C_2021_G2_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_C_2021_G2_v1.json",
-      "checksum": "f2622479a86844e11ba6386d5ed17df6533dcf34c3c00d7a83496135fce3d05d",
+      "checksum": "86ea6f78723c48c515fa909d2568a66095598df279c49a2e82bc8897994b6a0a",
       "byteSize": 8134,
       "observationCount": 3,
       "highlightCount": 0,
@@ -1526,13 +1520,13 @@
       "visibilityState": "current",
       "visibilitySummary": {
         "state": "current",
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
         "usefulMagnitudeLimit": 16.0,
-        "aerithCurrentDate": "2026-09-12",
-        "aerithNextUsefulDate": "2026-09-19",
-        "aerithCurrentMagnitude": 13.1,
-        "aerithNextMagnitude": 13.3,
+        "aerithCurrentDate": "2026-09-19",
+        "aerithNextUsefulDate": "2026-09-26",
+        "aerithCurrentMagnitude": 13.3,
+        "aerithNextMagnitude": 13.4,
         "currentBestAltitudeDegreesByHemisphere": {
           "north": 70.0,
           "south": 40.0
@@ -1553,10 +1547,10 @@
         "sourceGeneratedAt": "2026-07-12T21:25:04Z",
         "sampleStepHours": 12,
         "sampleCount": 731,
-        "referenceDate": "2026-09-12",
+        "referenceDate": "2026-09-19",
         "usefulMagnitudeLimit": 16.0,
-        "currentMagnitudeEstimate": 16.142,
-        "currentSampleDate": "2026-09-12",
+        "currentMagnitudeEstimate": 16.194,
+        "currentSampleDate": "2026-09-19",
         "currentSampleStatus": "tooFaint",
         "firstFutureUsefulDate": null,
         "lastFutureUsefulDate": null,
@@ -1577,26 +1571,26 @@
         }
       },
       "brightnessTrend": {
-        "currentMagnitude": 13.3,
-        "currentDate": "2026-09-19",
-        "currentPointID": "88P-2026-09-19-north-weekly-2",
-        "comparisonMagnitude": 13.1,
-        "comparisonDate": "2026-09-12",
-        "comparisonPointID": "88P-2026-09-12-north-weekly-1",
+        "currentMagnitude": 13.4,
+        "currentDate": "2026-09-26",
+        "currentPointID": "88P-2026-09-26-north-weekly-2",
+        "comparisonMagnitude": 13.3,
+        "comparisonDate": "2026-09-19",
+        "comparisonPointID": "88P-2026-09-19-north-weekly-1",
         "comparisonWindowDays": 7,
-        "deltaMagnitude": 0.2,
+        "deltaMagnitude": 0.1,
         "direction": "stable",
         "isNotable": false,
         "notableChangeThresholdMagnitude": 1.0,
         "notableObservationIDs": [
-          "88P-2026-08-24-report-1"
+          "88P-2026-09-13-report-1"
         ]
       },
       "brightnessRange": {
         "lookbackDays": 90,
-        "availableStartDate": "2026-08-24",
-        "availableEndDate": "2026-09-19",
-        "actualDaySpan": 26,
+        "availableStartDate": "2026-09-13",
+        "availableEndDate": "2026-09-26",
+        "actualDaySpan": 13,
         "pointCount": 3,
         "containsProjection": true,
         "containsReportedObservation": true
@@ -1605,8 +1599,8 @@
       "fileName": "COMET_88P_v1.json",
       "path": "v1/packages/comet-details/shards/COMET_88P_v1.json",
       "url": "https://metadata.astroguide.space/v1/packages/comet-details/shards/COMET_88P_v1.json",
-      "checksum": "6d0b20e2d32e22e779e8e166c8b3baa7512edceeb8a4d1871d818c5c392844eb",
-      "byteSize": 7931,
+      "checksum": "203b063b4c6b6d70dc7063962d0012afaa08a131e7ed0e00f617e1ce64e7aec8",
+      "byteSize": 7943,
       "observationCount": 3,
       "highlightCount": 1,
       "cachedImageCount": 2
