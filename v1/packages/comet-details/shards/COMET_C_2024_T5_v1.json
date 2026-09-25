@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260921-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260925-aerith",
   "packageRole": "comet",
   "shardID": "COMET_C_2024_T5",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "C/2024 T5 (ATLAS)",
     "aerithName": "C/2024 T5 ( ATLAS )",
     "detailURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
-    "generatedAt": "2026-09-21T10:32:18Z",
+    "generatedAt": "2026-09-25T03:36:32Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-09-12",
+      "referenceDate": "2026-09-19",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-09-12",
-      "aerithNextUsefulDate": "2026-09-19",
-      "aerithCurrentMagnitude": 13.1,
-      "aerithNextMagnitude": 13.0,
+      "aerithCurrentDate": "2026-09-19",
+      "aerithNextUsefulDate": "2026-09-26",
+      "aerithCurrentMagnitude": 13.0,
+      "aerithNextMagnitude": 12.9,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 34.0,
-        "south": 59.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 37.0,
         "south": 62.0
       },
-      "futureUsefulStartDate": "2026-09-12",
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 40.0,
+        "south": 64.0
+      },
+      "futureUsefulStartDate": "2026-09-19",
       "futureUsefulEndDate": "2027-07-12",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 303
+      "daysUntilFutureUsefulEnd": 296
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-09-12",
+      "referenceDate": "2026-09-19",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 14.019,
-      "currentSampleDate": "2026-09-12",
+      "currentMagnitudeEstimate": 13.94,
+      "currentSampleDate": "2026-09-19",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-09-12",
+      "firstFutureUsefulDate": "2026-09-19",
       "lastFutureUsefulDate": "2027-07-12",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 303,
+      "daysUntilUsefulEnd": 296,
       "brightestMagnitude": 12.8,
       "brightestDate": "2026-08-22",
       "faintestMagnitude": 14.628,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/2024T5/2024T5.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-09-21T10:32:18Z",
+      "generatedAt": "2026-09-25T03:36:32Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -110,20 +110,20 @@
         "commentary": "Now it is 12.9 mag (Sept. 3, Jean-Gabriel Bosch). It stays 13 mag for a while. It stays observable in good condition."
       },
       {
-        "id": "C/2024T5-2026-09-12-north-weekly-1",
-        "date": "2026-09-12",
-        "magnitude": 13.1,
+        "id": "C/2024T5-2026-09-19-north-weekly-1",
+        "date": "2026-09-19",
+        "magnitude": 13.0,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.2
+        "magnitudeDelta": 0.1
       },
       {
-        "id": "C/2024T5-2026-09-19-north-weekly-2",
-        "date": "2026-09-19",
-        "magnitude": 13.0,
+        "id": "C/2024T5-2026-09-26-north-weekly-2",
+        "date": "2026-09-26",
+        "magnitude": 12.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
@@ -135,8 +135,8 @@
     "brightnessChart": {
       "lookbackDays": 90,
       "availableStartDate": "2026-09-03",
-      "availableEndDate": "2026-09-19",
-      "actualDaySpan": 16,
+      "availableEndDate": "2026-09-26",
+      "actualDaySpan": 23,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
@@ -153,20 +153,20 @@
           "commentary": "Now it is 12.9 mag (Sept. 3, Jean-Gabriel Bosch). It stays 13 mag for a while. It stays observable in good condition."
         },
         {
-          "id": "C/2024T5-2026-09-12-north-weekly-1",
-          "date": "2026-09-12",
-          "magnitude": 13.1,
+          "id": "C/2024T5-2026-09-19-north-weekly-1",
+          "date": "2026-09-19",
+          "magnitude": 13.0,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.2
+          "magnitudeDelta": 0.1
         },
         {
-          "id": "C/2024T5-2026-09-19-north-weekly-2",
-          "date": "2026-09-19",
-          "magnitude": 13.0,
+          "id": "C/2024T5-2026-09-26-north-weekly-2",
+          "date": "2026-09-26",
+          "magnitude": 12.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
@@ -177,12 +177,12 @@
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 13.0,
-      "currentDate": "2026-09-19",
-      "currentPointID": "C/2024T5-2026-09-19-north-weekly-2",
-      "comparisonMagnitude": 13.1,
-      "comparisonDate": "2026-09-12",
-      "comparisonPointID": "C/2024T5-2026-09-12-north-weekly-1",
+      "currentMagnitude": 12.9,
+      "currentDate": "2026-09-26",
+      "currentPointID": "C/2024T5-2026-09-26-north-weekly-2",
+      "comparisonMagnitude": 13.0,
+      "comparisonDate": "2026-09-19",
+      "comparisonPointID": "C/2024T5-2026-09-19-north-weekly-1",
       "comparisonWindowDays": 7,
       "deltaMagnitude": -0.1,
       "direction": "stable",
