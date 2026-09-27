@@ -147,6 +147,54 @@ class TNSTransientReviewQueueTests(unittest.TestCase):
             dt.date(2026, 9, 9),
         )
 
+    def test_latest_previous_queue_ignores_decisions_registry(self):
+        output_dir = self.root / "review"
+        output_dir.mkdir()
+        older = output_dir / "transient-review-2026-09-22.json"
+        latest = output_dir / "transient-review-2026-09-23.json"
+        decisions = output_dir / "transient-review-decisions-v1.json"
+        for path in (older, latest, decisions):
+            path.write_text("{}\n", encoding="utf-8")
+
+        current = output_dir / "transient-review-2026-09-24.json"
+
+        self.assertEqual(
+            queue_builder.latest_previous_queue(output_dir, current),
+            latest,
+        )
+
+    def test_skip_unchanged_compares_with_latest_dated_queue(self):
+        output_dir = self.root / "review"
+        output_dir.mkdir()
+        previous_queue = self.build()
+        previous_queue["asOfDate"] = "2026-09-23"
+        (output_dir / "transient-review-2026-09-23.json").write_text(
+            json.dumps(previous_queue),
+            encoding="utf-8",
+        )
+        (output_dir / "transient-review-decisions-v1.json").write_text(
+            json.dumps({"family": "transientReviewDecisions", "decisions": []}),
+            encoding="utf-8",
+        )
+        current_queue = json.loads(json.dumps(previous_queue))
+        current_queue["asOfDate"] = "2026-09-24"
+
+        json_path, markdown_path, wrote = queue_builder.write_outputs(
+            current_queue,
+            output_dir,
+            skip_unchanged=True,
+        )
+
+        self.assertFalse(wrote)
+        self.assertFalse(json_path.exists())
+        self.assertFalse(markdown_path.exists())
+
+    def test_meaningful_opportunities_rejects_non_queue_artifacts_clearly(self):
+        with self.assertRaisesRegex(ValueError, "opportunities must be a list"):
+            queue_builder.meaningful_opportunities(
+                {"family": "transientReviewDecisions", "decisions": []}
+            )
+
     def test_json_and_markdown_are_deterministic_across_input_order(self):
         first = self.build(self.inputs)
         second = self.build(list(reversed(self.inputs)))

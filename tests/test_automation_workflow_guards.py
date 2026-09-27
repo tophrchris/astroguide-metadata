@@ -60,6 +60,16 @@ class AutomationWorkflowGuardsTests(unittest.TestCase):
             self.assertIn("working-directory: astroguide-metadata\n", body)
         self.assertNotRegex(identity_body, r"(?m)^\s*if[: ]")
 
+    def test_tns_latest_review_fallback_excludes_decisions_registry(self):
+        _, steps = workflow_steps("update-tns-transient-review.yml")
+        steps = dict(steps)
+        build_step = steps["Build review queue from staged TNS deltas"]
+        self.assertIn(
+            "-name 'transient-review-????-??-??.json'",
+            build_step,
+        )
+        self.assertNotIn("-name 'transient-review-*.json'", build_step)
+
 
 if __name__ == "__main__":
     unittest.main()
