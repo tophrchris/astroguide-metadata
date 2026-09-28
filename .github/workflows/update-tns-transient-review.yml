@@ -163,7 +163,7 @@ jobs:
             --skip-unchanged
           review_json="outputs/transients/review/transient-review-${as_of}.json"
           if [[ ! -f "$review_json" ]]; then
-            review_json="$(find outputs/transients/review -name 'transient-review-*.json' -type f | sort | tail -1)"
+            review_json="$(find outputs/transients/review -name 'transient-review-????-??-??.json' -type f | sort | tail -1)"
           fi
           if [[ -z "$review_json" || ! -f "$review_json" ]]; then
             echo "No canonical TNS review artifact is available." >&2

@@ -42,6 +42,7 @@ DEFAULT_TARGET_IMAGE_PACKAGE = Path("v1/packages/target-images/target_image_asse
 METADATA_ORIGIN = "https://metadata.astroguide.space"
 NEAR_FIELD_WORDING = "near-field match"
 RELATIONSHIP_NEAR_FIELD = "near_field"
+DATED_REVIEW_QUEUE_PATTERN = re.compile(r"transient-review-\d{4}-\d{2}-\d{2}\.json")
 TargetImageIndex = dict[str, list[tuple[int, dict[str, object]]]]
 
 FIELD_ALIASES = {
@@ -1871,7 +1872,10 @@ def fetch_staged_deltas(
 
 
 def meaningful_opportunities(queue: dict[str, object]) -> list[dict[str, object]]:
-    material = json.loads(json.dumps(queue["opportunities"]))
+    opportunities = queue.get("opportunities")
+    if not isinstance(opportunities, list):
+        raise ValueError("TNS review queue opportunities must be a list")
+    material = json.loads(json.dumps(opportunities))
     for item in material:
         item.get("provenance", {}).pop("inputRecords", None)
         item.get("enrichment", {}).pop("retrievedAtUTC", None)
@@ -1879,7 +1883,11 @@ def meaningful_opportunities(queue: dict[str, object]) -> list[dict[str, object]
 
 
 def latest_previous_queue(output_dir: Path, current_path: Path) -> Path | None:
-    paths = [path for path in output_dir.glob("transient-review-*.json") if path != current_path]
+    paths = [
+        path
+        for path in output_dir.glob("transient-review-*.json")
+        if path != current_path and DATED_REVIEW_QUEUE_PATTERN.fullmatch(path.name)
+    ]
     return max(paths, default=None, key=lambda path: path.name)
 
 
