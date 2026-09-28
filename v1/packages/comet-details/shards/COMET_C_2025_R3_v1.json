@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260925-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20260928-aerith",
   "packageRole": "comet",
   "shardID": "COMET_C_2025_R3",
   "record": {
@@ -10,23 +10,23 @@
     "displayName": "C/2025 R3 (PANSTARRS)",
     "aerithName": "C/2025 R3 ( PanSTARRS )",
     "detailURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
-    "generatedAt": "2026-09-25T03:36:32Z",
+    "generatedAt": "2026-09-28T10:35:01Z",
     "visibilitySummary": {
       "state": "notCurrentlyUseful",
-      "referenceDate": "2026-09-19",
+      "referenceDate": "2026-09-26",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-09-19",
+      "aerithCurrentDate": "2026-09-26",
       "aerithNextUsefulDate": null,
-      "aerithCurrentMagnitude": 16.5,
-      "aerithNextMagnitude": 16.7,
+      "aerithCurrentMagnitude": 16.7,
+      "aerithNextMagnitude": 16.9,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 14.0,
-        "south": 46.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 18.0,
         "south": 51.0
+      },
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 21.0,
+        "south": 55.0
       },
       "futureUsefulStartDate": null,
       "futureUsefulEndDate": null,
@@ -40,10 +40,10 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-09-19",
+      "referenceDate": "2026-09-26",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 18.975,
-      "currentSampleDate": "2026-09-19",
+      "currentMagnitudeEstimate": 19.14,
+      "currentSampleDate": "2026-09-26",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/2025R3/2025R3.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-09-25T03:36:32Z",
+      "generatedAt": "2026-09-28T10:35:01Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -99,9 +99,9 @@
     },
     "brightness": [
       {
-        "id": "C/2025R3-2026-09-19-north-weekly-1",
-        "date": "2026-09-19",
-        "magnitude": 16.5,
+        "id": "C/2025R3-2026-09-26-north-weekly-1",
+        "date": "2026-09-26",
+        "magnitude": 16.7,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
@@ -109,9 +109,9 @@
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html"
       },
       {
-        "id": "C/2025R3-2026-09-26-north-weekly-2",
-        "date": "2026-09-26",
-        "magnitude": 16.7,
+        "id": "C/2025R3-2026-10-03-north-weekly-2",
+        "date": "2026-10-03",
+        "magnitude": 16.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
@@ -122,17 +122,17 @@
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-09-19",
-      "availableEndDate": "2026-09-26",
+      "availableStartDate": "2026-09-26",
+      "availableEndDate": "2026-10-03",
       "actualDaySpan": 7,
       "pointCount": 2,
       "containsProjection": true,
       "containsReportedObservation": false,
       "points": [
         {
-          "id": "C/2025R3-2026-09-19-north-weekly-1",
-          "date": "2026-09-19",
-          "magnitude": 16.5,
+          "id": "C/2025R3-2026-09-26-north-weekly-1",
+          "date": "2026-09-26",
+          "magnitude": 16.7,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
@@ -140,9 +140,9 @@
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html"
         },
         {
-          "id": "C/2025R3-2026-09-26-north-weekly-2",
-          "date": "2026-09-26",
-          "magnitude": 16.7,
+          "id": "C/2025R3-2026-10-03-north-weekly-2",
+          "date": "2026-10-03",
+          "magnitude": 16.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
@@ -153,12 +153,12 @@
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 16.7,
-      "currentDate": "2026-09-26",
-      "currentPointID": "C/2025R3-2026-09-26-north-weekly-2",
-      "comparisonMagnitude": 16.5,
-      "comparisonDate": "2026-09-19",
-      "comparisonPointID": "C/2025R3-2026-09-19-north-weekly-1",
+      "currentMagnitude": 16.9,
+      "currentDate": "2026-10-03",
+      "currentPointID": "C/2025R3-2026-10-03-north-weekly-2",
+      "comparisonMagnitude": 16.7,
+      "comparisonDate": "2026-09-26",
+      "comparisonPointID": "C/2025R3-2026-09-26-north-weekly-1",
       "comparisonWindowDays": 7,
       "deltaMagnitude": 0.2,
       "direction": "stable",
