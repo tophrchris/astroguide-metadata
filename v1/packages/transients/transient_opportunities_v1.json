@@ -1,98 +1,20 @@
 {
   "schemaVersion": 1,
   "packageFamily": "transientEventFeed",
-  "packageVersion": "transient-event-feed-v1-20260927-approved",
+  "packageVersion": "transient-event-feed-v1-20260928-approved",
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "asOfDate": "2026-09-27",
-  "generatedAtUTC": "2026-09-27T00:00:00Z",
+  "asOfDate": "2026-09-28",
+  "generatedAtUTC": "2026-09-28T00:00:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
     "reviewed": 18,
-    "approved": 14,
+    "approved": 13,
     "excluded": 0,
     "pending": 20,
-    "expiredApproved": 4
+    "expiredApproved": 5
   },
   "opportunities": [
-    {
-      "id": "tns:219007",
-      "source": "TNS",
-      "sourceId": "219007",
-      "sourceObjectName": "AT2026aabo",
-      "sourceURL": "https://www.wis-tns.org/object/2026aabo",
-      "title": "Nova AT2026aabo near Andromeda Galaxy",
-      "shortTitle": "AT2026aabo",
-      "eventType": "novaOpportunity",
-      "reviewOnly": false,
-      "urgency": "watch",
-      "recommendedReviewAction": "approved",
-      "activeWindow": {
-        "startsAtUTC": "2026-08-29T09:28:57Z",
-        "expiresAtUTC": "2026-09-28T09:28:57Z"
-      },
-      "discovery": {
-        "dateUTC": "2026-08-29T09:28:57Z",
-        "ageDays": 12,
-        "magnitude": 18.5784,
-        "band": "g"
-      },
-      "reportedMagnitude": {
-        "value": null,
-        "band": null
-      },
-      "classification": {
-        "kind": "nova",
-        "type": "Nova",
-        "status": null
-      },
-      "coordinates": {
-        "raDegrees": 11.2260832,
-        "decDegrees": 41.5529135
-      },
-      "score": 87,
-      "reasonTags": [
-        "classified_high_interest_transient",
-        "discovered_within_30_days",
-        "discovery_magnitude_watch_band",
-        "separation_le_1_deg",
-        "nearby_catalog_object_is_galaxy",
-        "recognizable_astroguide_subject"
-      ],
-      "astroGuideObject": {
-        "id": "M31",
-        "displayName": "Andromeda Galaxy",
-        "catalogName": "M M31",
-        "objectType": "Galaxy",
-        "magnitude": 3.4
-      },
-      "angularSeparationDegrees": 0.49558,
-      "relationship": {
-        "type": "near_field",
-        "wording": "near-field match",
-        "tnsReportedHost": null
-      },
-      "lastModifiedUTC": "2026-09-10T21:20:49Z",
-      "provenance": {
-        "reportingGroup": "ZTF",
-        "sourceGroup": "ZTF",
-        "internalNames": [
-          "ZTF26abramlb",
-          "ATLAS26kqn",
-          "MASTER OT J004454.26+413310.2",
-          "GOTO26jfq",
-          "PS26hne"
-        ]
-      },
-      "review": {
-        "status": "approved",
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "sourceReviewQueue": "transient-review-2026-09-10.json",
-        "reviewSetID": null,
-        "evidenceHash": "077df478b2852bc4"
-      }
-    },
     {
       "id": "tns:218943",
       "source": "TNS",
