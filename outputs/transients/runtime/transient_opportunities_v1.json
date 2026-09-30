@@ -2,168 +2,17 @@
   "schemaVersion": 1,
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "asOfDate": "2026-09-28",
-  "generatedAtUTC": "2026-09-28T00:00:00Z",
+  "asOfDate": "2026-09-29",
+  "generatedAtUTC": "2026-09-29T00:00:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
     "reviewed": 18,
-    "approved": 13,
+    "approved": 11,
     "excluded": 0,
-    "pending": 20,
-    "expiredApproved": 5
+    "pending": 21,
+    "expiredApproved": 7
   },
   "opportunities": [
-    {
-      "id": "tns:218943",
-      "source": "TNS",
-      "sourceId": "218943",
-      "sourceObjectName": "SN2026zzh",
-      "sourceURL": "https://www.wis-tns.org/object/2026zzh",
-      "title": "Supernova SN2026zzh near IC1386",
-      "shortTitle": "SN2026zzh",
-      "eventType": "transientOpportunity",
-      "reviewOnly": false,
-      "urgency": "watch",
-      "recommendedReviewAction": "approved",
-      "activeWindow": {
-        "startsAtUTC": "2026-08-30T06:32:06Z",
-        "expiresAtUTC": "2026-09-29T06:32:06Z"
-      },
-      "discovery": {
-        "dateUTC": "2026-08-30T06:32:06Z",
-        "ageDays": 11,
-        "magnitude": 18.9888,
-        "band": "r"
-      },
-      "reportedMagnitude": {
-        "value": null,
-        "band": null
-      },
-      "classification": {
-        "kind": "supernova",
-        "type": "SN Ia",
-        "status": null
-      },
-      "coordinates": {
-        "raDegrees": 322.5604814,
-        "decDegrees": -22.7146472
-      },
-      "score": 80,
-      "reasonTags": [
-        "classified_high_interest_transient",
-        "discovered_within_30_days",
-        "discovery_magnitude_watch_band",
-        "separation_le_2_deg",
-        "nearby_catalog_object_is_galaxy",
-        "recognizable_astroguide_subject"
-      ],
-      "astroGuideObject": {
-        "id": "IC1386",
-        "displayName": "IC1386",
-        "catalogName": "IC IC1386",
-        "objectType": "Galaxy",
-        "magnitude": 13.1
-      },
-      "angularSeparationDegrees": 1.52586,
-      "relationship": {
-        "type": "near_field",
-        "wording": "near-field match",
-        "tnsReportedHost": null
-      },
-      "lastModifiedUTC": "2026-09-08T18:05:14Z",
-      "provenance": {
-        "reportingGroup": "ZTF",
-        "sourceGroup": "ZTF",
-        "internalNames": [
-          "ZTF26abrfhru",
-          "GOTO26iow",
-          "ATLAS26kur"
-        ]
-      },
-      "review": {
-        "status": "approved",
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "sourceReviewQueue": "transient-review-2026-09-10.json",
-        "reviewSetID": null,
-        "evidenceHash": "c3c1613f9b42bc64"
-      }
-    },
-    {
-      "id": "tns:219030",
-      "source": "TNS",
-      "sourceId": "219030",
-      "sourceObjectName": "SN2026aacj",
-      "sourceURL": "https://www.wis-tns.org/object/2026aacj",
-      "title": "Supernova SN2026aacj near IC162",
-      "shortTitle": "SN2026aacj",
-      "eventType": "transientOpportunity",
-      "reviewOnly": false,
-      "urgency": "urgent",
-      "recommendedReviewAction": "approved",
-      "activeWindow": {
-        "startsAtUTC": "2026-08-30T10:02:35Z",
-        "expiresAtUTC": "2026-09-29T10:02:35Z"
-      },
-      "discovery": {
-        "dateUTC": "2026-08-30T10:02:35Z",
-        "ageDays": 11,
-        "magnitude": 18.2953,
-        "band": "g"
-      },
-      "reportedMagnitude": {
-        "value": null,
-        "band": null
-      },
-      "classification": {
-        "kind": "supernova",
-        "type": "SN Ia",
-        "status": null
-      },
-      "coordinates": {
-        "raDegrees": 28.3602269,
-        "decDegrees": 10.1235888
-      },
-      "score": 90,
-      "reasonTags": [
-        "classified_high_interest_transient",
-        "discovered_within_30_days",
-        "discovery_magnitude_le_18_5",
-        "separation_le_2_deg",
-        "nearby_catalog_object_is_galaxy",
-        "recognizable_astroguide_subject"
-      ],
-      "astroGuideObject": {
-        "id": "IC162",
-        "displayName": "IC162",
-        "catalogName": "IC IC162",
-        "objectType": "Galaxy",
-        "magnitude": 13.7
-      },
-      "angularSeparationDegrees": 1.39475,
-      "relationship": {
-        "type": "near_field",
-        "wording": "near-field match",
-        "tnsReportedHost": null
-      },
-      "lastModifiedUTC": "2026-09-06T12:39:05Z",
-      "provenance": {
-        "reportingGroup": "ZTF",
-        "sourceGroup": "ZTF",
-        "internalNames": [
-          "ZTF26abrgiyy",
-          "GOTO26isa"
-        ]
-      },
-      "review": {
-        "status": "approved",
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "sourceReviewQueue": "transient-review-2026-09-10.json",
-        "reviewSetID": null,
-        "evidenceHash": "913d9b298681482a"
-      }
-    },
     {
       "id": "tns:219804",
       "source": "TNS",

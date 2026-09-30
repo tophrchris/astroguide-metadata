@@ -2,11 +2,11 @@
 
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
-- **Approved and active in runtime:** 13
-- **Pending review:** 20
+- **Approved and active in runtime:** 11
+- **Pending review:** 21
 - **On hold:** 0
 - **Rejected:** 0
-- **Approved but expired:** 5
+- **Approved but expired:** 7
 
 Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun this workflow. A non-pending decision requires `decidedBy` and `decidedAtUTC`. Changed evidence automatically resets the candidate to `pending`.
 
@@ -50,3 +50,4 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [AT2026acuq](https://www.wis-tns.org/object/2026acuq) | approve | 15.0 | transient_candidate | NGC797 (0.19644 deg) | 2026-10-22T00:00:00Z |
 | Pending | [AT2026acwi](https://www.wis-tns.org/object/2026acwi) | approve | 16.45 | transient_candidate | Messier 96 (M96) (0.85972 deg) | 2026-10-22T00:00:00Z |
 | Pending | [AT2026acwl](https://www.wis-tns.org/object/2026acwl) | approve | 16.6 | transient_candidate | NGC 3226 (0.17409 deg) | 2026-10-22T00:00:00Z |
+| Pending | [AT2026adgl](https://www.wis-tns.org/object/2026adgl) | approve | 17.4 | transient_candidate | Great Nebula in Andromeda (0.04483 deg) | 2026-10-29T18:17:05Z |
