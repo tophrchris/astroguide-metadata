@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-09-29T13:34:24Z",
-  "publishedAt": "2026-09-29T13:34:24Z",
+  "generatedAt": "2026-10-01T12:55:54Z",
+  "publishedAt": "2026-10-01T12:55:54Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -229,14 +229,14 @@
     },
     {
       "family": "lunarEvents",
-      "packageVersion": "lunar-events-v1-20260902",
+      "packageVersion": "lunar-events-v1-20261001",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/lunar-events/lunar_event_metadata_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "158f594ead5047fdac8a1dbf15135060c91942444ce044b59ac9d0a463aec660"
+        "value": "808a206ebfee90f1838d505ce6c3f4633dda28671d59aaaa17f860bb86cf83fa"
       },
-      "byteSize": 49976,
+      "byteSize": 50023,
       "minSupportedAppVersion": "1.3.7",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -260,14 +260,14 @@
     },
     {
       "family": "planetTargetCloseEncounters",
-      "packageVersion": "planet-target-close-encounters-v1-20260902",
+      "packageVersion": "planet-target-close-encounters-v1-20261001",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/planet-target-close-encounters/planet_target_close_encounter_metadata_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "5091623561acc72a870039ae46ff60b4fef429de27a1d02ea964bbebd2d459e6"
+        "value": "1d5d7ae2878d231969394e39bf2c6846ac7038853b8085e2576c7ee6eecd51bb"
       },
-      "byteSize": 56966,
+      "byteSize": 57896,
       "minSupportedAppVersion": "1.4.0",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -275,12 +275,12 @@
     },
     {
       "family": "cometCloseEncounters",
-      "packageVersion": "comet-close-encounters-v1-20260902",
+      "packageVersion": "comet-close-encounters-v1-20261001",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/comet-close-encounters/comet_close_encounter_metadata_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "616c8993e775cc85a3ced394aabe187845bcc1774acfc2e0256f697bdb11ac13"
+        "value": "b539f5038770acad2976cb995af934daf5f585215c2abaf94915288342e55723"
       },
       "byteSize": 120558,
       "minSupportedAppVersion": "1.4.0",
