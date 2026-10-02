@@ -2,11 +2,11 @@
 
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
-- **Approved and active in runtime:** 11
-- **Pending review:** 22
+- **Approved and active in runtime:** 10
+- **Pending review:** 24
 - **On hold:** 0
 - **Rejected:** 0
-- **Approved but expired:** 7
+- **Approved but expired:** 8
 
 Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun this workflow. A non-pending decision requires `decidedBy` and `decidedAtUTC`. Changed evidence automatically resets the candidate to `pending`.
 
@@ -52,3 +52,5 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [AT2026acwl](https://www.wis-tns.org/object/2026acwl) | approve | 16.6 | transient_candidate | NGC 3226 (0.17409 deg) | 2026-10-22T00:00:00Z |
 | Pending | [AT2026adgl](https://www.wis-tns.org/object/2026adgl) | approve | 17.4 | transient_candidate | Great Nebula in Andromeda (0.04483 deg) | 2026-10-29T18:17:05Z |
 | Pending | [AT2026adgn](https://www.wis-tns.org/object/2026adgn) | hold | 14.51 | transient_candidate | NGC 1198 (1.22724 deg) | 2026-10-29T17:51:06Z |
+| Pending | [SN2026adgw](https://www.wis-tns.org/object/2026adgw) | approve | 18.4624 | SN Ia | White-Eyed Pea nebula (0.91717 deg) | 2026-10-29T02:43:07Z |
+| Pending | [SN2026adhk](https://www.wis-tns.org/object/2026adhk) | approve | 18.41 | SN Ia | IC2166 (1.38799 deg) | 2026-10-30T05:52:35Z |

@@ -1,94 +1,20 @@
 {
   "schemaVersion": 1,
   "packageFamily": "transientEventFeed",
-  "packageVersion": "transient-event-feed-v1-20260930-approved",
+  "packageVersion": "transient-event-feed-v1-20261001-approved",
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "asOfDate": "2026-09-30",
-  "generatedAtUTC": "2026-09-30T00:00:00Z",
+  "asOfDate": "2026-10-01",
+  "generatedAtUTC": "2026-10-01T00:00:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
     "reviewed": 18,
-    "approved": 11,
+    "approved": 10,
     "excluded": 0,
-    "pending": 22,
-    "expiredApproved": 7
+    "pending": 24,
+    "expiredApproved": 8
   },
   "opportunities": [
-    {
-      "id": "tns:219804",
-      "source": "TNS",
-      "sourceId": "219804",
-      "sourceObjectName": "AT2026abdi",
-      "sourceURL": "https://www.wis-tns.org/object/2026abdi",
-      "title": "Transient candidate AT2026abdi near NGC1527",
-      "shortTitle": "AT2026abdi",
-      "eventType": "transientOpportunity",
-      "reviewOnly": false,
-      "urgency": "urgent",
-      "recommendedReviewAction": "approved",
-      "activeWindow": {
-        "startsAtUTC": "2026-09-01T01:40:12Z",
-        "expiresAtUTC": "2026-10-01T01:40:12Z"
-      },
-      "discovery": {
-        "dateUTC": "2026-09-01T01:40:12Z",
-        "ageDays": 9,
-        "magnitude": 18.441,
-        "band": "orange"
-      },
-      "reportedMagnitude": {
-        "value": null,
-        "band": null
-      },
-      "classification": {
-        "kind": "transient_candidate",
-        "type": null,
-        "status": null
-      },
-      "coordinates": {
-        "raDegrees": 63.06061,
-        "decDegrees": -47.2076333
-      },
-      "score": 82,
-      "reasonTags": [
-        "unclassified_transient_candidate",
-        "discovered_within_30_days",
-        "discovery_magnitude_le_18_5",
-        "separation_le_1_deg",
-        "nearby_catalog_object_is_galaxy",
-        "recognizable_astroguide_subject"
-      ],
-      "astroGuideObject": {
-        "id": "NGC1527",
-        "displayName": "NGC1527",
-        "catalogName": "NGC NGC1527",
-        "objectType": "Galaxy",
-        "magnitude": 10.8
-      },
-      "angularSeparationDegrees": 0.94635,
-      "relationship": {
-        "type": "near_field",
-        "wording": "near-field match",
-        "tnsReportedHost": null
-      },
-      "lastModifiedUTC": "2026-09-10T09:19:09Z",
-      "provenance": {
-        "reportingGroup": "ATLAS",
-        "sourceGroup": "ATLAS",
-        "internalNames": [
-          "ATLAS26lfg"
-        ]
-      },
-      "review": {
-        "status": "approved",
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "sourceReviewQueue": "transient-review-2026-09-10.json",
-        "reviewSetID": null,
-        "evidenceHash": "c4f41abd79149195"
-      }
-    },
     {
       "id": "tns:219373",
       "source": "TNS",
