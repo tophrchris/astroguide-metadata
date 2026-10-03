@@ -488,3 +488,7 @@ plus the relevant Aerith detail-page URLs.
 ## Operational Notes
 
 Metadata changes should be reviewed through pull requests against this repository. After GitHub Pages publishes the merged branch, AstroGuide clients can silently refresh compatible packages. If the origin is unavailable or validation fails, the app continues using the bundled snapshot.
+
+Candidate approval, hold, and rejection comments on TNS review PRs are documented in
+[PR-comment candidate decisions](docs/metadata-review-comments.md), including activation,
+revision-bound commands, historical replay, and the merge-to-publish gate.
