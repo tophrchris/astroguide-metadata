@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "receipts": {
+    "5970403109": {
+      "commentID": 5970403109,
+      "commentURL": "https://github.com/tophrchris/astroguide-metadata/pull/80#issuecomment-5970403109",
+      "commentFingerprint": "5ff0b681fc3e95ec3836625c87573b2071c9662ff3bf6f3733a01b4bd543e0f1",
+      "actor": {
+        "login": "tophrchris",
+        "id": 18682191
+      },
+      "createdAtUTC": "2026-10-03T15:06:26Z",
+      "updatedAtUTC": "2026-10-03T15:06:26Z",
+      "queueRevision": "4866f46f8a726f55fec17b2af2c09b0a30548abe",
+      "sourceReviewQueue": "outputs/transients/review/transient-review-2026-10-02.json",
+      "reviewSetID": "299f555bcd8c85d0",
+      "queueSHA256": "f71b4ad45392a3df9c099cd10a6ad9e13b88be8f2f29b60f739ece0a2ba1876f",
+      "status": "approved",
+      "candidates": [
+        {
+          "id": "tns:221314",
+          "name": "AT2026adgl",
+          "evidenceHash": "dcd98e4c249db33f",
+          "previousStatus": "pending",
+          "changed": true
+        },
+        {
+          "id": "tns:221339",
+          "name": "SN2026adhk",
+          "evidenceHash": "479acff48c2d5d12",
+          "previousStatus": "pending",
+          "changed": true
+        },
+        {
+          "id": "tns:220685",
+          "name": "SN2026acjs",
+          "evidenceHash": "1700bdcf62f281e5",
+          "previousStatus": "pending",
+          "changed": true
+        },
+        {
+          "id": "tns:221325",
+          "name": "SN2026adgw",
+          "evidenceHash": "f3bb4195e24dcf17",
+          "previousStatus": "pending",
+          "changed": true
+        },
+        {
+          "id": "tns:221316",
+          "name": "AT2026adgn",
+          "evidenceHash": "e75441f66884412e",
+          "previousStatus": "pending",
+          "changed": true
+        }
+      ]
+    }
+  }
+}
