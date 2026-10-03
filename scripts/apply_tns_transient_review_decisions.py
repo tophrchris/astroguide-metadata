@@ -225,6 +225,7 @@ def sync_decisions(
                 )
             else:
                 decision["status"] = "pending"
+                decision.pop("decisionComment", None)
                 decision["decidedBy"] = None
                 decision["decidedAtUTC"] = None
                 decision["note"] = (

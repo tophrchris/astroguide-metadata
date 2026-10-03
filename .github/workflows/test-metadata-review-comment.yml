@@ -1,0 +1,24 @@
+name: Test metadata review comments
+on:
+  pull_request:
+    paths:
+      - 'scripts/process_metadata_review_comment.py'
+      - 'scripts/apply_tns_transient_review_decisions.py'
+      - 'tests/test_metadata_review_comment.py'
+      - '.github/workflows/*tns*'
+      - '.github/workflows/*review-comment*'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s tests -p 'test_*tns*.py'
+      - run: python -m unittest discover -s tests -p 'test_metadata_review_comment.py'
+      - run: python -m unittest discover -s tests -p 'test_automation_workflow_guards.py'

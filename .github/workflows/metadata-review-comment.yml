@@ -1,0 +1,37 @@
+name: Metadata review comment
+
+on:
+  issue_comment:
+    types: [created, edited]
+
+permissions: {}
+
+concurrency:
+  group: update-tns-transient-review
+  cancel-in-progress: false
+
+jobs:
+  decision:
+    if: >-
+      github.event.issue.pull_request &&
+      github.event.comment.user.login == 'tophrchris' &&
+      github.event.comment.user.id == 18682191
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Check out trusted default-branch code, never PR code
+        uses: actions/checkout@v4
+        with:
+          ref: refs/heads/main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Apply the authenticated evidence-bound decision
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.issue.number }}
+          COMMENT_ID: ${{ github.event.comment.id }}
+        run: python scripts/process_metadata_review_comment.py --pr "$PR_NUMBER" --comment-id "$COMMENT_ID" --write

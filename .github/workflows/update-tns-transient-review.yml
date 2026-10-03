@@ -3,6 +3,15 @@ name: Update TNS transient review queue
 on:
   workflow_dispatch:
     inputs:
+      decision_comment_id:
+        description: Replay a TNS decision comment instead of refreshing the queue
+        required: false
+        type: string
+      decision_pr:
+        description: Review PR number for decision replay
+        required: false
+        default: "80"
+        type: string
       as_of:
         description: Queue date in YYYY-MM-DD (defaults to previous UTC date)
         required: false
@@ -34,7 +43,25 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  decision:
+    if: github.event_name == 'workflow_dispatch' && inputs.decision_comment_id != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Replay an authenticated decision using trusted dispatch code
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMMENT_ID: ${{ inputs.decision_comment_id }}
+          PR_NUMBER: ${{ inputs.decision_pr }}
+        run: python scripts/process_metadata_review_comment.py --pr "$PR_NUMBER" --comment-id "$COMMENT_ID" --write
+
   update:
+    if: inputs.decision_comment_id == ''
     name: Refresh TNS review queue
     runs-on: ubuntu-latest
     steps:
@@ -221,7 +248,7 @@ jobs:
 
           if [[ "$has_changes" == true ]]; then
             git commit -m "Update TNS transient review queue"
-            git push --force-with-lease origin "$BRANCH_NAME"
+            git push origin "$BRANCH_NAME"
           fi
 
           body="$(mktemp)"
