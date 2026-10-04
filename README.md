@@ -10,6 +10,15 @@ Human-curated source inputs for generated metadata packages may live under
 `sources/` when they are small enough for normal Git review. AstroGuide clients
 consume only the validated runtime packages under `v1/packages`.
 
+## Local HH Companion Pipeline
+
+Herbig-Haro contextual resources are staged separately from the hosted stable
+channel. See [the HH runbook](docs/hh-companion-v1.md) and
+[the iOS handoff](HANDOFF-HH.md) for reproducible generation, schemas, independent
+core/enrichment/media, source rights, offline fallback and image coverage.
+`scripts/build_hh_packages.py` writes ignored local review outputs only; it does
+not publish data, register a stable family, or modify the canonical catalog.
+
 ## Layout
 
 ```text

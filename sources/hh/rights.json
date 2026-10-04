@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-04",
+  "intendedUse": "redistribution and paid AstroGuide app use with adaptations",
+  "sources": {
+    "SIMBAD": {
+      "status": "cleared",
+      "license": "ODbL-1.0",
+      "evidenceURL": "https://simbad.cds.unistra.fr/simbad/",
+      "credit": "CDS/SIMBAD; Wenger et al. (2000), A&AS 143, 9, 2000A&AS..143....9W",
+      "allowedFields": ["core"],
+      "reason": "Official service page states ODbL (live checked 2026-10-04). Only factual identity/position/type fields imported, no papers/prose/images. Derived companion database offered under ODbL-1.0 with source notice and URI; public use requires share-alike/access, notices and compliant distribution measures. This is not an app-code license or a blanket license for linked scientific material."
+    },
+    "V104": {
+      "status": "unresolved",
+      "license": null,
+      "evidenceURL": "https://cdsarc.cds.unistra.fr/viz-bin/ReadMe/V/104?format=html",
+      "credit": "Reipurth, B. 1999, A general catalogue of Herbig-Haro objects, 2. edition; CDS/VizieR",
+      "allowedFields": [],
+      "reason": "ReadMe specifies citation and B1950 coordinates, but no explicit dataset-specific reuse license in retrieved documentation. Withhold tabular data and especially notes until verified."
+    },
+    "Chen2026": {
+      "status": "withheld",
+      "license": "CC-BY-NC-ND (reported in research handoff, not a grant)",
+      "evidenceURL": "https://arxiv.org/abs/2605.30782v1",
+      "credit": "Chen & Wu (2026)",
+      "allowedFields": [],
+      "reason": "No permission granted. Source is never read by this pipeline. Do not adapt or redistribute material for paid-app use."
+    },
+    "ESA-Hubble": {
+      "status": "cleared",
+      "license": "CC-BY-4.0",
+      "evidenceURL": "https://esahubble.org/copyright/",
+      "credit": "asset-specific full credit required",
+      "allowedFields": ["media", "prose", "distance"],
+      "reason": "Official terms explicitly allow commercial reproduction/adaptation unless an asset states otherwise. Full visible credit, active license/source links, indicate modifications, no endorsement/logos. Does not license scientific papers/code."
+    },
+    "ESO": {
+      "status": "cleared",
+      "license": "CC-BY-4.0",
+      "evidenceURL": "https://www.eso.org/public/outreach/copyright/",
+      "credit": "asset-specific full credit required",
+      "allowedFields": ["media", "prose", "distance"],
+      "reason": "Official terms permit commercial reproduction/adaptation of public images and caption/POTW text unless noted otherwise. Full visible credit, license/source links, indicate modifications, no endorsement/logos. Papers/code excluded."
+    }
+  }
+}

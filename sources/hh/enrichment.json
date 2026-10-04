@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "id": "hh:24",
+      "fields": {
+        "prose": {
+          "value": "HH 24 traces jets from a young stellar system; shocks form where ejected material interacts with its surroundings.",
+          "source": "ESA-Hubble",
+          "sourceURL": "https://esahubble.org/images/heic1526a/",
+          "credit": "ESA/Hubble",
+          "license": "CC-BY-4.0",
+          "basis": "original editorial paraphrase; cited archive caption, not a scientific-paper excerpt"
+        }
+      }
+    },
+    {
+      "id": "hh:212",
+      "fields": {
+        "prose": {
+          "value": "HH 212 has paired jets with multiple knots visible in near-infrared imagery. A regional or survey view need not resolve that emission.",
+          "source": "ESO",
+          "sourceURL": "https://www.eso.org/public/images/potw1541a/",
+          "credit": "ESO",
+          "license": "CC-BY-4.0",
+          "basis": "original editorial paraphrase; cited POTW, not a scientific-paper excerpt"
+        }
+      }
+    }
+  ]
+}

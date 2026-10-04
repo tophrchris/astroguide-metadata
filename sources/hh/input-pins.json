@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "2026-10-04",
+  "catalogVersion": "auto-parquet-20260903-230711",
+  "catalogSHA256": "6b4922a085135d0df79820fad3dfe71ff534aa0e314013036a354284470a547b",
+  "identityMapSHA256": "7b874bc0c5ba9c21c3aa4d2455fef4733f46cb89e74e9aae0e8a8ceb8758c66c",
+  "sourceHashes": {
+    "simbad_full.csv": "681b48b53525f715bdcbecddae94f8f21713aeb88c755d50f7e41d5f6d20d16e",
+    "simbad_hh_named.csv": "413814ba2eeead6adc4bb1468824c31aafc57928a463d7d246c8dc0057e44077",
+    "V104_catalog.dat": "8d314a7db2bd8e092c6e91d5e877cde78074ea6f0b1da9ca4e9a1484e21d68f2"
+  }
+}

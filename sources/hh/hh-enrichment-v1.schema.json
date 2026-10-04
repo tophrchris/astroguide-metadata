@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HH Optional Enrichment v1", "type": "object", "additionalProperties": false,
+  "required": ["schemaVersion", "packageVersion", "records"],
+  "properties": {
+    "schemaVersion": {"const": 1}, "packageVersion": {"type": "string", "minLength": 1},
+    "records": {"type": "array", "maxItems": 20000, "items": {
+      "type": "object", "additionalProperties": false, "required": ["id", "fields"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^hh:"},
+        "fields": {
+          "type": "object", "minProperties": 1, "additionalProperties": false,
+          "properties": {
+            "prose": {"$ref": "#/$defs/prose"}, "distance": {"$ref": "#/$defs/distance"},
+            "excitingSources": {"$ref": "#/$defs/excitingSources"}, "morphology": {"$ref": "#/$defs/prose"}
+          }
+        }
+      }
+    }}
+  },
+  "$defs": {
+    "attribution": {
+      "type": "object", "required": ["value", "source", "sourceURL", "credit", "license", "basis"],
+      "properties": {
+        "value": {}, "source": {"type": "string", "minLength": 1},
+        "sourceURL": {"type": "string", "pattern": "^https://"}, "credit": {"type": "string", "minLength": 1},
+        "license": {"type": "string", "minLength": 1}, "basis": {"type": "string", "minLength": 1}
+      }, "additionalProperties": false
+    },
+    "prose": {"allOf": [{"$ref": "#/$defs/attribution"}, {"properties": {"value": {"type": ["string", "null"], "maxLength": 4000}}}]},
+    "distance": {"allOf": [{"$ref": "#/$defs/attribution"}, {"properties": {"value": {
+      "type": ["object", "null"], "additionalProperties": false,
+      "required": ["value", "unit", "range", "uncertainty", "method", "scope"],
+      "properties": {
+        "value": {"type": ["number", "null"], "minimum": 0}, "unit": {"enum": ["pc", "ly"]},
+        "range": {"type": ["array", "null"], "minItems": 2, "maxItems": 2, "items": {"type": "number", "minimum": 0}},
+        "uncertainty": {"type": ["number", "null"], "minimum": 0},
+        "method": {"type": "string", "minLength": 1}, "scope": {"enum": ["measured-HH", "adopted-cloud", "inferred-other-object"]}
+      }
+    }}}]},
+    "excitingSources": {"allOf": [{"$ref": "#/$defs/attribution"}, {"properties": {"value": {
+      "type": ["array", "null"], "items": {
+        "type": "object", "additionalProperties": false, "required": ["sourceID", "confidence", "alternatives"],
+        "properties": {"sourceID": {"type": "string", "minLength": 1}, "confidence": {"enum": ["candidate", "confirmed"]},
+                       "alternatives": {"type": "array", "items": {"type": "string"}}}
+      }
+    }}}]}
+  }
+}

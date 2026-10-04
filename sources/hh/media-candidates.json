@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "scope": "Bounded official ESA/Hubble and ESO inventory, verified 2026-10-04. Not an exhaustive internet census. No image binaries copied.",
+  "records": [
+    {
+      "assetID": "esa-hubble:heic1526a",
+      "id": "hh:24",
+      "role": "dedicated",
+      "source": "ESA-Hubble",
+      "sourceURL": "https://esahubble.org/images/heic1526a/",
+      "credit": "ESA/Hubble & NASA, D. Padgett (GSFC), T. Megeath (University of Toledo), and B. Reipurth (University of Hawaii)",
+      "license": "CC-BY-4.0",
+      "licenseURL": "https://esahubble.org/copyright/",
+      "width": 1028,
+      "height": 1218,
+      "identityVerified": true,
+      "emissionIdentified": true,
+      "reuseVerified": true,
+      "verifiedAt": "2026-10-04",
+      "crop": "none; future crops must preserve identified HH and visible credit",
+      "modifications": "none",
+      "rightsNote": "Official image page identifies HH24 and specifies credit; linked terms allow resizing/cropping and paid reuse."
+    },
+    {
+      "assetID": "esa-hubble:heic1526b",
+      "id": "hh:24",
+      "role": "survey_cutout",
+      "source": "ESA-Hubble",
+      "sourceURL": "https://esahubble.org/images/heic1526b/",
+      "credit": "NASA, ESA, Digitized Sky Survey 2; Acknowledgement: Davide De Martin",
+      "license": "CC-BY-4.0",
+      "licenseURL": "https://esahubble.org/copyright/",
+      "width": 14048,
+      "height": 13933,
+      "identityVerified": true,
+      "emissionIdentified": false,
+      "reuseVerified": true,
+      "verifiedAt": "2026-10-04",
+      "crop": "none; positional context only, not proof HH emission is detectable",
+      "modifications": "none",
+      "rightsNote": "Official archive terms explicitly cover material hosted there unless otherwise stated. No blanket rights claim for arbitrary DSS/Aladin cutouts."
+    },
+    {
+      "assetID": "eso:potw1541a",
+      "id": "hh:212",
+      "role": "dedicated",
+      "source": "ESO",
+      "sourceURL": "https://www.eso.org/public/images/potw1541a/",
+      "credit": "ESO/M. McCaughrean",
+      "license": "CC-BY-4.0",
+      "licenseURL": "https://www.eso.org/public/outreach/copyright/",
+      "width": 1548,
+      "height": 963,
+      "identityVerified": true,
+      "emissionIdentified": true,
+      "reuseVerified": true,
+      "verifiedAt": "2026-10-04",
+      "crop": "none; future crops must retain HH identification and visible credit",
+      "modifications": "none",
+      "rightsNote": "Official POTW identifies HH212 jets and credit, with explicit commercial/adaptation terms."
+    }
+  ]
+}

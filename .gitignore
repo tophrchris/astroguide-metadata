@@ -1,0 +1,3 @@
+# Locally generated HH review packages, not hosted/published artifacts.
+outputs/hh/
+__pycache__/

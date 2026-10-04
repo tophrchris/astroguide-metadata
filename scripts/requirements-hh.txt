@@ -1,0 +1,3 @@
+numpy==2.4.3
+astropy==8.0.0
+jsonschema==4.26.0
