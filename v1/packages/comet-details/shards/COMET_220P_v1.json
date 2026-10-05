@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260928-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261005-aerith",
   "packageRole": "comet",
   "shardID": "COMET_220P",
   "record": {
@@ -10,23 +10,23 @@
     "displayName": "220P/McNaught",
     "aerithName": "220P/McNaught",
     "detailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
-    "generatedAt": "2026-09-28T10:35:01Z",
+    "generatedAt": "2026-10-05T10:37:14Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-09-26",
+      "referenceDate": "2026-10-03",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-09-26",
-      "aerithNextUsefulDate": "2026-10-03",
-      "aerithCurrentMagnitude": 12.2,
-      "aerithNextMagnitude": 12.9,
+      "aerithCurrentDate": "2026-10-03",
+      "aerithNextUsefulDate": "2026-10-10",
+      "aerithCurrentMagnitude": 12.9,
+      "aerithNextMagnitude": 13.6,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 62.0,
-        "south": 48.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 61.0,
         "south": 49.0
+      },
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 60.0,
+        "south": 50.0
       },
       "futureUsefulStartDate": null,
       "futureUsefulEndDate": null,
@@ -40,10 +40,10 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-09-26",
+      "referenceDate": "2026-10-03",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 17.544,
-      "currentSampleDate": "2026-09-26",
+      "currentMagnitudeEstimate": 17.739,
+      "currentSampleDate": "2026-10-03",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0220P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-09-28T10:35:01Z",
+      "generatedAt": "2026-10-05T10:37:14Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -142,20 +142,23 @@
         "interpretation": "Faded 5.4 mag between Aerith magnitude reports or estimates."
       },
       {
-        "id": "220P-2026-09-26-north-weekly-1",
-        "date": "2026-09-26",
-        "magnitude": 12.2,
+        "id": "220P-2026-10-03-north-weekly-1",
+        "date": "2026-10-03",
+        "magnitude": 12.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.4
+        "magnitudeDelta": 1.1,
+        "isSignificant": true,
+        "significanceKind": "fade",
+        "interpretation": "Faded 1.1 mag between Aerith magnitude reports or estimates."
       },
       {
-        "id": "220P-2026-10-03-north-weekly-2",
-        "date": "2026-10-03",
-        "magnitude": 12.9,
+        "id": "220P-2026-10-10-north-weekly-2",
+        "date": "2026-10-10",
+        "magnitude": 13.6,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
@@ -167,8 +170,8 @@
     "brightnessChart": {
       "lookbackDays": 90,
       "availableStartDate": "2026-08-06",
-      "availableEndDate": "2026-10-03",
-      "actualDaySpan": 58,
+      "availableEndDate": "2026-10-10",
+      "actualDaySpan": 65,
       "pointCount": 4,
       "containsProjection": true,
       "containsReportedObservation": true,
@@ -204,20 +207,23 @@
           "interpretation": "Faded 5.4 mag between Aerith magnitude reports or estimates."
         },
         {
-          "id": "220P-2026-09-26-north-weekly-1",
-          "date": "2026-09-26",
-          "magnitude": 12.2,
+          "id": "220P-2026-10-03-north-weekly-1",
+          "date": "2026-10-03",
+          "magnitude": 12.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.4
+          "magnitudeDelta": 1.1,
+          "isSignificant": true,
+          "significanceKind": "fade",
+          "interpretation": "Faded 1.1 mag between Aerith magnitude reports or estimates."
         },
         {
-          "id": "220P-2026-10-03-north-weekly-2",
-          "date": "2026-10-03",
-          "magnitude": 12.9,
+          "id": "220P-2026-10-10-north-weekly-2",
+          "date": "2026-10-10",
+          "magnitude": 13.6,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
@@ -228,12 +234,12 @@
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 12.9,
-      "currentDate": "2026-10-03",
-      "currentPointID": "220P-2026-10-03-north-weekly-2",
-      "comparisonMagnitude": 12.2,
-      "comparisonDate": "2026-09-26",
-      "comparisonPointID": "220P-2026-09-26-north-weekly-1",
+      "currentMagnitude": 13.6,
+      "currentDate": "2026-10-10",
+      "currentPointID": "220P-2026-10-10-north-weekly-2",
+      "comparisonMagnitude": 12.9,
+      "comparisonDate": "2026-10-03",
+      "comparisonPointID": "220P-2026-10-03-north-weekly-1",
       "comparisonWindowDays": 7,
       "deltaMagnitude": 0.7,
       "direction": "fading",
@@ -241,7 +247,8 @@
       "notableChangeThresholdMagnitude": 1.0,
       "notableObservationIDs": [
         "220P-2026-08-06-report-2",
-        "220P-2026-09-24-report-3"
+        "220P-2026-09-24-report-3",
+        "220P-2026-10-03-north-weekly-1"
       ]
     }
   }
