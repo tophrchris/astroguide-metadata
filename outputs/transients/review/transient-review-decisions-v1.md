@@ -2,11 +2,11 @@
 
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
-- **Approved and active in runtime:** 10
-- **Pending review:** 24
+- **Approved and active in runtime:** 8
+- **Pending review:** 25
 - **On hold:** 0
 - **Rejected:** 0
-- **Approved but expired:** 8
+- **Approved but expired:** 10
 
 Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun this workflow. A non-pending decision requires `decidedBy` and `decidedAtUTC`. Changed evidence automatically resets the candidate to `pending`.
 
@@ -54,3 +54,4 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [AT2026adgn](https://www.wis-tns.org/object/2026adgn) | hold | 14.51 | transient_candidate | NGC 1198 (1.22724 deg) | 2026-10-29T17:51:06Z |
 | Pending | [SN2026adgw](https://www.wis-tns.org/object/2026adgw) | approve | 18.4624 | SN Ia | White-Eyed Pea nebula (0.91717 deg) | 2026-10-29T02:43:07Z |
 | Pending | [SN2026adhk](https://www.wis-tns.org/object/2026adhk) | approve | 18.41 | SN Ia | IC2166 (1.38799 deg) | 2026-10-30T05:52:35Z |
+| Pending | [AT2026admi](https://www.wis-tns.org/object/2026admi) | approve | 18.347 | transient_candidate | Collinder 22 (CR22) (0.17124 deg) | 2026-10-29T01:28:42Z |
