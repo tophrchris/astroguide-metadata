@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260928-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261005-aerith",
   "packageRole": "comet",
   "shardID": "COMET_161P",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "161P/Hartley-IRAS",
     "aerithName": "161P/Hartley-IRAS",
     "detailURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
-    "generatedAt": "2026-09-28T10:35:01Z",
+    "generatedAt": "2026-10-05T10:37:14Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-09-26",
+      "referenceDate": "2026-10-03",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-09-26",
-      "aerithNextUsefulDate": "2026-10-03",
-      "aerithCurrentMagnitude": 10.9,
-      "aerithNextMagnitude": 10.5,
+      "aerithCurrentDate": "2026-10-03",
+      "aerithNextUsefulDate": "2026-10-10",
+      "aerithCurrentMagnitude": 10.5,
+      "aerithNextMagnitude": 10.4,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 44.0,
-        "south": 66.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 51.0,
         "south": 59.0
       },
-      "futureUsefulStartDate": "2026-09-26",
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 58.0,
+        "south": 52.0
+      },
+      "futureUsefulStartDate": "2026-10-03",
       "futureUsefulEndDate": "2027-03-24",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 179
+      "daysUntilFutureUsefulEnd": 172
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-09-26",
+      "referenceDate": "2026-10-03",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 12.251,
-      "currentSampleDate": "2026-09-26",
+      "currentMagnitudeEstimate": 11.97,
+      "currentSampleDate": "2026-10-03",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-09-26",
+      "firstFutureUsefulDate": "2026-10-03",
       "lastFutureUsefulDate": "2027-03-24",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 179,
+      "daysUntilUsefulEnd": 172,
       "brightestMagnitude": 11.945,
       "brightestDate": "2026-10-06",
       "faintestMagnitude": 19.664,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-09-28T10:35:01Z",
+      "generatedAt": "2026-10-05T10:37:14Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -99,93 +99,93 @@
     },
     "brightness": [
       {
-        "id": "161P-2026-09-21-report-1",
-        "date": "2026-09-21",
-        "magnitude": 11.4,
+        "id": "161P-2026-09-27-report-1",
+        "date": "2026-09-27",
+        "magnitude": 10.7,
         "qualifier": "reported",
         "estimateKind": "reported",
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
-        "commentary": "Now it is 11.4 mag (Sept. 21, Mike Olason). Fading slowly. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be getting lower gradually after this, and it will be unobservable in November."
+        "commentary": "Now it is 10.7 mag (Sept. 27, Marco Goiato). Fading gradually. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be getting lower gradually after this, and it will be unobservable in November."
       },
       {
-        "id": "161P-2026-09-26-north-weekly-1",
-        "date": "2026-09-26",
-        "magnitude": 10.9,
+        "id": "161P-2026-10-03-north-weekly-1",
+        "date": "2026-10-03",
+        "magnitude": 10.5,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -0.5
+        "magnitudeDelta": -0.2
       },
       {
-        "id": "161P-2026-10-03-north-weekly-2",
-        "date": "2026-10-03",
-        "magnitude": 10.5,
+        "id": "161P-2026-10-10-north-weekly-2",
+        "date": "2026-10-10",
+        "magnitude": 10.4,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -0.4
+        "magnitudeDelta": -0.1
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-09-21",
-      "availableEndDate": "2026-10-03",
-      "actualDaySpan": 12,
+      "availableStartDate": "2026-09-27",
+      "availableEndDate": "2026-10-10",
+      "actualDaySpan": 13,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
       "points": [
         {
-          "id": "161P-2026-09-21-report-1",
-          "date": "2026-09-21",
-          "magnitude": 11.4,
+          "id": "161P-2026-09-27-report-1",
+          "date": "2026-09-27",
+          "magnitude": 10.7,
           "qualifier": "reported",
           "estimateKind": "reported",
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
           "sourceURL": "http://www.aerith.net/comet/catalog/0161P/2026.html",
-          "commentary": "Now it is 11.4 mag (Sept. 21, Mike Olason). Fading slowly. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be getting lower gradually after this, and it will be unobservable in November."
+          "commentary": "Now it is 10.7 mag (Sept. 27, Marco Goiato). Fading gradually. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be getting lower gradually after this, and it will be unobservable in November."
         },
         {
-          "id": "161P-2026-09-26-north-weekly-1",
-          "date": "2026-09-26",
-          "magnitude": 10.9,
+          "id": "161P-2026-10-03-north-weekly-1",
+          "date": "2026-10-03",
+          "magnitude": 10.5,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": -0.5
+          "magnitudeDelta": -0.2
         },
         {
-          "id": "161P-2026-10-03-north-weekly-2",
-          "date": "2026-10-03",
-          "magnitude": 10.5,
+          "id": "161P-2026-10-10-north-weekly-2",
+          "date": "2026-10-10",
+          "magnitude": 10.4,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": -0.4
+          "magnitudeDelta": -0.1
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 10.5,
-      "currentDate": "2026-10-03",
-      "currentPointID": "161P-2026-10-03-north-weekly-2",
-      "comparisonMagnitude": 10.9,
-      "comparisonDate": "2026-09-26",
-      "comparisonPointID": "161P-2026-09-26-north-weekly-1",
+      "currentMagnitude": 10.4,
+      "currentDate": "2026-10-10",
+      "currentPointID": "161P-2026-10-10-north-weekly-2",
+      "comparisonMagnitude": 10.5,
+      "comparisonDate": "2026-10-03",
+      "comparisonPointID": "161P-2026-10-03-north-weekly-1",
       "comparisonWindowDays": 7,
-      "deltaMagnitude": -0.4,
-      "direction": "brightening",
+      "deltaMagnitude": -0.1,
+      "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
       "notableObservationIDs": []

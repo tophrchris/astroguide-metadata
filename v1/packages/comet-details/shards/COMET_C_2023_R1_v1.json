@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20260928-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261005-aerith",
   "packageRole": "comet",
   "shardID": "COMET_C_2023_R1",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "C/2023 R1 (PANSTARRS)",
     "aerithName": "C/2023 R1 ( PanSTARRS )",
     "detailURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
-    "generatedAt": "2026-09-28T10:35:01Z",
+    "generatedAt": "2026-10-05T10:37:14Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-09-26",
+      "referenceDate": "2026-10-03",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-09-26",
-      "aerithNextUsefulDate": "2026-10-03",
-      "aerithCurrentMagnitude": 14.7,
-      "aerithNextMagnitude": 14.8,
+      "aerithCurrentDate": "2026-10-03",
+      "aerithNextUsefulDate": "2026-10-10",
+      "aerithCurrentMagnitude": 14.8,
+      "aerithNextMagnitude": 14.9,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 11.0,
-        "south": 31.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 8.0,
         "south": 24.0
       },
-      "futureUsefulStartDate": "2026-09-26",
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 4.0,
+        "south": 18.0
+      },
+      "futureUsefulStartDate": "2026-10-03",
       "futureUsefulEndDate": "2026-10-21",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 25
+      "daysUntilFutureUsefulEnd": 18
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-09-26",
+      "referenceDate": "2026-10-03",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 15.724,
-      "currentSampleDate": "2026-09-26",
+      "currentMagnitudeEstimate": 15.809,
+      "currentSampleDate": "2026-10-03",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-09-26",
+      "firstFutureUsefulDate": "2026-10-03",
       "lastFutureUsefulDate": "2026-10-21",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 25,
+      "daysUntilUsefulEnd": 18,
       "brightestMagnitude": 14.0,
       "brightestDate": "2026-08-08",
       "faintestMagnitude": 17.273,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-09-28T10:35:01Z",
+      "generatedAt": "2026-10-05T10:37:14Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -107,23 +107,23 @@
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
-        "commentary": "Now it is 14.7 mag (Sept. 19, Mike Olason). It stays 15 mag for a while. It will be unobservable in October in the Northern Hemisphere, or in November in the Southern Hemisphere. But it will be observable again in December."
+        "commentary": "Now it is 14.7 mag (Sept. 19, Mike Olason). It stays 15 mag for a while. It will be unobservable soon in the Northern Hemisphere, or in November in the Southern Hemisphere. But it will be observable again in December."
       },
       {
-        "id": "C/2023R1-2026-09-26-north-weekly-1",
-        "date": "2026-09-26",
-        "magnitude": 14.7,
+        "id": "C/2023R1-2026-10-03-north-weekly-1",
+        "date": "2026-10-03",
+        "magnitude": 14.8,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.0
+        "magnitudeDelta": 0.1
       },
       {
-        "id": "C/2023R1-2026-10-03-north-weekly-2",
-        "date": "2026-10-03",
-        "magnitude": 14.8,
+        "id": "C/2023R1-2026-10-10-north-weekly-2",
+        "date": "2026-10-10",
+        "magnitude": 14.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
@@ -135,8 +135,8 @@
     "brightnessChart": {
       "lookbackDays": 90,
       "availableStartDate": "2026-09-19",
-      "availableEndDate": "2026-10-03",
-      "actualDaySpan": 14,
+      "availableEndDate": "2026-10-10",
+      "actualDaySpan": 21,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
@@ -150,23 +150,23 @@
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
           "sourceURL": "http://www.aerith.net/comet/catalog/2023R1/2023R1.html",
-          "commentary": "Now it is 14.7 mag (Sept. 19, Mike Olason). It stays 15 mag for a while. It will be unobservable in October in the Northern Hemisphere, or in November in the Southern Hemisphere. But it will be observable again in December."
+          "commentary": "Now it is 14.7 mag (Sept. 19, Mike Olason). It stays 15 mag for a while. It will be unobservable soon in the Northern Hemisphere, or in November in the Southern Hemisphere. But it will be observable again in December."
         },
         {
-          "id": "C/2023R1-2026-09-26-north-weekly-1",
-          "date": "2026-09-26",
-          "magnitude": 14.7,
+          "id": "C/2023R1-2026-10-03-north-weekly-1",
+          "date": "2026-10-03",
+          "magnitude": 14.8,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.0
+          "magnitudeDelta": 0.1
         },
         {
-          "id": "C/2023R1-2026-10-03-north-weekly-2",
-          "date": "2026-10-03",
-          "magnitude": 14.8,
+          "id": "C/2023R1-2026-10-10-north-weekly-2",
+          "date": "2026-10-10",
+          "magnitude": 14.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
@@ -177,12 +177,12 @@
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 14.8,
-      "currentDate": "2026-10-03",
-      "currentPointID": "C/2023R1-2026-10-03-north-weekly-2",
-      "comparisonMagnitude": 14.7,
-      "comparisonDate": "2026-09-26",
-      "comparisonPointID": "C/2023R1-2026-09-26-north-weekly-1",
+      "currentMagnitude": 14.9,
+      "currentDate": "2026-10-10",
+      "currentPointID": "C/2023R1-2026-10-10-north-weekly-2",
+      "comparisonMagnitude": 14.8,
+      "comparisonDate": "2026-10-03",
+      "comparisonPointID": "C/2023R1-2026-10-03-north-weekly-1",
       "comparisonWindowDays": 7,
       "deltaMagnitude": 0.1,
       "direction": "stable",
