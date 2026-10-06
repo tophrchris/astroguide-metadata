@@ -1,95 +1,20 @@
 {
   "schemaVersion": 1,
   "packageFamily": "transientEventFeed",
-  "packageVersion": "transient-event-feed-v1-20261004-approved",
+  "packageVersion": "transient-event-feed-v1-20261005-approved",
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "asOfDate": "2026-10-04",
-  "generatedAtUTC": "2026-10-04T00:00:00Z",
+  "asOfDate": "2026-10-05",
+  "generatedAtUTC": "2026-10-05T00:00:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
     "reviewed": 18,
-    "approved": 8,
+    "approved": 7,
     "excluded": 0,
-    "pending": 25,
-    "expiredApproved": 10
+    "pending": 26,
+    "expiredApproved": 11
   },
   "opportunities": [
-    {
-      "id": "tns:219467",
-      "source": "TNS",
-      "sourceId": "219467",
-      "sourceObjectName": "SN2026aarv",
-      "sourceURL": "https://www.wis-tns.org/object/2026aarv",
-      "title": "Supernova SN2026aarv near IC5332",
-      "shortTitle": "SN2026aarv",
-      "eventType": "transientOpportunity",
-      "reviewOnly": false,
-      "urgency": "watch",
-      "recommendedReviewAction": "approved",
-      "activeWindow": {
-        "startsAtUTC": "2026-09-05T10:21:24Z",
-        "expiresAtUTC": "2026-10-05T10:21:24Z"
-      },
-      "discovery": {
-        "dateUTC": "2026-09-05T10:21:24Z",
-        "ageDays": 5,
-        "magnitude": 18.794,
-        "band": "cyan"
-      },
-      "reportedMagnitude": {
-        "value": null,
-        "band": null
-      },
-      "classification": {
-        "kind": "supernova",
-        "type": "SN Ia",
-        "status": null
-      },
-      "coordinates": {
-        "raDegrees": 351.864604,
-        "decDegrees": -35.812296
-      },
-      "score": 88,
-      "reasonTags": [
-        "classified_high_interest_transient",
-        "discovered_within_7_days",
-        "discovery_magnitude_watch_band",
-        "separation_le_2_deg",
-        "nearby_catalog_object_is_galaxy",
-        "recognizable_astroguide_subject"
-      ],
-      "astroGuideObject": {
-        "id": "IC5332",
-        "displayName": "IC5332",
-        "catalogName": "IC IC5332",
-        "objectType": "Galaxy",
-        "magnitude": 10.0
-      },
-      "angularSeparationDegrees": 1.444,
-      "relationship": {
-        "type": "near_field",
-        "wording": "near-field match",
-        "tnsReportedHost": null
-      },
-      "lastModifiedUTC": "2026-09-09T07:19:22Z",
-      "provenance": {
-        "reportingGroup": "ATLAS",
-        "sourceGroup": "ATLAS",
-        "internalNames": [
-          "ATLAS26kvd",
-          "GOTO26iwq"
-        ]
-      },
-      "review": {
-        "status": "approved",
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "sourceReviewQueue": "transient-review-2026-09-10.json",
-        "reviewSetID": null,
-        "evidenceHash": "6f089a5e6dc9acb0"
-      }
-    },
     {
       "id": "tns:219602",
       "source": "TNS",
