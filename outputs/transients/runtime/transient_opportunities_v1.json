@@ -2,165 +2,17 @@
   "schemaVersion": 1,
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "asOfDate": "2026-10-05",
-  "generatedAtUTC": "2026-10-05T00:00:00Z",
+  "asOfDate": "2026-10-06",
+  "generatedAtUTC": "2026-10-06T00:00:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
     "reviewed": 18,
-    "approved": 7,
+    "approved": 5,
     "excluded": 0,
     "pending": 26,
-    "expiredApproved": 11
+    "expiredApproved": 13
   },
   "opportunities": [
-    {
-      "id": "tns:219602",
-      "source": "TNS",
-      "sourceId": "219602",
-      "sourceObjectName": "AT2026aavy",
-      "sourceURL": "https://www.wis-tns.org/object/2026aavy",
-      "title": "Transient candidate AT2026aavy near IC4214",
-      "shortTitle": "AT2026aavy",
-      "eventType": "transientOpportunity",
-      "reviewOnly": false,
-      "urgency": "urgent",
-      "recommendedReviewAction": "approved",
-      "activeWindow": {
-        "startsAtUTC": "2026-09-06T23:25:03Z",
-        "expiresAtUTC": "2026-10-06T23:25:03Z"
-      },
-      "discovery": {
-        "dateUTC": "2026-09-06T23:25:03Z",
-        "ageDays": 4,
-        "magnitude": 17.564,
-        "band": "cyan"
-      },
-      "reportedMagnitude": {
-        "value": null,
-        "band": null
-      },
-      "classification": {
-        "kind": "transient_candidate",
-        "type": null,
-        "status": null
-      },
-      "coordinates": {
-        "raDegrees": 201.3285887,
-        "decDegrees": -33.1417925
-      },
-      "score": 83,
-      "reasonTags": [
-        "unclassified_transient_candidate",
-        "discovered_within_7_days",
-        "discovery_magnitude_le_18_5",
-        "separation_le_2_deg",
-        "nearby_catalog_object_is_galaxy",
-        "recognizable_astroguide_subject"
-      ],
-      "astroGuideObject": {
-        "id": "IC4214",
-        "displayName": "IC4214",
-        "catalogName": "IC IC4214",
-        "objectType": "Galaxy",
-        "magnitude": 11.4
-      },
-      "angularSeparationDegrees": 1.91105,
-      "relationship": {
-        "type": "near_field",
-        "wording": "near-field match",
-        "tnsReportedHost": null
-      },
-      "lastModifiedUTC": "2026-09-07T16:21:29Z",
-      "provenance": {
-        "reportingGroup": "ATLAS",
-        "sourceGroup": "ATLAS",
-        "internalNames": [
-          "ATLAS26kxe"
-        ]
-      },
-      "review": {
-        "status": "approved",
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "sourceReviewQueue": "transient-review-2026-09-10.json",
-        "reviewSetID": null,
-        "evidenceHash": "18970d82d7b93671"
-      }
-    },
-    {
-      "id": "tns:219597",
-      "source": "TNS",
-      "sourceId": "219597",
-      "sourceObjectName": "AT2026aavt",
-      "sourceURL": "https://www.wis-tns.org/object/2026aavt",
-      "title": "Transient candidate AT2026aavt near NGC 7130",
-      "shortTitle": "AT2026aavt",
-      "eventType": "transientOpportunity",
-      "reviewOnly": false,
-      "urgency": "urgent",
-      "recommendedReviewAction": "approved",
-      "activeWindow": {
-        "startsAtUTC": "2026-09-06T23:29:38Z",
-        "expiresAtUTC": "2026-10-06T23:29:38Z"
-      },
-      "discovery": {
-        "dateUTC": "2026-09-06T23:29:38Z",
-        "ageDays": 4,
-        "magnitude": 18.493,
-        "band": "cyan"
-      },
-      "reportedMagnitude": {
-        "value": null,
-        "band": null
-      },
-      "classification": {
-        "kind": "transient_candidate",
-        "type": null,
-        "status": null
-      },
-      "coordinates": {
-        "raDegrees": 207.517282,
-        "decDegrees": -28.197736
-      },
-      "score": 83,
-      "reasonTags": [
-        "unclassified_transient_candidate",
-        "discovered_within_7_days",
-        "discovery_magnitude_le_18_5",
-        "separation_le_2_deg",
-        "nearby_catalog_object_is_galaxy",
-        "recognizable_astroguide_subject"
-      ],
-      "astroGuideObject": {
-        "id": "IC 4320",
-        "displayName": "NGC 7130",
-        "catalogName": "IC IC 4320",
-        "objectType": "Galaxy",
-        "magnitude": null
-      },
-      "angularSeparationDegrees": 1.64337,
-      "relationship": {
-        "type": "near_field",
-        "wording": "near-field match",
-        "tnsReportedHost": null
-      },
-      "lastModifiedUTC": "2026-09-07T16:01:53Z",
-      "provenance": {
-        "reportingGroup": "ATLAS",
-        "sourceGroup": "ATLAS",
-        "internalNames": [
-          "ATLAS26kww"
-        ]
-      },
-      "review": {
-        "status": "approved",
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "sourceReviewQueue": "transient-review-2026-09-10.json",
-        "reviewSetID": null,
-        "evidenceHash": "0e5b77c66db975e9"
-      }
-    },
     {
       "id": "tns:219695",
       "source": "TNS",
