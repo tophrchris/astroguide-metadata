@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "packageFamily": "transientEventFeed",
-  "packageVersion": "transient-event-feed-v1-20261006-approved",
+  "packageVersion": "transient-event-feed-v1-20261007-approved",
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "asOfDate": "2026-10-06",
-  "generatedAtUTC": "2026-10-06T00:00:00Z",
+  "asOfDate": "2026-10-07",
+  "generatedAtUTC": "2026-10-07T00:00:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
     "reviewed": 18,
     "approved": 5,
     "excluded": 0,
-    "pending": 26,
+    "pending": 28,
     "expiredApproved": 13
   },
   "opportunities": [

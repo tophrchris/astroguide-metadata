@@ -3,7 +3,7 @@
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
 - **Approved and active in runtime:** 5
-- **Pending review:** 26
+- **Pending review:** 28
 - **On hold:** 0
 - **Rejected:** 0
 - **Approved but expired:** 13
@@ -56,3 +56,5 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [SN2026adhk](https://www.wis-tns.org/object/2026adhk) | approve | 18.41 | SN Ia | IC2166 (1.38799 deg) | 2026-10-30T05:52:35Z |
 | Pending | [AT2026admi](https://www.wis-tns.org/object/2026admi) | approve | 18.347 | transient_candidate | Collinder 22 (CR22) (0.17124 deg) | 2026-10-29T01:28:42Z |
 | Pending | [AT2026aejp](https://www.wis-tns.org/object/2026aejp) | approve | 18.24 | transient_candidate | IC2183 (0.16658 deg) | 2026-10-30T12:19:58Z |
+| Pending | [AT2026aeru](https://www.wis-tns.org/object/2026aeru) | approve | 18.09 | transient_candidate | NGC 3003 (0.80299 deg) | 2026-11-06T11:50:49Z |
+| Pending | [AT2026aesu](https://www.wis-tns.org/object/2026aesu) | hold | 17.8861 | transient_candidate | NGC 3110 (0.61267 deg) | 2026-10-31T12:49:47Z |
