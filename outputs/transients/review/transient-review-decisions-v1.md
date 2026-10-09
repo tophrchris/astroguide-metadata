@@ -2,11 +2,11 @@
 
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
-- **Approved and active in runtime:** 5
+- **Approved and active in runtime:** 1
 - **Pending review:** 28
 - **On hold:** 0
 - **Rejected:** 0
-- **Approved but expired:** 13
+- **Approved but expired:** 17
 
 Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun this workflow. A non-pending decision requires `decidedBy` and `decidedAtUTC`. Changed evidence automatically resets the candidate to `pending`.
 

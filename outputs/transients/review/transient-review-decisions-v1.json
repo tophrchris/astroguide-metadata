@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "family": "tnsTransientReviewDecisions",
-  "generatedAtUTC": "2026-10-07T00:00:00Z",
+  "generatedAtUTC": "2026-10-08T00:00:00Z",
   "instructions": "Set status to approved, hold, or rejected and record decidedBy/decidedAtUTC. Approved entries with current evidence are materialized into the runtime feed; merging the review PR publishes that generated feed through stable metadata.",
   "decisions": [
     {
@@ -466,11 +466,11 @@
       "decidedBy": null,
       "decidedAtUTC": null,
       "note": "Evidence changed after the previous pending decision; review required.",
-      "evidenceHash": "dde151ba202bbd80",
-      "sourceReviewQueue": "transient-review-2026-10-07.json",
-      "reviewSetID": "b6c54d5815e65d90",
+      "evidenceHash": "42cc7cdd3caa49bd",
+      "sourceReviewQueue": "transient-review-2026-10-08.json",
+      "reviewSetID": "7fb4ffae0005e903",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-07"
+      "lastSeenAsOfDate": "2026-10-08"
     },
     {
       "id": "tns:221316",
@@ -490,11 +490,11 @@
       "decidedBy": null,
       "decidedAtUTC": null,
       "note": "Evidence changed after the previous pending decision; review required.",
-      "evidenceHash": "1e070d929cf823b2",
-      "sourceReviewQueue": "transient-review-2026-10-06.json",
-      "reviewSetID": "aa92ca6f7e41083c",
+      "evidenceHash": "c754a01eb40edbcd",
+      "sourceReviewQueue": "transient-review-2026-10-08.json",
+      "reviewSetID": "7fb4ffae0005e903",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-06"
+      "lastSeenAsOfDate": "2026-10-08"
     },
     {
       "id": "tns:221339",
@@ -514,11 +514,11 @@
       "decidedBy": null,
       "decidedAtUTC": null,
       "note": "Evidence changed after the previous pending decision; review required.",
-      "evidenceHash": "2306cd51cef5621a",
-      "sourceReviewQueue": "transient-review-2026-10-06.json",
-      "reviewSetID": "aa92ca6f7e41083c",
+      "evidenceHash": "cebe9a4d33345ded",
+      "sourceReviewQueue": "transient-review-2026-10-08.json",
+      "reviewSetID": "7fb4ffae0005e903",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-06"
+      "lastSeenAsOfDate": "2026-10-08"
     },
     {
       "id": "tns:222102",
@@ -537,24 +537,24 @@
       "status": "pending",
       "decidedBy": null,
       "decidedAtUTC": null,
-      "note": null,
-      "evidenceHash": "54521ac16009769c",
-      "sourceReviewQueue": "transient-review-2026-10-07.json",
-      "reviewSetID": "b6c54d5815e65d90",
+      "note": "Evidence changed after the previous pending decision; review required.",
+      "evidenceHash": "e195001a320588a6",
+      "sourceReviewQueue": "transient-review-2026-10-08.json",
+      "reviewSetID": "7fb4ffae0005e903",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-07"
+      "lastSeenAsOfDate": "2026-10-08"
     },
     {
       "id": "tns:222344",
       "status": "pending",
       "decidedBy": null,
       "decidedAtUTC": null,
-      "note": null,
-      "evidenceHash": "75bf8895c00b2ea8",
-      "sourceReviewQueue": "transient-review-2026-10-07.json",
-      "reviewSetID": "b6c54d5815e65d90",
+      "note": "Evidence changed after the previous pending decision; review required.",
+      "evidenceHash": "bdbb4a8cdb716f8b",
+      "sourceReviewQueue": "transient-review-2026-10-08.json",
+      "reviewSetID": "7fb4ffae0005e903",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-10-07"
+      "lastSeenAsOfDate": "2026-10-08"
     }
   ]
 }
