@@ -2,90 +2,15 @@
   "schemaVersion": 1,
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "asOfDate": "2026-10-09",
-  "generatedAtUTC": "2026-10-09T00:00:00Z",
+  "asOfDate": "2026-10-10",
+  "generatedAtUTC": "2026-10-10T00:00:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
     "reviewed": 18,
-    "approved": 1,
+    "approved": 0,
     "excluded": 0,
-    "pending": 29,
-    "expiredApproved": 17
+    "pending": 30,
+    "expiredApproved": 18
   },
-  "opportunities": [
-    {
-      "id": "tns:219842",
-      "source": "TNS",
-      "sourceId": "219842",
-      "sourceObjectName": "AT2026abeq",
-      "sourceURL": "https://www.wis-tns.org/object/2026abeq",
-      "title": "Transient candidate AT2026abeq near Great Nebula in Andromeda",
-      "shortTitle": "AT2026abeq",
-      "eventType": "transientOpportunity",
-      "reviewOnly": false,
-      "urgency": "watch",
-      "recommendedReviewAction": "approved",
-      "activeWindow": {
-        "startsAtUTC": "2026-09-10T22:01:18Z",
-        "expiresAtUTC": "2026-10-10T22:01:18Z"
-      },
-      "discovery": {
-        "dateUTC": "2026-09-10T22:01:18Z",
-        "ageDays": 0,
-        "magnitude": 18.67,
-        "band": "Clear"
-      },
-      "reportedMagnitude": {
-        "value": null,
-        "band": null
-      },
-      "classification": {
-        "kind": "transient_candidate",
-        "type": null,
-        "status": null
-      },
-      "coordinates": {
-        "raDegrees": 10.553167,
-        "decDegrees": 41.274556
-      },
-      "score": 93,
-      "reasonTags": [
-        "unclassified_transient_candidate",
-        "discovered_within_7_days",
-        "discovery_magnitude_watch_band",
-        "separation_le_0_25_deg",
-        "nearby_catalog_object_is_galaxy",
-        "recognizable_astroguide_subject"
-      ],
-      "astroGuideObject": {
-        "id": "NGC224",
-        "displayName": "Great Nebula in Andromeda",
-        "catalogName": "NGC NGC224",
-        "objectType": "Galaxy",
-        "magnitude": 3.4
-      },
-      "angularSeparationDegrees": 0.09799,
-      "relationship": {
-        "type": "near_field",
-        "wording": "near-field match",
-        "tnsReportedHost": null
-      },
-      "lastModifiedUTC": "2026-09-10T23:27:15Z",
-      "provenance": {
-        "reportingGroup": "XOSS",
-        "sourceGroup": "XOSS",
-        "internalNames": [
-          "PSP26S"
-        ]
-      },
-      "review": {
-        "status": "approved",
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "sourceReviewQueue": "transient-review-2026-09-10.json",
-        "reviewSetID": null,
-        "evidenceHash": "a6a262fe750fc173"
-      }
-    }
-  ]
+  "opportunities": []
 }
