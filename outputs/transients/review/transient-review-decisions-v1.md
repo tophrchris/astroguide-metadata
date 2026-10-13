@@ -3,7 +3,7 @@
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
 - **Approved and active in runtime:** 0
-- **Pending review:** 31
+- **Pending review:** 32
 - **On hold:** 0
 - **Rejected:** 0
 - **Approved but expired:** 18
@@ -57,6 +57,7 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [AT2026admi](https://www.wis-tns.org/object/2026admi) | approve | 18.347 | transient_candidate | Collinder 22 (CR22) (0.17124 deg) | 2026-10-29T01:28:42Z |
 | Pending | [SN2026adyr](https://www.wis-tns.org/object/2026adyr) | hold | 18.34 | SN Ia | IC 1101 (1.56111 deg) | 2026-11-01T06:01:38Z |
 | Pending | [AT2026aejp](https://www.wis-tns.org/object/2026aejp) | approve | 18.24 | transient_candidate | IC2183 (0.16658 deg) | 2026-10-30T12:19:58Z |
+| Pending | [AT2026aela](https://www.wis-tns.org/object/2026aela) | approve | 18.14 | transient_candidate | NGC797 (1.46986 deg) | 2026-11-04T20:31:24Z |
 | Pending | [AT2026aeru](https://www.wis-tns.org/object/2026aeru) | approve | 18.09 | transient_candidate | NGC 3003 (0.80299 deg) | 2026-11-06T11:50:49Z |
 | Pending | [AT2026aesu](https://www.wis-tns.org/object/2026aesu) | hold | 17.8861 | transient_candidate | NGC 3110 (0.61267 deg) | 2026-10-31T12:49:47Z |
 | Pending | [AT2026aevv](https://www.wis-tns.org/object/2026aevv) | approve | 18.36 | transient_candidate | IC4796 (0.79651 deg) | 2026-11-05T18:32:24Z |
