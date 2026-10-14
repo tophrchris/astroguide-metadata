@@ -3,7 +3,7 @@
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
 - **Approved and active in runtime:** 0
-- **Pending review:** 32
+- **Pending review:** 33
 - **On hold:** 0
 - **Rejected:** 0
 - **Approved but expired:** 18
@@ -61,4 +61,5 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [AT2026aeru](https://www.wis-tns.org/object/2026aeru) | approve | 18.09 | transient_candidate | NGC 3003 (0.80299 deg) | 2026-11-06T11:50:49Z |
 | Pending | [AT2026aesu](https://www.wis-tns.org/object/2026aesu) | hold | 17.8861 | transient_candidate | NGC 3110 (0.61267 deg) | 2026-10-31T12:49:47Z |
 | Pending | [AT2026aevv](https://www.wis-tns.org/object/2026aevv) | approve | 18.36 | transient_candidate | IC4796 (0.79651 deg) | 2026-11-05T18:32:24Z |
+| Pending | [AT2026aexh](https://www.wis-tns.org/object/2026aexh) | approve | 18.4524 | transient_candidate | NGC 3294 (1.34695 deg) | 2026-11-07T12:36:55Z |
 | Pending | [AT2026afec](https://www.wis-tns.org/object/2026afec) | approve | 16.32 | transient_candidate | NGC578 (1.29392 deg) | 2026-11-10T13:53:16Z |

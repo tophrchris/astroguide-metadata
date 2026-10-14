@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "asOfDate": "2026-10-12",
-  "generatedAtUTC": "2026-10-12T00:00:00Z",
+  "asOfDate": "2026-10-13",
+  "generatedAtUTC": "2026-10-13T00:00:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
     "reviewed": 18,
     "approved": 0,
     "excluded": 0,
-    "pending": 32,
+    "pending": 33,
     "expiredApproved": 18
   },
   "opportunities": []
