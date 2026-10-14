@@ -6,11 +6,592 @@
   "generatedAtUTC": "2026-10-13T00:00:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
-    "reviewed": 18,
-    "approved": 0,
+    "reviewed": 23,
+    "approved": 5,
     "excluded": 0,
-    "pending": 33,
+    "pending": 28,
     "expiredApproved": 18
   },
-  "opportunities": []
+  "opportunities": [
+    {
+      "id": "tns:221797",
+      "source": "TNS",
+      "sourceId": "221797",
+      "sourceObjectName": "SN2026adyr",
+      "sourceURL": "https://www.wis-tns.org/object/2026adyr",
+      "title": "Supernova SN2026adyr near IC 1894",
+      "shortTitle": "SN2026adyr",
+      "eventType": "transientOpportunity",
+      "reviewOnly": false,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approved",
+      "activeWindow": {
+        "startsAtUTC": "2026-10-02T06:01:38Z",
+        "expiresAtUTC": "2026-11-01T06:01:38Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-10-02T06:01:38Z",
+        "ageDays": 11,
+        "magnitude": 18.34,
+        "band": "L"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": 0.037,
+        "reporters": "G. Ramsay, D. O'Neill, K. Ackley, M. Dyer, J. Lyman, K. Ulaczyk, D. Steeghs, D. Galloway, V. Dhillon, P. O'Brien, K. Noysena, R. Kotak, R. Breton, J. Casares, L. Nuttall, R. Starling, B. Gompertz, B. Godson, T. Killestein, A. Kumar, M. Pursiainen, on behalf of GOTO collaboration",
+        "receivedAtUTC": "2026-10-02T08:59:58Z",
+        "createdAtUTC": "2026-10-02T09:00:01Z",
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3957....1R",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3957....1R/abstract"
+        },
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 46.7884737,
+        "decDegrees": 20.9663579
+      },
+      "score": 90,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC 1894",
+        "displayName": "IC 1101",
+        "catalogName": "IC IC 1894",
+        "objectType": "Galaxy",
+        "constellation": "Ari",
+        "magnitude": null,
+        "angularSizeArcmin": 0.78,
+        "angularSizeMajorArcmin": 0.78,
+        "angularSizeMinorArcmin": 0.52,
+        "distance": null,
+        "description": "IC 1101 is a class S0 supergiant (cD) lenticular galaxy at the center of the Abell 2029 galaxy cluster. It has an isophotal diameter at about 123.65 to 169.61 kiloparsecs. It possesses a diffuse core which is the largest core of any galaxy known to date, and contains a supermassive black hole, one of the largest discovered.",
+        "aliases": [
+          "2MASX J03102544+1936235",
+          "PGC 011857",
+          "I1894",
+          "IC 1101"
+        ],
+        "identityWarning": "Catalog identity conflict: canonical ID IC 1894 has the different designation IC 1101 as its display name.",
+        "coordinates": {
+          "raDegrees": 47.606125,
+          "decDegrees": 19.6066111
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 1.56111,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-10-10T05:47:02Z",
+      "provenance": {
+        "reportingGroup": "GOTO",
+        "sourceGroup": "GOTO",
+        "internalNames": [
+          "GOTO26klb",
+          "ZTF26acajpgx"
+        ]
+      },
+      "review": {
+        "status": "approved",
+        "approvedBy": "tophrchris",
+        "approvedAtUTC": "2026-10-14T14:40:18Z",
+        "sourceReviewQueue": "transient-review-2026-10-13.json",
+        "reviewSetID": "9433c545d6a7fc68",
+        "evidenceHash": "254486e635feabe6"
+      }
+    },
+    {
+      "id": "tns:222513",
+      "source": "TNS",
+      "sourceId": "222513",
+      "sourceObjectName": "AT2026aevv",
+      "sourceURL": "https://www.wis-tns.org/object/2026aevv",
+      "title": "Transient candidate AT2026aevv near IC4796",
+      "shortTitle": "AT2026aevv",
+      "eventType": "transientOpportunity",
+      "reviewOnly": false,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approved",
+      "activeWindow": {
+        "startsAtUTC": "2026-10-06T18:32:24Z",
+        "expiresAtUTC": "2026-11-05T18:32:24Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-10-06T18:32:24Z",
+        "ageDays": 7,
+        "magnitude": 18.36,
+        "band": "orange"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "J. Tonry, L. Denneau, H. Weiland, E. Gafton (IfA, University of Hawaii), N. Erasmus, W. Koorts (South African Astronomical Observatory), A. Jordan, V. Suc (UAI, Obstech), M. R. Alarc\u00f3n, J. Licandro, P. Nichita (IAC), S. J. Smartt, K. W. Smith (Oxford/QUB), D. R. Young, M. Nicholl, J. Weston, X. Sheng, C. R. Angus, D. Magill, A. J. Smith, L. Shingles, K. Halder (QUB), A. Aamer (Arizona), P. Ramsden (Birmingham/QUB), S. Srivastav, J. H. Gillanders, H. Stevance, A. J. Cooper, F. Stoppa, J. Tweddle, L. Eastman (Oxford), L. Rhodes (TSI/McGill), T. Moore, A. Rest (STScI), T.-W. Chen (NCU), C. Deasy-Millar (TCD), C. Stubbs (Harvard), J. S. Sommer (LMU), B. P. Schmidt (ANU)",
+        "receivedAtUTC": "2026-10-09T08:32:59Z",
+        "createdAtUTC": "2026-10-09T08:33:01Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 283.3047525,
+        "decDegrees": -53.575282
+      },
+      "score": 90,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC4796",
+        "displayName": "IC4796",
+        "catalogName": "IC IC4796",
+        "objectType": "Galaxy",
+        "constellation": "Telescopium",
+        "magnitude": 12.3,
+        "angularSizeArcmin": 1.95,
+        "angularSizeMajorArcmin": 1.95,
+        "angularSizeMinorArcmin": 1.08,
+        "distance": "35,700 kpc",
+        "description": "14m, brighter middle, or in the middle, near extremely, excessively diameter gradually extremely, excessively of plate",
+        "aliases": [],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 284.1125,
+          "decDegrees": -54.2139444
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.79651,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-10-09T08:33:01Z",
+      "provenance": {
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26mjo"
+        ]
+      },
+      "review": {
+        "status": "approved",
+        "approvedBy": "tophrchris",
+        "approvedAtUTC": "2026-10-14T14:40:18Z",
+        "sourceReviewQueue": "transient-review-2026-10-13.json",
+        "reviewSetID": "9433c545d6a7fc68",
+        "evidenceHash": "80099b53bd0161fe"
+      }
+    },
+    {
+      "id": "tns:222317",
+      "source": "TNS",
+      "sourceId": "222317",
+      "sourceObjectName": "AT2026aeru",
+      "sourceURL": "https://www.wis-tns.org/object/2026aeru",
+      "title": "Transient candidate AT2026aeru near NGC 3003",
+      "shortTitle": "AT2026aeru",
+      "eventType": "transientOpportunity",
+      "reviewOnly": false,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approved",
+      "activeWindow": {
+        "startsAtUTC": "2026-10-07T11:50:49Z",
+        "expiresAtUTC": "2026-11-06T11:50:49Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-10-07T11:50:49Z",
+        "ageDays": 6,
+        "magnitude": 18.09,
+        "band": "r"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "Yogesh Wagh (LJMU), Christoffer Fremling (Caltech), Daniel Perley (LJMU), Theophile du Laz (Caltech) on behalf of ZTF",
+        "receivedAtUTC": "2026-10-07T14:41:30Z",
+        "createdAtUTC": "2026-10-07T14:41:32Z",
+        "discoveryReference": {
+          "bibcode": "2026TNSTR4044....1W",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR4044....1W/abstract"
+        },
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 147.488661,
+        "decDegrees": 32.6702983
+      },
+      "score": 90,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC 3003",
+        "displayName": "NGC 3003",
+        "catalogName": "NGC NGC 3003",
+        "objectType": "Galaxy",
+        "constellation": "LMi",
+        "magnitude": 11.78,
+        "angularSizeArcmin": 4.74,
+        "angularSizeMajorArcmin": 4.74,
+        "angularSizeMinorArcmin": 1.06,
+        "distance": null,
+        "description": "NGC 3003 is a nearly edge-on barred spiral galaxy in the constellation of Leo Minor, discovered by William Herschel on December 7, 1785. It has an apparent visual magnitude of 11.78, at a distance of 19.5 Mpc from the Sun. It has a recessional velocity of 1474 km/s.",
+        "aliases": [
+          "2MASX J09483604+3325173",
+          "IRAS 09456+3339",
+          "MCG +06-22-013",
+          "PGC 028186",
+          "SDSS J094835.75+332517.5",
+          "UGC 05251"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 147.1502083,
+          "decDegrees": 33.4215
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.80299,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-10-11T12:34:45Z",
+      "provenance": {
+        "reportingGroup": "ZTF",
+        "sourceGroup": "ZTF",
+        "internalNames": [
+          "ZTF26acadueo"
+        ]
+      },
+      "review": {
+        "status": "approved",
+        "approvedBy": "tophrchris",
+        "approvedAtUTC": "2026-10-14T14:40:18Z",
+        "sourceReviewQueue": "transient-review-2026-10-13.json",
+        "reviewSetID": "9433c545d6a7fc68",
+        "evidenceHash": "7093e5cb7dd165fa"
+      }
+    },
+    {
+      "id": "tns:222551",
+      "source": "TNS",
+      "sourceId": "222551",
+      "sourceObjectName": "AT2026aexh",
+      "sourceURL": "https://www.wis-tns.org/object/2026aexh",
+      "title": "Transient candidate AT2026aexh near NGC 3294",
+      "shortTitle": "AT2026aexh",
+      "eventType": "transientOpportunity",
+      "reviewOnly": false,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approved",
+      "activeWindow": {
+        "startsAtUTC": "2026-10-08T12:36:55Z",
+        "expiresAtUTC": "2026-11-07T12:36:55Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-10-08T12:36:55Z",
+        "ageDays": 5,
+        "magnitude": 18.4524,
+        "band": "r"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "Yogesh Wagh (LJMU), Christoffer Fremling (Caltech), Daniel Perley (LJMU), Theophile du Laz (Caltech) on behalf of ZTF",
+        "receivedAtUTC": "2026-10-09T16:36:09Z",
+        "createdAtUTC": "2026-10-09T16:36:13Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 158.3709098,
+        "decDegrees": 36.0990191
+      },
+      "score": 83,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC 3294",
+        "displayName": "NGC 3294",
+        "catalogName": "NGC NGC 3294",
+        "objectType": "Galaxy",
+        "constellation": "LMi",
+        "magnitude": 11.68,
+        "angularSizeArcmin": 3.08,
+        "angularSizeMajorArcmin": 3.08,
+        "angularSizeMinorArcmin": 1.6,
+        "distance": null,
+        "description": "The position in 1987A&AS...70..191S is 13 arcsec southeast of the nucleus.",
+        "aliases": [
+          "2MASX J10361626+3719285",
+          "IRAS 10333+3734",
+          "MCG +06-23-021",
+          "PGC 031428",
+          "SDSS J103616.24+371928.8",
+          "SDSS J103616.25+371928.9",
+          "UGC 05753"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 159.0677083,
+          "decDegrees": 37.3246944
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 1.34695,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-10-09T17:47:11Z",
+      "provenance": {
+        "reportingGroup": "ZTF",
+        "sourceGroup": "ZTF",
+        "internalNames": [
+          "ZTF26acaoupb"
+        ]
+      },
+      "review": {
+        "status": "approved",
+        "approvedBy": "tophrchris",
+        "approvedAtUTC": "2026-10-14T14:40:18Z",
+        "sourceReviewQueue": "transient-review-2026-10-13.json",
+        "reviewSetID": "9433c545d6a7fc68",
+        "evidenceHash": "d141187faf685ab8"
+      }
+    },
+    {
+      "id": "tns:222733",
+      "source": "TNS",
+      "sourceId": "222733",
+      "sourceObjectName": "AT2026afec",
+      "sourceURL": "https://www.wis-tns.org/object/2026afec",
+      "title": "Transient candidate AT2026afec near NGC578",
+      "shortTitle": "AT2026afec",
+      "eventType": "transientOpportunity",
+      "reviewOnly": false,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approved",
+      "activeWindow": {
+        "startsAtUTC": "2026-10-11T13:53:16Z",
+        "expiresAtUTC": "2026-11-10T13:53:16Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-10-11T13:53:16Z",
+        "ageDays": 2,
+        "magnitude": 16.32,
+        "band": "L"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "D. O'Neill, K. Ackley, M. Dyer, J. Lyman, K. Ulaczyk, D. Steeghs, D. Galloway, V. Dhillon, P. O'Brien, G. Ramsay, K. Noysena, R. Kotak, R. Breton, J. Casares, L. Nuttall, R. Starling, B. Gompertz, B. Godson, T. Killestein, A. Kumar, M. Pursiainen, on behalf of GOTO collaboration",
+        "receivedAtUTC": "2026-10-11T14:14:55Z",
+        "createdAtUTC": "2026-10-11T14:14:57Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 21.897502,
+        "decDegrees": -21.560473
+      },
+      "score": 93,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_16_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC578",
+        "displayName": "NGC578",
+        "catalogName": "NGC NGC578",
+        "objectType": "Galaxy",
+        "constellation": "Cetus",
+        "magnitude": 11.1,
+        "angularSizeArcmin": 4.82,
+        "angularSizeMajorArcmin": 4.82,
+        "angularSizeMinorArcmin": 2.92,
+        "distance": "18,250 kpc",
+        "description": "NGC 578 is a spiral galaxy in the constellation Cetus. The galaxy lies about 60\u00a0million light years away from Earth, which means, given its apparent dimensions, that NGC 578 is approximately 110,000 light years across. It was discovered by John Herschel on November 11, 1835.",
+        "aliases": [
+          "PGC 5619",
+          "UGCA 18"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 22.6208333,
+          "decDegrees": -22.6673611
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 1.29392,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-10-11T14:14:57Z",
+      "provenance": {
+        "reportingGroup": "GOTO",
+        "sourceGroup": "GOTO",
+        "internalNames": [
+          "GOTO26kyt"
+        ]
+      },
+      "review": {
+        "status": "approved",
+        "approvedBy": "tophrchris",
+        "approvedAtUTC": "2026-10-14T14:40:18Z",
+        "sourceReviewQueue": "transient-review-2026-10-13.json",
+        "reviewSetID": "9433c545d6a7fc68",
+        "evidenceHash": "fcd4bdf8bb9b001b"
+      }
+    }
+  ]
 }

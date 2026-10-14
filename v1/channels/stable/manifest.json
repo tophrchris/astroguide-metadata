@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-10-14T13:27:50Z",
-  "publishedAt": "2026-10-14T13:27:50Z",
+  "generatedAt": "2026-10-14T14:40:18Z",
+  "publishedAt": "2026-10-14T14:40:18Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -198,15 +198,15 @@
     },
     {
       "family": "cometDetailMetadata",
-      "packageVersion": "comet-detail-metadata-v1-20260928-aerith",
+      "packageVersion": "comet-detail-metadata-v1-20261012-aerith",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/comet-details/comet_detail_metadata_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "c9b55e453a9457bb42078a2e71401f1b77c355650b9adbff24dda4037f8d21bd"
+        "value": "ecdad9a0f5abe222881cdeca9da6ed047829f3a697bc28bbabe9a971ee972b9e"
       },
-      "byteSize": 59391,
-      "recordCount": 17,
+      "byteSize": 56043,
+      "recordCount": 16,
       "minSupportedAppVersion": "1.4.1",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -391,13 +391,13 @@
       "packageURL": "https://metadata.astroguide.space/v1/packages/transients/transient_opportunities_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "ca934852a6cf5cb851f578a52aa6e231cbb69e9273bf8387831551f25abd7e93"
+        "value": "4ae5c8148f1e8b0014a7f61614a1b7d69bca8526a8765285661b323a9e72f77e"
       },
-      "byteSize": 466,
-      "reviewedCount": 18,
-      "approvedCount": 0,
-      "opportunityCount": 0,
-      "urgentCount": 0,
+      "byteSize": 20124,
+      "reviewedCount": 23,
+      "approvedCount": 5,
+      "opportunityCount": 5,
+      "urgentCount": 5,
       "asOfDate": "2026-10-13",
       "minSupportedAppVersion": "1.4.2",
       "minSupportedBuild": "1",
