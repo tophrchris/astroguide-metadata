@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "family": "tnsTransientReviewDecisions",
-  "generatedAtUTC": "2026-10-13T00:00:00Z",
+  "generatedAtUTC": "2026-10-14T00:00:00Z",
   "instructions": "Set status to approved, hold, or rejected and record decidedBy/decidedAtUTC. Approved entries with current evidence are materialized into the runtime feed; merging the review PR publishes that generated feed through stable metadata.",
   "decisions": [
     {
@@ -522,15 +522,15 @@
     },
     {
       "id": "tns:221797",
-      "status": "approved",
-      "decidedBy": "tophrchris",
-      "decidedAtUTC": "2026-10-14T14:40:18Z",
-      "note": "Explicit approval by project owner in working conversation on 2026-10-14 of all five candidates in PR #83 at 752bb26 (review set 9433c545d6a7fc68). Near-field context only; catalog identity warning for 2026adyr deliberately retained, not resolved.",
-      "evidenceHash": "254486e635feabe6",
-      "sourceReviewQueue": "transient-review-2026-10-13.json",
-      "reviewSetID": "9433c545d6a7fc68",
+      "status": "pending",
+      "decidedBy": null,
+      "decidedAtUTC": null,
+      "note": "Evidence changed after the previous approved decision; review required.",
+      "evidenceHash": "859411e2d0d0e687",
+      "sourceReviewQueue": "transient-review-2026-10-14.json",
+      "reviewSetID": "77177401216ba8a6",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-10-13"
+      "lastSeenAsOfDate": "2026-10-14"
     },
     {
       "id": "tns:222102",
@@ -558,15 +558,15 @@
     },
     {
       "id": "tns:222317",
-      "status": "approved",
-      "decidedBy": "tophrchris",
-      "decidedAtUTC": "2026-10-14T14:40:18Z",
-      "note": "Explicit approval by project owner in working conversation on 2026-10-14 of all five candidates in PR #83 at 752bb26 (review set 9433c545d6a7fc68). Near-field context only; catalog identity warning for 2026adyr deliberately retained, not resolved.",
-      "evidenceHash": "7093e5cb7dd165fa",
-      "sourceReviewQueue": "transient-review-2026-10-13.json",
-      "reviewSetID": "9433c545d6a7fc68",
+      "status": "pending",
+      "decidedBy": null,
+      "decidedAtUTC": null,
+      "note": "Evidence changed after the previous approved decision; review required.",
+      "evidenceHash": "82f592451fcc1a46",
+      "sourceReviewQueue": "transient-review-2026-10-14.json",
+      "reviewSetID": "77177401216ba8a6",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-13"
+      "lastSeenAsOfDate": "2026-10-14"
     },
     {
       "id": "tns:222344",
@@ -594,27 +594,39 @@
     },
     {
       "id": "tns:222551",
-      "status": "approved",
-      "decidedBy": "tophrchris",
-      "decidedAtUTC": "2026-10-14T14:40:18Z",
-      "note": "Explicit approval by project owner in working conversation on 2026-10-14 of all five candidates in PR #83 at 752bb26 (review set 9433c545d6a7fc68). Near-field context only; catalog identity warning for 2026adyr deliberately retained, not resolved.",
-      "evidenceHash": "d141187faf685ab8",
-      "sourceReviewQueue": "transient-review-2026-10-13.json",
-      "reviewSetID": "9433c545d6a7fc68",
+      "status": "pending",
+      "decidedBy": null,
+      "decidedAtUTC": null,
+      "note": "Evidence changed after the previous approved decision; review required.",
+      "evidenceHash": "6dccf2ba63c36575",
+      "sourceReviewQueue": "transient-review-2026-10-14.json",
+      "reviewSetID": "77177401216ba8a6",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-13"
+      "lastSeenAsOfDate": "2026-10-14"
+    },
+    {
+      "id": "tns:222556",
+      "status": "pending",
+      "decidedBy": null,
+      "decidedAtUTC": null,
+      "note": null,
+      "evidenceHash": "4a3f173e1b8b1040",
+      "sourceReviewQueue": "transient-review-2026-10-14.json",
+      "reviewSetID": "77177401216ba8a6",
+      "recommendedDecision": "approve",
+      "lastSeenAsOfDate": "2026-10-14"
     },
     {
       "id": "tns:222733",
-      "status": "approved",
-      "decidedBy": "tophrchris",
-      "decidedAtUTC": "2026-10-14T14:40:18Z",
-      "note": "Explicit approval by project owner in working conversation on 2026-10-14 of all five candidates in PR #83 at 752bb26 (review set 9433c545d6a7fc68). Near-field context only; catalog identity warning for 2026adyr deliberately retained, not resolved.",
-      "evidenceHash": "fcd4bdf8bb9b001b",
-      "sourceReviewQueue": "transient-review-2026-10-13.json",
-      "reviewSetID": "9433c545d6a7fc68",
+      "status": "pending",
+      "decidedBy": null,
+      "decidedAtUTC": null,
+      "note": "Evidence changed after the previous approved decision; review required.",
+      "evidenceHash": "e77dd8352e74a231",
+      "sourceReviewQueue": "transient-review-2026-10-14.json",
+      "reviewSetID": "77177401216ba8a6",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-13"
+      "lastSeenAsOfDate": "2026-10-14"
     }
   ]
 }
