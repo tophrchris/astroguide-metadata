@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20261012-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261019-aerith",
   "packageRole": "comet",
   "shardID": "COMET_169P",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "169P/NEAT",
     "aerithName": "169P/NEAT",
     "detailURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
-    "generatedAt": "2026-10-12T10:41:00Z",
+    "generatedAt": "2026-10-19T10:34:11Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-10-03",
+      "referenceDate": "2026-10-10",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-10-03",
-      "aerithNextUsefulDate": "2026-10-10",
-      "aerithCurrentMagnitude": 11.6,
-      "aerithNextMagnitude": 12.6,
+      "aerithCurrentDate": "2026-10-10",
+      "aerithNextUsefulDate": "2026-10-17",
+      "aerithCurrentMagnitude": 12.6,
+      "aerithNextMagnitude": 13.7,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 18.0,
-        "south": 9.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 21.0,
         "south": 10.0
       },
-      "futureUsefulStartDate": "2026-10-03",
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 23.0,
+        "south": 11.0
+      },
+      "futureUsefulStartDate": "2026-10-10",
       "futureUsefulEndDate": "2026-10-10",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 7
+      "daysUntilFutureUsefulEnd": 0
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-10-03",
+      "referenceDate": "2026-10-10",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 15.548,
-      "currentSampleDate": "2026-10-03",
+      "currentMagnitudeEstimate": 15.99,
+      "currentSampleDate": "2026-10-10",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-10-03",
+      "firstFutureUsefulDate": "2026-10-10",
       "lastFutureUsefulDate": "2026-10-10",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 7,
+      "daysUntilUsefulEnd": 0,
       "brightestMagnitude": 10.7,
       "brightestDate": "2026-08-22",
       "faintestMagnitude": 21.951,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-10-12T10:41:00Z",
+      "generatedAt": "2026-10-19T10:34:11Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -99,103 +99,139 @@
     },
     "brightness": [
       {
-        "id": "169P-2026-09-19-report-1",
-        "date": "2026-09-19",
-        "magnitude": 11.1,
+        "id": "169P-2026-08-11-report-1",
+        "date": "2026-08-11",
+        "magnitude": 10.8,
         "qualifier": "reported",
         "estimateKind": "reported",
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
-        "commentary": "It approached to Earth down to 0.17 a.u. mid August. Now it is 11.1 mag (Sept. 19, Mike Olason). It will fade out rapidly after this. It will be fainter than 18 mag in November. In the Northern Hemisphere, it will be getting higher gradually. It locates somewhat low in the Southern Hemisphere."
+        "commentary": "It approached to Earth down to 0.17 a.u. mid August, and brightened up to 10.8 mag (Aug. 11, Thomas Lehmann). Now it is 12.5 mag (Oct. 8, Ken Harikae). Fading rapidly. It will be fainter than 18 mag in November. In the Northern Hemisphere, it will be getting higher gradually. It locates somewhat low in the Southern Hemisphere.",
+        "isSignificant": true,
+        "significanceKind": "outburst"
       },
       {
-        "id": "169P-2026-10-03-north-weekly-1",
-        "date": "2026-10-03",
-        "magnitude": 11.6,
+        "id": "169P-2026-10-08-report-2",
+        "date": "2026-10-08",
+        "magnitude": 12.5,
+        "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
+        "commentary": "It approached to Earth down to 0.17 a.u. mid August, and brightened up to 10.8 mag (Aug. 11, Thomas Lehmann). Now it is 12.5 mag (Oct. 8, Ken Harikae). Fading rapidly. It will be fainter than 18 mag in November. In the Northern Hemisphere, it will be getting higher gradually. It locates somewhat low in the Southern Hemisphere.",
+        "magnitudeDelta": 1.7,
+        "isSignificant": true,
+        "significanceKind": "fade",
+        "interpretation": "Faded 1.7 mag between Aerith magnitude reports or estimates."
+      },
+      {
+        "id": "169P-2026-10-10-north-weekly-1",
+        "date": "2026-10-10",
+        "magnitude": 12.6,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.5
+        "magnitudeDelta": 0.1
       },
       {
-        "id": "169P-2026-10-10-north-weekly-2",
-        "date": "2026-10-10",
-        "magnitude": 12.6,
+        "id": "169P-2026-10-17-north-weekly-2",
+        "date": "2026-10-17",
+        "magnitude": 13.7,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 1.0,
+        "magnitudeDelta": 1.1,
         "isSignificant": true,
         "significanceKind": "fade",
-        "interpretation": "Faded 1.0 mag between Aerith magnitude reports or estimates."
+        "interpretation": "Faded 1.1 mag between Aerith magnitude reports or estimates."
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-09-19",
-      "availableEndDate": "2026-10-10",
-      "actualDaySpan": 21,
-      "pointCount": 3,
+      "availableStartDate": "2026-08-11",
+      "availableEndDate": "2026-10-17",
+      "actualDaySpan": 67,
+      "pointCount": 4,
       "containsProjection": true,
       "containsReportedObservation": true,
       "points": [
         {
-          "id": "169P-2026-09-19-report-1",
-          "date": "2026-09-19",
-          "magnitude": 11.1,
+          "id": "169P-2026-08-11-report-1",
+          "date": "2026-08-11",
+          "magnitude": 10.8,
           "qualifier": "reported",
           "estimateKind": "reported",
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
           "sourceURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
-          "commentary": "It approached to Earth down to 0.17 a.u. mid August. Now it is 11.1 mag (Sept. 19, Mike Olason). It will fade out rapidly after this. It will be fainter than 18 mag in November. In the Northern Hemisphere, it will be getting higher gradually. It locates somewhat low in the Southern Hemisphere."
+          "commentary": "It approached to Earth down to 0.17 a.u. mid August, and brightened up to 10.8 mag (Aug. 11, Thomas Lehmann). Now it is 12.5 mag (Oct. 8, Ken Harikae). Fading rapidly. It will be fainter than 18 mag in November. In the Northern Hemisphere, it will be getting higher gradually. It locates somewhat low in the Southern Hemisphere.",
+          "isSignificant": true,
+          "significanceKind": "outburst"
         },
         {
-          "id": "169P-2026-10-03-north-weekly-1",
-          "date": "2026-10-03",
-          "magnitude": 11.6,
+          "id": "169P-2026-10-08-report-2",
+          "date": "2026-10-08",
+          "magnitude": 12.5,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/0169P/2026.html",
+          "commentary": "It approached to Earth down to 0.17 a.u. mid August, and brightened up to 10.8 mag (Aug. 11, Thomas Lehmann). Now it is 12.5 mag (Oct. 8, Ken Harikae). Fading rapidly. It will be fainter than 18 mag in November. In the Northern Hemisphere, it will be getting higher gradually. It locates somewhat low in the Southern Hemisphere.",
+          "magnitudeDelta": 1.7,
+          "isSignificant": true,
+          "significanceKind": "fade",
+          "interpretation": "Faded 1.7 mag between Aerith magnitude reports or estimates."
+        },
+        {
+          "id": "169P-2026-10-10-north-weekly-1",
+          "date": "2026-10-10",
+          "magnitude": 12.6,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.5
+          "magnitudeDelta": 0.1
         },
         {
-          "id": "169P-2026-10-10-north-weekly-2",
-          "date": "2026-10-10",
-          "magnitude": 12.6,
+          "id": "169P-2026-10-17-north-weekly-2",
+          "date": "2026-10-17",
+          "magnitude": 13.7,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 1.0,
+          "magnitudeDelta": 1.1,
           "isSignificant": true,
           "significanceKind": "fade",
-          "interpretation": "Faded 1.0 mag between Aerith magnitude reports or estimates."
+          "interpretation": "Faded 1.1 mag between Aerith magnitude reports or estimates."
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 12.6,
-      "currentDate": "2026-10-10",
-      "currentPointID": "169P-2026-10-10-north-weekly-2",
-      "comparisonMagnitude": 11.6,
-      "comparisonDate": "2026-10-03",
-      "comparisonPointID": "169P-2026-10-03-north-weekly-1",
+      "currentMagnitude": 13.7,
+      "currentDate": "2026-10-17",
+      "currentPointID": "169P-2026-10-17-north-weekly-2",
+      "comparisonMagnitude": 12.6,
+      "comparisonDate": "2026-10-10",
+      "comparisonPointID": "169P-2026-10-10-north-weekly-1",
       "comparisonWindowDays": 7,
-      "deltaMagnitude": 1.0,
+      "deltaMagnitude": 1.1,
       "direction": "fading",
       "isNotable": true,
       "notableChangeThresholdMagnitude": 1.0,
       "notableObservationIDs": [
-        "169P-2026-10-10-north-weekly-2"
+        "169P-2026-08-11-report-1",
+        "169P-2026-10-08-report-2",
+        "169P-2026-10-17-north-weekly-2"
       ]
     }
   }
