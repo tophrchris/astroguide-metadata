@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20261012-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261019-aerith",
   "packageRole": "comet",
   "shardID": "COMET_78P",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "78P/Gehrels",
     "aerithName": "78P/Gehrels 2",
     "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
-    "generatedAt": "2026-10-12T10:41:00Z",
+    "generatedAt": "2026-10-19T10:34:11Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-10-03",
+      "referenceDate": "2026-10-10",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-10-03",
-      "aerithNextUsefulDate": "2026-10-10",
+      "aerithCurrentDate": "2026-10-10",
+      "aerithNextUsefulDate": "2026-10-17",
       "aerithCurrentMagnitude": 13.8,
       "aerithNextMagnitude": 13.8,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 56.0,
-        "south": 27.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 60.0,
         "south": 29.0
       },
-      "futureUsefulStartDate": "2026-10-03",
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 63.0,
+        "south": 30.0
+      },
+      "futureUsefulStartDate": "2026-10-10",
       "futureUsefulEndDate": "2027-02-08",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 128
+      "daysUntilFutureUsefulEnd": 121
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-10-03",
+      "referenceDate": "2026-10-10",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 15.163,
-      "currentSampleDate": "2026-10-03",
+      "currentMagnitudeEstimate": 15.161,
+      "currentSampleDate": "2026-10-10",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-10-03",
+      "firstFutureUsefulDate": "2026-10-10",
       "lastFutureUsefulDate": "2027-02-08",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 128,
+      "daysUntilUsefulEnd": 121,
       "brightestMagnitude": 13.2,
       "brightestDate": "2026-08-08",
       "faintestMagnitude": 19.22,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-10-12T10:41:00Z",
+      "generatedAt": "2026-10-19T10:34:11Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -99,93 +99,93 @@
     },
     "brightness": [
       {
-        "id": "78P-2026-09-21-report-1",
-        "date": "2026-09-21",
-        "magnitude": 13.9,
-        "qualifier": "reported",
-        "estimateKind": "reported",
-        "isProjection": false,
-        "sourceLabel": "Aerith reported magnitude",
-        "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
-        "commentary": "Now it is 13.9 mag (Sept. 21, Yoshimi Nagai). It stays 14 mag for a while. In the Northern Hemisphere, it stays observable in good condition."
-      },
-      {
-        "id": "78P-2026-10-03-north-weekly-1",
-        "date": "2026-10-03",
+        "id": "78P-2026-10-10-north-weekly-1",
+        "date": "2026-10-10",
         "magnitude": 13.8,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
-        "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -0.1
+        "sourceURL": "http://www.aerith.net/comet/weekly/current.html"
       },
       {
-        "id": "78P-2026-10-10-north-weekly-2",
-        "date": "2026-10-10",
+        "id": "78P-2026-10-13-report-1",
+        "date": "2026-10-13",
+        "magnitude": 13.3,
+        "qualifier": "reported",
+        "estimateKind": "reported",
+        "isProjection": false,
+        "sourceLabel": "Aerith reported magnitude",
+        "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+        "commentary": "Now it is 13.3 mag (Oct. 13, Thomas Lehmann). Fading slowly. It stays observable in good condition.",
+        "magnitudeDelta": -0.5
+      },
+      {
+        "id": "78P-2026-10-17-north-weekly-2",
+        "date": "2026-10-17",
         "magnitude": 13.8,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.0
+        "magnitudeDelta": 0.5
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-09-21",
-      "availableEndDate": "2026-10-10",
-      "actualDaySpan": 19,
+      "availableStartDate": "2026-10-10",
+      "availableEndDate": "2026-10-17",
+      "actualDaySpan": 7,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
       "points": [
         {
-          "id": "78P-2026-09-21-report-1",
-          "date": "2026-09-21",
-          "magnitude": 13.9,
-          "qualifier": "reported",
-          "estimateKind": "reported",
-          "isProjection": false,
-          "sourceLabel": "Aerith reported magnitude",
-          "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
-          "commentary": "Now it is 13.9 mag (Sept. 21, Yoshimi Nagai). It stays 14 mag for a while. In the Northern Hemisphere, it stays observable in good condition."
-        },
-        {
-          "id": "78P-2026-10-03-north-weekly-1",
-          "date": "2026-10-03",
+          "id": "78P-2026-10-10-north-weekly-1",
+          "date": "2026-10-10",
           "magnitude": 13.8,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
-          "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": -0.1
+          "sourceURL": "http://www.aerith.net/comet/weekly/current.html"
         },
         {
-          "id": "78P-2026-10-10-north-weekly-2",
-          "date": "2026-10-10",
+          "id": "78P-2026-10-13-report-1",
+          "date": "2026-10-13",
+          "magnitude": 13.3,
+          "qualifier": "reported",
+          "estimateKind": "reported",
+          "isProjection": false,
+          "sourceLabel": "Aerith reported magnitude",
+          "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
+          "commentary": "Now it is 13.3 mag (Oct. 13, Thomas Lehmann). Fading slowly. It stays observable in good condition.",
+          "magnitudeDelta": -0.5
+        },
+        {
+          "id": "78P-2026-10-17-north-weekly-2",
+          "date": "2026-10-17",
           "magnitude": 13.8,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.0
+          "magnitudeDelta": 0.5
         }
       ]
     },
     "brightnessTrend": {
       "currentMagnitude": 13.8,
-      "currentDate": "2026-10-10",
-      "currentPointID": "78P-2026-10-10-north-weekly-2",
-      "comparisonMagnitude": 13.8,
-      "comparisonDate": "2026-10-03",
-      "comparisonPointID": "78P-2026-10-03-north-weekly-1",
-      "comparisonWindowDays": 7,
-      "deltaMagnitude": 0.0,
-      "direction": "stable",
+      "currentDate": "2026-10-17",
+      "currentPointID": "78P-2026-10-17-north-weekly-2",
+      "comparisonMagnitude": 13.3,
+      "comparisonDate": "2026-10-13",
+      "comparisonPointID": "78P-2026-10-13-report-1",
+      "comparisonWindowDays": 4,
+      "deltaMagnitude": 0.5,
+      "direction": "fading",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
       "notableObservationIDs": []
