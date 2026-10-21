@@ -56,7 +56,7 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [SN2026adgw](https://www.wis-tns.org/object/2026adgw) | approve | 18.4624 | SN Ia | White-Eyed Pea nebula (0.91717 deg) | 2026-10-29T02:43:07Z |
 | Pending | [SN2026adhk](https://www.wis-tns.org/object/2026adhk) | approve | 18.41 | SN Ia | IC2166 (1.38799 deg) | 2026-10-30T05:52:35Z |
 | Pending | [AT2026admi](https://www.wis-tns.org/object/2026admi) | approve | 18.347 | transient_candidate | Collinder 22 (CR22) (0.17124 deg) | 2026-10-29T01:28:42Z |
-| Pending | [SN2026adyr](https://www.wis-tns.org/object/2026adyr) | hold | 18.34 | SN Ia | IC 1101 (1.56111 deg) | 2026-11-01T06:01:38Z |
+| Pending | [SN2026adyr](https://www.wis-tns.org/object/2026adyr) | hold | 18.34 | SN Ia | IC 1101 (1.56109 deg) | 2026-11-01T06:01:38Z |
 | Pending | [AT2026aejp](https://www.wis-tns.org/object/2026aejp) | approve | 18.24 | transient_candidate | IC2183 (0.16658 deg) | 2026-10-30T12:19:58Z |
 | Pending | [SN2026aela](https://www.wis-tns.org/object/2026aela) | approve | 18.14 | SN Ia | NGC797 (1.46986 deg) | 2026-11-04T20:31:24Z |
 | Pending | [AT2026aeru](https://www.wis-tns.org/object/2026aeru) | approve | 18.09 | transient_candidate | NGC 3003 (0.80299 deg) | 2026-11-06T11:50:49Z |
