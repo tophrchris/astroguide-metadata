@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "packageFamily": "transientEventFeed",
-  "packageVersion": "transient-event-feed-v1-20261021-approved",
+  "packageVersion": "transient-event-feed-v1-20261022-approved",
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "asOfDate": "2026-10-21",
-  "generatedAtUTC": "2026-10-21T00:00:00Z",
+  "asOfDate": "2026-10-22",
+  "generatedAtUTC": "2026-10-22T00:00:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
     "reviewed": 19,
