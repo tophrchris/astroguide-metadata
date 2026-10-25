@@ -3,7 +3,7 @@
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
 - **Approved and active in runtime:** 1
-- **Pending review:** 44
+- **Pending review:** 45
 - **On hold:** 0
 - **Rejected:** 0
 - **Approved but expired:** 18
@@ -72,6 +72,7 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [AT2026afoh](https://www.wis-tns.org/object/2026afoh) | hold | 19.38 | transient_candidate | Bode's Galaxy (0.05271 deg) | 2026-11-13T22:15:23Z |
 | Pending | [AT2026afol](https://www.wis-tns.org/object/2026afol) | hold | 19.039 | transient_candidate | Caldwell 101 (C101) (0.19075 deg) | 2026-11-13T18:43:07Z |
 | Pending | [AT2026afpx](https://www.wis-tns.org/object/2026afpx) | approve | 18.44 | transient_candidate | NGC2822 (1.08397 deg) | 2026-11-14T02:21:21Z |
-| Pending | [AT2026afsg](https://www.wis-tns.org/object/2026afsg) | approve | 16.4 | transient_candidate | NGC 2207 / IC 2163 (1.22593 deg) | 2026-11-17T20:55:20Z |
+| Pending | [SN2026afsg](https://www.wis-tns.org/object/2026afsg) | approve | 16.4 | SN Ib/c | NGC 2207 / IC 2163 (1.22593 deg) | 2026-11-17T20:55:20Z |
 | Pending | [SN2026afsw](https://www.wis-tns.org/object/2026afsw) | hold | 18.226 | SN Ia | IC 1101 (1.66251 deg) | 2026-11-16T04:57:05Z |
 | Pending | [AT2026afwh](https://www.wis-tns.org/object/2026afwh) | approve | 18.283 | transient_candidate | Lynds Bright Nebula 256 (LBN256) (0.06992 deg) | 2026-11-18T07:49:42Z |
+| Pending | [SN2026afxk](https://www.wis-tns.org/object/2026afxk) | approve | 18.364 | SN Ia | NGC1313 (1.04369 deg) | 2026-11-18T23:11:54Z |
