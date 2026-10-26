@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20261012-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261026-aerith",
   "packageRole": "comet",
   "shardID": "COMET_65P",
   "record": {
@@ -10,19 +10,19 @@
     "displayName": "65P/Gunn",
     "aerithName": "65P/Gunn",
     "detailURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
-    "generatedAt": "2026-10-12T10:41:00Z",
+    "generatedAt": "2026-10-26T10:36:29Z",
     "visibilitySummary": {
       "state": "notCurrentlyUseful",
-      "referenceDate": "2026-10-03",
+      "referenceDate": "2026-10-17",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-10-03",
+      "aerithCurrentDate": "2026-10-17",
       "aerithNextUsefulDate": null,
-      "aerithCurrentMagnitude": 17.8,
-      "aerithNextMagnitude": 17.8,
+      "aerithCurrentMagnitude": 17.9,
+      "aerithNextMagnitude": 17.9,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 47.0,
-        "south": 63.0
+        "north": 46.0,
+        "south": 64.0
       },
       "nextBestAltitudeDegreesByHemisphere": {
         "north": 46.0,
@@ -40,10 +40,10 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-10-03",
+      "referenceDate": "2026-10-17",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 17.359,
-      "currentSampleDate": "2026-10-03",
+      "currentMagnitudeEstimate": 17.451,
+      "currentSampleDate": "2026-10-17",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-10-12T10:41:00Z",
+      "generatedAt": "2026-10-26T10:36:29Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -99,20 +99,20 @@
     },
     "brightness": [
       {
-        "id": "65P-2026-09-16-report-1",
-        "date": "2026-09-16",
-        "magnitude": 17.6,
+        "id": "65P-2026-10-07-report-1",
+        "date": "2026-10-07",
+        "magnitude": 17.7,
         "qualifier": "reported",
         "estimateKind": "reported",
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
-        "commentary": "Now it is 17.6 mag (Sept. 16, Andrew Pearce). Fading slowly. It will be fainter than 18 mag soon. It stays observable in good condition."
+        "commentary": "Now it is 17.7 mag (Oct. 7, Hidenori Nohara). Fading slowly. It will be fainter than 18 mag soon. It stays observable in good condition."
       },
       {
-        "id": "65P-2026-10-03-north-weekly-1",
-        "date": "2026-10-03",
-        "magnitude": 17.8,
+        "id": "65P-2026-10-17-north-weekly-1",
+        "date": "2026-10-17",
+        "magnitude": 17.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
@@ -121,9 +121,9 @@
         "magnitudeDelta": 0.2
       },
       {
-        "id": "65P-2026-10-10-north-weekly-2",
-        "date": "2026-10-10",
-        "magnitude": 17.8,
+        "id": "65P-2026-10-24-north-weekly-2",
+        "date": "2026-10-24",
+        "magnitude": 17.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
@@ -134,28 +134,28 @@
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-09-16",
-      "availableEndDate": "2026-10-10",
-      "actualDaySpan": 24,
+      "availableStartDate": "2026-10-07",
+      "availableEndDate": "2026-10-24",
+      "actualDaySpan": 17,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
       "points": [
         {
-          "id": "65P-2026-09-16-report-1",
-          "date": "2026-09-16",
-          "magnitude": 17.6,
+          "id": "65P-2026-10-07-report-1",
+          "date": "2026-10-07",
+          "magnitude": 17.7,
           "qualifier": "reported",
           "estimateKind": "reported",
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
           "sourceURL": "http://www.aerith.net/comet/catalog/0065P/2025.html",
-          "commentary": "Now it is 17.6 mag (Sept. 16, Andrew Pearce). Fading slowly. It will be fainter than 18 mag soon. It stays observable in good condition."
+          "commentary": "Now it is 17.7 mag (Oct. 7, Hidenori Nohara). Fading slowly. It will be fainter than 18 mag soon. It stays observable in good condition."
         },
         {
-          "id": "65P-2026-10-03-north-weekly-1",
-          "date": "2026-10-03",
-          "magnitude": 17.8,
+          "id": "65P-2026-10-17-north-weekly-1",
+          "date": "2026-10-17",
+          "magnitude": 17.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
@@ -164,9 +164,9 @@
           "magnitudeDelta": 0.2
         },
         {
-          "id": "65P-2026-10-10-north-weekly-2",
-          "date": "2026-10-10",
-          "magnitude": 17.8,
+          "id": "65P-2026-10-24-north-weekly-2",
+          "date": "2026-10-24",
+          "magnitude": 17.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
@@ -177,12 +177,12 @@
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 17.8,
-      "currentDate": "2026-10-10",
-      "currentPointID": "65P-2026-10-10-north-weekly-2",
-      "comparisonMagnitude": 17.8,
-      "comparisonDate": "2026-10-03",
-      "comparisonPointID": "65P-2026-10-03-north-weekly-1",
+      "currentMagnitude": 17.9,
+      "currentDate": "2026-10-24",
+      "currentPointID": "65P-2026-10-24-north-weekly-2",
+      "comparisonMagnitude": 17.9,
+      "comparisonDate": "2026-10-17",
+      "comparisonPointID": "65P-2026-10-17-north-weekly-1",
       "comparisonWindowDays": 7,
       "deltaMagnitude": 0.0,
       "direction": "stable",
