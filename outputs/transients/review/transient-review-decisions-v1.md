@@ -3,7 +3,7 @@
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
 - **Approved and active in runtime:** 1
-- **Pending review:** 45
+- **Pending review:** 47
 - **On hold:** 0
 - **Rejected:** 0
 - **Approved but expired:** 18
@@ -59,7 +59,7 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [SN2026adyr](https://www.wis-tns.org/object/2026adyr) | hold | 18.34 | SN Ia | IC 1101 (1.56109 deg) | 2026-11-01T06:01:38Z |
 | Pending | [AT2026aejp](https://www.wis-tns.org/object/2026aejp) | approve | 18.24 | transient_candidate | IC2183 (0.16658 deg) | 2026-10-30T12:19:58Z |
 | Pending | [SN2026aela](https://www.wis-tns.org/object/2026aela) | approve | 18.14 | SN Ia | NGC797 (1.46986 deg) | 2026-11-04T20:31:24Z |
-| Pending | [AT2026aeru](https://www.wis-tns.org/object/2026aeru) | approve | 18.09 | transient_candidate | NGC 3003 (0.80299 deg) | 2026-11-06T11:50:49Z |
+| Pending | [SN2026aeru](https://www.wis-tns.org/object/2026aeru) | approve | 18.09 | SN II | NGC 3003 (0.80299 deg) | 2026-11-06T11:50:49Z |
 | Pending | [SN2026aesj](https://www.wis-tns.org/object/2026aesj) | approve | 18.435 | SN Ia | Headphone nebula (1.79431 deg) | 2026-11-06T13:27:06Z |
 | Pending | [AT2026aesu](https://www.wis-tns.org/object/2026aesu) | hold | 17.8861 | transient_candidate | NGC 3110 (0.61267 deg) | 2026-10-31T12:49:47Z |
 | Approved | [AT2026aevv](https://www.wis-tns.org/object/2026aevv) | approve | 18.36 | transient_candidate | IC4796 (0.79651 deg) | 2026-11-05T18:32:24Z |
@@ -76,3 +76,5 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [SN2026afsw](https://www.wis-tns.org/object/2026afsw) | hold | 18.226 | SN Ia | IC 1101 (1.66251 deg) | 2026-11-16T04:57:05Z |
 | Pending | [AT2026afwh](https://www.wis-tns.org/object/2026afwh) | approve | 18.283 | transient_candidate | Lynds Bright Nebula 256 (LBN256) (0.06992 deg) | 2026-11-18T07:49:42Z |
 | Pending | [SN2026afxk](https://www.wis-tns.org/object/2026afxk) | approve | 18.364 | SN Ia | NGC1313 (1.04369 deg) | 2026-11-18T23:11:54Z |
+| Pending | [SN2026agpv](https://www.wis-tns.org/object/2026agpv) | approve | 17.466 | SN II | NGC636 (1.88839 deg) | 2026-11-22T22:30:00Z |
+| Pending | [AT2026aguw](https://www.wis-tns.org/object/2026aguw) | hold | 17.668 | transient_candidate | NGC 5555 (0.23524 deg) | 2026-11-24T00:35:40Z |
