@@ -3,7 +3,7 @@
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
 - **Approved and active in runtime:** 1
-- **Pending review:** 47
+- **Pending review:** 49
 - **On hold:** 0
 - **Rejected:** 0
 - **Approved but expired:** 18
@@ -78,3 +78,5 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [SN2026afxk](https://www.wis-tns.org/object/2026afxk) | approve | 18.364 | SN Ia | NGC1313 (1.04369 deg) | 2026-11-18T23:11:54Z |
 | Pending | [SN2026agpv](https://www.wis-tns.org/object/2026agpv) | approve | 17.466 | SN II | NGC636 (1.88839 deg) | 2026-11-22T22:30:00Z |
 | Pending | [AT2026aguw](https://www.wis-tns.org/object/2026aguw) | hold | 17.668 | transient_candidate | NGC 5555 (0.23524 deg) | 2026-11-24T00:35:40Z |
+| Pending | [SN2026agwb](https://www.wis-tns.org/object/2026agwb) | approve | 17.805 | SN Ia | NGC134 (0.96564 deg) | 2026-11-25T09:16:41Z |
+| Pending | [AT2026agzo](https://www.wis-tns.org/object/2026agzo) | approve | 18.1367 | transient_candidate | NGC3239 (0.15481 deg) | 2026-11-23T12:49:08Z |
