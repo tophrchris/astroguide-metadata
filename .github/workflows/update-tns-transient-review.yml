@@ -84,8 +84,28 @@ jobs:
         run: |
           git fetch origin main:refs/remotes/origin/main
           if git fetch origin "$BRANCH_NAME:refs/remotes/origin/$BRANCH_NAME"; then
-            git switch -C "$BRANCH_NAME" "origin/$BRANCH_NAME"
-            git merge --no-edit origin/main
+            if git merge-base --is-ancestor "origin/$BRANCH_NAME" origin/main; then
+              # A merged review branch should restart directly from current main.
+              git switch -C "$BRANCH_NAME" origin/main
+            else
+              git switch -C "$BRANCH_NAME" "origin/$BRANCH_NAME"
+              if ! git merge --no-edit origin/main; then
+                mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+                if (( ${#conflicts[@]} == 1 )) && \
+                    [[ "${conflicts[0]}" == "v1/channels/stable/manifest.json" ]]; then
+                  # The manifest is generated below. Preserve main's complete package set,
+                  # then let the TNS publisher replace only its own descriptor.
+                  git checkout --theirs -- v1/channels/stable/manifest.json
+                  git add v1/channels/stable/manifest.json
+                  git commit --no-edit
+                else
+                  echo "::error::Review branch has conflicts that require curator review." >&2
+                  printf '%s\n' "${conflicts[@]}" >&2
+                  git merge --abort
+                  exit 1
+                fi
+              fi
+            fi
           else
             git switch -C "$BRANCH_NAME" origin/main
           fi
@@ -248,6 +268,10 @@ jobs:
 
           if [[ "$has_changes" == true ]]; then
             git commit -m "Update TNS transient review queue"
+          fi
+
+          remote_head="$(git rev-parse --verify "origin/$BRANCH_NAME" 2>/dev/null || true)"
+          if [[ -z "$remote_head" || "$(git rev-parse HEAD)" != "$remote_head" ]]; then
             git push origin "$BRANCH_NAME"
           fi
 
