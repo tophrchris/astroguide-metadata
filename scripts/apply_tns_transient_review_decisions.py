@@ -18,6 +18,8 @@ DEFAULT_DECISIONS_PATH = DEFAULT_REVIEW_DIR / "transient-review-decisions-v1.jso
 DEFAULT_DECISIONS_MARKDOWN_PATH = DEFAULT_REVIEW_DIR / "transient-review-decisions-v1.md"
 DEFAULT_RUNTIME_PATH = Path("outputs/transients/runtime/transient_opportunities_v1.json")
 ALLOWED_STATUSES = {"pending", "approved", "hold", "rejected"}
+TEMPORARY_CURATION_DAYS = 90
+TEMPORARY_CURATION_POLICY = "temporary-discovery-90d-20261101"
 
 
 class DecisionError(RuntimeError):
@@ -274,8 +276,29 @@ def validate_decisions(registry: dict[str, Any]) -> None:
 
 
 def is_active(opportunity: dict[str, Any], reference: dt.datetime) -> bool:
+    starts = parse_datetime((opportunity.get("activeWindow") or {}).get("startsAtUTC"))
     expires = parse_datetime((opportunity.get("activeWindow") or {}).get("expiresAtUTC"))
-    return expires is not None and expires > reference
+    return starts is not None and expires is not None and starts <= reference < expires
+
+
+def apply_temporary_curation_window(opportunity: dict[str, Any]) -> bool:
+    """Change curation duration only; preserve discovery/scientific evidence and approval."""
+    discovery = parse_datetime((opportunity.get("discovery") or {}).get("dateUTC"))
+    window = opportunity.get("activeWindow") or {}
+    starts = parse_datetime(window.get("startsAtUTC"))
+    ends = parse_datetime(window.get("expiresAtUTC"))
+    if discovery is None or starts is None or ends is None or starts >= ends:
+        return False
+    expires = discovery + dt.timedelta(days=TEMPORARY_CURATION_DAYS)
+    starts = max(discovery, starts)
+    if starts >= expires:
+        return False
+    opportunity.setdefault("previousCurationWindow", copy.deepcopy(window))
+    opportunity["activeWindow"] = {
+        "startsAtUTC": starts.isoformat().replace("+00:00", "Z"),
+        "expiresAtUTC": expires.isoformat().replace("+00:00", "Z"),
+    }
+    return True
 
 
 def promote_candidate(candidate: dict[str, Any], decision: dict[str, Any]) -> dict[str, Any]:
@@ -303,7 +326,7 @@ def build_runtime(
     as_of_date: str,
     generated_at: str,
 ) -> dict[str, Any]:
-    reference = parse_datetime(f"{as_of_date}T23:59:59Z") or parse_datetime(generated_at)
+    reference = parse_datetime(generated_at) or parse_datetime(f"{as_of_date}T23:59:59Z")
     if reference is None:
         raise DecisionError("Unable to determine runtime reference time")
 
@@ -313,20 +336,34 @@ def build_runtime(
         if item.get("id")
     }
     opportunities: list[dict[str, Any]] = []
+    expired_approved = 0
     decisions = registry.get("decisions") or []
     for decision in decisions:
         if decision.get("status") != "approved":
             continue
         candidate_id = str(decision.get("id"))
         candidate = candidates.get(candidate_id)
-        if candidate is not None and decision.get("evidenceHash") == evidence_hash(candidate):
+        if candidate is not None:
+            if decision.get("evidenceHash") != evidence_hash(candidate):
+                continue
             opportunity = promote_candidate(candidate, decision)
         else:
             opportunity = copy.deepcopy(previous_by_id.get(candidate_id))
             if opportunity is None:
                 continue
+            review = opportunity.get("review") or {}
+            if (review.get("evidenceHash") != decision.get("evidenceHash")
+                    or review.get("status") != "approved"
+                    or not str(review.get("approvedBy") or "").strip()):
+                continue
+        if (not str(decision.get("decidedBy") or "").strip()
+                or parse_datetime(decision.get("decidedAtUTC")) is None
+                or not apply_temporary_curation_window(opportunity)):
+            continue
         if is_active(opportunity, reference):
             opportunities.append(opportunity)
+        elif parse_datetime(opportunity["activeWindow"]["expiresAtUTC"]) <= reference:
+            expired_approved += 1
 
     opportunities.sort(
         key=lambda item: (
@@ -342,6 +379,14 @@ def build_runtime(
         "schemaVersion": 1,
         "family": "transientOpportunities",
         "reviewOnly": False,
+        "packageVersion": f"transient-event-feed-v1-{reference:%Y%m%d}-discovery90d-approved",
+        "curationPolicy": {
+            "id": TEMPORARY_CURATION_POLICY,
+            "temporary": True,
+            "anchor": "discovery.dateUTC",
+            "lifetimeDays": TEMPORARY_CURATION_DAYS,
+            "visibilityPrediction": False,
+        },
         "asOfDate": as_of_date,
         "generatedAtUTC": generated_at,
         "approvalPolicy": "tns_transient_review_decisions_v1",
@@ -350,7 +395,8 @@ def build_runtime(
             "approved": len(opportunities),
             "excluded": status_counts["hold"] + status_counts["rejected"],
             "pending": status_counts["pending"],
-            "expiredApproved": status_counts["approved"] - len(opportunities),
+            "inactiveApproved": status_counts["approved"] - len(opportunities),
+            "expiredApproved": expired_approved,
         },
         "opportunities": opportunities,
     }
@@ -422,7 +468,12 @@ def main() -> int:
     candidates, provenance, latest_as_of, latest_generated_at = latest_candidates(queues)
     previous_runtime = read_optional_json(args.runtime)
     existing_registry = read_optional_json(args.decisions)
-    generated_at = args.generated_at or latest_generated_at or utc_now()
+    # A policy-only regeneration may be newer than the last scientific snapshot.
+    # Do not roll its package version/time back on the next ordinary check/run.
+    known_generations = [latest_generated_at, (previous_runtime or {}).get("generatedAtUTC"),
+                         (existing_registry or {}).get("generatedAtUTC")]
+    valid_generations = [(parse_datetime(value), value) for value in known_generations if parse_datetime(value)]
+    generated_at = args.generated_at or (max(valid_generations)[1] if valid_generations else utc_now())
     registry = sync_decisions(
         existing_registry,
         previous_runtime,

@@ -176,7 +176,7 @@ class ApplyTNSReviewDecisionsTests(unittest.TestCase):
         self.assertEqual(migrated["evidenceHash"], decisions.evidence_hash(self.candidate))
         self.assertIn("Migrated", migrated["note"])
 
-    def test_expired_approved_candidate_is_not_published(self):
+    def test_old_thirty_day_expiry_does_not_drop_approved_candidate(self):
         expired = candidate(expires="2026-09-19T00:00:00Z")
         registry = decisions.sync_decisions(
             None,
@@ -200,8 +200,82 @@ class ApplyTNSReviewDecisionsTests(unittest.TestCase):
             generated_at="2026-09-20T00:00:00Z",
         )
 
+        self.assertEqual(len(runtime["opportunities"]), 1)
+        published = runtime["opportunities"][0]
+        self.assertEqual(published["activeWindow"]["expiresAtUTC"], "2026-12-09T00:00:00Z")
+        self.assertEqual(published["previousCurationWindow"]["expiresAtUTC"], "2026-09-19T00:00:00Z")
+        self.assertEqual(published["discovery"], expired["discovery"])
+        self.assertFalse(runtime["curationPolicy"]["visibilityPrediction"])
+
+    def test_temporary_window_boundaries_and_pending_exclusion(self):
+        registry = decisions.sync_decisions(None, None, self.candidates, self.provenance,
+                                           generated_at="2026-09-20T00:00:00Z")
+        decision = registry["decisions"][0]
+        decision.update(status="approved", decidedBy="project-owner", decidedAtUTC="2026-09-20T00:00:00Z")
+        def runtime(at):
+            return decisions.build_runtime(None, registry, self.candidates,
+                                           as_of_date="2026-09-20", generated_at=at)
+        self.assertEqual(len(runtime("2026-09-10T00:00:00Z")["opportunities"]), 1)
+        self.assertEqual(runtime("2026-09-09T23:59:59Z")["opportunities"], [])
+        self.assertEqual(len(runtime("2026-12-08T23:59:59Z")["opportunities"]), 1)
+        self.assertEqual(runtime("2026-12-09T00:00:00Z")["opportunities"], [])
+        for status in ["pending", "hold", "rejected"]:
+            decision["status"] = status
+            self.assertEqual(runtime("2026-11-01T00:00:00Z")["opportunities"], [])
+
+    def test_changed_evidence_never_falls_back_to_old_runtime(self):
+        registry = decisions.sync_decisions(None, None, self.candidates, self.provenance,
+                                           generated_at="2026-09-20T00:00:00Z")
+        decision = registry["decisions"][0]
+        decision.update(status="approved", decidedBy="project-owner", decidedAtUTC="2026-09-20T00:00:00Z")
+        old = {"opportunities": [decisions.promote_candidate(self.candidate, decision)]}
+        runtime = decisions.build_runtime(old, registry, {"tns:1": candidate(magnitude=18.4)},
+                                          as_of_date="2026-11-01", generated_at="2026-11-01T00:00:00Z")
         self.assertEqual(runtime["opportunities"], [])
-        self.assertEqual(runtime["counts"]["expiredApproved"], 1)
+
+    def test_policy_preserves_watch_assessment_and_rejects_missing_anchor(self):
+        watch = candidate()
+        watch["urgency"] = "watch"
+        registry = decisions.sync_decisions(None, None, {"tns:1": watch}, self.provenance,
+                                           generated_at="2026-09-20T00:00:00Z")
+        registry["decisions"][0].update(status="approved", decidedBy="project-owner",
+                                       decidedAtUTC="2026-09-20T00:00:00Z")
+        runtime = decisions.build_runtime(None, registry, {"tns:1": watch},
+                                          as_of_date="2026-09-20", generated_at="2026-11-01T00:00:00Z")
+        self.assertEqual(runtime["opportunities"][0]["urgency"], "watch")
+        self.assertEqual(watch["activeWindow"]["expiresAtUTC"], "2026-10-10T00:00:00Z")
+        for value in [None, "invalid"]:
+            invalid = candidate()
+            invalid["discovery"]["dateUTC"] = value
+            self.assertFalse(decisions.apply_temporary_curation_window(invalid))
+
+    def test_old_runtime_fallback_requires_matching_approved_review(self):
+        registry = decisions.sync_decisions(None, None, self.candidates, self.provenance,
+                                           generated_at="2026-09-20T00:00:00Z")
+        decision = registry["decisions"][0]
+        decision.update(status="approved", decidedBy="project-owner", decidedAtUTC="2026-09-20T00:00:00Z")
+        old = decisions.promote_candidate(self.candidate, decision)
+        def runtime():
+            return decisions.build_runtime({"opportunities": [old]}, registry, {},
+                                           as_of_date="2026-09-20", generated_at="2026-11-01T00:00:00Z")
+        self.assertEqual(len(runtime()["opportunities"]), 1)
+        old["review"]["status"] = "pending"
+        self.assertEqual(runtime()["opportunities"], [])
+        old["review"]["status"] = "approved"
+        old["review"]["evidenceHash"] = "stale-evidence"
+        self.assertEqual(runtime()["opportunities"], [])
+
+    def test_unnamed_or_invalid_dated_approval_is_not_promoted(self):
+        registry = decisions.sync_decisions(None, None, self.candidates, self.provenance,
+                                           generated_at="2026-09-20T00:00:00Z")
+        decision = registry["decisions"][0]
+        decision.update(status="approved", decidedBy=" ", decidedAtUTC="2026-09-20T00:00:00Z")
+        def runtime():
+            return decisions.build_runtime(None, registry, self.candidates,
+                                           as_of_date="2026-09-20", generated_at="2026-11-01T00:00:00Z")
+        self.assertEqual(runtime()["opportunities"], [])
+        decision.update(decidedBy="project-owner", decidedAtUTC="bad")
+        self.assertEqual(runtime()["opportunities"], [])
 
 
 if __name__ == "__main__":
