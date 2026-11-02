@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20261026-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261102-aerith",
   "packageRole": "comet",
   "shardID": "COMET_C_2024_J3",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "C/2024 J3 (ATLAS)",
     "aerithName": "C/2024 J3 ( ATLAS )",
     "detailURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
-    "generatedAt": "2026-10-26T10:36:29Z",
+    "generatedAt": "2026-11-02T10:27:16Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-10-17",
+      "referenceDate": "2026-10-31",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-10-17",
-      "aerithNextUsefulDate": "2026-10-24",
-      "aerithCurrentMagnitude": 13.6,
+      "aerithCurrentDate": "2026-10-31",
+      "aerithNextUsefulDate": "2026-11-07",
+      "aerithCurrentMagnitude": 13.7,
       "aerithNextMagnitude": 13.7,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 65.0,
-        "south": 3.0
+        "north": 59.0,
+        "south": -4.0
       },
       "nextBestAltitudeDegreesByHemisphere": {
-        "north": 62.0,
-        "south": 0.0
+        "north": 56.0,
+        "south": -9.0
       },
-      "futureUsefulStartDate": "2026-10-17",
+      "futureUsefulStartDate": "2026-10-31",
       "futureUsefulEndDate": "2027-07-12",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 268
+      "daysUntilFutureUsefulEnd": 254
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-10-17",
+      "referenceDate": "2026-10-31",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 15.015,
-      "currentSampleDate": "2026-10-17",
+      "currentMagnitudeEstimate": 15.054,
+      "currentSampleDate": "2026-10-31",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-10-17",
+      "firstFutureUsefulDate": "2026-10-31",
       "lastFutureUsefulDate": "2027-07-12",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 268,
+      "daysUntilUsefulEnd": 254,
       "brightestMagnitude": 13.5,
       "brightestDate": "2026-08-08",
       "faintestMagnitude": 15.743,
@@ -68,123 +68,123 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-10-26T10:36:29Z",
+      "generatedAt": "2026-11-02T10:27:16Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
-        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_j3_638738407c09.jpg",
-        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_j3_638738407c09.jpg",
-        "cachedPath": "v1/assets/comets/aerith/comet_c_2024_j3_638738407c09.jpg",
-        "originalURL": "http://www.aerith.net/pictures/fichtl/s/2024J3_20260806_2227_8B_2min_MG_L_R_b2.jpg",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_j3_01fede384905.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_j3_01fede384905.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_c_2024_j3_01fede384905.jpg",
+        "originalURL": "http://www.aerith.net/pictures/jager/s/2024J32060906UT1950sec11x100.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
         "aerithDetailURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
-        "byteSize": 8699,
-        "checksum": "638738407c09fe2ce325800c53abe82becc88b0b299f53daa6936c5fe755ebdb"
+        "byteSize": 9081,
+        "checksum": "01fede384905ba67bdc430b56debf911120249791808bfafd94f714c6b1d8c5d"
       },
       "hero": {
         "kind": "hero",
-        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_j3_638738407c09.jpg",
-        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_j3_638738407c09.jpg",
-        "cachedPath": "v1/assets/comets/aerith/comet_c_2024_j3_638738407c09.jpg",
-        "originalURL": "http://www.aerith.net/pictures/fichtl/s/2024J3_20260806_2227_8B_2min_MG_L_R_b2.jpg",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_j3_01fede384905.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_c_2024_j3_01fede384905.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_c_2024_j3_01fede384905.jpg",
+        "originalURL": "http://www.aerith.net/pictures/jager/s/2024J32060906UT1950sec11x100.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
         "aerithDetailURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
-        "byteSize": 8699,
-        "checksum": "638738407c09fe2ce325800c53abe82becc88b0b299f53daa6936c5fe755ebdb"
+        "byteSize": 9081,
+        "checksum": "01fede384905ba67bdc430b56debf911120249791808bfafd94f714c6b1d8c5d"
       }
     },
     "brightness": [
       {
-        "id": "C/2024J3-2026-10-01-report-1",
-        "date": "2026-10-01",
-        "magnitude": 12.9,
+        "id": "C/2024J3-2026-10-27-report-1",
+        "date": "2026-10-27",
+        "magnitude": 13.7,
         "qualifier": "reported",
         "estimateKind": "reported",
         "isProjection": false,
         "sourceLabel": "Aerith reported magnitude",
         "sourceURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
-        "commentary": "Now it is 12.9 mag (Oct. 1, Osamu Miyazaki). It stays 14 mag for a while. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be unobservable soon."
+        "commentary": "Now it is 13.7 mag (Oct. 27, Yoshimi Nagai). It stays 14 mag for a while. In the Northern Hemisphere, it will be getting lower gradually. But it will be getting higher again after January. In the Southern Hemisphere, it is not observable now."
       },
       {
-        "id": "C/2024J3-2026-10-17-north-weekly-1",
-        "date": "2026-10-17",
-        "magnitude": 13.6,
+        "id": "C/2024J3-2026-10-31-north-weekly-1",
+        "date": "2026-10-31",
+        "magnitude": 13.7,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.7
+        "magnitudeDelta": 0.0
       },
       {
-        "id": "C/2024J3-2026-10-24-north-weekly-2",
-        "date": "2026-10-24",
+        "id": "C/2024J3-2026-11-07-north-weekly-2",
+        "date": "2026-11-07",
         "magnitude": 13.7,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.1
+        "magnitudeDelta": 0.0
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
-      "availableStartDate": "2026-10-01",
-      "availableEndDate": "2026-10-24",
-      "actualDaySpan": 23,
+      "availableStartDate": "2026-10-27",
+      "availableEndDate": "2026-11-07",
+      "actualDaySpan": 11,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
       "points": [
         {
-          "id": "C/2024J3-2026-10-01-report-1",
-          "date": "2026-10-01",
-          "magnitude": 12.9,
+          "id": "C/2024J3-2026-10-27-report-1",
+          "date": "2026-10-27",
+          "magnitude": 13.7,
           "qualifier": "reported",
           "estimateKind": "reported",
           "isProjection": false,
           "sourceLabel": "Aerith reported magnitude",
           "sourceURL": "http://www.aerith.net/comet/catalog/2024J3/2024J3.html",
-          "commentary": "Now it is 12.9 mag (Oct. 1, Osamu Miyazaki). It stays 14 mag for a while. In the Northern Hemisphere, it stays observable in good condition. In the Southern Hemisphere, it will be unobservable soon."
+          "commentary": "Now it is 13.7 mag (Oct. 27, Yoshimi Nagai). It stays 14 mag for a while. In the Northern Hemisphere, it will be getting lower gradually. But it will be getting higher again after January. In the Southern Hemisphere, it is not observable now."
         },
         {
-          "id": "C/2024J3-2026-10-17-north-weekly-1",
-          "date": "2026-10-17",
-          "magnitude": 13.6,
+          "id": "C/2024J3-2026-10-31-north-weekly-1",
+          "date": "2026-10-31",
+          "magnitude": 13.7,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.7
+          "magnitudeDelta": 0.0
         },
         {
-          "id": "C/2024J3-2026-10-24-north-weekly-2",
-          "date": "2026-10-24",
+          "id": "C/2024J3-2026-11-07-north-weekly-2",
+          "date": "2026-11-07",
           "magnitude": 13.7,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.1
+          "magnitudeDelta": 0.0
         }
       ]
     },
     "brightnessTrend": {
       "currentMagnitude": 13.7,
-      "currentDate": "2026-10-24",
-      "currentPointID": "C/2024J3-2026-10-24-north-weekly-2",
-      "comparisonMagnitude": 13.6,
-      "comparisonDate": "2026-10-17",
-      "comparisonPointID": "C/2024J3-2026-10-17-north-weekly-1",
+      "currentDate": "2026-11-07",
+      "currentPointID": "C/2024J3-2026-11-07-north-weekly-2",
+      "comparisonMagnitude": 13.7,
+      "comparisonDate": "2026-10-31",
+      "comparisonPointID": "C/2024J3-2026-10-31-north-weekly-1",
       "comparisonWindowDays": 7,
-      "deltaMagnitude": 0.1,
+      "deltaMagnitude": 0.0,
       "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
