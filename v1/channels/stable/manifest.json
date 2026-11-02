@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-11-02T04:52:57Z",
-  "publishedAt": "2026-11-02T04:52:57Z",
+  "generatedAt": "2026-11-02T10:27:16Z",
+  "publishedAt": "2026-11-02T10:27:16Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -198,15 +198,15 @@
     },
     {
       "family": "cometDetailMetadata",
-      "packageVersion": "comet-detail-metadata-v1-20261026-aerith",
+      "packageVersion": "comet-detail-metadata-v1-20261102-aerith",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/comet-details/comet_detail_metadata_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "6a372dbb05e49d403295c9ba669c7456404c3f44416e1a2cd76219fec60bdc95"
+        "value": "eb2407001faf6afe093a4971cfe8ae6329310244216799b0d34481aff546e88b"
       },
-      "byteSize": 56135,
-      "recordCount": 16,
+      "byteSize": 45664,
+      "recordCount": 13,
       "minSupportedAppVersion": "1.4.1",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,

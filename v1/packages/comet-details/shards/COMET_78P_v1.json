@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20261026-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261102-aerith",
   "packageRole": "comet",
   "shardID": "COMET_78P",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "78P/Gehrels",
     "aerithName": "78P/Gehrels 2",
     "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
-    "generatedAt": "2026-10-26T10:36:29Z",
+    "generatedAt": "2026-11-02T10:27:16Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-10-17",
+      "referenceDate": "2026-10-31",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-10-17",
-      "aerithNextUsefulDate": "2026-10-24",
-      "aerithCurrentMagnitude": 13.8,
+      "aerithCurrentDate": "2026-10-31",
+      "aerithNextUsefulDate": "2026-11-07",
+      "aerithCurrentMagnitude": 13.9,
       "aerithNextMagnitude": 13.9,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 63.0,
-        "south": 30.0
+        "north": 68.0,
+        "south": 34.0
       },
       "nextBestAltitudeDegreesByHemisphere": {
-        "north": 66.0,
-        "south": 32.0
+        "north": 68.0,
+        "south": 36.0
       },
-      "futureUsefulStartDate": "2026-10-17",
+      "futureUsefulStartDate": "2026-10-31",
       "futureUsefulEndDate": "2027-02-08",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 114
+      "daysUntilFutureUsefulEnd": 100
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-10-17",
+      "referenceDate": "2026-10-31",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 15.158,
-      "currentSampleDate": "2026-10-17",
+      "currentMagnitudeEstimate": 15.153,
+      "currentSampleDate": "2026-10-31",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-10-17",
+      "firstFutureUsefulDate": "2026-10-31",
       "lastFutureUsefulDate": "2027-02-08",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 114,
+      "daysUntilUsefulEnd": 100,
       "brightestMagnitude": 13.2,
       "brightestDate": "2026-08-08",
       "faintestMagnitude": 19.22,
@@ -68,33 +68,33 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-10-26T10:36:29Z",
+      "generatedAt": "2026-11-02T10:27:16Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
       "thumbnail": {
         "kind": "thumbnail",
-        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
-        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
-        "cachedPath": "v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
-        "originalURL": "http://www.aerith.net/pictures/prystavski/s/0078P-20250910-213623-L-BIN2-_-120-001+3_caption.jpg",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_c98230a2a97d.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_c98230a2a97d.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_78p_c98230a2a97d.jpg",
+        "originalURL": "http://www.aerith.net/pictures/jager/s/78P20260920UT158sec6x120.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
         "aerithDetailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
-        "byteSize": 7473,
-        "checksum": "47542025c7c687638e51f8cb57555386d21bb4e6e680332e822f2563cbfd533a"
+        "byteSize": 8801,
+        "checksum": "c98230a2a97dff620dbc1837453e93ae9316e6f80ac9ad546743a757c7ee82a2"
       },
       "hero": {
         "kind": "hero",
-        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
-        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
-        "cachedPath": "v1/assets/comets/aerith/comet_78p_47542025c7c6.jpg",
-        "originalURL": "http://www.aerith.net/pictures/prystavski/s/0078P-20250910-213623-L-BIN2-_-120-001+3_caption.jpg",
+        "url": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_c98230a2a97d.jpg",
+        "cachedURL": "https://metadata.astroguide.space/v1/assets/comets/aerith/comet_78p_c98230a2a97d.jpg",
+        "cachedPath": "v1/assets/comets/aerith/comet_78p_c98230a2a97d.jpg",
+        "originalURL": "http://www.aerith.net/pictures/jager/s/78P20260920UT158sec6x120.jpg",
         "sourceURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
         "aerithDetailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
         "attribution": "Image courtesy Aerith / Seiichi Yoshida",
-        "byteSize": 7473,
-        "checksum": "47542025c7c687638e51f8cb57555386d21bb4e6e680332e822f2563cbfd533a"
+        "byteSize": 8801,
+        "checksum": "c98230a2a97dff620dbc1837453e93ae9316e6f80ac9ad546743a757c7ee82a2"
       }
     },
     "brightness": [
@@ -110,33 +110,33 @@
         "commentary": "Now it is 13.3 mag (Oct. 13, Thomas Lehmann). Fading slowly. It stays observable in good condition."
       },
       {
-        "id": "78P-2026-10-17-north-weekly-1",
-        "date": "2026-10-17",
-        "magnitude": 13.8,
+        "id": "78P-2026-10-31-north-weekly-1",
+        "date": "2026-10-31",
+        "magnitude": 13.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.5
+        "magnitudeDelta": 0.6
       },
       {
-        "id": "78P-2026-10-24-north-weekly-2",
-        "date": "2026-10-24",
+        "id": "78P-2026-11-07-north-weekly-2",
+        "date": "2026-11-07",
         "magnitude": 13.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.1
+        "magnitudeDelta": 0.0
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
       "availableStartDate": "2026-10-13",
-      "availableEndDate": "2026-10-24",
-      "actualDaySpan": 11,
+      "availableEndDate": "2026-11-07",
+      "actualDaySpan": 25,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
@@ -153,38 +153,38 @@
           "commentary": "Now it is 13.3 mag (Oct. 13, Thomas Lehmann). Fading slowly. It stays observable in good condition."
         },
         {
-          "id": "78P-2026-10-17-north-weekly-1",
-          "date": "2026-10-17",
-          "magnitude": 13.8,
+          "id": "78P-2026-10-31-north-weekly-1",
+          "date": "2026-10-31",
+          "magnitude": 13.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.5
+          "magnitudeDelta": 0.6
         },
         {
-          "id": "78P-2026-10-24-north-weekly-2",
-          "date": "2026-10-24",
+          "id": "78P-2026-11-07-north-weekly-2",
+          "date": "2026-11-07",
           "magnitude": 13.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.1
+          "magnitudeDelta": 0.0
         }
       ]
     },
     "brightnessTrend": {
       "currentMagnitude": 13.9,
-      "currentDate": "2026-10-24",
-      "currentPointID": "78P-2026-10-24-north-weekly-2",
-      "comparisonMagnitude": 13.8,
-      "comparisonDate": "2026-10-17",
-      "comparisonPointID": "78P-2026-10-17-north-weekly-1",
+      "currentDate": "2026-11-07",
+      "currentPointID": "78P-2026-11-07-north-weekly-2",
+      "comparisonMagnitude": 13.9,
+      "comparisonDate": "2026-10-31",
+      "comparisonPointID": "78P-2026-10-31-north-weekly-1",
       "comparisonWindowDays": 7,
-      "deltaMagnitude": 0.1,
+      "deltaMagnitude": 0.0,
       "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
