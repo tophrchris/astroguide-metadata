@@ -10,6 +10,7 @@ import json
 import math
 import re
 import sys
+from itertools import combinations
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
@@ -38,7 +39,7 @@ PACKAGE_FAMILY = "planetTargetCloseEncounters"
 PACKAGE_BASENAME = "planet-target-close-encounters"
 EVENT_FAMILY = "closeEncounter"
 EVENT_TYPE = "planetTargetCloseEncounter"
-ALGORITHM_VERSION = "planet-target-close-encounters-v1"
+ALGORITHM_VERSION = "planet-target-and-pair-close-encounters-v2"
 DEFAULT_BRIGHT_NGC_IC_MAG_LIMIT = lunar.DEFAULT_BRIGHT_NGC_IC_MAG_LIMIT
 FAMILY_ORDER = [
     "targetMetadataOverlay",
@@ -251,6 +252,10 @@ def main() -> int:
         eph=eph,
         ts=ts,
     )
+    events.extend(compute_planet_pair_encounters(
+        sky=sky, planet_subjects=planet_subjects, start=start, end=end,
+        max_separation_degrees=args.max_separation_degrees, earth=earth, eph=eph, ts=ts,
+    ))
     events = sorted(events, key=lambda event: (str(event["eventTimeUTC"]), str(event["id"])))
     event_target_groups = [
         group for group in target_groups if group.group_id in event_target_group_ids
@@ -380,6 +385,66 @@ def compute_close_encounters(
         )
 
     return list(events_by_id.values()), event_target_group_ids
+
+
+def pair_identifier(first: str, second: str, timestamp: dt.datetime) -> str:
+    first, second = sorted((first, second))
+    return f"planet-pair-close-encounter-{first}-{second}-{timestamp:%Y%m%d}"
+
+
+def compute_planet_pair_encounters(
+    *, sky: lunar.SkyfieldModules, planet_subjects: list[lunar.PlanetSubject],
+    start: dt.datetime, end: dt.datetime, max_separation_degrees: float,
+    earth: Any, eph: Any, ts: Any,
+) -> list[dict[str, Any]]:
+    """Offline only: 21 unordered pairs, <=3 years, apparent geocentric minima."""
+    from skyfield.searchlib import find_minima
+
+    if not dt.timedelta(0) < end - start <= dt.timedelta(days=1096):
+        raise ValueError("Planet pair horizon must be positive and at most three years")
+    if not math.isfinite(max_separation_degrees) or not 0 < max_separation_degrees <= 180:
+        raise ValueError("Planet pair threshold must be finite and in (0, 180]")
+    subjects = sorted(planet_subjects, key=lambda item: item.planet_id)
+    supported = {row[0] for row in lunar.PLANET_SUBJECTS}
+    ids = [item.planet_id for item in subjects]
+    if len(ids) != len(set(ids)) or not set(ids) <= supported:
+        raise ValueError("Planet pairs require distinct supported major planets")
+    result = {}
+    padding = dt.timedelta(days=2)
+    for first, second in combinations(subjects, 2):
+        first_body, second_body = eph[first.ephemeris_key], eph[second.ephemeris_key]
+
+        def separation(t):
+            observer = earth.at(t)
+            return observer.observe(first_body).apparent().separation_from(
+                observer.observe(second_body).apparent()
+            ).degrees
+
+        separation.step_days = 0.25
+        times, values = find_minima(
+            ts.from_datetime(start - padding), ts.from_datetime(end + padding),
+            separation, epsilon=0.5 / 86400,
+        )
+        for time, value in zip(times, values):
+            timestamp = time.utc_datetime()
+            if not start <= timestamp < end or not math.isfinite(float(value)):
+                continue
+            if value > max_separation_degrees:
+                continue
+            identifier = pair_identifier(first.planet_id, second.planet_id, timestamp)
+            row = {
+                "id": identifier, "eventFamily": EVENT_FAMILY, "type": EVENT_TYPE,
+                "eventTimeUTC": lunar.isoformat_z(timestamp),
+                "closestApproachUTC": lunar.isoformat_z(timestamp),
+                "minimumSeparationDegrees": round(float(value), 4),
+                "participants": [planet_participant(lunar.planet_snapshot(
+                    sky, subject, body, timestamp, earth, ts,
+                )) for subject, body in ((first, first_body), (second, second_body))],
+            }
+            if identifier in result:
+                raise RuntimeError(f"Distinct minima collided on stable identity {identifier}")
+            result[identifier] = row
+    return sorted(result.values(), key=lambda row: (row["eventTimeUTC"], row["id"]))
 
 
 def separation_from_fixed_target(
@@ -711,6 +776,12 @@ def build_package(
                 "Detect local angular-separation minima on the coarse time grid, "
                 "refine each bracket on the fine grid, then apply quadratic time interpolation."
             ),
+            "planetPairAlgorithm": (
+                "Skyfield find_minima of separation_from between two geocentric apparent "
+                "positions; unordered seven-major-planet pairs, 6-hour search step, "
+                "0.5-second search tolerance, 2-day boundary padding, start-inclusive/end-exclusive. "
+                "Numerical search tolerance is not observational accuracy; no local visibility claim."
+            ),
             "eventIDAlgorithm": (
                 "Stable planet ID plus canonical target-group ID plus UTC closest-approach date."
             ),
@@ -814,6 +885,10 @@ def event_counts(events: list[dict[str, Any]]) -> dict[str, Any]:
         planet, _ = event_participants(event)
         if planet:
             by_planet[str(planet.get("id") or "unknown")] += 1
+        elif len(event.get("participants", [])) == 2:
+            for participant in event["participants"]:
+                if participant.get("kind") == "majorPlanet":
+                    by_planet[str(participant["id"])] += 1
     return {
         "events": len(events),
         "eventsByPlanet": dict(sorted(by_planet.items())),
@@ -1099,6 +1174,20 @@ def validate_events(
         if separation is None or separation < 0 or separation > threshold + 0.000_001:
             raise RuntimeError(f"Event {event_id} separation is outside the package threshold.")
         planet, target = event_participants(event)
+        participants = event.get("participants", [])
+        if (len(participants) == 2 and all(isinstance(row, dict) and
+                row.get("kind") == "majorPlanet" for row in participants)):
+            ids = [str(row.get("id") or "") for row in participants]
+            if len(set(ids)) != 2 or not set(ids) <= planet_ids or ids != sorted(ids):
+                raise RuntimeError(f"Event {event_id} has invalid or noncanonical planet pair")
+            if event_id != pair_identifier(*ids, closest_time):
+                raise RuntimeError(f"Event {event_id} has invalid pair identity")
+            for row in participants:
+                if not str(row.get("displayName") or "").strip():
+                    raise RuntimeError(f"Event {event_id} missing planet displayName")
+                if row.get("magnitude") is not None and lunar.finite_float(row["magnitude"]) is None:
+                    raise RuntimeError(f"Event {event_id} contains non-finite magnitude")
+            continue
         if planet is None or target is None:
             raise RuntimeError(f"Event {event_id} must contain one planet and one DSO participant.")
         planet_id = str(planet.get("id") or "")

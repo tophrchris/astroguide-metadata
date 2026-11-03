@@ -112,5 +112,95 @@ class PlanetTargetCloseEncounterPackageTests(unittest.TestCase):
             self.validate([event, dict(event)])
 
 
+class PlanetPairTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        import time
+        cls.sky = encounters.lunar.load_skyfield_modules()
+        cache = encounters.DEFAULT_EPHEMERIS_CACHE
+        if not (cache / "de421.bsp").exists():
+            raise unittest.SkipTest("Real-engine check requires existing local DE421; never fetch in tests")
+        loader = cls.sky.Loader(str(cache))
+        cls.eph = loader("de421.bsp")
+        cls.ts = loader.timescale(builtin=True)
+        cls.subjects = [encounters.lunar.PlanetSubject(*row) for row in encounters.lunar.PLANET_SUBJECTS]
+        cls.start = dt.datetime(2026, 8, 8, tzinfo=dt.UTC)
+        cls.end = dt.datetime(2028, 8, 8, tzinfo=dt.UTC)
+        started = time.monotonic()
+        cls.events = cls.generate(cls.subjects, cls.start, cls.end)
+        cls.elapsed = time.monotonic() - started
+        print(f"Real DE421 pair scan: {len(cls.events)} records / 21 pairs / 731 days / {cls.elapsed:.2f}s")
+
+    @classmethod
+    def generate(cls, subjects, start, end):
+        return encounters.compute_planet_pair_encounters(
+            sky=cls.sky, planet_subjects=subjects, start=start, end=end,
+            max_separation_degrees=5, earth=cls.eph["earth"], eph=cls.eph, ts=cls.ts,
+        )
+
+    def test_real_minima_not_daily_threshold_crossings(self):
+        self.assertGreater(len(self.events), 10)
+        self.assertLess(self.elapsed, 120)
+        for row in self.events:
+            participants = row["participants"]
+            subjects = {p.planet_id: p for p in self.subjects}
+            bodies = [self.eph[subjects[p["id"]].ephemeris_key] for p in participants]
+            timestamp = encounters.lunar.parse_utc_datetime(row["closestApproachUTC"])
+            observer = self.eph["earth"].at(self.ts.from_datetimes([
+                timestamp - dt.timedelta(minutes=10), timestamp,
+                timestamp + dt.timedelta(minutes=10),
+            ]))
+            values = observer.observe(bodies[0]).apparent().separation_from(
+                observer.observe(bodies[1]).apparent()
+            ).degrees
+            self.assertLessEqual(values[1], min(values[0], values[2]) + 1e-8)
+            self.assertAlmostEqual(values[1], row["minimumSeparationDegrees"], delta=0.000051)
+            self.assertTrue(self.start <= timestamp < self.end)
+
+    def test_pair_order_and_renewal_stable_ids(self):
+        first, second = self.subjects[:2]
+        forward = self.generate([first, second], self.start, self.end)
+        reverse = self.generate([second, first], self.start, self.end)
+        self.assertEqual(forward, reverse)
+        self.assertEqual(len({r["id"] for r in self.events}), len(self.events))
+        for row in self.events:
+            ids = [p["id"] for p in row["participants"]]
+            self.assertEqual(ids, sorted(set(ids)))
+
+    def test_boundary_padding_keeps_minima_on_window_edges(self):
+        row = self.events[0]
+        center = encounters.lunar.parse_utc_datetime(row["closestApproachUTC"])
+        ids = {p["id"] for p in row["participants"]}
+        subjects = [p for p in self.subjects if p.planet_id in ids]
+        before = self.generate(subjects, center - dt.timedelta(hours=1), center + dt.timedelta(seconds=1))
+        after = self.generate(subjects, center + dt.timedelta(seconds=1), center + dt.timedelta(hours=1))
+        self.assertEqual([r["id"] for r in before], [row["id"]])
+        self.assertEqual(after, [])
+
+    def test_reject_invalid_pair_and_horizon(self):
+        for subjects, start, end in (
+            ([self.subjects[0]] * 2, self.start, self.end),
+            (self.subjects, self.end, self.start),
+            (self.subjects, self.start, self.end + dt.timedelta(days=1000)),
+        ):
+            with self.assertRaises(ValueError):
+                self.generate(subjects, start, end)
+
+    def test_existing_validator_accepts_pairs_and_rejects_bad_identity(self):
+        row = self.events[0]
+        timestamp = encounters.lunar.parse_utc_datetime(row["closestApproachUTC"])
+        kwargs = dict(threshold=5, package_start=self.start, package_end=self.end,
+                      shard_start=self.start, shard_end=self.end,
+                      planet_ids={p.planet_id for p in self.subjects}, target_groups={})
+        self.assertEqual(encounters.validate_events([row], **kwargs)["events"], 1)
+        for participants in ([row["participants"][0]] * 2, list(reversed(row["participants"]))):
+            with self.assertRaises(RuntimeError):
+                encounters.validate_events([{**row, "participants": participants}], **kwargs)
+        with self.assertRaises(RuntimeError):
+            encounters.validate_events([{**row, "id": "wrong"}], **kwargs)
+        self.assertEqual(encounters.pair_identifier("venus", "mars", timestamp),
+                         encounters.pair_identifier("mars", "venus", timestamp))
+
+
 if __name__ == "__main__":
     unittest.main()
