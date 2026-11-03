@@ -167,6 +167,8 @@ def main() -> int:
     end = lunar.parse_utc_datetime(args.end_date)
     if end <= start:
         raise SystemExit("--end-date must be after --start-date")
+    if end - start > dt.timedelta(days=1096):
+        raise SystemExit("Close-encounter generation is bounded to at most three years")
 
     app_repo = args.app_repo.resolve()
     catalog_path = (args.catalog.resolve() if args.catalog else app_repo / DEFAULT_CATALOG_PATH).resolve()
