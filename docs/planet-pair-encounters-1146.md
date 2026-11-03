@@ -21,6 +21,8 @@ are geocentric apparent positions from JPL DE421 through Skyfield, including its
 light-time/apparent corrections. Outer-planet barycenters follow the existing
 producer body definitions. Angular proximity is not physical association,
 occultation, local observability, or a safe solar-observing recommendation.
+The cached DE421 kernel reports 1899-07-28 through 2053-10-08 coverage; this
+candidate claims only the explicit two-year package validity window.
 
 Skyfield `find_minima` searches apparent angular separation with a six-hour
 initial step and 0.5-second numerical time tolerance. The horizon is positive and
@@ -43,12 +45,16 @@ planet, canonical-order and identity checks for pairs.
 - All 21 pairs over 731 days took 0.84 seconds in the focused test run.
 - Ten focused producer tests passed, including the five existing DSO tests.
 - Real minima checked at +/-10 minutes, threshold, two-year bounds, symmetry,
-  stable IDs, invalid participant/order/identity, and padded edge behavior.
+  stable IDs across overlapping refresh windows, invalid participant/order/
+  identity, and padded edge behavior.
 - Maintained full producer and package validator passed using the exact combined
   iOS catalog pin `6b4922a085135d0df79820fad3dfe71ff534aa0e314013036a354284470a547b`.
 - Package `planet-target-close-encounters-v1-20261103-planet-pairs`: 380 events,
   25 monthly shards. Its 346 existing iOS DSO event objects are exactly unchanged;
   34 planet-pair records were added. Stable channel manifest is unchanged.
+  Existing consumed subject fields are unchanged. The regenerated raw registry
+  adds optional angularSizeMinorArcmin=5.4 for NGC 6316 from the pinned catalog;
+  the iOS encounter subject decoder ignores that size field.
 - Example: Jupiter/Mars minimum 2026-11-16T02:04:50Z, 1.1933 degrees.
 
 No independent HORIZONS cross-check, physical-device observation, deployment or

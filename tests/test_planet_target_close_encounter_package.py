@@ -162,6 +162,13 @@ class PlanetPairTests(unittest.TestCase):
         forward = self.generate([first, second], self.start, self.end)
         reverse = self.generate([second, first], self.start, self.end)
         self.assertEqual(forward, reverse)
+        renewal_start = self.start + dt.timedelta(days=31)
+        renewed = self.generate([second, first], renewal_start, self.end)
+        self.assertEqual(
+            {row["id"] for row in renewed},
+            {row["id"] for row in forward if
+             encounters.lunar.parse_utc_datetime(row["closestApproachUTC"]) >= renewal_start},
+        )
         self.assertEqual(len({r["id"] for r in self.events}), len(self.events))
         for row in self.events:
             ids = [p["id"] for p in row["participants"]]
