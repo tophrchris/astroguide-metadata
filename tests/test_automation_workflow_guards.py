@@ -70,6 +70,42 @@ class AutomationWorkflowGuardsTests(unittest.TestCase):
         )
         self.assertNotIn("-name 'transient-review-*.json'", build_step)
 
+    def test_tns_review_branch_reconciliation_handles_only_generated_manifest(self):
+        _, steps = workflow_steps("update-tns-transient-review.yml")
+        steps = dict(steps)
+        reconcile = steps["Continue the existing review branch when present"]
+        self.assertIn(
+            'git merge-base --is-ancestor "origin/$BRANCH_NAME" origin/main',
+            reconcile,
+        )
+        self.assertIn(
+            "mapfile -t conflicts < <(git diff --name-only --diff-filter=U)",
+            reconcile,
+        )
+        self.assertIn(
+            '[[ "${conflicts[0]}" == "v1/channels/stable/manifest.json" ]]',
+            reconcile,
+        )
+        self.assertIn(
+            "git checkout --theirs -- v1/channels/stable/manifest.json",
+            reconcile,
+        )
+        self.assertIn("git commit --no-edit", reconcile)
+        self.assertIn("git merge --abort", reconcile)
+
+    def test_tns_reconciled_branch_is_pushed_without_new_queue_changes(self):
+        _, steps = workflow_steps("update-tns-transient-review.yml")
+        steps = dict(steps)
+        publish = steps["Open or update review pull request"]
+        commit_position = publish.index('if [[ "$has_changes" == true ]]')
+        push_position = publish.index('git push origin "$BRANCH_NAME"')
+        closing_position = publish.index("fi", commit_position)
+        self.assertGreater(push_position, closing_position)
+        self.assertIn(
+            'remote_head="$(git rev-parse --verify "origin/$BRANCH_NAME"',
+            publish,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

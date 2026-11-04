@@ -1,7 +1,20 @@
 # Planet-pair close encounters (#1146)
 
-Local producer candidate only; no remote publication, stable-manifest change,
-candidate approval, or transient-policy change is authorized by this work.
+Initial implementation was local-only. On 2026-11-04 Chris authorized merging
+this metadata branch and a matching local internal TestFlight deployment.
+No transient approvals or transient-policy changes are part of this work.
+
+## Publication candidate (2026-11-04)
+
+Refreshed against main 4bd3336 and regenerated using the maintained builder for
+the newer published window, 2026-11-01 through 2028-11-01. Package
+`planet-target-close-encounters-v1-20261104-planet-pairs` has 398 events in 24
+monthly shards: all 361 existing main DSO records are byte-equivalent as parsed
+objects, plus 37 planet-pair minima. Other stable manifest descriptors are
+unchanged. Full package/manifest validation and ten focused producer tests pass.
+The older local-window evidence below remains historical, not the published
+candidate's counts. Publication and Apple availability must be verified
+separately from this generation record.
 
 ## Contract and compatibility
 

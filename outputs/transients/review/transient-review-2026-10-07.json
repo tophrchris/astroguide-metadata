@@ -1,0 +1,631 @@
+{
+  "schemaVersion": 1,
+  "family": "transientOpportunities",
+  "reviewOnly": true,
+  "reviewSetID": "b6c54d5815e65d90",
+  "asOfDate": "2026-10-07",
+  "generatedAtUTC": "2026-10-07T00:00:00Z",
+  "policy": {
+    "nearFieldRadiusDegrees": 2.0,
+    "preferredDiscoveryAgeDays": 30,
+    "maximumDiscoveryAgeDays": 45,
+    "preferredDiscoveryMagnitude": 18.5,
+    "watchDiscoveryMagnitude": 19.5,
+    "maxReviewOpportunities": 5,
+    "relationshipDefault": "near_field"
+  },
+  "counts": {
+    "rawRows": 1183,
+    "duplicateRowsCollapsed": 112,
+    "uniqueObjects": 1071,
+    "contaminantsRejected": 3,
+    "unsupportedClassificationsRejected": 21,
+    "plausibleCandidates": 1047,
+    "outsideDiscoveryWindow": 107,
+    "fainterThanWatchBand": 716,
+    "invalidCoordinates": 0,
+    "outsideNearFieldRadius": 124,
+    "nearFieldMatches": 100,
+    "outsideReviewGate": 74,
+    "eligibleReviewOpportunities": 26,
+    "reviewOpportunitiesLimit": 5,
+    "reviewOpportunities": 5,
+    "urgent": 5,
+    "watch": 0,
+    "expired": 0,
+    "recommendedApprove": 4,
+    "recommendedHold": 1,
+    "recommendedReject": 0
+  },
+  "opportunities": [
+    {
+      "id": "tns:221339",
+      "source": "TNS",
+      "sourceId": "221339",
+      "sourceObjectName": "SN2026adhk",
+      "sourceURL": "https://www.wis-tns.org/object/2026adhk",
+      "title": "Supernova SN2026adhk near IC2166",
+      "shortTitle": "SN2026adhk",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-09-30T05:52:35Z",
+        "expiresAtUTC": "2026-10-30T05:52:35Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-30T05:52:35Z",
+        "ageDays": 7,
+        "magnitude": 18.41,
+        "band": "L"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": 0.055,
+        "reporters": "G. Ramsay, D. O'Neill, K. Ackley, M. Dyer, J. Lyman, K. Ulaczyk, D. Steeghs, D. Galloway, V. Dhillon, P. O'Brien, K. Noysena, R. Kotak, R. Breton, J. Casares, L. Nuttall, R. Starling, B. Gompertz, B. Godson, T. Killestein, A. Kumar, M. Pursiainen, on behalf of GOTO collaboration",
+        "receivedAtUTC": "2026-09-30T08:16:48Z",
+        "createdAtUTC": "2026-09-30T08:16:51Z",
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3924....1R",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3924....1R/abstract"
+        },
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 99.1005196,
+        "decDegrees": 58.4365348
+      },
+      "score": 98,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_2_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC2166",
+        "displayName": "IC2166",
+        "catalogName": "IC IC2166",
+        "objectType": "Galaxy",
+        "constellation": "Lynx",
+        "magnitude": 12.4,
+        "angularSizeArcmin": 2.2,
+        "angularSizeMajorArcmin": 2.2,
+        "angularSizeMinorArcmin": 1.08,
+        "distance": null,
+        "description": "nebula; faint a single star preceding (westward) / pretty (adv., before F. B. L, S) 1', double a single star following (eastward) 3'",
+        "aliases": [
+          "PGC 19064",
+          "UGC 3463"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 96.7291667,
+          "decDegrees": 59.0800833
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 1.38799,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-10-01T09:33:00Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20261001.csv.zip",
+            "rowNumber": 278,
+            "lastModifiedUTC": "2026-10-01T09:33:00Z"
+          }
+        ],
+        "reportingGroup": "GOTO",
+        "sourceGroup": "GOTO",
+        "internalNames": [
+          "GOTO26khx",
+          "ZTF26abxhmwg"
+        ]
+      }
+    },
+    {
+      "id": "tns:221314",
+      "source": "TNS",
+      "sourceId": "221314",
+      "sourceObjectName": "AT2026adgl",
+      "sourceURL": "https://www.wis-tns.org/object/2026adgl",
+      "title": "Transient candidate AT2026adgl near Great Nebula in Andromeda",
+      "shortTitle": "AT2026adgl",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-09-29T18:17:05Z",
+        "expiresAtUTC": "2026-10-29T18:17:05Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-29T18:17:05Z",
+        "ageDays": 8,
+        "magnitude": 17.4,
+        "band": "Clear"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "Flavio Castellani",
+        "receivedAtUTC": "2026-09-29T21:10:49Z",
+        "createdAtUTC": "2026-09-29T21:10:50Z",
+        "discoveryReference": {
+          "bibcode": "2026TNSTR3913....1C",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR3913....1C/abstract"
+        },
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 10.652667,
+        "decDegrees": 41.230611
+      },
+      "score": 95,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC224",
+        "displayName": "Great Nebula in Andromeda",
+        "catalogName": "NGC NGC224",
+        "objectType": "Galaxy",
+        "constellation": "Andromeda",
+        "magnitude": 3.4,
+        "angularSizeArcmin": 177.83,
+        "angularSizeMajorArcmin": 177.83,
+        "angularSizeMinorArcmin": 69.66,
+        "distance": "674.509 kpc",
+        "description": "The Andromeda Galaxy is a barred spiral galaxy and is the nearest major galaxy to the Milky Way. It was originally named the Andromeda Nebula and is cataloged as Messier 31, M31, and NGC 224. Andromeda has a D25 isophotal diameter of about 46.56 kiloparsecs (152,000 light-years) and is approximately 765 kpc (2.5 million light-years) from Earth. The galaxy's name stems from the area of Earth's sky in which it appears, the constellation of Andromeda, which itself is named after the princess who was the wife of Perseus in Greek mythology.",
+        "aliases": [
+          "Andromeda A",
+          "Andromeda Galaxy",
+          "M 31",
+          "PGC 2557",
+          "UGC 454"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 10.6833333,
+          "decDegrees": 41.2690556
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.04483,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-10-05T06:34:00Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20261005.csv.zip",
+            "rowNumber": 110,
+            "lastModifiedUTC": "2026-10-05T06:34:00Z"
+          }
+        ],
+        "reportingGroup": "None",
+        "sourceGroup": "None",
+        "internalNames": [
+          "OMB33"
+        ]
+      }
+    },
+    {
+      "id": "tns:222102",
+      "source": "TNS",
+      "sourceId": "222102",
+      "sourceObjectName": "AT2026aejp",
+      "sourceURL": "https://www.wis-tns.org/object/2026aejp",
+      "title": "Transient candidate AT2026aejp near IC2183",
+      "shortTitle": "AT2026aejp",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-09-30T12:19:58Z",
+        "expiresAtUTC": "2026-10-30T12:19:58Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-09-30T12:19:58Z",
+        "ageDays": 7,
+        "magnitude": 18.24,
+        "band": "i"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "Alex Keur",
+        "receivedAtUTC": "2026-10-05T16:01:08Z",
+        "createdAtUTC": "2026-10-05T16:01:09Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 109.05475,
+        "decDegrees": -20.558483
+      },
+      "score": 93,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC2183",
+        "displayName": "IC2183",
+        "catalogName": "IC IC2183",
+        "objectType": "Nebula",
+        "constellation": "Canis Major",
+        "magnitude": null,
+        "angularSizeArcmin": null,
+        "angularSizeMajorArcmin": null,
+        "angularSizeMinorArcmin": null,
+        "distance": null,
+        "description": "wisp 2'north-south, 3 stars (pl.) north, suspected",
+        "aliases": [],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 109.0,
+          "decDegrees": -20.4
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.16658,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-10-05T16:01:09Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20261005.csv.zip",
+            "rowNumber": 32,
+            "lastModifiedUTC": "2026-10-05T16:01:09Z"
+          }
+        ],
+        "reportingGroup": "None",
+        "sourceGroup": "ZTF",
+        "internalNames": [
+          "ZTF26abygbnu"
+        ]
+      }
+    },
+    {
+      "id": "tns:222317",
+      "source": "TNS",
+      "sourceId": "222317",
+      "sourceObjectName": "AT2026aeru",
+      "sourceURL": "https://www.wis-tns.org/object/2026aeru",
+      "title": "Transient candidate AT2026aeru near NGC 3003",
+      "shortTitle": "AT2026aeru",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-10-07T11:50:49Z",
+        "expiresAtUTC": "2026-11-06T11:50:49Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-10-07T11:50:49Z",
+        "ageDays": 0,
+        "magnitude": 18.09,
+        "band": "r"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "Yogesh Wagh (LJMU), Christoffer Fremling (Caltech), Daniel Perley (LJMU), Theophile du Laz (Caltech) on behalf of ZTF",
+        "receivedAtUTC": "2026-10-07T14:41:30Z",
+        "createdAtUTC": "2026-10-07T14:41:32Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 147.488661,
+        "decDegrees": 32.6702983
+      },
+      "score": 90,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC 3003",
+        "displayName": "NGC 3003",
+        "catalogName": "NGC NGC 3003",
+        "objectType": "Galaxy",
+        "constellation": "LMi",
+        "magnitude": 11.78,
+        "angularSizeArcmin": 4.74,
+        "angularSizeMajorArcmin": 4.74,
+        "angularSizeMinorArcmin": 1.06,
+        "distance": null,
+        "description": "NGC 3003 is a nearly edge-on barred spiral galaxy in the constellation of Leo Minor, discovered by William Herschel on December 7, 1785. It has an apparent visual magnitude of 11.78, at a distance of 19.5 Mpc from the Sun. It has a recessional velocity of 1474 km/s.",
+        "aliases": [
+          "2MASX J09483604+3325173",
+          "IRAS 09456+3339",
+          "MCG +06-22-013",
+          "PGC 028186",
+          "SDSS J094835.75+332517.5",
+          "UGC 05251"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 147.1502083,
+          "decDegrees": 33.4215
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.80299,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-10-07T14:41:32Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20261007.csv.zip",
+            "rowNumber": 43,
+            "lastModifiedUTC": "2026-10-07T14:41:32Z"
+          }
+        ],
+        "reportingGroup": "ZTF",
+        "sourceGroup": "ZTF",
+        "internalNames": [
+          "ZTF26acadueo"
+        ]
+      }
+    },
+    {
+      "id": "tns:222344",
+      "source": "TNS",
+      "sourceId": "222344",
+      "sourceObjectName": "AT2026aesu",
+      "sourceURL": "https://www.wis-tns.org/object/2026aesu",
+      "title": "Transient candidate AT2026aesu near IC 589",
+      "shortTitle": "AT2026aesu",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "hold",
+      "recommendedDecision": "hold",
+      "reviewDecision": "pending",
+      "decisionReason": "Hold until the AstroGuide catalog identity conflict is resolved.",
+      "activeWindow": {
+        "startsAtUTC": "2026-10-01T12:49:47Z",
+        "expiresAtUTC": "2026-10-31T12:49:47Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-10-01T12:49:47Z",
+        "ageDays": 6,
+        "magnitude": 17.8861,
+        "band": "r"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "Jesper Sollerman (SU), Christoffer Fremling (Caltech), Daniel Perley (LJMU), Theophile du Laz (Caltech) on behalf of ZTF",
+        "receivedAtUTC": "2026-10-07T19:27:33Z",
+        "createdAtUTC": "2026-10-07T19:27:35Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 150.903785,
+        "decDegrees": -5.0980868
+      },
+      "score": 90,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC 589",
+        "displayName": "NGC 3110",
+        "catalogName": "IC IC 589",
+        "objectType": "Galaxy",
+        "constellation": "Sex",
+        "magnitude": null,
+        "angularSizeArcmin": 0.69,
+        "angularSizeMajorArcmin": 0.69,
+        "angularSizeMinorArcmin": 0.51,
+        "distance": null,
+        "description": "NGC 3110, also known as NGC 3122 and NGC 3518, is an active spiral galaxy in the constellation Sextans. It contains extensive Hubble-type Sb star-forming regions, and is located south of the celestial equator. It is estimated to be 218 million light-years from the Milky Way and has a diameter of around 100,000 ly. Together with PGC 29184 it forms a gravitationally bound galaxy pair. Located in the same area of the sky is the galaxy IC 589.",
+        "aliases": [
+          "2MASX J10042392-0540440",
+          "LEDA 154597",
+          "I 589",
+          "NGC 3110",
+          "NGC 3122",
+          "NGC 3518"
+        ],
+        "identityWarning": "Catalog identity conflict: canonical ID IC 589 has the different designation NGC 3110 as its display name.",
+        "coordinates": {
+          "raDegrees": 151.0995833,
+          "decDegrees": -5.6789167
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.61267,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-10-07T19:27:35Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20261007.csv.zip",
+            "rowNumber": 15,
+            "lastModifiedUTC": "2026-10-07T19:27:35Z"
+          }
+        ],
+        "reportingGroup": "ZTF",
+        "sourceGroup": "ZTF",
+        "internalNames": [
+          "ZTF26abyoxhz"
+        ]
+      }
+    }
+  ]
+}
