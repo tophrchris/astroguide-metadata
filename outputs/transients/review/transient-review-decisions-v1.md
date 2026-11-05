@@ -3,7 +3,7 @@
 > **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.
 
 - **Approved and active in runtime:** 1
-- **Pending review:** 52
+- **Pending review:** 55
 - **On hold:** 0
 - **Rejected:** 0
 - **Approved but expired:** 18
@@ -83,3 +83,6 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [SN2026agwm](https://www.wis-tns.org/object/2026agwm) | approve | 18.328 | SN Ia | IC4931 (0.65936 deg) | 2026-11-26T00:01:05Z |
 | Pending | [AT2026agzo](https://www.wis-tns.org/object/2026agzo) | approve | 18.1367 | transient_candidate | NGC3239 (0.15481 deg) | 2026-11-23T12:49:08Z |
 | Pending | [SN2026agzw](https://www.wis-tns.org/object/2026agzw) | approve | 18.09 | SN Ia | IC1657 (1.30068 deg) | 2026-11-27T11:27:06Z |
+| Pending | [AT2026ahvi](https://www.wis-tns.org/object/2026ahvi) | approve | 16.1 | transient_candidate | NGC4216 (0.39366 deg) | 2026-12-02T19:55:53Z |
+| Pending | [SN2026ahvu](https://www.wis-tns.org/object/2026ahvu) | approve | 17.063 | SN Ia | NGC1433 (0.01649 deg) | 2026-12-02T04:20:36Z |
+| Pending | [AT2026ahxs](https://www.wis-tns.org/object/2026ahxs) | hold | 17.4987 | transient_candidate | IC 3370 (0.07735 deg) | 2026-11-27T05:26:42Z |
