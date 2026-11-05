@@ -208,7 +208,7 @@ class TNSTransientReviewQueueTests(unittest.TestCase):
             queue_builder.render_markdown(second),
         )
 
-    def test_can_limit_review_queue_to_top_ranked_opportunities(self):
+    def test_summary_limit_does_not_starve_retained_candidates(self):
         catalog, grid = queue_builder.load_catalog(self.catalog_path)
         queue = queue_builder.build_queue(
             queue_builder.load_source_records(self.inputs),
@@ -220,10 +220,10 @@ class TNSTransientReviewQueueTests(unittest.TestCase):
 
         self.assertEqual(queue["counts"]["eligibleReviewOpportunities"], 3)
         self.assertEqual(queue["counts"]["reviewOpportunitiesLimit"], 2)
-        self.assertEqual(queue["counts"]["reviewOpportunities"], 2)
-        self.assertEqual([item["sourceId"] for item in queue["opportunities"]], ["1001", "1003"])
+        self.assertEqual(queue["counts"]["reviewOpportunities"], 3)
+        self.assertEqual([item["sourceId"] for item in queue["opportunities"]][:2], ["1001", "1003"])
         self.assertIn(
-            "3 eligible opportunities before the top-2 review cap",
+            "3 eligible opportunities retained; requested summary limit: 2 (no candidate truncation)",
             queue_builder.render_markdown(queue),
         )
 

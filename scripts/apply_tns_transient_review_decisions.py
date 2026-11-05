@@ -199,6 +199,7 @@ def sync_decisions(
     provenance: dict[str, dict[str, Any]],
     *,
     generated_at: str,
+    early_opportunities: bool = False,
 ) -> dict[str, Any]:
     decisions = existing_decisions(registry)
     if registry is None:
@@ -225,7 +226,7 @@ def sync_decisions(
                     "Migrated from the previously published curator-approved runtime feed "
                     "and rebound to the latest matching review evidence."
                 )
-            else:
+            elif previous_status not in {"hold", "rejected"}:
                 decision["status"] = "pending"
                 decision.pop("decisionComment", None)
                 decision["decidedBy"] = None
@@ -238,6 +239,15 @@ def sync_decisions(
         decision["reviewSetID"] = source["reviewSetID"]
         decision["recommendedDecision"] = candidate.get("recommendedDecision")
         decision["lastSeenAsOfDate"] = source["asOfDate"]
+        if early_opportunities and decision["status"] == "pending":
+            from transient_early_policy import evaluate
+            reasons, audit = evaluate(candidate, now=parse_datetime(generated_at))
+            candidate["promotionReasons"] = reasons
+            candidate["earlyOpportunityAudit"] = audit
+            if any(reason["automaticEligible"] for reason in reasons):
+                decision.update(status="approved", decidedBy="classified-score-policy-v1",
+                                decidedAtUTC=generated_at)
+            decision["evidenceHash"] = evidence_hash(candidate)
 
     result = {
         "schemaVersion": 1,
@@ -426,7 +436,7 @@ def render_decisions_markdown(
         f"- **Rejected:** {status_counts['rejected']}",
         f"- **Approved but expired:** {(runtime.get('counts') or {}).get('expiredApproved', 0)}",
         "",
-        "Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun this workflow. A non-pending decision requires `decidedBy` and `decidedAtUTC`. Changed evidence automatically resets the candidate to `pending`.",
+        "Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun this workflow. A non-pending decision requires `decidedBy` and `decidedAtUTC`. Changed evidence resets approvals to `pending`; owner holds and rejections remain protected.",
         "",
         "| Status | Candidate | Recommendation | Discovery mag | Classification | Near-field match | Active through |",
         "| --- | --- | --- | ---: | --- | --- | --- |",

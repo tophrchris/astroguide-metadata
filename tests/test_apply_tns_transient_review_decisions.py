@@ -47,6 +47,28 @@ def candidate(*, magnitude=17.2, expires="2026-10-10T00:00:00Z"):
 
 
 class ApplyTNSReviewDecisionsTests(unittest.TestCase):
+    def test_opt_in_score_promotion_and_owner_veto_survive_refresh(self):
+        import copy
+        import sys
+        sys.path.insert(0, str(SCRIPT_PATH.parent))
+        item = candidate()
+        item["score"] = 70
+        item["classification"]["kind"] = "supernova"
+        candidates = {"tns:1": item}
+        registry = decisions.sync_decisions(None, None, candidates, self.provenance,
+            generated_at="2026-09-20T00:00:00Z", early_opportunities=True)
+        self.assertEqual(registry["decisions"][0]["status"], "approved")
+        self.assertEqual(item["promotionReasons"][0]["code"], "classified_score")
+        for status in ("hold", "rejected"):
+            veto = copy.deepcopy(registry)
+            veto["decisions"][0].update(status=status, decidedBy="owner")
+            changed = copy.deepcopy(item)
+            changed["score"] = 99
+            refreshed = decisions.sync_decisions(veto, None, {"tns:1": changed}, self.provenance,
+                generated_at="2026-09-21T00:00:00Z", early_opportunities=True)
+            self.assertEqual(refreshed["decisions"][0]["status"], status)
+            self.assertEqual(refreshed["decisions"][0]["decidedBy"], "owner")
+
     def setUp(self):
         self.candidate = candidate()
         self.candidates = {"tns:1": self.candidate}
