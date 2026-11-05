@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-11-04T13:21:05Z",
-  "publishedAt": "2026-11-04T13:21:05Z",
+  "generatedAt": "2026-11-04T21:13:58Z",
+  "publishedAt": "2026-11-04T21:13:58Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -260,14 +260,14 @@
     },
     {
       "family": "planetTargetCloseEncounters",
-      "packageVersion": "planet-target-close-encounters-v1-20261101",
+      "packageVersion": "planet-target-close-encounters-v1-20261104-planet-pairs",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/planet-target-close-encounters/planet_target_close_encounter_metadata_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "f9e4cbe6648eb83a2fc888a2f6e8cf0b33c00f424811debe336fe4c10942bbbe"
+        "value": "e1ee60d6cf0b72b51ff6adc09502ac160bd630594aee223b646710a0171c98b4"
       },
-      "byteSize": 58821,
+      "byteSize": 59409,
       "minSupportedAppVersion": "1.4.0",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 604800,
@@ -386,19 +386,19 @@
     },
     {
       "family": "transientEventFeed",
-      "packageVersion": "transient-event-feed-v1-20261103-approved",
+      "packageVersion": "transient-event-feed-v1-20261101-approved",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/transients/transient_opportunities_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "ea0dec844c281140cbbd74d782a2434197711a8d96544857001e093eee513458"
+        "value": "4841168bddfb67d1553be0b16b5bc477e4244f7d0d098f340af307bb63c28626"
       },
       "byteSize": 4510,
       "reviewedCount": 19,
       "approvedCount": 1,
       "opportunityCount": 1,
       "urgentCount": 1,
-      "asOfDate": "2026-11-03",
+      "asOfDate": "2026-11-01",
       "minSupportedAppVersion": "1.4.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 21600,
