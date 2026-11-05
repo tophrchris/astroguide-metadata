@@ -75,11 +75,11 @@ notification delivery guarantee.
 
 ## Integration validation (2026-11-05)
 
-Final producer code commits on `codex/95-early-transients`: `7dffae2` and
-`735338c` (the latter contains the completed contract tests and validation).
+Final producer code commits on `codex/95-early-transients`: `7dffae2`,
+`735338c` and `398c763` (the last fixes independent evidence and backfill status).
 These are local commits, not a production deployment or an approval to merge PR94.
 
-Full suite: **190 tests passed** using
+Full suite: **192 tests passed** using
 `/Volumes/AstroArchive/XcodeDerivedData/planet-pair-producer-venv/bin/python -m unittest discover -s tests`.
 The earlier system-Python missing-numpy gap is resolved by the existing environment.
 New contract tests exercise the actual decision sync and runtime builder, not only
@@ -89,6 +89,12 @@ preserves its stable ID; December expiry remains discovery-anchored, not refresh
 Unclassified score100 with credible synthetic rise stays pending and emits no
 runtime entry. Invalid/nonfinite/string/bool scores cannot approve; naive/missing
 evaluation time is refused. Hold/rejected decisions survive changed evidence.
+The generated classification-only hold recommendation no longer masks independent
+rise evaluation; actual owner holds/rejections and catalog/contaminant/unknown
+warnings remain protected. Opt-in 90-day backfill retains older candidates without
+incorrectly assigning an expired-at-30-days urgency. Default production mode is
+unchanged. A final focused rerun passed 41 TNS tests and 10 early-policy tests.
+Full suite log: `/Volumes/AstroArchive/CodexWorktrees/early-transients/validation/metadata-full-final.log`.
 
 Production activation is **still disabled**: the publication CLI does not pass
 `early_opportunities=True`; only the stdout preview and explicit test/API callers
