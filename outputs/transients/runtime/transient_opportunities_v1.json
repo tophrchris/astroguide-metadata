@@ -10,14 +10,14 @@
     "lifetimeDays": 90,
     "visibilityPrediction": false
   },
-  "asOfDate": "2026-11-01",
-  "generatedAtUTC": "2026-11-05T21:26:06Z",
+  "asOfDate": "2026-11-04",
+  "generatedAtUTC": "2026-11-05T22:54:00Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "counts": {
     "reviewed": 19,
     "approved": 18,
     "excluded": 0,
-    "pending": 52,
+    "pending": 55,
     "inactiveApproved": 1,
     "expiredApproved": 1
   },
