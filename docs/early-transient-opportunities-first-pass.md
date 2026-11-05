@@ -1,6 +1,6 @@
 # Early transient opportunities: local first pass (#95 / iOS #1147)
 
-Base: current origin/main 1d857ba plus unmerged PR94 d6ef88e, fast-forwarded
+Initial base: origin/main 1d857ba plus then-unmerged PR94 d6ef88e, fast-forwarded
 only in this feature worktree. PR94 branch is unchanged. No regenerated runtime,
 stable package, manifest, owner registry, publication or notification in this pass.
 
@@ -108,3 +108,41 @@ changed by this feature relative to that dependency. No production endpoint was
 updated or asserted current. Local tests mock publication/comment operations; their
 printed receipts are test output, not actual GitHub changes. Chris authorized only
 Locke's separate final integrated local owner-only TestFlight, not metadata publishing.
+
+## Merged PR94 reconciliation (2026-11-05)
+
+This section supersedes the earlier unmerged-PR94 status. GitHub now confirms PR94
+MERGED at `e440f9b3d2240d140cc2fa843fa8fc67597f4a4a`, with final PR head
+`0bb456a3396bdce9ae7360fa17e2b64f84fcea31`, merged at 22:54:53 UTC.
+That upstream merge was performed outside this feature work; this reconciliation
+did not publish, merge a remote branch, or activate a producer policy.
+
+Local feature branch `codex/95-early-transients` reconciles the merged baseline via
+merge commit `52c7bff36fe47a5f7796c79779694f83de2bcc3e` (parents: prior feature
+handoff `ac09031` and merged `origin/main` `e440f9b`). The merge was clean, with
+no conflict resolutions or code rewrites. The merged PR94 commit is verified as
+an ancestor of this branch. Original #95 implementation commits remain preserved.
+
+Overlap audit:
+
+- Upstream since the original `d6ef88e` dependency changed only review queues,
+  decision/generated review artifacts, runtime, stable package and manifest.
+- No overlapping changes to producer scripts or tests; those remain byte-identical
+  to the feature's previous `ac09031` state after the merge.
+- `git diff --exit-code origin/main HEAD -- outputs v1 sources` succeeds: inherited
+  publication artifacts match the merged upstream baseline exactly. No feature
+  artifact regeneration, curation action or new automatic approval was performed.
+- Relative to merged main, the feature changes remain the same eight scoped code,
+  test and handoff files, not generated publication data.
+
+Post-reconciliation validation: **192 tests passed**, using the established astronomy
+venv and the complete test-discovery command above. Log:
+`/Volumes/AstroArchive/CodexWorktrees/early-transients/validation/metadata-post-pr94-merge.log`.
+
+Activation boundary rechecked: `sync_decisions` defaults to
+`early_opportunities=False`, and the publication CLI does not pass an opt-in.
+Only the local stdout preview explicitly opts in. Rapid-rise reasons remain hard
+`automaticEligible=false`; no numeric policy or notification capability was enabled.
+Production #95 publishing/activation remains unauthorized. The GitHub ancestry and
+checked-in artifact state were verified; no live HTTP endpoint or deployment state
+is claimed here. No iOS changes were needed; the prior tested consumer handoff stands.
