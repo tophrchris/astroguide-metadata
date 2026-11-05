@@ -28,6 +28,16 @@ class EarlyPolicyTests(unittest.TestCase):
         self.assertEqual([r["code"] for r in reasons], ["rapid_rise"])
         self.assertFalse(reasons[0]["automaticEligible"])
 
+    def test_classification_only_hold_does_not_hide_independent_rise_evidence(self):
+        self.candidate["recommendedDecision"] = "hold"
+        self.candidate["decisionReason"] = "Hold pending a confirmed high-interest classification."
+        self.assertEqual([reason["code"] for reason in self.evaluate()], ["rapid_rise"])
+        self.candidate["reviewDecision"] = "hold"
+        self.assertEqual(self.evaluate(), [])
+        self.candidate["reviewDecision"] = "pending"
+        self.candidate["astroGuideObject"] = {"identityWarning": "unresolved identity"}
+        self.assertEqual(self.evaluate(), [])
+
     def test_score_boundary_and_unclassified(self):
         self.candidate["tnsContext"] = {}
         self.assertEqual(self.evaluate(), [])

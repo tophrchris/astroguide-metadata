@@ -838,7 +838,7 @@ def build_queue(
             separation=separation,
             target=target,
         )
-        if age_days is not None and age_days > 30:
+        if not early_opportunities and age_days is not None and age_days > 30:
             urgency = "expired"
         elif magnitude is not None and magnitude <= 18.5 and score >= 70:
             urgency = "urgent"
@@ -989,7 +989,8 @@ def build_queue(
         "policy": {
             "nearFieldRadiusDegrees": radius_deg,
             "preferredDiscoveryAgeDays": 30,
-            "maximumDiscoveryAgeDays": max_age_days,
+            "maximumDiscoveryAgeDays": 90 if early_opportunities else max_age_days,
+            "earlyOpportunityReview": early_opportunities,
             "preferredDiscoveryMagnitude": 18.5,
             "watchDiscoveryMagnitude": watch_magnitude,
             "maxReviewOpportunities": max_opportunities,

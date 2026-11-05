@@ -37,9 +37,14 @@ def evaluate(candidate, *, now, policy=RisePolicy()):
     reasons = []
     audit = []
     kind = candidate.get("classification", {}).get("kind")
+    warning = str(candidate.get("decisionReason") or "").lower()
+    # A generated classification-only recommendation is not an owner veto.
+    protected_warning = bool(warning) and warning != "hold pending a confirmed high-interest classification."
     if (kind in {"contaminant", "unsupported"}
             or candidate.get("recommendedDecision") == "reject"
-            or candidate.get("decisionReason")):
+            or candidate.get("reviewDecision") in {"hold", "reject", "rejected"}
+            or candidate.get("astroGuideObject", {}).get("identityWarning")
+            or protected_warning):
         return [], ["protected_or_invalid"]
     classification = candidate.get("classification", {})
     type_name = str(classification.get("type") or "").strip()
