@@ -75,6 +75,10 @@ notification delivery guarantee.
 
 ## Integration validation (2026-11-05)
 
+Final producer code commits on `codex/95-early-transients`: `7dffae2` and
+`735338c` (the latter contains the completed contract tests and validation).
+These are local commits, not a production deployment or an approval to merge PR94.
+
 Full suite: **190 tests passed** using
 `/Volumes/AstroArchive/XcodeDerivedData/planet-pair-producer-venv/bin/python -m unittest discover -s tests`.
 The earlier system-Python missing-numpy gap is resolved by the existing environment.
