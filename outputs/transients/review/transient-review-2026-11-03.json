@@ -1,0 +1,634 @@
+{
+  "schemaVersion": 1,
+  "family": "transientOpportunities",
+  "reviewOnly": true,
+  "reviewSetID": "cf42c6dc47e11dbe",
+  "asOfDate": "2026-11-03",
+  "generatedAtUTC": "2026-11-03T00:00:00Z",
+  "policy": {
+    "nearFieldRadiusDegrees": 2.0,
+    "preferredDiscoveryAgeDays": 30,
+    "maximumDiscoveryAgeDays": 45,
+    "preferredDiscoveryMagnitude": 18.5,
+    "watchDiscoveryMagnitude": 19.5,
+    "maxReviewOpportunities": 5,
+    "relationshipDefault": "near_field"
+  },
+  "counts": {
+    "rawRows": 1052,
+    "duplicateRowsCollapsed": 89,
+    "uniqueObjects": 963,
+    "contaminantsRejected": 1,
+    "unsupportedClassificationsRejected": 14,
+    "plausibleCandidates": 948,
+    "outsideDiscoveryWindow": 110,
+    "fainterThanWatchBand": 623,
+    "invalidCoordinates": 0,
+    "outsideNearFieldRadius": 110,
+    "nearFieldMatches": 105,
+    "outsideReviewGate": 69,
+    "eligibleReviewOpportunities": 36,
+    "reviewOpportunitiesLimit": 5,
+    "reviewOpportunities": 5,
+    "urgent": 5,
+    "watch": 0,
+    "expired": 0,
+    "recommendedApprove": 3,
+    "recommendedHold": 2,
+    "recommendedReject": 0
+  },
+  "opportunities": [
+    {
+      "id": "tns:223998",
+      "source": "TNS",
+      "sourceId": "223998",
+      "sourceObjectName": "SN2026aguw",
+      "sourceURL": "https://www.wis-tns.org/object/2026aguw",
+      "title": "Supernova SN2026aguw near IC 4747",
+      "shortTitle": "SN2026aguw",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "hold",
+      "recommendedDecision": "hold",
+      "reviewDecision": "pending",
+      "decisionReason": "Hold until the AstroGuide catalog identity conflict is resolved.",
+      "activeWindow": {
+        "startsAtUTC": "2026-10-25T00:35:40Z",
+        "expiresAtUTC": "2026-11-24T00:35:40Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-10-25T00:35:40Z",
+        "ageDays": 9,
+        "magnitude": 17.668,
+        "band": "orange"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": 0.05,
+        "reporters": "J. Tonry, L. Denneau, H. Weiland, E. Gafton (IfA, University of Hawaii), N. Erasmus, W. Koorts (South African Astronomical Observatory), A. Jordan, V. Suc (UAI, Obstech), M. R. Alarcón, J. Licandro, P. Nichita (IAC), S. J. Smartt, K. W. Smith (Oxford/QUB), D. R. Young, M. Nicholl, J. Weston, X. Sheng, C. R. Angus, D. Magill, A. J. Smith, L. Shingles, K. Halder (QUB), A. Aamer (Arizona), P. Ramsden (Birmingham/QUB), S. Srivastav, J. H. Gillanders, H. Stevance, A. J. Cooper, F. Stoppa, J. Tweddle, L. Eastman, C. Liu (Oxford), L. Rhodes (TSI/McGill), T. Moore, A. Rest (STScI), T.-W. Chen (NCU), C. Deasy-Millar (TCD), C. Stubbs (Harvard), J. S. Sommer (LMU), B. P. Schmidt (ANU)",
+        "receivedAtUTC": "2026-10-25T11:46:15Z",
+        "createdAtUTC": "2026-10-25T11:46:17Z",
+        "discoveryReference": {
+          "bibcode": "2026TNSTR4274....1T",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR4274....1T/abstract"
+        },
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 281.8984011,
+        "decDegrees": -72.8314256
+      },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_30_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC 4747",
+        "displayName": "NGC 5555",
+        "catalogName": "IC IC 4747",
+        "objectType": "Galaxy",
+        "constellation": "Pav",
+        "magnitude": null,
+        "angularSizeArcmin": 1.1,
+        "angularSizeMajorArcmin": 1.1,
+        "angularSizeMinorArcmin": 0.37,
+        "distance": "538.83 ly",
+        "description": "NGC 5555 is a spiral galaxy located in the constellation Virgo. Its velocity with respect to the cosmic microwave background is 11200 ± 20 km/s, which corresponds to a Hubble distance of 165.20 ± 11.57 Mpc. It was originally discovered in 1886 by the American astronomer, Ormond Stone. NGC 5555 is situated close to the celestial equator and given its visual magnitude of 15.53, NGC 5555 is visible only through long exposure photography.",
+        "aliases": [
+          "2MASX J18455734-7237484",
+          "ESO 045-015",
+          "IRAS 18398-7240",
+          "PGC 062372",
+          "I4747",
+          "NGC 5555"
+        ],
+        "identityWarning": "Catalog identity conflict: canonical ID IC 4747 has the different designation NGC 5555 as its display name.",
+        "coordinates": {
+          "raDegrees": 281.4889167,
+          "decDegrees": -72.6300278
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.23524,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-11-01T19:49:54Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20261101.csv.zip",
+            "rowNumber": 18,
+            "lastModifiedUTC": "2026-11-01T19:49:54Z"
+          }
+        ],
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26myf"
+        ]
+      }
+    },
+    {
+      "id": "tns:224042",
+      "source": "TNS",
+      "sourceId": "224042",
+      "sourceObjectName": "SN2026agwm",
+      "sourceURL": "https://www.wis-tns.org/object/2026agwm",
+      "title": "Supernova SN2026agwm near IC4931",
+      "shortTitle": "SN2026agwm",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-10-27T00:01:05Z",
+        "expiresAtUTC": "2026-11-26T00:01:05Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-10-27T00:01:05Z",
+        "ageDays": 7,
+        "magnitude": 18.328,
+        "band": "orange"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": 0.02,
+        "reporters": "J. Tonry, L. Denneau, H. Weiland, E. Gafton (IfA, University of Hawaii), N. Erasmus, W. Koorts (South African Astronomical Observatory), A. Jordan, V. Suc (UAI, Obstech), M. R. Alarcón, J. Licandro, P. Nichita (IAC), S. J. Smartt, K. W. Smith (Oxford/QUB), D. R. Young, M. Nicholl, J. Weston, X. Sheng, C. R. Angus, D. Magill, A. J. Smith, L. Shingles, K. Halder (QUB), A. Aamer (Arizona), P. Ramsden (Birmingham/QUB), S. Srivastav, J. H. Gillanders, H. Stevance, A. J. Cooper, F. Stoppa, J. Tweddle, L. Eastman, C. Liu (Oxford), L. Rhodes (TSI/McGill), T. Moore, A. Rest (STScI), T.-W. Chen (NCU), C. Deasy-Millar (TCD), C. Stubbs (Harvard), J. S. Sommer (LMU), B. P. Schmidt (ANU)",
+        "receivedAtUTC": "2026-10-27T09:54:22Z",
+        "createdAtUTC": "2026-10-27T09:54:25Z",
+        "discoveryReference": {
+          "bibcode": "2026TNSTR4297....1T",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR4297....1T/abstract"
+        },
+        "classificationReferences": [
+          {
+            "bibcode": "2026TNSCR4355....1N",
+            "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR4355....1N/abstract"
+          }
+        ]
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 299.7725657,
+        "decDegrees": -38.0113271
+      },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC4931",
+        "displayName": "IC4931",
+        "catalogName": "IC IC4931",
+        "objectType": "Galaxy",
+        "constellation": "Sagittarius",
+        "magnitude": 11.9,
+        "angularSizeArcmin": 2.28,
+        "angularSizeMajorArcmin": 2.28,
+        "angularSizeMinorArcmin": 1.43,
+        "distance": "67,000 kpc",
+        "description": "most extremely faint, preceding (westward) / pretty (adv., before F. B. L, S) small in angular size, round, a star of 8th magnitude following (eastward) 20s , following (eastward) of 2",
+        "aliases": [],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 300.2083333,
+          "decDegrees": -38.5750556
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.65936,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-11-02T08:20:02Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20261029.csv.zip",
+            "rowNumber": 58,
+            "lastModifiedUTC": "2026-10-29T14:22:42Z"
+          },
+          {
+            "inputFile": "tns_public_objects_20261102.csv.zip",
+            "rowNumber": 67,
+            "lastModifiedUTC": "2026-11-02T08:20:02Z"
+          }
+        ],
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26mys"
+        ]
+      }
+    },
+    {
+      "id": "tns:224694",
+      "source": "TNS",
+      "sourceId": "224694",
+      "sourceObjectName": "AT2026ahvi",
+      "sourceURL": "https://www.wis-tns.org/object/2026ahvi",
+      "title": "Transient candidate AT2026ahvi near NGC4216",
+      "shortTitle": "AT2026ahvi",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-11-02T19:55:53Z",
+        "expiresAtUTC": "2026-12-02T19:55:53Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-11-02T19:55:53Z",
+        "ageDays": 1,
+        "magnitude": 16.1,
+        "band": "Clear"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "Koichi Itagaki",
+        "receivedAtUTC": "2026-11-02T21:56:57Z",
+        "createdAtUTC": "2026-11-02T21:56:59Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 183.460042,
+        "decDegrees": 13.424472
+      },
+      "score": 100,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_16_5",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC4216",
+        "displayName": "NGC4216",
+        "catalogName": "NGC NGC4216",
+        "objectType": "Galaxy",
+        "constellation": "Virgo",
+        "magnitude": 9.9,
+        "angularSizeArcmin": 7.82,
+        "angularSizeMajorArcmin": 7.82,
+        "angularSizeMinorArcmin": 1.84,
+        "distance": null,
+        "description": null,
+        "aliases": [
+          "PGC 39246",
+          "UGC 7284"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 183.75,
+          "decDegrees": 13.15
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.39366,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-11-02T21:56:59Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20261102.csv.zip",
+            "rowNumber": 2,
+            "lastModifiedUTC": "2026-11-02T21:56:59Z"
+          }
+        ],
+        "reportingGroup": "None",
+        "sourceGroup": "None",
+        "internalNames": []
+      }
+    },
+    {
+      "id": "tns:224706",
+      "source": "TNS",
+      "sourceId": "224706",
+      "sourceObjectName": "SN2026ahvu",
+      "sourceURL": "https://www.wis-tns.org/object/2026ahvu",
+      "title": "Supernova SN2026ahvu near NGC1433",
+      "shortTitle": "SN2026ahvu",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "approve",
+      "recommendedDecision": "approve",
+      "reviewDecision": "pending",
+      "decisionReason": null,
+      "activeWindow": {
+        "startsAtUTC": "2026-11-02T04:20:36Z",
+        "expiresAtUTC": "2026-12-02T04:20:36Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-11-02T04:20:36Z",
+        "ageDays": 1,
+        "magnitude": 17.063,
+        "band": "cyan"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": 0.003589,
+        "reporters": "J. Tonry, L. Denneau, H. Weiland, E. Gafton (IfA, University of Hawaii), N. Erasmus, W. Koorts (South African Astronomical Observatory), A. Jordan, V. Suc (UAI, Obstech), M. R. Alarcón, J. Licandro, P. Nichita (IAC), S. J. Smartt, K. W. Smith (Oxford/QUB), D. R. Young, M. Nicholl, J. Weston, X. Sheng, C. R. Angus, D. Magill, A. J. Smith, L. Shingles, K. Halder (QUB), A. Aamer (Arizona), P. Ramsden (Birmingham/QUB), S. Srivastav, J. H. Gillanders, H. Stevance, A. J. Cooper, F. Stoppa, J. Tweddle, L. Eastman, C. Liu (Oxford), L. Rhodes (TSI/McGill), T. Moore, A. Rest (STScI), T.-W. Chen (NCU), C. Deasy-Millar (TCD), C. Stubbs (Harvard), J. S. Sommer (LMU), B. P. Schmidt (ANU)",
+        "receivedAtUTC": "2026-11-03T07:16:52Z",
+        "createdAtUTC": "2026-11-03T07:16:54Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 55.4812957,
+        "decDegrees": -47.2276079
+      },
+      "score": 100,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC1433",
+        "displayName": "NGC1433",
+        "catalogName": "NGC NGC1433",
+        "objectType": "Galaxy",
+        "constellation": "Horologium",
+        "magnitude": 9.9,
+        "angularSizeArcmin": 6.19,
+        "angularSizeMajorArcmin": 6.19,
+        "angularSizeMinorArcmin": 2.96,
+        "distance": null,
+        "description": "NGC 1433 is a barred spiral galaxy with a double ring structure located in the constellation of Horologium. It was discovered by James Dunlop on 28 September 1826, and lies a distance of 46 million light-years from Earth.",
+        "aliases": [],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 55.5041667,
+          "decDegrees": -47.2220833
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.01649,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-11-03T11:19:01Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20261103.csv.zip",
+            "rowNumber": 100,
+            "lastModifiedUTC": "2026-11-03T11:19:01Z"
+          }
+        ],
+        "reportingGroup": "ATLAS",
+        "sourceGroup": "ATLAS",
+        "internalNames": [
+          "ATLAS26ncp",
+          "GOTO26ltt"
+        ]
+      }
+    },
+    {
+      "id": "tns:224756",
+      "source": "TNS",
+      "sourceId": "224756",
+      "sourceObjectName": "AT2026ahxs",
+      "sourceURL": "https://www.wis-tns.org/object/2026ahxs",
+      "title": "Transient candidate AT2026ahxs near IC 1777",
+      "shortTitle": "AT2026ahxs",
+      "eventType": "transientOpportunity",
+      "reviewOnly": true,
+      "urgency": "urgent",
+      "recommendedReviewAction": "hold",
+      "recommendedDecision": "hold",
+      "reviewDecision": "pending",
+      "decisionReason": "Hold until the AstroGuide catalog identity conflict is resolved.",
+      "activeWindow": {
+        "startsAtUTC": "2026-10-28T05:26:42Z",
+        "expiresAtUTC": "2026-11-27T05:26:42Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-10-28T05:26:42Z",
+        "ageDays": 6,
+        "magnitude": 17.4987,
+        "band": "g"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "transient_candidate",
+        "type": null,
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": null,
+        "reporters": "Nabeel Rehemtulla (CIERA, NU), Wynn Jacobson-Galán (Caltech), Theophile du Laz (Caltech) on behalf of ZTF",
+        "receivedAtUTC": "2026-11-03T10:44:18Z",
+        "createdAtUTC": "2026-11-03T10:44:21Z",
+        "discoveryReference": null,
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 31.5459,
+        "decDegrees": 15.1326871
+      },
+      "score": 100,
+      "reasonTags": [
+        "unclassified_transient_candidate",
+        "discovered_within_7_days",
+        "discovery_magnitude_le_18_5",
+        "separation_le_0_25_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "IC 1777",
+        "displayName": "IC 3370",
+        "catalogName": "IC IC 1777",
+        "objectType": "Galaxy",
+        "constellation": "Ari",
+        "magnitude": null,
+        "angularSizeArcmin": 0.91,
+        "angularSizeMajorArcmin": 0.91,
+        "angularSizeMinorArcmin": 0.91,
+        "distance": "156 ly",
+        "description": "IC 3370 is an elliptical galaxy located in the constellation of Centaurus. It is located 156 million light-years from Earth. It was discovered by American astronomer Lewis Swift on 30 January 1898. According to the SIMBAD database, IC 3370 is said to be a LINER galaxy but also a Seyfert type II galaxy. The luminosity of the galaxy is estimated to have a B magnitude of -22.3, similar to other elliptical galaxies.",
+        "aliases": [
+          "2MASX J02060874+1512343",
+          "MCG +02-06-029",
+          "PGC 008021",
+          "I1777",
+          "IC 3370"
+        ],
+        "identityWarning": "Catalog identity conflict: canonical ID IC 1777 has the different designation IC 3370 as its display name.",
+        "coordinates": {
+          "raDegrees": 31.53625,
+          "decDegrees": 15.2094722
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.07735,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-11-03T10:44:21Z",
+      "provenance": {
+        "inputRecords": [
+          {
+            "inputFile": "tns_public_objects_20261103.csv.zip",
+            "rowNumber": 103,
+            "lastModifiedUTC": "2026-11-03T10:44:21Z"
+          }
+        ],
+        "reportingGroup": "ZTF",
+        "sourceGroup": "ZTF",
+        "internalNames": [
+          "ZTF26acdhujr",
+          "ATLAS26nea"
+        ]
+      }
+    }
+  ]
+}
