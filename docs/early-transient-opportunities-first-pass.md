@@ -72,3 +72,29 @@ notification delivery guarantee.
   reported-host coordinates/separation are unknown, not inferred from catalog context.
 - Producer changes are opt-in for automatic approval; production activation and
   package regeneration require a separate review. No Actions/remote operations here.
+
+## Integration validation (2026-11-05)
+
+Full suite: **190 tests passed** using
+`/Volumes/AstroArchive/XcodeDerivedData/planet-pair-producer-venv/bin/python -m unittest discover -s tests`.
+The earlier system-Python missing-numpy gap is resolved by the existing environment.
+New contract tests exercise the actual decision sync and runtime builder, not only
+the isolated evaluator: score70 at magnitude21 approves only with explicit local
+opt-in; emitted score reason survives the runtime conversion; fresh reevaluation
+preserves its stable ID; December expiry remains discovery-anchored, not refreshed.
+Unclassified score100 with credible synthetic rise stays pending and emits no
+runtime entry. Invalid/nonfinite/string/bool scores cannot approve; naive/missing
+evaluation time is refused. Hold/rejected decisions survive changed evidence.
+
+Production activation is **still disabled**: the publication CLI does not pass
+`early_opportunities=True`; only the stdout preview and explicit test/API callers
+opt in. There is no switch that enables automatic rise decisions; every rapid-rise
+reason remains `automaticEligible=false`, irrespective of configured numeric rates.
+No source-acquisition/notification functionality is implied by this validation.
+
+PR94 was rechecked OPEN/unmerged at `d6ef88e7e2f1cb478060e7ea37bc18c5d377e052`.
+No checked-in decision registry, runtime source, stable package or manifest was
+changed by this feature relative to that dependency. No production endpoint was
+updated or asserted current. Local tests mock publication/comment operations; their
+printed receipts are test output, not actual GitHub changes. Chris authorized only
+Locke's separate final integrated local owner-only TestFlight, not metadata publishing.

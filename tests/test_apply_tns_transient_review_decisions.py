@@ -47,6 +47,55 @@ def candidate(*, magnitude=17.2, expires="2026-10-10T00:00:00Z"):
 
 
 class ApplyTNSReviewDecisionsTests(unittest.TestCase):
+    def test_score_activation_is_explicit_and_local_runtime_keeps_reasons(self):
+        import copy
+        import sys
+        sys.path.insert(0, str(SCRIPT_PATH.parent))
+        item = candidate(magnitude=21.0)
+        item["score"] = 70
+        disabled = decisions.sync_decisions(None, None, {"tns:1": copy.deepcopy(item)}, self.provenance,
+            generated_at="2026-09-20T00:00:00Z")
+        self.assertEqual(disabled["decisions"][0]["status"], "pending")
+        candidates = {"tns:1": item}
+        enabled = decisions.sync_decisions(None, None, candidates, self.provenance,
+            generated_at="2026-09-20T00:00:00Z", early_opportunities=True)
+        runtime = decisions.build_runtime(None, enabled, candidates, as_of_date="2026-09-20",
+            generated_at="2026-09-20T00:00:00Z")
+        emitted = runtime["opportunities"][0]
+        self.assertFalse(emitted["reviewOnly"])
+        self.assertEqual(emitted["promotionReasons"][0]["confidence"], "score_eligibility")
+        self.assertEqual(emitted["activeWindow"]["expiresAtUTC"], "2026-12-09T00:00:00Z")
+        trigger = emitted["promotionReasons"][0]["stableTriggerID"]
+        refreshed_candidates = {"tns:1": candidate(magnitude=21.0)}
+        refreshed_candidates["tns:1"]["score"] = 70
+        refreshed = decisions.sync_decisions(enabled, runtime, refreshed_candidates, self.provenance,
+            generated_at="2026-09-21T00:00:00Z", early_opportunities=True)
+        self.assertEqual(refreshed["decisions"][0]["status"], "approved")
+        self.assertEqual(refreshed_candidates["tns:1"]["promotionReasons"][0]["stableTriggerID"], trigger)
+        expired = decisions.build_runtime(None, refreshed, refreshed_candidates, as_of_date="2026-12-10",
+            generated_at="2026-12-10T00:00:00Z")
+        self.assertEqual(expired["opportunities"], [])
+
+    def test_provisional_rise_is_never_auto_approved_even_with_high_score(self):
+        import sys
+        sys.path.insert(0, str(SCRIPT_PATH.parent))
+        item = candidate()
+        item.update(score=100, classification={"kind": "transient_candidate", "type": None})
+        item["tnsContext"] = {"publicPhotometry": [
+            dict(observationDateUTC=stamp, value=value, error=0.05, band="r", units="mag",
+                 system="AB", correction="uncorrected", source="synthetic contract test")
+            for stamp, value in [("2026-09-18T00:00:00Z", 21), ("2026-09-19T00:00:00Z", 20)]
+        ]}
+        candidates = {"tns:1": item}
+        registry = decisions.sync_decisions(None, None, candidates, self.provenance,
+            generated_at="2026-09-20T00:00:00Z", early_opportunities=True)
+        self.assertEqual(registry["decisions"][0]["status"], "pending")
+        self.assertEqual(item["promotionReasons"][0]["code"], "rapid_rise")
+        self.assertFalse(item["promotionReasons"][0]["automaticEligible"])
+        runtime = decisions.build_runtime(None, registry, candidates, as_of_date="2026-09-20",
+            generated_at="2026-09-20T00:00:00Z")
+        self.assertEqual(runtime["opportunities"], [])
+
     def test_opt_in_score_promotion_and_owner_veto_survive_refresh(self):
         import copy
         import sys

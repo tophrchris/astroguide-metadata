@@ -32,6 +32,8 @@ def date(value):
 
 def evaluate(candidate, *, now, policy=RisePolicy()):
     """Distinguish score eligibility from a measured crossing; fail closed."""
+    if not isinstance(now, dt.datetime) or now.tzinfo is None:
+        raise ValueError("Evaluation requires an explicit timezone-aware reference time")
     reasons = []
     audit = []
     kind = candidate.get("classification", {}).get("kind")
@@ -42,7 +44,11 @@ def evaluate(candidate, *, now, policy=RisePolicy()):
     classification = candidate.get("classification", {})
     type_name = str(classification.get("type") or "").strip()
     classified = bool(type_name) and not any(token in type_name.lower() for token in ("?", "candidate", "unclassified"))
-    if classified and kind in {"supernova", "superluminous_supernova", "nova", "tidal_disruption_event"} and candidate.get("score", 0) >= 70:
+    score = candidate.get("score")
+    valid_score = isinstance(score, (int, float)) and not isinstance(score, bool) and math.isfinite(score) and 0 <= score <= 100
+    if not valid_score:
+        audit.append("missing_or_invalid_score")
+    if classified and kind in {"supernova", "superluminous_supernova", "nova", "tidal_disruption_event"} and valid_score and score >= 70:
         reasons.append({"code": "classified_score", "score": candidate["score"],
                         "classification": classification, "sourceURL": candidate.get("sourceURL"),
                         "triggeredAtUTC": candidate.get("lastModifiedUTC") or candidate.get("discovery", {}).get("dateUTC"),

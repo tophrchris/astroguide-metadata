@@ -68,6 +68,15 @@ class EarlyPolicyTests(unittest.TestCase):
             self.candidate["classification"] = {"kind": "supernova", "type": type_name}
             self.assertEqual(self.evaluate(), [])
 
+    def test_invalid_scores_do_not_approve_and_time_must_be_explicit(self):
+        self.candidate["tnsContext"] = {}
+        self.candidate["classification"] = {"kind": "supernova", "type": "SN Ia"}
+        for score in ("70", True, float("nan"), float("inf"), -1, 101, None):
+            self.candidate["score"] = score
+            self.assertEqual(self.evaluate(), [])
+        with self.assertRaises(ValueError):
+            evaluate(self.candidate, now=dt.datetime(2026, 11, 5))
+
     def test_zero_interval_future_and_negative_errors_fail(self):
         points = self.candidate["tnsContext"]["publicPhotometry"]
         points[1]["observationDateUTC"] = points[0]["observationDateUTC"]
