@@ -18,6 +18,55 @@ or stale-evidence entries are not published.
 
 ## Source contract
 
+### Temporary November 1 beta listing policy
+
+Chris authorized a temporary 90-day curation lifetime measured from
+`discovery.dateUTC` (UTC elapsed days), not approval, generation, retrieval, or
+last-modified time. The interval includes its start and excludes its end; a
+later explicit source-window start is still respected. Missing/invalid anchors
+fail closed. Runtime generation time evaluates current eligibility while
+`asOfDate` continues to describe the source snapshot, not new scientific data.
+
+The producer records `curationPolicy` and preserves the earlier heuristic
+`activeWindow` as `previousCurationWindow`. Neither window predicts scientific
+visibility, current brightness, detection, or an exposure requirement. Discovery
+measurements, classification, source urgency (including `watch`), and provenance
+are unchanged. A curator-approved `watch` record remains a watch assessment,
+not a new urgent scientific claim.
+
+This policy does not approve candidates. Only existing `approved` decisions
+with matching evidence and a named curator can be materialized. Pending, held,
+rejected, and changed-evidence records remain excluded; a stale runtime record
+cannot bypass a mismatch with newer evidence. Dated review queues are not
+rewritten or shipped as an app fallback.
+
+The November 1 local rehearsal from main `d3b0ef9` contains 22 approved records
+and changes none of the 51 registry decisions. It restores `tns:219007`
+(AT2026aabo, M31; through November 27 09:28:57 UTC), `tns:219373`
+(AT2026aaom, M31; through December 3 03:37:43 UTC), and `tns:219842`
+(AT2026abeq, NGC224; through December 9 22:01:18 UTC). NGC224 is the M31 catalog
+alias, not a different host claim. `tns:219217` (aaiv) and `tns:221314` (adgl)
+remain pending in main and PR86 and are not restored. A previous approval is
+not authority to undo the current evidence-reset state.
+
+Main-history audit: aaiv's migrated approval at `012c2dcc` referenced
+`ea4616c69e56fbc0`; `7058d8e6` reset it to pending on September 27 with
+`a38a512fce937c0c`, followed by the current `37307faa18101717` at `4d26174a`.
+adgl was approved at `4f99aacd` for `dcd98e4c249db33f`, then reset to pending
+by `a542e074` on October 3 for `09fb2b4cd07f0677`; subsequent evidence updates
+leave it pending at `5c2fffa55fa5ad17`. The temporal policy does not change the
+evidence hash algorithm, dated review evidence, or these decisions.
+
+Publication blocker: these records are absent from the hosted October 13
+five-record package. Extending the app cache cannot recreate omitted records.
+The prepared producer/runtime/manifest change needs coordinated metadata
+review, merge, and ordinary publication before devices can fetch this set.
+No push, PR, merge, or publication is authorized by this local rehearsal.
+
+Follow-up before beta acceptance/next policy review: Chris must decide whether
+to retain, replace, or end this temporary policy. Change the matching app and
+producer policies together; do not silently roll the discovery clock forward.
+
 The builder consumes one or more TNS staged daily `.csv` or `.csv.zip` deltas.
 These are change deltas, not new-object feeds. Rows are grouped by `objid`; the
 record with the newest `lastmodified` timestamp wins, while every contributing
