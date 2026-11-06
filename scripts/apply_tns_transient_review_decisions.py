@@ -49,7 +49,10 @@ def safety_exclusions(candidate: dict[str, Any], reference: dt.datetime) -> list
         r"\b(artifact|bogus|asteroid|minor planet|variable star|varstar|cataclysmic variable|cv|agn|qso|quasar)\b", text, re.I
     ):
         reasons.append("contaminant_or_unsupported")
-    if (candidate.get("recommendedDecision") in {"hold", "reject"}
+    generated_watch_hold = (candidate.get("recommendedDecision") == "hold"
+                            and candidate.get("urgency") == "watch" and not candidate.get("decisionReason"))
+    if (candidate.get("recommendedDecision") == "reject"
+            or (candidate.get("recommendedDecision") == "hold" and not generated_watch_hold)
             or candidate.get("reviewDecision") in {"hold", "reject", "rejected"}
             or candidate.get("decisionReason")
             or (candidate.get("astroGuideObject") or {}).get("identityWarning")):

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "transientEventFeed",
-  "packageVersion": "transient-event-feed-v1-20261106T222205Z-classified-score-v1",
+  "packageVersion": "transient-event-feed-v1-20261106T223559Z-classified-score-v1",
   "family": "transientOpportunities",
   "reviewOnly": false,
   "curationPolicy": {
@@ -12,7 +12,7 @@
     "visibilityPrediction": false
   },
   "asOfDate": "2026-11-05",
-  "generatedAtUTC": "2026-11-06T22:22:05Z",
+  "generatedAtUTC": "2026-11-06T22:35:59Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "automaticApprovalPolicy": {
     "id": "tns-classified-score-v1",

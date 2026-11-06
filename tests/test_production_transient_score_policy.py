@@ -77,7 +77,8 @@ class ProductionScorePolicyTests(unittest.TestCase):
                      dict(sourceURL="https://example.com/forged"),
                      dict(sourceId="mismatched"),
                      dict(tnsContext=dict(remarks=["Possible variable star contaminant"])),
-                     dict(tnsContext=dict(currentType="SN II")), dict(recommendedDecision="hold")]
+                     dict(tnsContext=dict(currentType="SN II")),
+                     dict(recommendedDecision="hold", decisionReason="Explicit detail hold")]
         for mutation in mutations:
             with self.subTest(mutation=mutation):
                 item = candidate(); item.update(mutation)
@@ -148,6 +149,18 @@ class ProductionScorePolicyTests(unittest.TestCase):
         self.assertIn("--early-opportunities", workflow)
         self.assertIn("inputs.max_candidates || '0'", workflow)
         self.assertNotIn("at most five candidates", workflow)
+
+
+    def test_generated_watch_is_not_an_owner_or_explicit_source_hold(self):
+        import build_tns_transient_review_queue as queue
+        item = candidate()
+        item["recommendedDecision"] = queue.recommended_decision("watch")
+        self.assertEqual(item["recommendedDecision"], "hold")
+        self.assertEqual(self.sync(item)["decisions"][0]["status"], "approved")
+        queue.merge_tns_detail(item, {"recommendedDecision": "hold"}, retrieved_at=NOW,
+                               source_kind="synthetic_explicit_hold")
+        self.assertEqual(item["decisionReason"], "Hold explicitly requested by TNS detail review.")
+        self.assertEqual(self.sync(item)["decisions"][0]["status"], "pending")
 
 
 if __name__ == "__main__":
