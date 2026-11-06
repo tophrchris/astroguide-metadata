@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "family": "tnsTransientReviewDecisions",
-  "generatedAtUTC": "2026-11-05T22:54:00Z",
+  "generatedAtUTC": "2026-11-06T22:22:05Z",
   "instructions": "Set status to approved, hold, or rejected and record decidedBy/decidedAtUTC. Approved entries with current evidence are materialized into the runtime feed; merging the review PR publishes that generated feed through stable metadata.",
   "decisions": [
     {
@@ -14,7 +14,18 @@
       "sourceReviewQueue": "transient-review-2026-09-09.json",
       "reviewSetID": null,
       "recommendedDecision": null,
-      "lastSeenAsOfDate": "2026-09-09"
+      "lastSeenAsOfDate": "2026-09-09",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "invalid_or_inactive_discovery_window",
+          "score_below_70_or_invalid"
+        ],
+        "inputEvidenceHash": "6ada640bd123e393",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:216003",
@@ -26,31 +37,104 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "invalid_or_inactive_discovery_window",
+          "score_below_70_or_invalid"
+        ],
+        "inputEvidenceHash": "f4a288ca3d8fd093",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:218068",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": null,
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "d683b3329a1044d4",
       "sourceReviewQueue": "transient-review-2026-09-09.json",
       "reviewSetID": null,
       "recommendedDecision": null,
-      "lastSeenAsOfDate": "2026-09-09"
+      "lastSeenAsOfDate": "2026-09-09",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "d683b3329a1044d4",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "3aa0de0b431c5c2585dd5498814f74079c9bac425ad4d7b2ad94ecb9ad8479ed",
+          "policyID": "tns-classified-score-v1",
+          "score": 90,
+          "classification": {
+            "kind": "tidal_disruption_event",
+            "type": "TDE-featureless",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-09-03T21:14:14Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026yxi",
+          "sourceReviewQueue": "transient-review-2026-09-09.json",
+          "reviewSetID": null,
+          "evidenceHash": "d683b3329a1044d4",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:218217",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": null,
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "3334e7a949bdd4c5",
       "sourceReviewQueue": "transient-review-2026-09-10.json",
       "reviewSetID": null,
       "recommendedDecision": null,
-      "lastSeenAsOfDate": "2026-09-10"
+      "lastSeenAsOfDate": "2026-09-10",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "3334e7a949bdd4c5",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "76b971330a0aeac22e2149842a9c7297687b0a0cb3056468245f39c7987a3e96",
+          "policyID": "tns-classified-score-v1",
+          "score": 87,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN II",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-09-04T04:25:24Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026zbq",
+          "sourceReviewQueue": "transient-review-2026-09-10.json",
+          "reviewSetID": null,
+          "evidenceHash": "3334e7a949bdd4c5",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:218394",
@@ -62,7 +146,15 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "bc90fcb60f98db52",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:218755",
@@ -74,7 +166,15 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "3cd5668371657580",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:218791",
@@ -86,7 +186,15 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "e05443afd9439d3d",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:218943",
@@ -98,7 +206,15 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "c3c1613f9b42bc64",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219007",
@@ -110,7 +226,15 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "077df478b2852bc4",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219030",
@@ -122,55 +246,187 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "913d9b298681482a",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219039",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": null,
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "1291bafc89a0a20f",
       "sourceReviewQueue": "transient-review-2026-09-10.json",
       "reviewSetID": null,
       "recommendedDecision": null,
-      "lastSeenAsOfDate": "2026-09-10"
+      "lastSeenAsOfDate": "2026-09-10",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "1291bafc89a0a20f",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "f3948f7704de485a24f7d48e0c23f598a93cbce7bee326ce371b5d55e292ca97",
+          "policyID": "tns-classified-score-v1",
+          "score": 87,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-09-05T04:13:24Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026aacp",
+          "sourceReviewQueue": "transient-review-2026-09-10.json",
+          "reviewSetID": null,
+          "evidenceHash": "1291bafc89a0a20f",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:219074",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": null,
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "1a41abed1efdb075",
       "sourceReviewQueue": "transient-review-2026-09-10.json",
       "reviewSetID": null,
       "recommendedDecision": null,
-      "lastSeenAsOfDate": "2026-09-10"
+      "lastSeenAsOfDate": "2026-09-10",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "1a41abed1efdb075",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "204a46ab1fbdd219aaf425409f7dbedb8e8a2570bb438e9a8b409566f272c8e5",
+          "policyID": "tns-classified-score-v1",
+          "score": 77,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN IIP",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-09-08T11:57:48Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026aadx",
+          "sourceReviewQueue": "transient-review-2026-09-10.json",
+          "reviewSetID": null,
+          "evidenceHash": "1a41abed1efdb075",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:219118",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": null,
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "cc8be27b40e738ba",
       "sourceReviewQueue": "transient-review-2026-09-10.json",
       "reviewSetID": null,
       "recommendedDecision": null,
-      "lastSeenAsOfDate": "2026-09-10"
+      "lastSeenAsOfDate": "2026-09-10",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "cc8be27b40e738ba",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "3b7b572b98d6b3f4ff7d1da9e67f3c80ca8929f506e337c663a370eb49186f15",
+          "policyID": "tns-classified-score-v1",
+          "score": 87,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-09-06T12:39:05Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026aafh",
+          "sourceReviewQueue": "transient-review-2026-09-10.json",
+          "reviewSetID": null,
+          "evidenceHash": "cc8be27b40e738ba",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:219217",
-      "status": "pending",
+      "status": "approved",
       "evidenceHash": "37307faa18101717",
       "sourceReviewQueue": "transient-review-2026-09-28.json",
       "reviewSetID": "d3d9474c849f9b18",
       "recommendedDecision": "approve",
       "lastSeenAsOfDate": "2026-09-28",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required."
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "37307faa18101717",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "ab46b1b07968dbae9c690c7b3fcc339fcd0aa1c96ac2bf515b0c66757d41ae29",
+          "policyID": "tns-classified-score-v1",
+          "score": 100,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-09-22T06:24:06Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026aaiv",
+          "sourceReviewQueue": "transient-review-2026-09-28.json",
+          "reviewSetID": "d3d9474c849f9b18",
+          "evidenceHash": "37307faa18101717",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:219225",
@@ -182,7 +438,17 @@
       "sourceReviewQueue": "transient-review-2026-09-09.json",
       "reviewSetID": null,
       "recommendedDecision": null,
-      "lastSeenAsOfDate": "2026-09-09"
+      "lastSeenAsOfDate": "2026-09-09",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "0bcbda419349d0ba",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219373",
@@ -194,7 +460,15 @@
       "lastSeenAsOfDate": "2026-09-23",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "eb0f35b18126dbea",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219464",
@@ -206,7 +480,17 @@
       "lastSeenAsOfDate": "2026-09-16",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning"
+        ],
+        "inputEvidenceHash": "baf8f6e9fd16ac17",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219467",
@@ -218,7 +502,15 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "6f089a5e6dc9acb0",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219597",
@@ -230,7 +522,17 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "0e5b77c66db975e9",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219602",
@@ -242,7 +544,17 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "18970d82d7b93671",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219681",
@@ -254,7 +566,17 @@
       "sourceReviewQueue": "transient-review-2026-09-10.json",
       "reviewSetID": null,
       "recommendedDecision": null,
-      "lastSeenAsOfDate": "2026-09-10"
+      "lastSeenAsOfDate": "2026-09-10",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "ce5a41dc5800d904",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219685",
@@ -266,7 +588,17 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "081c0407a70e8c84",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219695",
@@ -278,7 +610,17 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "d5933941f601fd71",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219696",
@@ -290,7 +632,17 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "e660d6a00d8f4c40",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219710",
@@ -302,19 +654,60 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "646bc3c285f85974",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219766",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": null,
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "eb42567a3167a5bd",
       "sourceReviewQueue": "transient-review-2026-09-17.json",
       "reviewSetID": "087e69360b03ad75",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-09-17"
+      "lastSeenAsOfDate": "2026-09-17",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "eb42567a3167a5bd",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "2838dcbd9fd98e563bf6e54772ca6591e0a748d27455e82a2e29c46439ebdb5c",
+          "policyID": "tns-classified-score-v1",
+          "score": 89,
+          "classification": {
+            "kind": "nova",
+            "type": "Nova",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-09-12T12:24:06Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026abbx",
+          "sourceReviewQueue": "transient-review-2026-09-17.json",
+          "reviewSetID": "087e69360b03ad75",
+          "evidenceHash": "eb42567a3167a5bd",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:219804",
@@ -326,7 +719,17 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "c4f41abd79149195",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:219842",
@@ -338,7 +741,17 @@
       "lastSeenAsOfDate": "2026-09-10",
       "decidedBy": "Chris",
       "decidedAtUTC": "2026-09-11T15:24:13Z",
-      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence."
+      "note": "Migrated from the previously published curator-approved runtime feed and rebound to the latest matching review evidence.",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "a6a262fe750fc173",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:220034",
@@ -350,7 +763,17 @@
       "sourceReviewQueue": "transient-review-2026-09-19.json",
       "reviewSetID": "fe2f8ead2cfad106",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-09-19"
+      "lastSeenAsOfDate": "2026-09-19",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "cbadfc69a901ad64",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:220258",
@@ -362,19 +785,60 @@
       "sourceReviewQueue": "transient-review-2026-09-17.json",
       "reviewSetID": "087e69360b03ad75",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-09-17"
+      "lastSeenAsOfDate": "2026-09-17",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "8937c6b85163b9b8",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:220325",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": null,
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "c3f904e5e2151a31",
       "sourceReviewQueue": "transient-review-2026-09-21.json",
       "reviewSetID": "8bff8a97fd27d76d",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-09-21"
+      "lastSeenAsOfDate": "2026-09-21",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "c3f904e5e2151a31",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "d5f24c100c368f22447c6a9d7f375a009a9d825ef7b8f535efdf9fbfa8704bb2",
+          "policyID": "tns-classified-score-v1",
+          "score": 90,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-09-19T12:38:42Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026abwr",
+          "sourceReviewQueue": "transient-review-2026-09-21.json",
+          "reviewSetID": "8bff8a97fd27d76d",
+          "evidenceHash": "c3f904e5e2151a31",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:220385",
@@ -386,7 +850,17 @@
       "sourceReviewQueue": "transient-review-2026-09-21.json",
       "reviewSetID": "8bff8a97fd27d76d",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-09-21"
+      "lastSeenAsOfDate": "2026-09-21",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "be2923c3a6eb2f0f",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:220390",
@@ -398,7 +872,17 @@
       "sourceReviewQueue": "transient-review-2026-09-23.json",
       "reviewSetID": "29286ea0d4772a2a",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-09-23"
+      "lastSeenAsOfDate": "2026-09-23",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "7a70e0f4c722b9e8",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:220564",
@@ -410,19 +894,60 @@
       "sourceReviewQueue": "transient-review-2026-09-21.json",
       "reviewSetID": "8bff8a97fd27d76d",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-09-21"
+      "lastSeenAsOfDate": "2026-09-21",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "60dbeb4131f1a18b",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:220685",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "4700a07e83ef9057",
       "sourceReviewQueue": "transient-review-2026-10-04.json",
       "reviewSetID": "c3e0254f62dfdada",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-04"
+      "lastSeenAsOfDate": "2026-10-04",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "4700a07e83ef9057",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "d33d629c086a8bbac0a9ea3fdba2b27121d6b758af5071f7564af6cf0d1c2d84",
+          "policyID": "tns-classified-score-v1",
+          "score": 97,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN II",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-09-28T08:31:39Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026acjs",
+          "sourceReviewQueue": "transient-review-2026-10-04.json",
+          "reviewSetID": "c3e0254f62dfdada",
+          "evidenceHash": "4700a07e83ef9057",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:220978",
@@ -434,7 +959,17 @@
       "sourceReviewQueue": "transient-review-2026-09-29.json",
       "reviewSetID": "18dbec095ac9d283",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-09-29"
+      "lastSeenAsOfDate": "2026-09-29",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "cd8b1c4f737fa9b8",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:221026",
@@ -446,7 +981,17 @@
       "sourceReviewQueue": "transient-review-2026-09-30.json",
       "reviewSetID": "7403569da0e3a81f",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-09-30"
+      "lastSeenAsOfDate": "2026-09-30",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "17ca7de7e4805d11",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:221030",
@@ -458,7 +1003,17 @@
       "sourceReviewQueue": "transient-review-2026-10-01.json",
       "reviewSetID": "43eadfbfc3ccea54",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-01"
+      "lastSeenAsOfDate": "2026-10-01",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "1fc676eec3c2e946",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:221079",
@@ -470,7 +1025,17 @@
       "sourceReviewQueue": "transient-review-2026-10-18.json",
       "reviewSetID": "90f98d1982380740",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-10-18"
+      "lastSeenAsOfDate": "2026-10-18",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning"
+        ],
+        "inputEvidenceHash": "608074450fd14e7b",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:221314",
@@ -482,7 +1047,17 @@
       "sourceReviewQueue": "transient-review-2026-10-11.json",
       "reviewSetID": "772e6b89bfa61fad",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-11"
+      "lastSeenAsOfDate": "2026-10-11",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "5c2fffa55fa5ad17",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:221316",
@@ -494,31 +1069,104 @@
       "sourceReviewQueue": "transient-review-2026-10-03.json",
       "reviewSetID": "14ca545f9408cd5a",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-10-03"
+      "lastSeenAsOfDate": "2026-10-03",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning",
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "fe8532bf7920af4a",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:221325",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "94352f190fa852c7",
       "sourceReviewQueue": "transient-review-2026-10-10.json",
       "reviewSetID": "21d7bd837e90ca93",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-10"
+      "lastSeenAsOfDate": "2026-10-10",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "94352f190fa852c7",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "30f43a80c7c6b887aa5a13b615a3697cdbef237554be48737e0b4f68ee3937d4",
+          "policyID": "tns-classified-score-v1",
+          "score": 87,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-10-05T06:34:00Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026adgw",
+          "sourceReviewQueue": "transient-review-2026-10-10.json",
+          "reviewSetID": "21d7bd837e90ca93",
+          "evidenceHash": "94352f190fa852c7",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:221339",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "c4f2f45a54101c70",
       "sourceReviewQueue": "transient-review-2026-10-07.json",
       "reviewSetID": "b6c54d5815e65d90",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-07"
+      "lastSeenAsOfDate": "2026-10-07",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "c4f2f45a54101c70",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "31c0897f8ebe66c1c2c9901d1640c3f303ce6d5bcb68f46136d5831bd32555d4",
+          "policyID": "tns-classified-score-v1",
+          "score": 98,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-10-01T09:33:00Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026adhk",
+          "sourceReviewQueue": "transient-review-2026-10-07.json",
+          "reviewSetID": "b6c54d5815e65d90",
+          "evidenceHash": "c4f2f45a54101c70",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:221468",
@@ -530,7 +1178,17 @@
       "sourceReviewQueue": "transient-review-2026-10-09.json",
       "reviewSetID": "6a8e8e99c2d6829f",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-09"
+      "lastSeenAsOfDate": "2026-10-09",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "8ed55846c2ed1cae",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:221797",
@@ -542,7 +1200,17 @@
       "sourceReviewQueue": "transient-review-2026-10-24.json",
       "reviewSetID": "19efaed24ec60006",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-10-24"
+      "lastSeenAsOfDate": "2026-10-24",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning"
+        ],
+        "inputEvidenceHash": "a537539cf74333ca",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:222102",
@@ -554,43 +1222,146 @@
       "sourceReviewQueue": "transient-review-2026-10-07.json",
       "reviewSetID": "b6c54d5815e65d90",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-07"
+      "lastSeenAsOfDate": "2026-10-07",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "e2a33d0204a3afb8",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:222140",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "812994887416ce4e",
       "sourceReviewQueue": "transient-review-2026-10-24.json",
       "reviewSetID": "19efaed24ec60006",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-24"
+      "lastSeenAsOfDate": "2026-10-24",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "812994887416ce4e",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "f42050c347da2dc85cd060f3a14dde262d5040dfd66b217f1e94d26d8b61366e",
+          "policyID": "tns-classified-score-v1",
+          "score": 90,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-10-19T17:13:46Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026aela",
+          "sourceReviewQueue": "transient-review-2026-10-24.json",
+          "reviewSetID": "19efaed24ec60006",
+          "evidenceHash": "812994887416ce4e",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:222317",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "166ef841ffeda337",
       "sourceReviewQueue": "transient-review-2026-10-27.json",
       "reviewSetID": "e7df9c75a57fd3a2",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-27"
+      "lastSeenAsOfDate": "2026-10-27",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "166ef841ffeda337",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "d1e3c6922c3f885ab06594c7d8fd7f382301243c335a9c82095237f996f149df",
+          "policyID": "tns-classified-score-v1",
+          "score": 97,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN II",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-10-27T00:56:32Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026aeru",
+          "sourceReviewQueue": "transient-review-2026-10-27.json",
+          "reviewSetID": "e7df9c75a57fd3a2",
+          "evidenceHash": "166ef841ffeda337",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:222332",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": null,
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "1038711dfff98d04",
       "sourceReviewQueue": "transient-review-2026-10-18.json",
       "reviewSetID": "90f98d1982380740",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-18"
+      "lastSeenAsOfDate": "2026-10-18",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "1038711dfff98d04",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "175b9523a2b8b160e00eda28dcb1ea7363b31ec1005b13f0fbbbff4a950db4c5",
+          "policyID": "tns-classified-score-v1",
+          "score": 72,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-10-16T12:28:44Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026aesj",
+          "sourceReviewQueue": "transient-review-2026-10-18.json",
+          "reviewSetID": "90f98d1982380740",
+          "evidenceHash": "1038711dfff98d04",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:222344",
@@ -602,7 +1373,18 @@
       "sourceReviewQueue": "transient-review-2026-10-08.json",
       "reviewSetID": "7fb4ffae0005e903",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-10-08"
+      "lastSeenAsOfDate": "2026-10-08",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning",
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "bdbb4a8cdb716f8b",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:222513",
@@ -614,7 +1396,17 @@
       "sourceReviewQueue": "transient-review-2026-10-13.json",
       "reviewSetID": "9433c545d6a7fc68",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-13"
+      "lastSeenAsOfDate": "2026-10-13",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "80099b53bd0161fe",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:222551",
@@ -626,19 +1418,60 @@
       "sourceReviewQueue": "transient-review-2026-10-15.json",
       "reviewSetID": "ebb81c5d26950036",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-15"
+      "lastSeenAsOfDate": "2026-10-15",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "b418ef65ff8b44f5",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:222556",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "6b6c862efbf73850",
       "sourceReviewQueue": "transient-review-2026-10-22.json",
       "reviewSetID": "c3c863b1a015a4a1",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-22"
+      "lastSeenAsOfDate": "2026-10-22",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "6b6c862efbf73850",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "36161427f8ebd1095bca6a6830c13311522cb77a6dd364a59e7f63a20aaf4099",
+          "policyID": "tns-classified-score-v1",
+          "score": 90,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-10-19T00:59:12Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026aexm",
+          "sourceReviewQueue": "transient-review-2026-10-22.json",
+          "reviewSetID": "c3c863b1a015a4a1",
+          "evidenceHash": "6b6c862efbf73850",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:222585",
@@ -650,7 +1483,18 @@
       "sourceReviewQueue": "transient-review-2026-10-15.json",
       "reviewSetID": "ebb81c5d26950036",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-10-15"
+      "lastSeenAsOfDate": "2026-10-15",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning",
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "afd711e02b55fe48",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:222595",
@@ -662,7 +1506,17 @@
       "sourceReviewQueue": "transient-review-2026-10-16.json",
       "reviewSetID": "3d85ca7dd0a5f416",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-16"
+      "lastSeenAsOfDate": "2026-10-16",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "d1a558a0307cf984",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:222733",
@@ -674,7 +1528,17 @@
       "sourceReviewQueue": "transient-review-2026-10-17.json",
       "reviewSetID": "0538a61925562220",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-17"
+      "lastSeenAsOfDate": "2026-10-17",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "3967497b59638b9b",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:222789",
@@ -686,7 +1550,17 @@
       "sourceReviewQueue": "transient-review-2026-10-17.json",
       "reviewSetID": "0538a61925562220",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-17"
+      "lastSeenAsOfDate": "2026-10-17",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "29b91cf7c0db50da",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:223006",
@@ -698,7 +1572,18 @@
       "sourceReviewQueue": "transient-review-2026-10-18.json",
       "reviewSetID": "90f98d1982380740",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-10-18"
+      "lastSeenAsOfDate": "2026-10-18",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning",
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "e4756a45877de65b",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:223010",
@@ -710,7 +1595,18 @@
       "sourceReviewQueue": "transient-review-2026-10-18.json",
       "reviewSetID": "90f98d1982380740",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-10-18"
+      "lastSeenAsOfDate": "2026-10-18",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning",
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "029cd41994a4bdaf",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:223057",
@@ -722,19 +1618,60 @@
       "sourceReviewQueue": "transient-review-2026-10-18.json",
       "reviewSetID": "90f98d1982380740",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-18"
+      "lastSeenAsOfDate": "2026-10-18",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "bf16a6d300f711aa",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:223138",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "c6ce1ae128aa4ce3",
       "sourceReviewQueue": "transient-review-2026-10-29.json",
       "reviewSetID": "3eaf545583818f2e",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-29"
+      "lastSeenAsOfDate": "2026-10-29",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "c6ce1ae128aa4ce3",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "a86a066c9b62ae1ef5161fc810e19a0b37697d2e9ed10ab06384835ecf6444aa",
+          "policyID": "tns-classified-score-v1",
+          "score": 100,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ib/c",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-10-25T07:25:47Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026afsg",
+          "sourceReviewQueue": "transient-review-2026-10-29.json",
+          "reviewSetID": "3eaf545583818f2e",
+          "evidenceHash": "c6ce1ae128aa4ce3",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:223155",
@@ -746,7 +1683,17 @@
       "sourceReviewQueue": "transient-review-2026-10-24.json",
       "reviewSetID": "19efaed24ec60006",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-10-24"
+      "lastSeenAsOfDate": "2026-10-24",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning"
+        ],
+        "inputEvidenceHash": "30466a73ed3b5dce",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:223244",
@@ -758,31 +1705,103 @@
       "sourceReviewQueue": "transient-review-2026-10-19.json",
       "reviewSetID": "c4e4bf79f4e3fe73",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-19"
+      "lastSeenAsOfDate": "2026-10-19",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "003e1837dbeda9ed",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:223274",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "b5342198c9233b7d",
       "sourceReviewQueue": "transient-review-2026-10-27.json",
       "reviewSetID": "e7df9c75a57fd3a2",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-27"
+      "lastSeenAsOfDate": "2026-10-27",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "b5342198c9233b7d",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "0e6ec9e776614a3d54775e0ded881b9fc99adf220092d3f1f69ee1a22471e6b0",
+          "policyID": "tns-classified-score-v1",
+          "score": 90,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-10-25T07:25:47Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026afxk",
+          "sourceReviewQueue": "transient-review-2026-10-27.json",
+          "reviewSetID": "e7df9c75a57fd3a2",
+          "evidenceHash": "b5342198c9233b7d",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:223866",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "80f8c558ce31de88",
       "sourceReviewQueue": "transient-review-2026-10-28.json",
       "reviewSetID": "dc43bb357180cfdf",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-28"
+      "lastSeenAsOfDate": "2026-10-28",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "80f8c558ce31de88",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "e4bc29e71153de7f30104b3b5e936d87187077cc92884d4302bd0254b70d66e6",
+          "policyID": "tns-classified-score-v1",
+          "score": 98,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN II",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-10-27T18:54:49Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026agpv",
+          "sourceReviewQueue": "transient-review-2026-10-28.json",
+          "reviewSetID": "dc43bb357180cfdf",
+          "evidenceHash": "80f8c558ce31de88",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:223998",
@@ -794,43 +1813,146 @@
       "sourceReviewQueue": "transient-review-2026-11-05.json",
       "reviewSetID": "f7145de2c72c87c9",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-11-05"
+      "lastSeenAsOfDate": "2026-11-05",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning"
+        ],
+        "inputEvidenceHash": "87eb04b6c94a4e11",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:224022",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": null,
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "ec6a3acac7bf19ef",
       "sourceReviewQueue": "transient-review-2026-11-01.json",
       "reviewSetID": "6756fd94cc7d9bdb",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-11-01"
+      "lastSeenAsOfDate": "2026-11-01",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "ec6a3acac7bf19ef",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "41d4a74b600b78035b5eca0d6e2cee1741d1998dd0a98f000d52ae36469aa0ea",
+          "policyID": "tns-classified-score-v1",
+          "score": 98,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN IIb",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-10-29T14:22:42Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026agvs",
+          "sourceReviewQueue": "transient-review-2026-11-01.json",
+          "reviewSetID": "6756fd94cc7d9bdb",
+          "evidenceHash": "ec6a3acac7bf19ef",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:224031",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "9331264b7da0fbfd",
       "sourceReviewQueue": "transient-review-2026-11-05.json",
       "reviewSetID": "f7145de2c72c87c9",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-11-05"
+      "lastSeenAsOfDate": "2026-11-05",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "9331264b7da0fbfd",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "fa12841f8b7e6ceaf3e3b3e957756d3e514f554b4b4491ebd2e892669c638cf0",
+          "policyID": "tns-classified-score-v1",
+          "score": 97,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-11-02T08:20:03Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026agwb",
+          "sourceReviewQueue": "transient-review-2026-11-05.json",
+          "reviewSetID": "f7145de2c72c87c9",
+          "evidenceHash": "9331264b7da0fbfd",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:224042",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "a32677298b9ffba2",
       "sourceReviewQueue": "transient-review-2026-11-05.json",
       "reviewSetID": "f7145de2c72c87c9",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-11-05"
+      "lastSeenAsOfDate": "2026-11-05",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "a32677298b9ffba2",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "d374ea7ffbc729952c9d89fd48ae49921707a052f4fc8c3d7224d031bdf68dce",
+          "policyID": "tns-classified-score-v1",
+          "score": 97,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-11-02T08:20:02Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026agwm",
+          "sourceReviewQueue": "transient-review-2026-11-05.json",
+          "reviewSetID": "f7145de2c72c87c9",
+          "evidenceHash": "a32677298b9ffba2",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:224122",
@@ -842,19 +1964,60 @@
       "sourceReviewQueue": "transient-review-2026-10-29.json",
       "reviewSetID": "3eaf545583818f2e",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-10-29"
+      "lastSeenAsOfDate": "2026-10-29",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "b6ef49dea97384f5",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:224130",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "e04a4809cba4ed4c",
       "sourceReviewQueue": "transient-review-2026-11-04.json",
       "reviewSetID": "a0c9fbbf65bf6b37",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-11-04"
+      "lastSeenAsOfDate": "2026-11-04",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "e04a4809cba4ed4c",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "93fdb78dd10d1ca020696d4b26ce6db0b7b72dda8332c61ddbe68e5582d39747",
+          "policyID": "tns-classified-score-v1",
+          "score": 98,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-11-01T11:32:58Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026agzw",
+          "sourceReviewQueue": "transient-review-2026-11-04.json",
+          "reviewSetID": "a0c9fbbf65bf6b37",
+          "evidenceHash": "e04a4809cba4ed4c",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:224694",
@@ -866,19 +2029,60 @@
       "sourceReviewQueue": "transient-review-2026-11-05.json",
       "reviewSetID": "f7145de2c72c87c9",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-11-05"
+      "lastSeenAsOfDate": "2026-11-05",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "572682e08ad01f09",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     },
     {
       "id": "tns:224706",
-      "status": "pending",
-      "decidedBy": null,
-      "decidedAtUTC": null,
-      "note": "Evidence changed after the previous pending decision; review required.",
+      "status": "approved",
+      "decidedBy": "astroguide:classified-score-policy-v1",
+      "decidedAtUTC": "2026-11-06T22:22:05Z",
+      "note": "Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.",
       "evidenceHash": "80705f0a94be7137",
       "sourceReviewQueue": "transient-review-2026-11-05.json",
       "reviewSetID": "f7145de2c72c87c9",
       "recommendedDecision": "approve",
-      "lastSeenAsOfDate": "2026-11-05"
+      "lastSeenAsOfDate": "2026-11-05",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": true,
+        "exclusionReasons": [],
+        "inputEvidenceHash": "80705f0a94be7137",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      },
+      "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "539e4c34216722596d54bd55b5d7f45f65e0aaffcd4a772cab87deb60462e682",
+          "policyID": "tns-classified-score-v1",
+          "score": 100,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-06T22:22:05Z",
+          "evidenceAtUTC": "2026-11-03T11:19:01Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026ahvu",
+          "sourceReviewQueue": "transient-review-2026-11-05.json",
+          "reviewSetID": "f7145de2c72c87c9",
+          "evidenceHash": "80705f0a94be7137",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ]
     },
     {
       "id": "tns:224756",
@@ -890,7 +2094,25 @@
       "sourceReviewQueue": "transient-review-2026-11-04.json",
       "reviewSetID": "a0c9fbbf65bf6b37",
       "recommendedDecision": "hold",
-      "lastSeenAsOfDate": "2026-11-04"
+      "lastSeenAsOfDate": "2026-11-04",
+      "automaticEvaluation": {
+        "policyID": "tns-classified-score-v1",
+        "eligible": false,
+        "exclusionReasons": [
+          "source_or_catalog_warning",
+          "not_supported_classified_type"
+        ],
+        "inputEvidenceHash": "8fd5de8f2dbdf3ac",
+        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "rapidRiseEnabled": false
+      }
     }
-  ]
+  ],
+  "automaticApprovalPolicy": {
+    "id": "tns-classified-score-v1",
+    "actor": "astroguide:classified-score-policy-v1",
+    "minimumScore": 70,
+    "rapidRiseEnabled": false,
+    "notificationsEnabled": false
+  }
 }
