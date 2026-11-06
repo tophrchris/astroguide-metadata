@@ -48,8 +48,8 @@ gate; a requested summary limit never truncates retention or evaluation.
 
 ## Candidate publication
 
-- Version: `transient-event-feed-v1-20261106T222205Z-classified-score-v1`.
-- Evaluation/generation time: `2026-11-06T22:22:05Z`; latest review as-of November 5.
+- Version: `transient-event-feed-v1-20261106T223559Z-classified-score-v1`.
+- Evaluation/generation time: `2026-11-06T22:35:59Z`; latest review as-of November 5.
 - 74 registry entries reevaluated; 23 new automatic approvals.
 - 40 active published entries: 23 automatic and 17 retained owner approvals.
 - 32 pending entries. No actual registry owner hold/rejected entries existed in
@@ -63,15 +63,15 @@ gate; a requested summary limit never truncates retention or evaluation.
   `2026-11-02T04:20:36Z`; expiry `2027-01-31T04:20:36Z`. Supporting review:
   `transient-review-2026-11-05.json`; evidence hash `80705f0a94be7137`.
 - Package: 151700 bytes; SHA256
-  `7dab486fb3d1bd307fd03adc2e4078a39da090db24a87206ab74234c80320278`.
+  `20c182f210b53595c21d5be9757c3d2472e67bdc1031c80e5943afc0a857e07c`.
 - Local manifest SHA256:
-  `aa1080cb07f2d93a98dcd305a4ba7616b66441532f75ec3bee06066e549f9095`.
+  `68e5015bcdb3302e8a9af93b17edc71bb00faea498fc68ae5060f2840dd7a8ab`.
 - Every non-transient descriptor is unchanged from main. No image/website/iOS
   files or historical review facts are modified.
 
 ## Local validation and future schedule
 
-Full local suite: 188 tests passed, including real CLI/check idempotence, threshold
+Full local suite: 189 tests passed, including real CLI/check idempotence, threshold
 edges, unknown/uncertain classes, invalid dates/coordinates/identity, contaminants,
 source/catalog warnings, protected owner decisions, changed evidence, immutable
 trigger IDs and disabled rapid-rise materialization. Tests also guard explicit
@@ -93,3 +93,21 @@ No workflow dispatch, CI label or PR comment decision command is used. Publicati
 is not complete until canonical hosted manifest and package bytes/checksums match
 the candidate and SN2026ahvu is observed in that hosted package. Verification evidence
 is retained under `/Volumes/AstroArchive/CodexWorktrees/transient-score-production/validation/`.
+
+## Publication and watch-recommendation follow-up
+
+Initial activation PR97 merged as `9f8e11605902dfdee59139f33208881b8046c711`
+(source `e0177d5b003cca369012ee877d7833485c1fba25`). Its 40-entry package and
+canonical manifest were verified byte-for-byte on the host, including SN2026ahvu.
+Final pipeline review then identified a distinction that needed a follow-up:
+the queue's generated `watch` recommendation uses `hold`, which must not veto an
+otherwise eligible classified score merely because discovery magnitude is faint.
+
+A reasonless generated watch hold is now distinct from an owner's registry hold
+or an explicit detail-source hold. Explicit detail holds are always marked with
+a reason; owner holds/rejections and catalog/contaminant/unknown warnings remain
+protected. A regression test passes magnitude21 through the actual recommendation
+helper and explicit detail-hold merge path. Counts remain unchanged for the current
+74-record snapshot; this removes the unintended cutoff for future eligible objects.
+First eligibility times and stable trigger IDs survive this repeat evaluation.
+The candidate hashes/version above are for this follow-up publication.

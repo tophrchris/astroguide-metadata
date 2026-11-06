@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-11-06T22:22:05Z",
-  "publishedAt": "2026-11-06T22:22:05Z",
+  "generatedAt": "2026-11-06T22:35:59Z",
+  "publishedAt": "2026-11-06T22:35:59Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -386,12 +386,12 @@
     },
     {
       "family": "transientEventFeed",
-      "packageVersion": "transient-event-feed-v1-20261106T222205Z-classified-score-v1",
+      "packageVersion": "transient-event-feed-v1-20261106T223559Z-classified-score-v1",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/transients/transient_opportunities_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "7dab486fb3d1bd307fd03adc2e4078a39da090db24a87206ab74234c80320278"
+        "value": "20c182f210b53595c21d5be9757c3d2472e67bdc1031c80e5943afc0a857e07c"
       },
       "byteSize": 151700,
       "reviewedCount": 42,

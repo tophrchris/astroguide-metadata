@@ -1311,6 +1311,8 @@ def merge_tns_detail(
     if requested_decision in {"approve", "hold", "reject"}:
         opportunity["recommendedDecision"] = requested_decision
         opportunity["recommendedReviewAction"] = requested_decision
+        if requested_decision == "hold":
+            decision_reason = decision_reason or "Hold explicitly requested by TNS detail review."
     enriched_kind = str(opportunity.get("classification", {}).get("kind") or "")
     if enriched_kind == "contaminant":
         opportunity["recommendedDecision"] = "reject"

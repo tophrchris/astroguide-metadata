@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "family": "tnsTransientReviewDecisions",
-  "generatedAtUTC": "2026-11-06T22:22:05Z",
+  "generatedAtUTC": "2026-11-06T22:35:59Z",
   "instructions": "Set status to approved, hold, or rejected and record decidedBy/decidedAtUTC. Approved entries with current evidence are materialized into the runtime feed; merging the review PR publishes that generated feed through stable metadata.",
   "decisions": [
     {
@@ -23,7 +23,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6ada640bd123e393",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -46,7 +46,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f4a288ca3d8fd093",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -66,7 +66,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "d683b3329a1044d4",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -109,7 +109,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "3334e7a949bdd4c5",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -152,7 +152,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "bc90fcb60f98db52",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -172,7 +172,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "3cd5668371657580",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -192,7 +192,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "e05443afd9439d3d",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -212,7 +212,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "c3c1613f9b42bc64",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -232,7 +232,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "077df478b2852bc4",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -252,7 +252,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "913d9b298681482a",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -272,7 +272,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "1291bafc89a0a20f",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -315,7 +315,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "1a41abed1efdb075",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -358,7 +358,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "cc8be27b40e738ba",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -401,7 +401,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "37307faa18101717",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -446,7 +446,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "0bcbda419349d0ba",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -466,7 +466,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "eb0f35b18126dbea",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -488,7 +488,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "baf8f6e9fd16ac17",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -508,7 +508,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "6f089a5e6dc9acb0",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -530,7 +530,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "0e5b77c66db975e9",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -552,7 +552,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "18970d82d7b93671",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -574,7 +574,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "ce5a41dc5800d904",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -596,7 +596,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "081c0407a70e8c84",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -618,7 +618,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "d5933941f601fd71",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -640,7 +640,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "e660d6a00d8f4c40",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -662,7 +662,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "646bc3c285f85974",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -682,7 +682,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "eb42567a3167a5bd",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -727,7 +727,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "c4f41abd79149195",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -749,7 +749,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "a6a262fe750fc173",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -771,7 +771,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "cbadfc69a901ad64",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -793,7 +793,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "8937c6b85163b9b8",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -813,7 +813,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "c3f904e5e2151a31",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -858,7 +858,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "be2923c3a6eb2f0f",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -880,7 +880,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "7a70e0f4c722b9e8",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -902,7 +902,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "60dbeb4131f1a18b",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -922,7 +922,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "4700a07e83ef9057",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -967,7 +967,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "cd8b1c4f737fa9b8",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -989,7 +989,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "17ca7de7e4805d11",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1011,7 +1011,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "1fc676eec3c2e946",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1033,7 +1033,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "608074450fd14e7b",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1055,7 +1055,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "5c2fffa55fa5ad17",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1078,7 +1078,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "fe8532bf7920af4a",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1098,7 +1098,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "94352f190fa852c7",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1141,7 +1141,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "c4f2f45a54101c70",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1186,7 +1186,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "8ed55846c2ed1cae",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1208,7 +1208,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "a537539cf74333ca",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1230,7 +1230,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "e2a33d0204a3afb8",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1250,7 +1250,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "812994887416ce4e",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1293,7 +1293,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "166ef841ffeda337",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1336,7 +1336,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "1038711dfff98d04",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1382,7 +1382,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "bdbb4a8cdb716f8b",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1404,7 +1404,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "80099b53bd0161fe",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1426,7 +1426,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "b418ef65ff8b44f5",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1446,7 +1446,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "6b6c862efbf73850",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1492,7 +1492,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "afd711e02b55fe48",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1514,7 +1514,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "d1a558a0307cf984",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1536,7 +1536,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "3967497b59638b9b",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1558,7 +1558,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "29b91cf7c0db50da",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1577,11 +1577,10 @@
         "policyID": "tns-classified-score-v1",
         "eligible": false,
         "exclusionReasons": [
-          "source_or_catalog_warning",
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "e4756a45877de65b",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1600,11 +1599,10 @@
         "policyID": "tns-classified-score-v1",
         "eligible": false,
         "exclusionReasons": [
-          "source_or_catalog_warning",
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "029cd41994a4bdaf",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1626,7 +1624,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "bf16a6d300f711aa",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1646,7 +1644,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "c6ce1ae128aa4ce3",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1691,7 +1689,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "30466a73ed3b5dce",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1713,7 +1711,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "003e1837dbeda9ed",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1733,7 +1731,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "b5342198c9233b7d",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1776,7 +1774,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "80f8c558ce31de88",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1821,7 +1819,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "87eb04b6c94a4e11",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1841,7 +1839,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "ec6a3acac7bf19ef",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1884,7 +1882,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "9331264b7da0fbfd",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1927,7 +1925,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "a32677298b9ffba2",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1972,7 +1970,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "b6ef49dea97384f5",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1992,7 +1990,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "e04a4809cba4ed4c",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -2037,7 +2035,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "572682e08ad01f09",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2057,7 +2055,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "80705f0a94be7137",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -2103,7 +2101,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "8fd5de8f2dbdf3ac",
-        "evaluatedAtUTC": "2026-11-06T22:22:05Z",
+        "evaluatedAtUTC": "2026-11-06T22:35:59Z",
         "rapidRiseEnabled": false
       }
     }
