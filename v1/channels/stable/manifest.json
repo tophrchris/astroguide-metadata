@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-11-05T22:54:02Z",
-  "publishedAt": "2026-11-05T22:54:02Z",
+  "generatedAt": "2026-11-06T22:22:05Z",
+  "publishedAt": "2026-11-06T22:22:05Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -386,23 +386,23 @@
     },
     {
       "family": "transientEventFeed",
-      "packageVersion": "transient-event-feed-v1-20261105-discovery90d-approved",
+      "packageVersion": "transient-event-feed-v1-20261106T222205Z-classified-score-v1",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/transients/transient_opportunities_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "f0eddd47bb6e7abd2eb53653c6dc0a91ae6a987b3ef6fdd85bd491c968e15573"
+        "value": "7dab486fb3d1bd307fd03adc2e4078a39da090db24a87206ab74234c80320278"
       },
-      "byteSize": 48642,
-      "reviewedCount": 19,
-      "approvedCount": 18,
-      "opportunityCount": 18,
-      "urgentCount": 13,
-      "asOfDate": "2026-11-04",
+      "byteSize": 151700,
+      "reviewedCount": 42,
+      "approvedCount": 40,
+      "opportunityCount": 40,
+      "urgentCount": 31,
+      "asOfDate": "2026-11-05",
       "minSupportedAppVersion": "1.4.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 21600,
-      "fallbackNotes": "Curator-approved TNS transient opportunities. Clients should show this short-lived feed only from a validated cached remote package; expired cached data remains usable until replaced, but individual events must honor their activeWindow expiry."
+      "fallbackNotes": "Owner-curated or audited classified-score-approved TNS transient opportunities. Clients should show this short-lived feed only from a validated cached remote package; expired cached data remains usable until replaced, but individual events must honor their activeWindow expiry."
     }
   ]
 }

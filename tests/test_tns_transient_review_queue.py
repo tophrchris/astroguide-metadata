@@ -208,7 +208,7 @@ class TNSTransientReviewQueueTests(unittest.TestCase):
             queue_builder.render_markdown(second),
         )
 
-    def test_can_limit_review_queue_to_top_ranked_opportunities(self):
+    def test_summary_limit_does_not_starve_retained_candidates(self):
         catalog, grid = queue_builder.load_catalog(self.catalog_path)
         queue = queue_builder.build_queue(
             queue_builder.load_source_records(self.inputs),
@@ -220,12 +220,22 @@ class TNSTransientReviewQueueTests(unittest.TestCase):
 
         self.assertEqual(queue["counts"]["eligibleReviewOpportunities"], 3)
         self.assertEqual(queue["counts"]["reviewOpportunitiesLimit"], 2)
-        self.assertEqual(queue["counts"]["reviewOpportunities"], 2)
-        self.assertEqual([item["sourceId"] for item in queue["opportunities"]], ["1001", "1003"])
+        self.assertEqual(queue["counts"]["reviewOpportunities"], 3)
+        self.assertEqual([item["sourceId"] for item in queue["opportunities"]][:2], ["1001", "1003"])
         self.assertIn(
-            "3 eligible opportunities before the top-2 review cap",
+            "3 eligible opportunities retained; requested summary limit: 2 (no candidate truncation)",
             queue_builder.render_markdown(queue),
         )
+
+    def test_opt_in_backfill_does_not_mark_valid_90day_candidates_expired_at_30days(self):
+        catalog, grid = queue_builder.load_catalog(self.catalog_path)
+        queue = queue_builder.build_queue(queue_builder.load_source_records(self.inputs), catalog, grid,
+            as_of=dt.date(2026, 10, 15), early_opportunities=True, max_opportunities=1)
+        self.assertGreater(len(queue["opportunities"]), 1)
+        self.assertTrue(all(item["urgency"] != "expired" for item in queue["opportunities"]))
+        self.assertTrue(any(item["discovery"]["ageDays"] > 30 for item in queue["opportunities"]))
+        self.assertTrue(any(item["reason"] == "known_contaminant" for item in queue["exclusionAudit"]))
+        self.assertEqual(queue["policy"]["maximumDiscoveryAgeDays"], 90)
 
     def test_preserves_staged_redshift_reporters_and_bibliographic_context(self):
         staged = self.root / "enriched.csv"

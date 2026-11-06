@@ -193,7 +193,7 @@ def descriptor(
         "minSupportedBuild": min_supported_build,
         "cacheTTLSeconds": CACHE_TTL_SECONDS,
         "fallbackNotes": (
-            "Curator-approved TNS transient opportunities. Clients should show this "
+            "Owner-curated or audited classified-score-approved TNS transient opportunities. Clients should show this "
             "short-lived feed only from a validated cached remote package; expired "
             "cached data remains usable until replaced, but individual events must honor "
             "their activeWindow expiry."

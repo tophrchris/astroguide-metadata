@@ -8,8 +8,11 @@ import copy
 import datetime as dt
 import hashlib
 import json
+import math
+import re
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -20,6 +23,87 @@ DEFAULT_RUNTIME_PATH = Path("outputs/transients/runtime/transient_opportunities_
 ALLOWED_STATUSES = {"pending", "approved", "hold", "rejected"}
 TEMPORARY_CURATION_DAYS = 90
 TEMPORARY_CURATION_POLICY = "temporary-discovery-90d-20261101"
+SCORE_POLICY = "tns-classified-score-v1"
+AUTOMATED_ACTOR = "astroguide:classified-score-policy-v1"
+
+
+def strict_date(value: Any) -> dt.datetime | None:
+    try:
+        parsed = dt.datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        return parsed.astimezone(dt.UTC) if parsed.tzinfo else None
+    except ValueError:
+        return None
+
+
+def finite_number(value: Any) -> bool:
+    return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
+
+
+def safety_exclusions(candidate: dict[str, Any], reference: dt.datetime) -> list[str]:
+    reasons = []
+    classification = candidate.get("classification") or {}
+    context = candidate.get("tnsContext") or {}
+    text = " ".join(str(value) for value in (
+        classification.get("type"), classification.get("status"), context.get("remarks")))
+    if classification.get("kind") in {"contaminant", "unsupported"} or re.search(
+        r"\b(artifact|bogus|asteroid|minor planet|variable star|varstar|cataclysmic variable|cv|agn|qso|quasar)\b", text, re.I
+    ):
+        reasons.append("contaminant_or_unsupported")
+    if (candidate.get("recommendedDecision") in {"hold", "reject"}
+            or candidate.get("reviewDecision") in {"hold", "reject", "rejected"}
+            or candidate.get("decisionReason")
+            or (candidate.get("astroGuideObject") or {}).get("identityWarning")):
+        reasons.append("source_or_catalog_warning")
+    separation = candidate.get("angularSeparationDegrees")
+    if (not (candidate.get("astroGuideObject") or {}).get("id")
+            or not finite_number(separation) or not 0 <= separation <= 2):
+        reasons.append("invalid_catalog_context")
+    coords = candidate.get("coordinates") or {}
+    ra, dec = coords.get("raDegrees"), coords.get("decDegrees")
+    if not (finite_number(ra) and finite_number(dec) and 0 <= ra < 360 and -90 <= dec <= 90):
+        reasons.append("invalid_coordinates")
+    discovered = strict_date((candidate.get("discovery") or {}).get("dateUTC"))
+    window = candidate.get("activeWindow") or {}
+    start, end = strict_date(window.get("startsAtUTC")), strict_date(window.get("expiresAtUTC"))
+    if not (discovered and start and end and start < end
+            and max(discovered, start) <= reference < discovered + dt.timedelta(days=90)):
+        reasons.append("invalid_or_inactive_discovery_window")
+    modified = candidate.get("lastModifiedUTC")
+    if modified and (strict_date(modified) is None or strict_date(modified) > reference):
+        reasons.append("invalid_or_future_evidence")
+    url = urlparse(str(candidate.get("sourceURL") or ""))
+    if (candidate.get("source") != "TNS" or not str(candidate.get("id", "")).startswith("tns:")
+            or not isinstance(candidate.get("sourceId"), str) or not candidate.get("sourceId")
+            or candidate.get("id") != f"tns:{candidate.get('sourceId')}"
+            or url.scheme != "https" or url.username or url.password
+            or candidate.get("eventType") not in {"transientOpportunity", "novaOpportunity", "supernovaOpportunity"}
+            or url.hostname not in {"www.wis-tns.org", "wis-tns.org"} or not url.path.startswith("/object/")):
+        reasons.append("invalid_source_identity")
+    return reasons
+
+
+def score_exclusions(candidate: dict[str, Any], reference: dt.datetime) -> list[str]:
+    reasons = safety_exclusions(candidate, reference)
+    classification = candidate.get("classification") or {}
+    type_name = str(classification.get("type") or "").strip()
+    type_kind = next((kind for pattern, kind in (
+        (r"^(SN\b|supernova\b)", "supernova"),
+        (r"^SLSN\b", "superluminous_supernova"),
+        (r"^(nova\b|LRN\b|luminous red nova\b)", "nova"),
+        (r"^(TDE\b|tidal disruption\b)", "tidal_disruption_event"),
+    ) if re.match(pattern, type_name, re.I)), None)
+    if (classification.get("kind") not in {"supernova", "superluminous_supernova", "nova", "tidal_disruption_event"}
+            or not re.match(r"^(SN\b|SLSN\b|supernova\b|nova\b|LRN\b|luminous red nova\b|TDE\b|tidal disruption\b)", type_name, re.I)
+            or type_kind != classification.get("kind")
+            or re.search(r"\?|candidate|unclassified|unknown|possible|unconfirmed", type_name + " " + str(classification.get("status") or ""), re.I)):
+        reasons.append("not_supported_classified_type")
+    current_type = (candidate.get("tnsContext") or {}).get("currentType")
+    if current_type and str(current_type).strip().casefold() != type_name.casefold():
+        reasons.append("classification_context_mismatch")
+    score = candidate.get("score")
+    if not (finite_number(score) and 70 <= score <= 100):
+        reasons.append("score_below_70_or_invalid")
+    return reasons
 
 
 class DecisionError(RuntimeError):
@@ -42,6 +126,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--runtime", type=Path, default=DEFAULT_RUNTIME_PATH)
     parser.add_argument("--generated-at", help="UTC ISO-8601 generation time")
+    parser.add_argument("--auto-approve-classified-score", action="store_true",
+                        help="Activate audited classified score>=70 policy; never rapid-rise approval.")
     parser.add_argument(
         "--check",
         action="store_true",
@@ -199,7 +285,12 @@ def sync_decisions(
     provenance: dict[str, dict[str, Any]],
     *,
     generated_at: str,
+    auto_approve_classified_score: bool = False,
 ) -> dict[str, Any]:
+    enabled = auto_approve_classified_score or (registry or {}).get("automaticApprovalPolicy", {}).get("id") == SCORE_POLICY
+    reference = strict_date(generated_at)
+    if enabled and reference is None:
+        raise DecisionError("Automatic policy requires timezone-aware generated-at")
     decisions = existing_decisions(registry)
     if registry is None:
         decisions.update(seed_legacy_decisions(runtime))
@@ -220,12 +311,12 @@ def sync_decisions(
         elif decision.get("evidenceHash") != current_hash:
             previous_hash = str(decision.get("evidenceHash") or "")
             previous_status = str(decision.get("status") or "pending")
-            if previous_hash.startswith("legacy-runtime-") and previous_status == "approved":
+            if not enabled and previous_hash.startswith("legacy-runtime-") and previous_status == "approved":
                 decision["note"] = (
                     "Migrated from the previously published curator-approved runtime feed "
                     "and rebound to the latest matching review evidence."
                 )
-            else:
+            elif previous_status not in {"hold", "rejected"}:
                 decision["status"] = "pending"
                 decision.pop("decisionComment", None)
                 decision["decidedBy"] = None
@@ -233,11 +324,39 @@ def sync_decisions(
                 decision["note"] = (
                     f"Evidence changed after the previous {previous_status} decision; review required."
                 )
+            else:
+                decision.setdefault("ownerDecisionEvidenceHash", previous_hash)
         decision["evidenceHash"] = current_hash
         decision["sourceReviewQueue"] = source["sourceReviewQueue"]
         decision["reviewSetID"] = source["reviewSetID"]
         decision["recommendedDecision"] = candidate.get("recommendedDecision")
         decision["lastSeenAsOfDate"] = source["asOfDate"]
+        if enabled:
+            exclusions = score_exclusions(candidate, reference)
+            protected = decision["status"] in {"hold", "rejected"}
+            if protected:
+                exclusions.append("protected_owner_decision")
+            decision["automaticEvaluation"] = {
+                "policyID": SCORE_POLICY, "eligible": not exclusions,
+                "exclusionReasons": exclusions, "inputEvidenceHash": current_hash,
+                "evaluatedAtUTC": generated_at, "rapidRiseEnabled": False,
+            }
+            if not protected and decision.get("decidedBy") == AUTOMATED_ACTOR and exclusions:
+                decision.update(status="pending", decidedBy=None, decidedAtUTC=None)
+                decision.pop("promotionReasons", None)
+            if not exclusions and decision["status"] == "pending":
+                decision.setdefault("firstScoreEligibleAtUTC", generated_at)
+                decision.update(status="approved", decidedBy=AUTOMATED_ACTOR, decidedAtUTC=generated_at,
+                                note="Automatic classified score eligibility, not a measured threshold crossing or brightness prediction.")
+                trigger = hashlib.sha256(f"{candidate_id}|classified_score|{SCORE_POLICY}".encode()).hexdigest()
+                decision["promotionReasons"] = [{
+                    "code": "classified_score", "stableTriggerID": trigger, "policyID": SCORE_POLICY,
+                    "score": candidate["score"], "classification": copy.deepcopy(candidate["classification"]),
+                    "confidence": "score_eligibility", "triggeredAtUTC": decision["firstScoreEligibleAtUTC"],
+                    "evidenceAtUTC": candidate.get("lastModifiedUTC"), "sourceURL": candidate.get("sourceURL"),
+                    "sourceReviewQueue": source["sourceReviewQueue"], "reviewSetID": source["reviewSetID"],
+                    "evidenceHash": current_hash, "automaticEligible": True, "evidence": [],
+                }]
 
     result = {
         "schemaVersion": 1,
@@ -250,6 +369,9 @@ def sync_decisions(
         ),
         "decisions": sorted(decisions.values(), key=lambda item: str(item.get("id") or "")),
     }
+    if enabled:
+        result["automaticApprovalPolicy"] = {"id": SCORE_POLICY, "actor": AUTOMATED_ACTOR,
+                                            "minimumScore": 70, "rapidRiseEnabled": False, "notificationsEnabled": False}
     validate_decisions(result)
     return result
 
@@ -307,6 +429,10 @@ def promote_candidate(candidate: dict[str, Any], decision: dict[str, Any]) -> di
     promoted["recommendedReviewAction"] = "approved"
     promoted.pop("recommendedDecision", None)
     promoted.pop("decisionReason", None)
+    if decision.get("decidedBy") == AUTOMATED_ACTOR:
+        promoted["promotionReasons"] = copy.deepcopy(decision.get("promotionReasons") or [])
+        if promoted.get("urgency") == "expired":
+            promoted["urgency"] = "watch"
     promoted["review"] = {
         "status": "approved",
         "approvedBy": decision.get("decidedBy"),
@@ -336,6 +462,7 @@ def build_runtime(
         if item.get("id")
     }
     opportunities: list[dict[str, Any]] = []
+    publication_exclusions: list[dict[str, Any]] = []
     expired_approved = 0
     decisions = registry.get("decisions") or []
     for decision in decisions:
@@ -343,6 +470,23 @@ def build_runtime(
             continue
         candidate_id = str(decision.get("id"))
         candidate = candidates.get(candidate_id)
+        if registry.get("automaticApprovalPolicy") and candidate is not None:
+            blockers = safety_exclusions(candidate, reference)
+            if blockers:
+                publication_exclusions.append({"id": candidate_id, "reasons": blockers})
+                discovered = strict_date((candidate.get("discovery") or {}).get("dateUTC"))
+                if discovered and reference >= discovered + dt.timedelta(days=90):
+                    expired_approved += 1
+                # Keep an owner's historical decision, but never materialize unsafe evidence.
+                continue
+        if decision.get("decidedBy") == AUTOMATED_ACTOR:
+            evaluation = decision.get("automaticEvaluation") or {}
+            if (candidate is None or score_exclusions(candidate, reference)
+                    or evaluation.get("policyID") != SCORE_POLICY or evaluation.get("eligible") is not True
+                    or evaluation.get("inputEvidenceHash") != evidence_hash(candidate)
+                    or not decision.get("promotionReasons")
+                    or any(reason.get("code") != "classified_score" for reason in decision["promotionReasons"])):
+                continue
         if candidate is not None:
             if decision.get("evidenceHash") != evidence_hash(candidate):
                 continue
@@ -379,7 +523,9 @@ def build_runtime(
         "schemaVersion": 1,
         "family": "transientOpportunities",
         "reviewOnly": False,
-        "packageVersion": f"transient-event-feed-v1-{reference:%Y%m%d}-discovery90d-approved",
+        "packageVersion": (f"transient-event-feed-v1-{reference:%Y%m%dT%H%M%SZ}-classified-score-v1"
+                           if registry.get("automaticApprovalPolicy") else
+                           f"transient-event-feed-v1-{reference:%Y%m%d}-discovery90d-approved"),
         "curationPolicy": {
             "id": TEMPORARY_CURATION_POLICY,
             "temporary": True,
@@ -390,6 +536,7 @@ def build_runtime(
         "asOfDate": as_of_date,
         "generatedAtUTC": generated_at,
         "approvalPolicy": "tns_transient_review_decisions_v1",
+        **({"automaticApprovalPolicy": registry["automaticApprovalPolicy"]} if registry.get("automaticApprovalPolicy") else {}),
         "counts": {
             "reviewed": sum(status_counts[status] for status in ("approved", "hold", "rejected")),
             "approved": len(opportunities),
@@ -399,6 +546,7 @@ def build_runtime(
             "expiredApproved": expired_approved,
         },
         "opportunities": opportunities,
+        **({"publicationExclusions": publication_exclusions} if registry.get("automaticApprovalPolicy") else {}),
     }
 
 
@@ -418,17 +566,20 @@ def render_decisions_markdown(
     lines = [
         "## Publication decisions",
         "",
-        "> **Merge-to-publish contract:** the generated runtime feed and stable manifest in this PR contain every still-active candidate whose registry status is `approved`. Merging the PR publishes those generated artifacts through the normal dynamic-metadata channel. `pending`, `hold`, and `rejected` entries are not published.",
+        "> **Merge-to-publish contract:** the generated runtime feed contains only active, current-evidence, safety-eligible approved entries. Merging publishes that set through dynamic metadata. Pending, hold, rejected, expired and safety-excluded entries are not published.",
         "",
         f"- **Approved and active in runtime:** {len(runtime.get('opportunities') or [])}",
         f"- **Pending review:** {status_counts['pending']}",
         f"- **On hold:** {status_counts['hold']}",
         f"- **Rejected:** {status_counts['rejected']}",
         f"- **Approved but expired:** {(runtime.get('counts') or {}).get('expiredApproved', 0)}",
+        f"- **Automatic classified-score approvals:** {sum(item.get('decidedBy') == AUTOMATED_ACTOR and item.get('status') == 'approved' for item in registry.get('decisions') or [])}",
+        "- **Rapid-rise approval / notifications:** disabled",
+        f"- **Approved entries withheld by publication safety:** {len(runtime.get('publicationExclusions') or [])}",
         "",
-        "Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun this workflow. A non-pending decision requires `decidedBy` and `decidedAtUTC`. Changed evidence automatically resets the candidate to `pending`.",
+        "Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun this workflow. A non-pending decision requires `decidedBy` and `decidedAtUTC`. Changed evidence resets approvals for fresh evaluation; owner holds and rejections remain protected.",
         "",
-        "| Status | Candidate | Recommendation | Discovery mag | Classification | Near-field match | Active through |",
+        "| Status | Candidate | Recommendation | Discovery mag | Classification | Near-field match | 90-day listing limit |",
         "| --- | --- | --- | ---: | --- | --- | --- |",
     ]
     for decision in registry.get("decisions") or []:
@@ -439,9 +590,11 @@ def render_decisions_markdown(
         classification = candidate.get("classification") or {}
         discovery = candidate.get("discovery") or {}
         active_window = candidate.get("activeWindow") or {}
+        discovered = parse_datetime(discovery.get("dateUTC"))
+        listing_limit = (discovered + dt.timedelta(days=90)).isoformat().replace("+00:00", "Z") if discovered else "Invalid discovery date"
         lines.append(
             "| {status} | [{name}]({url}) | {recommended} | {magnitude} | {classification} | {target} ({separation} deg) | {expires} |".format(
-                status=escape_markdown(str(decision.get("status") or "").title()),
+                status=escape_markdown(str(decision.get("status") or "").title() + (" (automatic)" if decision.get("decidedBy") == AUTOMATED_ACTOR else "")),
                 name=escape_markdown(candidate.get("shortTitle") or candidate.get("sourceObjectName") or decision.get("id")),
                 url=escape_markdown(candidate.get("sourceURL")),
                 recommended=escape_markdown(decision.get("recommendedDecision")),
@@ -449,7 +602,7 @@ def render_decisions_markdown(
                 classification=escape_markdown(classification.get("type") or classification.get("kind") or "Unavailable"),
                 target=escape_markdown(target.get("displayName") or target.get("id") or "Unavailable"),
                 separation=escape_markdown(candidate.get("angularSeparationDegrees") or "Unavailable"),
-                expires=escape_markdown(active_window.get("expiresAtUTC") or "Unavailable"),
+                expires=escape_markdown(listing_limit),
             )
         )
     lines.append("")
@@ -480,6 +633,7 @@ def main() -> int:
         candidates,
         provenance,
         generated_at=generated_at,
+        auto_approve_classified_score=args.auto_approve_classified_score,
     )
     runtime = build_runtime(
         previous_runtime,

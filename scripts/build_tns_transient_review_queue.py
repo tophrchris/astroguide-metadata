@@ -767,6 +767,7 @@ def build_queue(
     max_age_days: int = 45,
     watch_magnitude: float = 19.5,
     max_opportunities: int = 0,
+    early_opportunities: bool = False,
 ) -> dict[str, object]:
     selected, provenance, duplicate_count = deduplicate_records(records)
     counts = Counter(
@@ -775,6 +776,7 @@ def build_queue(
         uniqueObjects=len(selected),
     )
     opportunities = []
+    exclusion_audit = []
     as_of_datetime = dt.datetime.combine(as_of, dt.time.min, tzinfo=dt.UTC)
 
     for record in selected:
@@ -783,20 +785,24 @@ def build_queue(
         kind = classification_kind(name, field(row, "type"), field(row, "status"))
         if kind == "contaminant":
             counts["contaminantsRejected"] += 1
+            exclusion_audit.append({"object": name, "reason": "known_contaminant"})
             continue
         if kind == "unsupported":
             counts["unsupportedClassificationsRejected"] += 1
+            exclusion_audit.append({"object": name, "reason": "unsupported_classification"})
             continue
         counts["plausibleCandidates"] += 1
 
         discovered = parse_datetime(field(row, "discovery_date"))
         age_days = (as_of_datetime.date() - discovered.date()).days if discovered else None
-        if age_days is not None and (age_days < 0 or age_days > max_age_days):
+        if age_days is not None and (age_days < 0 or age_days > (90 if early_opportunities else max_age_days)):
             counts["outsideDiscoveryWindow"] += 1
+            exclusion_audit.append({"object": name, "reason": "outside_discovery_window"})
             continue
         magnitude = parse_float(field(row, "discovery_mag"))
-        if magnitude is not None and magnitude > watch_magnitude:
+        if not early_opportunities and magnitude is not None and magnitude > watch_magnitude:
             counts["fainterThanWatchBand"] += 1
+            exclusion_audit.append({"object": name, "reason": "fainter_than_watch_band"})
             continue
 
         try:
@@ -804,15 +810,17 @@ def build_queue(
             dec = parse_angle(field(row, "dec"), is_ra=False)
         except ValueError:
             counts["invalidCoordinates"] += 1
+            exclusion_audit.append({"object": name, "reason": "invalid_coordinates"})
             continue
         nearest = nearest_catalog_object(ra, dec, catalog, grid, radius_deg)
         if nearest is None:
             counts["outsideNearFieldRadius"] += 1
+            exclusion_audit.append({"object": name, "reason": "outside_near_field_radius"})
             continue
         separation, target = nearest
         counts["nearFieldMatches"] += 1
 
-        if not is_review_eligible(
+        if not early_opportunities and not is_review_eligible(
             kind=kind,
             magnitude=magnitude,
             separation=separation,
@@ -820,6 +828,7 @@ def build_queue(
             watch_magnitude=watch_magnitude,
         ):
             counts["outsideReviewGate"] += 1
+            exclusion_audit.append({"object": name, "reason": "outside_review_gate"})
             continue
 
         score, reasons = score_candidate(
@@ -829,7 +838,7 @@ def build_queue(
             separation=separation,
             target=target,
         )
-        if age_days is not None and age_days > 30:
+        if not early_opportunities and age_days is not None and age_days > 30:
             urgency = "expired"
         elif magnitude is not None and magnitude <= 18.5 and score >= 70:
             urgency = "urgent"
@@ -928,8 +937,7 @@ def build_queue(
         )
     )
     eligible_opportunities = len(opportunities)
-    if max_opportunities > 0:
-        opportunities = opportunities[:max_opportunities]
+    # Summary limits must not starve enrichment or the decision registry.
     counts["eligibleReviewOpportunities"] = eligible_opportunities
     counts["reviewOpportunitiesLimit"] = max_opportunities
     counts["reviewOpportunities"] = len(opportunities)
@@ -981,7 +989,8 @@ def build_queue(
         "policy": {
             "nearFieldRadiusDegrees": radius_deg,
             "preferredDiscoveryAgeDays": 30,
-            "maximumDiscoveryAgeDays": max_age_days,
+            "maximumDiscoveryAgeDays": 90 if early_opportunities else max_age_days,
+            "earlyOpportunityReview": early_opportunities,
             "preferredDiscoveryMagnitude": 18.5,
             "watchDiscoveryMagnitude": watch_magnitude,
             "maxReviewOpportunities": max_opportunities,
@@ -989,6 +998,7 @@ def build_queue(
         },
         "counts": {key: counts[key] for key in ordered_count_keys},
         "opportunities": opportunities,
+        "exclusionAudit": exclusion_audit,
     }
 
 
@@ -1650,7 +1660,7 @@ def render_markdown(queue: dict[str, object]) -> str:
         "",
         f"- {counts['reviewOpportunities']} review opportunities: {counts['urgent']} urgent, {counts['watch']} watch, {counts['expired']} expired",
         f"- Recommendations: {counts.get('recommendedApprove', 0)} approve, {counts.get('recommendedHold', 0)} hold, {counts.get('recommendedReject', 0)} reject",
-        f"- {counts['eligibleReviewOpportunities']} eligible opportunities before the top-{counts['reviewOpportunitiesLimit'] or 'all'} review cap",
+        f"- {counts['eligibleReviewOpportunities']} eligible opportunities retained; requested summary limit: {counts['reviewOpportunitiesLimit'] or 'all'} (no candidate truncation)",
         f"- {counts['rawRows']} staged rows collapsed to {counts['uniqueObjects']} unique TNS objects ({counts['duplicateRowsCollapsed']} duplicate/change rows)",
         f"- {counts['contaminantsRejected']} known contaminants rejected before cross-match",
         "",
@@ -1934,11 +1944,13 @@ def main() -> int:
     parser.add_argument("--radius-deg", type=float, default=2.0)
     parser.add_argument("--max-age-days", type=int, default=45)
     parser.add_argument("--watch-magnitude", type=float, default=19.5)
+    parser.add_argument("--early-opportunities", action="store_true",
+                        help="Retain 90-day near-field candidates without a discovery-brightness gate; review only.")
     parser.add_argument(
         "--max-opportunities",
         type=int,
         default=0,
-        help="Limit output to the top N sorted review opportunities; 0 means unlimited.",
+        help="Record a summary limit only; all eligible candidates remain available for review/enrichment.",
     )
     parser.add_argument("--fetch-days", type=int, default=0)
     parser.add_argument("--staging-dir", type=Path, default=Path("work/tns"))
@@ -2068,6 +2080,7 @@ def main() -> int:
         max_age_days=args.max_age_days,
         watch_magnitude=args.watch_magnitude,
         max_opportunities=args.max_opportunities,
+        early_opportunities=args.early_opportunities,
     )
     if args.tns_details_file:
         apply_tns_details_file(queue, args.tns_details_file)
