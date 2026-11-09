@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20261102-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261109-aerith",
   "packageRole": "comet",
   "shardID": "COMET_78P",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "78P/Gehrels",
     "aerithName": "78P/Gehrels 2",
     "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
-    "generatedAt": "2026-11-02T10:27:16Z",
+    "generatedAt": "2026-11-09T10:26:51Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-10-31",
+      "referenceDate": "2026-11-07",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-10-31",
-      "aerithNextUsefulDate": "2026-11-07",
+      "aerithCurrentDate": "2026-11-07",
+      "aerithNextUsefulDate": "2026-11-14",
       "aerithCurrentMagnitude": 13.9,
       "aerithNextMagnitude": 13.9,
       "currentBestAltitudeDegreesByHemisphere": {
         "north": 68.0,
-        "south": 34.0
+        "south": 36.0
       },
       "nextBestAltitudeDegreesByHemisphere": {
         "north": 68.0,
-        "south": 36.0
+        "south": 38.0
       },
-      "futureUsefulStartDate": "2026-10-31",
+      "futureUsefulStartDate": "2026-11-07",
       "futureUsefulEndDate": "2027-02-08",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 100
+      "daysUntilFutureUsefulEnd": 93
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-10-31",
+      "referenceDate": "2026-11-07",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 15.153,
-      "currentSampleDate": "2026-10-31",
+      "currentMagnitudeEstimate": 15.151,
+      "currentSampleDate": "2026-11-07",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-10-31",
+      "firstFutureUsefulDate": "2026-11-07",
       "lastFutureUsefulDate": "2027-02-08",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 100,
+      "daysUntilUsefulEnd": 93,
       "brightestMagnitude": 13.2,
       "brightestDate": "2026-08-08",
       "faintestMagnitude": 19.22,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0078P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-11-02T10:27:16Z",
+      "generatedAt": "2026-11-09T10:26:51Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -110,8 +110,8 @@
         "commentary": "Now it is 13.3 mag (Oct. 13, Thomas Lehmann). Fading slowly. It stays observable in good condition."
       },
       {
-        "id": "78P-2026-10-31-north-weekly-1",
-        "date": "2026-10-31",
+        "id": "78P-2026-11-07-north-weekly-1",
+        "date": "2026-11-07",
         "magnitude": 13.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
@@ -121,8 +121,8 @@
         "magnitudeDelta": 0.6
       },
       {
-        "id": "78P-2026-11-07-north-weekly-2",
-        "date": "2026-11-07",
+        "id": "78P-2026-11-14-north-weekly-2",
+        "date": "2026-11-14",
         "magnitude": 13.9,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
@@ -135,8 +135,8 @@
     "brightnessChart": {
       "lookbackDays": 90,
       "availableStartDate": "2026-10-13",
-      "availableEndDate": "2026-11-07",
-      "actualDaySpan": 25,
+      "availableEndDate": "2026-11-14",
+      "actualDaySpan": 32,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
@@ -153,8 +153,8 @@
           "commentary": "Now it is 13.3 mag (Oct. 13, Thomas Lehmann). Fading slowly. It stays observable in good condition."
         },
         {
-          "id": "78P-2026-10-31-north-weekly-1",
-          "date": "2026-10-31",
+          "id": "78P-2026-11-07-north-weekly-1",
+          "date": "2026-11-07",
           "magnitude": 13.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
@@ -164,8 +164,8 @@
           "magnitudeDelta": 0.6
         },
         {
-          "id": "78P-2026-11-07-north-weekly-2",
-          "date": "2026-11-07",
+          "id": "78P-2026-11-14-north-weekly-2",
+          "date": "2026-11-14",
           "magnitude": 13.9,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
@@ -178,11 +178,11 @@
     },
     "brightnessTrend": {
       "currentMagnitude": 13.9,
-      "currentDate": "2026-11-07",
-      "currentPointID": "78P-2026-11-07-north-weekly-2",
+      "currentDate": "2026-11-14",
+      "currentPointID": "78P-2026-11-14-north-weekly-2",
       "comparisonMagnitude": 13.9,
-      "comparisonDate": "2026-10-31",
-      "comparisonPointID": "78P-2026-10-31-north-weekly-1",
+      "comparisonDate": "2026-11-07",
+      "comparisonPointID": "78P-2026-11-07-north-weekly-1",
       "comparisonWindowDays": 7,
       "deltaMagnitude": 0.0,
       "direction": "stable",
