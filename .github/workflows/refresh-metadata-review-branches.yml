@@ -1,0 +1,84 @@
+name: Refresh metadata review branches
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - v1/channels/stable/manifest.json
+      - .github/workflows/refresh-metadata-review-branches.yml
+      - scripts/reconcile_metadata_manifest.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - branch: automation/aerith-comet-metadata
+            family: cometDetailMetadata
+          - branch: automation/tns-transient-review
+            family: transientEventFeed
+    concurrency:
+      group: refresh-metadata-review-${{ matrix.family }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: refs/heads/main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh the open same-repository PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ matrix.branch }}
+          FAMILY: ${{ matrix.family }}
+        run: |
+          set -euo pipefail
+          head=$(gh pr list --state open --base main --head "$BRANCH" \
+            --json headRefOid,isCrossRepository \
+            --jq '.[] | select(.isCrossRepository == false) | .headRefOid')
+          if [[ -z "$head" ]]; then
+            echo "No open review PR for $BRANCH."
+            exit 0
+          fi
+
+          git fetch origin main "$BRANCH"
+          if [[ "$(git rev-parse "origin/$BRANCH")" != "$head" ]]; then
+            echo "::error::Review branch moved during lookup; retry against its new head."
+            exit 1
+          fi
+          base=$(git rev-parse origin/main)
+          if git merge-base --is-ancestor "$base" "$head"; then
+            echo "Review branch already includes main."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          scratch=$(mktemp -d)
+          trap 'git worktree remove --force "$scratch/review" || true; rmdir "$scratch"' EXIT
+          git worktree add --detach "$scratch/review" "$head"
+          review="$scratch/review"
+          manifest=v1/channels/stable/manifest.json
+          if ! git -C "$review" merge --no-commit --no-ff "$base"; then
+            if [[ "$(git -C "$review" diff --name-only --diff-filter=U)" != "$manifest" ]]; then
+              echo "::error::Non-manifest merge failure; curator review required."
+              exit 1
+            fi
+          fi
+
+          # Run trusted main code, never scripts from the review branch.
+          python scripts/reconcile_metadata_manifest.py "$review" "$FAMILY"
+          git -C "$review" add -- "$manifest"
+          git -C "$review" commit -m "Refresh metadata review against main"
+          # Never overwrite a producer or curator push that arrived during the refresh.
+          git -C "$review" push origin "HEAD:refs/heads/$BRANCH"
