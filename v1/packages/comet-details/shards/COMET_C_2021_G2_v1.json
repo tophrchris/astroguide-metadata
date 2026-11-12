@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20261102-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261109-aerith",
   "packageRole": "comet",
   "shardID": "COMET_C_2021_G2",
   "record": {
@@ -10,23 +10,23 @@
     "displayName": "C/2021 G2 (ATLAS)",
     "aerithName": "C/2021 G2 ( ATLAS )",
     "detailURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
-    "generatedAt": "2026-11-02T10:27:16Z",
+    "generatedAt": "2026-11-09T10:26:51Z",
     "visibilitySummary": {
       "state": "notCurrentlyUseful",
-      "referenceDate": "2026-10-31",
+      "referenceDate": "2026-11-07",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-10-31",
+      "aerithCurrentDate": "2026-11-07",
       "aerithNextUsefulDate": null,
       "aerithCurrentMagnitude": 16.5,
-      "aerithNextMagnitude": 16.5,
+      "aerithNextMagnitude": 16.6,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 34.0,
-        "south": 2.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 30.0,
         "south": -5.0
+      },
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 26.0,
+        "south": -11.0
       },
       "futureUsefulStartDate": null,
       "futureUsefulEndDate": null,
@@ -40,10 +40,10 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-10-31",
+      "referenceDate": "2026-11-07",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 17.257,
-      "currentSampleDate": "2026-10-31",
+      "currentMagnitudeEstimate": 17.294,
+      "currentSampleDate": "2026-11-07",
       "currentSampleStatus": "tooFaint",
       "firstFutureUsefulDate": null,
       "lastFutureUsefulDate": null,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/2021G2/2021G2.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-11-02T10:27:16Z",
+      "generatedAt": "2026-11-09T10:26:51Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -110,8 +110,8 @@
         "commentary": "Now it is 16.1 mag (Oct. 15, Toru Yusa). It stays 17 mag for a while. It locates somewhat low in the Northern Hemisphere. But it will become high in winter. In the Southern Hemisphere, it is not observable now, but it will appear in February."
       },
       {
-        "id": "C/2021G2-2026-10-31-north-weekly-1",
-        "date": "2026-10-31",
+        "id": "C/2021G2-2026-11-07-north-weekly-1",
+        "date": "2026-11-07",
         "magnitude": 16.5,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
@@ -121,22 +121,22 @@
         "magnitudeDelta": 0.4
       },
       {
-        "id": "C/2021G2-2026-11-07-north-weekly-2",
-        "date": "2026-11-07",
-        "magnitude": 16.5,
+        "id": "C/2021G2-2026-11-14-north-weekly-2",
+        "date": "2026-11-14",
+        "magnitude": 16.6,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.0
+        "magnitudeDelta": 0.1
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
       "availableStartDate": "2026-10-15",
-      "availableEndDate": "2026-11-07",
-      "actualDaySpan": 23,
+      "availableEndDate": "2026-11-14",
+      "actualDaySpan": 30,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
@@ -153,8 +153,8 @@
           "commentary": "Now it is 16.1 mag (Oct. 15, Toru Yusa). It stays 17 mag for a while. It locates somewhat low in the Northern Hemisphere. But it will become high in winter. In the Southern Hemisphere, it is not observable now, but it will appear in February."
         },
         {
-          "id": "C/2021G2-2026-10-31-north-weekly-1",
-          "date": "2026-10-31",
+          "id": "C/2021G2-2026-11-07-north-weekly-1",
+          "date": "2026-11-07",
           "magnitude": 16.5,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
@@ -164,27 +164,27 @@
           "magnitudeDelta": 0.4
         },
         {
-          "id": "C/2021G2-2026-11-07-north-weekly-2",
-          "date": "2026-11-07",
-          "magnitude": 16.5,
+          "id": "C/2021G2-2026-11-14-north-weekly-2",
+          "date": "2026-11-14",
+          "magnitude": 16.6,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.0
+          "magnitudeDelta": 0.1
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 16.5,
-      "currentDate": "2026-11-07",
-      "currentPointID": "C/2021G2-2026-11-07-north-weekly-2",
+      "currentMagnitude": 16.6,
+      "currentDate": "2026-11-14",
+      "currentPointID": "C/2021G2-2026-11-14-north-weekly-2",
       "comparisonMagnitude": 16.5,
-      "comparisonDate": "2026-10-31",
-      "comparisonPointID": "C/2021G2-2026-10-31-north-weekly-1",
+      "comparisonDate": "2026-11-07",
+      "comparisonPointID": "C/2021G2-2026-11-07-north-weekly-1",
       "comparisonWindowDays": 7,
-      "deltaMagnitude": 0.0,
+      "deltaMagnitude": 0.1,
       "direction": "stable",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
