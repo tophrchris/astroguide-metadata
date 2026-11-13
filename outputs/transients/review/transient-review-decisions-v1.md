@@ -2,12 +2,12 @@
 
 > **Merge-to-publish contract:** the generated runtime feed contains only active, current-evidence, safety-eligible approved entries. Merging publishes that set through dynamic metadata. Pending, hold, rejected, expired and safety-excluded entries are not published.
 
-- **Approved and active in runtime:** 54
-- **Pending review:** 568
+- **Approved and active in runtime:** 53
+- **Pending review:** 569
 - **On hold:** 0
 - **Rejected:** 0
 - **Approved but expired:** 1
-- **Automatic classified-score approvals:** 37
+- **Automatic classified-score approvals:** 36
 - **Rapid-rise approval / notifications:** disabled
 - **Approved entries withheld by publication safety:** 2
 
@@ -18,7 +18,7 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [SN2026wfv](https://www.wis-tns.org/object/2026wfv) |  | 19.149 | SN Ic-BL | NGC613 (1.86361 deg) | 2026-10-24T03:50:32Z |
 | Approved | [SN2026wih](https://www.wis-tns.org/object/2026wih) |  | 18.48 | SN Ia | IC 1101 (0.32737 deg) | 2026-10-25T19:48:40Z |
 | Pending | [TDE2026yxi](https://www.wis-tns.org/object/2026yxi) |  | 19.405 | TDE-featureless | NGC6666 (0.22418 deg) | 2026-11-11T08:57:01Z |
-| Approved (automatic) | [SN2026zbq](https://www.wis-tns.org/object/2026zbq) |  | 19.3945 | SN II | IC 1613 (0.87645 deg) | 2026-11-13T11:18:34Z |
+| Pending | [SN2026zbq](https://www.wis-tns.org/object/2026zbq) |  | 19.3945 | SN II | IC 1613 (0.87645 deg) | 2026-11-13T11:18:34Z |
 | Approved | [SN2026zhu](https://www.wis-tns.org/object/2026zhu) |  | 18.727 | SN Ia | NGC797 (0.45778 deg) | 2026-11-18T03:39:10Z |
 | Approved | [SN2026zvc](https://www.wis-tns.org/object/2026zvc) |  | 18.226 | SN Ia | IC2158 (1.11476 deg) | 2026-11-23T02:41:46Z |
 | Approved | [SN2026zwj](https://www.wis-tns.org/object/2026zwj) |  | 17.62 | SN IIP | IC179 (1.98499 deg) | 2026-11-22T21:07:44Z |
