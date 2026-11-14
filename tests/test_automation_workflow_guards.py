@@ -106,6 +106,25 @@ class AutomationWorkflowGuardsTests(unittest.TestCase):
             publish,
         )
 
+    def test_tns_pr_body_enforces_total_github_size_budget(self):
+        _, steps = workflow_steps("update-tns-transient-review.yml")
+        publish = dict(steps)["Open or update review pull request"]
+        self.assertIn("body_limit=60000", publish)
+        self.assertIn("append_markdown_section", publish)
+        self.assertIn('if (( body_bytes > body_limit )); then', publish)
+        self.assertIn("Decision registry summary", publish)
+        self.assertIn("Latest review dossier", publish)
+
+    def test_tns_existing_unpublished_branch_can_recreate_missing_pr(self):
+        _, steps = workflow_steps("update-tns-transient-review.yml")
+        publish = dict(steps)["Open or update review pull request"]
+        self.assertIn('git diff --quiet origin/main...HEAD', publish)
+        self.assertIn('branch_has_diff=true', publish)
+        self.assertIn(
+            'elif [[ "$has_changes" == true || "$branch_has_diff" == true ]]',
+            publish,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
