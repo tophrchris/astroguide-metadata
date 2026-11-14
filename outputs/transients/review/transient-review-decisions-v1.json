@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "family": "tnsTransientReviewDecisions",
-  "generatedAtUTC": "2026-11-14T13:21:08Z",
+  "generatedAtUTC": "2026-11-14T13:27:56Z",
   "instructions": "Set status to approved, hold, or rejected and record decidedBy/decidedAtUTC. Approved entries with current evidence are materialized into the runtime feed; merging the review PR publishes that generated feed through stable metadata.",
   "decisions": [
     {
@@ -23,7 +23,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6ada640bd123e393",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -46,7 +46,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f4a288ca3d8fd093",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -68,7 +68,7 @@
           "invalid_or_inactive_discovery_window"
         ],
         "inputEvidenceHash": "d683b3329a1044d4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z"
@@ -91,7 +91,7 @@
           "invalid_or_inactive_discovery_window"
         ],
         "inputEvidenceHash": "3334e7a949bdd4c5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z"
@@ -112,7 +112,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "bc90fcb60f98db52",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -132,7 +132,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "3cd5668371657580",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -152,7 +152,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "e05443afd9439d3d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -172,7 +172,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "c3c1613f9b42bc64",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -192,7 +192,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "077df478b2852bc4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -212,7 +212,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "913d9b298681482a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -232,7 +232,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "1291bafc89a0a20f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -275,7 +275,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "1a41abed1efdb075",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -321,7 +321,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b6c79714e9211ef7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -341,7 +341,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "cc8be27b40e738ba",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -384,7 +384,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "37307faa18101717",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -429,7 +429,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "0bcbda419349d0ba",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -449,7 +449,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "eb0f35b18126dbea",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -471,7 +471,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "baf8f6e9fd16ac17",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -491,7 +491,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "6f089a5e6dc9acb0",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -514,7 +514,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2db872e149ae88a0",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -536,7 +536,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "0e5b77c66db975e9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -558,7 +558,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "18970d82d7b93671",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -580,7 +580,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "ce5a41dc5800d904",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -602,7 +602,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "081c0407a70e8c84",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -624,7 +624,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "d5933941f601fd71",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -646,7 +646,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "e660d6a00d8f4c40",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -668,7 +668,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "646bc3c285f85974",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -688,7 +688,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "eb42567a3167a5bd",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -733,7 +733,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "c4f41abd79149195",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -755,7 +755,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "a6a262fe750fc173",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -777,7 +777,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "cbadfc69a901ad64",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -799,7 +799,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "8937c6b85163b9b8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -819,7 +819,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "c3f904e5e2151a31",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -864,7 +864,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "be2923c3a6eb2f0f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -887,7 +887,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "52c43f1abeca96b5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -909,7 +909,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "7a70e0f4c722b9e8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -931,7 +931,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "84f7489f2da8773f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -953,7 +953,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "60dbeb4131f1a18b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -975,7 +975,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "217b9a6fb30ad309",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -995,7 +995,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "4700a07e83ef9057",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1040,7 +1040,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "cd8b1c4f737fa9b8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1062,7 +1062,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "17ca7de7e4805d11",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1084,7 +1084,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "1fc676eec3c2e946",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1106,7 +1106,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "608074450fd14e7b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1128,7 +1128,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "5c2fffa55fa5ad17",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1151,7 +1151,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "fe8532bf7920af4a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1171,7 +1171,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "94352f190fa852c7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1214,7 +1214,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "c4f2f45a54101c70",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1259,7 +1259,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "8ed55846c2ed1cae",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1283,7 +1283,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "042fc593ca9e4533",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1306,7 +1306,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "92ae978b2bea792c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1328,7 +1328,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "a537539cf74333ca",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1350,7 +1350,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "156bb0184a90baed",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1372,7 +1372,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "e2a33d0204a3afb8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1396,7 +1396,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "83df5d4be3c9303e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1416,7 +1416,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "812994887416ce4e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1462,7 +1462,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2acf503eb84b464b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1482,7 +1482,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "166ef841ffeda337",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1525,7 +1525,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "1038711dfff98d04",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1571,7 +1571,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "bdbb4a8cdb716f8b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1593,7 +1593,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "80099b53bd0161fe",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1615,7 +1615,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "b418ef65ff8b44f5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1635,7 +1635,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "6b6c862efbf73850",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -1681,7 +1681,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "afd711e02b55fe48",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1703,7 +1703,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "d1a558a0307cf984",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1725,7 +1725,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "3967497b59638b9b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1747,7 +1747,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "29b91cf7c0db50da",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1769,7 +1769,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "89787e9d2db74e92",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1793,7 +1793,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ae5f0f842a907e89",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1815,7 +1815,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c36b6d77d967ed25",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1835,7 +1835,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "b173ffcd95dd6e08",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-07T13:21:53Z",
@@ -1881,7 +1881,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "15e23057c0fe56e3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1904,7 +1904,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ecabd88ab56fa45c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1926,7 +1926,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "e4756a45877de65b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1948,7 +1948,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "029cd41994a4bdaf",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1970,7 +1970,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "bf16a6d300f711aa",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -1992,7 +1992,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "312238f734edb314",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2012,7 +2012,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "5f2c00226d48ad3c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-07T13:21:53Z",
@@ -2055,7 +2055,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "4289ed8102484816",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-07T13:21:53Z",
@@ -2098,7 +2098,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "c6ce1ae128aa4ce3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -2143,7 +2143,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "30466a73ed3b5dce",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2167,7 +2167,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4c968b09790de26d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2190,7 +2190,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "28ac9acf903e5a8e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2212,7 +2212,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "003e1837dbeda9ed",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2235,7 +2235,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c118fc0b82e5ae8c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2255,7 +2255,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "b5342198c9233b7d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -2301,7 +2301,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6cd06ebd5019905d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2324,7 +2324,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "de92529bd8726ec4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2344,7 +2344,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "9c8a3ac522d1fcfb",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-07T13:21:53Z",
@@ -2389,7 +2389,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "cc2faae574c4ad0f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2409,7 +2409,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "8c7ef43cde328eee",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -2452,7 +2452,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "9e561e08a0705da7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-08T13:20:51Z",
@@ -2497,7 +2497,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "4c6357eda18025d7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2519,7 +2519,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4806e465d4dee3aa",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2539,7 +2539,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "0d408d026b9cb4f5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-07T13:21:53Z",
@@ -2584,7 +2584,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "aa911135a15287df",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2606,7 +2606,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "f7fc595fc1ce4c3f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2628,7 +2628,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "902942b44ca525b9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2650,7 +2650,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "74c759890947d61a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2670,7 +2670,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "93f6417251320b00",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -2716,7 +2716,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4a82da07b2ef1c44",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2739,7 +2739,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f0c9174ef052c944",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2759,7 +2759,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "b42d45e0b5e83c36",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -2802,7 +2802,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "eb0bd7fe239dc8af",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-11T13:21:11Z",
@@ -2845,7 +2845,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "8403959596d5c6b2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -2891,7 +2891,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3224431268661ab6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2914,7 +2914,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "72e9d54f124a8008",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2937,7 +2937,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "80867c1d990ab02e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2960,7 +2960,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7a6383063ca58100",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -2982,7 +2982,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e48183c62cde03d9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3004,7 +3004,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7973756b0307d3b2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3024,7 +3024,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "90022157a818d65b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-09T13:21:52Z",
@@ -3067,7 +3067,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "eb576ce86fc431f7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -3114,7 +3114,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "575c26582bf6904c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3136,7 +3136,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "a30b91a37d830e90",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3159,7 +3159,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "60283f3026a81d16",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3182,7 +3182,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e03ab0ac7dd5f263",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3205,7 +3205,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "35f9302f6fe9a869",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3228,7 +3228,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a9ecf8b69d11c1f0",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3251,7 +3251,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9469a32327eb8c97",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3274,7 +3274,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a396ca8551b74f07",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3297,7 +3297,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7274cd80c53a5834",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3321,7 +3321,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3222bd8976f0bd12",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3344,7 +3344,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d40d3664ace287b9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3367,7 +3367,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "976e2ddd5d20edf2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3390,7 +3390,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4d37640e352d056d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3412,7 +3412,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5312c0dbcad9f292",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3435,7 +3435,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f06d2364f3cc560e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3458,7 +3458,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "162f46e0ee0a4b47",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3481,7 +3481,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "38910d384b01c0d3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3504,7 +3504,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "56baea5c5c68448b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3524,7 +3524,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "6326c1e5f8e4a655",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-07T13:21:53Z",
@@ -3567,7 +3567,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "9f59b2bb8215238e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-07T13:21:53Z",
@@ -3614,7 +3614,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fe8f9f1605db37b1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3636,7 +3636,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "fe3313926040c110",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3659,7 +3659,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "89d880048c1dcc6a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3682,7 +3682,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "080ba3d55d21e443",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3704,7 +3704,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "bc135288727017b9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3724,7 +3724,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "aa7e8ce876c9aa26",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-07T13:21:53Z",
@@ -3770,7 +3770,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "871c284774b3bdc7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3793,7 +3793,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8bb76a7278c0e86d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3816,7 +3816,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9fb295fe39c37a7e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3839,7 +3839,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2973f2f7b896d19c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3862,7 +3862,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "20118e5478e09743",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3885,7 +3885,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "dfc8861766fd413d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3908,7 +3908,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7e06bcab5300cfc3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3931,7 +3931,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "29a3bf963ffb6604",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3954,7 +3954,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a6fc4d200ffc1d5a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -3977,7 +3977,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "86063544011072c0",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4000,7 +4000,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fa1ca8844b751b9c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4023,7 +4023,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "488ab1c1629c88a2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4046,7 +4046,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "131e8eb2c18fd61b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4069,7 +4069,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "be2fd4436df56382",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4092,7 +4092,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e178281e1e74921a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4115,7 +4115,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "dbcf44953d71dca2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4138,7 +4138,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "164ef54ad8f1f658",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4161,7 +4161,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "acb10f1a07b7b111",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4184,7 +4184,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ac90737b8f40e156",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4207,7 +4207,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2e89063d7cb46c0e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4230,7 +4230,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b1e237e7ea7dfda7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4253,7 +4253,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "04b52374ab92856b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4276,7 +4276,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2e11b0b673806734",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4299,7 +4299,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e87153d192ad84c7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4323,7 +4323,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "afe62e20bfe87499",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4346,7 +4346,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "81a74fbc2a367912",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4370,7 +4370,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "75d6faf90f27eec8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4393,7 +4393,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "72f770b95b3ec65f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4416,7 +4416,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6b3cfef4c80a137e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4439,7 +4439,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "185d41511d3d1006",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4462,7 +4462,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c23edbc6e60d3649",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4485,7 +4485,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "beb3c9864163a072",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4508,7 +4508,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "850191505d9c8153",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4531,7 +4531,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2bc25a19f66426b6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4553,7 +4553,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "207d74a65c51ef97",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4575,7 +4575,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "6612e20593de31a5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4598,7 +4598,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "473edd491d89009c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4620,7 +4620,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "aa6f239b4e443c1a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4642,7 +4642,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "27f1db78d19341bb",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4665,7 +4665,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "06f2ad97f17f076f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4688,7 +4688,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2ad9e7d0ca68dd64",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4710,7 +4710,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "2f90d1bab819a843",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4733,7 +4733,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fa605652d23ca53b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4756,7 +4756,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3c798584c24c2a97",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4780,7 +4780,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "57dd44f3032eac16",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4803,7 +4803,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fd2d500f9446caef",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4826,7 +4826,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0021bedb78388147",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4849,7 +4849,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2f2238ecb935c0cb",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4872,7 +4872,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9284fe4f77206ac7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4894,7 +4894,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0b4bf52d70d57707",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4917,7 +4917,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "25c47dcce8c6764a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4940,7 +4940,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2f7503742b88e089",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4963,7 +4963,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c3782c6d6f9adbe4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -4986,7 +4986,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "806f14fc1727cb70",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5009,7 +5009,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d65ce1cc6e29f2c7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5032,7 +5032,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "271f3ef48b88c776",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5054,7 +5054,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "b79cb5d58cd1b135",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5077,7 +5077,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4dc70b0fae96a68c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5100,7 +5100,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "39838f7ffe1ed628",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5123,7 +5123,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "16b8430d840e049f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5146,7 +5146,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "43f9716c6abb58d3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5169,7 +5169,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "080ec839601b536d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5192,7 +5192,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "145364872ed51acc",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5214,7 +5214,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "9988938eb16e833c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5237,7 +5237,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ea25970216be9814",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5260,7 +5260,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8c676fdc75a60271",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5283,7 +5283,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "24c78c56fbd088f1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5306,7 +5306,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "095d332298eeaf21",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5329,7 +5329,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ecc5878d7f71438b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5351,7 +5351,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "20bdc9068ff5e2e4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5374,7 +5374,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2c8f5fe865c7463e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5397,7 +5397,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5dfaede8d542d837",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5420,7 +5420,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b9790cd4aedcfa39",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5443,7 +5443,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "880ec7fdca9887ce",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5466,7 +5466,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3315ae52cad0172f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5489,7 +5489,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ed629c891e0ef018",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5512,7 +5512,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e9141e5ff18bff33",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5535,7 +5535,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5fbaa493742afa3f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5558,7 +5558,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4906aa25e6d4a376",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5581,7 +5581,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fdf63e84cc3885a4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5604,7 +5604,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "086bff33b442736d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5627,7 +5627,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d8855ecfe6ce1167",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5650,7 +5650,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "169098964290d630",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5673,7 +5673,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ca5b3d7ddb8eff00",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5695,7 +5695,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "401224aef229d1ff",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5717,7 +5717,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "2f95c87c0ad0fff5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5740,7 +5740,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9493d7dd94d5ef62",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5763,7 +5763,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "24b61514795e7bbc",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5786,7 +5786,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "030ce50931be9d8c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5809,7 +5809,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "671ad8a9bb074b13",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5832,7 +5832,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7deeb919ce4b81f7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5855,7 +5855,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c0c1b435fdbb3ac2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5877,7 +5877,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "09ead7dae34b4978",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5897,7 +5897,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "d72be490fee8c0bf",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-07T13:21:53Z",
@@ -5943,7 +5943,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e3ced2ecba349149",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5966,7 +5966,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f26a29ce96883fed",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -5989,7 +5989,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "885d665318845947",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6012,7 +6012,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2951abe9d39ec08e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6032,7 +6032,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "ea34c694d8993e3e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-06T22:22:05Z",
@@ -6078,7 +6078,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ad583d5d9a5fcd92",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6102,7 +6102,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1103b62cf414929f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6125,7 +6125,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ca1ad15126af0360",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6149,7 +6149,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3e51aa44e01d3139",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6173,7 +6173,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5bb3db175e443cf8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6196,7 +6196,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "088e6aabc58d6c56",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6219,7 +6219,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a9237ac2e3e9f810",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6242,7 +6242,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d21241a72bdde020",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6266,7 +6266,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "dfc41a3af0c81c38",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6289,7 +6289,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1f19cb6c881b1f4b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6312,7 +6312,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d7078f0cf31e6699",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6335,7 +6335,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a93b0f5163b3a466",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6359,7 +6359,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "609728912729e7d1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6382,7 +6382,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2cfabb0acdec3619",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6405,7 +6405,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4368ceeff5429b69",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6428,7 +6428,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5924cffa40092b36",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6451,7 +6451,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "eed810c76f87d3a1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6475,7 +6475,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2c39165561d93aed",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6498,7 +6498,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "51a62a41af9d061b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6522,7 +6522,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b266a6e1d162021b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6545,7 +6545,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b569a122af248001",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6568,7 +6568,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0be49df4c585036b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6590,7 +6590,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "02037b4bf444afc3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-09T13:21:52Z",
@@ -6636,7 +6636,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e6bc8887bc1ad6d9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6659,7 +6659,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a25fd3b22a4d9161",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6682,7 +6682,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "972be65e00cffae7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6705,7 +6705,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "eaa614c82a8d1ebf",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6728,7 +6728,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9d0b08caa6dfdf2e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6750,7 +6750,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "4d09349c1175613a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6773,7 +6773,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1d46747c6b184dde",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6796,7 +6796,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1f35b90c9acabde5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6819,7 +6819,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e6e25c5d8017722c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6842,7 +6842,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "10e88bb4a514877b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6864,7 +6864,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "18690d489db9275f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6887,7 +6887,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c102a12455cf1450",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6910,7 +6910,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2c4bc7881ef34694",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6932,7 +6932,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1247e80dc83e5cfd",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6955,7 +6955,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ce977e038ab443f7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -6977,7 +6977,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "429498b7514833f3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7000,7 +7000,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b540d22d363b4ea4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7022,7 +7022,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "f3f93d27df184ab5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7045,7 +7045,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c3406936e50655ef",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7068,7 +7068,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7d03a23bc822ff9b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7090,7 +7090,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "10818809bbf165e6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7113,7 +7113,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5c6f538e97a71918",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7135,7 +7135,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "22124cba9f640119",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7158,7 +7158,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "445990b97a52a877",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7181,7 +7181,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1c79eba5b99f431a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7204,7 +7204,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "25bc4bc64b62a948",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7228,7 +7228,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "651097e2eef72000",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7251,7 +7251,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "b7c8349ffd2dc86a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7274,7 +7274,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2b1d67f6ff422ad4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7297,7 +7297,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "481b966a085d23ba",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7320,7 +7320,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "7ef8a63d904a7def",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7342,7 +7342,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "a2573aeea15875fc",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7362,7 +7362,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "7d2df3cff7ffe90c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-09T13:21:52Z",
@@ -7408,7 +7408,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "680ac0101c0c1806",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7430,7 +7430,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "7addc6b7657d5578",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7452,7 +7452,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "dd1f7b29f2a79ebd",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7475,7 +7475,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b06f99289ab3c74f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7498,7 +7498,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "aa81a0c57aab9189",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7522,7 +7522,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fdb6200cbb0c6667",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7545,7 +7545,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "be48d3ad596ee4ff",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7567,7 +7567,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "2203cf3e2737d785",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7589,7 +7589,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "3172673a20e5cdf2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7612,7 +7612,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "797728d597f3d1cc",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7635,7 +7635,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d3ade0dec1424eca",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7658,7 +7658,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "92925f39ffaf1091",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7681,7 +7681,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f484e3f1839bd146",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7704,7 +7704,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8f1a6e8b281cb4dc",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7727,7 +7727,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "674845c84b9286b3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7750,7 +7750,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a9cab008b052d9cc",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7773,7 +7773,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9402f3581b3a1919",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7796,7 +7796,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "16b7a8e3e7120b1b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7819,7 +7819,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5fefea09e2dc506a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7842,7 +7842,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "80fc640185785c4e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7865,7 +7865,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9159ae612017e37d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7888,7 +7888,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a6f1c1f91aa8459d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7911,7 +7911,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6efc21ae90de5098",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7934,7 +7934,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "760707e14a94c3b7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7957,7 +7957,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4817de6fba63c7b9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -7980,7 +7980,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "87bf6a7a478331bb",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8003,7 +8003,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ebbeef60e37eb415",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8026,7 +8026,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c17fc48ae3a14516",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8048,7 +8048,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "5c1e5949932f0a08",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8071,7 +8071,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "342e01df5b0e5ed9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8094,7 +8094,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "23a3b5a8e444864d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8118,7 +8118,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "14b4050500ea0fe1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8142,7 +8142,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6edcd075baecd424",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8165,7 +8165,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "89dc18fe9cd01681",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8187,7 +8187,7 @@
           "source_or_catalog_warning"
         ],
         "inputEvidenceHash": "ffcc56db778bfd14",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8209,7 +8209,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "2992aa3bb5860951",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8232,7 +8232,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3df77c97f1f84233",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8256,7 +8256,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c3c72d8baeda1fff",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8279,7 +8279,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "660b8bff63976486",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8303,7 +8303,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a22e8f5ce4ee4b89",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8323,7 +8323,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "2afac7f595f1bcb0",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-10T13:21:01Z",
@@ -8369,7 +8369,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f8dba92fb788faac",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8392,7 +8392,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1070ff04436d49b4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8415,7 +8415,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "22105e7fd7eff72b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8438,7 +8438,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f2329027eaaaad43",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8461,7 +8461,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8bcd139c68ef538b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8484,7 +8484,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "68d6fa3f928ffcbc",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8507,7 +8507,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5c83697f256fe612",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8530,7 +8530,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "881ce26cfb3c2cf2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8553,7 +8553,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2b6364f133170660",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8576,7 +8576,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5dbbb5b74cef8c35",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8599,7 +8599,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "231fc7a5e01731ec",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8622,7 +8622,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f2d53ae221015813",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8645,7 +8645,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6856bb3a4d061853",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8668,7 +8668,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "84247afad625cfa1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8691,7 +8691,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "077a0e0b0d6d4891",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8714,7 +8714,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e410fc931ccfa96b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8737,7 +8737,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "76d61096039a879e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8761,7 +8761,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4a4998a0ca172845",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8784,7 +8784,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fe3169e15d5e3674",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8808,7 +8808,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e42119397b8928be",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8831,7 +8831,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d9e6ca07b4010eeb",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8854,7 +8854,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "075d9a5ee6d1c559",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8877,7 +8877,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5a8e8312fde7875b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8900,7 +8900,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "f85d660bc32f935c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8923,7 +8923,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "55912d9038b00f5a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8946,7 +8946,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7d8a253690c82851",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8969,7 +8969,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "e7d357af66dc9f32",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -8992,7 +8992,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7bcc6ae6f2e1db96",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9015,7 +9015,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "81a1076f73321dee",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9038,7 +9038,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7b02cf3f15c49d4a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9061,7 +9061,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5b26ccc51196f902",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9085,7 +9085,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1db1e63640681f8e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9108,7 +9108,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "cd11146a0493361d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9131,7 +9131,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3071dae2d3b2c3a1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9154,7 +9154,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "53c4058b5984335b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9176,7 +9176,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "51e9a06cbefb31b1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9200,7 +9200,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "dd2e2a1fc091d37b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9223,7 +9223,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3b6d1d0c9330b908",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9246,7 +9246,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b346deecfc2d5670",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9268,7 +9268,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "d6cd17b218de2a78",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9291,7 +9291,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e81adb2c6bc21283",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9314,7 +9314,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "bcef6b747914d316",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9338,7 +9338,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "bc6e0d7f20b38783",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9362,7 +9362,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "834e911adddc3340",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9385,7 +9385,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0e455e1ba762a141",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9408,7 +9408,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "40ccffe7d62be3b8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9431,7 +9431,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3747d401d5262c78",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9453,7 +9453,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "f823abb24e136706",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9476,7 +9476,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "42a8093760d8714e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9500,7 +9500,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "218dc8c7a00ba82c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9523,7 +9523,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8521b88e6d8cd301",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9546,7 +9546,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0fa231006cfb1bbe",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9569,7 +9569,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "77a8539a2ba326d2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9592,7 +9592,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "edffef16ccde9d43",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9615,7 +9615,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "49b0e47a94102661",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9638,7 +9638,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7c1966900f61cedb",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9661,7 +9661,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d707184e544b2387",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9684,7 +9684,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9076cfcd7d2b8169",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9707,7 +9707,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4b68d845369e92f1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9729,7 +9729,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "cdf33961f97a2b60",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9752,7 +9752,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "11b0cc755e42a6e3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9775,7 +9775,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "35951cfb866411d6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9798,7 +9798,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ad100c508199e396",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9821,7 +9821,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4be10ffce77ad804",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9844,7 +9844,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "664913981b75ad32",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9868,7 +9868,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c4b341f23675d6de",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9888,7 +9888,7 @@
         "eligible": true,
         "exclusionReasons": [],
         "inputEvidenceHash": "8cb0d79c79433094",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       },
       "firstScoreEligibleAtUTC": "2026-11-11T13:21:11Z",
@@ -9934,7 +9934,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "6497dcea9cd22bbd",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9956,7 +9956,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "367131e3d64b9496",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -9979,7 +9979,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f92cf7860960eaec",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10003,7 +10003,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ad4b701150dae28f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10026,7 +10026,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1c51e7d6887af787",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10049,7 +10049,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "291c599e6035a200",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10072,7 +10072,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5f292cadfdeb0749",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10095,7 +10095,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "385e6bd72984bd8e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10118,7 +10118,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "50dbcf9c199f31cd",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10141,7 +10141,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "23f0d844fd539b95",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10165,7 +10165,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e584befe683f0f2a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10188,7 +10188,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "2253ce19987c86af",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10211,7 +10211,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4b8f7b383b649dec",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10234,7 +10234,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c534851c224e64d7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10256,7 +10256,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "e60e8b675bcc0c73",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10279,7 +10279,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f2fbe82f548cda2d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10302,7 +10302,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ebe6d0f4319609d9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10325,7 +10325,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "89460ffeeae33a78",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10349,7 +10349,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8fe92f4d5ddcc9df",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10372,7 +10372,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8695b198b4e25cd5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10396,7 +10396,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7c32a266872e2e8f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10419,7 +10419,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "96e42b1d50a68fe5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10443,7 +10443,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9938028b0a059d70",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10467,7 +10467,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "10f51e5c6c7e3662",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10491,7 +10491,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f0d28eb9de3ea1a6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10515,7 +10515,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7ff92c395958a2a0",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10538,7 +10538,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "626e0a09f6690ae1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10561,7 +10561,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "888abeecf292e873",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10584,7 +10584,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a015428d704b606a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10608,7 +10608,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a032d696c4ebe02d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10631,7 +10631,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fc7529460639b650",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10655,7 +10655,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6a731f838e074583",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10678,7 +10678,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "021a5c19f946fbb1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10701,7 +10701,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3d5fb722aed083e7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10725,7 +10725,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6619c6ff8000e4c1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10748,7 +10748,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "780796bf9ef18cd6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10771,7 +10771,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d2fae26217dbd412",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10795,7 +10795,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8e48b04afa4d612c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10818,7 +10818,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8ef9f6159a61c90b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10841,7 +10841,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "384a00325cfe5119",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10864,7 +10864,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8593734b54e333db",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10887,7 +10887,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7b222386de5e7b89",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10910,7 +10910,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "dcb55e7d74f11991",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10933,7 +10933,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c32701f607f64ab1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10956,7 +10956,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4b2d0258077d1deb",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -10979,7 +10979,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e7eb2e0cd9da9b5e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11002,7 +11002,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f722d5219e134412",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11026,7 +11026,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5d13cdb21c07921d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11049,7 +11049,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9791543ad905ee35",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11072,7 +11072,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5b7b1d67c3ff8e87",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11095,7 +11095,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d4c8b1ce121e675e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11118,7 +11118,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2ef7dd1068759ce4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11140,7 +11140,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f2971838396ad7fd",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11163,7 +11163,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4009ba5f9cf29057",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11187,7 +11187,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "805f7f855277c657",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11210,7 +11210,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "84bd3488b7111bf1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11233,7 +11233,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6fba70f71156af7d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11256,7 +11256,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6e626c946991f519",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11279,7 +11279,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e984f1d456e40f5b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11302,7 +11302,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d190e939d74288e3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11325,7 +11325,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "bc890ed9734e27bd",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11348,7 +11348,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0202d4dbd38fa8ff",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11371,7 +11371,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5f0306094b1eeb70",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11393,7 +11393,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "7981a4d0c4cceba8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11416,7 +11416,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "08a0dc18edc67b90",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11438,7 +11438,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "4c6c0fcc0b8814e5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11461,7 +11461,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "168e253307ba4a95",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11484,7 +11484,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0ea73ecf78745f22",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11506,7 +11506,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "6ac0f4a65495d633",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11528,7 +11528,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "74045307b579c2b8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11551,7 +11551,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "677e03f59e538190",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11574,7 +11574,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "313016b6e0b93c4a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11598,7 +11598,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2db9f8cab0fc3a92",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11620,7 +11620,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "1cfb526fe6dd851d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11643,7 +11643,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4ab59f094c530d65",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11666,7 +11666,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9b71c4a2a6df94c5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11689,7 +11689,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "9a298ac58acebba9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11712,7 +11712,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9b667f53a6d0d258",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11735,7 +11735,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4ed61d33fa04d97a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11758,7 +11758,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1e22cd46c2039c80",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11780,7 +11780,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "d4d259df3acb4d55",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11803,7 +11803,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2409d32457d03c00",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11826,7 +11826,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b9b1798efbaf1507",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11849,7 +11849,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "310022867ea693f6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11872,7 +11872,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2e672d4dcee3fa6c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11896,7 +11896,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5134729ade3cd820",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11918,7 +11918,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "7f5b9e65757d1e33",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11941,7 +11941,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c8a122a66db0aa04",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11964,7 +11964,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "cb954394cb0b340f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -11987,7 +11987,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "997f3edd9a178c5a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12011,7 +12011,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3a8270b340b63997",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12034,7 +12034,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5fb08faa65c908fa",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12057,7 +12057,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4fedd736d0afba6b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12080,7 +12080,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "674fbdfa51150194",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12104,7 +12104,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4833cc33e72aae14",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12127,7 +12127,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "41cb0d66723a2cea",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12150,7 +12150,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "79fada92c774cf58",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12173,7 +12173,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "6529c6b7170ef799",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12195,7 +12195,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "be6ec0037593768e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12217,7 +12217,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "0e43e38da0cff4a5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12240,7 +12240,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6ebd7c1302c8019d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12262,7 +12262,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "a4e3a5722612f9fa",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12284,7 +12284,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "282b6f33b68e2137",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12307,7 +12307,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "92169fe107cd8254",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12331,7 +12331,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9759ce51bac92518",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12354,7 +12354,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b48f5a5aa5ca5e54",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12377,7 +12377,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "81944868b75f46ae",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12400,7 +12400,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c5686d0125909ef5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12423,7 +12423,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d04a2d31d1536652",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12446,7 +12446,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d26b75164b907bde",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12470,7 +12470,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "980c55f2eb6cfcb3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12494,7 +12494,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "141d1d29e29cb977",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12517,7 +12517,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4800c189fa052e32",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12540,7 +12540,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "bc8e80242f678332",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12563,7 +12563,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1ef91fe77fdee068",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12586,7 +12586,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "54a01a2581e47467",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12609,7 +12609,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6e52eddf46e0dcdb",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12632,7 +12632,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "eac78c508dc0c64c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12655,7 +12655,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e0abe14126f2f59b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12678,7 +12678,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b24b9badf666274b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12701,7 +12701,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "942d1c7a4522a11f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12724,7 +12724,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8449733d9099b039",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12747,7 +12747,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "729a1bb6a39ce1fa",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12770,7 +12770,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1f68fd11cb531dd9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12793,7 +12793,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ee23c49f8bf2c4a2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12817,7 +12817,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fb3c135f0dc6fd81",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12840,7 +12840,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1a6a190621baecda",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12863,7 +12863,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a0f0e8f28d795061",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12886,7 +12886,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e3b16cb149cd7c8a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12909,7 +12909,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "04e37bf02fbacc21",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12932,7 +12932,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "74938cc6f8209427",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12955,7 +12955,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fd46eac79e178905",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -12978,7 +12978,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "50fb3a6dc279e658",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13001,7 +13001,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4d78258155dd72a5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13024,7 +13024,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1b2319406abb128d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13047,7 +13047,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b8a5e5cd8f6d0a20",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13070,7 +13070,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "39af87921368a8ad",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13093,7 +13093,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "879dfb543049f05e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13116,7 +13116,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d74c2dff8062fd46",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13139,7 +13139,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a01e20d42e43de27",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13162,7 +13162,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "86f7f94ce63fe278",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13185,7 +13185,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b82a7c8eb60989d4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13208,7 +13208,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "50325a11ac8c704d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13231,7 +13231,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c144b5f04b5d32df",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13254,7 +13254,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "902bcb0e43f476e6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13277,7 +13277,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d2841c0edc43c102",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13300,7 +13300,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6864e463e7238a40",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13323,7 +13323,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "adc52faab2209ad7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13346,7 +13346,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2ca7a00f11aa6643",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13369,7 +13369,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5cde1bcb36d69247",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13391,7 +13391,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "bffe4014cbb0f55e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13414,7 +13414,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "dbd22940a5f7c1d8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13437,7 +13437,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5c3f4e114abbfe6a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13460,7 +13460,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "947190ca1adec49d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13483,7 +13483,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9e60d9e6b39536cd",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13506,7 +13506,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a92ea0c60648d209",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13529,7 +13529,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f899c3f093717c09",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13553,7 +13553,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5e99b43af7617861",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13576,7 +13576,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "04180299a2447c2d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13600,7 +13600,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "673a555a19b54d34",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13623,7 +13623,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "bb7cf8083cccb973",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13645,7 +13645,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "ff075fe68c894df1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13668,7 +13668,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2bda600aac431931",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13692,7 +13692,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f5aaac22470a93c7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13716,7 +13716,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "981188ff26b5192c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13739,7 +13739,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "50372f0d93d69e18",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13762,7 +13762,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "afd76d2218ce3e74",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13785,7 +13785,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ab5768a230d9e2b1",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13808,7 +13808,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6135f5fab9efeb3f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13831,7 +13831,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ad4fb510fc166881",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13854,7 +13854,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4da4fa7676c28d15",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13878,7 +13878,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5385653dfc663c05",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13901,7 +13901,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5c7fd9d5db00dc27",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13924,7 +13924,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a2919f0bc99af1d6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13947,7 +13947,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d3e116fd43d3bf8d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13970,7 +13970,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e604018f4175c4d5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -13993,7 +13993,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e5367774fc9c02cb",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14016,7 +14016,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b47f0661bf9a43ca",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14039,7 +14039,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "77b5d81dda6f1b20",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14063,7 +14063,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "952a0b081799ec94",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14086,7 +14086,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c2619dc344908dc2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14109,7 +14109,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "be9ffdcdb1112a57",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14132,7 +14132,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "22c0f98afc156e2f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14154,7 +14154,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "0ca03f1e7d27200b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14177,7 +14177,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "63600704ed6be74c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14200,7 +14200,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ca3a50790afa5ef6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14224,7 +14224,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0ca5550001c14b06",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14247,7 +14247,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "ae2ee9d96d449b9c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14270,7 +14270,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5a681f3b2f03b56e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14293,7 +14293,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e612c91d08860b09",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14315,7 +14315,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "b3cb43ea6fd02aa2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14339,7 +14339,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "12cbecfda7dc75ea",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14361,7 +14361,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "af9489bbae3f9b9b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14384,7 +14384,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "830fe1f43c4140a5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14407,7 +14407,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3a63d4604c514011",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14430,7 +14430,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "76dc0063c285e8ae",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14453,7 +14453,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3b7bc1bdec1c0ccd",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14476,7 +14476,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "276ffdc90d6dc1e7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14499,7 +14499,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c4da84c292621103",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14522,7 +14522,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0a221ca7d9ffa645",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14545,7 +14545,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b83be31e6f88c6b2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14568,7 +14568,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "dd69dcd2ad7b817a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14591,7 +14591,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "6935787744fcbe22",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14614,7 +14614,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "790cf264bcf854f0",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14636,7 +14636,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "b3741b42f48637ee",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14659,7 +14659,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0c2223916596004a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14683,7 +14683,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "3e676a5586ee0c7f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14706,7 +14706,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "99252be075af0104",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14730,7 +14730,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "38c96dac80f3e099",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14754,7 +14754,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "eaabf2d72c7ce5e4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14777,7 +14777,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "620d99e61c8269e4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14800,7 +14800,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "be49c1d3a7a8b75c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14824,7 +14824,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "59dbb31faf12ea4c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14848,7 +14848,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fadf7242fa1b1531",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14872,7 +14872,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b2d725c5f752c094",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14895,7 +14895,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6aba8f4b281e44e7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14918,7 +14918,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "faba41cfad589c48",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14941,7 +14941,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "bfcd987e6aafb61c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14964,7 +14964,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "24559e2ec79f403f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -14987,7 +14987,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "229003b52171288d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15010,7 +15010,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c1ba27b4dbbb421f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15034,7 +15034,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "71d8622f1c2ccb70",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15057,7 +15057,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "fa0ed6c56fc451fc",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15080,7 +15080,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1b265c980beb3b66",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15103,7 +15103,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5784b70bc8d80ba8",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15126,7 +15126,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e514a127e0527311",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15149,7 +15149,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1061574ccdb4c5f2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15171,7 +15171,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "267df4e8f46fb38f",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15194,7 +15194,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8d0813344be47077",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15216,7 +15216,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "dd7ce5c9e570af89",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15239,7 +15239,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9acc8e874595d965",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15262,7 +15262,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e4b14ee1c89db4e5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15285,7 +15285,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "aa2f811a780c57b7",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15307,7 +15307,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "7310ac164aabda0d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15329,7 +15329,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "69aa99d427d839db",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15352,7 +15352,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "d51980babc5fe115",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15375,7 +15375,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "65f648ba99a638a4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15398,7 +15398,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "72156a92314fcf63",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15421,7 +15421,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e6fc54f4208e24dd",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15445,7 +15445,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "84c9bb18a16b857e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15468,7 +15468,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4203ae29157e6a11",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15491,7 +15491,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "52cb294f58810d04",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15514,7 +15514,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "561146f525b07cda",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15538,7 +15538,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "48e5356bc3ac4d36",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15562,7 +15562,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "78083b916fedcc25",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15585,7 +15585,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9ed6a061f89b13e4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15609,7 +15609,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e8c3ccd585b07c2c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15633,7 +15633,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "8b22ddbd62a5f610",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15657,7 +15657,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "90aed68242f67b5d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15681,7 +15681,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a116244bb25ba6e3",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15704,7 +15704,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "946a822ee56e41ba",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15728,7 +15728,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7abcbcdb0ff97fb2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15752,7 +15752,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "7ef72ce8f4ba3a9e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15775,7 +15775,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "c5c44526633690e0",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15798,7 +15798,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "b5be82e26ab48c50",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15822,7 +15822,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2ab7bc00530bd08d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15845,7 +15845,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "486cda4feb13bfe9",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15868,7 +15868,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5b7fbe5f76c14ad2",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15891,7 +15891,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0f6952447f64ff47",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15914,7 +15914,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "6a01a307e001c92b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15937,7 +15937,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "694fc09363b7f102",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15961,7 +15961,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "dbc34aa667befc66",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -15984,7 +15984,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "db378d9cb006bb65",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16008,7 +16008,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4745f06f326adecf",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16031,7 +16031,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "2e5103a8256fc313",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16054,7 +16054,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f118526202f36d2a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16076,7 +16076,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "e820874c8aa5320a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16100,7 +16100,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "1cb53c5e46ad4ac4",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16123,7 +16123,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "80c073a814ec6d50",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16146,7 +16146,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "91e53ed4085afd4c",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16169,7 +16169,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "684a97db90413e6a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16192,7 +16192,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "682005ad4530e7ae",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16215,7 +16215,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "aeefa1faf54d1364",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16238,7 +16238,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "baae705838c3410b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16261,7 +16261,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "0d78f383c730ee17",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16284,7 +16284,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "16667c1b6c2d235d",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16307,7 +16307,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "dbf5c34f3632e3bc",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16330,7 +16330,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a74bb6987d2dbdda",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16353,7 +16353,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "e8d47d0093a5fc80",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16376,7 +16376,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "97a1550c535f8c62",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16399,7 +16399,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a991920588714933",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16423,7 +16423,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "927da710735e7de5",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16446,7 +16446,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "4a02dfadfc2a9d1e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16469,7 +16469,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f0f1c037289db6bf",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16492,7 +16492,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "613206876f33b2ec",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16516,7 +16516,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "64e0f53cee5dd1ed",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16539,7 +16539,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "5ccb961a14a03c98",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16562,7 +16562,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "a5237738a36f07c6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16585,7 +16585,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "88176dc7e13ca063",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16608,7 +16608,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "f48b4cedf9641482",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16630,7 +16630,7 @@
           "not_supported_classified_type"
         ],
         "inputEvidenceHash": "3782a040df37848b",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16653,7 +16653,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "78de9aab352ad37a",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16676,7 +16676,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "9e010c5a0740d1a6",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16699,7 +16699,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "97215d32e8cd6070",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     },
@@ -16722,7 +16722,7 @@
           "score_below_70_or_invalid"
         ],
         "inputEvidenceHash": "405dbbbbd235637e",
-        "evaluatedAtUTC": "2026-11-14T13:21:08Z",
+        "evaluatedAtUTC": "2026-11-14T13:27:56Z",
         "rapidRiseEnabled": false
       }
     }
