@@ -3,7 +3,7 @@
 > **Merge-to-publish contract:** the generated runtime feed contains only active, current-evidence, safety-eligible approved entries. Merging publishes that set through dynamic metadata. Pending, hold, rejected, expired and safety-excluded entries are not published.
 
 - **Approved and active in runtime:** 52
-- **Pending review:** 774
+- **Pending review:** 821
 - **On hold:** 0
 - **Rejected:** 0
 - **Approved but expired:** 1
@@ -115,6 +115,7 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Approved (automatic) | [SN2026agst](https://www.wis-tns.org/object/2026agst) | approve | 18.364 | SN Ic-BL | NGC636 (1.79813 deg) | 2027-01-21T22:28:43Z |
 | Pending | [AT2026agtx](https://www.wis-tns.org/object/2026agtx) | approve | 18.439 | transient_candidate | IC4808 (1.73758 deg) | 2027-01-23T00:06:39Z |
 | Pending | [SN2026agua](https://www.wis-tns.org/object/2026agua) | hold | 19.3306 | SN Ia | Lynds Dark Nebula 1571 (LDN1571) (1.07129 deg) | 2027-01-22T11:03:46Z |
+| Pending | [AT2026agub](https://www.wis-tns.org/object/2026agub) | hold | 19.4603 | transient_candidate | Andromeda Galaxy (0.34859 deg) | 2027-01-23T09:54:09Z |
 | Approved (automatic) | [SN2026aguc](https://www.wis-tns.org/object/2026aguc) | hold | 19.1849 | SN Ia-91T-like | IC382 (1.38071 deg) | 2027-01-23T09:42:27Z |
 | Pending | [AT2026aguv](https://www.wis-tns.org/object/2026aguv) | hold | 18.7795 | transient_candidate | NGC2404 (0.01585 deg) | 2027-01-23T08:53:19Z |
 | Pending | [SN2026aguw](https://www.wis-tns.org/object/2026aguw) | hold | 17.668 | SN Ia | NGC 5555 (0.23524 deg) | 2027-01-23T00:35:40Z |
@@ -655,12 +656,12 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [AT2026ajiz](https://www.wis-tns.org/object/2026ajiz) | hold | 19.64 | transient_candidate | NGC 2207 / IC 2163 (0.62701 deg) | 2027-02-08T13:40:32Z |
 | Pending | [AT2026ajji](https://www.wis-tns.org/object/2026ajji) | hold | 19.77 | transient_candidate | NGC 3294 (1.4684 deg) | 2027-02-10T06:15:17Z |
 | Pending | [AT2026ajjk](https://www.wis-tns.org/object/2026ajjk) | hold | 19.46 | transient_candidate | NGC1169 (1.018 deg) | 2027-02-10T23:39:27Z |
-| Pending | [AT2026ajjm](https://www.wis-tns.org/object/2026ajjm) | hold | 20.16 | transient_candidate | NGC779 (0.37574 deg) | 2027-02-08T11:18:57Z |
+| Pending | [AT2026ajjm](https://www.wis-tns.org/object/2026ajjm) | hold | 20.16 | transient_candidate | NGC779 (0.37577 deg) | 2027-02-08T11:18:57Z |
 | Pending | [AT2026ajjn](https://www.wis-tns.org/object/2026ajjn) | hold | 18.82 | transient_candidate | NGC 3294 (1.51592 deg) | 2027-02-10T06:19:10Z |
 | Pending | [AT2026ajjs](https://www.wis-tns.org/object/2026ajjs) | hold | 19.73 | transient_candidate | NGC3198 (1.44295 deg) | 2027-02-11T06:12:54Z |
 | Pending | [AT2026ajju](https://www.wis-tns.org/object/2026ajju) | hold | 19.62 | transient_candidate | NGC3239 (1.03532 deg) | 2027-02-10T05:47:51Z |
-| Pending | [AT2026ajjx](https://www.wis-tns.org/object/2026ajjx) | hold | 19.72 | transient_candidate | NGC3239 (0.74036 deg) | 2027-02-10T05:47:51Z |
-| Pending | [AT2026ajjz](https://www.wis-tns.org/object/2026ajjz) | approve | 18.378 | transient_candidate | IC656 (0.87225 deg) | 2027-02-06T15:02:11Z |
+| Pending | [AT2026ajjx](https://www.wis-tns.org/object/2026ajjx) | hold | 19.72 | transient_candidate | NGC3239 (0.74061 deg) | 2027-02-10T05:47:51Z |
+| Pending | [AT2026ajjz](https://www.wis-tns.org/object/2026ajjz) | approve | 18.378 | transient_candidate | IC656 (0.87219 deg) | 2027-02-06T15:02:11Z |
 | Pending | [AT2026ajkb](https://www.wis-tns.org/object/2026ajkb) | hold | 18.996 | transient_candidate | IC486 (1.22917 deg) | 2027-02-10T12:37:47Z |
 | Pending | [AT2026ajkf](https://www.wis-tns.org/object/2026ajkf) | hold | 19.072 | transient_candidate | Collinder 409 (CR409) (1.82025 deg) | 2027-02-10T05:55:20Z |
 | Pending | [AT2026ajkj](https://www.wis-tns.org/object/2026ajkj) | hold | 20.91 | transient_candidate | Intergalactic Wanderer (1.09787 deg) | 2027-02-04T21:01:26Z |
@@ -843,3 +844,49 @@ Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun 
 | Pending | [AT2026ajxh](https://www.wis-tns.org/object/2026ajxh) | hold | 19.72 | transient_candidate | IC2560 (0.97287 deg) | 2027-02-13T17:23:09Z |
 | Pending | [AT2026ajxk](https://www.wis-tns.org/object/2026ajxk) | hold | 20.08 | transient_candidate | NGC1498 (1.41273 deg) | 2027-02-07T17:26:25Z |
 | Pending | [AT2026ajxo](https://www.wis-tns.org/object/2026ajxo) | hold | 22.8457 | transient_candidate | IC 1613 (1.97219 deg) | 2026-12-12T02:53:11Z |
+| Pending | [AT2026ajxu](https://www.wis-tns.org/object/2026ajxu) | hold | 19.223 | transient_candidate | Collinder 27 (CR27) (1.69906 deg) | 2027-02-13T09:38:01Z |
+| Pending | [AT2026ajxv](https://www.wis-tns.org/object/2026ajxv) | hold | 19.133 | transient_candidate | NGC 3277 (0.80128 deg) | 2027-02-12T14:06:01Z |
+| Pending | [AT2026ajxw](https://www.wis-tns.org/object/2026ajxw) | approve | 18.216 | transient_candidate | IC750 (0.12317 deg) | 2027-02-13T15:10:28Z |
+| Pending | [AT2026ajxy](https://www.wis-tns.org/object/2026ajxy) | hold | 19.88 | transient_candidate | IC 1101 (0.1765 deg) | 2027-02-07T23:00:52Z |
+| Pending | [AT2026ajxz](https://www.wis-tns.org/object/2026ajxz) | hold | 20.27 | transient_candidate | Lynds Bright Nebula 188 (LBN188) (1.0891 deg) | 2027-02-10T21:25:02Z |
+| Pending | [AT2026ajyb](https://www.wis-tns.org/object/2026ajyb) | hold | 19.98 | transient_candidate | IC1657 (1.48817 deg) | 2027-02-10T10:46:37Z |
+| Pending | [AT2026ajyc](https://www.wis-tns.org/object/2026ajyc) | hold | 19.72 | transient_candidate | NGC 2207 / IC 2163 (0.74711 deg) | 2027-02-07T17:46:50Z |
+| Pending | [AT2026ajyd](https://www.wis-tns.org/object/2026ajyd) | hold | 19.16 | transient_candidate | IC600 (1.36887 deg) | 2027-02-14T06:07:10Z |
+| Pending | [AT2026ajye](https://www.wis-tns.org/object/2026ajye) | hold | 18.67 | transient_candidate | Lynds Bright Nebula 878 (LBN878) (1.00364 deg) | 2027-02-06T22:32:41Z |
+| Pending | [AT2026ajyh](https://www.wis-tns.org/object/2026ajyh) | hold | 21.89 | transient_candidate | IC 3418 (0.72506 deg) | 2027-02-08T16:59:31Z |
+| Pending | [AT2026ajyi](https://www.wis-tns.org/object/2026ajyi) | hold | 22.68 | transient_candidate | IC 2574 (1.14126 deg) | 2027-02-05T16:37:55Z |
+| Pending | [AT2026ajyk](https://www.wis-tns.org/object/2026ajyk) | hold | 22.81 | transient_candidate | Lynds Bright Nebula 188 (LBN188) (1.88407 deg) | 2027-02-08T13:09:07Z |
+| Pending | [AT2026ajyl](https://www.wis-tns.org/object/2026ajyl) | hold | 22.53 | transient_candidate | NGC5042 (1.77291 deg) | 2027-02-09T16:42:14Z |
+| Pending | [AT2026ajym](https://www.wis-tns.org/object/2026ajym) | hold | 22.1 | transient_candidate | NGC7613 (0.51096 deg) | 2027-01-27T12:59:02Z |
+| Pending | [AT2026ajyo](https://www.wis-tns.org/object/2026ajyo) | hold | 22.17 | transient_candidate | IC 3418 (1.29924 deg) | 2027-01-15T17:24:00Z |
+| Pending | [AT2026ajyr](https://www.wis-tns.org/object/2026ajyr) | hold | 22.47 | transient_candidate | IC 1613 (0.87774 deg) | 2027-01-28T13:16:19Z |
+| Pending | [AT2026ajyt](https://www.wis-tns.org/object/2026ajyt) | hold | 22.05 | transient_candidate | IC1696 (1.53398 deg) | 2027-01-28T13:46:33Z |
+| Pending | [AT2026ajyx](https://www.wis-tns.org/object/2026ajyx) | hold | 23.0 | transient_candidate | IC1696 (1.66353 deg) | 2027-02-03T15:43:12Z |
+| Pending | [AT2026ajyy](https://www.wis-tns.org/object/2026ajyy) | hold | 20.1 | transient_candidate | NGC3169 (1.85756 deg) | 2027-02-05T22:33:36Z |
+| Pending | [AT2026ajyz](https://www.wis-tns.org/object/2026ajyz) | hold | 21.28 | transient_candidate | NGC 5334 (1.27527 deg) | 2027-02-05T22:35:02Z |
+| Pending | [AT2026ajzb](https://www.wis-tns.org/object/2026ajzb) | hold | 21.83 | transient_candidate | NGC3640 (0.57 deg) | 2027-02-05T22:49:26Z |
+| Pending | [AT2026ajzc](https://www.wis-tns.org/object/2026ajzc) | hold | 21.7 | transient_candidate | Local Group (1.45136 deg) | 2027-02-05T22:49:26Z |
+| Pending | [AT2026ajzf](https://www.wis-tns.org/object/2026ajzf) | hold | 21.83 | transient_candidate | NGC3640 (1.39275 deg) | 2027-02-06T22:46:33Z |
+| Pending | [AT2026ajzg](https://www.wis-tns.org/object/2026ajzg) | hold | 22.3 | transient_candidate | NGC3169 (1.35429 deg) | 2027-02-07T22:35:02Z |
+| Pending | [AT2026ajzh](https://www.wis-tns.org/object/2026ajzh) | hold | 22.48 | transient_candidate | Local Group (0.56395 deg) | 2027-02-07T22:53:45Z |
+| Pending | [AT2026ajzi](https://www.wis-tns.org/object/2026ajzi) | hold | 22.58 | transient_candidate | IC 342 (1.77766 deg) | 2027-02-08T13:42:14Z |
+| Pending | [AT2026ajzj](https://www.wis-tns.org/object/2026ajzj) | hold | 22.67 | transient_candidate | IC 3418 (1.13242 deg) | 2027-02-08T13:56:38Z |
+| Pending | [AT2026ajzp](https://www.wis-tns.org/object/2026ajzp) | hold | 23.34 | transient_candidate | IC 1481 (0.91299 deg) | 2027-02-09T12:25:55Z |
+| Pending | [AT2026ajzu](https://www.wis-tns.org/object/2026ajzu) | hold | 22.52 | transient_candidate | IC 342 (1.0471 deg) | 2027-01-16T15:10:04Z |
+| Pending | [AT2026ajzw](https://www.wis-tns.org/object/2026ajzw) | hold | 22.42 | transient_candidate | NGC7668 (0.85066 deg) | 2027-01-30T13:32:09Z |
+| Pending | [AT2026ajzy](https://www.wis-tns.org/object/2026ajzy) | hold | 22.9 | transient_candidate | NGC 2207 / IC 2163 (1.30641 deg) | 2027-02-05T16:40:48Z |
+| Pending | [AT2026akaa](https://www.wis-tns.org/object/2026akaa) | hold | 21.91 | transient_candidate | NGC3640 (1.98192 deg) | 2027-02-07T22:56:38Z |
+| Pending | [AT2026akac](https://www.wis-tns.org/object/2026akac) | hold | 21.88 | transient_candidate | IC187 (1.14616 deg) | 2027-02-06T20:08:09Z |
+| Pending | [AT2026akae](https://www.wis-tns.org/object/2026akae) | hold | 21.79 | transient_candidate | Andromeda Galaxy (1.02507 deg) | 2027-02-10T18:30:14Z |
+| Pending | [AT2026akaf](https://www.wis-tns.org/object/2026akaf) | hold | 20.7941 | transient_candidate | NGC7723 (0.30146 deg) | 2027-02-09T03:02:55Z |
+| Pending | [AT2026akah](https://www.wis-tns.org/object/2026akah) | hold | 21.0733 | transient_candidate | NGC7606 (1.33761 deg) | 2027-02-11T00:38:14Z |
+| Pending | [AT2026akak](https://www.wis-tns.org/object/2026akak) | hold | 20.3 | transient_candidate | NGC 5555 (1.64295 deg) | 2027-02-04T10:14:57Z |
+| Pending | [AT2026akam](https://www.wis-tns.org/object/2026akam) | hold | 19.7 | transient_candidate | IC1657 (1.69463 deg) | 2027-02-14T10:12:24Z |
+| Pending | [AT2026akao](https://www.wis-tns.org/object/2026akao) | hold | 21.2778 | transient_candidate | NGC 1198 (1.6261 deg) | 2027-02-13T00:45:25Z |
+| Pending | [AT2026akap](https://www.wis-tns.org/object/2026akap) | hold | 19.316 | transient_candidate | Ghost of Jupiter (1.78164 deg) | 2027-02-14T05:23:23Z |
+| Pending | [AT2026akaq](https://www.wis-tns.org/object/2026akaq) | hold | 19.735 | transient_candidate | IC 342 (1.69253 deg) | 2027-02-14T00:10:48Z |
+| Pending | [AT2026akat](https://www.wis-tns.org/object/2026akat) | hold | 21.5497 | transient_candidate | NGC1527 (1.52157 deg) | 2027-02-12T05:04:03Z |
+| Pending | [AT2026akau](https://www.wis-tns.org/object/2026akau) | hold | 21.285 | transient_candidate | NGC1532 (0.5165 deg) | 2027-02-14T07:15:40Z |
+| Pending | [AT2026akaz](https://www.wis-tns.org/object/2026akaz) | hold | 19.3 | transient_candidate | Caldwell 3 (C3) (1.12593 deg) | 2027-02-14T14:52:08Z |
+| Pending | [AT2026akbc](https://www.wis-tns.org/object/2026akbc) | hold | 20.89 | transient_candidate | IC2030 (0.5863 deg) | 2027-02-13T10:56:11Z |
+| Pending | [AT2026akbd](https://www.wis-tns.org/object/2026akbd) | hold | 20.38 | transient_candidate | NGC3193 (0.42737 deg) | 2027-02-12T14:20:55Z |
