@@ -2,14 +2,14 @@
 
 > **Merge-to-publish contract:** the generated runtime feed contains only active, current-evidence, safety-eligible approved entries. Merging publishes that set through dynamic metadata. Pending, hold, rejected, expired and safety-excluded entries are not published.
 
-- **Approved and active in runtime:** 52
+- **Approved and active in runtime:** 51
 - **Pending review:** 821
 - **On hold:** 0
 - **Rejected:** 0
-- **Approved but expired:** 1
+- **Approved but expired:** 2
 - **Automatic classified-score approvals:** 35
 - **Rapid-rise approval / notifications:** disabled
-- **Approved entries withheld by publication safety:** 2
+- **Approved entries withheld by publication safety:** 3
 
 Edit `outputs/transients/review/transient-review-decisions-v1.json`, then rerun this workflow. A non-pending decision requires `decidedBy` and `decidedAtUTC`. Changed evidence resets approvals for fresh evaluation; owner holds and rejections remain protected.
 
