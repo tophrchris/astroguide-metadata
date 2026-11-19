@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "transientEventFeed",
-  "packageVersion": "transient-event-feed-v1-20261118T132137Z-classified-score-v1",
+  "packageVersion": "transient-event-feed-v1-20261119T132130Z-classified-score-v1",
   "family": "transientOpportunities",
   "reviewOnly": false,
   "curationPolicy": {
@@ -11,8 +11,8 @@
     "lifetimeDays": 90,
     "visibilityPrediction": false
   },
-  "asOfDate": "2026-11-17",
-  "generatedAtUTC": "2026-11-18T13:21:37Z",
+  "asOfDate": "2026-11-18",
+  "generatedAtUTC": "2026-11-19T13:21:30Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "automaticApprovalPolicy": {
     "id": "tns-classified-score-v1",
@@ -22,10 +22,10 @@
     "notificationsEnabled": false
   },
   "counts": {
-    "reviewed": 54,
-    "approved": 51,
+    "reviewed": 55,
+    "approved": 52,
     "excluded": 0,
-    "pending": 821,
+    "pending": 857,
     "inactiveApproved": 3,
     "expiredApproved": 2
   },
@@ -5760,7 +5760,7 @@
       },
       "discovery": {
         "dateUTC": "2026-11-02T19:55:53Z",
-        "ageDays": 15,
+        "ageDays": 16,
         "magnitude": 16.1,
         "band": "Clear"
       },
@@ -5869,9 +5869,9 @@
           "triggeredAtUTC": "2026-11-07T13:21:53Z",
           "evidenceAtUTC": "2026-11-15T11:02:38Z",
           "sourceURL": "https://www.wis-tns.org/object/2026ahvi",
-          "sourceReviewQueue": "transient-review-2026-11-17.json",
-          "reviewSetID": "d77d7c2cf52bd135",
-          "evidenceHash": "100fa8f598e6c175",
+          "sourceReviewQueue": "transient-review-2026-11-18.json",
+          "reviewSetID": "8b15aafa8eac90b7",
+          "evidenceHash": "f68aa21c8fb4009f",
           "automaticEligible": true,
           "evidence": []
         }
@@ -5879,10 +5879,10 @@
       "review": {
         "status": "approved",
         "approvedBy": "astroguide:classified-score-policy-v1",
-        "approvedAtUTC": "2026-11-18T13:21:37Z",
-        "sourceReviewQueue": "transient-review-2026-11-17.json",
-        "reviewSetID": "d77d7c2cf52bd135",
-        "evidenceHash": "100fa8f598e6c175"
+        "approvedAtUTC": "2026-11-19T13:21:30Z",
+        "sourceReviewQueue": "transient-review-2026-11-18.json",
+        "reviewSetID": "8b15aafa8eac90b7",
+        "evidenceHash": "f68aa21c8fb4009f"
       },
       "previousCurationWindow": {
         "startsAtUTC": "2026-11-02T19:55:53Z",
@@ -6045,7 +6045,7 @@
       },
       "discovery": {
         "dateUTC": "2026-11-03T11:33:40Z",
-        "ageDays": 14,
+        "ageDays": 15,
         "magnitude": 18.7059,
         "band": "g"
       },
@@ -6160,9 +6160,9 @@
           "triggeredAtUTC": "2026-11-09T13:21:52Z",
           "evidenceAtUTC": "2026-11-15T17:29:17Z",
           "sourceURL": "https://www.wis-tns.org/object/2026ahze",
-          "sourceReviewQueue": "transient-review-2026-11-17.json",
-          "reviewSetID": "d77d7c2cf52bd135",
-          "evidenceHash": "fe808e06a7ecd383",
+          "sourceReviewQueue": "transient-review-2026-11-18.json",
+          "reviewSetID": "8b15aafa8eac90b7",
+          "evidenceHash": "6a920dca146f3abf",
           "automaticEligible": true,
           "evidence": []
         }
@@ -6170,10 +6170,10 @@
       "review": {
         "status": "approved",
         "approvedBy": "astroguide:classified-score-policy-v1",
-        "approvedAtUTC": "2026-11-18T13:21:37Z",
-        "sourceReviewQueue": "transient-review-2026-11-17.json",
-        "reviewSetID": "d77d7c2cf52bd135",
-        "evidenceHash": "fe808e06a7ecd383"
+        "approvedAtUTC": "2026-11-19T13:21:30Z",
+        "sourceReviewQueue": "transient-review-2026-11-18.json",
+        "reviewSetID": "8b15aafa8eac90b7",
+        "evidenceHash": "6a920dca146f3abf"
       },
       "previousCurationWindow": {
         "startsAtUTC": "2026-11-03T11:33:40Z",
@@ -6316,6 +6316,148 @@
       "previousCurationWindow": {
         "startsAtUTC": "2026-11-06T03:50:24Z",
         "expiresAtUTC": "2026-12-06T03:50:24Z"
+      }
+    },
+    {
+      "id": "tns:226228",
+      "source": "TNS",
+      "sourceId": "226228",
+      "sourceObjectName": "SN2026akbo",
+      "sourceURL": "https://www.wis-tns.org/object/2026akbo",
+      "title": "Supernova SN2026akbo near NGC3344",
+      "shortTitle": "SN2026akbo",
+      "eventType": "transientOpportunity",
+      "reviewOnly": false,
+      "urgency": "watch",
+      "recommendedReviewAction": "approved",
+      "activeWindow": {
+        "startsAtUTC": "2026-11-17T06:06:39Z",
+        "expiresAtUTC": "2027-02-15T06:06:39Z"
+      },
+      "discovery": {
+        "dateUTC": "2026-11-17T06:06:39Z",
+        "ageDays": 1,
+        "magnitude": 18.76,
+        "band": "L"
+      },
+      "reportedMagnitude": {
+        "value": null,
+        "band": null
+      },
+      "classification": {
+        "kind": "supernova",
+        "type": "SN Ia",
+        "status": null
+      },
+      "tnsContext": {
+        "redshift": 0.0173,
+        "reporters": "G. Ramsay, D. O'Neill, K. Ackley, M. Dyer, J. Lyman, K. Ulaczyk, D. Steeghs, D. Galloway, V. Dhillon, P. O'Brien, K. Noysena, R. Kotak, R. Breton, J. Casares, L. Nuttall, R. Starling, B. Gompertz, B. Godson, T. Killestein, A. Kumar, M. Pursiainen, on behalf of GOTO collaboration",
+        "receivedAtUTC": "2026-11-17T08:36:00Z",
+        "createdAtUTC": "2026-11-17T08:36:03Z",
+        "discoveryReference": {
+          "bibcode": "2026TNSTR4673....1R",
+          "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR4673....1R/abstract"
+        },
+        "classificationReferences": []
+      },
+      "enrichment": {
+        "status": "partial",
+        "sources": [
+          "tns_staged_daily_delta",
+          "astroguide_catalog"
+        ],
+        "missing": [
+          "tns_reported_host",
+          "latest_public_photometry",
+          "latest_public_spectrum"
+        ]
+      },
+      "coordinates": {
+        "raDegrees": 159.912128,
+        "decDegrees": 25.320421
+      },
+      "score": 95,
+      "reasonTags": [
+        "classified_high_interest_transient",
+        "discovered_within_7_days",
+        "discovery_magnitude_watch_band",
+        "separation_le_1_deg",
+        "nearby_catalog_object_is_galaxy",
+        "recognizable_astroguide_subject"
+      ],
+      "astroGuideObject": {
+        "id": "NGC3344",
+        "displayName": "NGC3344",
+        "catalogName": "NGC NGC3344",
+        "objectType": "Galaxy",
+        "constellation": "Leo Minor",
+        "magnitude": 10.0,
+        "angularSizeArcmin": 6.7,
+        "angularSizeMajorArcmin": 6.7,
+        "angularSizeMinorArcmin": 6.37,
+        "distance": null,
+        "description": "NGC 3344 is a relatively isolated barred spiral galaxy around half the size of the Milky Way located 22.5 million light years away in the constellation Leo Minor. It was discovered by German-British astronomer William Herschel on 6 April 1785.",
+        "aliases": [
+          "PGC 31968",
+          "UGC 5840"
+        ],
+        "identityWarning": null,
+        "coordinates": {
+          "raDegrees": 160.8791667,
+          "decDegrees": 24.9222222
+        },
+        "catalogThumbnail": {
+          "status": "unavailable",
+          "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
+        }
+      },
+      "angularSeparationDegrees": 0.96186,
+      "relationship": {
+        "type": "near_field",
+        "wording": "near-field match",
+        "tnsReportedHost": null
+      },
+      "lastModifiedUTC": "2026-11-18T07:37:21Z",
+      "provenance": {
+        "reportingGroup": "GOTO",
+        "sourceGroup": "GOTO",
+        "internalNames": [
+          "GOTO26mpa"
+        ]
+      },
+      "promotionReasons": [
+        {
+          "code": "classified_score",
+          "stableTriggerID": "8ed88f9ba0b6588d31baa2dcd36abd85597b13ce9d9b855c0b67b61f56b0414a",
+          "policyID": "tns-classified-score-v1",
+          "score": 95,
+          "classification": {
+            "kind": "supernova",
+            "type": "SN Ia",
+            "status": null
+          },
+          "confidence": "score_eligibility",
+          "triggeredAtUTC": "2026-11-19T13:21:30Z",
+          "evidenceAtUTC": "2026-11-18T07:37:21Z",
+          "sourceURL": "https://www.wis-tns.org/object/2026akbo",
+          "sourceReviewQueue": "transient-review-2026-11-18.json",
+          "reviewSetID": "8b15aafa8eac90b7",
+          "evidenceHash": "c8bbcccf336e14b8",
+          "automaticEligible": true,
+          "evidence": []
+        }
+      ],
+      "review": {
+        "status": "approved",
+        "approvedBy": "astroguide:classified-score-policy-v1",
+        "approvedAtUTC": "2026-11-19T13:21:30Z",
+        "sourceReviewQueue": "transient-review-2026-11-18.json",
+        "reviewSetID": "8b15aafa8eac90b7",
+        "evidenceHash": "c8bbcccf336e14b8"
+      },
+      "previousCurationWindow": {
+        "startsAtUTC": "2026-11-17T06:06:39Z",
+        "expiresAtUTC": "2026-12-17T06:06:39Z"
       }
     }
   ],
