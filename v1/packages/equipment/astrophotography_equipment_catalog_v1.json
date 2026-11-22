@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "astrophotographyEquipmentCatalog",
-  "packageVersion": "astrophotography-equipment-catalog-v1-2026-08-29",
-  "generatedAt": "2026-08-29T20:58:17Z",
+  "packageVersion": "astrophotography-equipment-catalog-v1-2026-11-22",
+  "generatedAt": "2026-11-22T03:21:50Z",
   "source": {
     "name": "AstroGuide bundled astrophotography equipment catalog",
     "generatedBy": "astroguide-metadata equipment package builder",
@@ -19,10 +19,10 @@
       "permissionNote": "Permission reported in AstroGuide issue #678; include Astronomy.Tools link in credits and acknowledgments."
     },
     "counts": {
-      "optical_tubes": 811,
+      "optical_tubes": 812,
       "lenses": 134,
       "cameras": 382,
-      "total": 1327
+      "total": 1328
     },
     "normalizationNotes": [
       "Manufacturer names are whitespace/case normalized and selected variants are merged for curation convenience.",
@@ -17995,6 +17995,25 @@
         "source_attribution": "Astronomy.Tools Field of View calculator equipment data; used with permission, credit required.",
         "source_confidence": "source_calculator_option",
         "curator_notes": ""
+      },
+      {
+        "curation_status": "reviewed",
+        "include_in_app": true,
+        "component_type": "optical_tube",
+        "component_id": "optical-tube-svbony-sv580-official",
+        "manufacturer": "SVBONY",
+        "manufacturer_raw": "SVBONY",
+        "model": "SV580",
+        "aperture_mm": 80.0,
+        "native_focal_length_mm": 360.0,
+        "native_focal_ratio": 4.5,
+        "optical_design": "Sextuplet Petzval APO",
+        "source_id": "sv580-80mm-f4-5-petzval-apo-full-frame-astrograph",
+        "source_label": "SVBONY - SV580",
+        "source_url": "https://www.svbony.com/products/sv580-80mm-f4-5-petzval-apo-full-frame-astrograph",
+        "source_attribution": "SVBONY official product specifications, verified 2026-11-21.",
+        "source_confidence": "official_product_page",
+        "curator_notes": "80 mm aperture, 360 mm native focal length, f/4.5; six elements including two ED elements. Integrated field correction, 44 mm image circle, 55 mm back focus. Optical tube only; pair with a camera for FOV."
       }
     ],
     "cameraComponents": [
@@ -27657,10 +27676,10 @@
       },
       {
         "manufacturer": "SVBONY",
-        "optical_tube_rows": 20,
+        "optical_tube_rows": 21,
         "lens_rows": 1,
         "camera_rows": 11,
-        "total_rows": 32,
+        "total_rows": 33,
         "raw_variants": "SVBONY"
       },
       {

@@ -122,7 +122,7 @@ def build_equipment_package(app_repo: Path, generated_at: str) -> dict:
 def build_astrophotography_package(app_repo: Path, generated_at: str) -> dict:
     catalog_path = app_repo / "App/Resources/Equipment/astrophotography_equipment.json"
     curation_path = app_repo / "App/Resources/Equipment/astrophotography_equipment_curation.json"
-    catalog = read_json(catalog_path)
+    catalog = apply_metadata_additions(read_json(catalog_path))
     curation = read_json(curation_path) if curation_path.exists() else None
     optical_components = catalog.get("opticalComponents") or []
     camera_components = catalog.get("cameraComponents") or []
@@ -146,6 +146,43 @@ def build_astrophotography_package(app_repo: Path, generated_at: str) -> dict:
         "catalog": catalog,
         "curation": curation,
     }
+
+
+def apply_metadata_additions(catalog: dict, additions_path: Path | None = None) -> dict:
+    additions_path = additions_path or REPO_ROOT / "sources/equipment/astrophotography_additions.json"
+    if not additions_path.exists():
+        return catalog
+    additions = read_json(additions_path)
+    if additions.get("schemaVersion") != 1:
+        raise ValueError("Unsupported equipment additions schema")
+    for key in ("opticalComponents", "cameraComponents"):
+        rows = catalog.setdefault(key, [])
+        by_id = {row["component_id"]: row for row in rows}
+        seen = set()
+        for row in additions.get(key, []):
+            identifier = row["component_id"]
+            if identifier in seen:
+                raise ValueError(f"Duplicate equipment addition: {identifier}")
+            seen.add(identifier)
+            if identifier in by_id:
+                if by_id[identifier] != row:
+                    raise ValueError(f"Equipment addition conflicts with bundled row: {identifier}")
+                continue
+            rows.append(row)
+            for manufacturer in catalog.get("manufacturers", []):
+                if manufacturer["manufacturer"] == row["manufacturer"]:
+                    count_key = "camera_rows" if key == "cameraComponents" else ("lens_rows" if optical_kind(row) == "lens" else "optical_tube_rows")
+                    manufacturer[count_key] += 1
+                    manufacturer["total_rows"] += 1
+    optics = catalog["opticalComponents"]
+    cameras = catalog["cameraComponents"]
+    catalog["counts"] = {
+        "optical_tubes": sum(optical_kind(row) == "optical_tube" for row in optics),
+        "lenses": sum(optical_kind(row) == "lens" for row in optics),
+        "cameras": len(cameras),
+        "total": len(optics) + len(cameras),
+    }
+    return catalog
 
 
 def normalized_key(value: str | None) -> str:
@@ -395,7 +432,7 @@ def sorted_unique(values: list[str]) -> list[str]:
 def build_sanitized_astrophotography_package(app_repo: Path, generated_at: str) -> dict:
     catalog_path = app_repo / "App/Resources/Equipment/astrophotography_equipment.json"
     curation_path = app_repo / "App/Resources/Equipment/astrophotography_equipment_curation.json"
-    catalog = read_json(catalog_path)
+    catalog = apply_metadata_additions(read_json(catalog_path))
     curation = read_json(curation_path) if curation_path.exists() else None
 
     selectable_optics = [
