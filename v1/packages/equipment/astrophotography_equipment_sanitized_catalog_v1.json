@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "packageFamily": "astrophotographyEquipmentSanitizedCatalog",
-  "packageVersion": "astrophotography-equipment-sanitized-catalog-v1-2026-08-29",
-  "generatedAt": "2026-08-29T20:58:17Z",
+  "packageVersion": "astrophotography-equipment-sanitized-catalog-v1-2026-11-22",
+  "generatedAt": "2026-11-22T03:21:20Z",
   "source": {
     "name": "AstroGuide rendered Telescope Workshop equipment catalog",
     "generatedBy": "astroguide-metadata equipment package builder",
@@ -25,9 +25,9 @@
     "schemaVersion": 1,
     "generatedAt": "2026-06-23T18:53:11Z",
     "counts": {
-      "opticalComponents": 835,
+      "opticalComponents": 836,
       "cameraComponents": 337,
-      "totalComponents": 1172
+      "totalComponents": 1173
     },
     "opticalManufacturers": [
       "Acuter",
@@ -11826,6 +11826,24 @@
         "source_label": "SVBONY - SV555",
         "source_url": "https://www.svbony.com/products/sv555-astrograph-lens",
         "source_attribution": "SVBONY official product page.",
+        "source_confidence": "official_product_page"
+      },
+      {
+        "component_id": "optical-tube-svbony-sv580-official",
+        "component_type": "optical_tube",
+        "type_label": "Tube",
+        "manufacturer": "SVBONY",
+        "product_line": "SV",
+        "model": "SV580",
+        "display_name": "SVBONY SV580",
+        "aperture_mm": 80.0,
+        "native_focal_length_mm": 360.0,
+        "native_focal_ratio": 4.5,
+        "optical_design": "Sextuplet Petzval APO",
+        "source_id": "sv580-80mm-f4-5-petzval-apo-full-frame-astrograph",
+        "source_label": "SVBONY - SV580",
+        "source_url": "https://www.svbony.com/products/sv580-80mm-f4-5-petzval-apo-full-frame-astrograph",
+        "source_attribution": "SVBONY official product specifications, verified 2026-11-21.",
         "source_confidence": "official_product_page"
       },
       {

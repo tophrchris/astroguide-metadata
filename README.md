@@ -190,6 +190,12 @@ scripts/build_equipment_catalog_package.py --app-repo ../DSOPlanneriOS --package
 The builder writes the equipment package envelopes, refreshes the stable
 manifest, and recalculates byte sizes and SHA-256 checksums.
 
+Metadata-only optical/camera additions live in
+`sources/equipment/astrophotography_additions.json`, with canonical IDs and
+manufacturer provenance. The builder includes them in both raw and sanitized
+Telescope Workshop packages. Conflicting bundled IDs fail rather than silently
+overwriting specifications. These entries do not require an iOS release.
+
 To update only the Telescope Workshop optics/imaging package, use:
 
 ```bash
