@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packageFamily": "cometDetailMetadata",
-  "packageVersion": "comet-detail-metadata-v1-20261109-aerith",
+  "packageVersion": "comet-detail-metadata-v1-20261123-aerith",
   "packageRole": "comet",
   "shardID": "COMET_260P",
   "record": {
@@ -10,28 +10,28 @@
     "displayName": "260P/McNaught",
     "aerithName": "260P/McNaught",
     "detailURL": "http://www.aerith.net/comet/catalog/0260P/2026.html",
-    "generatedAt": "2026-11-09T10:26:51Z",
+    "generatedAt": "2026-11-23T10:27:20Z",
     "visibilitySummary": {
       "state": "current",
-      "referenceDate": "2026-11-07",
+      "referenceDate": "2026-11-14",
       "basis": "Aerith weekly bright-comet rows plus AstroGuide cometSnapshot magnitude window",
       "usefulMagnitudeLimit": 16.0,
-      "aerithCurrentDate": "2026-11-07",
-      "aerithNextUsefulDate": "2026-11-14",
-      "aerithCurrentMagnitude": 14.5,
-      "aerithNextMagnitude": 14.7,
+      "aerithCurrentDate": "2026-11-14",
+      "aerithNextUsefulDate": "2026-11-21",
+      "aerithCurrentMagnitude": 14.7,
+      "aerithNextMagnitude": 15.0,
       "currentBestAltitudeDegreesByHemisphere": {
-        "north": 75.0,
-        "south": 5.0
-      },
-      "nextBestAltitudeDegreesByHemisphere": {
         "north": 74.0,
         "south": 4.0
       },
-      "futureUsefulStartDate": "2026-11-07",
+      "nextBestAltitudeDegreesByHemisphere": {
+        "north": 73.0,
+        "south": 3.0
+      },
+      "futureUsefulStartDate": "2026-11-14",
       "futureUsefulEndDate": "2026-11-16",
       "daysUntilFutureUsefulStart": 0,
-      "daysUntilFutureUsefulEnd": 9
+      "daysUntilFutureUsefulEnd": 2
     },
     "ephemerisSummary": {
       "validStart": "2026-07-12T00:00:00Z",
@@ -40,15 +40,15 @@
       "sourceGeneratedAt": "2026-07-12T21:25:04Z",
       "sampleStepHours": 12,
       "sampleCount": 731,
-      "referenceDate": "2026-11-07",
+      "referenceDate": "2026-11-14",
       "usefulMagnitudeLimit": 16.0,
-      "currentMagnitudeEstimate": 15.813,
-      "currentSampleDate": "2026-11-07",
+      "currentMagnitudeEstimate": 15.951,
+      "currentSampleDate": "2026-11-14",
       "currentSampleStatus": "useful",
-      "firstFutureUsefulDate": "2026-11-07",
+      "firstFutureUsefulDate": "2026-11-14",
       "lastFutureUsefulDate": "2026-11-16",
       "daysUntilUsefulStart": 0,
-      "daysUntilUsefulEnd": 9,
+      "daysUntilUsefulEnd": 2,
       "brightestMagnitude": 13.0,
       "brightestDate": "2026-08-22",
       "faintestMagnitude": 22.734,
@@ -68,7 +68,7 @@
       "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
       "detailURL": "http://www.aerith.net/comet/catalog/0260P/2026.html",
       "attribution": "Source: Aerith / Seiichi Yoshida",
-      "generatedAt": "2026-11-09T10:26:51Z",
+      "generatedAt": "2026-11-23T10:27:20Z",
       "permissionReceived": "2026-08-15"
     },
     "media": {
@@ -112,33 +112,33 @@
         "significanceKind": "outburst"
       },
       {
-        "id": "260P-2026-11-07-north-weekly-1",
-        "date": "2026-11-07",
-        "magnitude": 14.5,
+        "id": "260P-2026-11-14-north-weekly-1",
+        "date": "2026-11-14",
+        "magnitude": 14.7,
         "qualifier": "weekly-estimate",
         "estimateKind": "current",
         "isProjection": false,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": -0.1
+        "magnitudeDelta": 0.1
       },
       {
-        "id": "260P-2026-11-14-north-weekly-2",
-        "date": "2026-11-14",
-        "magnitude": 14.7,
+        "id": "260P-2026-11-21-north-weekly-2",
+        "date": "2026-11-21",
+        "magnitude": 15.0,
         "qualifier": "weekly-estimate",
         "estimateKind": "projection",
         "isProjection": true,
         "sourceLabel": "Aerith weekly bright-comet table (north)",
         "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-        "magnitudeDelta": 0.2
+        "magnitudeDelta": 0.3
       }
     ],
     "brightnessChart": {
       "lookbackDays": 90,
       "availableStartDate": "2026-11-04",
-      "availableEndDate": "2026-11-14",
-      "actualDaySpan": 10,
+      "availableEndDate": "2026-11-21",
+      "actualDaySpan": 17,
       "pointCount": 3,
       "containsProjection": true,
       "containsReportedObservation": true,
@@ -157,39 +157,39 @@
           "significanceKind": "outburst"
         },
         {
-          "id": "260P-2026-11-07-north-weekly-1",
-          "date": "2026-11-07",
-          "magnitude": 14.5,
+          "id": "260P-2026-11-14-north-weekly-1",
+          "date": "2026-11-14",
+          "magnitude": 14.7,
           "qualifier": "weekly-estimate",
           "estimateKind": "current",
           "isProjection": false,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": -0.1
+          "magnitudeDelta": 0.1
         },
         {
-          "id": "260P-2026-11-14-north-weekly-2",
-          "date": "2026-11-14",
-          "magnitude": 14.7,
+          "id": "260P-2026-11-21-north-weekly-2",
+          "date": "2026-11-21",
+          "magnitude": 15.0,
           "qualifier": "weekly-estimate",
           "estimateKind": "projection",
           "isProjection": true,
           "sourceLabel": "Aerith weekly bright-comet table (north)",
           "sourceURL": "http://www.aerith.net/comet/weekly/current.html",
-          "magnitudeDelta": 0.2
+          "magnitudeDelta": 0.3
         }
       ]
     },
     "brightnessTrend": {
-      "currentMagnitude": 14.7,
-      "currentDate": "2026-11-14",
-      "currentPointID": "260P-2026-11-14-north-weekly-2",
-      "comparisonMagnitude": 14.5,
-      "comparisonDate": "2026-11-07",
-      "comparisonPointID": "260P-2026-11-07-north-weekly-1",
+      "currentMagnitude": 15.0,
+      "currentDate": "2026-11-21",
+      "currentPointID": "260P-2026-11-21-north-weekly-2",
+      "comparisonMagnitude": 14.7,
+      "comparisonDate": "2026-11-14",
+      "comparisonPointID": "260P-2026-11-14-north-weekly-1",
       "comparisonWindowDays": 7,
-      "deltaMagnitude": 0.2,
-      "direction": "stable",
+      "deltaMagnitude": 0.3,
+      "direction": "fading",
       "isNotable": false,
       "notableChangeThresholdMagnitude": 1.0,
       "notableObservationIDs": [
