@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-11-26T13:22:24Z",
-  "publishedAt": "2026-11-26T13:22:24Z",
+  "generatedAt": "2026-11-28T13:20:53Z",
+  "publishedAt": "2026-11-28T13:20:53Z",
   "packages": [
     {
       "family": "targetMetadataOverlay",
@@ -386,19 +386,19 @@
     },
     {
       "family": "transientEventFeed",
-      "packageVersion": "transient-event-feed-v1-20261126T132223Z-classified-score-v1",
+      "packageVersion": "transient-event-feed-v1-20261128T132053Z-classified-score-v1",
       "payloadSchemaVersion": 1,
       "packageURL": "https://metadata.astroguide.space/v1/packages/transients/transient_opportunities_v1.json",
       "checksum": {
         "algorithm": "sha256",
-        "value": "3dbb4755044afc95a59feaad52a1ceccad2af9e889cb01ca8e68641f80252fe8"
+        "value": "53dc9fcea170a6b0cb3205437ac7e6dcd66753baec22e8499a4517c3e9e66fd9"
       },
-      "byteSize": 241655,
-      "reviewedCount": 60,
-      "approvedCount": 55,
-      "opportunityCount": 55,
-      "urgentCount": 35,
-      "asOfDate": "2026-11-25",
+      "byteSize": 230936,
+      "reviewedCount": 59,
+      "approvedCount": 51,
+      "opportunityCount": 51,
+      "urgentCount": 34,
+      "asOfDate": "2026-11-27",
       "minSupportedAppVersion": "1.4.2",
       "minSupportedBuild": "1",
       "cacheTTLSeconds": 21600,
