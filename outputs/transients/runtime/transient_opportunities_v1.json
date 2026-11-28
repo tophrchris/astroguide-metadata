@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "family": "transientOpportunities",
   "reviewOnly": false,
-  "packageVersion": "transient-event-feed-v1-20261127T132117Z-classified-score-v1",
+  "packageVersion": "transient-event-feed-v1-20261128T132053Z-classified-score-v1",
   "curationPolicy": {
     "id": "temporary-discovery-90d-20261101",
     "temporary": true,
@@ -10,8 +10,8 @@
     "lifetimeDays": 90,
     "visibilityPrediction": false
   },
-  "asOfDate": "2026-11-26",
-  "generatedAtUTC": "2026-11-27T13:21:17Z",
+  "asOfDate": "2026-11-27",
+  "generatedAtUTC": "2026-11-28T13:20:53Z",
   "approvalPolicy": "tns_transient_review_decisions_v1",
   "automaticApprovalPolicy": {
     "id": "tns-classified-score-v1",
@@ -22,172 +22,13 @@
   },
   "counts": {
     "reviewed": 59,
-    "approved": 53,
+    "approved": 51,
     "excluded": 0,
-    "pending": 1054,
-    "inactiveApproved": 6,
-    "expiredApproved": 5
+    "pending": 1097,
+    "inactiveApproved": 8,
+    "expiredApproved": 7
   },
   "opportunities": [
-    {
-      "id": "tns:218943",
-      "source": "TNS",
-      "sourceId": "218943",
-      "sourceObjectName": "SN2026zzh",
-      "sourceURL": "https://www.wis-tns.org/object/2026zzh",
-      "title": "Supernova SN2026zzh near IC1386",
-      "shortTitle": "SN2026zzh",
-      "eventType": "transientOpportunity",
-      "reviewOnly": false,
-      "urgency": "watch",
-      "recommendedReviewAction": "approved",
-      "activeWindow": {
-        "startsAtUTC": "2026-08-30T06:32:06Z",
-        "expiresAtUTC": "2026-11-28T06:32:06Z"
-      },
-      "discovery": {
-        "dateUTC": "2026-08-30T06:32:06Z",
-        "ageDays": 11,
-        "magnitude": 18.9888,
-        "band": "r"
-      },
-      "reportedMagnitude": {
-        "value": null,
-        "band": null
-      },
-      "classification": {
-        "kind": "supernova",
-        "type": "SN Ia",
-        "status": null
-      },
-      "coordinates": {
-        "raDegrees": 322.5604814,
-        "decDegrees": -22.7146472
-      },
-      "score": 80,
-      "reasonTags": [
-        "classified_high_interest_transient",
-        "discovered_within_30_days",
-        "discovery_magnitude_watch_band",
-        "separation_le_2_deg",
-        "nearby_catalog_object_is_galaxy",
-        "recognizable_astroguide_subject"
-      ],
-      "astroGuideObject": {
-        "id": "IC1386",
-        "displayName": "IC1386",
-        "catalogName": "IC IC1386",
-        "objectType": "Galaxy",
-        "magnitude": 13.1
-      },
-      "angularSeparationDegrees": 1.52586,
-      "relationship": {
-        "type": "near_field",
-        "wording": "near-field match",
-        "tnsReportedHost": null
-      },
-      "lastModifiedUTC": "2026-09-08T18:05:14Z",
-      "provenance": {
-        "reportingGroup": "ZTF",
-        "sourceGroup": "ZTF",
-        "internalNames": [
-          "ZTF26abrfhru",
-          "GOTO26iow",
-          "ATLAS26kur"
-        ]
-      },
-      "review": {
-        "status": "approved",
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "sourceReviewQueue": "transient-review-2026-09-10.json",
-        "reviewSetID": null,
-        "evidenceHash": "c3c1613f9b42bc64"
-      },
-      "previousCurationWindow": {
-        "startsAtUTC": "2026-08-30T06:32:06Z",
-        "expiresAtUTC": "2026-09-29T06:32:06Z"
-      }
-    },
-    {
-      "id": "tns:219030",
-      "source": "TNS",
-      "sourceId": "219030",
-      "sourceObjectName": "SN2026aacj",
-      "sourceURL": "https://www.wis-tns.org/object/2026aacj",
-      "title": "Supernova SN2026aacj near IC162",
-      "shortTitle": "SN2026aacj",
-      "eventType": "transientOpportunity",
-      "reviewOnly": false,
-      "urgency": "urgent",
-      "recommendedReviewAction": "approved",
-      "activeWindow": {
-        "startsAtUTC": "2026-08-30T10:02:35Z",
-        "expiresAtUTC": "2026-11-28T10:02:35Z"
-      },
-      "discovery": {
-        "dateUTC": "2026-08-30T10:02:35Z",
-        "ageDays": 11,
-        "magnitude": 18.2953,
-        "band": "g"
-      },
-      "reportedMagnitude": {
-        "value": null,
-        "band": null
-      },
-      "classification": {
-        "kind": "supernova",
-        "type": "SN Ia",
-        "status": null
-      },
-      "coordinates": {
-        "raDegrees": 28.3602269,
-        "decDegrees": 10.1235888
-      },
-      "score": 90,
-      "reasonTags": [
-        "classified_high_interest_transient",
-        "discovered_within_30_days",
-        "discovery_magnitude_le_18_5",
-        "separation_le_2_deg",
-        "nearby_catalog_object_is_galaxy",
-        "recognizable_astroguide_subject"
-      ],
-      "astroGuideObject": {
-        "id": "IC162",
-        "displayName": "IC162",
-        "catalogName": "IC IC162",
-        "objectType": "Galaxy",
-        "magnitude": 13.7
-      },
-      "angularSeparationDegrees": 1.39475,
-      "relationship": {
-        "type": "near_field",
-        "wording": "near-field match",
-        "tnsReportedHost": null
-      },
-      "lastModifiedUTC": "2026-09-06T12:39:05Z",
-      "provenance": {
-        "reportingGroup": "ZTF",
-        "sourceGroup": "ZTF",
-        "internalNames": [
-          "ZTF26abrgiyy",
-          "GOTO26isa"
-        ]
-      },
-      "review": {
-        "status": "approved",
-        "approvedBy": "Chris",
-        "approvedAtUTC": "2026-09-11T15:24:13Z",
-        "sourceReviewQueue": "transient-review-2026-09-10.json",
-        "reviewSetID": null,
-        "evidenceHash": "913d9b298681482a"
-      },
-      "previousCurationWindow": {
-        "startsAtUTC": "2026-08-30T10:02:35Z",
-        "expiresAtUTC": "2026-09-29T10:02:35Z"
-      }
-    },
     {
       "id": "tns:219039",
       "source": "TNS",
@@ -5695,7 +5536,7 @@
       },
       "discovery": {
         "dateUTC": "2026-11-04T20:57:15Z",
-        "ageDays": 22,
+        "ageDays": 23,
         "magnitude": 19.172,
         "band": "wide"
       },
@@ -5797,9 +5638,9 @@
           "triggeredAtUTC": "2026-11-24T13:21:25Z",
           "evidenceAtUTC": "2026-11-23T04:24:57Z",
           "sourceURL": "https://www.wis-tns.org/object/2026aiep",
-          "sourceReviewQueue": "transient-review-2026-11-26.json",
-          "reviewSetID": "42ddf3e53998c8c3",
-          "evidenceHash": "e5c42cf429452b35",
+          "sourceReviewQueue": "transient-review-2026-11-27.json",
+          "reviewSetID": "53549e364f5d19e3",
+          "evidenceHash": "0f8d40a5aca26bda",
           "automaticEligible": true,
           "evidence": []
         }
@@ -5807,10 +5648,10 @@
       "review": {
         "status": "approved",
         "approvedBy": "astroguide:classified-score-policy-v1",
-        "approvedAtUTC": "2026-11-27T13:21:17Z",
-        "sourceReviewQueue": "transient-review-2026-11-26.json",
-        "reviewSetID": "42ddf3e53998c8c3",
-        "evidenceHash": "e5c42cf429452b35"
+        "approvedAtUTC": "2026-11-28T13:20:53Z",
+        "sourceReviewQueue": "transient-review-2026-11-27.json",
+        "reviewSetID": "53549e364f5d19e3",
+        "evidenceHash": "0f8d40a5aca26bda"
       },
       "previousCurationWindow": {
         "startsAtUTC": "2026-11-04T20:57:15Z",
@@ -5973,7 +5814,7 @@
       },
       "discovery": {
         "dateUTC": "2026-11-09T08:20:41Z",
-        "ageDays": 17,
+        "ageDays": 18,
         "magnitude": 18.102,
         "band": "cyan"
       },
@@ -6082,9 +5923,9 @@
           "triggeredAtUTC": "2026-11-23T13:23:00Z",
           "evidenceAtUTC": "2026-11-22T03:57:45Z",
           "sourceURL": "https://www.wis-tns.org/object/2026aizp",
-          "sourceReviewQueue": "transient-review-2026-11-26.json",
-          "reviewSetID": "42ddf3e53998c8c3",
-          "evidenceHash": "94f7f8d1d14e1928",
+          "sourceReviewQueue": "transient-review-2026-11-27.json",
+          "reviewSetID": "53549e364f5d19e3",
+          "evidenceHash": "76b74753386daf05",
           "automaticEligible": true,
           "evidence": []
         }
@@ -6092,10 +5933,10 @@
       "review": {
         "status": "approved",
         "approvedBy": "astroguide:classified-score-policy-v1",
-        "approvedAtUTC": "2026-11-27T13:21:17Z",
-        "sourceReviewQueue": "transient-review-2026-11-26.json",
-        "reviewSetID": "42ddf3e53998c8c3",
-        "evidenceHash": "94f7f8d1d14e1928"
+        "approvedAtUTC": "2026-11-28T13:20:53Z",
+        "sourceReviewQueue": "transient-review-2026-11-27.json",
+        "reviewSetID": "53549e364f5d19e3",
+        "evidenceHash": "76b74753386daf05"
       },
       "previousCurationWindow": {
         "startsAtUTC": "2026-11-09T08:20:41Z",
@@ -6120,7 +5961,7 @@
       },
       "discovery": {
         "dateUTC": "2026-11-15T09:38:01Z",
-        "ageDays": 11,
+        "ageDays": 12,
         "magnitude": 19.223,
         "band": "cyan"
       },
@@ -6229,9 +6070,9 @@
           "triggeredAtUTC": "2026-11-23T13:23:00Z",
           "evidenceAtUTC": "2026-11-25T12:38:52Z",
           "sourceURL": "https://www.wis-tns.org/object/2026ajxu",
-          "sourceReviewQueue": "transient-review-2026-11-26.json",
-          "reviewSetID": "42ddf3e53998c8c3",
-          "evidenceHash": "c5c5c18ca23bb9ba",
+          "sourceReviewQueue": "transient-review-2026-11-27.json",
+          "reviewSetID": "53549e364f5d19e3",
+          "evidenceHash": "ae9f49cb56161bb5",
           "automaticEligible": true,
           "evidence": []
         }
@@ -6239,10 +6080,10 @@
       "review": {
         "status": "approved",
         "approvedBy": "astroguide:classified-score-policy-v1",
-        "approvedAtUTC": "2026-11-27T13:21:17Z",
-        "sourceReviewQueue": "transient-review-2026-11-26.json",
-        "reviewSetID": "42ddf3e53998c8c3",
-        "evidenceHash": "c5c5c18ca23bb9ba"
+        "approvedAtUTC": "2026-11-28T13:20:53Z",
+        "sourceReviewQueue": "transient-review-2026-11-27.json",
+        "reviewSetID": "53549e364f5d19e3",
+        "evidenceHash": "ae9f49cb56161bb5"
       },
       "previousCurationWindow": {
         "startsAtUTC": "2026-11-15T09:38:01Z",
@@ -6267,7 +6108,7 @@
       },
       "discovery": {
         "dateUTC": "2026-11-17T06:06:39Z",
-        "ageDays": 9,
+        "ageDays": 10,
         "magnitude": 18.76,
         "band": "L"
       },
@@ -6377,9 +6218,9 @@
           "triggeredAtUTC": "2026-11-19T13:21:30Z",
           "evidenceAtUTC": "2026-11-25T12:34:52Z",
           "sourceURL": "https://www.wis-tns.org/object/2026akbo",
-          "sourceReviewQueue": "transient-review-2026-11-26.json",
-          "reviewSetID": "42ddf3e53998c8c3",
-          "evidenceHash": "180d20664219a73a",
+          "sourceReviewQueue": "transient-review-2026-11-27.json",
+          "reviewSetID": "53549e364f5d19e3",
+          "evidenceHash": "b3a6b3d0e5452250",
           "automaticEligible": true,
           "evidence": []
         }
@@ -6387,10 +6228,10 @@
       "review": {
         "status": "approved",
         "approvedBy": "astroguide:classified-score-policy-v1",
-        "approvedAtUTC": "2026-11-27T13:21:17Z",
-        "sourceReviewQueue": "transient-review-2026-11-26.json",
-        "reviewSetID": "42ddf3e53998c8c3",
-        "evidenceHash": "180d20664219a73a"
+        "approvedAtUTC": "2026-11-28T13:20:53Z",
+        "sourceReviewQueue": "transient-review-2026-11-27.json",
+        "reviewSetID": "53549e364f5d19e3",
+        "evidenceHash": "b3a6b3d0e5452250"
       },
       "previousCurationWindow": {
         "startsAtUTC": "2026-11-17T06:06:39Z",
@@ -6415,7 +6256,7 @@
       },
       "discovery": {
         "dateUTC": "2026-11-17T11:05:21Z",
-        "ageDays": 9,
+        "ageDays": 10,
         "magnitude": 18.345,
         "band": "orange"
       },
@@ -6516,9 +6357,9 @@
           "triggeredAtUTC": "2026-11-23T13:23:00Z",
           "evidenceAtUTC": "2026-11-22T14:31:10Z",
           "sourceURL": "https://www.wis-tns.org/object/2026akhh",
-          "sourceReviewQueue": "transient-review-2026-11-26.json",
-          "reviewSetID": "42ddf3e53998c8c3",
-          "evidenceHash": "fb8cbaa5729861e2",
+          "sourceReviewQueue": "transient-review-2026-11-27.json",
+          "reviewSetID": "53549e364f5d19e3",
+          "evidenceHash": "d60ebc1964a47023",
           "automaticEligible": true,
           "evidence": []
         }
@@ -6526,10 +6367,10 @@
       "review": {
         "status": "approved",
         "approvedBy": "astroguide:classified-score-policy-v1",
-        "approvedAtUTC": "2026-11-27T13:21:17Z",
-        "sourceReviewQueue": "transient-review-2026-11-26.json",
-        "reviewSetID": "42ddf3e53998c8c3",
-        "evidenceHash": "fb8cbaa5729861e2"
+        "approvedAtUTC": "2026-11-28T13:20:53Z",
+        "sourceReviewQueue": "transient-review-2026-11-27.json",
+        "reviewSetID": "53549e364f5d19e3",
+        "evidenceHash": "d60ebc1964a47023"
       },
       "previousCurationWindow": {
         "startsAtUTC": "2026-11-17T11:05:21Z",
@@ -6554,7 +6395,7 @@
       },
       "discovery": {
         "dateUTC": "2026-11-19T14:05:33Z",
-        "ageDays": 7,
+        "ageDays": 8,
         "magnitude": 18.847,
         "band": "orange"
       },
@@ -6576,7 +6417,12 @@
           "bibcode": "2026TNSTR4716....1T",
           "url": "https://ui.adsabs.harvard.edu/abs/2026TNSTR4716....1T/abstract"
         },
-        "classificationReferences": []
+        "classificationReferences": [
+          {
+            "bibcode": "2026TNSCR4750....1A",
+            "url": "https://ui.adsabs.harvard.edu/abs/2026TNSCR4750....1A/abstract"
+          }
+        ]
       },
       "enrichment": {
         "status": "partial",
@@ -6591,13 +6437,13 @@
         ]
       },
       "coordinates": {
-        "raDegrees": 141.2788886,
-        "decDegrees": -20.2123571
+        "raDegrees": 141.2788036,
+        "decDegrees": -20.2124258
       },
-      "score": 78,
+      "score": 70,
       "reasonTags": [
         "classified_high_interest_transient",
-        "discovered_within_7_days",
+        "discovered_within_30_days",
         "discovery_magnitude_watch_band",
         "separation_le_2_deg",
         "recognizable_astroguide_subject"
@@ -6625,19 +6471,20 @@
           "reason": "No provenance-safe hosted AstroGuide catalog thumbnail is available."
         }
       },
-      "angularSeparationDegrees": 1.56605,
+      "angularSeparationDegrees": 1.566,
       "relationship": {
         "type": "near_field",
         "wording": "near-field match",
         "tnsReportedHost": null
       },
-      "lastModifiedUTC": "2026-11-22T14:31:11Z",
+      "lastModifiedUTC": "2026-11-27T11:17:40Z",
       "provenance": {
         "reportingGroup": "ATLAS",
         "sourceGroup": "ATLAS",
         "internalNames": [
           "ATLAS26ocq",
-          "GOTO26mso"
+          "GOTO26mso",
+          "ZTF26aciskwm"
         ]
       },
       "promotionReasons": [
@@ -6645,7 +6492,7 @@
           "code": "classified_score",
           "stableTriggerID": "b1ad1adf939222a4346607528620281ce466bbc7922e4b9a95bdd22dc20cfbd6",
           "policyID": "tns-classified-score-v1",
-          "score": 78,
+          "score": 70,
           "classification": {
             "kind": "supernova",
             "type": "SN Ia",
@@ -6653,11 +6500,11 @@
           },
           "confidence": "score_eligibility",
           "triggeredAtUTC": "2026-11-23T13:23:00Z",
-          "evidenceAtUTC": "2026-11-22T14:31:11Z",
+          "evidenceAtUTC": "2026-11-27T11:17:40Z",
           "sourceURL": "https://www.wis-tns.org/object/2026akhl",
-          "sourceReviewQueue": "transient-review-2026-11-26.json",
-          "reviewSetID": "42ddf3e53998c8c3",
-          "evidenceHash": "80312a726bcd4ac4",
+          "sourceReviewQueue": "transient-review-2026-11-27.json",
+          "reviewSetID": "53549e364f5d19e3",
+          "evidenceHash": "cc7c04fc4c9ab0c4",
           "automaticEligible": true,
           "evidence": []
         }
@@ -6665,10 +6512,10 @@
       "review": {
         "status": "approved",
         "approvedBy": "astroguide:classified-score-policy-v1",
-        "approvedAtUTC": "2026-11-27T13:21:17Z",
-        "sourceReviewQueue": "transient-review-2026-11-26.json",
-        "reviewSetID": "42ddf3e53998c8c3",
-        "evidenceHash": "80312a726bcd4ac4"
+        "approvedAtUTC": "2026-11-28T13:20:53Z",
+        "sourceReviewQueue": "transient-review-2026-11-27.json",
+        "reviewSetID": "53549e364f5d19e3",
+        "evidenceHash": "cc7c04fc4c9ab0c4"
       },
       "previousCurationWindow": {
         "startsAtUTC": "2026-11-19T14:05:33Z",
@@ -6693,7 +6540,7 @@
       },
       "discovery": {
         "dateUTC": "2026-11-23T09:24:52Z",
-        "ageDays": 3,
+        "ageDays": 4,
         "magnitude": 17.993,
         "band": "orange"
       },
@@ -6803,9 +6650,9 @@
           "triggeredAtUTC": "2026-11-26T13:22:23Z",
           "evidenceAtUTC": "2026-11-26T09:10:04Z",
           "sourceURL": "https://www.wis-tns.org/object/2026aknq",
-          "sourceReviewQueue": "transient-review-2026-11-26.json",
-          "reviewSetID": "42ddf3e53998c8c3",
-          "evidenceHash": "48be4db02548ad8d",
+          "sourceReviewQueue": "transient-review-2026-11-27.json",
+          "reviewSetID": "53549e364f5d19e3",
+          "evidenceHash": "4f811a1fe5ae945b",
           "automaticEligible": true,
           "evidence": []
         }
@@ -6813,10 +6660,10 @@
       "review": {
         "status": "approved",
         "approvedBy": "astroguide:classified-score-policy-v1",
-        "approvedAtUTC": "2026-11-27T13:21:17Z",
-        "sourceReviewQueue": "transient-review-2026-11-26.json",
-        "reviewSetID": "42ddf3e53998c8c3",
-        "evidenceHash": "48be4db02548ad8d"
+        "approvedAtUTC": "2026-11-28T13:20:53Z",
+        "sourceReviewQueue": "transient-review-2026-11-27.json",
+        "reviewSetID": "53549e364f5d19e3",
+        "evidenceHash": "4f811a1fe5ae945b"
       },
       "previousCurationWindow": {
         "startsAtUTC": "2026-11-23T09:24:52Z",
@@ -6850,7 +6697,19 @@
       ]
     },
     {
+      "id": "tns:218943",
+      "reasons": [
+        "invalid_or_inactive_discovery_window"
+      ]
+    },
+    {
       "id": "tns:219007",
+      "reasons": [
+        "invalid_or_inactive_discovery_window"
+      ]
+    },
+    {
+      "id": "tns:219030",
       "reasons": [
         "invalid_or_inactive_discovery_window"
       ]
